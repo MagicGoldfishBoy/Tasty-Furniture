@@ -2,6 +2,7 @@ package com.goldfish.goldfishmod02tastyfurniture.registry;
 
 import org.slf4j.Logger;
 
+import com.mojang.datafixers.types.templates.List;
 import com.mojang.logging.LogUtils;
 
 import net.minecraft.client.Minecraft;
@@ -60,6 +61,11 @@ public class mushregistry {
     public static final DeferredHolder<Item, Item> APPLE_MUSH = MUSH.register("apple_mush",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
             .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
-   
+    
+    public static final DeferredHolder<Item, Item> POTATO_MUSH = MUSH.register("potato_mush",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+            .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
+  
+            
     }
 

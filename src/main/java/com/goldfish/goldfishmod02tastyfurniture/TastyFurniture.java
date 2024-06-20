@@ -69,7 +69,11 @@ public class TastyFurniture
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(() -> EXAMPLE_ITEM.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
-                output.accept(mushregistry.APPLE_MUSH.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
+                output.acceptAll(mushregistry.MUSH.getEntries().stream().map(sup -> {
+                    return sup.get().getDefaultInstance();
+                }).toList());
+                // output.accept(mushregistry.APPLE_MUSH.get());
+                // output.accept(mushregistry.POTATO_MUSH.get());
             }).build());
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> gettab(){
