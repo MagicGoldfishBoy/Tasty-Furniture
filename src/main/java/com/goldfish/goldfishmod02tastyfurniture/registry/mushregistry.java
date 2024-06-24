@@ -88,5 +88,8 @@ public class mushregistry {
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
             .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
             
+    public static final DeferredHolder<Item, Item> SWEETBERRY_MUSH = MUSH.register("sweet_berry_mush",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+            .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
     }
 
