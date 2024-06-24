@@ -67,7 +67,7 @@ public class TastyFurniture
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TASTY_FURNITURE_TAB = CREATIVE_MODE_TABS.register("tasty_furniture_tab", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.tastyfurniture")) //The language key for the title of your CreativeModeTab
             .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> EXAMPLE_ITEM.get().getDefaultInstance())
+            .icon(() -> mushregistry.mushhammer.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 output.acceptAll(mushregistry.MUSH.getEntries().stream().map(sup -> {
                     return sup.get().getDefaultInstance();
