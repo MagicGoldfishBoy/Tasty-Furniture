@@ -148,3 +148,5 @@ public class TastyFurniture
         }
     }
 }
+
+//Note to self: "recipes" is now "recipe" in 1.21.
