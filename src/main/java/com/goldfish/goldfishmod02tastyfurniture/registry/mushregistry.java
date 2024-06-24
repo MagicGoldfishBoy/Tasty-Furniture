@@ -48,7 +48,7 @@ import net.minecraft.world.item.ItemStack;
 
 import net.neoforged.neoforge.registries.DeferredHolder;
 
-import com.goldfish.goldfishmod02tastyfurniture.item.mush;
+import com.goldfish.goldfishmod02tastyfurniture.item.mushhammer;
 import com.goldfish.goldfishmod02tastyfurniture.*;
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 
@@ -57,6 +57,8 @@ import java.util.function.Supplier;
 public class mushregistry {
 
     public static final DeferredRegister<Item> MUSH = DeferredRegister.create(BuiltInRegistries.ITEM, TastyFurniture.MODID);
+
+    public static final Supplier<Item> mushhammer = MUSH.register("mush_hammer", () -> new mushhammer((new Item.Properties().stacksTo(1))));
 
     public static final DeferredHolder<Item, Item> APPLE_MUSH = MUSH.register("apple_mush",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder()

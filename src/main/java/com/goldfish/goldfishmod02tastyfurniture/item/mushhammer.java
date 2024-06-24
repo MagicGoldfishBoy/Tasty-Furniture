@@ -36,11 +36,22 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-public class mush extends Item{
+public class mushhammer extends Item{
 
-        public mush(Item.Properties properties) {
-                super(properties.food(new FoodProperties.Builder()
-                        .nutrition(1)
-                        .build()));
+        public mushhammer(Item.Properties properties) {
+                super(properties);
             }
+
+            @Override
+            public ItemStack getCraftingRemainingItem(ItemStack stack)
+            {
+                    return stack.copy();
+            }
+
+            @Override
+            public boolean hasCraftingRemainingItem(ItemStack stack)
+            {
+                    return true;
+            }
+            
 }

@@ -34,7 +34,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-import com.goldfish.goldfishmod02tastyfurniture.item.mush;
+import com.goldfish.goldfishmod02tastyfurniture.item.mushhammer;
 import com.goldfish.goldfishmod02tastyfurniture.registry.mushregistry;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
