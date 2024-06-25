@@ -58,46 +58,50 @@ public class mushregistry {
 
     public static final DeferredRegister<Item> MUSH = DeferredRegister.create(BuiltInRegistries.ITEM, TastyFurniture.MODID);
 
-    public static final Supplier<Item> mushhammer = MUSH.register("mush_hammer", () -> new mushhammer((new Item.Properties().stacksTo(1))));
+      public static final Supplier<Item> mushhammer = MUSH.register("mush_hammer", () -> new mushhammer((new Item.Properties().stacksTo(1))));
 
-    public static final DeferredHolder<Item, Item> APPLE_MUSH = MUSH.register("apple_mush",
-            () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
-            .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
-    
-    public static final DeferredHolder<Item, Item> POTATO_MUSH = MUSH.register("potato_mush",
-            () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
-            .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
+        public static final DeferredHolder<Item, Item> APPLE_MUSH = MUSH.register("apple_mush",
+                () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+                .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
+        
+        public static final DeferredHolder<Item, Item> POTATO_MUSH = MUSH.register("potato_mush",
+                () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+                .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
 
-    public static final DeferredHolder<Item, Item> BEETROOT_MUSH = MUSH.register("beetroot_mush",
-            () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
-            .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
+        public static final DeferredHolder<Item, Item> BEETROOT_MUSH = MUSH.register("beetroot_mush",
+                () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+                .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
 
-    public static final DeferredHolder<Item, Item> CARROT_MUSH = MUSH.register("carrot_mush",
-            () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
-            .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
+        public static final DeferredHolder<Item, Item> CARROT_MUSH = MUSH.register("carrot_mush",
+                () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+                .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
 
-    public static final DeferredHolder<Item, Item> CHORUS_MUSH = MUSH.register("chorus_mush",
-            () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
-            .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
+        public static final DeferredHolder<Item, Item> CHORUS_MUSH = MUSH.register("chorus_mush",
+                () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+                .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
 
-    public static final DeferredHolder<Item, Item> GLOWBERRY_MUSH = MUSH.register("glow_berry_mush",
-            () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
-            .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
-  
-    public static final DeferredHolder<Item, Item> MELON_MUSH = MUSH.register("melon_mush",
-            () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
-            .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
-            
-    public static final DeferredHolder<Item, Item> SWEETBERRY_MUSH = MUSH.register("sweet_berry_mush",
-            () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
-            .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
+        public static final DeferredHolder<Item, Item> GLOWBERRY_MUSH = MUSH.register("glow_berry_mush",
+                () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+                .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
+        
+        public static final DeferredHolder<Item, Item> MELON_MUSH = MUSH.register("melon_mush",
+                () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+                .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
+                
+        public static final DeferredHolder<Item, Item> SWEETBERRY_MUSH = MUSH.register("sweet_berry_mush",
+                () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+                .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
 
-    public static final DeferredHolder<Item, Item> BROWN_MUSHROOM_MUSH = MUSH.register("brown_mushroom_mush",
-            () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
-            .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
+        public static final DeferredHolder<Item, Item> BROWN_MUSHROOM_MUSH = MUSH.register("brown_mushroom_mush",
+                () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+                .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
 
-    public static final DeferredHolder<Item, Item> RED_MUSHROOM_MUSH = MUSH.register("red_mushroom_mush",
-            () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
-            .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
+        public static final DeferredHolder<Item, Item> RED_MUSHROOM_MUSH = MUSH.register("red_mushroom_mush",
+                () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+                .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
+
+        public static final DeferredHolder<Item, Item> PUMPKIN_MUSH = MUSH.register("pumpkin_mush",
+                () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+                .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
     }
 
