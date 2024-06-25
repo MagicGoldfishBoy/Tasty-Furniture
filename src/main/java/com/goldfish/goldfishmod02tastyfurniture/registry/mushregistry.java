@@ -49,6 +49,7 @@ import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
 import com.goldfish.goldfishmod02tastyfurniture.item.mushhammer;
+import com.goldfish.goldfishmod02tastyfurniture.item.meatgrinder;
 import com.goldfish.goldfishmod02tastyfurniture.*;
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 
@@ -103,5 +104,7 @@ public class mushregistry {
         public static final DeferredHolder<Item, Item> PUMPKIN_MUSH = MUSH.register("pumpkin_mush",
                 () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
                 .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
+
+       public static final Supplier<Item> meatgrinder = MUSH.register("meatgrinder", () -> new meatgrinder((new Item.Properties().stacksTo(1))));
     }
 
