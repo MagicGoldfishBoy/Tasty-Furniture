@@ -95,5 +95,9 @@ public class mushregistry {
     public static final DeferredHolder<Item, Item> BROWN_MUSHROOM_MUSH = MUSH.register("brown_mushroom_mush",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
             .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
+
+    public static final DeferredHolder<Item, Item> RED_MUSHROOM_MUSH = MUSH.register("red_mushroom_mush",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+            .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
     }
 
