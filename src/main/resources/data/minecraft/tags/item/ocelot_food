@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values": [
-     "goldfishmod02tastyfurniture:ground_cod"
+     "goldfishmod02tastyfurniture:ground_cod",
+     "goldfishmod02tastyfurniture:ground_salmon"
     ]
   }
