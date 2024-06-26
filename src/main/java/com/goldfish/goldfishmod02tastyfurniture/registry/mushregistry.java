@@ -110,5 +110,9 @@ public class mushregistry {
         public static final DeferredHolder<Item, Item> GROUND_CHICKEN = MUSH.register("ground_chicken",
         () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
         .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
+
+        public static final DeferredHolder<Item, Item> GROUND_COD = MUSH.register("ground_cod",
+        () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+        .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
     }
 
