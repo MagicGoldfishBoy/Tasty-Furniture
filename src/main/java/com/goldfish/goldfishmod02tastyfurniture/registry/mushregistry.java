@@ -106,5 +106,9 @@ public class mushregistry {
                 .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
 
        public static final Supplier<Item> meatgrinder = MUSH.register("meatgrinder", () -> new meatgrinder((new Item.Properties().stacksTo(1))));
+
+        public static final DeferredHolder<Item, Item> GROUND_CHICKEN = MUSH.register("ground_chicken",
+        () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+        .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
     }
 
