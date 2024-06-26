@@ -36,6 +36,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import com.goldfish.goldfishmod02tastyfurniture.item.mushhammer;
 import com.goldfish.goldfishmod02tastyfurniture.registry.mushregistry;
+import com.goldfish.goldfishmod02tastyfurniture.registry.ingotregistry;
 
 
 @Mod(TastyFurniture.MODID)
@@ -51,19 +52,22 @@ public class TastyFurniture
 
     public static final DeferredRegister.Items MUSH = DeferredRegister.createItems(MODID);
 
+    public static final DeferredRegister.Items FOODINGOT = DeferredRegister.createItems(MODID);
+
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TASTY_FURNITURE_TAB = CREATIVE_MODE_TABS.register("tasty_furniture_tab", () -> CreativeModeTab.builder()
-            .title(Component.translatable("itemGroup.tastyfurniture")) //The language key for the title of your CreativeModeTab
+            .title(Component.translatable("itemGroup.tastyfurniture"))
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(() -> mushregistry.mushhammer.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 output.acceptAll(mushregistry.MUSH.getEntries().stream().map(sup -> {
                     return sup.get().getDefaultInstance();
                 }).toList());
-                // output.accept(mushregistry.APPLE_MUSH.get());
-                // output.accept(mushregistry.POTATO_MUSH.get());
+                output.acceptAll(ingotregistry.FOODINGOT.getEntries().stream().map(sup -> {
+                    return sup.get().getDefaultInstance();
+                }).toList());
             }).build());
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> gettab(){
@@ -80,6 +84,8 @@ public class TastyFurniture
         ITEMS.register(modEventBus);
 
         mushregistry.MUSH.register(modEventBus);
+
+        ingotregistry.FOODINGOT.register(modEventBus);
 
         CREATIVE_MODE_TABS.register(modEventBus);
 
