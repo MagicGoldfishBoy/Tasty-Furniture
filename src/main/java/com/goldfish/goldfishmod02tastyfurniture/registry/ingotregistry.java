@@ -58,4 +58,7 @@ public class ingotregistry {
     
     public static final DeferredHolder<Item, Item> APPLE_INGOT = FOODINGOT.register("apple_ingot",
     () -> new Item(new Item.Properties()));
+
+    public static final DeferredHolder<Item, Item> POTATO_INGOT = FOODINGOT.register("potato_ingot",
+    () -> new Item(new Item.Properties()));
 }

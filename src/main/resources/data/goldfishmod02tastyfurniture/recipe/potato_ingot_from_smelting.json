@@ -4,9 +4,9 @@
     "cookingtime": 180,
     "experience": 1.0,
     "ingredient": {
-      "item": "goldfishmod02tastyfurniture:apple_mush"
+      "item": "goldfishmod02tastyfurniture:potato_mush"
     },
     "result": {
-      "id": "goldfishmod02tastyfurniture:apple_ingot"
+      "id": "goldfishmod02tastyfurniture:potato_ingot"
     }
   }
