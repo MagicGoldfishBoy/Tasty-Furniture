@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:blasting",
+    "category": "misc",
+    "cookingtime": 80,
+    "experience": 1.0,
+    "ingredient": {
+      "item": "goldfishmod02tastyfurniture:brown_mushroom_mush"
+    },
+    "result": {
+      "id": "goldfishmod02tastyfurniture:brown_mushroom_ingot"
+    }
+  }
