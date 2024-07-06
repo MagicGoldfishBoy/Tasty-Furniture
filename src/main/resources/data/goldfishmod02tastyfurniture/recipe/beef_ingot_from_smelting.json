@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:smelting",
+    "category": "misc",
+    "cookingtime": 180,
+    "experience": 1.0,
+    "ingredient": {
+      "item": "goldfishmod02tastyfurniture:ground_beef"
+    },
+    "result": {
+      "id": "goldfishmod02tastyfurniture:beef_ingot"
+    }
+  }
