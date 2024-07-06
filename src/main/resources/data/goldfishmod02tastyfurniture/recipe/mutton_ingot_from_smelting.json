@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:smelting",
+    "category": "misc",
+    "cookingtime": 180,
+    "experience": 1.0,
+    "ingredient": {
+      "item": "goldfishmod02tastyfurniture:ground_mutton"
+    },
+    "result": {
+      "id": "goldfishmod02tastyfurniture:mutton_ingot"
+    }
+  }
