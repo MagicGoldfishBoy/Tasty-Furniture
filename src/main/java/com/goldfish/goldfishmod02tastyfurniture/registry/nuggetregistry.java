@@ -54,4 +54,7 @@ public class nuggetregistry {
     
         public static final DeferredHolder<Item, Item> TROPICAL_FISH_NUGGET = FOODNUGGET.register("tropical_fish_nugget",
     () -> new Item(new Item.Properties()));
+
+        public static final DeferredHolder<Item, Item> MUTTON_NUGGET = FOODNUGGET.register("mutton_nugget",
+    () -> new Item(new Item.Properties()));
 }
