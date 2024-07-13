@@ -15,4 +15,7 @@ public class nuggetregistry {
 
         public static final DeferredHolder<Item, Item> POTATO_NUGGET = FOODNUGGET.register("potato_nugget",
     () -> new Item(new Item.Properties()));
+
+        public static final DeferredHolder<Item, Item> BEETROOT_NUGGET = FOODNUGGET.register("beetroot_nugget",
+    () -> new Item(new Item.Properties()));
 }

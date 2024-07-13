@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "goldfishmod02tastyfurniture:beetroot_ingot"
+        }
+    ],
+    "result": {
+        "id": "goldfishmod02tastyfurniture:beetroot_nugget",
+        "count": 9
+    }
+}
