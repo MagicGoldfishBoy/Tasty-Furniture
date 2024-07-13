@@ -37,6 +37,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import com.goldfish.goldfishmod02tastyfurniture.item.mushhammer;
 import com.goldfish.goldfishmod02tastyfurniture.registry.mushregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.ingotregistry;
+import com.goldfish.goldfishmod02tastyfurniture.registry.nuggetregistry;
 
 
 @Mod(TastyFurniture.MODID)
@@ -54,6 +55,8 @@ public class TastyFurniture
 
     public static final DeferredRegister.Items FOODINGOT = DeferredRegister.createItems(MODID);
 
+    public static final DeferredRegister.Items FOODNUGGET = DeferredRegister.createItems(MODID);
+
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
 
@@ -66,6 +69,9 @@ public class TastyFurniture
                     return sup.get().getDefaultInstance();
                 }).toList());
                 output.acceptAll(ingotregistry.FOODINGOT.getEntries().stream().map(sup -> {
+                    return sup.get().getDefaultInstance();
+                }).toList());
+                output.acceptAll(nuggetregistry.FOODNUGGET.getEntries().stream().map(sup -> {
                     return sup.get().getDefaultInstance();
                 }).toList());
             }).build());
@@ -86,6 +92,8 @@ public class TastyFurniture
         mushregistry.MUSH.register(modEventBus);
 
         ingotregistry.FOODINGOT.register(modEventBus);
+
+        nuggetregistry.FOODNUGGET.register(modEventBus);
 
         CREATIVE_MODE_TABS.register(modEventBus);
 
