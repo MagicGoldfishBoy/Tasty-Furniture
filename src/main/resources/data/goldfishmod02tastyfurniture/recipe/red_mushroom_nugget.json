@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "goldfishmod02tastyfurniture:red_mushroom_ingot"
+        }
+    ],
+    "result": {
+        "id": "goldfishmod02tastyfurniture:red_mushroom_nugget",
+        "count": 9
+    }
+}
