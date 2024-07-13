@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "goldfishmod02tastyfurniture:tropical_fish_ingot"
+        }
+    ],
+    "result": {
+        "id": "goldfishmod02tastyfurniture:tropical_fish_nugget",
+        "count": 9
+    }
+}
