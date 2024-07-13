@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "goldfishmod02tastyfurniture:sweet_berry_ingot"
+        }
+    ],
+    "result": {
+        "id": "goldfishmod02tastyfurniture:sweet_berry_nugget",
+        "count": 9
+    }
+}
