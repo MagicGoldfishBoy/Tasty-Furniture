@@ -1,5 +1,7 @@
 package com.goldfish.goldfishmod02tastyfurniture;
 
+import java.util.Collection;
+
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -13,6 +15,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -38,6 +41,8 @@ import com.goldfish.goldfishmod02tastyfurniture.item.mushhammer;
 import com.goldfish.goldfishmod02tastyfurniture.registry.mushregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.ingotregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.nuggetregistry;
+import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockitemregistry;
+import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 
 
 @Mod(TastyFurniture.MODID)
@@ -49,6 +54,8 @@ public class TastyFurniture
 
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
 
+    public static final DeferredRegister.Blocks FOODBLOCK = DeferredRegister.createBlocks(MODID);
+
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
 
     public static final DeferredRegister.Items MUSH = DeferredRegister.createItems(MODID);
@@ -56,6 +63,8 @@ public class TastyFurniture
     public static final DeferredRegister.Items FOODINGOT = DeferredRegister.createItems(MODID);
 
     public static final DeferredRegister.Items FOODNUGGET = DeferredRegister.createItems(MODID);
+
+    public static final DeferredRegister.Items FOODBLOCKITEM = DeferredRegister.createItems(MODID);
 
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
@@ -74,6 +83,9 @@ public class TastyFurniture
                 output.acceptAll(nuggetregistry.FOODNUGGET.getEntries().stream().map(sup -> {
                     return sup.get().getDefaultInstance();
                 }).toList());
+                output.acceptAll(foodblockitemregistry.FOODBLOCKITEM.getEntries().stream().map(sup -> {
+                    return sup.get().getDefaultInstance();
+                }).toList());
             }).build());
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> gettab(){
@@ -87,6 +99,8 @@ public class TastyFurniture
 
         BLOCKS.register(modEventBus);
 
+        foodblockregistry.FOODBLOCK.register(modEventBus);
+
         ITEMS.register(modEventBus);
 
         mushregistry.MUSH.register(modEventBus);
@@ -94,6 +108,8 @@ public class TastyFurniture
         ingotregistry.FOODINGOT.register(modEventBus);
 
         nuggetregistry.FOODNUGGET.register(modEventBus);
+
+        foodblockitemregistry.FOODBLOCKITEM.register(modEventBus);
 
         CREATIVE_MODE_TABS.register(modEventBus);
 
