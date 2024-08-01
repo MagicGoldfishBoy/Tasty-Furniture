@@ -15,13 +15,13 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, Block> APPLE_BLOCK = FOODBLOCK.register("apple_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(2.0f)
          .explosionResistance(10.0f)
-         .sound(SoundType.WOOD)
+         .sound(SoundType.MUD_BRICKS)
          .lightLevel(state -> 0)
          ));
     public static final DeferredHolder<Block, Block> POTATO_BLOCK = FOODBLOCK.register("potato_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(2.5f)
          .explosionResistance(10.5f)
-         .sound(SoundType.WOOD)
+         .sound(SoundType.MUD_BRICKS)
          .lightLevel(state -> 0)
  ));
 }
