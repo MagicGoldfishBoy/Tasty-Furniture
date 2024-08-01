@@ -4,6 +4,7 @@ import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SlimeBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -31,6 +32,12 @@ public class foodblockregistry {
          .lightLevel(state -> 0)
          ));
     public static final DeferredHolder<Block, Block> CARROT_BLOCK = FOODBLOCK.register("carrot_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.5f)
+         .explosionResistance(10.5f)
+         .sound(SoundType.MUD_BRICKS)
+         .lightLevel(state -> 0)
+         ));
+    public static final DeferredHolder<Block, Block> CHORUS_BLOCK = FOODBLOCK.register("chorus_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(2.5f)
          .explosionResistance(10.5f)
          .sound(SoundType.MUD_BRICKS)
