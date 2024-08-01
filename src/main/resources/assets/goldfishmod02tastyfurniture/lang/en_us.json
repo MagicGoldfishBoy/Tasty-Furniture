@@ -58,5 +58,6 @@
     "item.goldfishmod02tastyfurniture.beef_nugget": "Beef Nugget",
     "item.goldfishmod02tastyfurniture.pork_nugget": "Pork Nugget",
     "item.goldfishmod02tastyfurniture.rabbit_nugget": "Rabbit Nugget",
-       "block.goldfishmod02tastyfurniture.apple_block": "Apple Block"
+       "block.goldfishmod02tastyfurniture.apple_block": "Apple Block",
+       "block.goldfishmod02tastyfurniture.potato_block": "Potato Block"
 }

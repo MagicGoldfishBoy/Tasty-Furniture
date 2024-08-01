@@ -1,5 +1,5 @@
 {
-    "parent": "goldfishmod02tastyfurniture:block/apple_block",
+    "parent": "goldfishmod02tastyfurniture:block/potato_block",
 	"display": {
 		"thirdperson_righthand": {
             "rotation": [70, -50, 0],
