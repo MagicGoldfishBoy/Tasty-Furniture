@@ -23,5 +23,11 @@ public class foodblockregistry {
          .explosionResistance(10.5f)
          .sound(SoundType.MUD_BRICKS)
          .lightLevel(state -> 0)
- ));
+         ));
+    public static final DeferredHolder<Block, Block> BEETROOT_BLOCK = FOODBLOCK.register("beetroot_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.5f)
+         .explosionResistance(10.5f)
+         .sound(SoundType.MUD_BRICKS)
+         .lightLevel(state -> 0)
+         ));
 }
