@@ -61,4 +61,10 @@ public class foodblockregistry {
          .sound(SoundType.MUD_BRICKS)
          .lightLevel(state -> 0)
          ));
+    public static final DeferredHolder<Block, Block> BROWN_MUSHROOM_BLOCK = FOODBLOCK.register("brown_mushroom_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(1.75f)
+         .explosionResistance(9.75f)
+         .sound(SoundType.MUD_BRICKS)
+         .lightLevel(state -> 0)
+         ));
 }
