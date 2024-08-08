@@ -131,10 +131,16 @@ public class foodblockregistry {
          ));
 
          
-    public static final DeferredHolder<Block, Block> APPLE_DOOR_BLOCK = FOODBLOCK.register("apple_door", () -> new DoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, Block> APPLE_DOOR_BLOCK = FOODBLOCK.register("apple_door", () -> new DoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.of()
+         .destroyTime(1.75f)
+         .explosionResistance(9.5f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
+    public static final DeferredHolder<Block, Block> POTATO_DOOR_BLOCK = FOODBLOCK.register("potato_door", () -> new DoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD_BRICKS)
+         .noOcclusion()
          ));
 
 }
