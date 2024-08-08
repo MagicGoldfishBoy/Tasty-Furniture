@@ -3,10 +3,12 @@ package com.goldfish.goldfishmod02tastyfurniture.registry;
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SlimeBlock;
+import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -126,6 +128,12 @@ public class foodblockregistry {
          .explosionResistance(9.5f)
          .sound(SoundType.MUD)
          .lightLevel(state -> 0)
+         ));
+
+    public static final DeferredHolder<Block, Block> FOOD_DOOR_BLOCK = FOODBLOCK.register("food_door_block", () -> new DoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of()
+         .destroyTime(2.25f)
+         .explosionResistance(9.5f)
+         .sound(SoundType.MUD_BRICKS)
          ));
 
 }
