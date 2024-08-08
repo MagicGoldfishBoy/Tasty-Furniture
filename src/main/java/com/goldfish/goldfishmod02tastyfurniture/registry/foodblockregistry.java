@@ -130,7 +130,8 @@ public class foodblockregistry {
          .lightLevel(state -> 0)
          ));
 
-    public static final DeferredHolder<Block, Block> FOOD_DOOR_BLOCK = FOODBLOCK.register("food_door_block", () -> new DoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of()
+         
+    public static final DeferredHolder<Block, Block> APPLE_DOOR_BLOCK = FOODBLOCK.register("apple_door", () -> new DoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD_BRICKS)
