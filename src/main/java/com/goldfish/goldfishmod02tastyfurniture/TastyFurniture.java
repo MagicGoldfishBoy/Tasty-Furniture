@@ -152,3 +152,6 @@ public class TastyFurniture
 }
 
 //Note to self: "recipes" is now "recipe" in 1.21.
+
+//command to reinstall java 17 below. It likes to uninstall itself for some reason, only computer jesus knows why
+//sudo apt install openjdk-17-jdk openjdk-17-jre

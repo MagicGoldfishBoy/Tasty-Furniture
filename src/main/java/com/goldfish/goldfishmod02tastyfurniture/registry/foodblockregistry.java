@@ -109,5 +109,11 @@ public class foodblockregistry {
          .sound(SoundType.MUD)
          .lightLevel(state -> 0)
          ));
+    public static final DeferredHolder<Block, Block> BEEF_BLOCK = FOODBLOCK.register("beef_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.25f)
+         .explosionResistance(9.5f)
+         .sound(SoundType.MUD)
+         .lightLevel(state -> 0)
+         ));
 
 }
