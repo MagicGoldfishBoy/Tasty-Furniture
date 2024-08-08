@@ -3,15 +3,31 @@ package com.goldfish.goldfishmod02tastyfurniture.registry;
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.entity.ai.behavior.GateBehavior;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.DoorBlock;
+import net.minecraft.world.level.block.FenceBlock;
+import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.PressurePlateBlock;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.TrapDoorBlock;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.entity.SignBlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.obj.ObjMaterialLibrary.Material;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.DeferredRegister.Blocks;
+
 
 public class foodblockregistry {
     public static final DeferredRegister<Block> FOODBLOCK = DeferredRegister.create(BuiltInRegistries.BLOCK, TastyFurniture.MODID);
@@ -130,6 +146,9 @@ public class foodblockregistry {
          .lightLevel(state -> 0)
          ));
 
+//==============================================================================================================================================================================================
+//                                                                                         Doors
+//==============================================================================================================================================================================================
          
     public static final DeferredHolder<Block, Block> APPLE_DOOR_BLOCK = FOODBLOCK.register("apple_door", () -> new DoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.of()
          .destroyTime(1.75f)
@@ -149,4 +168,57 @@ public class foodblockregistry {
          .noOcclusion()
          ));
 
+//==============================================================================================================================================================================================
+//                                                                                         Buttons
+//==============================================================================================================================================================================================
+
+    public static final DeferredHolder<Block, Block> APPLE_BUTTON = FOODBLOCK.register("apple_button", () -> new ButtonBlock(BlockSetType.WARPED, 0, BlockBehaviour.Properties.of()
+    ));
+//==============================================================================================================================================================================================
+//                                                                                         Fences
+//==============================================================================================================================================================================================
+
+    public static final DeferredHolder<Block, Block> APPLE_FENCE = FOODBLOCK.register("apple_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+    ));
+
+//     public static final DeferredHolder<Block, Block> APPLE_FENCE_GATE = FOODBLOCK.register("apple_fence_gate", () -> new FenceGateBlock(java.util.Optional.empty(), BlockBehaviour.Properties.of(), 
+//     java.util.Optional.empty(), java.util.Optional.empty()));
+
+//==============================================================================================================================================================================================
+//                                                                                      Pressure Plates
+//==============================================================================================================================================================================================
+
+    public static final DeferredHolder<Block, Block> APPLE_PRESSURE_PLATE = FOODBLOCK.register("apple_pressure_plate", () -> new PressurePlateBlock(BlockSetType.WARPED, BlockBehaviour.Properties.of()
+    ));
+
+//==============================================================================================================================================================================================
+//                                                                                          Signs
+//==============================================================================================================================================================================================
+
+   //  public static final DeferredHolder<Block, Block> APPLE_SIGN = FOODBLOCK.register("apple_sign", () -> new SignBlockEntity(Blocks.WARPED_SIGN, BlockBehaviour.Properties.of()))
+   public static Object APPLE_SIGN;
+   public static Object APPLE_WALL_SIGN;
+//==============================================================================================================================================================================================
+//                                                                                          Slabs
+//==============================================================================================================================================================================================
+
+     public static final DeferredHolder<Block, Block> APPLE_SLAB = FOODBLOCK.register("apple_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     ));
+     
+//==============================================================================================================================================================================================
+//                                                                                          Stairs
+//==============================================================================================================================================================================================
+
+//     static Block apple_planks = APPLE_BLOCK.get();
+//     public static final DeferredHolder<Block, Block> APPLE_STAIRS = FOODBLOCK.register("apple_stairs", new StairBlock(apple_planks.defaultBlockState(), BlockBehaviour.Properties.of()));
+
+//==============================================================================================================================================================================================
+//                                                                                         Trapdoors
+//==============================================================================================================================================================================================
+
+     public static final DeferredHolder<Block, Block> APPLE_TRAPDOOR = FOODBLOCK.register("apple_trapdoor", () -> new TrapDoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
 }
