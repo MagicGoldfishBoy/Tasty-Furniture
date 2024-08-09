@@ -1,11 +1,14 @@
 package com.goldfish.goldfishmod02tastyfurniture.registry;
 
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
+import com.google.common.base.Supplier;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.ai.behavior.GateBehavior;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Block.*;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
@@ -26,7 +29,7 @@ import net.neoforged.neoforge.client.model.obj.ObjMaterialLibrary.Material;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.neoforged.neoforge.registries.DeferredRegister.Blocks;
+import net.neoforged.neoforge.registries.DeferredRegister.Blocks.*;
 
 
 public class foodblockregistry {
@@ -209,8 +212,14 @@ public class foodblockregistry {
 //                                                                                          Stairs
 //==============================================================================================================================================================================================
 
-//     static Block apple_planks = APPLE_BLOCK.get();
-//     public static final DeferredHolder<Block, Block> APPLE_STAIRS = FOODBLOCK.register("apple_stairs", new StairBlock(apple_planks.defaultBlockState(), BlockBehaviour.Properties.of()));
+     public static final DeferredHolder<Block, Block> APPLE_STAIRS = FOODBLOCK.register("apple_stairs", () -> new StairBlock(
+          APPLE_BLOCK.get().defaultBlockState(),
+          BlockBehaviour.Properties.of()
+          .destroyTime(1.75f)
+          .explosionResistance(9.5f)
+          .sound(SoundType.MUD_BRICKS)
+      ));
+  
 
 //==============================================================================================================================================================================================
 //                                                                                         Trapdoors
