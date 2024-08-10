@@ -84,4 +84,19 @@ public class foodblockitemregistry {
 
      public static final DeferredHolder<Item, BlockItem> BEETROOT_DOOR_ITEM = FOODBLOCKITEM.register("beetroot_door_item",
      () -> new BlockItem(foodblockregistry.BEETROOT_DOOR_BLOCK.get(), new BlockItem.Properties()));
+
+//==============================================================================================================================================================================================
+//                                                                                         Buttons
+//==============================================================================================================================================================================================
+
+     public static final DeferredHolder<Item, BlockItem> APPLE_BUTTON_ITEM = FOODBLOCKITEM.register("apple_button_item",
+     () -> new BlockItem(foodblockregistry.APPLE_BUTTON.get(), new BlockItem.Properties()));
+
+//==============================================================================================================================================================================================
+//                                                                                         Fences
+//==============================================================================================================================================================================================
+
+     public static final DeferredHolder<Item, BlockItem> APPLE_FENCE_ITEM = FOODBLOCKITEM.register("apple_fence_item",
+     () -> new BlockItem(foodblockregistry.APPLE_FENCE.get(), new BlockItem.Properties()));
+
 }

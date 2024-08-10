@@ -177,15 +177,13 @@ public class foodblockregistry {
 
     public static final DeferredHolder<Block, Block> APPLE_BUTTON = FOODBLOCK.register("apple_button", () -> new ButtonBlock(BlockSetType.WARPED, 0, BlockBehaviour.Properties.of()
     ));
+
 //==============================================================================================================================================================================================
 //                                                                                         Fences
 //==============================================================================================================================================================================================
 
     public static final DeferredHolder<Block, Block> APPLE_FENCE = FOODBLOCK.register("apple_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
     ));
-
-//     public static final DeferredHolder<Block, Block> APPLE_FENCE_GATE = FOODBLOCK.register("apple_fence_gate", () -> new FenceGateBlock(java.util.Optional.empty(), BlockBehaviour.Properties.of(), 
-//     java.util.Optional.empty(), java.util.Optional.empty()));
 
 //==============================================================================================================================================================================================
 //                                                                                      Pressure Plates
