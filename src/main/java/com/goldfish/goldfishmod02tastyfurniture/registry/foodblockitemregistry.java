@@ -99,4 +99,15 @@ public class foodblockitemregistry {
      public static final DeferredHolder<Item, BlockItem> APPLE_FENCE_ITEM = FOODBLOCKITEM.register("apple_fence_item",
      () -> new BlockItem(foodblockregistry.APPLE_FENCE.get(), new BlockItem.Properties()));
 
+//==============================================================================================================================================================================================
+//                                                                                      Pressure Plates
+//==============================================================================================================================================================================================
+
+     public static final DeferredHolder<Item, BlockItem> APPLE_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("apple_pressure_plate_item",
+     () -> new BlockItem(foodblockregistry.APPLE_PRESSURE_PLATE.get(), new BlockItem.Properties()));
+
+//==============================================================================================================================================================================================
+//                                                                                          Signs
+//==============================================================================================================================================================================================
+
 }
