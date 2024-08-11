@@ -6,6 +6,7 @@ import com.google.common.base.Supplier;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.ai.behavior.GateBehavior;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Block.*;
@@ -196,8 +197,8 @@ public class foodblockregistry {
 //                                                                                          Signs
 //==============================================================================================================================================================================================
 
-   //  public static final DeferredHolder<Block, Block> APPLE_SIGN = FOODBLOCK.register("apple_sign", () -> new SignBlockEntity(Blocks.WARPED_SIGN, BlockBehaviour.Properties.of()))
-   public static Object APPLE_SIGN;
+    //public static final DeferredHolder<Block, Block> APPLE_SIGN = FOODBLOCK.register("apple_sign", () -> new SignBlockEntity());
+  // public static Object APPLE_SIGN;
    public static Object APPLE_WALL_SIGN;
 //==============================================================================================================================================================================================
 //                                                                                          Slabs
@@ -218,7 +219,6 @@ public class foodblockregistry {
           .sound(SoundType.MUD_BRICKS)
       ));
   
-
 //==============================================================================================================================================================================================
 //                                                                                         Trapdoors
 //==============================================================================================================================================================================================
