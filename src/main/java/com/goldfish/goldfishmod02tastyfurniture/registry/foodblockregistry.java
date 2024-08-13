@@ -1,6 +1,7 @@
 package com.goldfish.goldfishmod02tastyfurniture.registry;
 
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign;
 import com.google.common.base.Supplier;
 
 import net.minecraft.client.Minecraft;
@@ -25,6 +26,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.obj.ObjMaterialLibrary.Material;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -197,9 +199,13 @@ public class foodblockregistry {
 //                                                                                          Signs
 //==============================================================================================================================================================================================
 
-    //public static final DeferredHolder<Block, Block> APPLE_SIGN = FOODBLOCK.register("apple_sign", () -> new SignBlockEntity());
-  // public static Object APPLE_SIGN;
-   public static Object APPLE_WALL_SIGN;
+    public static final DeferredHolder<Block, Block> APPLE_SIGN = FOODBLOCK.register("apple_sign",
+    () -> new foodsign(
+        BlockBehaviour.Properties.of(),
+        WoodType.OAK
+    ));
+
+
 //==============================================================================================================================================================================================
 //                                                                                          Slabs
 //==============================================================================================================================================================================================

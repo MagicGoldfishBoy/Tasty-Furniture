@@ -47,21 +47,14 @@ import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 public class GM1BlockStateProvider extends BlockStateProvider 
 {
 
-     public GM1BlockStateProvider(PackOutput output, String modid, ExistingFileHelper exFileHelper) {
-         super(output, modid, exFileHelper);
+     public GM1BlockStateProvider(PackOutput output, String modid, ExistingFileHelper existingFileHelper) {
+         super(output, "goldfishmod02tastyfurniture", existingFileHelper);
      }
 
      @Override
      protected void registerStatesAndModels() {
-        ModelFile door_bottom_left_model = models().withExistingParent("minecraft:block/door_bottom_left", "minecraft:block/door_bottom_left");
-        ResourceLocation beetTexture = modLoc("block/beetroot_block");
-        final Map<Block, BlockFamily> MAP = Maps.newHashMap();
-    //     final BlockFamily APPLE_BLOCK = familyBuilder(foodblockregistry.APPLE_BLOCK).button(foodblockregistry.APPLE_BUTTON).fence(foodblockregistry.APPLE_FENCE).fenceGate(foodblockregistry.APPLE_FENCE_GATE).pressurePlate(foodblockregistry.APPLE_PRESSURE_PLATE).sign(foodblockregistry.APPLE_SIGN, foodblockregistry.APPLE_WALL_SIGN).slab(foodblockregistry.APPLE_SLAB).stairs(foodblockregistry.APPLE_STAIRS).door(foodblockregistry.APPLE_DOOR_BLOCK).trapdoor(foodblockregistry.APPLE_TRAPDOOR).recipeGroupPrefix("apple").recipeUnlockedBy("has_planks").getFamily();
-    //  }
-
-    // private Object familyBuilder(
-    //         DeferredHolder<net.minecraft.world.level.block.Block, net.minecraft.world.level.block.Block> appleBlock) {
-    //     throw new UnsupportedOperationException("Unimplemented method 'familyBuilder'");
-    // }
+        ModelFile door_bottom_left_model = models().withExistingParent("minecraft:block/door_bottom_left", "minecraft:block/door_bottom_left_open");
+        ResourceLocation beetTexture = modLoc("textures/block/beetroot_block");
+        final Map<Block, BlockFamily> FOODBLOCKMAP = Maps.newHashMap();
 }}
     
