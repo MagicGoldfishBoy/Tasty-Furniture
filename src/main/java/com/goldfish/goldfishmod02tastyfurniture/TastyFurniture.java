@@ -10,6 +10,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
@@ -30,6 +31,7 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
@@ -142,7 +144,19 @@ public class TastyFurniture
         LOGGER.info("HELLO from the VOID");
     }
 
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
+// this is how the docs said to do it, but it doesn't work for reasons only computer thor knows :(
+//     @SubscribeEvent
+//     public static void gatherData(GatherDataEvent event) {
+//     DataGenerator generator = event.getGenerator();
+//     PackOutput output = generator.getPackOutput();
+//     ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
+
+//     generator.addProvider(
+//         event.includeClient(),
+//         new GM1BlockStateProvider(output, existingFileHelper)
+//     );
+// }
+
     @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents
     {

@@ -53,7 +53,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
 
      @Override
      protected void registerStatesAndModels() {
-        ModelFile door_bottom_left_model = models().withExistingParent("minecraft:block/door_bottom_left", "minecraft:block/door_bottom_left_open");
+        ModelFile door_bottom_left_model = models().withExistingParent("door_bottom_left", "minecraft:block/door_bottom_left");
         ResourceLocation beetTexture = modLoc("textures/block/beetroot_block");
         final Map<Block, BlockFamily> FOODBLOCKMAP = Maps.newHashMap();
 }}
