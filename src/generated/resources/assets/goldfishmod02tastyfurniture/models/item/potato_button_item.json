@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "goldfishmod02tastyfurniture:block/potato_block"
+  }
+}

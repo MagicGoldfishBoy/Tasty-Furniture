@@ -190,7 +190,11 @@ public class foodblockregistry {
 //                                                                                         Buttons
 //==============================================================================================================================================================================================
 
-    public static final DeferredHolder<Block, ButtonBlock> APPLE_BUTTON = FOODBLOCK.register("apple_button", () -> new ButtonBlock(BlockSetType.WARPED, 0, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, ButtonBlock> APPLE_BUTTON = FOODBLOCK.register("apple_button", () -> new ButtonBlock(BlockSetType.WARPED, 20, BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
+    ));
+    public static final DeferredHolder<Block, ButtonBlock> POTATO_BUTTON = FOODBLOCK.register("potato_button", () -> new ButtonBlock(BlockSetType.WARPED, 20, BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
     ));
 
 //==============================================================================================================================================================================================
