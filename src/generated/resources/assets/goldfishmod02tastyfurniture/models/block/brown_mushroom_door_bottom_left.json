@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_bottom_left",
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "bottom": "goldfishmod02tastyfurniture:block/brown_mushroom_door_bottom",
+    "top": "goldfishmod02tastyfurniture:block/brown_mushroom_door_top"
+  }
+}

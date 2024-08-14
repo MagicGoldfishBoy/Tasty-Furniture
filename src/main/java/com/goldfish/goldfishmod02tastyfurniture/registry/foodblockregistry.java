@@ -204,6 +204,12 @@ public class foodblockregistry {
          .sound(SoundType.MUD_BRICKS)
          .noOcclusion()
          ));
+     public static final DeferredHolder<Block, DoorBlock> BROWN_MUSHROOM_DOOR_BLOCK = FOODBLOCK.register("brown_mushroom_door", () -> new DoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.of()
+         .destroyTime(2.25f)
+         .explosionResistance(9.5f)
+         .sound(SoundType.MUD_BRICKS)
+         .noOcclusion()
+         ));
 
 //==============================================================================================================================================================================================
 //                                                                                         Buttons
