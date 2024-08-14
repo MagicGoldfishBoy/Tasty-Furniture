@@ -74,11 +74,16 @@ public class GM1BlockStateProvider extends BlockStateProvider
         ResourceLocation sweet_berry_door_bottom_texture = modLoc("block/sweet_berry_door_bottom");
         ResourceLocation sweet_berry_door_top_texture = modLoc("block/sweet_berry_door_top");
         doorBlockWithRenderType(sweet_berry_door_block, sweet_berry_door_bottom_texture, sweet_berry_door_top_texture, "translucent");
-      //.........sweet berry
+      //........brown mushroom
         DoorBlock brown_mushroom_door_block = foodblockregistry.BROWN_MUSHROOM_DOOR_BLOCK.get();
         ResourceLocation brown_mushroom_door_bottom_texture = modLoc("block/brown_mushroom_door_bottom");
         ResourceLocation brown_mushroom_door_top_texture = modLoc("block/brown_mushroom_door_top");
         doorBlockWithRenderType(brown_mushroom_door_block, brown_mushroom_door_bottom_texture, brown_mushroom_door_top_texture, "translucent");
+      //........brown mushroom
+        DoorBlock red_mushroom_door_block = foodblockregistry.RED_MUSHROOM_DOOR_BLOCK.get();
+        ResourceLocation red_mushroom_door_bottom_texture = modLoc("block/red_mushroom_door_bottom");
+        ResourceLocation red_mushroom_door_top_texture = modLoc("block/red_mushroom_door_top");
+        doorBlockWithRenderType(red_mushroom_door_block, red_mushroom_door_bottom_texture, red_mushroom_door_top_texture, "translucent");
         
         //buttons
         buttonBlock(apple_button, apple_button_texture);
