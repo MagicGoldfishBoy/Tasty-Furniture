@@ -20,6 +20,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.api.distmarker.Dist;
@@ -49,6 +50,7 @@ import com.goldfish.goldfishmod02tastyfurniture.registry.nuggetregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockitemregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1BlockStateProvider;
+import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1Datagen;
 
 
 @Mod(TastyFurniture.MODID)
@@ -102,6 +104,8 @@ public class TastyFurniture
     {
 
         modEventBus.addListener(this::commonSetup);
+
+        modEventBus.addListener(GM1Datagen::gatherData);
 
         BLOCKS.register(modEventBus);
 
