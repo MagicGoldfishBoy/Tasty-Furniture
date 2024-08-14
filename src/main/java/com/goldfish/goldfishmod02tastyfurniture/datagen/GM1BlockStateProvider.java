@@ -109,6 +109,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
         ResourceLocation tropical_fish_door_bottom_texture = modLoc("block/tropical_fish_door_bottom");
         ResourceLocation tropical_fish_door_top_texture = modLoc("block/tropical_fish_door_top");
         doorBlockWithRenderType(tropical_fish_door_block, tropical_fish_door_bottom_texture, tropical_fish_door_top_texture, "translucent");
+      //.............mutton
+        DoorBlock mutton_door_block = foodblockregistry.MUTTON_DOOR_BLOCK.get();
+        ResourceLocation mutton_door_bottom_texture = modLoc("block/mutton_door_bottom");
+        ResourceLocation mutton_door_top_texture = modLoc("block/mutton_door_top");
+        doorBlockWithRenderType(mutton_door_block, mutton_door_bottom_texture, mutton_door_top_texture, "cutout_mipped_all");
         
         //buttons
         buttonBlock(apple_button, apple_button_texture);
