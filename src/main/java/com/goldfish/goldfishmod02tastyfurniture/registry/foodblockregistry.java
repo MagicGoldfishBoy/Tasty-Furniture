@@ -6,6 +6,7 @@ import com.google.common.base.Supplier;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.ai.behavior.GateBehavior;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.Item;
@@ -37,6 +38,24 @@ import net.neoforged.neoforge.registries.DeferredRegister.Blocks.*;
 
 public class foodblockregistry {
     public static final DeferredRegister<Block> FOODBLOCK = DeferredRegister.create(BuiltInRegistries.BLOCK, TastyFurniture.MODID);
+    public static final BlockSetType MEAT = BlockSetType.register(
+     new BlockSetType(
+     "meat", 
+     true, 
+     true, 
+     false, 
+     BlockSetType.PressurePlateSensitivity.EVERYTHING, 
+     SoundType.MUD, 
+     SoundEvents.NETHER_WOOD_DOOR_CLOSE, 
+     SoundEvents.NETHER_WOOD_DOOR_OPEN, 
+     SoundEvents.NETHER_WOOD_TRAPDOOR_CLOSE, 
+     SoundEvents.NETHER_WOOD_TRAPDOOR_OPEN, 
+     SoundEvents.NETHER_WOOD_PRESSURE_PLATE_CLICK_OFF, 
+     SoundEvents.NETHER_WOOD_PRESSURE_PLATE_CLICK_ON, 
+     SoundEvents.NETHER_WOOD_BUTTON_CLICK_OFF, 
+     SoundEvents.NETHER_WOOD_BUTTON_CLICK_ON
+     )
+    );
     public static final DeferredHolder<Block, Block> APPLE_BLOCK = FOODBLOCK.register("apple_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(2.0f)
          .explosionResistance(10.0f)
@@ -217,6 +236,12 @@ public class foodblockregistry {
          .noOcclusion()
          ));
      public static final DeferredHolder<Block, DoorBlock> PUMPKIN_DOOR_BLOCK = FOODBLOCK.register("pumpkin_door", () -> new DoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.of()
+         .destroyTime(2.25f)
+         .explosionResistance(9.5f)
+         .sound(SoundType.MUD_BRICKS)
+         .noOcclusion()
+         ));
+     public static final DeferredHolder<Block, DoorBlock> CHICKEN_DOOR_BLOCK = FOODBLOCK.register("chicken_door", () -> new DoorBlock(foodblockregistry.MEAT, BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD_BRICKS)

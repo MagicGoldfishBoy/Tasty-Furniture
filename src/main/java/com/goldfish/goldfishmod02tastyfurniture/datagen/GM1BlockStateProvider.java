@@ -89,6 +89,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
         ResourceLocation pumpkin_door_bottom_texture = modLoc("block/pumpkin_door_bottom");
         ResourceLocation pumpkin_door_top_texture = modLoc("block/pumpkin_door_top");
         doorBlockWithRenderType(pumpkin_door_block, pumpkin_door_bottom_texture, pumpkin_door_top_texture, "cutout_mipped_all");
+      //...........chicken
+        DoorBlock chicken_door_block = foodblockregistry.CHICKEN_DOOR_BLOCK.get();
+        ResourceLocation chicken_door_bottom_texture = modLoc("block/chicken_door_bottom");
+        ResourceLocation chicken_door_top_texture = modLoc("block/chicken_door_top");
+        doorBlockWithRenderType(chicken_door_block, chicken_door_bottom_texture, chicken_door_top_texture, "cutout_mipped_all");
         
         //buttons
         buttonBlock(apple_button, apple_button_texture);
