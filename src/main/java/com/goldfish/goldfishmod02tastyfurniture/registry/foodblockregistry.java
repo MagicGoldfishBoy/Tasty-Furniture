@@ -46,8 +46,8 @@ public class foodblockregistry {
      false, 
      BlockSetType.PressurePlateSensitivity.EVERYTHING, 
      SoundType.MUD, 
-     SoundEvents.NETHER_WOOD_DOOR_CLOSE, 
-     SoundEvents.NETHER_WOOD_DOOR_OPEN, 
+     SoundEvents.MUD_HIT, 
+     SoundEvents.MUD_HIT, 
      SoundEvents.NETHER_WOOD_TRAPDOOR_CLOSE, 
      SoundEvents.NETHER_WOOD_TRAPDOOR_OPEN, 
      SoundEvents.NETHER_WOOD_PRESSURE_PLATE_CLICK_OFF, 
@@ -242,6 +242,12 @@ public class foodblockregistry {
          .noOcclusion()
          ));
      public static final DeferredHolder<Block, DoorBlock> CHICKEN_DOOR_BLOCK = FOODBLOCK.register("chicken_door", () -> new DoorBlock(foodblockregistry.MEAT, BlockBehaviour.Properties.of()
+         .destroyTime(2.25f)
+         .explosionResistance(9.5f)
+         .sound(SoundType.MUD_BRICKS)
+         .noOcclusion()
+         ));
+     public static final DeferredHolder<Block, DoorBlock> COD_DOOR_BLOCK = FOODBLOCK.register("cod_door", () -> new DoorBlock(foodblockregistry.MEAT, BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD_BRICKS)
