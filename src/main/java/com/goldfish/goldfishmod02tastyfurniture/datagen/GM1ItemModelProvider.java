@@ -20,7 +20,10 @@ public class GM1ItemModelProvider extends ItemModelProvider {
           buttonInventory("potato_button_item", modLoc("block/potato_block"));
           //withExistingParent("apple_button_item", mcLoc("item/generated")).texture("layer0", "item/example_item");
 
-        //  basicItem(foodblockitemregistry.APPLE_BUTTON_ITEM.get());
+    //-------------------------------------------------------------doors---------------------------------------------------------------------
+      //.........glow berry
+        withExistingParent("glow_berry_door_item", mcLoc("item/generated")).texture("layer0", "item/glow_berry_door");
+
         }
     
 }

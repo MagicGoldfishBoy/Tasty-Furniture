@@ -58,7 +58,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
         ButtonBlock apple_button = foodblockregistry.APPLE_BUTTON.get();
         ResourceLocation apple_button_texture = modLoc("block/apple_block");
 
-        //doors
+    //-------------------------------------------------------------doors---------------------------------------------------------------------
+      //.........glow berry
+        DoorBlock glow_berry_door_block = foodblockregistry.GLOW_BERRY_DOOR_BLOCK.get();
+        ResourceLocation glow_berry_door_bottom_texture = modLoc("block/glow_berry_door_bottom");
+        ResourceLocation glow_berry_door_top_texture = modLoc("block/glow_berry_door_top");
+        doorBlockWithRenderType(glow_berry_door_block, glow_berry_door_bottom_texture, glow_berry_door_top_texture, "cutout_mipped_all");
         
         //buttons
         buttonBlock(apple_button, apple_button_texture);
