@@ -64,11 +64,16 @@ public class GM1BlockStateProvider extends BlockStateProvider
         ResourceLocation glow_berry_door_bottom_texture = modLoc("block/glow_berry_door_bottom");
         ResourceLocation glow_berry_door_top_texture = modLoc("block/glow_berry_door_top");
         doorBlockWithRenderType(glow_berry_door_block, glow_berry_door_bottom_texture, glow_berry_door_top_texture, "cutout_mipped_all");
-      //.........glow berry
+      //...........melon
         DoorBlock melon_door_block = foodblockregistry.MELON_DOOR_BLOCK.get();
         ResourceLocation melon_door_bottom_texture = modLoc("block/melon_door_bottom");
         ResourceLocation melon_door_top_texture = modLoc("block/melon_door_top");
         doorBlockWithRenderType(melon_door_block, melon_door_bottom_texture, melon_door_top_texture, "translucent");
+      //.........sweet berry
+        DoorBlock sweet_berry_door_block = foodblockregistry.SWEET_BERRY_DOOR_BLOCK.get();
+        ResourceLocation sweet_berry_door_bottom_texture = modLoc("block/sweet_berry_door_bottom");
+        ResourceLocation sweet_berry_door_top_texture = modLoc("block/sweet_berry_door_top");
+        doorBlockWithRenderType(sweet_berry_door_block, sweet_berry_door_bottom_texture, sweet_berry_door_top_texture, "translucent");
         
         //buttons
         buttonBlock(apple_button, apple_button_texture);
