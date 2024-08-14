@@ -271,6 +271,12 @@ public class foodblockregistry {
          .sound(SoundType.MUD_BRICKS)
          .noOcclusion()
          ));
+     public static final DeferredHolder<Block, DoorBlock> BEEF_DOOR_BLOCK = FOODBLOCK.register("beef_door", () -> new DoorBlock(foodblockregistry.MEAT, BlockBehaviour.Properties.of()
+         .destroyTime(2.25f)
+         .explosionResistance(9.5f)
+         .sound(SoundType.MUD_BRICKS)
+         .noOcclusion()
+         ));
 
 //==============================================================================================================================================================================================
 //                                                                                         Buttons
