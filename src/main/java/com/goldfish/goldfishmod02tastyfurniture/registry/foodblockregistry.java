@@ -192,6 +192,12 @@ public class foodblockregistry {
          .noOcclusion()
          .lightLevel(state -> 10)
          ));
+     public static final DeferredHolder<Block, DoorBlock> MELON_DOOR_BLOCK = FOODBLOCK.register("melon_door", () -> new DoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.of()
+         .destroyTime(2.25f)
+         .explosionResistance(9.5f)
+         .sound(SoundType.MUD_BRICKS)
+         .noOcclusion()
+         ));
 
 //==============================================================================================================================================================================================
 //                                                                                         Buttons
