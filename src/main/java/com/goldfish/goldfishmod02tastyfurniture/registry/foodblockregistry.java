@@ -50,8 +50,8 @@ public class foodblockregistry {
      SoundEvents.ROOTED_DIRT_HIT, 
      SoundEvents.NETHER_WOOD_TRAPDOOR_CLOSE, 
      SoundEvents.NETHER_WOOD_TRAPDOOR_OPEN, 
-     SoundEvents.NETHER_WOOD_PRESSURE_PLATE_CLICK_OFF, 
-     SoundEvents.NETHER_WOOD_PRESSURE_PLATE_CLICK_ON, 
+     SoundEvents.ROOTS_FALL, 
+     SoundEvents.ROOTS_FALL, 
      SoundEvents.ROOTS_HIT, 
      SoundEvents.ROOTS_HIT
      )
@@ -476,7 +476,10 @@ public class foodblockregistry {
 //                                                                                      Pressure Plates
 //==============================================================================================================================================================================================
 
-    public static final DeferredHolder<Block, Block> APPLE_PRESSURE_PLATE = FOODBLOCK.register("apple_pressure_plate", () -> new PressurePlateBlock(BlockSetType.WARPED, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, PressurePlateBlock> APPLE_PRESSURE_PLATE = FOODBLOCK.register("apple_pressure_plate", () -> new PressurePlateBlock(foodblockregistry.PLANT, BlockBehaviour.Properties.of()
+    .sound(SoundType.ROOTED_DIRT)
+    .destroyTime(0.5f)
+    .explosionResistance(4.0f)
     ));
 
 //==============================================================================================================================================================================================
@@ -513,7 +516,7 @@ public class foodblockregistry {
 //                                                                                         Trapdoors
 //==============================================================================================================================================================================================
 
-     public static final DeferredHolder<Block, Block> APPLE_TRAPDOOR = FOODBLOCK.register("apple_trapdoor", () -> new TrapDoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, Block> APPLE_TRAPDOOR = FOODBLOCK.register("apple_trapdoor", () -> new TrapDoorBlock(foodblockregistry.PLANT, BlockBehaviour.Properties.of()
      .destroyTime(1.75f)
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)

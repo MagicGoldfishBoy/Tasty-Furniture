@@ -7,6 +7,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
+import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.state.properties.DoorHingeSide;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent.Block;
@@ -283,5 +284,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceBlock rabbit_fence = foodblockregistry.RABBIT_FENCE.get();
           ResourceLocation rabbit_fence_texture = modLoc("block/rabbit_block");
           fenceBlock(rabbit_fence, rabbit_fence_texture);
+
+      //---------------------------------------------------------------pressure plates---------------------------------------------------------------------------
+        //.............apple
+          PressurePlateBlock apple_pressure_plate = foodblockregistry.APPLE_PRESSURE_PLATE.get();
+          ResourceLocation apple_pressure_plate_texture = modLoc("block/apple_block");
+          pressurePlateBlock(apple_pressure_plate, apple_pressure_plate_texture);
 }}
     
