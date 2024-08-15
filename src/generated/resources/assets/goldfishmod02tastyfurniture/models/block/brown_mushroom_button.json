@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "goldfishmod02tastyfurniture:block/brown_mushroom_block"
+  }
+}

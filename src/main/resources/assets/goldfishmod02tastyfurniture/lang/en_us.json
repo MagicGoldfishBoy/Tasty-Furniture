@@ -97,5 +97,22 @@
          "block.goldfishmod02tastyfurniture.pork_door": "Pork Door",
          "block.goldfishmod02tastyfurniture.rabbit_door": "Rabbit Door",
        "block.goldfishmod02tastyfurniture.apple_button": "Apple Button",
-       "block.goldfishmod02tastyfurniture.potato_button": "Potato Button"
+       "block.goldfishmod02tastyfurniture.potato_button": "Potato Button",
+       "block.goldfishmod02tastyfurniture.beetroot_button": "Beetroot Button",
+       "block.goldfishmod02tastyfurniture.carrot_button": "Carrot Button",
+       "block.goldfishmod02tastyfurniture.chorus_button": "Chorus Button",
+       "block.goldfishmod02tastyfurniture.glow_berry_button": "Glowberry Button",
+       "block.goldfishmod02tastyfurniture.melon_button": "Melon Button",
+       "block.goldfishmod02tastyfurniture.sweet_berry_button": "Sweetberry Button",
+       "block.goldfishmod02tastyfurniture.brown_mushroom_button": "Brown Mushroom Button",
+       "block.goldfishmod02tastyfurniture.red_mushroom_button": "Red Mushroom Button",
+       "block.goldfishmod02tastyfurniture.pumpkin_button": "Pumpkin Button",
+       "block.goldfishmod02tastyfurniture.chicken_button": "Chicken Button",
+       "block.goldfishmod02tastyfurniture.cod_button": "Cod Button",
+       "block.goldfishmod02tastyfurniture.salmon_button": "Salmon Button",
+       "block.goldfishmod02tastyfurniture.tropical_fish_button": "Tropical Fish Button",
+       "block.goldfishmod02tastyfurniture.mutton_button": "Mutton Button",
+       "block.goldfishmod02tastyfurniture.beef_button": "Beef Button",
+       "block.goldfishmod02tastyfurniture.pork_button": "Pork Button",
+       "block.goldfishmod02tastyfurniture.rabbit_button": "Rabbit Button"
 }

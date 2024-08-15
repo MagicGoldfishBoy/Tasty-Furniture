@@ -318,6 +318,58 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, ButtonBlock> POTATO_BUTTON = FOODBLOCK.register("potato_button", () -> new ButtonBlock(foodblockregistry.PLANT, 20, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     ));
+    public static final DeferredHolder<Block, ButtonBlock> BEETROOT_BUTTON = FOODBLOCK.register("beetroot_button", () -> new ButtonBlock(foodblockregistry.PLANT, 20, BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
+    ));
+    public static final DeferredHolder<Block, ButtonBlock> CARROT_BUTTON = FOODBLOCK.register("carrot_button", () -> new ButtonBlock(foodblockregistry.PLANT, 20, BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
+    ));
+    public static final DeferredHolder<Block, ButtonBlock> CHORUS_BUTTON = FOODBLOCK.register("chorus_button", () -> new ButtonBlock(foodblockregistry.PLANT, 20, BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
+    ));
+    public static final DeferredHolder<Block, ButtonBlock> GLOW_BERRY_BUTTON = FOODBLOCK.register("glow_berry_button", () -> new ButtonBlock(foodblockregistry.PLANT, 20, BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
+    .lightLevel(state -> 5)
+    ));
+    public static final DeferredHolder<Block, ButtonBlock> MELON_BUTTON = FOODBLOCK.register("melon_button", () -> new ButtonBlock(foodblockregistry.PLANT, 20, BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
+    ));
+    public static final DeferredHolder<Block, ButtonBlock> SWEET_BERRY_BUTTON = FOODBLOCK.register("sweet_berry_button", () -> new ButtonBlock(foodblockregistry.PLANT, 20, BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
+    ));
+    public static final DeferredHolder<Block, ButtonBlock> BROWN_MUSHROOM_BUTTON = FOODBLOCK.register("brown_mushroom_button", () -> new ButtonBlock(foodblockregistry.PLANT, 20, BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
+    ));
+    public static final DeferredHolder<Block, ButtonBlock> RED_MUSHROOM_BUTTON = FOODBLOCK.register("red_mushroom_button", () -> new ButtonBlock(foodblockregistry.PLANT, 20, BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
+    ));
+    public static final DeferredHolder<Block, ButtonBlock> PUMPKIN_BUTTON = FOODBLOCK.register("pumpkin_button", () -> new ButtonBlock(foodblockregistry.PLANT, 20, BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
+    ));
+    public static final DeferredHolder<Block, ButtonBlock> CHICKEN_BUTTON = FOODBLOCK.register("chicken_button", () -> new ButtonBlock(foodblockregistry.MEAT, 20, BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
+    ));
+    public static final DeferredHolder<Block, ButtonBlock> COD_BUTTON = FOODBLOCK.register("cod_button", () -> new ButtonBlock(foodblockregistry.MEAT, 20, BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
+    ));
+    public static final DeferredHolder<Block, ButtonBlock> SALMON_BUTTON = FOODBLOCK.register("salmon_button", () -> new ButtonBlock(foodblockregistry.MEAT, 20, BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
+    ));
+    public static final DeferredHolder<Block, ButtonBlock> TROPICAL_FISH_BUTTON = FOODBLOCK.register("tropical_fish_button", () -> new ButtonBlock(foodblockregistry.MEAT, 20, BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
+    ));
+    public static final DeferredHolder<Block, ButtonBlock> MUTTON_BUTTON = FOODBLOCK.register("mutton_button", () -> new ButtonBlock(foodblockregistry.MEAT, 20, BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
+    ));
+    public static final DeferredHolder<Block, ButtonBlock> BEEF_BUTTON = FOODBLOCK.register("beef_button", () -> new ButtonBlock(foodblockregistry.MEAT, 20, BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
+    ));
+    public static final DeferredHolder<Block, ButtonBlock> PORK_BUTTON = FOODBLOCK.register("pork_button", () -> new ButtonBlock(foodblockregistry.MEAT, 20, BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
+    ));
+    public static final DeferredHolder<Block, ButtonBlock> RABBIT_BUTTON = FOODBLOCK.register("rabbit_button", () -> new ButtonBlock(foodblockregistry.MEAT, 20, BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
+    ));
 
 //==============================================================================================================================================================================================
 //                                                                                         Fences

@@ -128,14 +128,82 @@ public class GM1BlockStateProvider extends BlockStateProvider
         ResourceLocation rabbit_door_top_texture = modLoc("block/rabbit_door_top");
         doorBlockWithRenderType(rabbit_door_block, rabbit_door_bottom_texture, rabbit_door_top_texture, "cutout_mipped_all");
         
-      //buttons
-      //.............apple
-        ButtonBlock apple_button = foodblockregistry.APPLE_BUTTON.get();
-        ResourceLocation apple_button_texture = modLoc("block/apple_block");
-        buttonBlock(apple_button, apple_button_texture);
-      //.............potato
-        ButtonBlock potato_button = foodblockregistry.POTATO_BUTTON.get();
-        ResourceLocation potato_button_texture = modLoc("block/potato_block");
-        buttonBlock(potato_button, potato_button_texture);
+      //-------------------------------------------------------------------buttons---------------------------------------------------------------------------
+        //.............apple
+          ButtonBlock apple_button = foodblockregistry.APPLE_BUTTON.get();
+          ResourceLocation apple_button_texture = modLoc("block/apple_block");
+          buttonBlock(apple_button, apple_button_texture);
+        //.............potato
+          ButtonBlock potato_button = foodblockregistry.POTATO_BUTTON.get();
+          ResourceLocation potato_button_texture = modLoc("block/potato_block");
+          buttonBlock(potato_button, potato_button_texture);
+        //.............beetroot
+          ButtonBlock beetroot_button = foodblockregistry.BEETROOT_BUTTON.get();
+          ResourceLocation beetroot_button_texture = modLoc("block/beetroot_block");
+          buttonBlock(beetroot_button, beetroot_button_texture);
+        //..............carrot
+          ButtonBlock carrot_button = foodblockregistry.CARROT_BUTTON.get();
+          ResourceLocation carrot_button_texture = modLoc("block/carrot_block");
+          buttonBlock(carrot_button, carrot_button_texture);
+        //..............chorus
+          ButtonBlock chorus_button = foodblockregistry.CHORUS_BUTTON.get();
+          ResourceLocation chorus_button_texture = modLoc("block/chorus_block");
+          buttonBlock(chorus_button, chorus_button_texture);
+        //..............glow_berry
+          ButtonBlock glow_berry_button = foodblockregistry.GLOW_BERRY_BUTTON.get();
+          ResourceLocation glow_berry_button_texture = modLoc("block/glow_berry_block");
+          buttonBlock(glow_berry_button, glow_berry_button_texture);
+        //................melon
+          ButtonBlock melon_button = foodblockregistry.MELON_BUTTON.get();
+          ResourceLocation melon_button_texture = modLoc("block/melon_block");
+          buttonBlock(melon_button, melon_button_texture);
+        //..............sweet_berry
+          ButtonBlock sweet_berry_button = foodblockregistry.SWEET_BERRY_BUTTON.get();
+          ResourceLocation sweet_berry_button_texture = modLoc("block/sweet_berry_block");
+          buttonBlock(sweet_berry_button, sweet_berry_button_texture);
+        //.............brown_mushroom
+          ButtonBlock brown_mushroom_button = foodblockregistry.BROWN_MUSHROOM_BUTTON.get();
+          ResourceLocation brown_mushroom_button_texture = modLoc("block/brown_mushroom_block");
+          buttonBlock(brown_mushroom_button, brown_mushroom_button_texture);
+        //.............red_mushroom
+          ButtonBlock red_mushroom_button = foodblockregistry.RED_MUSHROOM_BUTTON.get();
+          ResourceLocation red_mushroom_button_texture = modLoc("block/red_mushroom_block");
+          buttonBlock(red_mushroom_button, red_mushroom_button_texture);
+        //...............pumpkin
+          ButtonBlock pumpkin_button = foodblockregistry.PUMPKIN_BUTTON.get();
+          ResourceLocation pumpkin_button_texture = modLoc("block/pumpkin_block");
+          buttonBlock(pumpkin_button, pumpkin_button_texture);
+        //...............chicken
+          ButtonBlock chicken_button = foodblockregistry.CHICKEN_BUTTON.get();
+          ResourceLocation chicken_button_texture = modLoc("block/chicken_block");
+          buttonBlock(chicken_button, chicken_button_texture);
+        //.................cod
+          ButtonBlock cod_button = foodblockregistry.COD_BUTTON.get();
+          ResourceLocation cod_button_texture = modLoc("block/cod_block");
+          buttonBlock(cod_button, cod_button_texture);
+        //................salmon
+          ButtonBlock salmon_button = foodblockregistry.SALMON_BUTTON.get();
+          ResourceLocation salmon_button_texture = modLoc("block/salmon_block");
+          buttonBlock(salmon_button, salmon_button_texture);
+        //................tropical_fish
+          ButtonBlock tropical_fish_button = foodblockregistry.TROPICAL_FISH_BUTTON.get();
+          ResourceLocation tropical_fish_button_texture = modLoc("block/tropical_fish_block");
+          buttonBlock(tropical_fish_button, tropical_fish_button_texture);
+        //...................mutton
+          ButtonBlock mutton_button = foodblockregistry.MUTTON_BUTTON.get();
+          ResourceLocation mutton_button_texture = modLoc("block/mutton_block");
+          buttonBlock(mutton_button, mutton_button_texture);
+        //...................beef
+          ButtonBlock beef_button = foodblockregistry.BEEF_BUTTON.get();
+          ResourceLocation beef_button_texture = modLoc("block/beef_block");
+          buttonBlock(beef_button, beef_button_texture);
+        //...................pork
+          ButtonBlock pork_button = foodblockregistry.PORK_BUTTON.get();
+          ResourceLocation pork_button_texture = modLoc("block/pork_block");
+          buttonBlock(pork_button, pork_button_texture);
+        //..................rabbit
+          ButtonBlock rabbit_button = foodblockregistry.RABBIT_BUTTON.get();
+          ResourceLocation rabbit_button_texture = modLoc("block/rabbit_block");
+          buttonBlock(rabbit_button, rabbit_button_texture);
 }}
     

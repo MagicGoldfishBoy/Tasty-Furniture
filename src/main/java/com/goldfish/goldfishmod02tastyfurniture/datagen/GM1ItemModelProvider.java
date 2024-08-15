@@ -53,6 +53,40 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         buttonInventory("apple_button_item", modLoc("block/apple_block"));
       //.............potato
         buttonInventory("potato_button_item", modLoc("block/potato_block"));
+      //.............beetroot
+        buttonInventory("beetroot_button_item", modLoc("block/beetroot_block"));
+      //.............carrot
+        buttonInventory("carrot_button_item", modLoc("block/carrot_block"));
+      //.............chorus
+        buttonInventory("chorus_button_item", modLoc("block/chorus_block"));
+      //............glow_berry
+        buttonInventory("glow_berry_button_item", modLoc("block/glow_berry_block"));
+      //.............melon
+        buttonInventory("melon_button_item", modLoc("block/melon_block"));
+      //..........sweet_berry
+        buttonInventory("sweet_berry_button_item", modLoc("block/sweet_berry_block"));
+      //..........brown_mushroom
+        buttonInventory("brown_mushroom_button_item", modLoc("block/brown_mushroom_block"));
+      //..........red_mushroom
+        buttonInventory("red_mushroom_button_item", modLoc("block/red_mushroom_block"));
+      //..........pumpkin
+        buttonInventory("pumpkin_button_item", modLoc("block/pumpkin_block"));
+      //..........chicken
+        buttonInventory("chicken_button_item", modLoc("block/chicken_block"));
+      //............cod
+        buttonInventory("cod_button_item", modLoc("block/cod_block"));
+      //...........salmon
+        buttonInventory("salmon_button_item", modLoc("block/salmon_block"));
+      //.........tropical_fish
+        buttonInventory("tropical_fish_button_item", modLoc("block/tropical_fish_block"));
+      //...........mutton
+        buttonInventory("mutton_button_item", modLoc("block/mutton_block"));
+      //............beef
+        buttonInventory("beef_button_item", modLoc("block/beef_block"));
+      //............pork
+        buttonInventory("pork_button_item", modLoc("block/pork_block"));
+      //............rabbit
+        buttonInventory("rabbit_button_item", modLoc("block/rabbit_block"));
 
         }
     

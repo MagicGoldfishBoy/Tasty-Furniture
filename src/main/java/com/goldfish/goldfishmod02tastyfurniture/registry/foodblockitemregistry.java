@@ -143,6 +143,57 @@ public class foodblockitemregistry {
      public static final DeferredHolder<Item, BlockItem> POTATO_BUTTON_ITEM = FOODBLOCKITEM.register("potato_button_item",
      () -> new BlockItem(foodblockregistry.POTATO_BUTTON.get(), new BlockItem.Properties()));
 
+     public static final DeferredHolder<Item, BlockItem> BEETROOT_BUTTON_ITEM = FOODBLOCKITEM.register("beetroot_button_item",
+     () -> new BlockItem(foodblockregistry.BEETROOT_BUTTON.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> CARROT_BUTTON_ITEM = FOODBLOCKITEM.register("carrot_button_item",
+     () -> new BlockItem(foodblockregistry.CARROT_BUTTON.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> CHORUS_BUTTON_ITEM = FOODBLOCKITEM.register("chorus_button_item",
+     () -> new BlockItem(foodblockregistry.CHORUS_BUTTON.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> GLOW_BERRY_BUTTON_ITEM = FOODBLOCKITEM.register("glow_berry_button_item",
+     () -> new BlockItem(foodblockregistry.GLOW_BERRY_BUTTON.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> MELON_BUTTON_ITEM = FOODBLOCKITEM.register("melon_button_item",
+     () -> new BlockItem(foodblockregistry.MELON_BUTTON.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> SWEET_BERRY_BUTTON_ITEM = FOODBLOCKITEM.register("sweet_berry_button_item",
+     () -> new BlockItem(foodblockregistry.SWEET_BERRY_BUTTON.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> BROWN_MUSHROOM_BUTTON_ITEM = FOODBLOCKITEM.register("brown_mushroom_button_item",
+     () -> new BlockItem(foodblockregistry.BROWN_MUSHROOM_BUTTON.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> RED_MUSHROOM_BUTTON_ITEM = FOODBLOCKITEM.register("red_mushroom_button_item",
+     () -> new BlockItem(foodblockregistry.RED_MUSHROOM_BUTTON.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> PUMPKIN_BUTTON_ITEM = FOODBLOCKITEM.register("pumpkin_button_item",
+     () -> new BlockItem(foodblockregistry.PUMPKIN_BUTTON.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> CHICKEN_BUTTON_ITEM = FOODBLOCKITEM.register("chicken_button_item",
+     () -> new BlockItem(foodblockregistry.CHICKEN_BUTTON.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> COD_BUTTON_ITEM = FOODBLOCKITEM.register("cod_button_item",
+     () -> new BlockItem(foodblockregistry.COD_BUTTON.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> SALMON_BUTTON_ITEM = FOODBLOCKITEM.register("salmon_button_item",
+     () -> new BlockItem(foodblockregistry.SALMON_BUTTON.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> TROPICAL_FISH_BUTTON_ITEM = FOODBLOCKITEM.register("tropical_fish_button_item",
+     () -> new BlockItem(foodblockregistry.TROPICAL_FISH_BUTTON.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> MUTTON_BUTTON_ITEM = FOODBLOCKITEM.register("mutton_button_item",
+     () -> new BlockItem(foodblockregistry.MUTTON_BUTTON.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> BEEF_BUTTON_ITEM = FOODBLOCKITEM.register("beef_button_item",
+     () -> new BlockItem(foodblockregistry.BEEF_BUTTON.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> PORK_BUTTON_ITEM = FOODBLOCKITEM.register("pork_button_item",
+     () -> new BlockItem(foodblockregistry.PORK_BUTTON.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> RABBIT_BUTTON_ITEM = FOODBLOCKITEM.register("rabbit_button_item",
+     () -> new BlockItem(foodblockregistry.RABBIT_BUTTON.get(), new BlockItem.Properties()));
+
 //==============================================================================================================================================================================================
 //                                                                                         Fences
 //==============================================================================================================================================================================================
