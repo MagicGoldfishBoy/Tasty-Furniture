@@ -17,6 +17,7 @@ import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
+import net.minecraft.world.level.block.SignBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
@@ -576,12 +577,101 @@ public class foodblockregistry {
 //                                                                                          Signs
 //==============================================================================================================================================================================================
 
-    public static final DeferredHolder<Block, Block> APPLE_SIGN = FOODBLOCK.register("apple_sign",
+    public static final DeferredHolder<Block, SignBlock> APPLE_SIGN = FOODBLOCK.register("apple_sign",
     () -> new foodsign(
         BlockBehaviour.Properties.of(),
-        WoodType.OAK
+        WoodType.WARPED
     ));
-
+    public static final DeferredHolder<Block, SignBlock> POTATO_SIGN = FOODBLOCK.register("potato_sign",
+    () -> new foodsign(
+        BlockBehaviour.Properties.of(),
+        WoodType.WARPED
+    ));
+    public static final DeferredHolder<Block, SignBlock> BEETROOT_SIGN = FOODBLOCK.register("beetroot_sign",
+    () -> new foodsign(
+        BlockBehaviour.Properties.of(),
+        WoodType.WARPED
+    ));
+    public static final DeferredHolder<Block, SignBlock> CARROT_SIGN = FOODBLOCK.register("carrot_sign",
+    () -> new foodsign(
+        BlockBehaviour.Properties.of(),
+        WoodType.WARPED
+    ));
+    public static final DeferredHolder<Block, SignBlock> CHORUS_SIGN = FOODBLOCK.register("chorus_sign",
+    () -> new foodsign(
+        BlockBehaviour.Properties.of(),
+        WoodType.WARPED
+    ));
+    public static final DeferredHolder<Block, SignBlock> GLOW_BERRY_SIGN = FOODBLOCK.register("glow_berry_sign",
+    () -> new foodsign(
+        BlockBehaviour.Properties.of(),
+        WoodType.WARPED
+    ));
+    public static final DeferredHolder<Block, SignBlock> MELON_SIGN = FOODBLOCK.register("melon_sign",
+    () -> new foodsign(
+        BlockBehaviour.Properties.of(),
+        WoodType.WARPED
+    ));
+    public static final DeferredHolder<Block, SignBlock> SWEET_BERRY_SIGN = FOODBLOCK.register("sweet_berry_sign",
+    () -> new foodsign(
+        BlockBehaviour.Properties.of(),
+        WoodType.WARPED
+    ));
+    public static final DeferredHolder<Block, SignBlock> BROWN_MUSHROOM_SIGN = FOODBLOCK.register("brown_mushroom_sign",
+    () -> new foodsign(
+        BlockBehaviour.Properties.of(),
+        WoodType.WARPED
+    ));
+    public static final DeferredHolder<Block, SignBlock> RED_MUSHROOM_SIGN = FOODBLOCK.register("red_mushroom_sign",
+    () -> new foodsign(
+        BlockBehaviour.Properties.of(),
+        WoodType.WARPED
+    ));
+    public static final DeferredHolder<Block, SignBlock> PUMPKIN_SIGN = FOODBLOCK.register("pumpkin_sign",
+    () -> new foodsign(
+        BlockBehaviour.Properties.of(),
+        WoodType.WARPED
+    ));
+    public static final DeferredHolder<Block, SignBlock> CHICKEN_SIGN = FOODBLOCK.register("chicken_sign",
+    () -> new foodsign(
+        BlockBehaviour.Properties.of(),
+        WoodType.WARPED
+    ));
+    public static final DeferredHolder<Block, SignBlock> COD_SIGN = FOODBLOCK.register("cod_sign",
+    () -> new foodsign(
+        BlockBehaviour.Properties.of(),
+        WoodType.WARPED
+    ));
+    public static final DeferredHolder<Block, SignBlock> SALMON_SIGN = FOODBLOCK.register("salmon_sign",
+    () -> new foodsign(
+        BlockBehaviour.Properties.of(),
+        WoodType.WARPED
+    ));
+    public static final DeferredHolder<Block, SignBlock> TROPICAL_FISH_SIGN = FOODBLOCK.register("tropical_fish_sign",
+    () -> new foodsign(
+        BlockBehaviour.Properties.of(),
+        WoodType.WARPED
+    ));
+    public static final DeferredHolder<Block, SignBlock> MUTTON_SIGN = FOODBLOCK.register("mutton_sign",
+    () -> new foodsign(
+        BlockBehaviour.Properties.of(),
+        WoodType.WARPED
+    ));
+    public static final DeferredHolder<Block, SignBlock> BEEF_SIGN = FOODBLOCK.register("beef_sign",
+    () -> new foodsign(
+        BlockBehaviour.Properties.of(),
+        WoodType.WARPED
+    ));
+    public static final DeferredHolder<Block, SignBlock> PORK_SIGN = FOODBLOCK.register("pork_sign",
+    () -> new foodsign(
+        BlockBehaviour.Properties.of(),
+        WoodType.WARPED
+    ));
+    public static final DeferredHolder<Block, SignBlock> RABBIT_SIGN = FOODBLOCK.register("rabbit_sign",
+    () -> new foodsign(
+        BlockBehaviour.Properties.of(),
+        WoodType.WARPED
+    ));
 
 //==============================================================================================================================================================================================
 //                                                                                          Slabs
