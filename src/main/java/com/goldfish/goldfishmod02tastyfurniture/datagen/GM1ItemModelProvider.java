@@ -16,8 +16,6 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         @Override
         protected void registerModels() {
           //withExistingParent("apple_button_item", modLoc("block/apple_button"));
-          buttonInventory("apple_button_item", modLoc("block/apple_block"));
-          buttonInventory("potato_button_item", modLoc("block/potato_block"));
           //withExistingParent("apple_button_item", mcLoc("item/generated")).texture("layer0", "item/example_item");
 
     //-------------------------------------------------------------doors---------------------------------------------------------------------
@@ -49,6 +47,12 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("pork_door_item", mcLoc("item/generated")).texture("layer0", "item/pork_door");
       //...............rabbit
         withExistingParent("rabbit_door_item", mcLoc("item/generated")).texture("layer0", "item/rabbit_door");
+
+    //-----------------------------------------------------------buttons-------------------------------------------------------------------
+      //..............apple
+        buttonInventory("apple_button_item", modLoc("block/apple_block"));
+      //.............potato
+        buttonInventory("potato_button_item", modLoc("block/potato_block"));
 
         }
     

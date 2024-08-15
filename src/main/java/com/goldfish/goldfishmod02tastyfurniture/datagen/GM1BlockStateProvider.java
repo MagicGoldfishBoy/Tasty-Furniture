@@ -55,8 +55,6 @@ public class GM1BlockStateProvider extends BlockStateProvider
      @Override
      public void registerStatesAndModels() {
        // ModelFile apple_button_model = models().withExistingParent("door_bottom_left", "minecraft:block/door_bottom_left");
-        ButtonBlock apple_button = foodblockregistry.APPLE_BUTTON.get();
-        ResourceLocation apple_button_texture = modLoc("block/apple_block");
 
     //-------------------------------------------------------------doors---------------------------------------------------------------------
       //.........glow berry
@@ -130,7 +128,14 @@ public class GM1BlockStateProvider extends BlockStateProvider
         ResourceLocation rabbit_door_top_texture = modLoc("block/rabbit_door_top");
         doorBlockWithRenderType(rabbit_door_block, rabbit_door_bottom_texture, rabbit_door_top_texture, "cutout_mipped_all");
         
-        //buttons
+      //buttons
+      //.............apple
+        ButtonBlock apple_button = foodblockregistry.APPLE_BUTTON.get();
+        ResourceLocation apple_button_texture = modLoc("block/apple_block");
         buttonBlock(apple_button, apple_button_texture);
+      //.............potato
+        ButtonBlock potato_button = foodblockregistry.POTATO_BUTTON.get();
+        ResourceLocation potato_button_texture = modLoc("block/potato_block");
+        buttonBlock(potato_button, potato_button_texture);
 }}
     

@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "goldfishmod02tastyfurniture:potato_block_item"
+      }
+    ],
+    "result": {
+      "count": 1,
+      "id": "goldfishmod02tastyfurniture:potato_button_item"
+    }
+  }

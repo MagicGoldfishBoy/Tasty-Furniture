@@ -38,11 +38,29 @@ import net.neoforged.neoforge.registries.DeferredRegister.Blocks.*;
 
 public class foodblockregistry {
     public static final DeferredRegister<Block> FOODBLOCK = DeferredRegister.create(BuiltInRegistries.BLOCK, TastyFurniture.MODID);
+    public static final BlockSetType PLANT = BlockSetType.register(
+     new BlockSetType(
+     "plant", 
+     true, 
+     true, 
+     true, 
+     BlockSetType.PressurePlateSensitivity.EVERYTHING, 
+     SoundType.ROOTS, 
+     SoundEvents.ROOTED_DIRT_HIT, 
+     SoundEvents.ROOTED_DIRT_HIT, 
+     SoundEvents.NETHER_WOOD_TRAPDOOR_CLOSE, 
+     SoundEvents.NETHER_WOOD_TRAPDOOR_OPEN, 
+     SoundEvents.NETHER_WOOD_PRESSURE_PLATE_CLICK_OFF, 
+     SoundEvents.NETHER_WOOD_PRESSURE_PLATE_CLICK_ON, 
+     SoundEvents.NETHER_WOOD_BUTTON_CLICK_OFF, 
+     SoundEvents.NETHER_WOOD_BUTTON_CLICK_ON
+     )
+    );
     public static final BlockSetType MEAT = BlockSetType.register(
      new BlockSetType(
      "meat", 
      true, 
-     true, 
+     false, 
      false, 
      BlockSetType.PressurePlateSensitivity.EVERYTHING, 
      SoundType.MUD, 
@@ -175,7 +193,7 @@ public class foodblockregistry {
 //                                                                                         Doors
 //==============================================================================================================================================================================================
          
-    public static final DeferredHolder<Block, Block> APPLE_DOOR_BLOCK = FOODBLOCK.register("apple_door", () -> new DoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, Block> APPLE_DOOR_BLOCK = FOODBLOCK.register("apple_door", () -> new DoorBlock(foodblockregistry.PLANT, BlockBehaviour.Properties.of()
          .destroyTime(1.75f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD_BRICKS)
@@ -294,7 +312,7 @@ public class foodblockregistry {
 //                                                                                         Buttons
 //==============================================================================================================================================================================================
 
-    public static final DeferredHolder<Block, ButtonBlock> APPLE_BUTTON = FOODBLOCK.register("apple_button", () -> new ButtonBlock(BlockSetType.WARPED, 20, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, ButtonBlock> APPLE_BUTTON = FOODBLOCK.register("apple_button", () -> new ButtonBlock(foodblockregistry.PLANT, 20, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     ));
     public static final DeferredHolder<Block, ButtonBlock> POTATO_BUTTON = FOODBLOCK.register("potato_button", () -> new ButtonBlock(BlockSetType.WARPED, 20, BlockBehaviour.Properties.of()
