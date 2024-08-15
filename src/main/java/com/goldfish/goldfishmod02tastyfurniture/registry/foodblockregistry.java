@@ -52,8 +52,8 @@ public class foodblockregistry {
      SoundEvents.NETHER_WOOD_TRAPDOOR_OPEN, 
      SoundEvents.NETHER_WOOD_PRESSURE_PLATE_CLICK_OFF, 
      SoundEvents.NETHER_WOOD_PRESSURE_PLATE_CLICK_ON, 
-     SoundEvents.NETHER_WOOD_BUTTON_CLICK_OFF, 
-     SoundEvents.NETHER_WOOD_BUTTON_CLICK_ON
+     SoundEvents.ROOTS_HIT, 
+     SoundEvents.ROOTS_HIT
      )
     );
     public static final BlockSetType MEAT = BlockSetType.register(
@@ -70,8 +70,8 @@ public class foodblockregistry {
      SoundEvents.NETHER_WOOD_TRAPDOOR_OPEN, 
      SoundEvents.NETHER_WOOD_PRESSURE_PLATE_CLICK_OFF, 
      SoundEvents.NETHER_WOOD_PRESSURE_PLATE_CLICK_ON, 
-     SoundEvents.NETHER_WOOD_BUTTON_CLICK_OFF, 
-     SoundEvents.NETHER_WOOD_BUTTON_CLICK_ON
+     SoundEvents.MAGMA_CUBE_SQUISH, 
+     SoundEvents.MAGMA_CUBE_SQUISH
      )
     );
     public static final DeferredHolder<Block, Block> APPLE_BLOCK = FOODBLOCK.register("apple_block", () -> new Block(BlockBehaviour.Properties.of()
