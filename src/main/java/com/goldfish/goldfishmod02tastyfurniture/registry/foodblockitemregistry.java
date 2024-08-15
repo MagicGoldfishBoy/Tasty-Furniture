@@ -201,6 +201,60 @@ public class foodblockitemregistry {
      public static final DeferredHolder<Item, BlockItem> APPLE_FENCE_ITEM = FOODBLOCKITEM.register("apple_fence_item",
      () -> new BlockItem(foodblockregistry.APPLE_FENCE.get(), new BlockItem.Properties()));
 
+     public static final DeferredHolder<Item, BlockItem> POTATO_FENCE_ITEM = FOODBLOCKITEM.register("potato_fence_item",
+     () -> new BlockItem(foodblockregistry.POTATO_FENCE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> BEETROOT_FENCE_ITEM = FOODBLOCKITEM.register("beetroot_fence_item",
+     () -> new BlockItem(foodblockregistry.BEETROOT_FENCE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> CARROT_FENCE_ITEM = FOODBLOCKITEM.register("carrot_fence_item",
+     () -> new BlockItem(foodblockregistry.CARROT_FENCE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> CHORUS_FENCE_ITEM = FOODBLOCKITEM.register("chorus_fence_item",
+     () -> new BlockItem(foodblockregistry.CHORUS_FENCE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> GLOW_BERRY_FENCE_ITEM = FOODBLOCKITEM.register("glow_berry_fence_item",
+     () -> new BlockItem(foodblockregistry.GLOW_BERRY_FENCE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> MELON_FENCE_ITEM = FOODBLOCKITEM.register("melon_fence_item",
+     () -> new BlockItem(foodblockregistry.MELON_FENCE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> SWEET_BERRY_FENCE_ITEM = FOODBLOCKITEM.register("sweet_berry_fence_item",
+     () -> new BlockItem(foodblockregistry.SWEET_BERRY_FENCE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> BROWN_MUSHROOM_FENCE_ITEM = FOODBLOCKITEM.register("brown_mushroom_fence_item",
+     () -> new BlockItem(foodblockregistry.BROWN_MUSHROOM_FENCE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> RED_MUSHROOM_FENCE_ITEM = FOODBLOCKITEM.register("red_mushroom_fence_item",
+     () -> new BlockItem(foodblockregistry.RED_MUSHROOM_FENCE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> PUMPKIN_FENCE_ITEM = FOODBLOCKITEM.register("pumpkin_fence_item",
+     () -> new BlockItem(foodblockregistry.PUMPKIN_FENCE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> CHICKEN_FENCE_ITEM = FOODBLOCKITEM.register("chicken_fence_item",
+     () -> new BlockItem(foodblockregistry.CHICKEN_FENCE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> COD_FENCE_ITEM = FOODBLOCKITEM.register("cod_fence_item",
+     () -> new BlockItem(foodblockregistry.COD_FENCE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> SALMON_FENCE_ITEM = FOODBLOCKITEM.register("salmon_fence_item",
+     () -> new BlockItem(foodblockregistry.SALMON_FENCE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> TROPICAL_FISH_FENCE_ITEM = FOODBLOCKITEM.register("tropical_fish_fence_item",
+     () -> new BlockItem(foodblockregistry.TROPICAL_FISH_FENCE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> MUTTON_FENCE_ITEM = FOODBLOCKITEM.register("mutton_fence_item",
+     () -> new BlockItem(foodblockregistry.MUTTON_FENCE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> BEEF_FENCE_ITEM = FOODBLOCKITEM.register("beef_fence_item",
+     () -> new BlockItem(foodblockregistry.BEEF_FENCE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> PORK_FENCE_ITEM = FOODBLOCKITEM.register("pork_fence_item",
+     () -> new BlockItem(foodblockregistry.PORK_FENCE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> RABBIT_FENCE_ITEM = FOODBLOCKITEM.register("rabbit_fence_item",
+     () -> new BlockItem(foodblockregistry.RABBIT_FENCE.get(), new BlockItem.Properties()));
+
 //==============================================================================================================================================================================================
 //                                                                                      Pressure Plates
 //==============================================================================================================================================================================================

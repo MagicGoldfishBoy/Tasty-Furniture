@@ -211,5 +211,77 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceBlock apple_fence = foodblockregistry.APPLE_FENCE.get();
           ResourceLocation apple_fence_texture = modLoc("block/apple_block");
           fenceBlock(apple_fence, apple_fence_texture);
+        //.............potato
+          FenceBlock potato_fence = foodblockregistry.POTATO_FENCE.get();
+          ResourceLocation potato_fence_texture = modLoc("block/potato_block");
+          fenceBlock(potato_fence, potato_fence_texture);
+        //.............beetroot
+          FenceBlock beetroot_fence = foodblockregistry.BEETROOT_FENCE.get();
+          ResourceLocation beetroot_fence_texture = modLoc("block/beetroot_block");
+          fenceBlock(beetroot_fence, beetroot_fence_texture);
+        //.............carrot
+          FenceBlock carrot_fence = foodblockregistry.CARROT_FENCE.get();
+          ResourceLocation carrot_fence_texture = modLoc("block/carrot_block");
+          fenceBlock(carrot_fence, carrot_fence_texture);
+        //.............chorus
+          FenceBlock chorus_fence = foodblockregistry.CHORUS_FENCE.get();
+          ResourceLocation chorus_fence_texture = modLoc("block/chorus_block");
+          fenceBlock(chorus_fence, chorus_fence_texture);
+        //.............glow_berry
+          FenceBlock glow_berry_fence = foodblockregistry.GLOW_BERRY_FENCE.get();
+          ResourceLocation glow_berry_fence_texture = modLoc("block/glow_berry_block");
+          fenceBlock(glow_berry_fence, glow_berry_fence_texture);
+        //.............melon
+          FenceBlock melon_fence = foodblockregistry.MELON_FENCE.get();
+          ResourceLocation melon_fence_texture = modLoc("block/melon_block");
+          fenceBlock(melon_fence, melon_fence_texture);
+        //.............sweet_berry
+          FenceBlock sweet_berry_fence = foodblockregistry.SWEET_BERRY_FENCE.get();
+          ResourceLocation sweet_berry_fence_texture = modLoc("block/sweet_berry_block");
+          fenceBlock(sweet_berry_fence, sweet_berry_fence_texture);
+        //.............brown_mushroom
+          FenceBlock brown_mushroom_fence = foodblockregistry.BROWN_MUSHROOM_FENCE.get();
+          ResourceLocation brown_mushroom_fence_texture = modLoc("block/brown_mushroom_block");
+          fenceBlock(brown_mushroom_fence, brown_mushroom_fence_texture);
+        //.............red_mushroom
+          FenceBlock red_mushroom_fence = foodblockregistry.RED_MUSHROOM_FENCE.get();
+          ResourceLocation red_mushroom_fence_texture = modLoc("block/red_mushroom_block");
+          fenceBlock(red_mushroom_fence, red_mushroom_fence_texture);
+        //.............pumpkin
+          FenceBlock pumpkin_fence = foodblockregistry.PUMPKIN_FENCE.get();
+          ResourceLocation pumpkin_fence_texture = modLoc("block/pumpkin_block");
+          fenceBlock(pumpkin_fence, pumpkin_fence_texture);
+        //.............chicken
+          FenceBlock chicken_fence = foodblockregistry.CHICKEN_FENCE.get();
+          ResourceLocation chicken_fence_texture = modLoc("block/chicken_block");
+          fenceBlock(chicken_fence, chicken_fence_texture);
+        //.............cod
+          FenceBlock cod_fence = foodblockregistry.COD_FENCE.get();
+          ResourceLocation cod_fence_texture = modLoc("block/cod_block");
+          fenceBlock(cod_fence, cod_fence_texture);
+        //.............salmon
+          FenceBlock salmon_fence = foodblockregistry.SALMON_FENCE.get();
+          ResourceLocation salmon_fence_texture = modLoc("block/salmon_block");
+          fenceBlock(salmon_fence, salmon_fence_texture);
+        //.............tropical_fish
+          FenceBlock tropical_fish_fence = foodblockregistry.TROPICAL_FISH_FENCE.get();
+          ResourceLocation tropical_fish_fence_texture = modLoc("block/tropical_fish_block");
+          fenceBlock(tropical_fish_fence, tropical_fish_fence_texture);
+        //.............mutton
+          FenceBlock mutton_fence = foodblockregistry.MUTTON_FENCE.get();
+          ResourceLocation mutton_fence_texture = modLoc("block/mutton_block");
+          fenceBlock(mutton_fence, mutton_fence_texture);
+        //.............beef
+          FenceBlock beef_fence = foodblockregistry.BEEF_FENCE.get();
+          ResourceLocation beef_fence_texture = modLoc("block/beef_block");
+          fenceBlock(beef_fence, beef_fence_texture);
+        //.............pork
+          FenceBlock pork_fence = foodblockregistry.PORK_FENCE.get();
+          ResourceLocation pork_fence_texture = modLoc("block/pork_block");
+          fenceBlock(pork_fence, pork_fence_texture);
+        //.............rabbit
+          FenceBlock rabbit_fence = foodblockregistry.RABBIT_FENCE.get();
+          ResourceLocation rabbit_fence_texture = modLoc("block/rabbit_block");
+          fenceBlock(rabbit_fence, rabbit_fence_texture);
 }}
     

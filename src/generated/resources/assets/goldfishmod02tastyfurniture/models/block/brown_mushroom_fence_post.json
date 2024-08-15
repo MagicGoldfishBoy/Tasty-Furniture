@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "goldfishmod02tastyfurniture:block/brown_mushroom_block"
+  }
+}

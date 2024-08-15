@@ -377,7 +377,98 @@ public class foodblockregistry {
 
     public static final DeferredHolder<Block, FenceBlock> APPLE_FENCE = FOODBLOCK.register("apple_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
     .sound(SoundType.ROOTED_DIRT)
+    .destroyTime(1.5f)
+    .explosionResistance(8.0f)
+    ));
+    public static final DeferredHolder<Block, FenceBlock> POTATO_FENCE = FOODBLOCK.register("potato_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+    .sound(SoundType.ROOTED_DIRT)
     .destroyTime(1.75f)
+    .explosionResistance(8.0f)
+    ));
+    public static final DeferredHolder<Block, FenceBlock> BEETROOT_FENCE = FOODBLOCK.register("beetroot_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+    .sound(SoundType.ROOTED_DIRT)
+    .destroyTime(1.75f)
+    .explosionResistance(8.0f)
+    ));
+    public static final DeferredHolder<Block, FenceBlock> CARROT_FENCE = FOODBLOCK.register("carrot_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+    .sound(SoundType.ROOTED_DIRT)
+    .destroyTime(1.75f)
+    .explosionResistance(8.0f)
+    ));
+    public static final DeferredHolder<Block, FenceBlock> CHORUS_FENCE = FOODBLOCK.register("chorus_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+    .sound(SoundType.ROOTED_DIRT)
+    .destroyTime(1.5f)
+    .explosionResistance(8.0f)
+    ));
+    public static final DeferredHolder<Block, FenceBlock> GLOW_BERRY_FENCE = FOODBLOCK.register("glow_berry_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+    .sound(SoundType.ROOTED_DIRT)
+    .destroyTime(1.5f)
+    .explosionResistance(8.0f)
+    .lightLevel(state -> 5)
+    ));
+    public static final DeferredHolder<Block, FenceBlock> MELON_FENCE = FOODBLOCK.register("melon_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+    .sound(SoundType.ROOTED_DIRT)
+    .destroyTime(1.5f)
+    .explosionResistance(8.0f)
+    ));
+    public static final DeferredHolder<Block, FenceBlock> SWEET_BERRY_FENCE = FOODBLOCK.register("sweet_berry_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+    .sound(SoundType.ROOTED_DIRT)
+    .destroyTime(1.5f)
+    .explosionResistance(8.0f)
+    ));
+    public static final DeferredHolder<Block, FenceBlock> BROWN_MUSHROOM_FENCE = FOODBLOCK.register("brown_mushroom_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+    .sound(SoundType.ROOTED_DIRT)
+    .destroyTime(1.5f)
+    .explosionResistance(8.0f)
+    ));
+    public static final DeferredHolder<Block, FenceBlock> RED_MUSHROOM_FENCE = FOODBLOCK.register("red_mushroom_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+    .sound(SoundType.ROOTED_DIRT)
+    .destroyTime(1.5f)
+    .explosionResistance(8.0f)
+    ));
+    public static final DeferredHolder<Block, FenceBlock> PUMPKIN_FENCE = FOODBLOCK.register("pumpkin_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+    .sound(SoundType.ROOTED_DIRT)
+    .destroyTime(1.5f)
+    .explosionResistance(8.0f)
+    ));
+    public static final DeferredHolder<Block, FenceBlock> CHICKEN_FENCE = FOODBLOCK.register("chicken_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
+    .destroyTime(1.25f)
+    .explosionResistance(8.0f)
+    ));
+    public static final DeferredHolder<Block, FenceBlock> COD_FENCE = FOODBLOCK.register("cod_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
+    .destroyTime(1.25f)
+    .explosionResistance(8.0f)
+    ));
+    public static final DeferredHolder<Block, FenceBlock> SALMON_FENCE = FOODBLOCK.register("salmon_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
+    .destroyTime(1.25f)
+    .explosionResistance(8.0f)
+    ));
+    public static final DeferredHolder<Block, FenceBlock> TROPICAL_FISH_FENCE = FOODBLOCK.register("tropical_fish_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
+    .destroyTime(1.25f)
+    .explosionResistance(8.0f)
+    ));
+    public static final DeferredHolder<Block, FenceBlock> MUTTON_FENCE = FOODBLOCK.register("mutton_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
+    .destroyTime(1.25f)
+    .explosionResistance(8.0f)
+    ));
+    public static final DeferredHolder<Block, FenceBlock> BEEF_FENCE = FOODBLOCK.register("beef_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
+    .destroyTime(1.25f)
+    .explosionResistance(8.0f)
+    ));
+    public static final DeferredHolder<Block, FenceBlock> PORK_FENCE = FOODBLOCK.register("pork_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
+    .destroyTime(1.25f)
+    .explosionResistance(8.0f)
+    ));
+    public static final DeferredHolder<Block, FenceBlock> RABBIT_FENCE = FOODBLOCK.register("rabbit_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
+    .destroyTime(1.25f)
     .explosionResistance(8.0f)
     ));
 

@@ -91,7 +91,42 @@ public class GM1ItemModelProvider extends ItemModelProvider {
     //-----------------------------------------------------------fences-------------------------------------------------------------------
       //..............apple
         fenceInventory("apple_fence_item", modLoc("block/apple_block"));
-
+      //..............potato
+       fenceInventory("potato_fence_item", modLoc("block/potato_block"));
+      //..............beetroot
+       fenceInventory("beetroot_fence_item", modLoc("block/beetroot_block"));
+      //..............carrot
+       fenceInventory("carrot_fence_item", modLoc("block/carrot_block"));
+      //..............chorus
+       fenceInventory("chorus_fence_item", modLoc("block/chorus_block"));
+      //..............glow_berry
+       fenceInventory("glow_berry_fence_item", modLoc("block/glow_berry_block"));
+      //..............melon
+       fenceInventory("melon_fence_item", modLoc("block/melon_block"));
+      //..............sweet_berry
+       fenceInventory("sweet_berry_fence_item", modLoc("block/sweet_berry_block"));
+      //..............brown_mushroom
+       fenceInventory("brown_mushroom_fence_item", modLoc("block/brown_mushroom_block"));
+      //..............red_mushroom
+       fenceInventory("red_mushroom_fence_item", modLoc("block/red_mushroom_block"));
+      //..............pumpkin
+       fenceInventory("pumpkin_fence_item", modLoc("block/pumpkin_block"));
+      //..............chicken
+       fenceInventory("chicken_fence_item", modLoc("block/chicken_block"));
+      //..............cod
+       fenceInventory("cod_fence_item", modLoc("block/cod_block"));
+      //..............salmon
+       fenceInventory("salmon_fence_item", modLoc("block/salmon_block"));
+      //..............tropical_fish
+       fenceInventory("tropical_fish_fence_item", modLoc("block/tropical_fish_block"));
+      //..............mutton
+       fenceInventory("mutton_fence_item", modLoc("block/mutton_block"));
+      //..............beef
+       fenceInventory("beef_fence_item", modLoc("block/beef_block"));
+      //..............pork
+       fenceInventory("pork_fence_item", modLoc("block/pork_block"));
+      //..............rabbit
+       fenceInventory("rabbit_fence_item", modLoc("block/rabbit_block"));
         }
     
 }

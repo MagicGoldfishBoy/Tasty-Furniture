@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_inventory",
+  "textures": {
+    "texture": "goldfishmod02tastyfurniture:block/tropical_fish_block"
+  }
+}
