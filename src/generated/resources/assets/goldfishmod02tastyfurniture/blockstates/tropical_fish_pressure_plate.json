@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "goldfishmod02tastyfurniture:block/tropical_fish_pressure_plate"
+    },
+    "powered=true": {
+      "model": "goldfishmod02tastyfurniture:block/tropical_fish_pressure_plate_down"
+    }
+  }
+}

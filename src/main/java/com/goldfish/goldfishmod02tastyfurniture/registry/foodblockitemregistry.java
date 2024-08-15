@@ -262,6 +262,60 @@ public class foodblockitemregistry {
      public static final DeferredHolder<Item, BlockItem> APPLE_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("apple_pressure_plate_item",
      () -> new BlockItem(foodblockregistry.APPLE_PRESSURE_PLATE.get(), new BlockItem.Properties()));
 
+     public static final DeferredHolder<Item, BlockItem> POTATO_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("potato_pressure_plate_item",
+     () -> new BlockItem(foodblockregistry.POTATO_PRESSURE_PLATE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> BEETROOT_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("beetroot_pressure_plate_item",
+     () -> new BlockItem(foodblockregistry.BEETROOT_PRESSURE_PLATE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> CARROT_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("carrot_pressure_plate_item",
+     () -> new BlockItem(foodblockregistry.CARROT_PRESSURE_PLATE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> CHORUS_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("chorus_pressure_plate_item",
+     () -> new BlockItem(foodblockregistry.CHORUS_PRESSURE_PLATE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> GLOW_BERRY_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("glow_berry_pressure_plate_item",
+     () -> new BlockItem(foodblockregistry.GLOW_BERRY_PRESSURE_PLATE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> MELON_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("melon_pressure_plate_item",
+     () -> new BlockItem(foodblockregistry.MELON_PRESSURE_PLATE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> SWEET_BERRY_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("sweet_berry_pressure_plate_item",
+     () -> new BlockItem(foodblockregistry.SWEET_BERRY_PRESSURE_PLATE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> BROWN_MUSHROOM_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("brown_mushroom_pressure_plate_item",
+     () -> new BlockItem(foodblockregistry.BROWN_MUSHROOM_PRESSURE_PLATE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> RED_MUSHROOM_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("red_mushroom_pressure_plate_item",
+     () -> new BlockItem(foodblockregistry.RED_MUSHROOM_PRESSURE_PLATE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> PUMPKIN_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("pumpkin_pressure_plate_item",
+     () -> new BlockItem(foodblockregistry.PUMPKIN_PRESSURE_PLATE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> CHICKEN_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("chicken_pressure_plate_item",
+     () -> new BlockItem(foodblockregistry.CHICKEN_PRESSURE_PLATE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> COD_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("cod_pressure_plate_item",
+     () -> new BlockItem(foodblockregistry.COD_PRESSURE_PLATE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> SALMON_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("salmon_pressure_plate_item",
+     () -> new BlockItem(foodblockregistry.SALMON_PRESSURE_PLATE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> TROPICAL_FISH_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("tropical_fish_pressure_plate_item",
+     () -> new BlockItem(foodblockregistry.TROPICAL_FISH_PRESSURE_PLATE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> MUTTON_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("mutton_pressure_plate_item",
+     () -> new BlockItem(foodblockregistry.MUTTON_PRESSURE_PLATE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> BEEF_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("beef_pressure_plate_item",
+     () -> new BlockItem(foodblockregistry.BEEF_PRESSURE_PLATE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> PORK_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("pork_pressure_plate_item",
+     () -> new BlockItem(foodblockregistry.PORK_PRESSURE_PLATE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> RABBIT_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("rabbit_pressure_plate_item",
+     () -> new BlockItem(foodblockregistry.RABBIT_PRESSURE_PLATE.get(), new BlockItem.Properties()));
+
 //==============================================================================================================================================================================================
 //                                                                                          Signs
 //==============================================================================================================================================================================================

@@ -130,6 +130,41 @@ public class GM1ItemModelProvider extends ItemModelProvider {
     //------------------------------------------------------pressure plates-------------------------------------------------------------------
       //..............apple
        pressurePlate("apple_pressure_plate_item", modLoc("block/apple_block"));
-
+      //..............potato
+       pressurePlate("potato_pressure_plate_item", modLoc("block/potato_block"));
+      //..............beetroot
+       pressurePlate("beetroot_pressure_plate_item", modLoc("block/beetroot_block"));
+      //..............carrot
+       pressurePlate("carrot_pressure_plate_item", modLoc("block/carrot_block"));
+      //..............chorus
+       pressurePlate("chorus_pressure_plate_item", modLoc("block/chorus_block"));
+      //..............glow_berry
+       pressurePlate("glow_berry_pressure_plate_item", modLoc("block/glow_berry_block"));
+      //..............melon
+       pressurePlate("melon_pressure_plate_item", modLoc("block/melon_block"));
+      //..............sweet_berry
+       pressurePlate("sweet_berry_pressure_plate_item", modLoc("block/sweet_berry_block"));
+      //..............brown_mushroom
+       pressurePlate("brown_mushroom_pressure_plate_item", modLoc("block/brown_mushroom_block"));
+      //..............red_mushroom
+       pressurePlate("red_mushroom_pressure_plate_item", modLoc("block/red_mushroom_block"));
+      //..............pumpkin
+       pressurePlate("pumpkin_pressure_plate_item", modLoc("block/pumpkin_block"));
+      //..............chicken
+       pressurePlate("chicken_pressure_plate_item", modLoc("block/chicken_block"));
+      //..............cod
+       pressurePlate("cod_pressure_plate_item", modLoc("block/cod_block"));
+      //..............salmon
+       pressurePlate("salmon_pressure_plate_item", modLoc("block/salmon_block"));
+      //..............tropical_fish
+       pressurePlate("tropical_fish_pressure_plate_item", modLoc("block/tropical_fish_block"));
+      //..............mutton
+       pressurePlate("mutton_pressure_plate_item", modLoc("block/mutton_block"));
+      //..............beef
+       pressurePlate("beef_pressure_plate_item", modLoc("block/beef_block"));
+      //..............pork
+       pressurePlate("pork_pressure_plate_item", modLoc("block/pork_block"));
+      //..............rabbit
+       pressurePlate("rabbit_pressure_plate_item", modLoc("block/rabbit_block"));
         }   
 }

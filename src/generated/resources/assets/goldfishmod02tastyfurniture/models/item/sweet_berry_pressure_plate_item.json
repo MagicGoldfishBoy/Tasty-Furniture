@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/pressure_plate_up",
+  "textures": {
+    "texture": "goldfishmod02tastyfurniture:block/sweet_berry_block"
+  }
+}

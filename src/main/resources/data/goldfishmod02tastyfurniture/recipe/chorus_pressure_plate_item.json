@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "key": {
+      "A": {
+        "item": "goldfishmod02tastyfurniture:chorus_block_item"
+      }
+    },
+    "pattern": [
+      "   ",
+      "AA ",
+      "   "
+    ],
+    "result": {
+      "count": 1,
+      "id": "goldfishmod02tastyfurniture:chorus_pressure_plate_item"
+    }
+  }

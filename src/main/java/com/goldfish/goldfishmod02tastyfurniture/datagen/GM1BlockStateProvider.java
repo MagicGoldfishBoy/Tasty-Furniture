@@ -290,5 +290,77 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock apple_pressure_plate = foodblockregistry.APPLE_PRESSURE_PLATE.get();
           ResourceLocation apple_pressure_plate_texture = modLoc("block/apple_block");
           pressurePlateBlock(apple_pressure_plate, apple_pressure_plate_texture);
+        //.............potato
+          PressurePlateBlock potato_pressure_plate = foodblockregistry.POTATO_PRESSURE_PLATE.get();
+          ResourceLocation potato_pressure_plate_texture = modLoc("block/potato_block");
+          pressurePlateBlock(potato_pressure_plate, potato_pressure_plate_texture);
+        //.............beetroot
+          PressurePlateBlock beetroot_pressure_plate = foodblockregistry.BEETROOT_PRESSURE_PLATE.get();
+          ResourceLocation beetroot_pressure_plate_texture = modLoc("block/beetroot_block");
+          pressurePlateBlock(beetroot_pressure_plate, beetroot_pressure_plate_texture);
+        //.............carrot
+          PressurePlateBlock carrot_pressure_plate = foodblockregistry.CARROT_PRESSURE_PLATE.get();
+          ResourceLocation carrot_pressure_plate_texture = modLoc("block/carrot_block");
+          pressurePlateBlock(carrot_pressure_plate, carrot_pressure_plate_texture);
+        //.............chorus
+          PressurePlateBlock chorus_pressure_plate = foodblockregistry.CHORUS_PRESSURE_PLATE.get();
+          ResourceLocation chorus_pressure_plate_texture = modLoc("block/chorus_block");
+          pressurePlateBlock(chorus_pressure_plate, chorus_pressure_plate_texture);
+        //.............glow_berry
+          PressurePlateBlock glow_berry_pressure_plate = foodblockregistry.GLOW_BERRY_PRESSURE_PLATE.get();
+          ResourceLocation glow_berry_pressure_plate_texture = modLoc("block/glow_berry_block");
+          pressurePlateBlock(glow_berry_pressure_plate, glow_berry_pressure_plate_texture);
+        //.............melon
+          PressurePlateBlock melon_pressure_plate = foodblockregistry.MELON_PRESSURE_PLATE.get();
+          ResourceLocation melon_pressure_plate_texture = modLoc("block/melon_block");
+          pressurePlateBlock(melon_pressure_plate, melon_pressure_plate_texture);
+        //.............sweet_berry
+          PressurePlateBlock sweet_berry_pressure_plate = foodblockregistry.SWEET_BERRY_PRESSURE_PLATE.get();
+          ResourceLocation sweet_berry_pressure_plate_texture = modLoc("block/sweet_berry_block");
+          pressurePlateBlock(sweet_berry_pressure_plate, sweet_berry_pressure_plate_texture);
+        //.............brown_mushroom
+          PressurePlateBlock brown_mushroom_pressure_plate = foodblockregistry.BROWN_MUSHROOM_PRESSURE_PLATE.get();
+          ResourceLocation brown_mushroom_pressure_plate_texture = modLoc("block/brown_mushroom_block");
+          pressurePlateBlock(brown_mushroom_pressure_plate, brown_mushroom_pressure_plate_texture);
+        //.............red_mushroom
+          PressurePlateBlock red_mushroom_pressure_plate = foodblockregistry.RED_MUSHROOM_PRESSURE_PLATE.get();
+          ResourceLocation red_mushroom_pressure_plate_texture = modLoc("block/red_mushroom_block");
+          pressurePlateBlock(red_mushroom_pressure_plate, red_mushroom_pressure_plate_texture);
+        //.............pumpkin
+          PressurePlateBlock pumpkin_pressure_plate = foodblockregistry.PUMPKIN_PRESSURE_PLATE.get();
+          ResourceLocation pumpkin_pressure_plate_texture = modLoc("block/pumpkin_block");
+          pressurePlateBlock(pumpkin_pressure_plate, pumpkin_pressure_plate_texture);
+        //.............chicken
+          PressurePlateBlock chicken_pressure_plate = foodblockregistry.CHICKEN_PRESSURE_PLATE.get();
+          ResourceLocation chicken_pressure_plate_texture = modLoc("block/chicken_block");
+          pressurePlateBlock(chicken_pressure_plate, chicken_pressure_plate_texture);
+        //.............cod
+          PressurePlateBlock cod_pressure_plate = foodblockregistry.COD_PRESSURE_PLATE.get();
+          ResourceLocation cod_pressure_plate_texture = modLoc("block/cod_block");
+          pressurePlateBlock(cod_pressure_plate, cod_pressure_plate_texture);
+        //.............salmon
+          PressurePlateBlock salmon_pressure_plate = foodblockregistry.SALMON_PRESSURE_PLATE.get();
+          ResourceLocation salmon_pressure_plate_texture = modLoc("block/salmon_block");
+          pressurePlateBlock(salmon_pressure_plate, salmon_pressure_plate_texture);
+        //.............tropical_fish
+          PressurePlateBlock tropical_fish_pressure_plate = foodblockregistry.TROPICAL_FISH_PRESSURE_PLATE.get();
+          ResourceLocation tropical_fish_pressure_plate_texture = modLoc("block/tropical_fish_block");
+          pressurePlateBlock(tropical_fish_pressure_plate, tropical_fish_pressure_plate_texture);
+        //.............mutton
+          PressurePlateBlock mutton_pressure_plate = foodblockregistry.MUTTON_PRESSURE_PLATE.get();
+          ResourceLocation mutton_pressure_plate_texture = modLoc("block/mutton_block");
+          pressurePlateBlock(mutton_pressure_plate, mutton_pressure_plate_texture);
+        //.............beef
+          PressurePlateBlock beef_pressure_plate = foodblockregistry.BEEF_PRESSURE_PLATE.get();
+          ResourceLocation beef_pressure_plate_texture = modLoc("block/beef_block");
+          pressurePlateBlock(beef_pressure_plate, beef_pressure_plate_texture);
+        //.............pork
+          PressurePlateBlock pork_pressure_plate = foodblockregistry.PORK_PRESSURE_PLATE.get();
+          ResourceLocation pork_pressure_plate_texture = modLoc("block/pork_block");
+          pressurePlateBlock(pork_pressure_plate, pork_pressure_plate_texture);
+        //.............rabbit
+          PressurePlateBlock rabbit_pressure_plate = foodblockregistry.RABBIT_PRESSURE_PLATE.get();
+          ResourceLocation rabbit_pressure_plate_texture = modLoc("block/rabbit_block");
+          pressurePlateBlock(rabbit_pressure_plate, rabbit_pressure_plate_texture);
 }}
     
