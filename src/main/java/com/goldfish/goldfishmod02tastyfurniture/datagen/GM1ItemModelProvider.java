@@ -88,6 +88,10 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       //............rabbit
         buttonInventory("rabbit_button_item", modLoc("block/rabbit_block"));
 
+    //-----------------------------------------------------------fences-------------------------------------------------------------------
+      //..............apple
+        fenceInventory("apple_fence_item", modLoc("block/apple_block"));
+
         }
     
 }

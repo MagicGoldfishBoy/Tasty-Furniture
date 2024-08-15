@@ -6,6 +6,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.DoorBlock;
+import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.state.properties.DoorHingeSide;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent.Block;
@@ -205,5 +206,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ButtonBlock rabbit_button = foodblockregistry.RABBIT_BUTTON.get();
           ResourceLocation rabbit_button_texture = modLoc("block/rabbit_block");
           buttonBlock(rabbit_button, rabbit_button_texture);
+      //-------------------------------------------------------------------fences---------------------------------------------------------------------------
+        //.............apple
+          FenceBlock apple_fence = foodblockregistry.APPLE_FENCE.get();
+          ResourceLocation apple_fence_texture = modLoc("block/apple_block");
+          fenceBlock(apple_fence, apple_fence_texture);
 }}
     

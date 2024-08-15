@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "key": {
+      "A": {
+        "item": "goldfishmod02tastyfurniture:apple_ingot"
+      },
+      "B": {
+        "item": "goldfishmod02tastyfurniture:apple_nugget"
+      }
+    },
+    "pattern": [
+      "   ",
+      "ABA",
+      "ABA"
+    ],
+    "result": {
+      "count": 1,
+      "id": "goldfishmod02tastyfurniture:apple_fence_item"
+    }
+  }

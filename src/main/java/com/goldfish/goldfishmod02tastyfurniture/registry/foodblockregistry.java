@@ -375,7 +375,10 @@ public class foodblockregistry {
 //                                                                                         Fences
 //==============================================================================================================================================================================================
 
-    public static final DeferredHolder<Block, Block> APPLE_FENCE = FOODBLOCK.register("apple_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, FenceBlock> APPLE_FENCE = FOODBLOCK.register("apple_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+    .sound(SoundType.ROOTED_DIRT)
+    .destroyTime(1.75f)
+    .explosionResistance(8.0f)
     ));
 
 //==============================================================================================================================================================================================
