@@ -6,6 +6,9 @@ import java.util.concurrent.CompletableFuture;
 
 import javax.annotation.Nullable;
 
+import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockitemregistry;
+import com.goldfish.goldfishmod02tastyfurniture.registry.ingotregistry;
+
 import net.minecraft.advancements.Criterion;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.HolderLookup.Provider;
@@ -69,7 +72,10 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
 
         @Override
         protected void buildRecipes(RecipeOutput output) {
-            // Implement your recipe generation logic here
+         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.APPLE_INGOT.get(), 9)
+         .requires(foodblockitemregistry.APPLE_BLOCK_ITEM.get())
+         .unlockedBy("has_apple_block", has(foodblockitemregistry.APPLE_BLOCK_ITEM.get()))
+         .save(output);
         }
 
     }
