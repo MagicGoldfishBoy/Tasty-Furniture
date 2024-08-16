@@ -33,18 +33,9 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
 
     public GM1RecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
         super(output, lookupProvider);
-        // this.output = output;
-        // this.lookupProvider = lookupProvider;
-        // this.result = null;
-        // this.group = "";
     }
 
-    // protected final ItemStack result;
-    // protected final Map<String, Criterion<?>> criteria = new LinkedHashMap<>();
-    // @Nullable
-    // protected final String group;
-
-
+    // sample from the docs for easy reference. only recipes in the concrete class will be created
     @Override
     protected void buildRecipes(RecipeOutput output) {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.MUSHROOM_STEW)
