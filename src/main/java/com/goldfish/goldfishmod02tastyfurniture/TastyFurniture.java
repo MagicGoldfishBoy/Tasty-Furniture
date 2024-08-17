@@ -148,19 +148,6 @@ public class TastyFurniture
         LOGGER.info("HELLO from the VOID");
     }
 
-// this is how the docs said to do it, but it doesn't work for reasons only computer thor knows :(
-//     @SubscribeEvent
-//     public static void gatherData(GatherDataEvent event) {
-//     DataGenerator generator = event.getGenerator();
-//     PackOutput output = generator.getPackOutput();
-//     ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
-
-//     generator.addProvider(
-//         event.includeClient(),
-//         new GM1BlockStateProvider(output, existingFileHelper)
-//     );
-// }
-
     @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents
     {
@@ -171,6 +158,19 @@ public class TastyFurniture
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }
     }
+
+//the docs said to do it this way, but it doesn't work. fml.
+//     @SubscribeEvent
+//     public static void onGatherData(GatherDataEvent event) {
+//     event.getGenerator().addProvider(
+//             event.includeServer(),
+//             output -> new LootTableProvider(
+//                     output,
+//                     Set.of(),
+//                     List.of(GM1BlockLootTableProvider)
+//             )
+//     );
+// }
 }
 
 //Note to self: "recipes" is now "recipe" in 1.21.

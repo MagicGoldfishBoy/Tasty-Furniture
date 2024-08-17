@@ -7,6 +7,7 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockitemregistry;
+import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.ingotregistry;
 
 import net.minecraft.advancements.Criterion;
@@ -16,6 +17,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -72,6 +74,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.POTATO_INGOT.get(), 9)
          .requires(foodblockitemregistry.POTATO_BLOCK_ITEM.get())
          .unlockedBy("has_potato_block", has(foodblockitemregistry.POTATO_BLOCK_ITEM.get()))
+         .save(output);
+        //-----------------------------------signs----------------------------------------------------
+         //apple_sign
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_SIGN_ITEM.get())
+         .pattern("AAA")
+         .pattern("AAA")
+         .pattern(" B ")
+         .define('A', ingotregistry.APPLE_INGOT.get())
+         .define('B', Items.STICK)
+         .unlockedBy("has_apple_ingot", has(ingotregistry.APPLE_INGOT.get()))
          .save(output);
         }
         

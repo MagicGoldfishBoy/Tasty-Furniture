@@ -8,6 +8,9 @@ import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
+import net.minecraft.world.level.block.SignBlock;
+import net.minecraft.world.level.block.StandingSignBlock;
+import net.minecraft.world.level.block.WallSignBlock;
 import net.minecraft.world.level.block.state.properties.DoorHingeSide;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent.Block;
@@ -362,5 +365,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock rabbit_pressure_plate = foodblockregistry.RABBIT_PRESSURE_PLATE.get();
           ResourceLocation rabbit_pressure_plate_texture = modLoc("block/rabbit_block");
           pressurePlateBlock(rabbit_pressure_plate, rabbit_pressure_plate_texture);
+      //-----------------------------------------------------------------signs-----------------------------------------------------------------------------
+        //.............apple
+         StandingSignBlock apple_sign = foodblockregistry.APPLE_STANDING_SIGN.get();
+         WallSignBlock apple_wall_sign = foodblockregistry.APPLE_WALL_SIGN.get();
+         ResourceLocation apple_sign_texture = modLoc("block/apple_block");
+         signBlock(apple_sign, apple_wall_sign, apple_sign_texture);
 }}
     

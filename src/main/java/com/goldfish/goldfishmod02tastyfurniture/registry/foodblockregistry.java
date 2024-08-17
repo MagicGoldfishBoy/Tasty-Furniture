@@ -21,7 +21,9 @@ import net.minecraft.world.level.block.SignBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.StandingSignBlock;
 import net.minecraft.world.level.block.TrapDoorBlock;
+import net.minecraft.world.level.block.WallSignBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.SignBlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -577,11 +579,22 @@ public class foodblockregistry {
 //                                                                                          Signs
 //==============================================================================================================================================================================================
 
+   //.........apple
     public static final DeferredHolder<Block, SignBlock> APPLE_SIGN = FOODBLOCK.register("apple_sign",
     () -> new foodsign(
         BlockBehaviour.Properties.of(),
         WoodType.WARPED
     ));
+    public static final DeferredHolder<Block, WallSignBlock> APPLE_WALL_SIGN = FOODBLOCK.register("apple_wall_sign",
+    () -> new foodsign.foodwallsign(
+        BlockBehaviour.Properties.of(),
+        WoodType.WARPED
+    ));
+    public static final  DeferredHolder<Block, StandingSignBlock>  APPLE_STANDING_SIGN = FOODBLOCK.register("apple_standing_sign", () -> new foodsign.foodstandingsign(
+        BlockBehaviour.Properties.of(),
+        WoodType.WARPED
+    ));
+   //.........potato
     public static final DeferredHolder<Block, SignBlock> POTATO_SIGN = FOODBLOCK.register("potato_sign",
     () -> new foodsign(
         BlockBehaviour.Properties.of(),

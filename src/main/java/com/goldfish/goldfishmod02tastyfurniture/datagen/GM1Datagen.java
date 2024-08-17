@@ -3,6 +3,7 @@ package com.goldfish.goldfishmod02tastyfurniture.datagen;
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 import  com.goldfish.goldfishmod02tastyfurniture.datagen.GM1RecipeProvider;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1RecipeProvider.GM1RecipeProviderConcrete;
+import com.mojang.datafixers.types.templates.List;
 import com.mojang.logging.LogUtils;
 
 import java.io.FileWriter;
@@ -65,7 +66,6 @@ public class GM1Datagen {
         } catch (Exception e) {
             LOGGER.error("failed to generate recipes");
         }
-        
     }
 
 }

@@ -4,6 +4,7 @@ import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockitemregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 
 import net.minecraft.data.PackOutput;
+import net.minecraft.world.level.block.SignBlock;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
@@ -166,5 +167,9 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        pressurePlate("pork_pressure_plate_item", modLoc("block/pork_block"));
       //..............rabbit
        pressurePlate("rabbit_pressure_plate_item", modLoc("block/rabbit_block"));
-        }   
+    //---------------------------------------------------------signs----------------------------------------------------------------------
+      //..............apple
+       //SignBlock("apple_sign_item", modLoc("block/apple_block"));
+       withExistingParent("apple_sign_item", mcLoc("item/generated")).texture("layer0", "block/apple_block");
+ }   
 }
