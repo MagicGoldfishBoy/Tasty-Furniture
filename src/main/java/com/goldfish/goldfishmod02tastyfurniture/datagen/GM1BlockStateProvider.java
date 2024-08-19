@@ -369,10 +369,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
 
       //-----------------------------------------------------------------signs-----------------------------------------------------------------------------
         //.............apple
-         StandingSignBlock apple_sign = foodblockregistry.APPLE_STANDING_SIGN.get();
-         WallSignBlock apple_wall_sign = foodblockregistry.APPLE_WALL_SIGN.get();
-         ResourceLocation apple_sign_texture = modLoc("block/apple_block");
-         signBlock(apple_sign, apple_wall_sign, apple_sign_texture);
+          StandingSignBlock apple_sign = foodblockregistry.APPLE_SIGN.get();
+          WallSignBlock apple_wall_sign = foodblockregistry.APPLE_WALL_SIGN.get();
+          ResourceLocation apple_sign_texture = modLoc("block/apple_block");
+          signBlock(apple_sign, apple_wall_sign, apple_sign_texture);
 
       //-----------------------------------------------------------------slabs-----------------------------------------------------------------------------
         //............apple

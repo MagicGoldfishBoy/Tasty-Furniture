@@ -21,6 +21,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.api.distmarker.Dist;
@@ -42,11 +43,13 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.NewRegistryEvent;
 
 import com.goldfish.goldfishmod02tastyfurniture.item.mushhammer;
 import com.goldfish.goldfishmod02tastyfurniture.registry.mushregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.ingotregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.nuggetregistry;
+import com.google.common.base.Supplier;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockitemregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1BlockLootTableProvider;
@@ -159,7 +162,7 @@ public class TastyFurniture
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }
     }
-    
+
 //the docs said to do it this way, but it doesn't work. fml.
 //     @SubscribeEvent
 //     public static void onGatherData(GatherDataEvent event) {

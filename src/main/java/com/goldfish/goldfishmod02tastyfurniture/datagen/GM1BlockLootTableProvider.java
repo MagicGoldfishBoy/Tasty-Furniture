@@ -20,7 +20,7 @@ public class GM1BlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        dropSelf(foodblockregistry.APPLE_SIGN.get());
+       // dropSelf(foodblockregistry.APPLE_SIGN.get());
     }
 
     @Override

@@ -54,7 +54,7 @@ public class LootTableProvider implements LootTableSubProvider {
                 .setRolls(UniformGenerator.between(5, 9))
                 .setBonusRolls(ConstantValue.exactly(1))
                 // Add a loot entry. This example returns an item loot entry. See below for more loot entries.
-                .add(LootItem.lootTableItem(foodblockregistry.APPLE_SIGN.get()))
+                //.add(LootItem.lootTableItem(foodblockregistry.APPLE_SIGN.get()))
                 )
         );
     }
