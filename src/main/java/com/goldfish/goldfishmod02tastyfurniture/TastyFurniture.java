@@ -49,6 +49,7 @@ import com.goldfish.goldfishmod02tastyfurniture.registry.ingotregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.nuggetregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockitemregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
+import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1BlockLootTableProvider;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1BlockStateProvider;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1Datagen;
 
@@ -158,7 +159,7 @@ public class TastyFurniture
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }
     }
-
+    
 //the docs said to do it this way, but it doesn't work. fml.
 //     @SubscribeEvent
 //     public static void onGatherData(GatherDataEvent event) {

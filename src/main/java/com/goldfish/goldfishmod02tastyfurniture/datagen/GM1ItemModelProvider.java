@@ -169,7 +169,6 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        pressurePlate("rabbit_pressure_plate_item", modLoc("block/rabbit_block"));
     //---------------------------------------------------------signs----------------------------------------------------------------------
       //..............apple
-       //SignBlock("apple_sign_item", modLoc("block/apple_block"));
        withExistingParent("apple_sign_item", mcLoc("item/generated")).texture("layer0", "block/apple_block");
  }   
 }

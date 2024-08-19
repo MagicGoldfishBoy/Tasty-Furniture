@@ -77,15 +77,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .save(output);
         //-----------------------------------signs----------------------------------------------------
          //apple_sign
-         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_SIGN_ITEM.get())
-         .pattern("AAA")
-         .pattern("AAA")
-         .pattern(" B ")
-         .define('A', ingotregistry.APPLE_INGOT.get())
-         .define('B', Items.STICK)
-         .unlockedBy("has_apple_ingot", has(ingotregistry.APPLE_INGOT.get()))
-         .save(output);
-        }
+        //  ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_SIGN_ITEM.get())
+        //  .pattern("AAA")
+        //  .pattern("AAA")
+        //  .pattern(" B ")
+        //  .define('A', ingotregistry.APPLE_INGOT.get())
+        //  .define('B', Items.STICK)
+        //  .unlockedBy("has_apple_ingot", has(ingotregistry.APPLE_INGOT.get()))
+        //  .save(output);
+         }
         
 
     }

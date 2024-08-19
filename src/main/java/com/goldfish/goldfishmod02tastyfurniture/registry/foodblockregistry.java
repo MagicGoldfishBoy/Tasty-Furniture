@@ -2,6 +2,7 @@ package com.goldfish.goldfishmod02tastyfurniture.registry;
 
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsignentity;
 import com.google.common.base.Supplier;
 
 import net.minecraft.client.Minecraft;
@@ -25,22 +26,27 @@ import net.minecraft.world.level.block.StandingSignBlock;
 import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WallSignBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.entity.vault.*;
 import net.minecraft.world.level.block.entity.SignBlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.WoodType;
+
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.obj.ObjMaterialLibrary.Material;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredRegister.Blocks.*;
+import net.neoforged.neoforge.registries.datamaps.builtin.*;
+import net.neoforged.neoforge.registries.callback.*;;
 
 
 public class foodblockregistry {
     public static final DeferredRegister<Block> FOODBLOCK = DeferredRegister.create(BuiltInRegistries.BLOCK, TastyFurniture.MODID);
+    
     public static final BlockSetType PLANT = BlockSetType.register(
      new BlockSetType(
      "plant", 
@@ -582,18 +588,29 @@ public class foodblockregistry {
    //.........apple
     public static final DeferredHolder<Block, SignBlock> APPLE_SIGN = FOODBLOCK.register("apple_sign",
     () -> new foodsign(
-        BlockBehaviour.Properties.of(),
+        BlockBehaviour.Properties.of()
+        .strength(2.0f)
+        .sound(SoundType.WOOD)
+        .randomTicks(),
         WoodType.WARPED
     ));
     public static final DeferredHolder<Block, WallSignBlock> APPLE_WALL_SIGN = FOODBLOCK.register("apple_wall_sign",
     () -> new foodsign.foodwallsign(
-        BlockBehaviour.Properties.of(),
+        BlockBehaviour.Properties.of()
+        .strength(2.0f)
+        .sound(SoundType.WOOD)
+        .randomTicks(),
         WoodType.WARPED
     ));
-    public static final  DeferredHolder<Block, StandingSignBlock>  APPLE_STANDING_SIGN = FOODBLOCK.register("apple_standing_sign", () -> new foodsign.foodstandingsign(
-        BlockBehaviour.Properties.of(),
+    public static final  DeferredHolder<Block, StandingSignBlock>  APPLE_STANDING_SIGN = FOODBLOCK.register("apple_standing_sign", 
+    () -> new foodsign.foodstandingsign(
+        BlockBehaviour.Properties.of()
+        .strength(2.0f)
+        .sound(SoundType.WOOD)
+        .randomTicks(),
         WoodType.WARPED
     ));
+    //public static final DeferredHolder<Block, SignBlockEntity> APPLE_SIGN_ENTITY = FOODBLOCKENTITY.register("apple_sign_entity", () -> new foodsignentity(pType, pPos, pBlockState));
    //.........potato
     public static final DeferredHolder<Block, SignBlock> POTATO_SIGN = FOODBLOCK.register("potato_sign",
     () -> new foodsign(
@@ -685,6 +702,18 @@ public class foodblockregistry {
         BlockBehaviour.Properties.of(),
         WoodType.WARPED
     ));
+
+    public static final DeferredRegister<BlockEntityType<?>> FOODBLOCKENTITY = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, TastyFurniture.MODID);
+
+    // The docs said to do it like this, but it throw a type mismatch error so I guess signs are a bust
+    
+    //  public static final Supplier<BlockEntityType<foodsignentity>> FOODSIGNBLOCKENTITIES = FOODBLOCKENTITY.register("foodblockentities", 
+    //  () -> BlockEntityType.Builder.of(foodsignentity::new, 
+    //  APPLE_SIGN.get(), APPLE_WALL_SIGN.get(), APPLE_STANDING_SIGN.get()).build(null));
+
+      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<SignBlockEntity>> FOODSIGNBLOCKENTITIES = FOODBLOCKENTITY.register("foodblockentities", 
+      () -> BlockEntityType.Builder.<SignBlockEntity>of(foodsignentity::new, foodblockregistry.APPLE_SIGN.get(), foodblockregistry.APPLE_WALL_SIGN.get(), foodblockregistry.APPLE_STANDING_SIGN.get()).build(null));
+
 
 //==============================================================================================================================================================================================
 //                                                                                          Slabs

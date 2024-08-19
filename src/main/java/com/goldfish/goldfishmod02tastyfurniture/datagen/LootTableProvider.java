@@ -2,6 +2,7 @@ package com.goldfish.goldfishmod02tastyfurniture.datagen;
 
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.CompletableFuture;
 
 import org.apache.logging.log4j.util.BiConsumer;
 
@@ -24,12 +25,16 @@ import net.minecraft.world.level.storage.loot.predicates.WeatherCheck;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.DataProvider;
 
 public class LootTableProvider implements LootTableSubProvider {
     // The parameter is provided by the lambda (see below). It can be stored and used to lookup other registry entries.
     public LootTableProvider(HolderLookup.Provider lookupProvider) {
         super();
+    }
+
+    public LootTableProvider(PackOutput output, CompletableFuture<Provider> lookupProvider) {
     }
 
     //@Override
