@@ -1,7 +1,7 @@
-// 1.21	2024-08-17T09:41:11.293528381	Recipes
+// 1.21	2024-08-19T12:01:38.913053328	Recipes
 418ca664f08c60882074c38b98ead1597011770d data/goldfishmod02tastyfurniture/advancement/recipes/misc/apple_ingot.json
-eed9d033944403c9d19fdf44fa9d960476b5056a data/goldfishmod02tastyfurniture/advancement/recipes/misc/apple_sign_item.json
+344d5101b3d88c863dc8cd313cea1add49050329 data/goldfishmod02tastyfurniture/advancement/recipes/misc/apple_slab_item.json
 e7db46cddde28f1dee14bae934d4418ebe1547b8 data/goldfishmod02tastyfurniture/advancement/recipes/misc/potato_ingot.json
 7cc7b86df08f871a922f5dfecd2b534b715ccbe8 data/goldfishmod02tastyfurniture/recipe/apple_ingot.json
-cdb47fa9fdaa26f7a358b5383e08426b1f6d66a8 data/goldfishmod02tastyfurniture/recipe/apple_sign_item.json
+61a997953decfb4a2ca83ee683fc2a85260aba9a data/goldfishmod02tastyfurniture/recipe/apple_slab_item.json
 bb4add1923c874be4e630dbec2d274eb4aa6420b data/goldfishmod02tastyfurniture/recipe/potato_ingot.json

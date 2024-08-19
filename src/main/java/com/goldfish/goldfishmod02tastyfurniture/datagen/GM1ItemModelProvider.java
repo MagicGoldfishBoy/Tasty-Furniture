@@ -167,8 +167,13 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        pressurePlate("pork_pressure_plate_item", modLoc("block/pork_block"));
       //..............rabbit
        pressurePlate("rabbit_pressure_plate_item", modLoc("block/rabbit_block"));
+
     //---------------------------------------------------------signs----------------------------------------------------------------------
       //..............apple
        withExistingParent("apple_sign_item", mcLoc("item/generated")).texture("layer0", "block/apple_block");
+
+    //---------------------------------------------------------slabs----------------------------------------------------------------------
+      //..............apple
+       slab("apple_slab_item", modLoc("block/apple_block"), modLoc("block/apple_block"), modLoc("block/apple_block"));
  }   
 }

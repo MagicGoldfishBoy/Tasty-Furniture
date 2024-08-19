@@ -4,18 +4,15 @@
   "key": {
     "A": {
       "item": "goldfishmod02tastyfurniture:apple_ingot"
-    },
-    "B": {
-      "item": "minecraft:stick"
     }
   },
   "pattern": [
-    "AAA",
-    "AAA",
-    " B "
+    "   ",
+    "   ",
+    "AAA"
   ],
   "result": {
     "count": 1,
-    "id": "goldfishmod02tastyfurniture:apple_sign_item"
+    "id": "goldfishmod02tastyfurniture:apple_slab_item"
   }
 }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "goldfishmod02tastyfurniture:apple_sign_item"
+        "recipe": "goldfishmod02tastyfurniture:apple_slab_item"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "goldfishmod02tastyfurniture:apple_sign_item"
+      "goldfishmod02tastyfurniture:apple_slab_item"
     ]
   }
 }

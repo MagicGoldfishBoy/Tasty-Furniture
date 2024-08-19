@@ -610,7 +610,6 @@ public class foodblockregistry {
         .randomTicks(),
         WoodType.WARPED
     ));
-    //public static final DeferredHolder<Block, SignBlockEntity> APPLE_SIGN_ENTITY = FOODBLOCKENTITY.register("apple_sign_entity", () -> new foodsignentity(pType, pPos, pBlockState));
    //.........potato
     public static final DeferredHolder<Block, SignBlock> POTATO_SIGN = FOODBLOCK.register("potato_sign",
     () -> new foodsign(
@@ -711,6 +710,7 @@ public class foodblockregistry {
     //  () -> BlockEntityType.Builder.of(foodsignentity::new, 
     //  APPLE_SIGN.get(), APPLE_WALL_SIGN.get(), APPLE_STANDING_SIGN.get()).build(null));
 
+    // this is a placeholder so other stuff doesn't break. it doesn't actually work because it needs to be a supplier but can't be because type mismatch
       public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<SignBlockEntity>> FOODSIGNBLOCKENTITIES = FOODBLOCKENTITY.register("foodblockentities", 
       () -> BlockEntityType.Builder.<SignBlockEntity>of(foodsignentity::new, foodblockregistry.APPLE_SIGN.get(), foodblockregistry.APPLE_WALL_SIGN.get(), foodblockregistry.APPLE_STANDING_SIGN.get()).build(null));
 
@@ -719,7 +719,10 @@ public class foodblockregistry {
 //                                                                                          Slabs
 //==============================================================================================================================================================================================
 
-     public static final DeferredHolder<Block, Block> APPLE_SLAB = FOODBLOCK.register("apple_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, SlabBlock> APPLE_SLAB = FOODBLOCK.register("apple_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
      ));
      
 //==============================================================================================================================================================================================

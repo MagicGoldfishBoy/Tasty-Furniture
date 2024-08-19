@@ -1,8 +1,9 @@
-// 1.21	2024-08-19T08:06:34.77661037	Item Models: goldfishmod02tastyfurniture
+// 1.21	2024-08-19T12:01:38.911716755	Item Models: goldfishmod02tastyfurniture
 ed0c1d66825c8212a7e00d0258b74b6a3393e9a6 assets/goldfishmod02tastyfurniture/models/item/apple_button_item.json
 1f34d168302521d9046cd4b7cc2f5cceeea72d1d assets/goldfishmod02tastyfurniture/models/item/apple_fence_item.json
 9dbcd77aa37b72dbce0497f13a1d9477d9261586 assets/goldfishmod02tastyfurniture/models/item/apple_pressure_plate_item.json
 b35e4f0bae1a91bd21dc85450dd546d18afd369a assets/goldfishmod02tastyfurniture/models/item/apple_sign_item.json
+8983f8edf3694843217f30e24d21815e57df79e5 assets/goldfishmod02tastyfurniture/models/item/apple_slab_item.json
 8bed795a948b64a69e0975004e9be2d40a9feb9b assets/goldfishmod02tastyfurniture/models/item/beef_button_item.json
 a3fa248195438ecf91ee6b4075e9f6b4a996d8be assets/goldfishmod02tastyfurniture/models/item/beef_door_item.json
 e54eb76ea23f54c614ed43bf68f2e6a0338c0b40 assets/goldfishmod02tastyfurniture/models/item/beef_fence_item.json
