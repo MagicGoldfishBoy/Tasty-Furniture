@@ -376,11 +376,101 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock apple_wall_sign = foodblockregistry.APPLE_WALL_SIGN.get();
            ResourceLocation apple_sign_texture = modLoc("block/apple_block");
            signBlock(apple_sign, apple_wall_sign, apple_sign_texture);
+        //.........potato
+        //.........beetroot
+        //.........carrot
+        //.........chorus
+        //.........glow_berry
+        //.........melon
+        //.........sweet_berry
+        //.........brown_mushroom
+        //.........red_mushroom
+        //.........pumpkin
+        //.........chicken
+        //.........cod
+        //.........salmon
+        //.........tropical_fish
+        //.........mutton
+        //.........beef
+        //.........pork
+        //.........rabbit
 
       //-----------------------------------------------------------------slabs-----------------------------------------------------------------------------
         //............apple
           SlabBlock apple_slab = foodblockregistry.APPLE_SLAB.get();
           ResourceLocation  apple_slab_texture = modLoc("block/apple_block");
           slabBlock(apple_slab, apple_slab_texture, apple_slab_texture);
+        //.........potato
+          SlabBlock potato_slab = foodblockregistry.POTATO_SLAB.get();
+          ResourceLocation  potato_slab_texture = modLoc("block/potato_block");
+          slabBlock(potato_slab, potato_slab_texture, potato_slab_texture);
+        //.........beetroot
+          SlabBlock beetroot_slab = foodblockregistry.BEETROOT_SLAB.get();
+          ResourceLocation  beetroot_slab_texture = modLoc("block/beetroot_block");
+          slabBlock(beetroot_slab, beetroot_slab_texture, beetroot_slab_texture);
+        //.........carrot
+          SlabBlock carrot_slab = foodblockregistry.CARROT_SLAB.get();
+          ResourceLocation  carrot_slab_texture = modLoc("block/carrot_block");
+          slabBlock(carrot_slab, carrot_slab_texture, carrot_slab_texture);
+        //.........chorus
+          SlabBlock chorus_slab = foodblockregistry.CHORUS_SLAB.get();
+          ResourceLocation  chorus_slab_texture = modLoc("block/chorus_block");
+          slabBlock(chorus_slab, chorus_slab_texture, chorus_slab_texture);
+        //.........glow_berry
+          SlabBlock glow_berry_slab = foodblockregistry.GLOW_BERRY_SLAB.get();
+          ResourceLocation  glow_berry_slab_texture = modLoc("block/glow_berry_block");
+          slabBlock(glow_berry_slab, glow_berry_slab_texture, glow_berry_slab_texture);
+        //.........melon
+          SlabBlock melon_slab = foodblockregistry.MELON_SLAB.get();
+          ResourceLocation  melon_slab_texture = modLoc("block/melon_block");
+          slabBlock(melon_slab, melon_slab_texture, melon_slab_texture);
+        //.........sweet_berry
+          SlabBlock sweet_berry_slab = foodblockregistry.SWEET_BERRY_SLAB.get();
+          ResourceLocation  sweet_berry_slab_texture = modLoc("block/sweet_berry_block");
+          slabBlock(sweet_berry_slab, sweet_berry_slab_texture, sweet_berry_slab_texture);
+        //.........brown_mushroom
+          SlabBlock brown_mushroom_slab = foodblockregistry.BROWN_MUSHROOM_SLAB.get();
+          ResourceLocation  brown_mushroom_slab_texture = modLoc("block/brown_mushroom_block");
+          slabBlock(brown_mushroom_slab, brown_mushroom_slab_texture, brown_mushroom_slab_texture);
+        //.........red_mushroom
+          SlabBlock red_mushroom_slab = foodblockregistry.RED_MUSHROOM_SLAB.get();
+          ResourceLocation  red_mushroom_slab_texture = modLoc("block/red_mushroom_block");
+          slabBlock(red_mushroom_slab, red_mushroom_slab_texture, red_mushroom_slab_texture);
+        //.........pumpkin
+          SlabBlock pumpkin_slab = foodblockregistry.PUMPKIN_SLAB.get();
+          ResourceLocation  pumpkin_slab_texture = modLoc("block/pumpkin_block");
+          slabBlock(pumpkin_slab, pumpkin_slab_texture, pumpkin_slab_texture);
+        //.........chicken
+          SlabBlock chicken_slab = foodblockregistry.CHICKEN_SLAB.get();
+          ResourceLocation  chicken_slab_texture = modLoc("block/chicken_block");
+          slabBlock(chicken_slab, chicken_slab_texture, chicken_slab_texture);
+        //.........cod
+          SlabBlock cod_slab = foodblockregistry.COD_SLAB.get();
+          ResourceLocation  cod_slab_texture = modLoc("block/cod_block");
+          slabBlock(cod_slab, cod_slab_texture, cod_slab_texture);
+        //.........salmon
+          SlabBlock salmon_slab = foodblockregistry.SALMON_SLAB.get();
+          ResourceLocation  salmon_slab_texture = modLoc("block/salmon_block");
+          slabBlock(salmon_slab, salmon_slab_texture, salmon_slab_texture);
+        //.........tropical_fish
+          SlabBlock tropical_fish_slab = foodblockregistry.TROPICAL_FISH_SLAB.get();
+          ResourceLocation  tropical_fish_slab_texture = modLoc("block/tropical_fish_block");
+          slabBlock(tropical_fish_slab, tropical_fish_slab_texture, tropical_fish_slab_texture);
+        //.........mutton
+          SlabBlock mutton_slab = foodblockregistry.MUTTON_SLAB.get();
+          ResourceLocation  mutton_slab_texture = modLoc("block/mutton_block");
+          slabBlock(mutton_slab, mutton_slab_texture, mutton_slab_texture);
+        //.........beef
+          SlabBlock beef_slab = foodblockregistry.BEEF_SLAB.get();
+          ResourceLocation  beef_slab_texture = modLoc("block/beef_block");
+          slabBlock(beef_slab, beef_slab_texture, beef_slab_texture);
+        //.........pork
+          SlabBlock pork_slab = foodblockregistry.PORK_SLAB.get();
+          ResourceLocation  pork_slab_texture = modLoc("block/pork_block");
+          slabBlock(pork_slab, pork_slab_texture, pork_slab_texture);
+        //.........rabbit
+          SlabBlock rabbit_slab = foodblockregistry.RABBIT_SLAB.get();
+          ResourceLocation  rabbit_slab_texture = modLoc("block/rabbit_block");
+          slabBlock(rabbit_slab, rabbit_slab_texture, rabbit_slab_texture);
 }}
     

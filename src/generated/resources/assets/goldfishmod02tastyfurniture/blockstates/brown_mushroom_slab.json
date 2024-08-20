@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "goldfishmod02tastyfurniture:block/brown_mushroom_slab"
+    },
+    "type=double": {
+      "model": "goldfishmod02tastyfurniture:block/brown_mushroom_block"
+    },
+    "type=top": {
+      "model": "goldfishmod02tastyfurniture:block/brown_mushroom_slab_top"
+    }
+  }
+}

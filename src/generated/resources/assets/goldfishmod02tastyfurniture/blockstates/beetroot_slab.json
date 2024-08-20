@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "goldfishmod02tastyfurniture:block/beetroot_slab"
+    },
+    "type=double": {
+      "model": "goldfishmod02tastyfurniture:block/beetroot_block"
+    },
+    "type=top": {
+      "model": "goldfishmod02tastyfurniture:block/beetroot_slab_top"
+    }
+  }
+}

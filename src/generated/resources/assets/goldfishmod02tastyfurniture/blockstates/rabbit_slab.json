@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "goldfishmod02tastyfurniture:block/rabbit_slab"
+    },
+    "type=double": {
+      "model": "goldfishmod02tastyfurniture:block/rabbit_block"
+    },
+    "type=top": {
+      "model": "goldfishmod02tastyfurniture:block/rabbit_slab_top"
+    }
+  }
+}

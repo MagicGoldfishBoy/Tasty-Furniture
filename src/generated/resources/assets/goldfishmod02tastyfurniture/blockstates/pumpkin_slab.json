@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_slab"
+    },
+    "type=double": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_block"
+    },
+    "type=top": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_slab_top"
+    }
+  }
+}

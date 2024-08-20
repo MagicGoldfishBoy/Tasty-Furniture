@@ -8,12 +8,14 @@ import com.mojang.logging.LogUtils;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 import org.slf4j.Logger;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -66,17 +68,7 @@ public class GM1Datagen {
             
         } catch (Exception e) {
             LOGGER.error("failed to generate recipes");
-        }
-    // try  {
-    //     DataGenerator generator = event.getGenerator();
-    //     PackOutput output = generator.getPackOutput();
-    //     CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
-    //     generator.addProvider(
-    //         event.includeServer(), 
-    //         new LootTableProvider(output, lookupProvider));
-    // } catch   (Exception e)  {
-    //     LOGGER.error("failed to generate loot tables");
-    // }
+        }     
  }
 }
 

@@ -175,5 +175,41 @@ public class GM1ItemModelProvider extends ItemModelProvider {
     //---------------------------------------------------------slabs----------------------------------------------------------------------
       //..............apple
        slab("apple_slab_item", modLoc("block/apple_block"), modLoc("block/apple_block"), modLoc("block/apple_block"));
+      //..............potato
+       slab("potato_slab_item", modLoc("block/potato_block"), modLoc("block/potato_block"), modLoc("block/potato_block"));
+      //..............beetroot
+       slab("beetroot_slab_item", modLoc("block/beetroot_block"), modLoc("block/beetroot_block"), modLoc("block/beetroot_block"));
+      //..............carrot
+       slab("carrot_slab_item", modLoc("block/carrot_block"), modLoc("block/carrot_block"), modLoc("block/carrot_block"));
+      //..............chorus
+       slab("chorus_slab_item", modLoc("block/chorus_block"), modLoc("block/chorus_block"), modLoc("block/chorus_block"));
+      //..............glow_berry
+       slab("glow_berry_slab_item", modLoc("block/glow_berry_block"), modLoc("block/glow_berry_block"), modLoc("block/glow_berry_block"));
+      //..............melon
+       slab("melon_slab_item", modLoc("block/melon_block"), modLoc("block/melon_block"), modLoc("block/melon_block"));
+      //..............sweet_berry
+       slab("sweet_berry_slab_item", modLoc("block/sweet_berry_block"), modLoc("block/sweet_berry_block"), modLoc("block/sweet_berry_block"));
+      //..............brown_mushroom
+       slab("brown_mushroom_slab_item", modLoc("block/brown_mushroom_block"), modLoc("block/brown_mushroom_block"), modLoc("block/brown_mushroom_block"));
+      //..............red_mushroom
+       slab("red_mushroom_slab_item", modLoc("block/red_mushroom_block"), modLoc("block/red_mushroom_block"), modLoc("block/red_mushroom_block"));
+      //..............pumpkin
+       slab("pumpkin_slab_item", modLoc("block/pumpkin_block"), modLoc("block/pumpkin_block"), modLoc("block/pumpkin_block"));
+      //..............chicken
+       slab("chicken_slab_item", modLoc("block/chicken_block"), modLoc("block/chicken_block"), modLoc("block/chicken_block"));
+      //..............cod
+       slab("cod_slab_item", modLoc("block/cod_block"), modLoc("block/cod_block"), modLoc("block/cod_block"));
+      //..............salmon
+       slab("salmon_slab_item", modLoc("block/salmon_block"), modLoc("block/salmon_block"), modLoc("block/salmon_block"));
+      //..............tropical_fish
+       slab("tropical_fish_slab_item", modLoc("block/tropical_fish_block"), modLoc("block/tropical_fish_block"), modLoc("block/tropical_fish_block"));
+      //..............mutton
+       slab("mutton_slab_item", modLoc("block/mutton_block"), modLoc("block/mutton_block"), modLoc("block/mutton_block"));
+      //..............beef
+       slab("beef_slab_item", modLoc("block/beef_block"), modLoc("block/beef_block"), modLoc("block/beef_block"));
+      //..............pork
+       slab("pork_slab_item", modLoc("block/pork_block"), modLoc("block/pork_block"), modLoc("block/pork_block"));
+      //..............rabbit
+       slab("rabbit_slab_item", modLoc("block/rabbit_block"), modLoc("block/rabbit_block"), modLoc("block/rabbit_block"));
  }   
 }

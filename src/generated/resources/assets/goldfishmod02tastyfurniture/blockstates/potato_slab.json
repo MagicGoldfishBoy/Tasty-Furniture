@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "goldfishmod02tastyfurniture:block/potato_slab"
+    },
+    "type=double": {
+      "model": "goldfishmod02tastyfurniture:block/potato_block"
+    },
+    "type=top": {
+      "model": "goldfishmod02tastyfurniture:block/potato_slab_top"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "goldfishmod02tastyfurniture:block/melon_slab"
+    },
+    "type=double": {
+      "model": "goldfishmod02tastyfurniture:block/melon_block"
+    },
+    "type=top": {
+      "model": "goldfishmod02tastyfurniture:block/melon_slab_top"
+    }
+  }
+}

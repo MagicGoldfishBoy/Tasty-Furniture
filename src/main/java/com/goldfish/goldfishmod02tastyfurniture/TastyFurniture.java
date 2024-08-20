@@ -1,16 +1,19 @@
 package com.goldfish.goldfishmod02tastyfurniture;
 
 import java.util.Collection;
+import java.util.concurrent.CompletableFuture;
 
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.loot.LootTableProvider.SubProviderEntry;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
@@ -24,6 +27,7 @@ import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -55,6 +59,7 @@ import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1BlockLootTableProvider;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1BlockStateProvider;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1Datagen;
+import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1LootTableProvider;
 
 
 @Mod(TastyFurniture.MODID)
@@ -113,6 +118,8 @@ public class TastyFurniture
 
         modEventBus.addListener(GM1Datagen::gatherData);
 
+        modEventBus.addListener(datagathering::onGatherData);
+
         BLOCKS.register(modEventBus);
 
         foodblockregistry.FOODBLOCK.register(modEventBus);
@@ -167,19 +174,26 @@ public class TastyFurniture
         }
     }
 
-//the docs said to do it this way, but it doesn't work. fml.
-//     @SubscribeEvent
-//     public static void onGatherData(GatherDataEvent event) {
-//     event.getGenerator().addProvider(
-//             event.includeServer(),
-//             output -> new LootTableProvider(
-//                     output,
-//                     Set.of(),
-//                     List.of(GM1BlockLootTableProvider)
-//             )
-//     );
-// }
-}
+
+public class datagathering {
+     @SubscribeEvent
+     public static void onGatherData(GatherDataEvent event) {
+
+        try {
+        DataGenerator generator = event.getGenerator();
+        PackOutput output = generator.getPackOutput();
+        ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
+        CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
+        new SubProviderEntry(
+            GM1BlockLootTableProvider::new,
+            LootContextParamSets.EMPTY
+        );
+        LOGGER.info("hello from robot heck");
+        } catch (RuntimeException e) {
+            LOGGER.error("failed to generate blockstates");
+        }
+ }
+}}
 
 //Note to self: "recipes" is now "recipe" in 1.21.
 
