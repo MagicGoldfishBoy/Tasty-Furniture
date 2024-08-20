@@ -12,11 +12,13 @@ import com.google.common.base.Supplier;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.behavior.GateBehavior;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Block.*;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
@@ -36,8 +38,9 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.WoodType;
-
+import net.minecraft.world.level.material.MapColor;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.obj.ObjMaterialLibrary.Material;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -52,6 +55,7 @@ import net.neoforged.neoforge.registries.holdersets.*;
 
 public class foodblockregistry {
     public static final DeferredRegister<Block> FOODBLOCK = DeferredRegister.create(BuiltInRegistries.BLOCK, TastyFurniture.MODID);
+    public static final DeferredRegister<BlockEntityType<?>> FOODBLOCKENTITY = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, TastyFurniture.MODID);
     
     public static final BlockSetType PLANT = BlockSetType.register(
      new BlockSetType(
@@ -594,11 +598,14 @@ public class foodblockregistry {
   //.........apple
    public static final DeferredHolder<Block, foodsign> APPLE_SIGN = FOODBLOCK.register("apple_sign",
    () -> new foodsign(
-       BlockBehaviour.Properties.of()
-       .strength(2.0f)
-       .sound(SoundType.WOOD)
-       .randomTicks(),
-       WoodType.WARPED
+     BlockBehaviour.Properties.of()
+         .mapColor(MapColor.WOOD)
+         .forceSolidOn()
+         .instrument(NoteBlockInstrument.BASS)
+         .noCollission()
+         .strength(1.0F)
+         .ignitedByLava(),
+         WoodType.OAK
    ));
    public static final DeferredHolder<Block, foodwallsign> APPLE_WALL_SIGN = FOODBLOCK.register("apple_wall_sign",
    () -> new foodsign.foodwallsign(
@@ -607,15 +614,16 @@ public class foodblockregistry {
        .sound(SoundType.WOOD)
        .randomTicks(),
        WoodType.WARPED
-));
-//    public static final DeferredHolder<Block, foodstandingsign> APPLE_STANDING_SIGN = FOODBLOCK.register("apple_standing_sign",
-//    () -> new foodsign.foodstandingsign(
-//     BlockBehaviour.Properties.of()
-//     .strength(2.0f)
-//     .sound(SoundType.WOOD)
-//     .randomTicks(),
-//     WoodType.WARPED
-// ));
+   ));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodsignentity>> APPLE_SIGN_ENTITY = FOODBLOCKENTITY.register(
+     "apple_sign_entity",
+     () -> BlockEntityType.Builder.of(
+         foodsignentity::new,
+         foodblockregistry.APPLE_SIGN.get(),
+         foodblockregistry.APPLE_WALL_SIGN.get()
+         //foodblockregistry.APPLE_STANDING_SIGN.get()
+     ).build(null)
+ );
    //.........potato
     // public static final DeferredHolder<Block, SignBlock> POTATO_SIGN = FOODBLOCK.register("potato_sign",
     // () -> new foodsign(

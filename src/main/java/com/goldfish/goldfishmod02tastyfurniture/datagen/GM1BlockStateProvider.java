@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.SignBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StandingSignBlock;
 import net.minecraft.world.level.block.WallSignBlock;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DoorHingeSide;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent.Block;
@@ -22,12 +23,14 @@ import net.neoforged.neoforge.client.model.generators.BlockModelBuilder;
 import net.neoforged.neoforge.client.model.generators.BlockModelProvider;
 import net.neoforged.neoforge.client.model.generators.ModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ModelProvider;
+import net.neoforged.neoforge.client.model.generators.VariantBlockStateBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.common.data.DataMapProvider;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import net.minecraft.client.renderer.block.model.Variant;
 import net.minecraft.core.Cloner;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistryAccess;
@@ -369,10 +372,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
 
       //-----------------------------------------------------------------signs-----------------------------------------------------------------------------
         //.............apple
-          StandingSignBlock apple_sign = foodblockregistry.APPLE_SIGN.get();
-          WallSignBlock apple_wall_sign = foodblockregistry.APPLE_WALL_SIGN.get();
-          ResourceLocation apple_sign_texture = modLoc("block/apple_block");
-          signBlock(apple_sign, apple_wall_sign, apple_sign_texture);
+           StandingSignBlock apple_sign = foodblockregistry.APPLE_SIGN.get();
+           WallSignBlock apple_wall_sign = foodblockregistry.APPLE_WALL_SIGN.get();
+           ResourceLocation apple_sign_texture = modLoc("block/apple_block");
+           signBlock(apple_sign, apple_wall_sign, apple_sign_texture);
 
       //-----------------------------------------------------------------slabs-----------------------------------------------------------------------------
         //............apple

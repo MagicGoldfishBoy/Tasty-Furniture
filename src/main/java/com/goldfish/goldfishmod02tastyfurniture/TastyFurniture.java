@@ -68,6 +68,8 @@ public class TastyFurniture
 
     public static final DeferredRegister.Blocks FOODBLOCK = DeferredRegister.createBlocks(MODID);
 
+    public static final DeferredRegister.Blocks FOODBLOCKENTITY = DeferredRegister.createBlocks(MODID);
+
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
 
     public static final DeferredRegister.Items MUSH = DeferredRegister.createItems(MODID);
@@ -114,6 +116,8 @@ public class TastyFurniture
         BLOCKS.register(modEventBus);
 
         foodblockregistry.FOODBLOCK.register(modEventBus);
+
+        foodblockregistry.FOODBLOCKENTITY.register(modEventBus);
 
         ITEMS.register(modEventBus);
 
