@@ -15,6 +15,10 @@ public class foodblockitemregistry {
     
     public static DeferredRegister<Item> FOODBLOCKITEM = DeferredRegister.create(BuiltInRegistries.ITEM, TastyFurniture.MODID);
 
+//==============================================================================================================================================================================================
+//                                                                                         Blocks
+//==============================================================================================================================================================================================
+
      public static final DeferredHolder<Item, BlockItem> APPLE_BLOCK_ITEM = FOODBLOCKITEM.register("apple_block_item",
      () -> new BlockItem(foodblockregistry.APPLE_BLOCK.get(), new BlockItem.Properties()));
 
@@ -388,8 +392,63 @@ public class foodblockitemregistry {
 //                                                                                          Stairs
 //==============================================================================================================================================================================================
 
+   //.........apple
      public static final DeferredHolder<Item, BlockItem> APPLE_STAIRS_ITEM = FOODBLOCKITEM.register("apple_stairs_item",
      () -> new BlockItem(foodblockregistry.APPLE_STAIRS.get(), new BlockItem.Properties()));
+   //.........potato
+     public static final DeferredHolder<Item, BlockItem> POTATO_STAIRS_ITEM = FOODBLOCKITEM.register("potato_stairs_item",
+     () -> new BlockItem(foodblockregistry.POTATO_STAIRS.get(), new BlockItem.Properties()));
+   //.........beetroot
+     public static final DeferredHolder<Item, BlockItem> BEETROOT_STAIRS_ITEM = FOODBLOCKITEM.register("beetroot_stairs_item",
+     () -> new BlockItem(foodblockregistry.BEETROOT_STAIRS.get(), new BlockItem.Properties()));
+   //.........carrot
+     public static final DeferredHolder<Item, BlockItem> CARROT_STAIRS_ITEM = FOODBLOCKITEM.register("carrot_stairs_item",
+     () -> new BlockItem(foodblockregistry.CARROT_STAIRS.get(), new BlockItem.Properties()));
+   //.........chorus
+     public static final DeferredHolder<Item, BlockItem> CHORUS_STAIRS_ITEM = FOODBLOCKITEM.register("chorus_stairs_item",
+     () -> new BlockItem(foodblockregistry.CHORUS_STAIRS.get(), new BlockItem.Properties()));
+   //.........glow_berry
+     public static final DeferredHolder<Item, BlockItem> GLOW_BERRY_STAIRS_ITEM = FOODBLOCKITEM.register("glow_berry_stairs_item",
+     () -> new BlockItem(foodblockregistry.GLOW_BERRY_STAIRS.get(), new BlockItem.Properties()));
+   //.........melon
+     public static final DeferredHolder<Item, BlockItem> MELON_STAIRS_ITEM = FOODBLOCKITEM.register("melon_stairs_item",
+     () -> new BlockItem(foodblockregistry.MELON_STAIRS.get(), new BlockItem.Properties()));
+   //.........sweet_berry
+     public static final DeferredHolder<Item, BlockItem> SWEET_BERRY_STAIRS_ITEM = FOODBLOCKITEM.register("sweet_berry_stairs_item",
+     () -> new BlockItem(foodblockregistry.SWEET_BERRY_STAIRS.get(), new BlockItem.Properties()));
+   //.........brown_mushroom
+     public static final DeferredHolder<Item, BlockItem> BROWN_MUSHROOM_STAIRS_ITEM = FOODBLOCKITEM.register("mushroom_stairs_item",
+     () -> new BlockItem(foodblockregistry.BROWN_MUSHROOM_STAIRS.get(), new BlockItem.Properties()));
+   //.........red_mushroom
+     public static final DeferredHolder<Item, BlockItem> RED_MUSHROOM_STAIRS_ITEM = FOODBLOCKITEM.register("red_mushroom_stairs_item",
+     () -> new BlockItem(foodblockregistry.RED_MUSHROOM_STAIRS.get(), new BlockItem.Properties()));
+   //.........pumpkin
+     public static final DeferredHolder<Item, BlockItem> PUMPKIN_STAIRS_ITEM = FOODBLOCKITEM.register("pumpkin_stairs_item",
+     () -> new BlockItem(foodblockregistry.PUMPKIN_STAIRS.get(), new BlockItem.Properties()));
+   //.........chicken
+     public static final DeferredHolder<Item, BlockItem> CHICKEN_STAIRS_ITEM = FOODBLOCKITEM.register("chicken_stairs_item",
+     () -> new BlockItem(foodblockregistry.CHICKEN_STAIRS.get(), new BlockItem.Properties()));
+   //.........cod
+     public static final DeferredHolder<Item, BlockItem> COD_STAIRS_ITEM = FOODBLOCKITEM.register("cod_stairs_item",
+     () -> new BlockItem(foodblockregistry.COD_STAIRS.get(), new BlockItem.Properties()));
+   //.........salmon
+     public static final DeferredHolder<Item, BlockItem> SALMON_STAIRS_ITEM = FOODBLOCKITEM.register("salmon_stairs_item",
+     () -> new BlockItem(foodblockregistry.SALMON_STAIRS.get(), new BlockItem.Properties()));
+   //.........tropical_fish
+     public static final DeferredHolder<Item, BlockItem> TROPICAL_FISH_STAIRS_ITEM = FOODBLOCKITEM.register("tropical_fish_stairs_item",
+     () -> new BlockItem(foodblockregistry.TROPICAL_FISH_STAIRS.get(), new BlockItem.Properties()));
+   //.........mutton
+     public static final DeferredHolder<Item, BlockItem> MUTTON_STAIRS_ITEM = FOODBLOCKITEM.register("mutton_stairs_item",
+     () -> new BlockItem(foodblockregistry.MUTTON_STAIRS.get(), new BlockItem.Properties()));
+   //.........beef
+     public static final DeferredHolder<Item, BlockItem> BEEF_STAIRS_ITEM = FOODBLOCKITEM.register("beef_stairs_item",
+     () -> new BlockItem(foodblockregistry.BEEF_STAIRS.get(), new BlockItem.Properties()));
+   //.........pork
+     public static final DeferredHolder<Item, BlockItem> PORK_STAIRS_ITEM = FOODBLOCKITEM.register("pork_stairs_item",
+     () -> new BlockItem(foodblockregistry.PORK_STAIRS.get(), new BlockItem.Properties()));
+   //.........rabbit
+     public static final DeferredHolder<Item, BlockItem> RABBIT_STAIRS_ITEM = FOODBLOCKITEM.register("rabbit_stairs_item",
+     () -> new BlockItem(foodblockregistry.RABBIT_STAIRS.get(), new BlockItem.Properties()));
 
 //==============================================================================================================================================================================================
 //                                                                                         Trapdoors
