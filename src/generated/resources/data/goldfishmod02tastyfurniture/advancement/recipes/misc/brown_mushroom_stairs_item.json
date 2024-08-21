@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_brown_mushroom_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod02tastyfurniture:brown_mushroom_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "goldfishmod02tastyfurniture:brown_mushroom_stairs_item"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_brown_mushroom_ingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "goldfishmod02tastyfurniture:brown_mushroom_stairs_item"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod02tastyfurniture:glow_berry_ingot"
+    }
+  },
+  "pattern": [
+    "A  ",
+    "AA ",
+    "AAA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "goldfishmod02tastyfurniture:glow_berry_stairs_item"
+  }
+}

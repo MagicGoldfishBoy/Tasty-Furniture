@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod02tastyfurniture:beetroot_ingot"
+    }
+  },
+  "pattern": [
+    "A  ",
+    "AA ",
+    "AAA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "goldfishmod02tastyfurniture:beetroot_stairs_item"
+  }
+}

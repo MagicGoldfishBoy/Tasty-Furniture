@@ -215,5 +215,41 @@ public class GM1ItemModelProvider extends ItemModelProvider {
     //---------------------------------------------------------stairs----------------------------------------------------------------------
       //..............apple
        withExistingParent("apple_stairs_item", modLoc("block/apple_stairs"));
+      //..............potato
+       withExistingParent("potato_stairs_item", modLoc("block/potato_stairs"));
+      //..............beetroot
+       withExistingParent("beetroot_stairs_item", modLoc("block/beetroot_stairs"));
+      //..............carrot
+       withExistingParent("carrot_stairs_item", modLoc("block/carrot_stairs"));
+      //..............chorus
+       withExistingParent("chorus_stairs_item", modLoc("block/chorus_stairs"));
+      //..............glow_berry
+       withExistingParent("glow_berry_stairs_item", modLoc("block/glow_berry_stairs"));
+      //..............melon
+       withExistingParent("melon_stairs_item", modLoc("block/melon_stairs"));
+      //..............sweet_berry
+       withExistingParent("sweet_berry_stairs_item", modLoc("block/sweet_berry_stairs"));
+      //..............brown_mushroom
+       withExistingParent("brown_mushroom_stairs_item", modLoc("block/brown_mushroom_stairs"));
+      //..............red_mushroom
+       withExistingParent("red_mushroom_stairs_item", modLoc("block/red_mushroom_stairs"));
+      //..............pumpkin
+       withExistingParent("pumpkin_stairs_item", modLoc("block/pumpkin_stairs"));
+      //..............chicken
+       withExistingParent("chicken_stairs_item", modLoc("block/chicken_stairs"));
+      //..............cod
+       withExistingParent("cod_stairs_item", modLoc("block/cod_stairs"));
+      //..............salmon
+       withExistingParent("salmon_stairs_item", modLoc("block/salmon_stairs"));
+      //..............tropical_fish
+       withExistingParent("tropical_fish_stairs_item", modLoc("block/tropical_fish_stairs"));
+      //..............mutton
+       withExistingParent("mutton_stairs_item", modLoc("block/mutton_stairs"));
+      //..............beef
+       withExistingParent("beef_stairs_item", modLoc("block/beef_stairs"));
+      //..............pork
+       withExistingParent("pork_stairs_item", modLoc("block/pork_stairs"));
+      //..............rabbit
+       withExistingParent("rabbit_stairs_item", modLoc("block/rabbit_stairs"));
  }   
 }

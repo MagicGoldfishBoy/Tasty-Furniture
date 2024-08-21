@@ -817,6 +817,7 @@ public class foodblockregistry {
           .destroyTime(1.75f)
           .explosionResistance(9.5f)
           .sound(SoundType.MUD_BRICKS)
+          .lightLevel(state -> 15)
       ));
    //.........melon
      public static final DeferredHolder<Block, StairBlock> MELON_STAIRS = FOODBLOCK.register("melon_stairs", () -> new StairBlock(

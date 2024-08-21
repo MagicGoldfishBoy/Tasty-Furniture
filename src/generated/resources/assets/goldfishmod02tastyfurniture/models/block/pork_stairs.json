@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "goldfishmod02tastyfurniture:block/pork_block",
+    "side": "goldfishmod02tastyfurniture:block/pork_block",
+    "top": "goldfishmod02tastyfurniture:block/pork_block"
+  }
+}

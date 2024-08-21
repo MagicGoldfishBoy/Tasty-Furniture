@@ -479,5 +479,77 @@ public class GM1BlockStateProvider extends BlockStateProvider
           StairBlock apple_stairs = foodblockregistry.APPLE_STAIRS.get();
           ResourceLocation  apple_stair_texture = modLoc("block/apple_block");
           stairsBlock(apple_stairs, apple_stair_texture);
+        //............potato
+          StairBlock potato_stairs = foodblockregistry.POTATO_STAIRS.get();
+          ResourceLocation  potato_stair_texture = modLoc("block/potato_block");
+          stairsBlock(potato_stairs, potato_stair_texture);
+        //............beetroot
+          StairBlock beetroot_stairs = foodblockregistry.BEETROOT_STAIRS.get();
+          ResourceLocation  beetroot_stair_texture = modLoc("block/beetroot_block");
+          stairsBlock(beetroot_stairs, beetroot_stair_texture);
+        //............carrot
+          StairBlock carrot_stairs = foodblockregistry.CARROT_STAIRS.get();
+          ResourceLocation  carrot_stair_texture = modLoc("block/carrot_block");
+          stairsBlock(carrot_stairs, carrot_stair_texture);
+        //............chorus
+          StairBlock chorus_stairs = foodblockregistry.CHORUS_STAIRS.get();
+          ResourceLocation  chorus_stair_texture = modLoc("block/chorus_block");
+          stairsBlock(chorus_stairs, chorus_stair_texture);
+        //............glow_berry
+          StairBlock glow_berry_stairs = foodblockregistry.GLOW_BERRY_STAIRS.get();
+          ResourceLocation  glow_berry_stair_texture = modLoc("block/glow_berry_block");
+          stairsBlock(glow_berry_stairs, glow_berry_stair_texture);
+        //............melon
+          StairBlock melon_stairs = foodblockregistry.MELON_STAIRS.get();
+          ResourceLocation  melon_stair_texture = modLoc("block/melon_block");
+          stairsBlock(melon_stairs, melon_stair_texture);
+        //............sweet_berry
+          StairBlock sweet_berry_stairs = foodblockregistry.SWEET_BERRY_STAIRS.get();
+          ResourceLocation  sweet_berry_stair_texture = modLoc("block/sweet_berry_block");
+          stairsBlock(sweet_berry_stairs, sweet_berry_stair_texture);
+        //............brown_mushroom
+          StairBlock brown_mushroom_stairs = foodblockregistry.BROWN_MUSHROOM_STAIRS.get();
+          ResourceLocation  brown_mushroom_stair_texture = modLoc("block/brown_mushroom_block");
+          stairsBlock(brown_mushroom_stairs, brown_mushroom_stair_texture);
+        //............red_mushroom
+          StairBlock red_mushroom_stairs = foodblockregistry.RED_MUSHROOM_STAIRS.get();
+          ResourceLocation  red_mushroom_stair_texture = modLoc("block/red_mushroom_block");
+          stairsBlock(red_mushroom_stairs, red_mushroom_stair_texture);
+        //............pumpkin
+          StairBlock pumpkin_stairs = foodblockregistry.PUMPKIN_STAIRS.get();
+          ResourceLocation  pumpkin_stair_texture = modLoc("block/pumpkin_block");
+          stairsBlock(pumpkin_stairs, pumpkin_stair_texture);
+        //............chicken
+          StairBlock chicken_stairs = foodblockregistry.CHICKEN_STAIRS.get();
+          ResourceLocation chicken_stair_texture = modLoc("block/chicken_block");
+          stairsBlock(chicken_stairs, chicken_stair_texture);
+        //............cod
+          StairBlock cod_stairs = foodblockregistry.COD_STAIRS.get();
+          ResourceLocation cod_stair_texture = modLoc("block/cod_block");
+          stairsBlock(cod_stairs, cod_stair_texture);
+        //............salmon
+          StairBlock salmon_stairs = foodblockregistry.SALMON_STAIRS.get();
+          ResourceLocation salmon_stair_texture = modLoc("block/salmon_block");
+          stairsBlock(salmon_stairs, salmon_stair_texture);
+        //............tropical_fish
+          StairBlock tropical_fish_stairs = foodblockregistry.TROPICAL_FISH_STAIRS.get();
+          ResourceLocation tropical_fish_stair_texture = modLoc("block/tropical_fish_block");
+          stairsBlock(tropical_fish_stairs, tropical_fish_stair_texture);
+        //............mutton
+          StairBlock mutton_stairs = foodblockregistry.MUTTON_STAIRS.get();
+          ResourceLocation mutton_stair_texture = modLoc("block/mutton_block");
+          stairsBlock(mutton_stairs, mutton_stair_texture);
+        //............beef
+          StairBlock beef_stairs = foodblockregistry.BEEF_STAIRS.get();
+          ResourceLocation beef_stair_texture = modLoc("block/beef_block");
+          stairsBlock(beef_stairs, beef_stair_texture);
+        //............pork
+          StairBlock pork_stairs = foodblockregistry.PORK_STAIRS.get();
+          ResourceLocation pork_stair_texture = modLoc("block/pork_block");
+          stairsBlock(pork_stairs, pork_stair_texture);
+        //............rabbit
+          StairBlock rabbit_stairs = foodblockregistry.RABBIT_STAIRS.get();
+          ResourceLocation rabbit_stair_texture = modLoc("block/rabbit_block");
+          stairsBlock(rabbit_stairs, rabbit_stair_texture);
 }}
     
