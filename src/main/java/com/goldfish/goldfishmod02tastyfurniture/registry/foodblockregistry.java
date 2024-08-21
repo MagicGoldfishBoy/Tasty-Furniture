@@ -94,6 +94,9 @@ public class foodblockregistry {
      SoundEvents.MAGMA_CUBE_SQUISH
      )
     );
+//==============================================================================================================================================================================================
+//                                                                                          Blocks
+//==============================================================================================================================================================================================
     public static final DeferredHolder<Block, Block> APPLE_BLOCK = FOODBLOCK.register("apple_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(2.0f)
          .explosionResistance(10.0f)

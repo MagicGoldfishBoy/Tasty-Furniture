@@ -211,5 +211,9 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        slab("pork_slab_item", modLoc("block/pork_block"), modLoc("block/pork_block"), modLoc("block/pork_block"));
       //..............rabbit
        slab("rabbit_slab_item", modLoc("block/rabbit_block"), modLoc("block/rabbit_block"), modLoc("block/rabbit_block"));
+
+    //---------------------------------------------------------stairs----------------------------------------------------------------------
+      //..............apple
+       withExistingParent("apple_stairs_item", modLoc("block/apple_stairs"));
  }   
 }

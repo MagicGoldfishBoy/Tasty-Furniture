@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SignBlock;
 import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.StandingSignBlock;
 import net.minecraft.world.level.block.WallSignBlock;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -472,5 +473,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           SlabBlock rabbit_slab = foodblockregistry.RABBIT_SLAB.get();
           ResourceLocation  rabbit_slab_texture = modLoc("block/rabbit_block");
           slabBlock(rabbit_slab, rabbit_slab_texture, rabbit_slab_texture);
+
+      //-----------------------------------------------------------------slabs-----------------------------------------------------------------------------
+        //............apple
+          StairBlock apple_stairs = foodblockregistry.APPLE_STAIRS.get();
+          ResourceLocation  apple_stair_texture = modLoc("block/apple_block");
+          stairsBlock(apple_stairs, apple_stair_texture);
 }}
     
