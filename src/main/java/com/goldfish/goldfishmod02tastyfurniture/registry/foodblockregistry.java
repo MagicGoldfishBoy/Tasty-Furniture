@@ -4,8 +4,9 @@ import java.rmi.registry.Registry;
 
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodstandingsign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodwallsign;
-import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodwallsign.foodstandingsign;
+// import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodwallsign.foodstandingsign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsignentity;
 import com.google.common.base.Supplier;
 
@@ -610,18 +611,34 @@ public class foodblockregistry {
    public static final DeferredHolder<Block, foodwallsign> APPLE_WALL_SIGN = FOODBLOCK.register("apple_wall_sign",
    () -> new foodsign.foodwallsign(
        BlockBehaviour.Properties.of()
-       .strength(2.0f)
-       .sound(SoundType.WOOD)
+       .mapColor(MapColor.WOOD)
+       .forceSolidOn()
+       .instrument(NoteBlockInstrument.BASS)
+       .noCollission()
+       .strength(1.0F)
+       .ignitedByLava()
        .randomTicks(),
-       WoodType.WARPED
+       WoodType.OAK
+   ));
+   public static final DeferredHolder<Block, foodstandingsign> APPLE_STANDING_SIGN = FOODBLOCK.register("apple_standing_sign",
+   () -> new foodsign.foodstandingsign(
+       BlockBehaviour.Properties.of()
+       .mapColor(MapColor.WOOD)
+       .forceSolidOn()
+       .instrument(NoteBlockInstrument.BASS)
+       .noCollission()
+       .strength(1.0F)
+       .ignitedByLava()
+       .randomTicks(),
+       WoodType.OAK
    ));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodsignentity>> APPLE_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "apple_sign_entity",
      () -> BlockEntityType.Builder.of(
          foodsignentity::new,
          foodblockregistry.APPLE_SIGN.get(),
-         foodblockregistry.APPLE_WALL_SIGN.get()
-         //foodblockregistry.APPLE_STANDING_SIGN.get()
+         foodblockregistry.APPLE_WALL_SIGN.get(),
+         foodblockregistry.APPLE_STANDING_SIGN.get()
      ).build(null)
  );
    //.........potato

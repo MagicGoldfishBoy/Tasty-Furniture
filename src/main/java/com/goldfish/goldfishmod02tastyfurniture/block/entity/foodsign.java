@@ -26,13 +26,13 @@ import net.minecraft.world.level.material.Fluids;
 public class foodsign extends StandingSignBlock {
     public foodsign(BlockBehaviour.Properties properties, WoodType woodType) {
         super(woodType, properties);
-        //this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.FALSE));
+        this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.FALSE));
     }
 
-    //  @Override
-    //  public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-    //      return createTickerHelper(type, foodblockregistry.FOODSIGNBLOCKENTITIES.get(), foodsignentity::tick);
-    //  }
+     @Override
+     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
+         return createTickerHelper(type, foodblockregistry.APPLE_SIGN_ENTITY.get(), foodsignentity::tick);
+     }
 
      @Override
      public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
@@ -44,11 +44,11 @@ public class foodsign extends StandingSignBlock {
              super(woodType, properties);
          }
 
-    //     @Override
-    //     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-    //         return new foodsignentity(pos, state);
-    //     }
-    // }
+        @Override
+        public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+            return new foodsignentity(pos, state);
+        }
+    }
 
      public static class foodstandingsign extends StandingSignBlock {
          public foodstandingsign(BlockBehaviour.Properties properties, WoodType woodType) {
@@ -60,7 +60,7 @@ public class foodsign extends StandingSignBlock {
              return new foodsignentity(pos, state);
          }
      }
-
+}
     // @Override
     // protected MapCodec<? extends SignBlock> codec() {
     //     throw new UnsupportedOperationException("Unimplemented method 'codec'");
@@ -94,5 +94,5 @@ public class foodsign extends StandingSignBlock {
     //     }
     //     super.neighborChanged(state, world, pos, block, fromPos, isMoving);
     // }
-}}
+
 

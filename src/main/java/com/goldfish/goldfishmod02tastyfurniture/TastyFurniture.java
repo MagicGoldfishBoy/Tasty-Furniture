@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -37,6 +38,7 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -56,6 +58,7 @@ import com.goldfish.goldfishmod02tastyfurniture.registry.nuggetregistry;
 import com.google.common.base.Supplier;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockitemregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsignentity;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1BlockLootTableProvider;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1BlockStateProvider;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1Datagen;
@@ -170,7 +173,12 @@ public class TastyFurniture
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());      
+        }
+
+        @SubscribeEvent
+        public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerBlockEntityRenderer(foodblockregistry.APPLE_SIGN_ENTITY.get(), SignRenderer::new);
         }
     }
 

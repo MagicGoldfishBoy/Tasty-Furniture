@@ -19,12 +19,13 @@ public class foodsignentity extends SignBlockEntity {
 
     public static void tick(Level level, BlockPos pos, BlockState state, foodsignentity entity) {
           if (level instanceof ServerLevel) {
+            //System.out.println("Ticking at " + pos);
           }
     }
 
-    // public static BlockEntityType<SignBlockEntity> getAppleSignEntityType() {
-    //      return foodblockregistry.APPLE_SIGN_ENTITY.get();
-    // }
+    public static BlockEntityType<foodsignentity> getAppleSignEntityType() {
+         return foodblockregistry.APPLE_SIGN_ENTITY.get();
+    }
 
 }
 
