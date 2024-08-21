@@ -12,10 +12,12 @@ import net.minecraft.world.level.block.SignBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.StandingSignBlock;
+import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WallSignBlock;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DoorHingeSide;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent.Block;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
@@ -53,6 +55,7 @@ import java.util.Map;
 import java.util.stream.Stream;
 
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
+import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistry;
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 
 public class GM1BlockStateProvider extends BlockStateProvider 
@@ -551,5 +554,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           StairBlock rabbit_stairs = foodblockregistry.RABBIT_STAIRS.get();
           ResourceLocation rabbit_stair_texture = modLoc("block/rabbit_block");
           stairsBlock(rabbit_stairs, rabbit_stair_texture);
+
+      //---------------------------------------------------------------trapdoors-----------------------------------------------------------------------------
+        //............apple
+          TrapDoorBlock apple_trapdoor = foodblockregistry.APPLE_TRAPDOOR.get(); 
+          ResourceLocation apple_trapdoor_texture = modLoc("block/apple_block");
+          trapdoorBlockWithRenderType(apple_trapdoor, "apple_trapdoor", apple_trapdoor_texture, false, apple_trapdoor_texture);
+
+          // WoodType apple_wood_mat = foodmaterialtyperegistry.APPLEWOODMAT;
+          // ResourceLocation  apple_wood_mat_texture = modLoc("block/apple_block");
+          
 }}
     

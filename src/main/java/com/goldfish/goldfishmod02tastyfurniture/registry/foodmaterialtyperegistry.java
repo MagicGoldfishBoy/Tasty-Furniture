@@ -3,6 +3,7 @@ package com.goldfish.goldfishmod02tastyfurniture.registry;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 
 public class foodmaterialtyperegistry {
 
@@ -41,6 +42,11 @@ public class foodmaterialtyperegistry {
      SoundEvents.MAGMA_CUBE_SQUISH, 
      SoundEvents.MAGMA_CUBE_SQUISH
     )
+    );
+    public static final WoodType APPLEWOODMAT = WoodType.register(
+     new WoodType(
+        "apple_wood_mat", 
+        PLANT) 
     );
 
 }

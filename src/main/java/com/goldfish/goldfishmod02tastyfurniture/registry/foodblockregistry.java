@@ -575,6 +575,7 @@ public class foodblockregistry {
          .strength(1.0F)
          .ignitedByLava(),
          WoodType.OAK
+         //foodmaterialtyperegistry.APPLEWOODMAT
    ));
    public static final DeferredHolder<Block, foodwallsign> APPLE_WALL_SIGN = FOODBLOCK.register("apple_wall_sign",
    () -> new foodsign.foodwallsign(
@@ -587,6 +588,7 @@ public class foodblockregistry {
        .ignitedByLava()
        .randomTicks(),
        WoodType.OAK
+       //foodmaterialtyperegistry.APPLEWOODMAT
    ));
    public static final DeferredHolder<Block, foodstandingsign> APPLE_STANDING_SIGN = FOODBLOCK.register("apple_standing_sign",
    () -> new foodsign.foodstandingsign(
@@ -599,6 +601,7 @@ public class foodblockregistry {
        .ignitedByLava()
        .randomTicks(),
        WoodType.OAK
+       //foodmaterialtyperegistry.APPLEWOODMAT
    ));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodsignentity>> APPLE_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "apple_sign_entity",
@@ -894,7 +897,7 @@ public class foodblockregistry {
 //==============================================================================================================================================================================================
 
    //.........apple
-     public static final DeferredHolder<Block, Block> APPLE_TRAPDOOR = FOODBLOCK.register("apple_trapdoor", () -> new TrapDoorBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, TrapDoorBlock> APPLE_TRAPDOOR = FOODBLOCK.register("apple_trapdoor", () -> new TrapDoorBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
      .destroyTime(1.75f)
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)

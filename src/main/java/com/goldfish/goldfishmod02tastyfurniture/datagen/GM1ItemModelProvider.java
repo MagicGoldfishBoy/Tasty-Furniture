@@ -5,6 +5,7 @@ import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.SignBlock;
+import net.minecraft.world.level.block.TrapDoorBlock;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
@@ -251,5 +252,9 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("pork_stairs_item", modLoc("block/pork_stairs"));
       //..............rabbit
        withExistingParent("rabbit_stairs_item", modLoc("block/rabbit_stairs"));
+
+    //------------------------------------------------------trapdoors----------------------------------------------------------------------
+      //..............apple
+       withExistingParent("apple_trapdoor_item", modLoc("block/apple_trapdoor_trapdoor_bottom"));
  }   
 }

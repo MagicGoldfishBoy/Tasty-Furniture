@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_trapdoor_bottom",
+  "render_type": "goldfishmod02tastyfurniture:block/apple_block",
+  "textures": {
+    "texture": "goldfishmod02tastyfurniture:block/apple_block"
+  }
+}
