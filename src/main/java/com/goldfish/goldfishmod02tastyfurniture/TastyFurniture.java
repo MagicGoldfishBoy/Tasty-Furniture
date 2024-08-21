@@ -184,6 +184,7 @@ public class datagathering {
         PackOutput output = generator.getPackOutput();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
+        generator.addProvider(event.includeClient(), new GM1LootTableProvider(output, lookupProvider));
         new SubProviderEntry(
             GM1BlockLootTableProvider::new,
             LootContextParamSets.EMPTY

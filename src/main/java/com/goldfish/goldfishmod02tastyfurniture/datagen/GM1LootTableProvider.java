@@ -44,7 +44,6 @@ public class GM1LootTableProvider extends LootTableProvider {
     }
     
      private static final Logger LOGGER = LogUtils.getLogger();
-     {LOGGER.info("hello from heeelllll");}
 }
     
 

@@ -7,6 +7,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.LootTableSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.loot.BlockLootSubProvider;
 
@@ -31,9 +32,18 @@ public class GM1BlockLootTableProvider extends BlockLootSubProvider {
     }
 
     @Override
+    //protected void generate() {
+    //   foodblockregistry.FOODBLOCK.getEntries().forEach((a) -> dropSelf(a.get()));;
+    //    dropSelf(foodblockregistry.APPLE_BLOCK.get());
+    //    dropSelf(foodblockregistry.POTATO_SLAB.get());
+    //}
+    
     protected void generate() {
-       dropSelf(foodblockregistry.POTATO_SLAB.get());
-    }
+        //int regsize = foodblockregistry.FOODBLOCK.getEntries().size();
+     foodblockregistry.FOODBLOCK.getEntries().forEach((a) -> {if (a.get().getName().toString().matches(".*slab.*")) {this.add(a.get(), this::createSlabItemTable);}
+     else if (a.get().getName().toString().matches(".*door.*")) {this.add(a.get(), this::createDoorTable);} 
+     else {dropSelf(a.get());} });
+     }
 
 }
 
