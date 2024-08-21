@@ -8,6 +8,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodstandi
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodwallsign;
 // import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodwallsign.foodstandingsign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsignentity;
+import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistry;
 import com.google.common.base.Supplier;
 
 import net.minecraft.client.Minecraft;
@@ -58,42 +59,6 @@ public class foodblockregistry {
     public static final DeferredRegister<Block> FOODBLOCK = DeferredRegister.create(BuiltInRegistries.BLOCK, TastyFurniture.MODID);
     public static final DeferredRegister<BlockEntityType<?>> FOODBLOCKENTITY = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, TastyFurniture.MODID);
     
-    public static final BlockSetType PLANT = BlockSetType.register(
-     new BlockSetType(
-     "plant", 
-     true, 
-     true, 
-     true, 
-     BlockSetType.PressurePlateSensitivity.EVERYTHING, 
-     SoundType.ROOTS, 
-     SoundEvents.ROOTED_DIRT_HIT, 
-     SoundEvents.ROOTED_DIRT_HIT, 
-     SoundEvents.NETHER_WOOD_TRAPDOOR_CLOSE, 
-     SoundEvents.NETHER_WOOD_TRAPDOOR_OPEN, 
-     SoundEvents.ROOTS_FALL, 
-     SoundEvents.ROOTS_FALL, 
-     SoundEvents.ROOTS_HIT, 
-     SoundEvents.ROOTS_HIT
-     )
-    );
-    public static final BlockSetType MEAT = BlockSetType.register(
-     new BlockSetType(
-     "meat", 
-     true, 
-     false, 
-     false, 
-     BlockSetType.PressurePlateSensitivity.EVERYTHING, 
-     SoundType.MUD, 
-     SoundEvents.MUD_HIT, 
-     SoundEvents.MUD_HIT, 
-     SoundEvents.NETHER_WOOD_TRAPDOOR_CLOSE, 
-     SoundEvents.NETHER_WOOD_TRAPDOOR_OPEN, 
-     SoundEvents.MAGMA_CUBE_SQUISH_SMALL, 
-     SoundEvents.MAGMA_CUBE_SQUISH_SMALL, 
-     SoundEvents.MAGMA_CUBE_SQUISH, 
-     SoundEvents.MAGMA_CUBE_SQUISH
-     )
-    );
 //==============================================================================================================================================================================================
 //                                                                                          Blocks
 //==============================================================================================================================================================================================
@@ -216,115 +181,115 @@ public class foodblockregistry {
 //                                                                                         Doors
 //==============================================================================================================================================================================================
          
-    public static final DeferredHolder<Block, Block> APPLE_DOOR_BLOCK = FOODBLOCK.register("apple_door", () -> new DoorBlock(foodblockregistry.PLANT, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, Block> APPLE_DOOR_BLOCK = FOODBLOCK.register("apple_door", () -> new DoorBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
          .destroyTime(1.75f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD_BRICKS)
          ));
-    public static final DeferredHolder<Block, Block> POTATO_DOOR_BLOCK = FOODBLOCK.register("potato_door", () -> new DoorBlock(foodblockregistry.PLANT, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, Block> POTATO_DOOR_BLOCK = FOODBLOCK.register("potato_door", () -> new DoorBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD_BRICKS)
          .noOcclusion()
          ));
-    public static final DeferredHolder<Block, Block> BEETROOT_DOOR_BLOCK = FOODBLOCK.register("beetroot_door", () -> new DoorBlock(foodblockregistry.PLANT, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, Block> BEETROOT_DOOR_BLOCK = FOODBLOCK.register("beetroot_door", () -> new DoorBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD_BRICKS)
          .noOcclusion()
          ));
-     public static final DeferredHolder<Block, Block> CARROT_DOOR_BLOCK = FOODBLOCK.register("carrot_door", () -> new DoorBlock(foodblockregistry.PLANT, BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, Block> CARROT_DOOR_BLOCK = FOODBLOCK.register("carrot_door", () -> new DoorBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD_BRICKS)
          .noOcclusion()
          ));
-     public static final DeferredHolder<Block, Block> CHORUS_DOOR_BLOCK = FOODBLOCK.register("chorus_door", () -> new DoorBlock(foodblockregistry.PLANT, BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, Block> CHORUS_DOOR_BLOCK = FOODBLOCK.register("chorus_door", () -> new DoorBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD_BRICKS)
          .noOcclusion()
          ));
-     public static final DeferredHolder<Block, DoorBlock> GLOW_BERRY_DOOR_BLOCK = FOODBLOCK.register("glow_berry_door", () -> new DoorBlock(foodblockregistry.PLANT, BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, DoorBlock> GLOW_BERRY_DOOR_BLOCK = FOODBLOCK.register("glow_berry_door", () -> new DoorBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD_BRICKS)
          .noOcclusion()
          .lightLevel(state -> 10)
          ));
-     public static final DeferredHolder<Block, DoorBlock> MELON_DOOR_BLOCK = FOODBLOCK.register("melon_door", () -> new DoorBlock(foodblockregistry.PLANT, BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, DoorBlock> MELON_DOOR_BLOCK = FOODBLOCK.register("melon_door", () -> new DoorBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD_BRICKS)
          .noOcclusion()
          ));
-     public static final DeferredHolder<Block, DoorBlock> SWEET_BERRY_DOOR_BLOCK = FOODBLOCK.register("sweet_berry_door", () -> new DoorBlock(foodblockregistry.PLANT, BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, DoorBlock> SWEET_BERRY_DOOR_BLOCK = FOODBLOCK.register("sweet_berry_door", () -> new DoorBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD_BRICKS)
          .noOcclusion()
          ));
-     public static final DeferredHolder<Block, DoorBlock> BROWN_MUSHROOM_DOOR_BLOCK = FOODBLOCK.register("brown_mushroom_door", () -> new DoorBlock(foodblockregistry.PLANT, BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, DoorBlock> BROWN_MUSHROOM_DOOR_BLOCK = FOODBLOCK.register("brown_mushroom_door", () -> new DoorBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD_BRICKS)
          .noOcclusion()
          ));
-     public static final DeferredHolder<Block, DoorBlock> RED_MUSHROOM_DOOR_BLOCK = FOODBLOCK.register("red_mushroom_door", () -> new DoorBlock(foodblockregistry.PLANT, BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, DoorBlock> RED_MUSHROOM_DOOR_BLOCK = FOODBLOCK.register("red_mushroom_door", () -> new DoorBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD_BRICKS)
          .noOcclusion()
          ));
-     public static final DeferredHolder<Block, DoorBlock> PUMPKIN_DOOR_BLOCK = FOODBLOCK.register("pumpkin_door", () -> new DoorBlock(foodblockregistry.PLANT, BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, DoorBlock> PUMPKIN_DOOR_BLOCK = FOODBLOCK.register("pumpkin_door", () -> new DoorBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD_BRICKS)
          .noOcclusion()
          ));
-     public static final DeferredHolder<Block, DoorBlock> CHICKEN_DOOR_BLOCK = FOODBLOCK.register("chicken_door", () -> new DoorBlock(foodblockregistry.MEAT, BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, DoorBlock> CHICKEN_DOOR_BLOCK = FOODBLOCK.register("chicken_door", () -> new DoorBlock(foodmaterialtyperegistry.MEAT, BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD_BRICKS)
          .noOcclusion()
          ));
-     public static final DeferredHolder<Block, DoorBlock> COD_DOOR_BLOCK = FOODBLOCK.register("cod_door", () -> new DoorBlock(foodblockregistry.MEAT, BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, DoorBlock> COD_DOOR_BLOCK = FOODBLOCK.register("cod_door", () -> new DoorBlock(foodmaterialtyperegistry.MEAT, BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD_BRICKS)
          .noOcclusion()
          ));
-     public static final DeferredHolder<Block, DoorBlock> SALMON_DOOR_BLOCK = FOODBLOCK.register("salmon_door", () -> new DoorBlock(foodblockregistry.MEAT, BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, DoorBlock> SALMON_DOOR_BLOCK = FOODBLOCK.register("salmon_door", () -> new DoorBlock(foodmaterialtyperegistry.MEAT, BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD_BRICKS)
          .noOcclusion()
          ));
-     public static final DeferredHolder<Block, DoorBlock> TROPICAL_FISH_DOOR_BLOCK = FOODBLOCK.register("tropical_fish_door", () -> new DoorBlock(foodblockregistry.MEAT, BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, DoorBlock> TROPICAL_FISH_DOOR_BLOCK = FOODBLOCK.register("tropical_fish_door", () -> new DoorBlock(foodmaterialtyperegistry.MEAT, BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD_BRICKS)
          .noOcclusion()
          ));
-     public static final DeferredHolder<Block, DoorBlock> MUTTON_DOOR_BLOCK = FOODBLOCK.register("mutton_door", () -> new DoorBlock(foodblockregistry.MEAT, BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, DoorBlock> MUTTON_DOOR_BLOCK = FOODBLOCK.register("mutton_door", () -> new DoorBlock(foodmaterialtyperegistry.MEAT, BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD_BRICKS)
          .noOcclusion()
          ));
-     public static final DeferredHolder<Block, DoorBlock> BEEF_DOOR_BLOCK = FOODBLOCK.register("beef_door", () -> new DoorBlock(foodblockregistry.MEAT, BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, DoorBlock> BEEF_DOOR_BLOCK = FOODBLOCK.register("beef_door", () -> new DoorBlock(foodmaterialtyperegistry.MEAT, BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD_BRICKS)
          .noOcclusion()
          ));
-     public static final DeferredHolder<Block, DoorBlock> PORK_DOOR_BLOCK = FOODBLOCK.register("pork_door", () -> new DoorBlock(foodblockregistry.MEAT, BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, DoorBlock> PORK_DOOR_BLOCK = FOODBLOCK.register("pork_door", () -> new DoorBlock(foodmaterialtyperegistry.MEAT, BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD_BRICKS)
          .noOcclusion()
          ));
-     public static final DeferredHolder<Block, DoorBlock> RABBIT_DOOR_BLOCK = FOODBLOCK.register("rabbit_door", () -> new DoorBlock(foodblockregistry.MEAT, BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, DoorBlock> RABBIT_DOOR_BLOCK = FOODBLOCK.register("rabbit_door", () -> new DoorBlock(foodmaterialtyperegistry.MEAT, BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD_BRICKS)
@@ -335,62 +300,62 @@ public class foodblockregistry {
 //                                                                                         Buttons
 //==============================================================================================================================================================================================
 
-    public static final DeferredHolder<Block, ButtonBlock> APPLE_BUTTON = FOODBLOCK.register("apple_button", () -> new ButtonBlock(foodblockregistry.PLANT, 20, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, ButtonBlock> APPLE_BUTTON = FOODBLOCK.register("apple_button", () -> new ButtonBlock(foodmaterialtyperegistry.PLANT, 20, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     ));
-    public static final DeferredHolder<Block, ButtonBlock> POTATO_BUTTON = FOODBLOCK.register("potato_button", () -> new ButtonBlock(foodblockregistry.PLANT, 20, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, ButtonBlock> POTATO_BUTTON = FOODBLOCK.register("potato_button", () -> new ButtonBlock(foodmaterialtyperegistry.PLANT, 20, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     ));
-    public static final DeferredHolder<Block, ButtonBlock> BEETROOT_BUTTON = FOODBLOCK.register("beetroot_button", () -> new ButtonBlock(foodblockregistry.PLANT, 20, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, ButtonBlock> BEETROOT_BUTTON = FOODBLOCK.register("beetroot_button", () -> new ButtonBlock(foodmaterialtyperegistry.PLANT, 20, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     ));
-    public static final DeferredHolder<Block, ButtonBlock> CARROT_BUTTON = FOODBLOCK.register("carrot_button", () -> new ButtonBlock(foodblockregistry.PLANT, 20, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, ButtonBlock> CARROT_BUTTON = FOODBLOCK.register("carrot_button", () -> new ButtonBlock(foodmaterialtyperegistry.PLANT, 20, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     ));
-    public static final DeferredHolder<Block, ButtonBlock> CHORUS_BUTTON = FOODBLOCK.register("chorus_button", () -> new ButtonBlock(foodblockregistry.PLANT, 20, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, ButtonBlock> CHORUS_BUTTON = FOODBLOCK.register("chorus_button", () -> new ButtonBlock(foodmaterialtyperegistry.PLANT, 20, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     ));
-    public static final DeferredHolder<Block, ButtonBlock> GLOW_BERRY_BUTTON = FOODBLOCK.register("glow_berry_button", () -> new ButtonBlock(foodblockregistry.PLANT, 20, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, ButtonBlock> GLOW_BERRY_BUTTON = FOODBLOCK.register("glow_berry_button", () -> new ButtonBlock(foodmaterialtyperegistry.PLANT, 20, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     .lightLevel(state -> 5)
     ));
-    public static final DeferredHolder<Block, ButtonBlock> MELON_BUTTON = FOODBLOCK.register("melon_button", () -> new ButtonBlock(foodblockregistry.PLANT, 20, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, ButtonBlock> MELON_BUTTON = FOODBLOCK.register("melon_button", () -> new ButtonBlock(foodmaterialtyperegistry.PLANT, 20, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     ));
-    public static final DeferredHolder<Block, ButtonBlock> SWEET_BERRY_BUTTON = FOODBLOCK.register("sweet_berry_button", () -> new ButtonBlock(foodblockregistry.PLANT, 20, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, ButtonBlock> SWEET_BERRY_BUTTON = FOODBLOCK.register("sweet_berry_button", () -> new ButtonBlock(foodmaterialtyperegistry.PLANT, 20, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     ));
-    public static final DeferredHolder<Block, ButtonBlock> BROWN_MUSHROOM_BUTTON = FOODBLOCK.register("brown_mushroom_button", () -> new ButtonBlock(foodblockregistry.PLANT, 20, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, ButtonBlock> BROWN_MUSHROOM_BUTTON = FOODBLOCK.register("brown_mushroom_button", () -> new ButtonBlock(foodmaterialtyperegistry.PLANT, 20, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     ));
-    public static final DeferredHolder<Block, ButtonBlock> RED_MUSHROOM_BUTTON = FOODBLOCK.register("red_mushroom_button", () -> new ButtonBlock(foodblockregistry.PLANT, 20, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, ButtonBlock> RED_MUSHROOM_BUTTON = FOODBLOCK.register("red_mushroom_button", () -> new ButtonBlock(foodmaterialtyperegistry.PLANT, 20, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     ));
-    public static final DeferredHolder<Block, ButtonBlock> PUMPKIN_BUTTON = FOODBLOCK.register("pumpkin_button", () -> new ButtonBlock(foodblockregistry.PLANT, 20, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, ButtonBlock> PUMPKIN_BUTTON = FOODBLOCK.register("pumpkin_button", () -> new ButtonBlock(foodmaterialtyperegistry.PLANT, 20, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     ));
-    public static final DeferredHolder<Block, ButtonBlock> CHICKEN_BUTTON = FOODBLOCK.register("chicken_button", () -> new ButtonBlock(foodblockregistry.MEAT, 20, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, ButtonBlock> CHICKEN_BUTTON = FOODBLOCK.register("chicken_button", () -> new ButtonBlock(foodmaterialtyperegistry.MEAT, 20, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     ));
-    public static final DeferredHolder<Block, ButtonBlock> COD_BUTTON = FOODBLOCK.register("cod_button", () -> new ButtonBlock(foodblockregistry.MEAT, 20, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, ButtonBlock> COD_BUTTON = FOODBLOCK.register("cod_button", () -> new ButtonBlock(foodmaterialtyperegistry.MEAT, 20, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     ));
-    public static final DeferredHolder<Block, ButtonBlock> SALMON_BUTTON = FOODBLOCK.register("salmon_button", () -> new ButtonBlock(foodblockregistry.MEAT, 20, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, ButtonBlock> SALMON_BUTTON = FOODBLOCK.register("salmon_button", () -> new ButtonBlock(foodmaterialtyperegistry.MEAT, 20, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     ));
-    public static final DeferredHolder<Block, ButtonBlock> TROPICAL_FISH_BUTTON = FOODBLOCK.register("tropical_fish_button", () -> new ButtonBlock(foodblockregistry.MEAT, 20, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, ButtonBlock> TROPICAL_FISH_BUTTON = FOODBLOCK.register("tropical_fish_button", () -> new ButtonBlock(foodmaterialtyperegistry.MEAT, 20, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     ));
-    public static final DeferredHolder<Block, ButtonBlock> MUTTON_BUTTON = FOODBLOCK.register("mutton_button", () -> new ButtonBlock(foodblockregistry.MEAT, 20, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, ButtonBlock> MUTTON_BUTTON = FOODBLOCK.register("mutton_button", () -> new ButtonBlock(foodmaterialtyperegistry.MEAT, 20, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     ));
-    public static final DeferredHolder<Block, ButtonBlock> BEEF_BUTTON = FOODBLOCK.register("beef_button", () -> new ButtonBlock(foodblockregistry.MEAT, 20, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, ButtonBlock> BEEF_BUTTON = FOODBLOCK.register("beef_button", () -> new ButtonBlock(foodmaterialtyperegistry.MEAT, 20, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     ));
-    public static final DeferredHolder<Block, ButtonBlock> PORK_BUTTON = FOODBLOCK.register("pork_button", () -> new ButtonBlock(foodblockregistry.MEAT, 20, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, ButtonBlock> PORK_BUTTON = FOODBLOCK.register("pork_button", () -> new ButtonBlock(foodmaterialtyperegistry.MEAT, 20, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     ));
-    public static final DeferredHolder<Block, ButtonBlock> RABBIT_BUTTON = FOODBLOCK.register("rabbit_button", () -> new ButtonBlock(foodblockregistry.MEAT, 20, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, ButtonBlock> RABBIT_BUTTON = FOODBLOCK.register("rabbit_button", () -> new ButtonBlock(foodmaterialtyperegistry.MEAT, 20, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     ));
 
@@ -499,97 +464,97 @@ public class foodblockregistry {
 //                                                                                      Pressure Plates
 //==============================================================================================================================================================================================
 
-    public static final DeferredHolder<Block, PressurePlateBlock> APPLE_PRESSURE_PLATE = FOODBLOCK.register("apple_pressure_plate", () -> new PressurePlateBlock(foodblockregistry.PLANT, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, PressurePlateBlock> APPLE_PRESSURE_PLATE = FOODBLOCK.register("apple_pressure_plate", () -> new PressurePlateBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
     .sound(SoundType.ROOTED_DIRT)
     .destroyTime(0.5f)
     .explosionResistance(4.0f)
     ));
-    public static final DeferredHolder<Block, PressurePlateBlock> POTATO_PRESSURE_PLATE = FOODBLOCK.register("potato_pressure_plate", () -> new PressurePlateBlock(foodblockregistry.PLANT, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, PressurePlateBlock> POTATO_PRESSURE_PLATE = FOODBLOCK.register("potato_pressure_plate", () -> new PressurePlateBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
     .sound(SoundType.ROOTED_DIRT)
     .destroyTime(0.5f)
     .explosionResistance(4.0f)
     ));
-    public static final DeferredHolder<Block, PressurePlateBlock> BEETROOT_PRESSURE_PLATE = FOODBLOCK.register("beetroot_pressure_plate", () -> new PressurePlateBlock(foodblockregistry.PLANT, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, PressurePlateBlock> BEETROOT_PRESSURE_PLATE = FOODBLOCK.register("beetroot_pressure_plate", () -> new PressurePlateBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
     .sound(SoundType.ROOTED_DIRT)
     .destroyTime(0.5f)
     .explosionResistance(4.0f)
     ));
-    public static final DeferredHolder<Block, PressurePlateBlock> CARROT_PRESSURE_PLATE = FOODBLOCK.register("carrot_pressure_plate", () -> new PressurePlateBlock(foodblockregistry.PLANT, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, PressurePlateBlock> CARROT_PRESSURE_PLATE = FOODBLOCK.register("carrot_pressure_plate", () -> new PressurePlateBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
     .sound(SoundType.ROOTED_DIRT)
     .destroyTime(0.5f)
     .explosionResistance(4.0f)
     ));
-    public static final DeferredHolder<Block, PressurePlateBlock> CHORUS_PRESSURE_PLATE = FOODBLOCK.register("chorus_pressure_plate", () -> new PressurePlateBlock(foodblockregistry.PLANT, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, PressurePlateBlock> CHORUS_PRESSURE_PLATE = FOODBLOCK.register("chorus_pressure_plate", () -> new PressurePlateBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
     .sound(SoundType.ROOTED_DIRT)
     .destroyTime(0.5f)
     .explosionResistance(4.0f)
     ));
-    public static final DeferredHolder<Block, PressurePlateBlock> GLOW_BERRY_PRESSURE_PLATE = FOODBLOCK.register("glow_berry_pressure_plate", () -> new PressurePlateBlock(foodblockregistry.PLANT, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, PressurePlateBlock> GLOW_BERRY_PRESSURE_PLATE = FOODBLOCK.register("glow_berry_pressure_plate", () -> new PressurePlateBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
     .sound(SoundType.ROOTED_DIRT)
     .destroyTime(0.5f)
     .explosionResistance(4.0f)
     ));
-    public static final DeferredHolder<Block, PressurePlateBlock> MELON_PRESSURE_PLATE = FOODBLOCK.register("melon_pressure_plate", () -> new PressurePlateBlock(foodblockregistry.PLANT, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, PressurePlateBlock> MELON_PRESSURE_PLATE = FOODBLOCK.register("melon_pressure_plate", () -> new PressurePlateBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
     .sound(SoundType.ROOTED_DIRT)
     .destroyTime(0.5f)
     .explosionResistance(4.0f)
     ));
-    public static final DeferredHolder<Block, PressurePlateBlock> SWEET_BERRY_PRESSURE_PLATE = FOODBLOCK.register("sweet_berry_pressure_plate", () -> new PressurePlateBlock(foodblockregistry.PLANT, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, PressurePlateBlock> SWEET_BERRY_PRESSURE_PLATE = FOODBLOCK.register("sweet_berry_pressure_plate", () -> new PressurePlateBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
     .sound(SoundType.ROOTED_DIRT)
     .destroyTime(0.5f)
     .explosionResistance(4.0f)
     ));
-    public static final DeferredHolder<Block, PressurePlateBlock> BROWN_MUSHROOM_PRESSURE_PLATE = FOODBLOCK.register("brown_mushroom_pressure_plate", () -> new PressurePlateBlock(foodblockregistry.PLANT, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, PressurePlateBlock> BROWN_MUSHROOM_PRESSURE_PLATE = FOODBLOCK.register("brown_mushroom_pressure_plate", () -> new PressurePlateBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
     .sound(SoundType.ROOTED_DIRT)
     .destroyTime(0.5f)
     .explosionResistance(4.0f)
     ));
-    public static final DeferredHolder<Block, PressurePlateBlock> RED_MUSHROOM_PRESSURE_PLATE = FOODBLOCK.register("red_mushroom_pressure_plate", () -> new PressurePlateBlock(foodblockregistry.PLANT, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, PressurePlateBlock> RED_MUSHROOM_PRESSURE_PLATE = FOODBLOCK.register("red_mushroom_pressure_plate", () -> new PressurePlateBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
     .sound(SoundType.ROOTED_DIRT)
     .destroyTime(0.5f)
     .explosionResistance(4.0f)
     ));
-    public static final DeferredHolder<Block, PressurePlateBlock> PUMPKIN_PRESSURE_PLATE = FOODBLOCK.register("pumpkin_pressure_plate", () -> new PressurePlateBlock(foodblockregistry.PLANT, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, PressurePlateBlock> PUMPKIN_PRESSURE_PLATE = FOODBLOCK.register("pumpkin_pressure_plate", () -> new PressurePlateBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
     .sound(SoundType.ROOTED_DIRT)
     .destroyTime(0.5f)
     .explosionResistance(4.0f)
     ));
-    public static final DeferredHolder<Block, PressurePlateBlock> CHICKEN_PRESSURE_PLATE = FOODBLOCK.register("chicken_pressure_plate", () -> new PressurePlateBlock(foodblockregistry.MEAT, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, PressurePlateBlock> CHICKEN_PRESSURE_PLATE = FOODBLOCK.register("chicken_pressure_plate", () -> new PressurePlateBlock(foodmaterialtyperegistry.MEAT, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     .destroyTime(0.5f)
     .explosionResistance(4.0f)
     ));
-    public static final DeferredHolder<Block, PressurePlateBlock> COD_PRESSURE_PLATE = FOODBLOCK.register("cod_pressure_plate", () -> new PressurePlateBlock(foodblockregistry.MEAT, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, PressurePlateBlock> COD_PRESSURE_PLATE = FOODBLOCK.register("cod_pressure_plate", () -> new PressurePlateBlock(foodmaterialtyperegistry.MEAT, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     .destroyTime(0.5f)
     .explosionResistance(4.0f)
     ));
-    public static final DeferredHolder<Block, PressurePlateBlock> SALMON_PRESSURE_PLATE = FOODBLOCK.register("salmon_pressure_plate", () -> new PressurePlateBlock(foodblockregistry.MEAT, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, PressurePlateBlock> SALMON_PRESSURE_PLATE = FOODBLOCK.register("salmon_pressure_plate", () -> new PressurePlateBlock(foodmaterialtyperegistry.MEAT, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     .destroyTime(0.5f)
     .explosionResistance(4.0f)
     ));
-    public static final DeferredHolder<Block, PressurePlateBlock> TROPICAL_FISH_PRESSURE_PLATE = FOODBLOCK.register("tropical_fish_pressure_plate", () -> new PressurePlateBlock(foodblockregistry.MEAT, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, PressurePlateBlock> TROPICAL_FISH_PRESSURE_PLATE = FOODBLOCK.register("tropical_fish_pressure_plate", () -> new PressurePlateBlock(foodmaterialtyperegistry.MEAT, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     .destroyTime(0.5f)
     .explosionResistance(4.0f)
     ));
-    public static final DeferredHolder<Block, PressurePlateBlock> MUTTON_PRESSURE_PLATE = FOODBLOCK.register("mutton_pressure_plate", () -> new PressurePlateBlock(foodblockregistry.MEAT, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, PressurePlateBlock> MUTTON_PRESSURE_PLATE = FOODBLOCK.register("mutton_pressure_plate", () -> new PressurePlateBlock(foodmaterialtyperegistry.MEAT, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     .destroyTime(0.5f)
     .explosionResistance(4.0f)
     ));
-    public static final DeferredHolder<Block, PressurePlateBlock> BEEF_PRESSURE_PLATE = FOODBLOCK.register("beef_pressure_plate", () -> new PressurePlateBlock(foodblockregistry.MEAT, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, PressurePlateBlock> BEEF_PRESSURE_PLATE = FOODBLOCK.register("beef_pressure_plate", () -> new PressurePlateBlock(foodmaterialtyperegistry.MEAT, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     .destroyTime(0.5f)
     .explosionResistance(4.0f)
     ));
-    public static final DeferredHolder<Block, PressurePlateBlock> PORK_PRESSURE_PLATE = FOODBLOCK.register("pork_pressure_plate", () -> new PressurePlateBlock(foodblockregistry.MEAT, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, PressurePlateBlock> PORK_PRESSURE_PLATE = FOODBLOCK.register("pork_pressure_plate", () -> new PressurePlateBlock(foodmaterialtyperegistry.MEAT, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     .destroyTime(0.5f)
     .explosionResistance(4.0f)
     ));
-    public static final DeferredHolder<Block, PressurePlateBlock> RABBIT_PRESSURE_PLATE = FOODBLOCK.register("rabbit_pressure_plate", () -> new PressurePlateBlock(foodblockregistry.MEAT, BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, PressurePlateBlock> RABBIT_PRESSURE_PLATE = FOODBLOCK.register("rabbit_pressure_plate", () -> new PressurePlateBlock(foodmaterialtyperegistry.MEAT, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
     .destroyTime(0.5f)
     .explosionResistance(4.0f)
@@ -929,7 +894,7 @@ public class foodblockregistry {
 //==============================================================================================================================================================================================
 
    //.........apple
-     public static final DeferredHolder<Block, Block> APPLE_TRAPDOOR = FOODBLOCK.register("apple_trapdoor", () -> new TrapDoorBlock(foodblockregistry.PLANT, BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, Block> APPLE_TRAPDOOR = FOODBLOCK.register("apple_trapdoor", () -> new TrapDoorBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
      .destroyTime(1.75f)
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)
