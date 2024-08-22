@@ -454,6 +454,7 @@ public class foodblockitemregistry {
 //                                                                                         Trapdoors
 //==============================================================================================================================================================================================
 
+   //.........apple
      public static final DeferredHolder<Item, BlockItem> APPLE_TRAPDOOR_ITEM = FOODBLOCKITEM.register("apple_trapdoor_item",
      () -> new BlockItem(foodblockregistry.APPLE_TRAPDOOR.get(), new BlockItem.Properties()));
 
