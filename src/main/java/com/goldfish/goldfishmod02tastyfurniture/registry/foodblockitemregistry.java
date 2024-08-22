@@ -457,5 +457,59 @@ public class foodblockitemregistry {
    //.........apple
      public static final DeferredHolder<Item, BlockItem> APPLE_TRAPDOOR_ITEM = FOODBLOCKITEM.register("apple_trapdoor_item",
      () -> new BlockItem(foodblockregistry.APPLE_TRAPDOOR.get(), new BlockItem.Properties()));
+   //.........potato
+     public static final DeferredHolder<Item, BlockItem> POTATO_TRAPDOOR_ITEM = FOODBLOCKITEM.register("potato_trapdoor_item",
+     () -> new BlockItem(foodblockregistry.POTATO_TRAPDOOR.get(), new BlockItem.Properties()));
+   //.........beetroot
+     public static final DeferredHolder<Item, BlockItem> BEETROOT_TRAPDOOR_ITEM = FOODBLOCKITEM.register("beetroot_trapdoor_item",
+     () -> new BlockItem(foodblockregistry.BEETROOT_TRAPDOOR.get(), new BlockItem.Properties()));
+   //.........carrot
+     public static final DeferredHolder<Item, BlockItem> CARROT_TRAPDOOR_ITEM = FOODBLOCKITEM.register("carrot_trapdoor_item",
+     () -> new BlockItem(foodblockregistry.CARROT_TRAPDOOR.get(), new BlockItem.Properties()));
+   //.........chorus
+     public static final DeferredHolder<Item, BlockItem> CHORUS_TRAPDOOR_ITEM = FOODBLOCKITEM.register("chorus_trapdoor_item",
+     () -> new BlockItem(foodblockregistry.CHORUS_TRAPDOOR.get(), new BlockItem.Properties()));
+   //.........glow_berry
+     public static final DeferredHolder<Item, BlockItem> GLOW_BERRY_TRAPDOOR_ITEM = FOODBLOCKITEM.register("glow_berry_trapdoor_item",
+     () -> new BlockItem(foodblockregistry.GLOW_BERRY_TRAPDOOR.get(), new BlockItem.Properties()));
+   //.........melon
+     public static final DeferredHolder<Item, BlockItem> MELON_TRAPDOOR_ITEM = FOODBLOCKITEM.register("melon_trapdoor_item",
+     () -> new BlockItem(foodblockregistry.MELON_TRAPDOOR.get(), new BlockItem.Properties()));
+   //.........sweet_berry
+     public static final DeferredHolder<Item, BlockItem> SWEET_BERRY_TRAPDOOR_ITEM = FOODBLOCKITEM.register("sweet_berry_trapdoor_item",
+     () -> new BlockItem(foodblockregistry.SWEET_BERRY_TRAPDOOR.get(), new BlockItem.Properties()));
+   //.........brown_mushroom
+     public static final DeferredHolder<Item, BlockItem> BROWN_MUSHROOM_TRAPDOOR_ITEM = FOODBLOCKITEM.register("brown_mushroom_trapdoor_item",
+     () -> new BlockItem(foodblockregistry.BROWN_MUSHROOM_TRAPDOOR.get(), new BlockItem.Properties()));
+   //.........red_mushroom
+     public static final DeferredHolder<Item, BlockItem> RED_MUSHROOM_TRAPDOOR_ITEM = FOODBLOCKITEM.register("red_mushroom_trapdoor_item",
+     () -> new BlockItem(foodblockregistry.RED_MUSHROOM_TRAPDOOR.get(), new BlockItem.Properties()));
+   //.........pumpkin
+     public static final DeferredHolder<Item, BlockItem> PUMPKIN_TRAPDOOR_ITEM = FOODBLOCKITEM.register("pumpkin_trapdoor_item",
+     () -> new BlockItem(foodblockregistry.PUMPKIN_TRAPDOOR.get(), new BlockItem.Properties()));
+   //.........chicken
+     public static final DeferredHolder<Item, BlockItem> CHICKEN_TRAPDOOR_ITEM = FOODBLOCKITEM.register("chicken_trapdoor_item",
+     () -> new BlockItem(foodblockregistry.CHICKEN_TRAPDOOR.get(), new BlockItem.Properties()));
+   //.........cod
+     public static final DeferredHolder<Item, BlockItem> COD_TRAPDOOR_ITEM = FOODBLOCKITEM.register("cod_trapdoor_item",
+     () -> new BlockItem(foodblockregistry.COD_TRAPDOOR.get(), new BlockItem.Properties()));
+   //.........salmon
+     public static final DeferredHolder<Item, BlockItem> SALMON_TRAPDOOR_ITEM = FOODBLOCKITEM.register("salmon_trapdoor_item",
+     () -> new BlockItem(foodblockregistry.SALMON_TRAPDOOR.get(), new BlockItem.Properties()));
+   //.........tropical_fish
+     public static final DeferredHolder<Item, BlockItem> TROPICAL_FISH_TRAPDOOR_ITEM = FOODBLOCKITEM.register("tropical_fish_trapdoor_item",
+     () -> new BlockItem(foodblockregistry.TROPICAL_FISH_TRAPDOOR.get(), new BlockItem.Properties()));
+   //.........mutton
+     public static final DeferredHolder<Item, BlockItem> MUTTON_TRAPDOOR_ITEM = FOODBLOCKITEM.register("mutton_trapdoor_item",
+     () -> new BlockItem(foodblockregistry.MUTTON_TRAPDOOR.get(), new BlockItem.Properties()));
+   //.........beef
+     public static final DeferredHolder<Item, BlockItem> BEEF_TRAPDOOR_ITEM = FOODBLOCKITEM.register("beef_trapdoor_item",
+     () -> new BlockItem(foodblockregistry.BEEF_TRAPDOOR.get(), new BlockItem.Properties()));
+   //.........pork
+     public static final DeferredHolder<Item, BlockItem> PORK_TRAPDOOR_ITEM = FOODBLOCKITEM.register("pork_trapdoor_item",
+     () -> new BlockItem(foodblockregistry.PORK_TRAPDOOR.get(), new BlockItem.Properties()));
+   //.........rabbit
+     public static final DeferredHolder<Item, BlockItem> RABBIT_TRAPDOOR_ITEM = FOODBLOCKITEM.register("rabbit_trapdoor_item",
+     () -> new BlockItem(foodblockregistry.RABBIT_TRAPDOOR.get(), new BlockItem.Properties()));
 
 }

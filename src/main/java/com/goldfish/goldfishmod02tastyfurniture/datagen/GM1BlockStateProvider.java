@@ -560,9 +560,78 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock apple_trapdoor = foodblockregistry.APPLE_TRAPDOOR.get(); 
           ResourceLocation apple_trapdoor_texture = modLoc("block/apple_block");
           trapdoorBlockWithRenderType(apple_trapdoor, "apple_trapdoor", apple_trapdoor_texture, false, apple_trapdoor_texture);
-
-          // WoodType apple_wood_mat = foodmaterialtyperegistry.APPLEWOODMAT;
-          // ResourceLocation  apple_wood_mat_texture = modLoc("block/apple_block");
+        //............potato
+          TrapDoorBlock potato_trapdoor = foodblockregistry.POTATO_TRAPDOOR.get(); 
+          ResourceLocation potato_trapdoor_texture = modLoc("block/potato_block");
+          trapdoorBlockWithRenderType(potato_trapdoor, "potato_trapdoor", potato_trapdoor_texture, false, potato_trapdoor_texture);
+        //............beetroot
+          TrapDoorBlock beetroot_trapdoor = foodblockregistry.BEETROOT_TRAPDOOR.get(); 
+          ResourceLocation beetroot_trapdoor_texture = modLoc("block/beetroot_block");
+          trapdoorBlockWithRenderType(beetroot_trapdoor, "beetroot_trapdoor", beetroot_trapdoor_texture, false, beetroot_trapdoor_texture);
+        //............carrot
+          TrapDoorBlock carrot_trapdoor = foodblockregistry.CARROT_TRAPDOOR.get(); 
+          ResourceLocation carrot_trapdoor_texture = modLoc("block/carrot_block");
+          trapdoorBlockWithRenderType(carrot_trapdoor, "carrot_trapdoor", carrot_trapdoor_texture, false, carrot_trapdoor_texture);
+        //............chorus
+          TrapDoorBlock chorus_trapdoor = foodblockregistry.CHORUS_TRAPDOOR.get(); 
+          ResourceLocation chorus_trapdoor_texture = modLoc("block/chorus_block");
+          trapdoorBlockWithRenderType(chorus_trapdoor, "chorus_trapdoor", chorus_trapdoor_texture, false, chorus_trapdoor_texture);
+        //............glow_berry
+          TrapDoorBlock glow_berry_trapdoor = foodblockregistry.GLOW_BERRY_TRAPDOOR.get(); 
+          ResourceLocation glow_berry_trapdoor_texture = modLoc("block/glow_berry_block");
+          trapdoorBlockWithRenderType(glow_berry_trapdoor, "glow_berry_trapdoor", glow_berry_trapdoor_texture, false, glow_berry_trapdoor_texture);
+        //............melon
+          TrapDoorBlock melon_trapdoor = foodblockregistry.MELON_TRAPDOOR.get(); 
+          ResourceLocation melon_trapdoor_texture = modLoc("block/melon_block");
+          trapdoorBlockWithRenderType(melon_trapdoor, "melon_trapdoor", melon_trapdoor_texture, false, melon_trapdoor_texture);
+        //............sweet_berry
+          TrapDoorBlock sweet_berry_trapdoor = foodblockregistry.SWEET_BERRY_TRAPDOOR.get(); 
+          ResourceLocation sweet_berry_trapdoor_texture = modLoc("block/sweet_berry_block");
+          trapdoorBlockWithRenderType(sweet_berry_trapdoor, "sweet_berry_trapdoor", sweet_berry_trapdoor_texture, false, sweet_berry_trapdoor_texture);
+        //............brown_mushroom
+          TrapDoorBlock brown_mushroom_trapdoor = foodblockregistry.BROWN_MUSHROOM_TRAPDOOR.get(); 
+          ResourceLocation brown_mushroom_trapdoor_texture = modLoc("block/brown_mushroom_block");
+          trapdoorBlockWithRenderType(brown_mushroom_trapdoor, "brown_mushroom_trapdoor", brown_mushroom_trapdoor_texture, false, brown_mushroom_trapdoor_texture);
+        //............red_mushroom
+          TrapDoorBlock red_mushroom_trapdoor = foodblockregistry.RED_MUSHROOM_TRAPDOOR.get(); 
+          ResourceLocation red_mushroom_trapdoor_texture = modLoc("block/red_mushroom_block");
+          trapdoorBlockWithRenderType(red_mushroom_trapdoor, "red_mushroom_trapdoor", red_mushroom_trapdoor_texture, false, red_mushroom_trapdoor_texture);
+        //............pumpkin
+          TrapDoorBlock pumpkin_trapdoor = foodblockregistry.PUMPKIN_TRAPDOOR.get(); 
+          ResourceLocation pumpkin_trapdoor_texture = modLoc("block/pumpkin_block");
+          trapdoorBlockWithRenderType(pumpkin_trapdoor, "pumpkin_trapdoor", pumpkin_trapdoor_texture, false, pumpkin_trapdoor_texture);
+        //............chicken
+          TrapDoorBlock chicken_trapdoor = foodblockregistry.CHICKEN_TRAPDOOR.get(); 
+          ResourceLocation chicken_trapdoor_texture = modLoc("block/chicken_block");
+          trapdoorBlockWithRenderType(chicken_trapdoor, "chicken_trapdoor", chicken_trapdoor_texture, false, chicken_trapdoor_texture);
+        //............cod
+          TrapDoorBlock cod_trapdoor = foodblockregistry.COD_TRAPDOOR.get(); 
+          ResourceLocation cod_trapdoor_texture = modLoc("block/cod_block");
+          trapdoorBlockWithRenderType(cod_trapdoor, "cod_trapdoor", cod_trapdoor_texture, false, cod_trapdoor_texture);
+        //............salmon
+          TrapDoorBlock salmon_trapdoor = foodblockregistry.SALMON_TRAPDOOR.get(); 
+          ResourceLocation salmon_trapdoor_texture = modLoc("block/salmon_block");
+          trapdoorBlockWithRenderType(salmon_trapdoor, "salmon_trapdoor", salmon_trapdoor_texture, false, salmon_trapdoor_texture);
+        //............tropical_fish
+          TrapDoorBlock tropical_fish_trapdoor = foodblockregistry.TROPICAL_FISH_TRAPDOOR.get(); 
+          ResourceLocation tropical_fish_trapdoor_texture = modLoc("block/tropical_fish_block");
+          trapdoorBlockWithRenderType(tropical_fish_trapdoor, "tropical_fish_trapdoor", tropical_fish_trapdoor_texture, false, tropical_fish_trapdoor_texture);
+        //............mutton
+          TrapDoorBlock mutton_trapdoor = foodblockregistry.MUTTON_TRAPDOOR.get(); 
+          ResourceLocation mutton_trapdoor_texture = modLoc("block/mutton_block");
+          trapdoorBlockWithRenderType(mutton_trapdoor, "mutton_trapdoor", mutton_trapdoor_texture, false, mutton_trapdoor_texture);
+        //............beef
+          TrapDoorBlock beef_trapdoor = foodblockregistry.BEEF_TRAPDOOR.get(); 
+          ResourceLocation beef_trapdoor_texture = modLoc("block/beef_block");
+          trapdoorBlockWithRenderType(beef_trapdoor, "beef_trapdoor", beef_trapdoor_texture, false, beef_trapdoor_texture);
+        //............pork
+          TrapDoorBlock pork_trapdoor = foodblockregistry.PORK_TRAPDOOR.get(); 
+          ResourceLocation pork_trapdoor_texture = modLoc("block/pork_block");
+          trapdoorBlockWithRenderType(pork_trapdoor, "pork_trapdoor", pork_trapdoor_texture, false, pork_trapdoor_texture);
+        //............rabbit
+          TrapDoorBlock rabbit_trapdoor = foodblockregistry.RABBIT_TRAPDOOR.get(); 
+          ResourceLocation rabbit_trapdoor_texture = modLoc("block/rabbit_block");
+          trapdoorBlockWithRenderType(rabbit_trapdoor, "rabbit_trapdoor", rabbit_trapdoor_texture, false, rabbit_trapdoor_texture);
           
 }}
     

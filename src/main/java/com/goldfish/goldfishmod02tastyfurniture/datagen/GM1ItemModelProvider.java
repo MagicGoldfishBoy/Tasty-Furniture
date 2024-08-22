@@ -256,5 +256,41 @@ public class GM1ItemModelProvider extends ItemModelProvider {
     //------------------------------------------------------trapdoors----------------------------------------------------------------------
       //..............apple
        withExistingParent("apple_trapdoor_item", modLoc("block/apple_trapdoor_trapdoor_bottom"));
+      //..............potato
+       withExistingParent("potato_trapdoor_item", modLoc("block/potato_trapdoor_trapdoor_bottom"));
+      //..............beetroot
+       withExistingParent("beetroot_trapdoor_item", modLoc("block/beetroot_trapdoor_trapdoor_bottom"));
+      //..............carrot
+       withExistingParent("carrot_trapdoor_item", modLoc("block/carrot_trapdoor_trapdoor_bottom"));
+      //..............chorus
+       withExistingParent("chorus_trapdoor_item", modLoc("block/chorus_trapdoor_trapdoor_bottom"));
+      //..............glow_berry
+       withExistingParent("glow_berry_trapdoor_item", modLoc("block/glow_berry_trapdoor_trapdoor_bottom"));
+      //..............melon
+       withExistingParent("melon_trapdoor_item", modLoc("block/melon_trapdoor_trapdoor_bottom"));
+      //..............sweet_berry
+       withExistingParent("sweet_berry_trapdoor_item", modLoc("block/sweet_berry_trapdoor_trapdoor_bottom"));
+      //..............brown_mushroom
+       withExistingParent("brown_mushroom_trapdoor_item", modLoc("block/brown_mushroom_trapdoor_trapdoor_bottom"));
+      //..............red_mushroom
+       withExistingParent("red_mushroom_trapdoor_item", modLoc("block/red_mushroom_trapdoor_trapdoor_bottom"));
+      //..............pumpkin
+       withExistingParent("pumpkin_trapdoor_item", modLoc("block/pumpkin_trapdoor_trapdoor_bottom"));
+      //..............chicken
+       withExistingParent("chicken_trapdoor_item", modLoc("block/chicken_trapdoor_trapdoor_bottom"));
+      //..............cod
+       withExistingParent("cod_trapdoor_item", modLoc("block/cod_trapdoor_trapdoor_bottom"));
+      //..............salmon
+       withExistingParent("salmon_trapdoor_item", modLoc("block/salmon_trapdoor_trapdoor_bottom"));
+      //..............tropical_fish
+       withExistingParent("tropical_fish_trapdoor_item", modLoc("block/tropical_fish_trapdoor_trapdoor_bottom"));
+      //..............mutton
+       withExistingParent("mutton_trapdoor_item", modLoc("block/mutton_trapdoor_trapdoor_bottom"));
+      //..............beef
+       withExistingParent("beef_trapdoor_item", modLoc("block/beef_trapdoor_trapdoor_bottom"));
+      //..............pork
+       withExistingParent("pork_trapdoor_item", modLoc("block/pork_trapdoor_trapdoor_bottom"));
+      //..............rabbit
+       withExistingParent("rabbit_trapdoor_item", modLoc("block/rabbit_trapdoor_trapdoor_bottom"));
  }   
 }

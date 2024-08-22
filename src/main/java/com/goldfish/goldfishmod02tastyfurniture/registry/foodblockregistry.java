@@ -938,44 +938,79 @@ public class foodblockregistry {
      .destroyTime(1.75f)
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)
-     .lightLevel(state -> 15)
      ));
    //.........sweet_berry
      public static final DeferredHolder<Block, TrapDoorBlock> SWEET_BERRY_TRAPDOOR = FOODBLOCK.register("sweet_berry_trapdoor", () -> new TrapDoorBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
      .destroyTime(1.75f)
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)
-     .lightLevel(state -> 15)
      ));
    //.........brown_mushroom
      public static final DeferredHolder<Block, TrapDoorBlock> BROWN_MUSHROOM_TRAPDOOR = FOODBLOCK.register("brown_mushroom_trapdoor", () -> new TrapDoorBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
      .destroyTime(1.75f)
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)
-     .lightLevel(state -> 15)
      ));
    //.........red_mushroom
      public static final DeferredHolder<Block, TrapDoorBlock> RED_MUSHROOM_TRAPDOOR = FOODBLOCK.register("red_mushroom_trapdoor", () -> new TrapDoorBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
      .destroyTime(1.75f)
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)
-     .lightLevel(state -> 15)
      ));
    //.........pumpkin
      public static final DeferredHolder<Block, TrapDoorBlock> PUMPKIN_TRAPDOOR = FOODBLOCK.register("pumpkin_trapdoor", () -> new TrapDoorBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
      .destroyTime(1.75f)
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)
-     .lightLevel(state -> 15)
      ));
    //.........chicken
+     public static final DeferredHolder<Block, TrapDoorBlock> CHICKEN_TRAPDOOR = FOODBLOCK.register("chicken_trapdoor", () -> new TrapDoorBlock(foodmaterialtyperegistry.MEAT, BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));   
    //.........cod
+     public static final DeferredHolder<Block, TrapDoorBlock> COD_TRAPDOOR = FOODBLOCK.register("cod_trapdoor", () -> new TrapDoorBlock(foodmaterialtyperegistry.MEAT, BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
    //.........salmon
+     public static final DeferredHolder<Block, TrapDoorBlock> SALMON_TRAPDOOR = FOODBLOCK.register("salmon_trapdoor", () -> new TrapDoorBlock(foodmaterialtyperegistry.MEAT, BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
    //.........tropical_fish
+     public static final DeferredHolder<Block, TrapDoorBlock> TROPICAL_FISH_TRAPDOOR = FOODBLOCK.register("tropical_fish_trapdoor", () -> new TrapDoorBlock(foodmaterialtyperegistry.MEAT, BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
    //.........mutton
+     public static final DeferredHolder<Block, TrapDoorBlock> MUTTON_TRAPDOOR = FOODBLOCK.register("mutton_trapdoor", () -> new TrapDoorBlock(foodmaterialtyperegistry.MEAT, BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
    //.........beef
+     public static final DeferredHolder<Block, TrapDoorBlock> BEEF_TRAPDOOR = FOODBLOCK.register("beef_trapdoor", () -> new TrapDoorBlock(foodmaterialtyperegistry.MEAT, BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
    //.........pork
+     public static final DeferredHolder<Block, TrapDoorBlock> PORK_TRAPDOOR = FOODBLOCK.register("pork_trapdoor", () -> new TrapDoorBlock(foodmaterialtyperegistry.MEAT, BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
    //.........rabbit
+     public static final DeferredHolder<Block, TrapDoorBlock> RABBIT_TRAPDOOR = FOODBLOCK.register("rabbit_trapdoor", () -> new TrapDoorBlock(foodmaterialtyperegistry.MEAT, BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
 //==============================================================================================================================================================================================
 //                                                                                           Bars
 //==============================================================================================================================================================================================
