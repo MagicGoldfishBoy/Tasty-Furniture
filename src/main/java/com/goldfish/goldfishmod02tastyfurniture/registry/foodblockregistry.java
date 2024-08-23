@@ -25,6 +25,7 @@ import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SignBlock;
 import net.minecraft.world.level.block.SlabBlock;
@@ -178,7 +179,7 @@ public class foodblockregistry {
          ));
 
 //==============================================================================================================================================================================================
-//                                                                                         Doors
+//                                                                                          Doors
 //==============================================================================================================================================================================================
          
     public static final DeferredHolder<Block, Block> APPLE_DOOR_BLOCK = FOODBLOCK.register("apple_door", () -> new DoorBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
@@ -1016,6 +1017,9 @@ public class foodblockregistry {
 //==============================================================================================================================================================================================
 
    //.........apple
+     public static final DeferredHolder<Block, IronBarsBlock> APPLE_BARS = FOODBLOCK.register("apple_bars", () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+     .strength(2.0F, 3.0F)
+     .sound(SoundType.CROP).noOcclusion()));
    //.........potato
    //.........beetroot
    //.........carrot

@@ -7,6 +7,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
+import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SignBlock;
 import net.minecraft.world.level.block.SlabBlock;
@@ -477,7 +478,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation  rabbit_slab_texture = modLoc("block/rabbit_block");
           slabBlock(rabbit_slab, rabbit_slab_texture, rabbit_slab_texture);
 
-      //-----------------------------------------------------------------slabs-----------------------------------------------------------------------------
+      //-----------------------------------------------------------------stairs-----------------------------------------------------------------------------
         //............apple
           StairBlock apple_stairs = foodblockregistry.APPLE_STAIRS.get();
           ResourceLocation  apple_stair_texture = modLoc("block/apple_block");
@@ -632,6 +633,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock rabbit_trapdoor = foodblockregistry.RABBIT_TRAPDOOR.get(); 
           ResourceLocation rabbit_trapdoor_texture = modLoc("block/rabbit_block");
           trapdoorBlockWithRenderType(rabbit_trapdoor, "rabbit_trapdoor", rabbit_trapdoor_texture, false, rabbit_trapdoor_texture);
-          
+
+      //---------------------------------------------------------------trapdoors-----------------------------------------------------------------------------
+        //............apple
+        IronBarsBlock apple_bars = foodblockregistry.APPLE_BARS.get(); 
+        ResourceLocation apple_bars_texture = modLoc("block/apple_bars");
+        ResourceLocation apple_bars_rim_texture = modLoc("block/apple_block");
+        paneBlockWithRenderType(apple_bars, "apple_bars", apple_bars_texture, apple_bars_rim_texture, "cutout_mipped_all");    
 }}
     

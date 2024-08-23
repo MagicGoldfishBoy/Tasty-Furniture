@@ -292,5 +292,9 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("pork_trapdoor_item", modLoc("block/pork_trapdoor_trapdoor_bottom"));
       //..............rabbit
        withExistingParent("rabbit_trapdoor_item", modLoc("block/rabbit_trapdoor_trapdoor_bottom"));
+
+    //---------------------------------------------------------bars----------------------------------------------------------------------
+      //..............apple
+        withExistingParent("apple_bars_item", mcLoc("item/generated")).texture("layer0", "block/apple_bars");
  }   
 }
