@@ -11,15 +11,6 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "conditions": [
-            {
-              "block": "goldfishmod02tastyfurniture:beetroot_trapdoor",
-              "condition": "minecraft:block_state_property",
-              "properties": {
-                "half": "lower"
-              }
-            }
-          ],
           "name": "goldfishmod02tastyfurniture:beetroot_trapdoor_item"
         }
       ],

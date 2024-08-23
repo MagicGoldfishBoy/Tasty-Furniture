@@ -34,7 +34,7 @@ public class GM1BlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
      foodblockregistry.FOODBLOCK.getEntries().forEach((a) -> {if (a.get().getName().toString().matches(".*slab.*")) {this.add(a.get(), this::createSlabItemTable);}
-     else if (a.get().getName().toString().matches(".*door.*")) {this.add(a.get(), this::createDoorTable);} 
+     else if (a.get().getName().toString().matches(".*door.*") && (!a.get().getName().toString().matches(".*trap.*"))) {this.add(a.get(), this::createDoorTable);} 
      else {dropSelf(a.get());} });
      }
 

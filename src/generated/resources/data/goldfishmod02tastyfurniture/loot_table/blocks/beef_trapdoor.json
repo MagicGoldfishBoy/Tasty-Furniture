@@ -11,15 +11,6 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "conditions": [
-            {
-              "block": "goldfishmod02tastyfurniture:beef_trapdoor",
-              "condition": "minecraft:block_state_property",
-              "properties": {
-                "half": "lower"
-              }
-            }
-          ],
           "name": "goldfishmod02tastyfurniture:beef_trapdoor_item"
         }
       ],
