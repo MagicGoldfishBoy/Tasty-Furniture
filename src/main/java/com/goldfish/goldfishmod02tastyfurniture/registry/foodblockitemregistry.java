@@ -531,5 +531,8 @@ public class foodblockitemregistry {
    //.........chorus
     public static final DeferredHolder<Item, BlockItem> CHORUS_BARS_ITEM = FOODBLOCKITEM.register("chorus_bars_item",
     () -> new BlockItem(foodblockregistry.CHORUS_BARS.get(), new BlockItem.Properties()));
+   //.........glow_berry
+    public static final DeferredHolder<Item, BlockItem> GLOW_BERRY_BARS_ITEM = FOODBLOCKITEM.register("glow_berry_bars_item",
+    () -> new BlockItem(foodblockregistry.GLOW_BERRY_BARS.get(), new BlockItem.Properties()));
 
 }

@@ -1037,6 +1037,9 @@ public class foodblockregistry {
      .strength(2.0F, 3.0F)
      .sound(SoundType.CROP).noOcclusion()));
    //.........glow_berry
+     public static final DeferredHolder<Block, IronBarsBlock> GLOW_BERRY_BARS = FOODBLOCK.register("glow_berry_bars", () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+     .strength(2.0F, 3.0F)
+     .sound(SoundType.CROP).noOcclusion()));
    //.........melon
    //.........sweet_berry
    //.........brown_mushroom
