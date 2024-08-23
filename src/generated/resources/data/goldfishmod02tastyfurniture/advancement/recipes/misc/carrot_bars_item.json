@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_potato_nugget": {
+    "has_carrot_nugget": {
       "conditions": {
         "items": [
           {
-            "items": "goldfishmod02tastyfurniture:potato_nugget"
+            "items": "goldfishmod02tastyfurniture:carrot_nugget"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "goldfishmod02tastyfurniture:potato_bars_item"
+        "recipe": "goldfishmod02tastyfurniture:carrot_bars_item"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_potato_nugget"
+      "has_carrot_nugget"
     ]
   ],
   "rewards": {
     "recipes": [
-      "goldfishmod02tastyfurniture:potato_bars_item"
+      "goldfishmod02tastyfurniture:carrot_bars_item"
     ]
   }
 }

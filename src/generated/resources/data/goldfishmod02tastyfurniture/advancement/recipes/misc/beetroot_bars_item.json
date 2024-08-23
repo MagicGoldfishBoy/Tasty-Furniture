@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_apple_nugget": {
+    "has_beetroot_nugget": {
       "conditions": {
         "items": [
           {
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_apple_nugget"
+      "has_beetroot_nugget"
     ]
   ],
   "rewards": {

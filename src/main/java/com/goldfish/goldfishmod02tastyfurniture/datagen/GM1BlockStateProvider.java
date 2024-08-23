@@ -636,19 +636,24 @@ public class GM1BlockStateProvider extends BlockStateProvider
 
       //------------------------------------------------------------------bars-----------------------------------------------------------------------------
         //............apple
-        IronBarsBlock apple_bars = foodblockregistry.APPLE_BARS.get(); 
-        ResourceLocation apple_bars_texture = modLoc("block/apple_bars");
-        ResourceLocation apple_bars_rim_texture = modLoc("block/apple_block");
-        paneBlockWithRenderType(apple_bars, "apple_bars", apple_bars_texture, apple_bars_rim_texture, "cutout_mipped_all");    
+          IronBarsBlock apple_bars = foodblockregistry.APPLE_BARS.get(); 
+          ResourceLocation apple_bars_texture = modLoc("block/apple_bars");
+          ResourceLocation apple_bars_rim_texture = modLoc("block/apple_block");
+          paneBlockWithRenderType(apple_bars, "apple_bars", apple_bars_texture, apple_bars_rim_texture, "cutout_mipped_all");    
         //............potato
-        IronBarsBlock potato_bars = foodblockregistry.POTATO_BARS.get(); 
-        ResourceLocation potato_bars_texture = modLoc("block/potato_bars");
-        ResourceLocation potato_bars_rim_texture = modLoc("block/potato_block");
-        paneBlockWithRenderType(potato_bars, "potato_bars", potato_bars_texture, potato_bars_rim_texture, "cutout_mipped_all");    
+          IronBarsBlock potato_bars = foodblockregistry.POTATO_BARS.get(); 
+          ResourceLocation potato_bars_texture = modLoc("block/potato_bars");
+          ResourceLocation potato_bars_rim_texture = modLoc("block/potato_block");
+          paneBlockWithRenderType(potato_bars, "potato_bars", potato_bars_texture, potato_bars_rim_texture, "cutout_mipped_all");    
         //............beetroot
-        IronBarsBlock beetroot_bars = foodblockregistry.BEETROOT_BARS.get(); 
-        ResourceLocation beetroot_bars_texture = modLoc("block/beetroot_bars");
-        ResourceLocation beetroot_bars_rim_texture = modLoc("block/beetroot_block");
-        paneBlockWithRenderType(beetroot_bars, "beetroot_bars", beetroot_bars_texture, beetroot_bars_rim_texture, "cutout_mipped_all");    
+          IronBarsBlock beetroot_bars = foodblockregistry.BEETROOT_BARS.get(); 
+          ResourceLocation beetroot_bars_texture = modLoc("block/beetroot_bars");
+          ResourceLocation beetroot_bars_rim_texture = modLoc("block/beetroot_block");
+          paneBlockWithRenderType(beetroot_bars, "beetroot_bars", beetroot_bars_texture, beetroot_bars_rim_texture, "cutout_mipped_all");    
+        //............carrot
+          IronBarsBlock carrot_bars = foodblockregistry.CARROT_BARS.get(); 
+          ResourceLocation carrot_bars_texture = modLoc("block/carrot_bars");
+          ResourceLocation carrot_bars_rim_texture = modLoc("block/carrot_block");
+          paneBlockWithRenderType(carrot_bars, "carrot_bars", carrot_bars_texture, carrot_bars_rim_texture, "cutout_mipped_all");    
 }}
     
