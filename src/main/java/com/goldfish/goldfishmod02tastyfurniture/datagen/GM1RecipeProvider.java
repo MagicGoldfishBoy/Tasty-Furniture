@@ -597,6 +597,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .pattern("AAA")
          .define('A', nuggetregistry.GLOW_BERRY_NUGGET.get())
          .unlockedBy("has_glow_berry_nugget", has(nuggetregistry.GLOW_BERRY_NUGGET.get()))
+         .save(output);        
+         //melon
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MELON_BARS_ITEM.get())
+         .pattern("   ")
+         .pattern("AAA")
+         .pattern("AAA")
+         .define('A', nuggetregistry.MELON_NUGGET.get())
+         .unlockedBy("has_melon_nugget", has(nuggetregistry.MELON_NUGGET.get()))
          .save(output);
         
         }

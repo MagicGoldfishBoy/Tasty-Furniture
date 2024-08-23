@@ -665,5 +665,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation glow_berry_bars_texture = modLoc("block/glow_berry_bars");
           ResourceLocation glow_berry_bars_rim_texture = modLoc("block/glow_berry_block");
           paneBlockWithRenderType(glow_berry_bars, "glow_berry_bars", glow_berry_bars_texture, glow_berry_bars_rim_texture, "cutout_mipped_all");    
+        //............melon
+          IronBarsBlock melon_bars = foodblockregistry.MELON_BARS.get(); 
+          ResourceLocation melon_bars_texture = modLoc("block/melon_bars");
+          ResourceLocation melon_bars_rim_texture = modLoc("block/melon_block");
+          paneBlockWithRenderType(melon_bars, "melon_bars", melon_bars_texture, melon_bars_rim_texture, "cutout_mipped_all");    
 }}
     
