@@ -675,5 +675,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation sweet_berry_bars_texture = modLoc("block/sweet_berry_bars");
           ResourceLocation sweet_berry_bars_rim_texture = modLoc("block/sweet_berry_block");
           paneBlockWithRenderType(sweet_berry_bars, "sweet_berry_bars", sweet_berry_bars_texture, sweet_berry_bars_rim_texture, "cutout_mipped_all");    
+        //............brown_mushroom
+          IronBarsBlock brown_mushroom_bars = foodblockregistry.BROWN_MUSHROOM_BARS.get(); 
+          ResourceLocation brown_mushroom_bars_texture = modLoc("block/brown_mushroom_bars");
+          ResourceLocation brown_mushroom_bars_rim_texture = modLoc("block/brown_mushroom_block");
+          paneBlockWithRenderType(brown_mushroom_bars, "brown_mushroom_bars", brown_mushroom_bars_texture, brown_mushroom_bars_rim_texture, "cutout_mipped_all");    
 }}
     
