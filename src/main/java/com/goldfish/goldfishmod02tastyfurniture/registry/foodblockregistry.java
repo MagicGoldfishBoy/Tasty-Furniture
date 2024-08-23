@@ -1021,6 +1021,9 @@ public class foodblockregistry {
      .strength(2.0F, 3.0F)
      .sound(SoundType.CROP).noOcclusion()));
    //.........potato
+     public static final DeferredHolder<Block, IronBarsBlock> POTATO_BARS = FOODBLOCK.register("potato_bars", () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+     .strength(2.0F, 3.0F)
+     .sound(SoundType.CROP).noOcclusion()));
    //.........beetroot
    //.........carrot
    //.........chorus

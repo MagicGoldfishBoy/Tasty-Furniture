@@ -9,6 +9,7 @@ import javax.annotation.Nullable;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockitemregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.ingotregistry;
+import com.goldfish.goldfishmod02tastyfurniture.registry.nuggetregistry;
 
 import net.minecraft.advancements.Criterion;
 import net.minecraft.core.HolderLookup;
@@ -404,7 +405,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotregistry.APPLE_INGOT.get())
          .unlockedBy("has_apple_ingot", has(ingotregistry.APPLE_INGOT.get()))
          .save(output);
-        //potato
+         //potato
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.POTATO_TRAPDOOR_ITEM.get())
          .pattern("   ")
          .pattern("AAA")
@@ -412,7 +413,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotregistry.POTATO_INGOT.get())
          .unlockedBy("has_potato_ingot", has(ingotregistry.POTATO_INGOT.get()))
          .save(output);
-        //beetroot
+         //beetroot
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEETROOT_TRAPDOOR_ITEM.get())
          .pattern("   ")
          .pattern("AAA")
@@ -420,7 +421,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotregistry.BEETROOT_INGOT.get())
          .unlockedBy("has_beetroot_ingot", has(ingotregistry.BEETROOT_INGOT.get()))
          .save(output);
-        //carrot
+         //carrot
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CARROT_TRAPDOOR_ITEM.get())
          .pattern("   ")
          .pattern("AAA")
@@ -428,7 +429,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotregistry.CARROT_INGOT.get())
          .unlockedBy("has_carrot_ingot", has(ingotregistry.CARROT_INGOT.get()))
          .save(output);
-        //chorus
+         //chorus
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHORUS_TRAPDOOR_ITEM.get())
          .pattern("   ")
          .pattern("AAA")
@@ -436,7 +437,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotregistry.CHORUS_INGOT.get())
          .unlockedBy("has_chorus_ingot", has(ingotregistry.CHORUS_INGOT.get()))
          .save(output);
-        //glow_berry
+         //glow_berry
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.GLOW_BERRY_TRAPDOOR_ITEM.get())
          .pattern("   ")
          .pattern("AAA")
@@ -444,7 +445,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotregistry.GLOW_BERRY_INGOT.get())
          .unlockedBy("has_glow_berry_ingot", has(ingotregistry.GLOW_BERRY_INGOT.get()))
          .save(output);
-        //melon
+         //melon
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MELON_TRAPDOOR_ITEM.get())
          .pattern("   ")
          .pattern("AAA")
@@ -452,7 +453,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotregistry.MELON_INGOT.get())
          .unlockedBy("has_melon_ingot", has(ingotregistry.MELON_INGOT.get()))
          .save(output);
-        //sweet_berry
+         //sweet_berry
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SWEET_BERRY_TRAPDOOR_ITEM.get())
          .pattern("   ")
          .pattern("AAA")
@@ -460,7 +461,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotregistry.SWEET_BERRY_INGOT.get())
          .unlockedBy("has_sweet_berry_ingot", has(ingotregistry.SWEET_BERRY_INGOT.get()))
          .save(output);
-        //brown_mushroom
+         //brown_mushroom
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BROWN_MUSHROOM_TRAPDOOR_ITEM.get())
          .pattern("   ")
          .pattern("AAA")
@@ -468,7 +469,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotregistry.BROWN_MUSHROOM_INGOT.get())
          .unlockedBy("has_brown_mushroom_ingot", has(ingotregistry.BROWN_MUSHROOM_INGOT.get()))
          .save(output);
-        //red_mushroom
+         //red_mushroom
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RED_MUSHROOM_TRAPDOOR_ITEM.get())
          .pattern("   ")
          .pattern("AAA")
@@ -476,7 +477,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotregistry.RED_MUSHROOM_INGOT.get())
          .unlockedBy("has_red_mushroom_ingot", has(ingotregistry.RED_MUSHROOM_INGOT.get()))
          .save(output);
-        //pumpkin
+         //pumpkin
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PUMPKIN_TRAPDOOR_ITEM.get())
          .pattern("   ")
          .pattern("AAA")
@@ -484,7 +485,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotregistry.PUMPKIN_INGOT.get())
          .unlockedBy("has_pumpkin_ingot", has(ingotregistry.PUMPKIN_INGOT.get()))
          .save(output);
-        //chicken
+         //chicken
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHICKEN_TRAPDOOR_ITEM.get())
          .pattern("   ")
          .pattern("AAA")
@@ -492,7 +493,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotregistry.CHICKEN_INGOT.get())
          .unlockedBy("has_chicken_ingot", has(ingotregistry.CHICKEN_INGOT.get()))
          .save(output);
-        //cod
+         //cod
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.COD_TRAPDOOR_ITEM.get())
          .pattern("   ")
          .pattern("AAA")
@@ -500,7 +501,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotregistry.COD_INGOT.get())
          .unlockedBy("has_cod_ingot", has(ingotregistry.COD_INGOT.get()))
          .save(output);
-        //salmon
+         //salmon
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SALMON_TRAPDOOR_ITEM.get())
          .pattern("   ")
          .pattern("AAA")
@@ -508,7 +509,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotregistry.SALMON_INGOT.get())
          .unlockedBy("has_salmon_ingot", has(ingotregistry.SALMON_INGOT.get()))
          .save(output);
-        //tropical_fish
+         //tropical_fish
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.TROPICAL_FISH_TRAPDOOR_ITEM.get())
          .pattern("   ")
          .pattern("AAA")
@@ -516,7 +517,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotregistry.TROPICAL_FISH_INGOT.get())
          .unlockedBy("has_tropical_fish_ingot", has(ingotregistry.TROPICAL_FISH_INGOT.get()))
          .save(output);
-        //mutton
+         //mutton
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MUTTON_TRAPDOOR_ITEM.get())
          .pattern("   ")
          .pattern("AAA")
@@ -524,7 +525,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotregistry.MUTTON_INGOT.get())
          .unlockedBy("has_mutton_ingot", has(ingotregistry.MUTTON_INGOT.get()))
          .save(output);
-        //beef
+         //beef
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEEF_TRAPDOOR_ITEM.get())
          .pattern("   ")
          .pattern("AAA")
@@ -532,7 +533,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotregistry.BEEF_INGOT.get())
          .unlockedBy("has_beef_ingot", has(ingotregistry.BEEF_INGOT.get()))
          .save(output);
-        //pork
+         //pork
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PORK_TRAPDOOR_ITEM.get())
          .pattern("   ")
          .pattern("AAA")
@@ -540,13 +541,30 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotregistry.PORK_INGOT.get())
          .unlockedBy("has_pork_ingot", has(ingotregistry.PORK_INGOT.get()))
          .save(output);
-        //rabbit
+         //rabbit
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RABBIT_TRAPDOOR_ITEM.get())
          .pattern("   ")
          .pattern("AAA")
          .pattern("AAA")
          .define('A', ingotregistry.RABBIT_INGOT.get())
          .unlockedBy("has_rabbit_ingot", has(ingotregistry.RABBIT_INGOT.get()))
+         .save(output);
+        //---------------------------------------bars----------------------------------------------------
+         //apple
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_BARS_ITEM.get())
+         .pattern("   ")
+         .pattern("AAA")
+         .pattern("AAA")
+         .define('A', nuggetregistry.APPLE_NUGGET.get())
+         .unlockedBy("has_apple_nugget", has(nuggetregistry.APPLE_NUGGET.get()))
+         .save(output);
+         //potato
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.POTATO_BARS_ITEM.get())
+         .pattern("   ")
+         .pattern("AAA")
+         .pattern("AAA")
+         .define('A', nuggetregistry.POTATO_NUGGET.get())
+         .unlockedBy("has_apple_nugget", has(nuggetregistry.POTATO_NUGGET.get()))
          .save(output);
         
         }
