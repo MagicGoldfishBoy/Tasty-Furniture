@@ -645,5 +645,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
         ResourceLocation potato_bars_texture = modLoc("block/potato_bars");
         ResourceLocation potato_bars_rim_texture = modLoc("block/potato_block");
         paneBlockWithRenderType(potato_bars, "potato_bars", potato_bars_texture, potato_bars_rim_texture, "cutout_mipped_all");    
+        //............beetroot
+        IronBarsBlock beetroot_bars = foodblockregistry.BEETROOT_BARS.get(); 
+        ResourceLocation beetroot_bars_texture = modLoc("block/beetroot_bars");
+        ResourceLocation beetroot_bars_rim_texture = modLoc("block/beetroot_block");
+        paneBlockWithRenderType(beetroot_bars, "beetroot_bars", beetroot_bars_texture, beetroot_bars_rim_texture, "cutout_mipped_all");    
 }}
     
