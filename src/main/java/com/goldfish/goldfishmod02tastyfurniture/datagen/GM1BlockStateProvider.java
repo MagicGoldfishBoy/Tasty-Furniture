@@ -715,5 +715,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation mutton_bars_texture = modLoc("block/mutton_bars");
           ResourceLocation mutton_bars_rim_texture = modLoc("block/mutton_block");
           paneBlockWithRenderType(mutton_bars, "mutton_bars", mutton_bars_texture, mutton_bars_rim_texture, "cutout_mipped_all");    
+        //............beef
+          IronBarsBlock beef_bars = foodblockregistry.BEEF_BARS.get(); 
+          ResourceLocation beef_bars_texture = modLoc("block/beef_bars");
+          ResourceLocation beef_bars_rim_texture = modLoc("block/beef_block");
+          paneBlockWithRenderType(beef_bars, "beef_bars", beef_bars_texture, beef_bars_rim_texture, "cutout_mipped_all");    
 }}
     
