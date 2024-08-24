@@ -1069,6 +1069,9 @@ public class foodblockregistry {
      .strength(2.0F, 3.0F)
      .sound(SoundType.MUD_BRICKS).noOcclusion()));
    //.........salmon
+     public static final DeferredHolder<Block, IronBarsBlock> SALMON_BARS = FOODBLOCK.register("salmon_bars", () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+     .strength(2.0F, 3.0F)
+     .sound(SoundType.MUD_BRICKS).noOcclusion()));
    //.........tropical_fish
    //.........mutton
    //.........beef
