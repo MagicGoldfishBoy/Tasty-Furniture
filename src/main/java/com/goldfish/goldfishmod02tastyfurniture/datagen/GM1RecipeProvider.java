@@ -66,16 +66,102 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
 
         @Override
         protected void buildRecipes(RecipeOutput output) {
+        //-------------------------------unpack blocks------------------------------------------------
          //apple_block
-         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.APPLE_INGOT.get(), 9)
-         .requires(foodblockitemregistry.APPLE_BLOCK_ITEM.get())
-         .unlockedBy("has_apple_block", has(foodblockitemregistry.APPLE_BLOCK_ITEM.get()))
-         .save(output);
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.APPLE_INGOT.get(), 9)
+            .requires(foodblockitemregistry.APPLE_BLOCK_ITEM.get())
+            .unlockedBy("has_apple_block", has(foodblockitemregistry.APPLE_BLOCK_ITEM.get()))
+            .save(output);
          //potato_block
-         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.POTATO_INGOT.get(), 9)
-         .requires(foodblockitemregistry.POTATO_BLOCK_ITEM.get())
-         .unlockedBy("has_potato_block", has(foodblockitemregistry.POTATO_BLOCK_ITEM.get()))
-         .save(output);
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.POTATO_INGOT.get(), 9)
+            .requires(foodblockitemregistry.POTATO_BLOCK_ITEM.get())
+            .unlockedBy("has_potato_block", has(foodblockitemregistry.POTATO_BLOCK_ITEM.get()))
+            .save(output);
+         //beetroot_block
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.BEETROOT_INGOT.get(), 9)
+            .requires(foodblockitemregistry.BEETROOT_BLOCK_ITEM.get())
+            .unlockedBy("has_beetroot_block", has(foodblockitemregistry.BEETROOT_BLOCK_ITEM.get()))
+            .save(output);
+         //carrot_block
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.CARROT_INGOT.get(), 9)
+            .requires(foodblockitemregistry.CARROT_BLOCK_ITEM.get())
+            .unlockedBy("has_carrot_block", has(foodblockitemregistry.CARROT_BLOCK_ITEM.get()))
+            .save(output);
+         //chorus_block
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.CHORUS_INGOT.get(), 9)
+            .requires(foodblockitemregistry.CHORUS_BLOCK_ITEM.get())
+            .unlockedBy("has_chorus_block", has(foodblockitemregistry.CHORUS_BLOCK_ITEM.get()))
+            .save(output);
+         //glow_berry_block
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.GLOW_BERRY_INGOT.get(), 9)
+            .requires(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
+            .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
+            .save(output);
+         //melon_block
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.MELON_INGOT.get(), 9)
+            .requires(foodblockitemregistry.MELON_BLOCK_ITEM.get())
+            .unlockedBy("has_melon_block", has(foodblockitemregistry.MELON_BLOCK_ITEM.get()))
+            .save(output);
+         //sweet_berry_block
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.SWEET_BERRY_INGOT.get(), 9)
+            .requires(foodblockitemregistry.SWEET_BERRY_BLOCK_ITEM.get())
+            .unlockedBy("has_sweet_berry_block", has(foodblockitemregistry.SWEET_BERRY_BLOCK_ITEM.get()))
+            .save(output);
+         //brown_mushroom_block
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.BROWN_MUSHROOM_INGOT.get(), 9)
+            .requires(foodblockitemregistry.BROWN_MUSHROOM_BLOCK_ITEM.get())
+            .unlockedBy("has_brown_mushroom_block", has(foodblockitemregistry.BROWN_MUSHROOM_BLOCK_ITEM.get()))
+            .save(output);
+         //red_mushroom_block
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.RED_MUSHROOM_INGOT.get(), 9)
+            .requires(foodblockitemregistry.RED_MUSHROOM_BLOCK_ITEM.get())
+            .unlockedBy("has_red_mushroom_block", has(foodblockitemregistry.RED_MUSHROOM_BLOCK_ITEM.get()))
+            .save(output);
+         //pumpkin_block
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.PUMPKIN_INGOT.get(), 9)
+            .requires(foodblockitemregistry.PUMPKIN_BLOCK_ITEM.get())
+            .unlockedBy("has_pumpkin_block", has(foodblockitemregistry.PUMPKIN_BLOCK_ITEM.get()))
+            .save(output);
+         //chicken_block
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.CHICKEN_INGOT.get(), 9)
+            .requires(foodblockitemregistry.CHICKEN_BLOCK_ITEM.get())
+            .unlockedBy("has_chicken_block", has(foodblockitemregistry.CHICKEN_BLOCK_ITEM.get()))
+            .save(output);
+         //cod_block
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.COD_INGOT.get(), 9)
+            .requires(foodblockitemregistry.COD_BLOCK_ITEM.get())
+            .unlockedBy("has_cod_block", has(foodblockitemregistry.COD_BLOCK_ITEM.get()))
+            .save(output);
+         //salmon_block
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.SALMON_INGOT.get(), 9)
+            .requires(foodblockitemregistry.SALMON_BLOCK_ITEM.get())
+            .unlockedBy("has_salmon_block", has(foodblockitemregistry.SALMON_BLOCK_ITEM.get()))
+            .save(output);
+         //tropical_fish_block
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.TROPICAL_FISH_INGOT.get(), 9)
+            .requires(foodblockitemregistry.TROPICAL_FISH_BLOCK_ITEM.get())
+            .unlockedBy("has_tropical_fish_block", has(foodblockitemregistry.TROPICAL_FISH_BLOCK_ITEM.get()))
+            .save(output);
+         //mutton_block
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.MUTTON_INGOT.get(), 9)
+            .requires(foodblockitemregistry.MUTTON_BLOCK_ITEM.get())
+            .unlockedBy("has_mutton_block", has(foodblockitemregistry.MUTTON_BLOCK_ITEM.get()))
+            .save(output);
+         //beef_block
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.BEEF_INGOT.get(), 9)
+            .requires(foodblockitemregistry.BEEF_BLOCK_ITEM.get())
+            .unlockedBy("has_beef_block", has(foodblockitemregistry.BEEF_BLOCK_ITEM.get()))
+            .save(output);
+         //pork_block
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.PORK_INGOT.get(), 9)
+            .requires(foodblockitemregistry.PORK_BLOCK_ITEM.get())
+            .unlockedBy("has_pork_block", has(foodblockitemregistry.PORK_BLOCK_ITEM.get()))
+            .save(output);
+         //rabbit_block
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.RABBIT_INGOT.get(), 9)
+            .requires(foodblockitemregistry.RABBIT_BLOCK_ITEM.get())
+            .unlockedBy("has_rabbit_block", has(foodblockitemregistry.RABBIT_BLOCK_ITEM.get()))
+            .save(output);
 
         //-----------------------------------signs----------------------------------------------------
          //apple_sign

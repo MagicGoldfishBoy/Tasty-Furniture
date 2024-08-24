@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "goldfishmod02tastyfurniture:pumpkin_block_item"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "goldfishmod02tastyfurniture:pumpkin_ingot"
+  }
+}
