@@ -1057,7 +1057,13 @@ public class foodblockregistry {
      .strength(2.0F, 3.0F)
      .sound(SoundType.CROP).noOcclusion()));
    //.........pumpkin
+     public static final DeferredHolder<Block, IronBarsBlock> PUMPKIN_BARS = FOODBLOCK.register("pumpkin_bars", () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+     .strength(2.0F, 3.0F)
+     .sound(SoundType.CROP).noOcclusion()));
    //.........chicken
+     public static final DeferredHolder<Block, IronBarsBlock> CHICKEN_BARS = FOODBLOCK.register("chicken_bars", () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+     .strength(2.0F, 3.0F)
+     .sound(SoundType.CROP).noOcclusion()));
    //.........cod
    //.........salmon
    //.........tropical_fish

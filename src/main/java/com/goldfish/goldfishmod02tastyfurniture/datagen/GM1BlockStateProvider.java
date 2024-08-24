@@ -685,5 +685,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation red_mushroom_bars_texture = modLoc("block/red_mushroom_bars");
           ResourceLocation red_mushroom_bars_rim_texture = modLoc("block/red_mushroom_block");
           paneBlockWithRenderType(red_mushroom_bars, "red_mushroom_bars", red_mushroom_bars_texture, red_mushroom_bars_rim_texture, "cutout_mipped_all");    
+        //............pumpkin
+          IronBarsBlock pumpkin_bars = foodblockregistry.PUMPKIN_BARS.get(); 
+          ResourceLocation pumpkin_bars_texture = modLoc("block/pumpkin_bars");
+          ResourceLocation pumpkin_bars_rim_texture = modLoc("block/pumpkin_block");
+          paneBlockWithRenderType(pumpkin_bars, "pumpkin_bars", pumpkin_bars_texture, pumpkin_bars_rim_texture, "cutout_mipped_all");    
+        //............chicken
+          IronBarsBlock chicken_bars = foodblockregistry.CHICKEN_BARS.get(); 
+          ResourceLocation chicken_bars_texture = modLoc("block/chicken_bars");
+          ResourceLocation chicken_bars_rim_texture = modLoc("block/chicken_block");
+          paneBlockWithRenderType(chicken_bars, "chicken_bars", chicken_bars_texture, chicken_bars_rim_texture, "cutout_mipped_all");    
 }}
     
