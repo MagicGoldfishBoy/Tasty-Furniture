@@ -686,6 +686,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', nuggetregistry.BEEF_NUGGET.get())
          .unlockedBy("has_beef_nugget", has(nuggetregistry.BEEF_NUGGET.get()))
          .save(output);
+         //pork
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PORK_BARS_ITEM.get())
+         .pattern("   ")
+         .pattern("AAA")
+         .pattern("AAA")
+         .define('A', nuggetregistry.PORK_NUGGET.get())
+         .unlockedBy("has_pork_nugget", has(nuggetregistry.PORK_NUGGET.get()))
+         .save(output);
         
         }
     }

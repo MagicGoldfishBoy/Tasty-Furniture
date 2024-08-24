@@ -1,4 +1,4 @@
-// 1.21	2024-08-24T10:31:40.893529984	Loot Tables
+// 1.21	2024-08-24T10:39:40.535285667	Loot Tables
 f506816aefac13fd3bcb8b3075eefc63b1b6be41 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bars.json
 98b73d11c0b3a3ecadbdd7c289263f01706818e9 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_block.json
 b89fa5158b4d0c61914f2a5581b7d41b3a0ecfae data/goldfishmod02tastyfurniture/loot_table/blocks/apple_button.json
@@ -101,6 +101,7 @@ b771db1b85b2cd84a0102b965099a006220e4112 data/goldfishmod02tastyfurniture/loot_t
 2919944f3c964256d76e770df975a8676fcc2e52 data/goldfishmod02tastyfurniture/loot_table/blocks/mutton_slab.json
 97fc5991c1c97f298d7a5bbf9f68bfa4d51e01dc data/goldfishmod02tastyfurniture/loot_table/blocks/mutton_stairs.json
 a1fad9f5f8808a0634eef4eacd7f7ebb7ae72146 data/goldfishmod02tastyfurniture/loot_table/blocks/mutton_trapdoor.json
+35e2a215c94d9c4bf78bad150e0b1aed693feee5 data/goldfishmod02tastyfurniture/loot_table/blocks/pork_bars.json
 93c4ef78d9f31a73bd7caf18014b43f07479a91e data/goldfishmod02tastyfurniture/loot_table/blocks/pork_block.json
 a86ab0a8ee1920357fa917fe8b4683ddfd166954 data/goldfishmod02tastyfurniture/loot_table/blocks/pork_button.json
 9b3f1897d49fb2ed608f9be5af179a71409ddc66 data/goldfishmod02tastyfurniture/loot_table/blocks/pork_door.json
