@@ -312,5 +312,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("sweet_berry_bars_item", mcLoc("item/generated")).texture("layer0", "block/sweet_berry_bars");
       //..............brown_mushroom
         withExistingParent("brown_mushroom_bars_item", mcLoc("item/generated")).texture("layer0", "block/brown_mushroom_bars");
+      //..............red_mushroom
+        withExistingParent("red_mushroom_bars_item", mcLoc("item/generated")).texture("layer0", "block/red_mushroom_bars");
  }   
 }

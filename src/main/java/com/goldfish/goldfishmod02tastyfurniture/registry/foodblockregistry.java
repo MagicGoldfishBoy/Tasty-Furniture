@@ -1053,6 +1053,9 @@ public class foodblockregistry {
      .strength(2.0F, 3.0F)
      .sound(SoundType.CROP).noOcclusion()));
    //.........red_mushroom
+     public static final DeferredHolder<Block, IronBarsBlock> RED_MUSHROOM_BARS = FOODBLOCK.register("red_mushroom_bars", () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+     .strength(2.0F, 3.0F)
+     .sound(SoundType.CROP).noOcclusion()));
    //.........pumpkin
    //.........chicken
    //.........cod

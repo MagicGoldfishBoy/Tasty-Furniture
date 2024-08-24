@@ -622,6 +622,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', nuggetregistry.BROWN_MUSHROOM_NUGGET.get())
          .unlockedBy("has_brown_mushroom_nugget", has(nuggetregistry.BROWN_MUSHROOM_NUGGET.get()))
          .save(output);
+         //red_mushroom
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RED_MUSHROOM_BARS_ITEM.get())
+         .pattern("   ")
+         .pattern("AAA")
+         .pattern("AAA")
+         .define('A', nuggetregistry.RED_MUSHROOM_NUGGET.get())
+         .unlockedBy("has_red_mushroom_nugget", has(nuggetregistry.RED_MUSHROOM_NUGGET.get()))
+         .save(output);
         
         }
     }

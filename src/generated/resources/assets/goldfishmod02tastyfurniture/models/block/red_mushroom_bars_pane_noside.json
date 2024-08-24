@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glass_pane_noside",
+  "render_type": "minecraft:cutout_mipped_all",
+  "textures": {
+    "pane": "goldfishmod02tastyfurniture:block/red_mushroom_bars"
+  }
+}
