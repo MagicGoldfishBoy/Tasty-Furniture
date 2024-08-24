@@ -1,4 +1,4 @@
-// 1.21	2024-08-24T09:48:02.29696535	Item Models: goldfishmod02tastyfurniture
+// 1.21	2024-08-24T10:10:01.783909702	Item Models: goldfishmod02tastyfurniture
 5415a5c9e52089186849ab0906ab852e882667f5 assets/goldfishmod02tastyfurniture/models/item/apple_bars_item.json
 ed0c1d66825c8212a7e00d0258b74b6a3393e9a6 assets/goldfishmod02tastyfurniture/models/item/apple_button_item.json
 1f34d168302521d9046cd4b7cc2f5cceeea72d1d assets/goldfishmod02tastyfurniture/models/item/apple_fence_item.json
@@ -75,6 +75,7 @@ f7dc2c440402efd73fa87fa2253a9f6b601efe16 assets/goldfishmod02tastyfurniture/mode
 16455e7cac3c1ac3ed7c327f814a3a6390d4d717 assets/goldfishmod02tastyfurniture/models/item/melon_slab_item.json
 453ebdd19532bf31c16dd1c4aff7f4cf436a5fe5 assets/goldfishmod02tastyfurniture/models/item/melon_stairs_item.json
 2fcbecaa4218f923d28e87d38788dfc1ef20bc3d assets/goldfishmod02tastyfurniture/models/item/melon_trapdoor_item.json
+4563920541aa4c236b6094f5b20e744549eeb68d assets/goldfishmod02tastyfurniture/models/item/mutton_bars_item.json
 d6e86fbb21ac1ead3b374bef4b36b64456c58aa0 assets/goldfishmod02tastyfurniture/models/item/mutton_button_item.json
 340c766499c0ddff1307beb667b9c679df0c5bbb assets/goldfishmod02tastyfurniture/models/item/mutton_door_item.json
 ce99cd477709a531d46c5d8dc6e85fe7c99ef5ab assets/goldfishmod02tastyfurniture/models/item/mutton_fence_item.json

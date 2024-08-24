@@ -396,7 +396,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .unlockedBy("has_rabbit_ingot", has(ingotregistry.RABBIT_INGOT.get()))
           .save(output);
 
-        //-----------------------------------trap doors----------------------------------------------------
+        //---------------------------------trap doors--------------------------------------------------
          //apple
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_TRAPDOOR_ITEM.get())
          .pattern("   ")
@@ -549,7 +549,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotregistry.RABBIT_INGOT.get())
          .unlockedBy("has_rabbit_ingot", has(ingotregistry.RABBIT_INGOT.get()))
          .save(output);
-        //---------------------------------------bars----------------------------------------------------
+        //------------------------------------bars-----------------------------------------------------
          //apple
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_BARS_ITEM.get())
          .pattern("   ")
@@ -669,6 +669,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .pattern("AAA")
          .define('A', nuggetregistry.TROPICAL_FISH_NUGGET.get())
          .unlockedBy("has_tropical_fish_nugget", has(nuggetregistry.TROPICAL_FISH_NUGGET.get()))
+         .save(output);
+         //mutton
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MUTTON_BARS_ITEM.get())
+         .pattern("   ")
+         .pattern("AAA")
+         .pattern("AAA")
+         .define('A', nuggetregistry.MUTTON_NUGGET.get())
+         .unlockedBy("has_mutton_nugget", has(nuggetregistry.MUTTON_NUGGET.get()))
          .save(output);
         
         }
