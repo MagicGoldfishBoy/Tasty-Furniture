@@ -744,5 +744,9 @@ public class GM1BlockStateProvider extends BlockStateProvider
           net.minecraft.world.level.block.Block beetroot_lamp = foodblockregistry.BEETROOT_LAMP.get();
           ResourceLocation beetroot_lamp_texture = modLoc("block/beetroot_lamp");
           simpleBlock(beetroot_lamp);
+        //............carrot
+          net.minecraft.world.level.block.Block carrot_lamp = foodblockregistry.CARROT_LAMP.get();
+          ResourceLocation carrot_lamp_texture = modLoc("block/carrot_lamp");
+          simpleBlock(carrot_lamp);
 }}
     
