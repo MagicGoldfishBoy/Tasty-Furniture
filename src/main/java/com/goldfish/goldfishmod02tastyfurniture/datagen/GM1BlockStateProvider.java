@@ -752,5 +752,9 @@ public class GM1BlockStateProvider extends BlockStateProvider
           net.minecraft.world.level.block.Block chorus_lamp = foodblockregistry.CHORUS_LAMP.get();
           ResourceLocation chorus_lamp_texture = modLoc("block/chorus_lamp");
           simpleBlock(chorus_lamp);
+        //............glow_berry
+          net.minecraft.world.level.block.Block glow_berry_lamp = foodblockregistry.GLOW_BERRY_LAMP.get();
+          ResourceLocation glow_berry_lamp_texture = modLoc("block/glow_berry_lamp");
+          simpleBlock(glow_berry_lamp);
 }}
     

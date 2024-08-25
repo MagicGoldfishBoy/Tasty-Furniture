@@ -1132,6 +1132,12 @@ public class foodblockregistry {
      .lightLevel(state -> 15)
      ));
    //.........glow_berry
+     public static final DeferredHolder<Block, Block> GLOW_BERRY_LAMP = FOODBLOCK.register("glow_berry_lamp", () -> new Block(BlockBehaviour.Properties.of()
+     .destroyTime(1.5f)
+     .explosionResistance(10.0f)
+     .sound(SoundType.FROGLIGHT)
+     .lightLevel(state -> 15)
+     ));
    //.........melon
    //.........sweet_berry
    //.........brown_mushroom
