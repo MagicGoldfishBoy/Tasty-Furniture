@@ -764,5 +764,9 @@ public class GM1BlockStateProvider extends BlockStateProvider
           net.minecraft.world.level.block.Block sweet_berry_lamp = foodblockregistry.SWEET_BERRY_LAMP.get();
           ResourceLocation sweet_berry_lamp_texture = modLoc("block/sweet_berry_lamp");
           simpleBlock(sweet_berry_lamp);
+        //............brown_mushroom
+          net.minecraft.world.level.block.Block brown_mushroom_lamp = foodblockregistry.BROWN_MUSHROOM_LAMP.get();
+          ResourceLocation brown_mushroom_lamp_texture = modLoc("block/brown_mushroom_lamp");
+          simpleBlock(brown_mushroom_lamp);
 }}
     
