@@ -962,6 +962,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
          .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
          .save(output);
+         //beetroot
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEETROOT_LAMP_ITEM.get())
+         .pattern("AAA")
+         .pattern("ABA")
+         .pattern("AAA")
+         .define('A', ingotregistry.BEETROOT_INGOT.get())
+         .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
+         .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
+         .save(output);
         
         }
     }
