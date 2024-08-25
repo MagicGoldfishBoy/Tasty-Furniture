@@ -730,5 +730,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation rabbit_bars_texture = modLoc("block/rabbit_bars");
           ResourceLocation rabbit_bars_rim_texture = modLoc("block/rabbit_block");
           paneBlockWithRenderType(rabbit_bars, "rabbit_bars", rabbit_bars_texture, rabbit_bars_rim_texture, "cutout_mipped_all");    
+
+      //-----------------------------------------------------------------lamps-----------------------------------------------------------------------------
+        //............apple
+          net.minecraft.world.level.block.Block apple_lamp = foodblockregistry.APPLE_LAMP.get();
+          ResourceLocation apple_lamp_texture = modLoc("block/apple_lamp");
+          simpleBlock(apple_lamp);
 }}
     

@@ -1097,6 +1097,12 @@ public class foodblockregistry {
 //==============================================================================================================================================================================================
 
    //.........apple
+     public static final DeferredHolder<Block, Block> APPLE_LAMP = FOODBLOCK.register("apple_lamp", () -> new Block(BlockBehaviour.Properties.of()
+     .destroyTime(1.5f)
+     .explosionResistance(10.0f)
+     .sound(SoundType.FROGLIGHT)
+     .lightLevel(state -> 15)
+     ));
    //.........potato
    //.........beetroot
    //.........carrot

@@ -942,6 +942,17 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', nuggetregistry.RABBIT_NUGGET.get())
          .unlockedBy("has_rabbit_nugget", has(nuggetregistry.RABBIT_NUGGET.get()))
          .save(output);
+
+        //-----------------------------------lamps-----------------------------------------------------
+         //apple
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_LAMP_ITEM.get())
+         .pattern("AAA")
+         .pattern("ABA")
+         .pattern("AAA")
+         .define('A', ingotregistry.APPLE_INGOT.get())
+         .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
+         .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
+         .save(output);
         
         }
     }
