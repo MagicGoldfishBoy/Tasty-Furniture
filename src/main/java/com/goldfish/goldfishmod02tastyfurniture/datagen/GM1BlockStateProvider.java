@@ -736,5 +736,9 @@ public class GM1BlockStateProvider extends BlockStateProvider
           net.minecraft.world.level.block.Block apple_lamp = foodblockregistry.APPLE_LAMP.get();
           ResourceLocation apple_lamp_texture = modLoc("block/apple_lamp");
           simpleBlock(apple_lamp);
+        //............potato
+          net.minecraft.world.level.block.Block potato_lamp = foodblockregistry.POTATO_LAMP.get();
+          ResourceLocation potato_lamp_texture = modLoc("block/potato_lamp");
+          simpleBlock(potato_lamp);
 }}
     
