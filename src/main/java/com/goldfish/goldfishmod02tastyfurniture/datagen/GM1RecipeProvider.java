@@ -163,6 +163,160 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_rabbit_block", has(foodblockitemregistry.RABBIT_BLOCK_ITEM.get()))
             .save(output);
 
+        //--------------------------------pack ingots-------------------------------------------------
+         //apple
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.APPLE_INGOT.get())
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', nuggetregistry.APPLE_NUGGET.get())
+          .unlockedBy("has_apple_nugget", has(nuggetregistry.APPLE_NUGGET.get()))
+          .save(output, "apple_ingot_from_crafting");
+         //potato
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.POTATO_INGOT.get())
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', nuggetregistry.POTATO_NUGGET.get())
+          .unlockedBy("has_potato_nugget", has(nuggetregistry.POTATO_NUGGET.get()))
+          .save(output, "potato_ingot_from_crafting");
+         //beetroot
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.BEETROOT_INGOT.get())
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', nuggetregistry.BEETROOT_NUGGET.get())
+          .unlockedBy("has_beetroot_nugget", has(nuggetregistry.BEETROOT_NUGGET.get()))
+          .save(output, "beetroot_ingot_from_crafting");
+         //carrot
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.CARROT_INGOT.get())
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', nuggetregistry.CARROT_NUGGET.get())
+          .unlockedBy("has_carrot_nugget", has(nuggetregistry.CARROT_NUGGET.get()))
+          .save(output, "carrot_ingot_from_crafting");
+         //chorus
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.CHORUS_INGOT.get())
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', nuggetregistry.CHORUS_NUGGET.get())
+          .unlockedBy("has_chorus_nugget", has(nuggetregistry.CHORUS_NUGGET.get()))
+          .save(output, "chorus_ingot_from_crafting");
+         //glow_berry
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.GLOW_BERRY_INGOT.get())
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', nuggetregistry.GLOW_BERRY_NUGGET.get())
+          .unlockedBy("has_glow_berry_nugget", has(nuggetregistry.GLOW_BERRY_NUGGET.get()))
+          .save(output, "glow_berry_ingot_from_crafting");
+         //melon
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.MELON_INGOT.get())
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', nuggetregistry.MELON_NUGGET.get())
+          .unlockedBy("has_melon_nugget", has(nuggetregistry.MELON_NUGGET.get()))
+          .save(output, "melon_ingot_from_crafting");
+         //sweet_berry
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.SWEET_BERRY_INGOT.get())
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', nuggetregistry.SWEET_BERRY_NUGGET.get())
+          .unlockedBy("has_sweet_berry_nugget", has(nuggetregistry.SWEET_BERRY_NUGGET.get()))
+          .save(output, "sweet_berry_ingot_from_crafting");
+         //brown_mushroom
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.BROWN_MUSHROOM_INGOT.get())
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', nuggetregistry.BROWN_MUSHROOM_NUGGET.get())
+          .unlockedBy("has_brown_mushroom_nugget", has(nuggetregistry.BROWN_MUSHROOM_NUGGET.get()))
+          .save(output, "brown_mushroom_ingot_from_crafting");
+         //red_mushroom
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.RED_MUSHROOM_INGOT.get())
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', nuggetregistry.RED_MUSHROOM_NUGGET.get())
+          .unlockedBy("has_red_mushroom_nugget", has(nuggetregistry.RED_MUSHROOM_NUGGET.get()))
+          .save(output, "red_mushroom_ingot_from_crafting");
+         //pumpkin
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.PUMPKIN_INGOT.get())
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', nuggetregistry.PUMPKIN_NUGGET.get())
+          .unlockedBy("has_pumpkin_nugget", has(nuggetregistry.PUMPKIN_NUGGET.get()))
+          .save(output, "pumpkin_ingot_from_crafting");
+         //chicken
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.CHICKEN_INGOT.get())
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', nuggetregistry.CHICKEN_NUGGET.get())
+          .unlockedBy("has_chicken_nugget", has(nuggetregistry.CHICKEN_NUGGET.get()))
+          .save(output, "chicken_ingot_from_crafting");
+         //cod
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.COD_INGOT.get())
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', nuggetregistry.COD_NUGGET.get())
+          .unlockedBy("has_cod_nugget", has(nuggetregistry.COD_NUGGET.get()))
+          .save(output, "cod_ingot_from_crafting");
+         //salmon
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.SALMON_INGOT.get())
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', nuggetregistry.SALMON_NUGGET.get())
+          .unlockedBy("has_salmon_nugget", has(nuggetregistry.SALMON_NUGGET.get()))
+          .save(output, "salmon_ingot_from_crafting");
+         //tropical_fish
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.TROPICAL_FISH_INGOT.get())
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', nuggetregistry.TROPICAL_FISH_NUGGET.get())
+          .unlockedBy("has_tropical_fish_nugget", has(nuggetregistry.TROPICAL_FISH_NUGGET.get()))
+          .save(output, "tropical_fish_ingot_from_crafting");
+         //mutton
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.MUTTON_INGOT.get())
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', nuggetregistry.MUTTON_NUGGET.get())
+          .unlockedBy("has_mutton_nugget", has(nuggetregistry.MUTTON_NUGGET.get()))
+          .save(output, "mutton_ingot_from_crafting");
+         //beef
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.BEEF_INGOT.get())
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', nuggetregistry.BEEF_NUGGET.get())
+          .unlockedBy("has_beef_nugget", has(nuggetregistry.BEEF_NUGGET.get()))
+          .save(output, "beef_ingot_from_crafting");
+         //pork
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.PORK_INGOT.get())
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', nuggetregistry.PORK_NUGGET.get())
+          .unlockedBy("has_pork_nugget", has(nuggetregistry.PORK_NUGGET.get()))
+          .save(output, "pork_ingot_from_crafting");
+         //rabbit
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.RABBIT_INGOT.get())
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', nuggetregistry.RABBIT_NUGGET.get())
+          .unlockedBy("has_rabbit_nugget", has(nuggetregistry.RABBIT_NUGGET.get()))
+          .save(output, "rabbit_ingot_from_crafting");
+
         //-----------------------------------signs----------------------------------------------------
          //apple_sign
            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_SIGN_ITEM.get())
