@@ -2,7 +2,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "item": "goldfishmod02tastyfurniture:beef_block_item"
+        "item": "goldfishmod02tastyfurniture:beef_nugget"
       }
     ],
     "result": {
