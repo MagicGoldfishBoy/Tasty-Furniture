@@ -1,4 +1,4 @@
-// 1.21	2024-08-25T10:14:06.473314589	Item Models: goldfishmod02tastyfurniture
+// 1.21	2024-08-25T10:25:01.972385271	Item Models: goldfishmod02tastyfurniture
 5415a5c9e52089186849ab0906ab852e882667f5 assets/goldfishmod02tastyfurniture/models/item/apple_bars_item.json
 ed0c1d66825c8212a7e00d0258b74b6a3393e9a6 assets/goldfishmod02tastyfurniture/models/item/apple_button_item.json
 1f34d168302521d9046cd4b7cc2f5cceeea72d1d assets/goldfishmod02tastyfurniture/models/item/apple_fence_item.json
@@ -77,6 +77,7 @@ ffa794447dff742b5fb56246aede0c2b66e3701e assets/goldfishmod02tastyfurniture/mode
 c4a4a917a8e65b0efda2ab2117cc27f241136fc5 assets/goldfishmod02tastyfurniture/models/item/melon_button_item.json
 f7dc2c440402efd73fa87fa2253a9f6b601efe16 assets/goldfishmod02tastyfurniture/models/item/melon_door_item.json
 3b6019789d4e9514d9ea8e93476f36d1057bea79 assets/goldfishmod02tastyfurniture/models/item/melon_fence_item.json
+1fde5005b55fb7c89c335ce490df11f209e0918e assets/goldfishmod02tastyfurniture/models/item/melon_lamp_item.json
 6e74bc827a25e6ddd95053abfc6537e76279bd69 assets/goldfishmod02tastyfurniture/models/item/melon_pressure_plate_item.json
 16455e7cac3c1ac3ed7c327f814a3a6390d4d717 assets/goldfishmod02tastyfurniture/models/item/melon_slab_item.json
 453ebdd19532bf31c16dd1c4aff7f4cf436a5fe5 assets/goldfishmod02tastyfurniture/models/item/melon_stairs_item.json

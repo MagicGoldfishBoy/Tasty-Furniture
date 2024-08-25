@@ -756,5 +756,9 @@ public class GM1BlockStateProvider extends BlockStateProvider
           net.minecraft.world.level.block.Block glow_berry_lamp = foodblockregistry.GLOW_BERRY_LAMP.get();
           ResourceLocation glow_berry_lamp_texture = modLoc("block/glow_berry_lamp");
           simpleBlock(glow_berry_lamp);
+        //............melon
+          net.minecraft.world.level.block.Block melon_lamp = foodblockregistry.MELON_LAMP.get();
+          ResourceLocation melon_lamp_texture = modLoc("block/melon_lamp");
+          simpleBlock(melon_lamp);
 }}
     
