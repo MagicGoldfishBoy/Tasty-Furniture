@@ -804,30 +804,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation tropical_fish_lamp_texture = modLoc("block/tropical_fish_lamp");
           ResourceLocation tropical_fish_lamp_top_texture = modLoc("block/tropical_fish_lamp_top");
           horizontalBlock(tropical_fish_lamp, tropical_fish_lamp_texture, tropical_fish_lamp_texture, tropical_fish_lamp_top_texture);
+        //............mutton
+          net.minecraft.world.level.block.Block mutton_lamp = foodblockregistry.MUTTON_LAMP.get();
+          ResourceLocation mutton_lamp_texture = modLoc("block/mutton_lamp");
+          ResourceLocation mutton_lamp_top_texture = modLoc("block/mutton_lamp_top");
+          horizontalBlock(mutton_lamp, mutton_lamp_texture, mutton_lamp_texture, mutton_lamp_top_texture);
 }}
     
-// import net.minecraft.data.DataGenerator;
-// import net.minecraft.resources.ResourceLocation;
-// import net.minecraftforge.common.data.BlockModelProvider;
-// import net.minecraftforge.common.data.ExistingFileHelper;
-
-// public class MyBlockModelProvider extends BlockModelProvider {
-
-//     public MyBlockModelProvider(DataGenerator generator, String modid, ExistingFileHelper existingFileHelper) {
-//         super(generator, modid, existingFileHelper);
-//     }
-
-//     @Override
-//     protected void registerModels() {
-//         // Replace with your block registry object
-//         cubeBottomTopBlock(ExampleMod.MY_BLOCK.get(), modLoc("block/my_block_side"), modLoc("block/my_block_bottom"), modLoc("block/my_block_top"));
-//     }
-
-//     private void cubeBottomTopBlock(Block block, ResourceLocation side, ResourceLocation bottom, ResourceLocation top) {
-//         getBuilder(block.getRegistryName().getPath())
-//             .parent(getExistingFile(mcLoc("block/cube_bottom_top")))
-//             .texture("side", side)
-//             .texture("bottom", bottom)
-//             .texture("top", top);
-//     }
-// }

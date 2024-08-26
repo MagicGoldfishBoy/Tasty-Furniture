@@ -1079,6 +1079,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
          .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
          .save(output);
+         //mutton
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MUTTON_LAMP_ITEM.get())
+         .pattern("AAA")
+         .pattern("ABA")
+         .pattern("AAA")
+         .define('A', ingotregistry.MUTTON_INGOT.get())
+         .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
+         .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
+         .save(output);
         
         }
     }
