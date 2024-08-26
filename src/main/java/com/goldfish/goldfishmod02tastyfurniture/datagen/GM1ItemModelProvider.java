@@ -398,5 +398,38 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       //..............sweet_berry
         ResourceLocation sweet_berry_carpet_texture = modLoc("block/sweet_berry_carpet");
         carpet("sweet_berry_carpet_item", sweet_berry_carpet_texture);
+      //..............brown_mushroom
+        ResourceLocation brown_mushroom_carpet_texture = modLoc("block/brown_mushroom_carpet");
+        carpet("brown_mushroom_carpet_item", brown_mushroom_carpet_texture);
+      //..............red_mushroom
+        ResourceLocation red_mushroom_carpet_texture = modLoc("block/red_mushroom_carpet");
+        carpet("red_mushroom_carpet_item", red_mushroom_carpet_texture);
+      //..............pumpkin
+        ResourceLocation pumpkin_carpet_texture = modLoc("block/pumpkin_carpet");
+        carpet("pumpkin_carpet_item", pumpkin_carpet_texture);
+      //..............chicken
+        ResourceLocation chicken_carpet_texture = modLoc("block/chicken_carpet");
+        carpet("chicken_carpet_item", chicken_carpet_texture);
+      //..............cod
+        ResourceLocation cod_carpet_texture = modLoc("block/cod_carpet");
+        carpet("cod_carpet_item", cod_carpet_texture);
+      //..............salmon
+        ResourceLocation salmon_carpet_texture = modLoc("block/salmon_carpet");
+        carpet("salmon_carpet_item", salmon_carpet_texture);
+      //..............tropical_fish
+        ResourceLocation tropical_fish_carpet_texture = modLoc("block/tropical_fish_carpet");
+        carpet("tropical_fish_carpet_item", tropical_fish_carpet_texture);
+      //..............mutton
+        ResourceLocation mutton_carpet_texture = modLoc("block/mutton_carpet");
+        carpet("mutton_carpet_item", mutton_carpet_texture);
+      //..............beef
+        ResourceLocation beef_carpet_texture = modLoc("block/beef_carpet");
+        carpet("beef_carpet_item", beef_carpet_texture);
+      //..............pork
+        ResourceLocation pork_carpet_texture = modLoc("block/pork_carpet");
+        carpet("pork_carpet_item", pork_carpet_texture);
+      //..............rabbit
+        ResourceLocation rabbit_carpet_texture = modLoc("block/rabbit_carpet");
+        carpet("rabbit_carpet_item", rabbit_carpet_texture);
  }   
 }

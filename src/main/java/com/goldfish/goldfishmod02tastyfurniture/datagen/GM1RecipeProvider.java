@@ -1181,6 +1181,94 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', nuggetregistry.SWEET_BERRY_NUGGET.get())
          .unlockedBy("has_sweet_berry_nugget", has(nuggetregistry.SWEET_BERRY_NUGGET.get()))
          .save(output);
+         //brown_mushroom
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BROWN_MUSHROOM_CARPET_ITEM.get())
+         .pattern("   ")
+         .pattern("AA ")
+         .pattern("AA ")
+         .define('A', nuggetregistry.BROWN_MUSHROOM_NUGGET.get())
+         .unlockedBy("has_brown_mushroom_nugget", has(nuggetregistry.BROWN_MUSHROOM_NUGGET.get()))
+         .save(output);
+         //red_mushroom
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RED_MUSHROOM_CARPET_ITEM.get())
+         .pattern("   ")
+         .pattern("AA ")
+         .pattern("AA ")
+         .define('A', nuggetregistry.RED_MUSHROOM_NUGGET.get())
+         .unlockedBy("has_red_mushroom_nugget", has(nuggetregistry.RED_MUSHROOM_NUGGET.get()))
+         .save(output);
+         //pumpkin
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PUMPKIN_CARPET_ITEM.get())
+         .pattern("   ")
+         .pattern("AA ")
+         .pattern("AA ")
+         .define('A', nuggetregistry.PUMPKIN_NUGGET.get())
+         .unlockedBy("has_pumpkin_nugget", has(nuggetregistry.PUMPKIN_NUGGET.get()))
+         .save(output);
+         //chicken
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHICKEN_CARPET_ITEM.get())
+         .pattern("   ")
+         .pattern("AA ")
+         .pattern("AA ")
+         .define('A', nuggetregistry.CHICKEN_NUGGET.get())
+         .unlockedBy("has_chicken_nugget", has(nuggetregistry.CHICKEN_NUGGET.get()))
+         .save(output);
+         //cod
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.COD_CARPET_ITEM.get())
+         .pattern("   ")
+         .pattern("AA ")
+         .pattern("AA ")
+         .define('A', nuggetregistry.COD_NUGGET.get())
+         .unlockedBy("has_cod_nugget", has(nuggetregistry.COD_NUGGET.get()))
+         .save(output);
+         //salmon
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SALMON_CARPET_ITEM.get())
+         .pattern("   ")
+         .pattern("AA ")
+         .pattern("AA ")
+         .define('A', nuggetregistry.SALMON_NUGGET.get())
+         .unlockedBy("has_salmon_nugget", has(nuggetregistry.SALMON_NUGGET.get()))
+         .save(output);
+         //tropical_fish
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.TROPICAL_FISH_CARPET_ITEM.get())
+         .pattern("   ")
+         .pattern("AA ")
+         .pattern("AA ")
+         .define('A', nuggetregistry.TROPICAL_FISH_NUGGET.get())
+         .unlockedBy("has_tropical_fish_nugget", has(nuggetregistry.TROPICAL_FISH_NUGGET.get()))
+         .save(output);
+         //mutton
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MUTTON_CARPET_ITEM.get())
+         .pattern("   ")
+         .pattern("AA ")
+         .pattern("AA ")
+         .define('A', nuggetregistry.MUTTON_NUGGET.get())
+         .unlockedBy("has_mutton_nugget", has(nuggetregistry.MUTTON_NUGGET.get()))
+         .save(output);
+         //beef
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEEF_CARPET_ITEM.get())
+         .pattern("   ")
+         .pattern("AA ")
+         .pattern("AA ")
+         .define('A', nuggetregistry.BEEF_NUGGET.get())
+         .unlockedBy("has_beef_nugget", has(nuggetregistry.BEEF_NUGGET.get()))
+         .save(output);
+         //pork
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PORK_CARPET_ITEM.get())
+         .pattern("   ")
+         .pattern("AA ")
+         .pattern("AA ")
+         .define('A', nuggetregistry.PORK_NUGGET.get())
+         .unlockedBy("has_pork_nugget", has(nuggetregistry.PORK_NUGGET.get()))
+         .save(output);
+         //rabbit
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RABBIT_CARPET_ITEM.get())
+         .pattern("   ")
+         .pattern("AA ")
+         .pattern("AA ")
+         .define('A', nuggetregistry.RABBIT_NUGGET.get())
+         .unlockedBy("has_rabbit_nugget", has(nuggetregistry.RABBIT_NUGGET.get()))
+         .save(output);
         
         }
     }

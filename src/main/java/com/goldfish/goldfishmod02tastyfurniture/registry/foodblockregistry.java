@@ -1303,16 +1303,93 @@ public class foodblockregistry {
       .ignitedByLava()
       ));
    //.........brown_mushroom
+    public static final DeferredHolder<Block, CarpetBlock> BROWN_MUSHROOM_CARPET = FOODBLOCK.register("brown_mushroom_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MOSS_CARPET)
+      .friction(0.3f)
+      .ignitedByLava()
+      ));
    //.........red_mushroom
+    public static final DeferredHolder<Block, CarpetBlock> RED_MUSHROOM_CARPET = FOODBLOCK.register("red_mushroom_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MOSS_CARPET)
+      .friction(0.3f)
+      .ignitedByLava()
+      ));
    //.........pumpkin
+    public static final DeferredHolder<Block, CarpetBlock> PUMPKIN_CARPET = FOODBLOCK.register("pumpkin_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MOSS_CARPET)
+      .friction(0.3f)
+      .ignitedByLava()
+      ));
    //.........chicken
+    public static final DeferredHolder<Block, CarpetBlock> CHICKEN_CARPET = FOODBLOCK.register("chicken_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MOSS_CARPET)
+      .friction(0.3f)
+      .ignitedByLava()
+      ));
    //.........cod
+    public static final DeferredHolder<Block, CarpetBlock> COD_CARPET = FOODBLOCK.register("cod_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MOSS_CARPET)
+      .friction(0.3f)
+      .ignitedByLava()
+      ));
    //.........salmon
+    public static final DeferredHolder<Block, CarpetBlock> SALMON_CARPET = FOODBLOCK.register("salmon_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MOSS_CARPET)
+      .friction(0.3f)
+      .ignitedByLava()
+      ));
    //.........tropical_fish
+    public static final DeferredHolder<Block, CarpetBlock> TROPICAL_FISH_CARPET = FOODBLOCK.register("tropical_fish_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MOSS_CARPET)
+      .friction(0.3f)
+      .ignitedByLava()
+      ));
    //.........mutton
+    public static final DeferredHolder<Block, CarpetBlock> MUTTON_CARPET = FOODBLOCK.register("mutton_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MOSS_CARPET)
+      .friction(0.3f)
+      .ignitedByLava()
+      ));
    //.........beef
+    public static final DeferredHolder<Block, CarpetBlock> BEEF_CARPET = FOODBLOCK.register("beef_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MOSS_CARPET)
+      .friction(0.3f)
+      .ignitedByLava()
+      ));
    //.........pork
+    public static final DeferredHolder<Block, CarpetBlock> PORK_CARPET = FOODBLOCK.register("pork_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MOSS_CARPET)
+      .friction(0.3f)
+      .ignitedByLava()
+      ));
    //.........rabbit
+    public static final DeferredHolder<Block, CarpetBlock> RABBIT_CARPET = FOODBLOCK.register("rabbit_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MOSS_CARPET)
+      .friction(0.3f)
+      .ignitedByLava()
+      ));
 //==============================================================================================================================================================================================
 //                                                                                           Lanterns
 //==============================================================================================================================================================================================

@@ -664,5 +664,38 @@ public class foodblockitemregistry {
    //.........sweet_berry
     public static final DeferredHolder<Item, BlockItem> SWEET_BERRY_CARPET_ITEM = FOODBLOCKITEM.register("sweet_berry_carpet_item",
     () -> new BlockItem(foodblockregistry.SWEET_BERRY_CARPET.get(), new BlockItem.Properties())); 
+   //.........brown_mushroom
+    public static final DeferredHolder<Item, BlockItem> BROWN_MUSHROOM_CARPET_ITEM = FOODBLOCKITEM.register("brown_mushroom_carpet_item",
+    () -> new BlockItem(foodblockregistry.BROWN_MUSHROOM_CARPET.get(), new BlockItem.Properties())); 
+   //.........red_mushroom
+    public static final DeferredHolder<Item, BlockItem> RED_MUSHROOM_CARPET_ITEM = FOODBLOCKITEM.register("red_mushroom_carpet_item",
+    () -> new BlockItem(foodblockregistry.RED_MUSHROOM_CARPET.get(), new BlockItem.Properties())); 
+   //.........pumpkin
+    public static final DeferredHolder<Item, BlockItem> PUMPKIN_CARPET_ITEM = FOODBLOCKITEM.register("pumpkin_carpet_item",
+    () -> new BlockItem(foodblockregistry.PUMPKIN_CARPET.get(), new BlockItem.Properties())); 
+   //.........chicken
+    public static final DeferredHolder<Item, BlockItem> CHICKEN_CARPET_ITEM = FOODBLOCKITEM.register("chicken_carpet_item",
+    () -> new BlockItem(foodblockregistry.CHICKEN_CARPET.get(), new BlockItem.Properties())); 
+   //.........cod
+    public static final DeferredHolder<Item, BlockItem> COD_CARPET_ITEM = FOODBLOCKITEM.register("cod_carpet_item",
+    () -> new BlockItem(foodblockregistry.COD_CARPET.get(), new BlockItem.Properties())); 
+   //.........salmon
+    public static final DeferredHolder<Item, BlockItem> SALMON_CARPET_ITEM = FOODBLOCKITEM.register("salmon_carpet_item",
+    () -> new BlockItem(foodblockregistry.SALMON_CARPET.get(), new BlockItem.Properties())); 
+   //.........tropical_fish
+    public static final DeferredHolder<Item, BlockItem> TROPICAL_FISH_CARPET_ITEM = FOODBLOCKITEM.register("tropical_fish_carpet_item",
+    () -> new BlockItem(foodblockregistry.TROPICAL_FISH_CARPET.get(), new BlockItem.Properties())); 
+   //.........mutton
+    public static final DeferredHolder<Item, BlockItem> MUTTON_CARPET_ITEM = FOODBLOCKITEM.register("mutton_carpet_item",
+    () -> new BlockItem(foodblockregistry.MUTTON_CARPET.get(), new BlockItem.Properties())); 
+   //.........beef
+    public static final DeferredHolder<Item, BlockItem> BEEF_CARPET_ITEM = FOODBLOCKITEM.register("beef_carpet_item",
+    () -> new BlockItem(foodblockregistry.BEEF_CARPET.get(), new BlockItem.Properties())); 
+   //.........pork
+    public static final DeferredHolder<Item, BlockItem> PORK_CARPET_ITEM = FOODBLOCKITEM.register("pork_carpet_item",
+    () -> new BlockItem(foodblockregistry.PORK_CARPET.get(), new BlockItem.Properties())); 
+   //.........rabbit
+    public static final DeferredHolder<Item, BlockItem> RABBIT_CARPET_ITEM = FOODBLOCKITEM.register("rabbit_carpet_item",
+    () -> new BlockItem(foodblockregistry.RABBIT_CARPET.get(), new BlockItem.Properties()));
 
 }

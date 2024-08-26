@@ -875,5 +875,71 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder sweet_berry_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(sweet_berry_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", sweet_berry_carpet_texture);
           simpleBlock(sweet_berry_carpet, new ModelFile.UncheckedModelFile(sweet_berry_carpet_model.getLocation()));
+        //.............brown_mushroom
+          CarpetBlock brown_mushroom_carpet = foodblockregistry.BROWN_MUSHROOM_CARPET.get();
+          ResourceLocation brown_mushroom_carpet_texture = modLoc("block/brown_mushroom_carpet");
+          BlockModelBuilder brown_mushroom_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(brown_mushroom_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", brown_mushroom_carpet_texture);
+          simpleBlock(brown_mushroom_carpet, new ModelFile.UncheckedModelFile(brown_mushroom_carpet_model.getLocation()));
+        //.............red_mushroom
+          CarpetBlock red_mushroom_carpet = foodblockregistry.RED_MUSHROOM_CARPET.get();
+          ResourceLocation red_mushroom_carpet_texture = modLoc("block/red_mushroom_carpet");
+          BlockModelBuilder red_mushroom_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(red_mushroom_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", red_mushroom_carpet_texture);
+          simpleBlock(red_mushroom_carpet, new ModelFile.UncheckedModelFile(red_mushroom_carpet_model.getLocation()));
+        //.............pumpkin
+          CarpetBlock pumpkin_carpet = foodblockregistry.PUMPKIN_CARPET.get();
+          ResourceLocation pumpkin_carpet_texture = modLoc("block/pumpkin_carpet");
+          BlockModelBuilder pumpkin_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(pumpkin_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", pumpkin_carpet_texture);
+          simpleBlock(pumpkin_carpet, new ModelFile.UncheckedModelFile(pumpkin_carpet_model.getLocation()));
+        //.............chicken
+          CarpetBlock chicken_carpet = foodblockregistry.CHICKEN_CARPET.get();
+          ResourceLocation chicken_carpet_texture = modLoc("block/chicken_carpet");
+          BlockModelBuilder chicken_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(chicken_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", chicken_carpet_texture);
+          simpleBlock(chicken_carpet, new ModelFile.UncheckedModelFile(chicken_carpet_model.getLocation()));
+        //.............cod
+          CarpetBlock cod_carpet = foodblockregistry.COD_CARPET.get();
+          ResourceLocation cod_carpet_texture = modLoc("block/cod_carpet");
+          BlockModelBuilder cod_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(cod_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", cod_carpet_texture);
+          simpleBlock(cod_carpet, new ModelFile.UncheckedModelFile(cod_carpet_model.getLocation()));
+        //.............salmon
+          CarpetBlock salmon_carpet = foodblockregistry.SALMON_CARPET.get();
+          ResourceLocation salmon_carpet_texture = modLoc("block/salmon_carpet");
+          BlockModelBuilder salmon_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(salmon_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", salmon_carpet_texture);
+          simpleBlock(salmon_carpet, new ModelFile.UncheckedModelFile(salmon_carpet_model.getLocation()));
+        //.............tropical_fish
+          CarpetBlock tropical_fish_carpet = foodblockregistry.TROPICAL_FISH_CARPET.get();
+          ResourceLocation tropical_fish_carpet_texture = modLoc("block/tropical_fish_carpet");
+          BlockModelBuilder tropical_fish_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(tropical_fish_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", tropical_fish_carpet_texture);
+          simpleBlock(tropical_fish_carpet, new ModelFile.UncheckedModelFile(tropical_fish_carpet_model.getLocation()));
+        //.............mutton
+          CarpetBlock mutton_carpet = foodblockregistry.MUTTON_CARPET.get();
+          ResourceLocation mutton_carpet_texture = modLoc("block/mutton_carpet");
+          BlockModelBuilder mutton_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(mutton_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", mutton_carpet_texture);
+          simpleBlock(mutton_carpet, new ModelFile.UncheckedModelFile(mutton_carpet_model.getLocation()));
+        //.............beef
+          CarpetBlock beef_carpet = foodblockregistry.BEEF_CARPET.get();
+          ResourceLocation beef_carpet_texture = modLoc("block/beef_carpet");
+          BlockModelBuilder beef_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(beef_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", beef_carpet_texture);
+          simpleBlock(beef_carpet, new ModelFile.UncheckedModelFile(beef_carpet_model.getLocation()));
+        //.............pork
+          CarpetBlock pork_carpet = foodblockregistry.PORK_CARPET.get();
+          ResourceLocation pork_carpet_texture = modLoc("block/pork_carpet");
+          BlockModelBuilder pork_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(pork_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", pork_carpet_texture);
+          simpleBlock(pork_carpet, new ModelFile.UncheckedModelFile(pork_carpet_model.getLocation()));
+        //.............rabbit
+          CarpetBlock rabbit_carpet = foodblockregistry.RABBIT_CARPET.get();
+          ResourceLocation rabbit_carpet_texture = modLoc("block/rabbit_carpet");
+          BlockModelBuilder rabbit_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(rabbit_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", rabbit_carpet_texture);
+          simpleBlock(rabbit_carpet, new ModelFile.UncheckedModelFile(rabbit_carpet_model.getLocation()));
 }}
     
