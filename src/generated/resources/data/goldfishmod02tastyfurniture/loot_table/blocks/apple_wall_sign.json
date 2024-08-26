@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:air"
+          "name": "goldfishmod02tastyfurniture:apple_sign_item"
         }
       ],
       "rolls": 1.0

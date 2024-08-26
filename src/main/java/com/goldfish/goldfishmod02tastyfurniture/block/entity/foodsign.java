@@ -42,11 +42,10 @@ public class foodsign extends StandingSignBlock {
          return new foodsignentity(pos, state);
      }
 
-    //  @Override
-    //  public BlockState getStateForPlacement(BlockPlaceContext context) {
-    //      FluidState fluidState = context.getLevel().getFluidState(context.getClickedPos());
-    //      return this.defaultBlockState().setValue(WATERLOGGED, fluidState.getType() == Fluids.WATER);
-    //  }
+     @Override
+     public String getDescriptionId() {
+     return "apple_sign";
+     }
 
      public static class foodwallsign extends WallSignBlock {
          public foodwallsign(BlockBehaviour.Properties properties, WoodType woodType) {
@@ -59,21 +58,6 @@ public class foodsign extends StandingSignBlock {
              return createTickerHelper(type, foodblockregistry.APPLE_SIGN_ENTITY.get(), foodsignentity::tick);
         }
 
-        // @Override
-        // public BlockState getStateForPlacement(BlockPlaceContext context) {
-        // FluidState fluidState = context.getLevel().getFluidState(context.getClickedPos());
-        // Direction facing = context.getClickedFace();
-    
-        // if (facing.getAxis().isHorizontal()) {
-        //     return this.defaultBlockState()
-        //                .setValue(FACING, facing)
-        //                .setValue(WATERLOGGED, fluidState.getType() == Fluids.WATER);
-        // } else { 
-        //     return this.defaultBlockState()
-        //                .setValue(WATERLOGGED, fluidState.getType() == Fluids.WATER);
-        // }
-        // }
-
         @Override
         public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
             return new foodsignentity(pos, state);
@@ -83,6 +67,12 @@ public class foodsign extends StandingSignBlock {
         protected boolean canSurvive(BlockState pState, LevelReader pLevel, BlockPos pPos) {
         return pLevel.getBlockState(pPos.relative(pState.getValue(FACING).getOpposite())) != null;
         }
+
+        @Override
+        public String getDescriptionId() {
+        return "apple_wall_sign";
+        }
+        
     }
 
      public static class foodstandingsign extends StandingSignBlock {
@@ -96,15 +86,14 @@ public class foodsign extends StandingSignBlock {
               return createTickerHelper(type, foodblockregistry.APPLE_SIGN_ENTITY.get(), foodsignentity::tick);
          }
 
-        //  @Override
-        //  public BlockState getStateForPlacement(BlockPlaceContext context) {
-        //      FluidState fluidState = context.getLevel().getFluidState(context.getClickedPos());
-        //      return this.defaultBlockState().setValue(WATERLOGGED, fluidState.getType() == Fluids.WATER);
-        //  }
-
          @Override
          public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
              return new foodsignentity(pos, state);
+         }
+
+         @Override
+         public String getDescriptionId() {
+         return "apple_standing_sign";
          }
      }
 }

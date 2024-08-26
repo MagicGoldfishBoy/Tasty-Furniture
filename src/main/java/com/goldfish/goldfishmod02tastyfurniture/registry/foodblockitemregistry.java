@@ -5,6 +5,7 @@ import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SignItem;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -324,8 +325,8 @@ public class foodblockitemregistry {
 //                                                                                          Signs
 //==============================================================================================================================================================================================
 
-     public static final DeferredHolder<Item, BlockItem> APPLE_SIGN_ITEM = FOODBLOCKITEM.register("apple_sign_item",
-     () -> new BlockItem(foodblockregistry.APPLE_SIGN.get(),  new BlockItem.Properties()));
+     public static final DeferredHolder<Item, SignItem> APPLE_SIGN_ITEM = FOODBLOCKITEM.register("apple_sign_item",
+     () -> new SignItem(new SignItem.Properties(), foodblockregistry.APPLE_STANDING_SIGN.get(), foodblockregistry.APPLE_WALL_SIGN.get()));
 
 //==============================================================================================================================================================================================
 //                                                                                          Slabs
