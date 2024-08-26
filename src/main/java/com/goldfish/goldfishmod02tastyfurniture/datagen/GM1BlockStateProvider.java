@@ -819,5 +819,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation pork_lamp_texture = modLoc("block/pork_lamp");
           ResourceLocation pork_lamp_top_texture = modLoc("block/pork_lamp_top");
           horizontalBlock(pork_lamp, pork_lamp_texture, pork_lamp_texture, pork_lamp_top_texture);
+        //............rabbit
+          net.minecraft.world.level.block.Block rabbit_lamp = foodblockregistry.RABBIT_LAMP.get();
+          ResourceLocation rabbit_lamp_texture = modLoc("block/rabbit_lamp");
+          ResourceLocation rabbit_lamp_top_texture = modLoc("block/rabbit_lamp_top");
+          horizontalBlock(rabbit_lamp, rabbit_lamp_texture, rabbit_lamp_texture, rabbit_lamp_top_texture);
 }}
     

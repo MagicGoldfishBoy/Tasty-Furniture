@@ -1225,6 +1225,12 @@ public class foodblockregistry {
      .lightLevel(state -> 15)
      ));
    //.........rabbit
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> RABBIT_LAMP = FOODBLOCK.register("rabbit_lamp", () -> new foodlamp(BlockBehaviour.Properties.of()
+     .destroyTime(1.5f)
+     .explosionResistance(10.0f)
+     .sound(SoundType.FROGLIGHT)
+     .lightLevel(state -> 15)
+     ));
 
 //==============================================================================================================================================================================================
 //                                                                                           Carpets
