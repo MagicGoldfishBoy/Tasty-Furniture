@@ -833,5 +833,23 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder apple_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(apple_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", apple_carpet_texture);
           simpleBlock(apple_carpet, new ModelFile.UncheckedModelFile(apple_carpet_model.getLocation()));
+        //.............potato
+          CarpetBlock potato_carpet = foodblockregistry.POTATO_CARPET.get();
+          ResourceLocation potato_carpet_texture = modLoc("block/potato_carpet");
+          BlockModelBuilder potato_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(potato_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", potato_carpet_texture);
+          simpleBlock(potato_carpet, new ModelFile.UncheckedModelFile(potato_carpet_model.getLocation()));
+        //.............beetroot
+          CarpetBlock beetroot_carpet = foodblockregistry.BEETROOT_CARPET.get();
+          ResourceLocation beetroot_carpet_texture = modLoc("block/beetroot_carpet");
+          BlockModelBuilder beetroot_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(beetroot_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", beetroot_carpet_texture);
+          simpleBlock(beetroot_carpet, new ModelFile.UncheckedModelFile(beetroot_carpet_model.getLocation()));
+        //.............carrot
+          CarpetBlock carrot_carpet = foodblockregistry.CARROT_CARPET.get();
+          ResourceLocation carrot_carpet_texture = modLoc("block/carrot_carpet");
+          BlockModelBuilder carrot_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(carrot_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", carrot_carpet_texture);
+          simpleBlock(carrot_carpet, new ModelFile.UncheckedModelFile(carrot_carpet_model.getLocation()));
 }}
     

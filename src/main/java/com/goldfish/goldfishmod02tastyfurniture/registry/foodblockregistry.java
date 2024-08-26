@@ -1246,8 +1246,29 @@ public class foodblockregistry {
       .ignitedByLava()
       ));
    //.........potato
+    public static final DeferredHolder<Block, CarpetBlock> POTATO_CARPET = FOODBLOCK.register("potato_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MOSS_CARPET)
+      .friction(0.3f)
+      .ignitedByLava()
+      ));
    //.........beetroot
+    public static final DeferredHolder<Block, CarpetBlock> BEETROOT_CARPET = FOODBLOCK.register("beetroot_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MOSS_CARPET)
+      .friction(0.3f)
+      .ignitedByLava()
+      ));
    //.........carrot
+    public static final DeferredHolder<Block, CarpetBlock> CARROT_CARPET = FOODBLOCK.register("carrot_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MOSS_CARPET)
+      .friction(0.3f)
+      .ignitedByLava()
+      ));
    //.........chorus
    //.........glow_berry
    //.........melon
@@ -1332,7 +1353,7 @@ public class foodblockregistry {
    //.........beef
    //.........pork
    //.........rabbit
-   
+
 //==============================================================================================================================================================================================
 //                                                                                           Beds
 //==============================================================================================================================================================================================

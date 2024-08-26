@@ -377,5 +377,14 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       //..............apple
         ResourceLocation apple_carpet_texture = modLoc("block/apple_carpet");
         carpet("apple_carpet_item", apple_carpet_texture);
+      //..............potato
+        ResourceLocation potato_carpet_texture = modLoc("block/potato_carpet");
+        carpet("potato_carpet_item", potato_carpet_texture);
+      //..............beetroot
+        ResourceLocation beetroot_carpet_texture = modLoc("block/beetroot_carpet");
+        carpet("beetroot_carpet_item", beetroot_carpet_texture);
+      //..............carrot
+        ResourceLocation carrot_carpet_texture = modLoc("block/carrot_carpet");
+        carpet("carrot_carpet_item", carrot_carpet_texture);
  }   
 }

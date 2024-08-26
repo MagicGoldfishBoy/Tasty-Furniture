@@ -643,5 +643,14 @@ public class foodblockitemregistry {
    //.........apple
     public static final DeferredHolder<Item, BlockItem> APPLE_CARPET_ITEM = FOODBLOCKITEM.register("apple_carpet_item",
     () -> new BlockItem(foodblockregistry.APPLE_CARPET.get(), new BlockItem.Properties())); 
+   //.........potato
+    public static final DeferredHolder<Item, BlockItem> POTATO_CARPET_ITEM = FOODBLOCKITEM.register("potato_carpet_item",
+    () -> new BlockItem(foodblockregistry.POTATO_CARPET.get(), new BlockItem.Properties())); 
+   //.........beetroot
+    public static final DeferredHolder<Item, BlockItem> BEETROOT_CARPET_ITEM = FOODBLOCKITEM.register("beetroot_carpet_item",
+    () -> new BlockItem(foodblockregistry.BEETROOT_CARPET.get(), new BlockItem.Properties())); 
+   //.........carrot
+    public static final DeferredHolder<Item, BlockItem> CARROT_CARPET_ITEM = FOODBLOCKITEM.register("carrot_carpet_item",
+    () -> new BlockItem(foodblockregistry.CARROT_CARPET.get(), new BlockItem.Properties())); 
 
 }
