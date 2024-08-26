@@ -751,7 +751,8 @@ public class GM1BlockStateProvider extends BlockStateProvider
         //............chorus
           net.minecraft.world.level.block.Block chorus_lamp = foodblockregistry.CHORUS_LAMP.get();
           ResourceLocation chorus_lamp_texture = modLoc("block/chorus_lamp");
-          simpleBlock(chorus_lamp);
+          ResourceLocation chorus_lamp_top_texture = modLoc("block/chorus_block");
+          horizontalBlock(chorus_lamp, chorus_lamp_texture, chorus_lamp_texture, chorus_lamp_top_texture);
         //............glow_berry
           net.minecraft.world.level.block.Block glow_berry_lamp = foodblockregistry.GLOW_BERRY_LAMP.get();
           ResourceLocation glow_berry_lamp_texture = modLoc("block/glow_berry_lamp");
@@ -781,5 +782,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           net.minecraft.world.level.block.Block chicken_lamp = foodblockregistry.CHICKEN_LAMP.get();
           ResourceLocation chicken_lamp_texture = modLoc("block/chicken_lamp");
           simpleBlock(chicken_lamp);
+        //............cod
+          net.minecraft.world.level.block.Block cod_lamp = foodblockregistry.COD_LAMP.get();
+          ResourceLocation cod_lamp_texture = modLoc("block/cod_lamp");
+          ResourceLocation cod_lamp_top_texture = modLoc("block/cod_lamp_top");
+          horizontalBlock(cod_lamp, cod_lamp_texture, cod_lamp_texture, cod_lamp_top_texture);
 }}
     

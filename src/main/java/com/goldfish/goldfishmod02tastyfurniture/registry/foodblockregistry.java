@@ -1127,7 +1127,7 @@ public class foodblockregistry {
      .lightLevel(state -> 15)
      ));
    //.........chorus
-     public static final DeferredHolder<Block, Block> CHORUS_LAMP = FOODBLOCK.register("chorus_lamp", () -> new Block(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, HorizontalDirectionalBlock> CHORUS_LAMP = FOODBLOCK.register("chorus_lamp", () -> new foodlamp(BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(10.0f)
      .sound(SoundType.FROGLIGHT)
@@ -1183,6 +1183,12 @@ public class foodblockregistry {
      .lightLevel(state -> 15)
      ));
    //.........cod
+     public static final DeferredHolder<Block, HorizontalDirectionalBlock> COD_LAMP = FOODBLOCK.register("cod_lamp", () -> new foodlamp(BlockBehaviour.Properties.of()
+     .destroyTime(1.5f)
+     .explosionResistance(10.0f)
+     .sound(SoundType.FROGLIGHT)
+     .lightLevel(state -> 15)
+     ));
    //.........salmon
    //.........tropical_fish
    //.........mutton
