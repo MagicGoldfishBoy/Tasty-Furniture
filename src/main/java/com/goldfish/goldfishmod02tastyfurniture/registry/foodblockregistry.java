@@ -1270,9 +1270,38 @@ public class foodblockregistry {
       .ignitedByLava()
       ));
    //.........chorus
+    public static final DeferredHolder<Block, CarpetBlock> CHORUS_CARPET = FOODBLOCK.register("chorus_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MOSS_CARPET)
+      .friction(0.3f)
+      .ignitedByLava()
+      ));
    //.........glow_berry
+    public static final DeferredHolder<Block, CarpetBlock> GLOW_BERRY_CARPET = FOODBLOCK.register("glow_berry_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MOSS_CARPET)
+      .friction(0.3f)
+      .ignitedByLava()
+      .lightLevel(state -> 10)
+      ));
    //.........melon
+    public static final DeferredHolder<Block, CarpetBlock> MELON_CARPET = FOODBLOCK.register("melon_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MOSS_CARPET)
+      .friction(0.3f)
+      .ignitedByLava()
+      ));
    //.........sweet_berry
+    public static final DeferredHolder<Block, CarpetBlock> SWEET_BERRY_CARPET = FOODBLOCK.register("sweet_berry_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MOSS_CARPET)
+      .friction(0.3f)
+      .ignitedByLava()
+      ));
    //.........brown_mushroom
    //.........red_mushroom
    //.........pumpkin

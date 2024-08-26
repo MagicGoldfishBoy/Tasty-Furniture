@@ -1149,6 +1149,38 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', nuggetregistry.CARROT_NUGGET.get())
          .unlockedBy("has_carrot_nugget", has(nuggetregistry.CARROT_NUGGET.get()))
          .save(output);
+         //chorus
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHORUS_CARPET_ITEM.get())
+         .pattern("   ")
+         .pattern("AA ")
+         .pattern("AA ")
+         .define('A', nuggetregistry.CHORUS_NUGGET.get())
+         .unlockedBy("has_chorus_nugget", has(nuggetregistry.CHORUS_NUGGET.get()))
+         .save(output);
+         //glow_berry
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.GLOW_BERRY_CARPET_ITEM.get())
+         .pattern("   ")
+         .pattern("AA ")
+         .pattern("AA ")
+         .define('A', nuggetregistry.GLOW_BERRY_NUGGET.get())
+         .unlockedBy("has_glow_berry_nugget", has(nuggetregistry.GLOW_BERRY_NUGGET.get()))
+         .save(output);
+         //melon
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MELON_CARPET_ITEM.get())
+         .pattern("   ")
+         .pattern("AA ")
+         .pattern("AA ")
+         .define('A', nuggetregistry.MELON_NUGGET.get())
+         .unlockedBy("has_melon_nugget", has(nuggetregistry.MELON_NUGGET.get()))
+         .save(output);
+         //sweet_berry
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SWEET_BERRY_CARPET_ITEM.get())
+         .pattern("   ")
+         .pattern("AA ")
+         .pattern("AA ")
+         .define('A', nuggetregistry.SWEET_BERRY_NUGGET.get())
+         .unlockedBy("has_sweet_berry_nugget", has(nuggetregistry.SWEET_BERRY_NUGGET.get()))
+         .save(output);
         
         }
     }

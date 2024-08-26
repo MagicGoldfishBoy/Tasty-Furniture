@@ -851,5 +851,29 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder carrot_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(carrot_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", carrot_carpet_texture);
           simpleBlock(carrot_carpet, new ModelFile.UncheckedModelFile(carrot_carpet_model.getLocation()));
+        //.............chorus
+          CarpetBlock chorus_carpet = foodblockregistry.CHORUS_CARPET.get();
+          ResourceLocation chorus_carpet_texture = modLoc("block/chorus_carpet");
+          BlockModelBuilder chorus_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(chorus_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", chorus_carpet_texture);
+          simpleBlock(chorus_carpet, new ModelFile.UncheckedModelFile(chorus_carpet_model.getLocation()));
+        //.............glow_berry
+          CarpetBlock glow_berry_carpet = foodblockregistry.GLOW_BERRY_CARPET.get();
+          ResourceLocation glow_berry_carpet_texture = modLoc("block/glow_berry_carpet");
+          BlockModelBuilder glow_berry_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(glow_berry_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", glow_berry_carpet_texture);
+          simpleBlock(glow_berry_carpet, new ModelFile.UncheckedModelFile(glow_berry_carpet_model.getLocation()));
+        //.............melon
+          CarpetBlock melon_carpet = foodblockregistry.MELON_CARPET.get();
+          ResourceLocation melon_carpet_texture = modLoc("block/melon_carpet");
+          BlockModelBuilder melon_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(melon_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", melon_carpet_texture);
+          simpleBlock(melon_carpet, new ModelFile.UncheckedModelFile(melon_carpet_model.getLocation()));
+        //.............sweet_berry
+          CarpetBlock sweet_berry_carpet = foodblockregistry.SWEET_BERRY_CARPET.get();
+          ResourceLocation sweet_berry_carpet_texture = modLoc("block/sweet_berry_carpet");
+          BlockModelBuilder sweet_berry_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(sweet_berry_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", sweet_berry_carpet_texture);
+          simpleBlock(sweet_berry_carpet, new ModelFile.UncheckedModelFile(sweet_berry_carpet_model.getLocation()));
 }}
     
