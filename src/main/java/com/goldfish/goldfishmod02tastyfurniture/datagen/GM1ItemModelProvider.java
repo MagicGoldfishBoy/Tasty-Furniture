@@ -4,6 +4,7 @@ import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockitemregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.SignBlock;
 import net.minecraft.world.level.block.TrapDoorBlock;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
@@ -371,5 +372,10 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("pork_lamp_item", modLoc("block/pork_lamp"));
       //..............rabbit
         withExistingParent("rabbit_lamp_item", modLoc("block/rabbit_lamp"));
+
+    //------------------------------------------------------carpet----------------------------------------------------------------------
+      //..............apple
+        ResourceLocation apple_carpet_texture = modLoc("block/apple_carpet");
+        carpet("apple_carpet_item", apple_carpet_texture);
  }   
 }

@@ -5,6 +5,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.CarpetBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
@@ -824,5 +825,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation rabbit_lamp_texture = modLoc("block/rabbit_lamp");
           ResourceLocation rabbit_lamp_top_texture = modLoc("block/rabbit_lamp_top");
           horizontalBlock(rabbit_lamp, rabbit_lamp_texture, rabbit_lamp_texture, rabbit_lamp_top_texture);
+
+      //-----------------------------------------------------------------carpets-----------------------------------------------------------------------------
+        //.............apple
+          CarpetBlock apple_carpet = foodblockregistry.APPLE_CARPET.get();
+          ResourceLocation apple_carpet_texture = modLoc("block/apple_carpet");
+          BlockModelBuilder apple_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(apple_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", apple_carpet_texture);
+          simpleBlock(apple_carpet, new ModelFile.UncheckedModelFile(apple_carpet_model.getLocation()));
 }}
     
