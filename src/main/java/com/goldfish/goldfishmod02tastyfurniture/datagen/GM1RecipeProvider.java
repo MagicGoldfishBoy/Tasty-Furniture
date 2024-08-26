@@ -1070,6 +1070,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
          .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
          .save(output);
+         //tropical_fish
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.TROPICAL_FISH_LAMP_ITEM.get())
+         .pattern("AAA")
+         .pattern("ABA")
+         .pattern("AAA")
+         .define('A', ingotregistry.TROPICAL_FISH_INGOT.get())
+         .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
+         .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
+         .save(output);
         
         }
     }

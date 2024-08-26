@@ -788,17 +788,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation cod_lamp_top_texture = modLoc("block/cod_lamp_top");
           horizontalBlock(cod_lamp, cod_lamp_texture, cod_lamp_texture, cod_lamp_top_texture);
         //............salmon
-        net.minecraft.world.level.block.Block salmon_lamp = foodblockregistry.SALMON_LAMP.get();
-        ResourceLocation salmon_lamp_side_texture = modLoc("block/salmon_lamp");
-        ResourceLocation salmon_lamp_top_texture = modLoc("block/salmon_block");
-        ResourceLocation salmon_lamp_bottom_texture = modLoc("block/glow_berry_block");
+          net.minecraft.world.level.block.Block salmon_lamp = foodblockregistry.SALMON_LAMP.get();
+          ResourceLocation salmon_lamp_side_texture = modLoc("block/salmon_lamp");
+          ResourceLocation salmon_lamp_top_texture = modLoc("block/salmon_block");
+          ResourceLocation salmon_lamp_bottom_texture = modLoc("block/glow_berry_block");
 
-        BlockModelBuilder model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(salmon_lamp).getPath(), mcLoc("block/cube_bottom_top"))
-            .texture("side", salmon_lamp_side_texture)
-            .texture("top", salmon_lamp_top_texture)
-            .texture("bottom", salmon_lamp_bottom_texture);
+          BlockModelBuilder model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(salmon_lamp).getPath(), mcLoc("block/cube_bottom_top"))
+              .texture("side", salmon_lamp_side_texture)
+              .texture("top", salmon_lamp_top_texture)
+              .texture("bottom", salmon_lamp_bottom_texture);
 
-        simpleBlock(salmon_lamp, new ModelFile.UncheckedModelFile(model.getLocation()));
+          simpleBlock(salmon_lamp, new ModelFile.UncheckedModelFile(model.getLocation()));
+        //............tropical_fish
+          net.minecraft.world.level.block.Block tropical_fish_lamp = foodblockregistry.TROPICAL_FISH_LAMP.get();
+          ResourceLocation tropical_fish_lamp_texture = modLoc("block/tropical_fish_lamp");
+          ResourceLocation tropical_fish_lamp_top_texture = modLoc("block/tropical_fish_lamp_top");
+          horizontalBlock(tropical_fish_lamp, tropical_fish_lamp_texture, tropical_fish_lamp_texture, tropical_fish_lamp_top_texture);
 }}
     
 // import net.minecraft.data.DataGenerator;

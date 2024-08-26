@@ -1197,6 +1197,12 @@ public class foodblockregistry {
      .lightLevel(state -> 15)
      ));
    //.........tropical_fish
+     public static final DeferredHolder<Block, HorizontalDirectionalBlock> TROPICAL_FISH_LAMP = FOODBLOCK.register("tropical_fish_lamp", () -> new foodlamp(BlockBehaviour.Properties.of()
+     .destroyTime(1.5f)
+     .explosionResistance(10.0f)
+     .sound(SoundType.FROGLIGHT)
+     .lightLevel(state -> 15)
+     ));
    //.........mutton
    //.........beef
    //.........pork
