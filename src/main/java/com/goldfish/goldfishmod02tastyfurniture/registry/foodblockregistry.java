@@ -577,8 +577,8 @@ public class foodblockregistry {
          .noCollission()
          .strength(1.0F)
          .ignitedByLava(),
-         WoodType.OAK
-         //foodmaterialtyperegistry.APPLEWOODMAT
+         //WoodType.OAK
+         foodmaterialtyperegistry.APPLEWOODMAT
    ));
    public static final DeferredHolder<Block, foodwallsign> APPLE_WALL_SIGN = FOODBLOCK.register("apple_wall_sign",
    () -> new foodsign.foodwallsign(
@@ -590,8 +590,8 @@ public class foodblockregistry {
        .strength(1.0F)
        .ignitedByLava()
        .randomTicks(),
-       WoodType.OAK
-       //foodmaterialtyperegistry.APPLEWOODMAT
+       //WoodType.OAK
+       foodmaterialtyperegistry.APPLEWOODMAT
    ));
    public static final DeferredHolder<Block, foodstandingsign> APPLE_STANDING_SIGN = FOODBLOCK.register("apple_standing_sign",
    () -> new foodsign.foodstandingsign(
@@ -603,8 +603,8 @@ public class foodblockregistry {
        .strength(1.0F)
        .ignitedByLava()
        .randomTicks(),
-       WoodType.OAK
-       //foodmaterialtyperegistry.APPLEWOODMAT
+       //WoodType.OAK
+       foodmaterialtyperegistry.APPLEWOODMAT
    ));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodsignentity>> APPLE_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "apple_sign_entity",

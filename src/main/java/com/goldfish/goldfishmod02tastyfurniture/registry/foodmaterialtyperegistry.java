@@ -1,9 +1,20 @@
 package com.goldfish.goldfishmod02tastyfurniture.registry;
 
+import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign;
+
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.WoodType;
+import net.minecraft.world.level.material.MapColor;
+import net.neoforged.neoforge.client.model.obj.ObjMaterialLibrary.Material;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class foodmaterialtyperegistry {
 
@@ -48,5 +59,18 @@ public class foodmaterialtyperegistry {
         "apple_wood_mat", 
         PLANT) 
     );
+//     public static final DeferredRegister<Block> APPLEWOODMATBLOCK = DeferredRegister.create(BuiltInRegistries.BLOCK, TastyFurniture.MODID);;
+
+//        public static final DeferredHolder<Block, foodsign> APPLE_SIGN = APPLEWOODMATBLOCK.register("apple_sign",
+//    () -> new foodsign(
+//      BlockBehaviour.Properties.of()
+//          .mapColor(MapColor.WOOD)
+//          .forceSolidOn()
+//          .instrument(NoteBlockInstrument.BASS)
+//          .noCollission()
+//          .strength(1.0F)
+//          .ignitedByLava(),
+//          foodmaterialtyperegistry.APPLEWOODMAT
+//    ));
 
 }

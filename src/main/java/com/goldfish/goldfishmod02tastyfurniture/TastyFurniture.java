@@ -27,6 +27,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.api.distmarker.Dist;
@@ -58,6 +59,7 @@ import com.goldfish.goldfishmod02tastyfurniture.registry.nuggetregistry;
 import com.google.common.base.Supplier;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockitemregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
+import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistry;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsignentity;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1BlockLootTableProvider;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1BlockStateProvider;
@@ -124,6 +126,8 @@ public class TastyFurniture
         modEventBus.addListener(datagathering::onGatherData);
 
         BLOCKS.register(modEventBus);
+
+        WoodType.register(foodmaterialtyperegistry.APPLEWOODMAT);
 
         foodblockregistry.FOODBLOCK.register(modEventBus);
 
@@ -201,6 +205,7 @@ public class datagathering {
         } catch (RuntimeException e) {
             LOGGER.error("failed to generate blockstates");
         }
+        
  }
 }}
 

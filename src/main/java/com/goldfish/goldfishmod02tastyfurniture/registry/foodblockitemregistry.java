@@ -325,7 +325,7 @@ public class foodblockitemregistry {
 //==============================================================================================================================================================================================
 
      public static final DeferredHolder<Item, BlockItem> APPLE_SIGN_ITEM = FOODBLOCKITEM.register("apple_sign_item",
-     () -> new BlockItem(foodblockregistry.APPLE_SIGN.get(), new BlockItem.Properties()));
+     () -> new BlockItem(foodblockregistry.APPLE_SIGN.get(),  new BlockItem.Properties()));
 
 //==============================================================================================================================================================================================
 //                                                                                          Slabs
