@@ -3,6 +3,7 @@ package com.goldfish.goldfishmod02tastyfurniture.registry;
 import java.rmi.registry.Registry;
 
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
+import com.goldfish.goldfishmod02tastyfurniture.block.foodlamp;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodstandingsign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodwallsign;
@@ -25,6 +26,7 @@ import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SignBlock;
@@ -1167,13 +1169,19 @@ public class foodblockregistry {
      .lightLevel(state -> 15)
      ));
    //.........pumpkin
-     public static final DeferredHolder<Block, Block> PUMPKIN_LAMP = FOODBLOCK.register("pumpkin_lamp", () -> new Block(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, HorizontalDirectionalBlock> PUMPKIN_LAMP = FOODBLOCK.register("pumpkin_lamp", () -> new foodlamp(BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(10.0f)
      .sound(SoundType.FROGLIGHT)
      .lightLevel(state -> 15)
      ));
    //.........chicken
+     public static final DeferredHolder<Block, Block> CHICKEN_LAMP = FOODBLOCK.register("chicken_lamp", () -> new Block(BlockBehaviour.Properties.of()
+     .destroyTime(1.5f)
+     .explosionResistance(10.0f)
+     .sound(SoundType.FROGLIGHT)
+     .lightLevel(state -> 15)
+     ));
    //.........cod
    //.........salmon
    //.........tropical_fish

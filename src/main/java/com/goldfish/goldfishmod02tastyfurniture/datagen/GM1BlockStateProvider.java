@@ -775,6 +775,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
         //............pumpkin
           net.minecraft.world.level.block.Block pumpkin_lamp = foodblockregistry.PUMPKIN_LAMP.get();
           ResourceLocation pumpkin_lamp_texture = modLoc("block/pumpkin_lamp");
-          simpleBlock(pumpkin_lamp);
+          ResourceLocation pumpkin_lamp_top_texture = modLoc("block/pumpkin_block");
+          horizontalBlock(pumpkin_lamp, pumpkin_lamp_texture, pumpkin_lamp_texture, pumpkin_lamp_top_texture);
+        //............chicken
+          net.minecraft.world.level.block.Block chicken_lamp = foodblockregistry.CHICKEN_LAMP.get();
+          ResourceLocation chicken_lamp_texture = modLoc("block/chicken_lamp");
+          simpleBlock(chicken_lamp);
 }}
     
