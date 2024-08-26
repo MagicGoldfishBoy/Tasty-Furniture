@@ -787,5 +787,42 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation cod_lamp_texture = modLoc("block/cod_lamp");
           ResourceLocation cod_lamp_top_texture = modLoc("block/cod_lamp_top");
           horizontalBlock(cod_lamp, cod_lamp_texture, cod_lamp_texture, cod_lamp_top_texture);
+        //............salmon
+        net.minecraft.world.level.block.Block salmon_lamp = foodblockregistry.SALMON_LAMP.get();
+        ResourceLocation salmon_lamp_side_texture = modLoc("block/salmon_lamp");
+        ResourceLocation salmon_lamp_top_texture = modLoc("block/salmon_block");
+        ResourceLocation salmon_lamp_bottom_texture = modLoc("block/glow_berry_block");
+
+        BlockModelBuilder model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(salmon_lamp).getPath(), mcLoc("block/cube_bottom_top"))
+            .texture("side", salmon_lamp_side_texture)
+            .texture("top", salmon_lamp_top_texture)
+            .texture("bottom", salmon_lamp_bottom_texture);
+
+        simpleBlock(salmon_lamp, new ModelFile.UncheckedModelFile(model.getLocation()));
 }}
     
+// import net.minecraft.data.DataGenerator;
+// import net.minecraft.resources.ResourceLocation;
+// import net.minecraftforge.common.data.BlockModelProvider;
+// import net.minecraftforge.common.data.ExistingFileHelper;
+
+// public class MyBlockModelProvider extends BlockModelProvider {
+
+//     public MyBlockModelProvider(DataGenerator generator, String modid, ExistingFileHelper existingFileHelper) {
+//         super(generator, modid, existingFileHelper);
+//     }
+
+//     @Override
+//     protected void registerModels() {
+//         // Replace with your block registry object
+//         cubeBottomTopBlock(ExampleMod.MY_BLOCK.get(), modLoc("block/my_block_side"), modLoc("block/my_block_bottom"), modLoc("block/my_block_top"));
+//     }
+
+//     private void cubeBottomTopBlock(Block block, ResourceLocation side, ResourceLocation bottom, ResourceLocation top) {
+//         getBuilder(block.getRegistryName().getPath())
+//             .parent(getExistingFile(mcLoc("block/cube_bottom_top")))
+//             .texture("side", side)
+//             .texture("bottom", bottom)
+//             .texture("top", top);
+//     }
+// }

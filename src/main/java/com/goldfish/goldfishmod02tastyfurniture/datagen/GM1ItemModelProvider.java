@@ -359,5 +359,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("chicken_lamp_item", modLoc("block/chicken_lamp"));
       //..............cod
         withExistingParent("cod_lamp_item", modLoc("block/cod_lamp"));
+      //..............salmon
+        withExistingParent("salmon_lamp_item", modLoc("block/salmon_lamp"));
  }   
 }
