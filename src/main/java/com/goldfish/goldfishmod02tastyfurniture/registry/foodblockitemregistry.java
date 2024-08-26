@@ -325,8 +325,12 @@ public class foodblockitemregistry {
 //                                                                                          Signs
 //==============================================================================================================================================================================================
 
+  //apple
      public static final DeferredHolder<Item, SignItem> APPLE_SIGN_ITEM = FOODBLOCKITEM.register("apple_sign_item",
      () -> new SignItem(new SignItem.Properties(), foodblockregistry.APPLE_STANDING_SIGN.get(), foodblockregistry.APPLE_WALL_SIGN.get()));
+  //potato
+     public static final DeferredHolder<Item, SignItem> POTATO_SIGN_ITEM = FOODBLOCKITEM.register("potato_sign_item",
+     () -> new SignItem(new SignItem.Properties(), foodblockregistry.POTATO_STANDING_SIGN.get(), foodblockregistry.POTATO_WALL_SIGN.get()));
 
 //==============================================================================================================================================================================================
 //                                                                                          Slabs

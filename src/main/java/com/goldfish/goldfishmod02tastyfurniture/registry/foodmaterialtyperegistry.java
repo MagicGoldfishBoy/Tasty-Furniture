@@ -59,18 +59,10 @@ public class foodmaterialtyperegistry {
         "apple_wood_mat", 
         PLANT) 
     );
-//     public static final DeferredRegister<Block> APPLEWOODMATBLOCK = DeferredRegister.create(BuiltInRegistries.BLOCK, TastyFurniture.MODID);;
-
-//        public static final DeferredHolder<Block, foodsign> APPLE_SIGN = APPLEWOODMATBLOCK.register("apple_sign",
-//    () -> new foodsign(
-//      BlockBehaviour.Properties.of()
-//          .mapColor(MapColor.WOOD)
-//          .forceSolidOn()
-//          .instrument(NoteBlockInstrument.BASS)
-//          .noCollission()
-//          .strength(1.0F)
-//          .ignitedByLava(),
-//          foodmaterialtyperegistry.APPLEWOODMAT
-//    ));
+    public static final WoodType POTATOWOODMAT = WoodType.register(
+     new WoodType(
+        "potato_wood_mat", 
+        PLANT) 
+    );
 
 }

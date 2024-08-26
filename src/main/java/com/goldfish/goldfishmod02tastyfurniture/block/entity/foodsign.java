@@ -42,10 +42,10 @@ public class foodsign extends StandingSignBlock {
          return new foodsignentity(pos, state);
      }
 
-     @Override
-     public String getDescriptionId() {
-     return "apple_sign";
-     }
+    //  @Override
+    //  public String getDescriptionId() {
+    //  return "apple_sign";
+    //  }
 
      public static class foodwallsign extends WallSignBlock {
          public foodwallsign(BlockBehaviour.Properties properties, WoodType woodType) {
@@ -91,10 +91,10 @@ public class foodsign extends StandingSignBlock {
              return new foodsignentity(pos, state);
          }
 
-         @Override
-         public String getDescriptionId() {
-         return "apple_standing_sign";
-         }
+        //  @Override
+        //  public String getDescriptionId() {
+        //  return "apple_standing_sign";
+        //  }
      }
 }
 

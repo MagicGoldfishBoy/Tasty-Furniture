@@ -1,5 +1,7 @@
 package com.goldfish.goldfishmod02tastyfurniture.block.entity;
 
+import java.util.Collection;
+
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 
 import net.minecraft.core.BlockPos;
@@ -11,6 +13,8 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.SignBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class foodsignentity extends SignBlockEntity {
     public foodsignentity(BlockPos pos, BlockState state) {
@@ -23,8 +27,8 @@ public class foodsignentity extends SignBlockEntity {
           }
     }
 
-    public static BlockEntityType<foodsignentity> getAppleSignEntityType() {
-         return foodblockregistry.APPLE_SIGN_ENTITY.get();
+    public static DeferredRegister<BlockEntityType<?>> getSignEntitiesType() {
+         return foodblockregistry.FOODBLOCKENTITY;//foodblockregistry.POTATO_SIGN_ENTITY.get();
     }
 
 }

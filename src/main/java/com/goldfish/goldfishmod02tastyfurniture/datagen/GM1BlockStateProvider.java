@@ -383,6 +383,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
            ResourceLocation apple_sign_texture = modLoc("block/apple_block");
            signBlock(apple_sign, apple_wall_sign, apple_sign_texture);
         //.........potato
+           StandingSignBlock potato_sign = foodblockregistry.POTATO_STANDING_SIGN.get();
+           WallSignBlock potato_wall_sign = foodblockregistry.POTATO_WALL_SIGN.get();
+           ResourceLocation potato_sign_texture = modLoc("block/potato_block");
+           signBlock(potato_sign, potato_wall_sign, potato_sign_texture);
         //.........beetroot
         //.........carrot
         //.........chorus

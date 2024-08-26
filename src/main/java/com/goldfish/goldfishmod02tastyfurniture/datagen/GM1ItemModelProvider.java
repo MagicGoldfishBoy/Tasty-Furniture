@@ -173,6 +173,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
     //---------------------------------------------------------signs----------------------------------------------------------------------
       //..............apple
        withExistingParent("apple_sign_item", mcLoc("item/generated")).texture("layer0", "block/apple_block");
+      //..............potato
+       withExistingParent("potato_sign_item", mcLoc("item/generated")).texture("layer0", "block/potato_block");
 
     //---------------------------------------------------------slabs----------------------------------------------------------------------
       //..............apple
