@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values": [
-    "goldfishmod02tastyfurniture:apple_sign_item"
+    "goldfishmod02tastyfurniture:apple_sign_item",
+    "goldfishmod02tastyfurniture:potato_sign_item"
     ]
   }

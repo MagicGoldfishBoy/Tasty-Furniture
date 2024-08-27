@@ -1,6 +1,8 @@
 package com.goldfish.goldfishmod02tastyfurniture.registry;
 
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
+import com.goldfish.goldfishmod02tastyfurniture.item.apple_sword;
+import com.google.common.base.Supplier;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.tags.BlockTags;
@@ -30,15 +32,21 @@ public class food_weapon_registry {
 //==============================================================================================================================================================================================
 
   //.........apple
-  
-    public static final DeferredHolder<Item, SwordItem> APPLE_SWORD = FOODWEAPON.register(
-        "apple_sword", 
-        () -> new SwordItem(
-        APPLE_TIER,
-        new Item.Properties().attributes(
-            SwordItem.createAttributes(
-                APPLE_TIER,
-                3,
-                -2.4f        
-        ))));
+    
+    public static final DeferredHolder<Item, apple_sword> APPLE_SWORD = FOODWEAPON.register("apple_sword", () -> new apple_sword(APPLE_TIER, new Item.Properties().attributes(
+        SwordItem.createAttributes(
+            APPLE_TIER,
+            3,
+            -2.4f))));
+
+    // public static final DeferredHolder<Item, SwordItem> APPLE_SWORD = FOODWEAPON.register(
+    //     "apple_sword", 
+    //     () -> new SwordItem(
+    //     APPLE_TIER,
+    //     new Item.Properties().attributes(
+    //         SwordItem.createAttributes(
+    //             APPLE_TIER,
+    //             3,
+    //             -2.4f        
+    //     ))));
 }
