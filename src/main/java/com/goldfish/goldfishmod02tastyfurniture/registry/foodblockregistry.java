@@ -15,6 +15,7 @@ import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistr
 import com.google.common.base.Supplier;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EntityType;
@@ -49,6 +50,7 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
+import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.obj.ObjMaterialLibrary.Material;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -63,7 +65,7 @@ import net.neoforged.neoforge.registries.holdersets.*;
 
 public class foodblockregistry {
     public static final DeferredRegister<Block> FOODBLOCK = DeferredRegister.create(BuiltInRegistries.BLOCK, TastyFurniture.MODID);
-    public static final DeferredRegister<BlockEntityType<?>> FOODBLOCKENTITY = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, TastyFurniture.MODID);
+    public static final DeferredRegister<BlockEntityType<?>> FOODSIGNBLOCKENTITY = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, TastyFurniture.MODID);
     
 //==============================================================================================================================================================================================
 //                                                                                          Blocks
@@ -570,14 +572,6 @@ public class foodblockregistry {
 //                                                                                          Signs
 //==============================================================================================================================================================================================
 
-//   List<foodsignentity> foodsignentitylist = new ArrayList<foodsignentity>();
-//   public class ListOfSignEntity {
-//     public static void main(BlockEntityType<foodsignentity>[] args) {
-//       BlockEntityType<foodsignentity>[] foodsignArray = { APPLE_SIGN_ENTITY.get() };
-//         List<BlockEntityType<foodsignentity>> foodsignentityarray = List.of(foodsignArray);
-//     }
-// }
-
   //.........apple
    public static final DeferredHolder<Block, foodsign> APPLE_SIGN = FOODBLOCK.register("apple_sign",
    () -> new foodsign(
@@ -617,7 +611,7 @@ public class foodblockregistry {
        //WoodType.OAK
        foodmaterialtyperegistry.APPLEWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodsignentity>> APPLE_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodsignentity>> APPLE_SIGN_ENTITY = FOODSIGNBLOCKENTITY.register(
      "apple_sign_entity",
      () -> BlockEntityType.Builder.of(
          foodsignentity::new,
@@ -626,6 +620,7 @@ public class foodblockregistry {
          foodblockregistry.APPLE_STANDING_SIGN.get()
      ).build(null)
  );
+ 
 
    //.........potato
    public static final DeferredHolder<Block, foodsign> POTATO_SIGN = FOODBLOCK.register("potato_sign",
@@ -666,7 +661,7 @@ public class foodblockregistry {
        //WoodType.OAK
        foodmaterialtyperegistry.POTATOWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodsignentity>> POTATO_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodsignentity>> POTATO_SIGN_ENTITY = FOODSIGNBLOCKENTITY.register(
      "potato_sign_entity",
      () -> BlockEntityType.Builder.of(
          foodsignentity::new,

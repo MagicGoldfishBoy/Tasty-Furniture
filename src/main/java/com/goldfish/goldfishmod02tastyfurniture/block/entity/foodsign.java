@@ -19,6 +19,7 @@ import net.minecraft.world.level.block.WallSignBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.entity.SignBlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -39,7 +40,9 @@ public class foodsign extends StandingSignBlock {
 
      @Override
      public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-         return new foodsignentity(pos, state);
+        if (this.getName().toString().matches(".*apple.*")) {return new foodsignentity(pos, state);}
+       else if (this.getName().toString().matches(".*potato.*")) {return new foodsignentity.potato_sign_entity(pos, state);}
+         else return new foodsignentity(pos, state);
      }
 
     //  @Override
@@ -60,8 +63,10 @@ public class foodsign extends StandingSignBlock {
 
         @Override
         public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-            return new foodsignentity(pos, state);
-        }
+            if (this.getName().toString().matches(".*apple.*")) {return new foodsignentity(pos, state);}
+           else if (this.getName().toString().matches(".*potato.*")) {return new foodsignentity.potato_sign_entity(pos, state);}
+             else return new foodsignentity(pos, state);
+         }
 
         @Override
         protected boolean canSurvive(BlockState pState, LevelReader pLevel, BlockPos pPos) {
@@ -88,7 +93,9 @@ public class foodsign extends StandingSignBlock {
 
          @Override
          public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-             return new foodsignentity(pos, state);
+            if (this.getName().toString().matches(".*apple.*")) {return new foodsignentity(pos, state);}
+           else if (this.getName().toString().matches(".*potato.*")) {return new foodsignentity.potato_sign_entity(pos, state);}
+             else return new foodsignentity(pos, state);
          }
 
         //  @Override

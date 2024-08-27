@@ -26,6 +26,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
@@ -78,7 +79,7 @@ public class TastyFurniture
 
     public static final DeferredRegister.Blocks FOODBLOCK = DeferredRegister.createBlocks(MODID);
 
-    public static final DeferredRegister.Blocks FOODBLOCKENTITY = DeferredRegister.createBlocks(MODID);
+    public static final DeferredRegister.Blocks FOODSIGNBLOCKENTITY = DeferredRegister.createBlocks(MODID);
 
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
 
@@ -131,7 +132,7 @@ public class TastyFurniture
 
         foodblockregistry.FOODBLOCK.register(modEventBus);
 
-        foodblockregistry.FOODBLOCKENTITY.register(modEventBus);
+        foodblockregistry.FOODSIGNBLOCKENTITY.register(modEventBus);
 
         ITEMS.register(modEventBus);
 
@@ -183,6 +184,7 @@ public class TastyFurniture
         @SubscribeEvent
         public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(foodblockregistry.APPLE_SIGN_ENTITY.get(), SignRenderer::new);
+        event.registerBlockEntityRenderer(foodblockregistry.POTATO_SIGN_ENTITY.get(), SignRenderer::new);
         }
     }
 
