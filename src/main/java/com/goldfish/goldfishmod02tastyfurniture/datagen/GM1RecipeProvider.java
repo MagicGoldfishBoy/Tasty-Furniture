@@ -10,6 +10,7 @@ import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockitemregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.ingotregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.nuggetregistry;
+import com.goldfish.goldfishmod02tastyfurniture.registry.food_weapon_registry;
 
 import net.minecraft.advancements.Criterion;
 import net.minecraft.core.HolderLookup;
@@ -1125,7 +1126,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
          .save(output);
 
-        //-----------------------------------carpet-----------------------------------------------------
+        //-----------------------------------carpet----------------------------------------------------
          //apple
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_CARPET_ITEM.get())
          .pattern("   ")
@@ -1278,7 +1279,17 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', nuggetregistry.RABBIT_NUGGET.get())
          .unlockedBy("has_rabbit_nugget", has(nuggetregistry.RABBIT_NUGGET.get()))
          .save(output);
-        
+        //-----------------------------------sword----------------------------------------------------
+         //apple_sword
+         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, food_weapon_registry.APPLE_SWORD.get())
+         .pattern(" A ")
+         .pattern(" A ")
+         .pattern(" B ")
+         .define('A', ingotregistry.APPLE_INGOT.get())
+         .define('B', Items.STICK)
+         .unlockedBy("has_apple_ingot", has(ingotregistry.APPLE_INGOT.get()))
+         .save(output);
+
         }
     }
 }

@@ -61,6 +61,7 @@ import com.google.common.base.Supplier;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockitemregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistry;
+import com.goldfish.goldfishmod02tastyfurniture.registry.food_weapon_registry;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsignentity;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1BlockLootTableProvider;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1BlockStateProvider;
@@ -82,6 +83,8 @@ public class TastyFurniture
     public static final DeferredRegister.Blocks FOODSIGNBLOCKENTITY = DeferredRegister.createBlocks(MODID);
 
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
+    
+    public static final DeferredRegister.Items FOODWEAPON = DeferredRegister.createItems(MODID);
 
     public static final DeferredRegister.Items MUSH = DeferredRegister.createItems(MODID);
 
@@ -111,6 +114,9 @@ public class TastyFurniture
                 output.acceptAll(foodblockitemregistry.FOODBLOCKITEM.getEntries().stream().map(sup -> {
                     return sup.get().getDefaultInstance();
                 }).toList());
+                output.acceptAll(food_weapon_registry.FOODWEAPON.getEntries().stream().map(sup -> {
+                    return sup.get().getDefaultInstance();
+                }).toList());
             }).build());
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> gettab(){
@@ -135,6 +141,8 @@ public class TastyFurniture
         foodblockregistry.FOODSIGNBLOCKENTITY.register(modEventBus);
 
         ITEMS.register(modEventBus);
+
+        food_weapon_registry.FOODWEAPON.register(modEventBus);
 
         mushregistry.MUSH.register(modEventBus);
 
