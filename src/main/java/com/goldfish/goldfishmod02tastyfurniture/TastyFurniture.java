@@ -16,6 +16,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider.SubProviderEntry;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -67,6 +68,7 @@ import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1BlockLootTableProvide
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1BlockStateProvider;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1Datagen;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1LootTableProvider;
+import com.goldfish.goldfishmod02tastyfurniture.item.glow_berry_sword;
 
 
 @Mod(TastyFurniture.MODID)
@@ -194,6 +196,22 @@ public class TastyFurniture
         event.registerBlockEntityRenderer(foodblockregistry.APPLE_SIGN_ENTITY.get(), SignRenderer::new);
         event.registerBlockEntityRenderer(foodblockregistry.POTATO_SIGN_ENTITY.get(), SignRenderer::new);
         }
+
+        // @SubscribeEvent
+        // public void onPlayerTick() {{
+        //     if (Player.level().isClientSide) {
+        //         ItemStack heldItem = Player.getMainHandItem();
+        //         if (heldItem.getItem() instanceof glow_berry_sword) {
+        //             BlockPos pos = Player.blockPosition();
+        //             Level world = Player.level();
+    
+        //             // Emit light at the player's position
+        //             BlockState blockState = world.getBlockState(pos);
+        //             int lightLevel = 14; // Maximum light level is 15 (similar to a torch)
+        //             world.getChunkSource().getLightEngine().checkBlock(pos); // Update lighting
+        //         }
+        //     }
+        // }
     }
 
 
@@ -216,8 +234,11 @@ public class datagathering {
             LOGGER.error("failed to generate blockstates");
         }
         
- }
-}}
+        }
+       }
+
+       
+}
 
 //Note to self: "recipes" is now "recipe" in 1.21.
 

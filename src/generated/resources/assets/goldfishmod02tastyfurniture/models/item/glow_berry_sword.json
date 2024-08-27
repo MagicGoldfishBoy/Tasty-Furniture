@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "goldfishmod02tastyfurniture:item/glow_berry_sword"
+  }
+}

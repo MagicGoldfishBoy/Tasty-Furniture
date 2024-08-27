@@ -1325,6 +1325,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('B', Items.STICK)
          .unlockedBy("has_chorus_ingot", has(ingotregistry.CHORUS_INGOT.get()))
          .save(output);
+         //glow_berry_sword
+         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, food_weapon_registry.GLOW_BERRY_SWORD.get())
+         .pattern(" A ")
+         .pattern(" A ")
+         .pattern(" B ")
+         .define('A', ingotregistry.GLOW_BERRY_INGOT.get())
+         .define('B', Items.STICK)
+         .unlockedBy("has_glow_berry_ingot", has(ingotregistry.GLOW_BERRY_INGOT.get()))
+         .save(output);
 
         }
     }

@@ -6,6 +6,7 @@ import com.goldfish.goldfishmod02tastyfurniture.item.potato_sword;
 import com.goldfish.goldfishmod02tastyfurniture.item.beetroot_sword;
 import com.goldfish.goldfishmod02tastyfurniture.item.carrot_sword;
 import com.goldfish.goldfishmod02tastyfurniture.item.chorus_sword;
+import com.goldfish.goldfishmod02tastyfurniture.item.glow_berry_sword;
 import com.google.common.base.Supplier;
 
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -61,6 +62,14 @@ public class food_weapon_registry {
             22,
             () -> Ingredient.of(ingotregistry.CHORUS_INGOT.get())
     );
+    public static final Tier GLOW_BERRY_TIER = new SimpleTier(
+            BlockTags.INCORRECT_FOR_STONE_TOOL,
+            170,
+            4f,
+            1.0f,
+            22,
+            () -> Ingredient.of(ingotregistry.GLOW_BERRY_INGOT.get())
+    );
 
     public static final DeferredRegister<Item> FOODWEAPON = DeferredRegister.create(BuiltInRegistries.ITEM, TastyFurniture.MODID);
 
@@ -98,6 +107,12 @@ public class food_weapon_registry {
             CHORUS_TIER,
             5,
             -2.0f))));
+  //.........glow_berry 
+    public static final DeferredHolder<Item, glow_berry_sword> GLOW_BERRY_SWORD = FOODWEAPON.register("glow_berry_sword", () -> new glow_berry_sword(GLOW_BERRY_TIER, new Item.Properties().attributes(
+        SwordItem.createAttributes(
+            GLOW_BERRY_TIER,
+            3,
+            -2.4f))));
 
     // public static final DeferredHolder<Item, SwordItem> APPLE_SWORD = FOODWEAPON.register(
     //     "apple_sword", 

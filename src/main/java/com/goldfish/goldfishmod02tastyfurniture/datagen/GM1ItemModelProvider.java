@@ -444,5 +444,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("carrot_sword", mcLoc("item/handheld")).texture("layer0", "item/carrot_sword");
       //..............chorus
        withExistingParent("chorus_sword", mcLoc("item/handheld")).texture("layer0", "item/chorus_sword");
+      //..............glow_berry
+       withExistingParent("glow_berry_sword", mcLoc("item/handheld")).texture("layer0", "item/glow_berry_sword");
   }   
 }
