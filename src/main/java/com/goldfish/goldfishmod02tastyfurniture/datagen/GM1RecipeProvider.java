@@ -1388,6 +1388,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('B', Items.STICK)
          .unlockedBy("has_chicken_ingot", has(ingotregistry.CHICKEN_INGOT.get()))
          .save(output);
+         //cod_sword
+         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, food_weapon_registry.COD_SWORD.get())
+         .pattern(" A ")
+         .pattern(" A ")
+         .pattern(" B ")
+         .define('A', ingotregistry.COD_INGOT.get())
+         .define('B', Items.STICK)
+         .unlockedBy("has_cod_ingot", has(ingotregistry.COD_INGOT.get()))
+         .save(output);
 
         }
     }

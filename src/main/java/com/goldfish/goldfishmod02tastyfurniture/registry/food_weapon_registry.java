@@ -13,6 +13,7 @@ import com.goldfish.goldfishmod02tastyfurniture.item.brown_mushroom_sword;
 import com.goldfish.goldfishmod02tastyfurniture.item.red_mushroom_sword;
 import com.goldfish.goldfishmod02tastyfurniture.item.pumpkin_sword;
 import com.goldfish.goldfishmod02tastyfurniture.item.chicken_sword;
+import com.goldfish.goldfishmod02tastyfurniture.item.cod_sword;
 import com.google.common.base.Supplier;
 
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -124,6 +125,14 @@ public class food_weapon_registry {
             22,
             () -> Ingredient.of(ingotregistry.CHICKEN_INGOT.get())
     );
+    public static final Tier COD_TIER = new SimpleTier(
+            BlockTags.INCORRECT_FOR_STONE_TOOL,
+            170,
+            4f,
+            1.0f,
+            22,
+            () -> Ingredient.of(ingotregistry.COD_INGOT.get())
+    );
 
     public static final DeferredRegister<Item> FOODWEAPON = DeferredRegister.create(BuiltInRegistries.ITEM, TastyFurniture.MODID);
 
@@ -201,6 +210,12 @@ public class food_weapon_registry {
     public static final DeferredHolder<Item, chicken_sword> CHICKEN_SWORD = FOODWEAPON.register("chicken_sword", () -> new chicken_sword(CHICKEN_TIER, new Item.Properties().attributes(
         SwordItem.createAttributes(
             CHICKEN_TIER,
+            3,
+            -2.4f))));
+  //.........cod 
+    public static final DeferredHolder<Item, cod_sword> COD_SWORD = FOODWEAPON.register("cod_sword", () -> new cod_sword(COD_TIER, new Item.Properties().attributes(
+        SwordItem.createAttributes(
+            COD_TIER,
             3,
             -2.4f))));
 
