@@ -16,6 +16,7 @@ import com.goldfish.goldfishmod02tastyfurniture.item.chicken_sword;
 import com.goldfish.goldfishmod02tastyfurniture.item.cod_sword;
 import com.goldfish.goldfishmod02tastyfurniture.item.salmon_sword;
 import com.goldfish.goldfishmod02tastyfurniture.item.tropical_fish_sword;
+import com.goldfish.goldfishmod02tastyfurniture.item.mutton_sword;
 import com.google.common.base.Supplier;
 
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -151,6 +152,14 @@ public class food_weapon_registry {
             22,
             () -> Ingredient.of(ingotregistry.TROPICAL_FISH_INGOT.get())
     );
+    public static final Tier MUTTON_TIER = new SimpleTier(
+            BlockTags.INCORRECT_FOR_STONE_TOOL,
+            170,
+            4f,
+            1.0f,
+            22,
+            () -> Ingredient.of(ingotregistry.MUTTON_INGOT.get())
+    );
 
     public static final DeferredRegister<Item> FOODWEAPON = DeferredRegister.create(BuiltInRegistries.ITEM, TastyFurniture.MODID);
 
@@ -246,6 +255,12 @@ public class food_weapon_registry {
     public static final DeferredHolder<Item, tropical_fish_sword> TROPICAL_FISH_SWORD = FOODWEAPON.register("tropical_fish_sword", () -> new tropical_fish_sword(TROPICAL_FISH_TIER, new Item.Properties().attributes(
         SwordItem.createAttributes(
             TROPICAL_FISH_TIER,
+            3,
+            -2.4f))));
+  //.........mutton 
+    public static final DeferredHolder<Item, mutton_sword> MUTTON_SWORD = FOODWEAPON.register("mutton_sword", () -> new mutton_sword(MUTTON_TIER, new Item.Properties().attributes(
+        SwordItem.createAttributes(
+            MUTTON_TIER,
             3,
             -2.4f))));
 
