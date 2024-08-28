@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pork_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod02tastyfurniture:pork_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "goldfishmod02tastyfurniture:pork_sword"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pork_ingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "goldfishmod02tastyfurniture:pork_sword"
+    ]
+  }
+}
