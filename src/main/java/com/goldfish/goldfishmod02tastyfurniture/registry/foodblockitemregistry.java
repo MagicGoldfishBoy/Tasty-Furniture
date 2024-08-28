@@ -87,8 +87,14 @@ public class foodblockitemregistry {
      public static final DeferredHolder<Item, BlockItem> POTATO_BRICKS_BLOCK_ITEM = FOODBLOCKITEM.register("potato_bricks_block_item",
      () -> new BlockItem(foodblockregistry.POTATO_BRICKS_BLOCK.get(), new BlockItem.Properties()));
   //.........beetroot
+     public static final DeferredHolder<Item, BlockItem> BEETROOT_BRICKS_BLOCK_ITEM = FOODBLOCKITEM.register("beetroot_bricks_block_item",
+     () -> new BlockItem(foodblockregistry.BEETROOT_BRICKS_BLOCK.get(), new BlockItem.Properties()));
   //.........carrot
+     public static final DeferredHolder<Item, BlockItem> CARROT_BRICKS_BLOCK_ITEM = FOODBLOCKITEM.register("carrot_bricks_block_item",
+     () -> new BlockItem(foodblockregistry.CARROT_BRICKS_BLOCK.get(), new BlockItem.Properties()));
   //.........chorus
+     public static final DeferredHolder<Item, BlockItem> CHORUS_BRICKS_BLOCK_ITEM = FOODBLOCKITEM.register("chorus_bricks_block_item",
+     () -> new BlockItem(foodblockregistry.CHORUS_BRICKS_BLOCK.get(), new BlockItem.Properties()));
   //.........glow_berry
   //.........melon
   //.........sweet_berry

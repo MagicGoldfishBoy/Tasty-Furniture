@@ -220,8 +220,23 @@ public class foodblockregistry {
          .sound(SoundType.MUD_BRICKS)
          ));
   //.........beetroot
+    public static final DeferredHolder<Block, Block> BEETROOT_BRICKS_BLOCK = FOODBLOCK.register("beetroot_bricks_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
   //.........carrot
+    public static final DeferredHolder<Block, Block> CARROT_BRICKS_BLOCK = FOODBLOCK.register("carrot_bricks_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
   //.........chorus
+    public static final DeferredHolder<Block, Block> CHORUS_BRICKS_BLOCK = FOODBLOCK.register("chorus_bricks_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
   //.........glow_berry
   //.........melon
   //.........sweet_berry

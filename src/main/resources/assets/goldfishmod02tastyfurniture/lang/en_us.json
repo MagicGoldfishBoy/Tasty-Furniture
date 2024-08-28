@@ -288,5 +288,8 @@
         "item.goldfishmod02tastyfurniture.pork_sword": "Pork Sword",
         "item.goldfishmod02tastyfurniture.rabbit_sword": "Rabbit Sword",
       "block.goldfishmod02tastyfurniture.apple_bricks_block": "Apple Bricks Block",
-      "block.goldfishmod02tastyfurniture.potato_bricks_block": "Potato Bricks Block"
+      "block.goldfishmod02tastyfurniture.potato_bricks_block": "Potato Bricks Block",
+      "block.goldfishmod02tastyfurniture.beetroot_bricks_block": "Beetroot Bricks Block",
+      "block.goldfishmod02tastyfurniture.carrot_bricks_block": "Carrot Bricks Block",
+      "block.goldfishmod02tastyfurniture.chorus_bricks_block": "Chorus Bricks Block"
 }
