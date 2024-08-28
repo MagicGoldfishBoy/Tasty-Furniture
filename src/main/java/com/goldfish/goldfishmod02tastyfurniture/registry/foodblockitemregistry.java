@@ -20,62 +20,87 @@ public class foodblockitemregistry {
 //                                                                                         Blocks
 //==============================================================================================================================================================================================
 
+ //------------------------------------------------------------------------------------Regular Blocks-------------------------------------------------------------------------------------------
+  //.........apple
      public static final DeferredHolder<Item, BlockItem> APPLE_BLOCK_ITEM = FOODBLOCKITEM.register("apple_block_item",
      () -> new BlockItem(foodblockregistry.APPLE_BLOCK.get(), new BlockItem.Properties()));
-
+  //.........potato
      public static final DeferredHolder<Item, BlockItem> POTATO_BLOCK_ITEM = FOODBLOCKITEM.register("potato_block_item",
      () -> new BlockItem(foodblockregistry.POTATO_BLOCK.get(), new BlockItem.Properties()));
-
+  //.........beetroot
      public static final DeferredHolder<Item, BlockItem> BEETROOT_BLOCK_ITEM = FOODBLOCKITEM.register("beetroot_block_item",
      () -> new BlockItem(foodblockregistry.BEETROOT_BLOCK.get(), new BlockItem.Properties()));
-
+  //.........carrot
      public static final DeferredHolder<Item, BlockItem> CARROT_BLOCK_ITEM = FOODBLOCKITEM.register("carrot_block_item",
      () -> new BlockItem(foodblockregistry.CARROT_BLOCK.get(), new BlockItem.Properties()));
-
+  //.........chorus
      public static final DeferredHolder<Item, BlockItem> CHORUS_BLOCK_ITEM = FOODBLOCKITEM.register("chorus_block_item",
      () -> new BlockItem(foodblockregistry.CHORUS_BLOCK.get(), new BlockItem.Properties()));
-
+  //.........glow_berry
      public static final DeferredHolder<Item, BlockItem> GLOW_BERRY_BLOCK_ITEM = FOODBLOCKITEM.register("glow_berry_block_item",
      () -> new BlockItem(foodblockregistry.GLOW_BERRY_BLOCK.get(), new BlockItem.Properties()));
-
+  //.........melon
      public static final DeferredHolder<Item, BlockItem> MELON_BLOCK_ITEM = FOODBLOCKITEM.register("melon_block_item",
      () -> new BlockItem(foodblockregistry.MELON_BLOCK.get(), new BlockItem.Properties()));
-
+  //.........sweet_berry
      public static final DeferredHolder<Item, BlockItem> SWEET_BERRY_BLOCK_ITEM = FOODBLOCKITEM.register("sweet_berry_block_item",
      () -> new BlockItem(foodblockregistry.SWEET_BERRY_BLOCK.get(), new BlockItem.Properties()));
-
+  //.........brown_mushroom
      public static final DeferredHolder<Item, BlockItem> BROWN_MUSHROOM_BLOCK_ITEM = FOODBLOCKITEM.register("brown_mushroom_block_item",
      () -> new BlockItem(foodblockregistry.BROWN_MUSHROOM_BLOCK.get(), new BlockItem.Properties()));
-
+  //.........red_mushroom
      public static final DeferredHolder<Item, BlockItem> RED_MUSHROOM_BLOCK_ITEM = FOODBLOCKITEM.register("red_mushroom_block_item",
      () -> new BlockItem(foodblockregistry.RED_MUSHROOM_BLOCK.get(), new BlockItem.Properties()));
-
+  //.........pumpkin
      public static final DeferredHolder<Item, BlockItem> PUMPKIN_BLOCK_ITEM = FOODBLOCKITEM.register("pumpkin_block_item",
      () -> new BlockItem(foodblockregistry.PUMPKIN_BLOCK.get(), new BlockItem.Properties()));
-
+  //.........chicken
      public static final DeferredHolder<Item, BlockItem> CHICKEN_BLOCK_ITEM = FOODBLOCKITEM.register("chicken_block_item",
      () -> new BlockItem(foodblockregistry.CHICKEN_BLOCK.get(), new BlockItem.Properties()));
-
+  //.........cod
      public static final DeferredHolder<Item, BlockItem> COD_BLOCK_ITEM = FOODBLOCKITEM.register("cod_block_item",
      () -> new BlockItem(foodblockregistry.COD_BLOCK.get(), new BlockItem.Properties()));
-
+  //.........salmon
      public static final DeferredHolder<Item, BlockItem> SALMON_BLOCK_ITEM = FOODBLOCKITEM.register("salmon_block_item",
      () -> new BlockItem(foodblockregistry.SALMON_BLOCK.get(), new BlockItem.Properties()));
-
+  //.........tropical_fish
      public static final DeferredHolder<Item, BlockItem> TROPICAL_FISH_BLOCK_ITEM = FOODBLOCKITEM.register("tropical_fish_block_item",
      () -> new BlockItem(foodblockregistry.TROPICAL_FISH_BLOCK.get(), new BlockItem.Properties()));
-
+  //.........mutton
      public static final DeferredHolder<Item, BlockItem> MUTTON_BLOCK_ITEM = FOODBLOCKITEM.register("mutton_block_item",
      () -> new BlockItem(foodblockregistry.MUTTON_BLOCK.get(), new BlockItem.Properties()));
-
+  //.........beef
      public static final DeferredHolder<Item, BlockItem> BEEF_BLOCK_ITEM = FOODBLOCKITEM.register("beef_block_item",
      () -> new BlockItem(foodblockregistry.BEEF_BLOCK.get(), new BlockItem.Properties()));
-
+  //.........pork
      public static final DeferredHolder<Item, BlockItem> PORK_BLOCK_ITEM = FOODBLOCKITEM.register("pork_block_item",
      () -> new BlockItem(foodblockregistry.PORK_BLOCK.get(), new BlockItem.Properties()));
-
+  //.........rabbit
      public static final DeferredHolder<Item, BlockItem> RABBIT_BLOCK_ITEM = FOODBLOCKITEM.register("rabbit_block_item",
      () -> new BlockItem(foodblockregistry.RABBIT_BLOCK.get(), new BlockItem.Properties()));
+    
+ //--------------------------------------------------------------------------------------Brick Blocks-------------------------------------------------------------------------------------------
+  //.........apple
+     public static final DeferredHolder<Item, BlockItem> APPLE_BRICKS_BLOCK_ITEM = FOODBLOCKITEM.register("apple_bricks_block_item",
+     () -> new BlockItem(foodblockregistry.APPLE_BRICKS_BLOCK.get(), new BlockItem.Properties()));
+  //.........potato
+  //.........beetroot
+  //.........carrot
+  //.........chorus
+  //.........glow_berry
+  //.........melon
+  //.........sweet_berry
+  //.........brown_mushroom
+  //.........red_mushroom
+  //.........pumpkin
+  //.........chicken
+  //.........cod
+  //.........salmon
+  //.........tropical_fish
+  //.........mutton
+  //.........beef
+  //.........pork
+  //.........rabbit
 
 //==============================================================================================================================================================================================
 //                                                                                         Doors

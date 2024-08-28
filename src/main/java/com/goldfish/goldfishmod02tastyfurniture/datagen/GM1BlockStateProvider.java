@@ -71,6 +71,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
      public void registerStatesAndModels() {
        // ModelFile apple_button_model = models().withExistingParent("door_bottom_left", "minecraft:block/door_bottom_left");
 
+    //-------------------------------------------------------------blocks---------------------------------------------------------------------
+     //____________________________________________________________bricks_____________________________________________________________________
+      //.........apple
+          net.minecraft.world.level.block.Block apple_bricks_block = foodblockregistry.APPLE_BRICKS_BLOCK.get();
+          ResourceLocation apple_bricks_texture = modLoc("block/apple_bricks_block");
+          simpleBlock(apple_bricks_block);
+
     //-------------------------------------------------------------doors---------------------------------------------------------------------
       //.........glow berry
         DoorBlock glow_berry_door_block = foodblockregistry.GLOW_BERRY_DOOR_BLOCK.get();

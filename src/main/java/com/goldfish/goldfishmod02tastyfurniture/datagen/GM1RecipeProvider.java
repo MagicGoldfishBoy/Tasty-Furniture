@@ -67,6 +67,17 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
 
         @Override
         protected void buildRecipes(RecipeOutput output) {
+        //-------------------------------------------------------------blocks---------------------------------------------------------------------
+         //____________________________________________________________bricks_____________________________________________________________________
+          //.........apple
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_BRICKS_BLOCK_ITEM.get(), 4)
+            .pattern("   ")
+            .pattern("AA ")
+            .pattern("AA ")
+            .define('A', foodblockitemregistry.APPLE_BLOCK_ITEM.get())
+            .unlockedBy("has_apple_block", has(foodblockitemregistry.APPLE_BLOCK_ITEM.get()))
+            .save(output);
+
         //-------------------------------unpack blocks------------------------------------------------
          //apple_block
             ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.APPLE_INGOT.get(), 9)
