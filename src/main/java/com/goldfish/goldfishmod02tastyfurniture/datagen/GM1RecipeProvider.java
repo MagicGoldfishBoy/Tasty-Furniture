@@ -21,6 +21,7 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.data.recipes.SingleItemRecipeBuilder;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -77,6 +78,22 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('A', foodblockitemregistry.APPLE_BLOCK_ITEM.get())
             .unlockedBy("has_apple_block", has(foodblockitemregistry.APPLE_BLOCK_ITEM.get()))
             .save(output);
+
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.APPLE_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.APPLE_BRICKS_BLOCK_ITEM.get())
+           .unlockedBy("has_apple_block", has(foodblockitemregistry.APPLE_BLOCK_ITEM.get()))
+           .save(output, "apple_bricks_block_from_apple_block_stonecutting");
+          //.........potato
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.POTATO_BRICKS_BLOCK_ITEM.get(), 4)
+            .pattern("   ")
+            .pattern("AA ")
+            .pattern("AA ")
+            .define('A', foodblockitemregistry.POTATO_BLOCK_ITEM.get())
+            .unlockedBy("has_potato_block", has(foodblockitemregistry.POTATO_BLOCK_ITEM.get()))
+            .save(output);
+
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.POTATO_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.POTATO_BRICKS_BLOCK_ITEM.get())
+           .unlockedBy("has_potato_block", has(foodblockitemregistry.POTATO_BLOCK_ITEM.get()))
+           .save(output, "potato_bricks_block_from_potato_block_stonecutting");
 
         //-------------------------------unpack blocks------------------------------------------------
          //apple_block
