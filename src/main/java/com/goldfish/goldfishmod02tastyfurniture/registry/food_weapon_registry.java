@@ -10,6 +10,7 @@ import com.goldfish.goldfishmod02tastyfurniture.item.glow_berry_sword;
 import com.goldfish.goldfishmod02tastyfurniture.item.melon_sword;
 import com.goldfish.goldfishmod02tastyfurniture.item.sweet_berry_sword;
 import com.goldfish.goldfishmod02tastyfurniture.item.brown_mushroom_sword;
+import com.goldfish.goldfishmod02tastyfurniture.item.red_mushroom_sword;
 import com.google.common.base.Supplier;
 
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -97,6 +98,14 @@ public class food_weapon_registry {
             22,
             () -> Ingredient.of(ingotregistry.BROWN_MUSHROOM_INGOT.get())
     );
+    public static final Tier RED_MUSHROOM_TIER = new SimpleTier(
+            BlockTags.INCORRECT_FOR_STONE_TOOL,
+            170,
+            4f,
+            1.0f,
+            22,
+            () -> Ingredient.of(ingotregistry.RED_MUSHROOM_INGOT.get())
+    );
 
     public static final DeferredRegister<Item> FOODWEAPON = DeferredRegister.create(BuiltInRegistries.ITEM, TastyFurniture.MODID);
 
@@ -156,6 +165,12 @@ public class food_weapon_registry {
     public static final DeferredHolder<Item, brown_mushroom_sword> BROWN_MUSHROOM_SWORD = FOODWEAPON.register("brown_mushroom_sword", () -> new brown_mushroom_sword(BROWN_MUSHROOM_TIER, new Item.Properties().attributes(
         SwordItem.createAttributes(
             BROWN_MUSHROOM_TIER,
+            3,
+            -2.4f))));
+  //.........red_mushroom 
+    public static final DeferredHolder<Item, red_mushroom_sword> RED_MUSHROOM_SWORD = FOODWEAPON.register("red_mushroom_sword", () -> new red_mushroom_sword(RED_MUSHROOM_TIER, new Item.Properties().attributes(
+        SwordItem.createAttributes(
+            RED_MUSHROOM_TIER,
             3,
             -2.4f))));
 
