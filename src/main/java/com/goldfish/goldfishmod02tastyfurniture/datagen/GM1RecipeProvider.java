@@ -317,6 +317,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .unlockedBy("has_rabbit_block", has(foodblockitemregistry.RABBIT_BLOCK_ITEM.get()))
            .save(output, "rabbit_bricks_block_from_rabbit_block_stonecutting");
          //____________________________________________________________chiseled_____________________________________________________________________
+
           //.........apple
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_CHISELED_BLOCK_ITEM.get())
             .pattern("   ")
@@ -329,6 +330,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.APPLE_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.APPLE_CHISELED_BLOCK_ITEM.get())
             .unlockedBy("has_apple_block", has(foodblockitemregistry.APPLE_BLOCK_ITEM.get()))
             .save(output, "apple_chiseled_block_from_apple_block_stonecutting");
+
           //.........potato
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.POTATO_CHISELED_BLOCK_ITEM.get())
             .pattern("   ")
@@ -341,6 +343,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.POTATO_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.POTATO_CHISELED_BLOCK_ITEM.get())
             .unlockedBy("has_potato_block", has(foodblockitemregistry.POTATO_BLOCK_ITEM.get()))
             .save(output, "potato_chiseled_block_from_potato_block_stonecutting");
+
           //.........beetroot
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEETROOT_CHISELED_BLOCK_ITEM.get())
             .pattern("   ")
@@ -353,6 +356,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.BEETROOT_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.BEETROOT_CHISELED_BLOCK_ITEM.get())
             .unlockedBy("has_beetroot_block", has(foodblockitemregistry.BEETROOT_BLOCK_ITEM.get()))
             .save(output, "beetroot_chiseled_block_from_beetroot_block_stonecutting");
+
           //.........carrot
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CARROT_CHISELED_BLOCK_ITEM.get())
             .pattern("   ")
@@ -365,6 +369,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.CARROT_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.CARROT_CHISELED_BLOCK_ITEM.get())
             .unlockedBy("has_carrot_block", has(foodblockitemregistry.CARROT_BLOCK_ITEM.get()))
             .save(output, "carrot_chiseled_block_from_carrot_block_stonecutting");
+
           //.........chorus
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHORUS_CHISELED_BLOCK_ITEM.get())
             .pattern("   ")
@@ -377,6 +382,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.CHORUS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.CHORUS_CHISELED_BLOCK_ITEM.get())
             .unlockedBy("has_chorus_block", has(foodblockitemregistry.CHORUS_BLOCK_ITEM.get()))
             .save(output, "chorus_chiseled_block_from_chorus_block_stonecutting");
+
           //.........glow_berry
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.GLOW_BERRY_CHISELED_BLOCK_ITEM.get())
             .pattern("   ")
@@ -389,6 +395,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.GLOW_BERRY_CHISELED_BLOCK_ITEM.get())
             .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
             .save(output, "glow_berry_chiseled_block_from_glow_berry_block_stonecutting");
+
           //.........melon
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MELON_CHISELED_BLOCK_ITEM.get())
             .pattern("   ")
@@ -401,6 +408,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.MELON_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.MELON_CHISELED_BLOCK_ITEM.get())
             .unlockedBy("has_melon_block", has(foodblockitemregistry.MELON_BLOCK_ITEM.get()))
             .save(output, "melon_chiseled_block_from_melon_block_stonecutting");
+            
           //.........sweet_berry
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SWEET_BERRY_CHISELED_BLOCK_ITEM.get())
             .pattern("   ")
@@ -413,6 +421,32 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.SWEET_BERRY_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.SWEET_BERRY_CHISELED_BLOCK_ITEM.get())
             .unlockedBy("has_sweet_berry_block", has(foodblockitemregistry.SWEET_BERRY_BLOCK_ITEM.get()))
             .save(output, "sweet_berry_chiseled_block_from_sweet_berry_block_stonecutting");
+
+          //.........brown_mushroom
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BROWN_MUSHROOM_CHISELED_BLOCK_ITEM.get())
+            .pattern("   ")
+            .pattern(" A ")
+            .pattern(" A ")
+            .define('A', foodblockitemregistry.BROWN_MUSHROOM_SLAB_ITEM.get())
+            .unlockedBy("has_brown_mushroom_slab", has(foodblockitemregistry.BROWN_MUSHROOM_SLAB_ITEM.get()))
+            .save(output);
+
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.BROWN_MUSHROOM_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.BROWN_MUSHROOM_CHISELED_BLOCK_ITEM.get())
+            .unlockedBy("has_brown_mushroom_block", has(foodblockitemregistry.BROWN_MUSHROOM_BLOCK_ITEM.get()))
+            .save(output, "brown_mushroom_chiseled_block_from_brown_mushroom_block_stonecutting");
+
+          //.........red_mushroom
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RED_MUSHROOM_CHISELED_BLOCK_ITEM.get())
+            .pattern("   ")
+            .pattern(" A ")
+            .pattern(" A ")
+            .define('A', foodblockitemregistry.RED_MUSHROOM_SLAB_ITEM.get())
+            .unlockedBy("has_red_mushroom_slab", has(foodblockitemregistry.RED_MUSHROOM_SLAB_ITEM.get()))
+            .save(output);
+
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.RED_MUSHROOM_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.RED_MUSHROOM_CHISELED_BLOCK_ITEM.get())
+            .unlockedBy("has_red_mushroom_block", has(foodblockitemregistry.RED_MUSHROOM_BLOCK_ITEM.get()))
+            .save(output, "red_mushroom_chiseled_block_from_red_mushroom_block_stonecutting");
 
         //-------------------------------unpack blocks------------------------------------------------
          //apple_block
