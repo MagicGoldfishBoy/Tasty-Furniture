@@ -316,6 +316,19 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.RABBIT_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.RABBIT_BRICKS_BLOCK_ITEM.get())
            .unlockedBy("has_rabbit_block", has(foodblockitemregistry.RABBIT_BLOCK_ITEM.get()))
            .save(output, "rabbit_bricks_block_from_rabbit_block_stonecutting");
+         //____________________________________________________________chiseled_____________________________________________________________________
+          //.........apple
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_CHISELED_BLOCK_ITEM.get())
+            .pattern("   ")
+            .pattern(" A ")
+            .pattern(" A ")
+            .define('A', foodblockitemregistry.APPLE_SLAB_ITEM.get())
+            .unlockedBy("has_apple_slab", has(foodblockitemregistry.APPLE_SLAB_ITEM.get()))
+            .save(output);
+
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.APPLE_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.APPLE_CHISELED_BLOCK_ITEM.get())
+            .unlockedBy("has_apple_block", has(foodblockitemregistry.APPLE_BLOCK_ITEM.get()))
+            .save(output, "apple_chiseled_block_from_apple_block_stonecutting");
 
         //-------------------------------unpack blocks------------------------------------------------
          //apple_block
