@@ -97,6 +97,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           net.minecraft.world.level.block.Block glow_berry_bricks_block = foodblockregistry.GLOW_BERRY_BRICKS_BLOCK.get();
           ResourceLocation glow_berry_bricks_texture = modLoc("block/glow_berry_bricks_block");
           simpleBlock(glow_berry_bricks_block);
+      //.........melon
+          net.minecraft.world.level.block.Block melon_bricks_block = foodblockregistry.MELON_BRICKS_BLOCK.get();
+          ResourceLocation melon_bricks_texture = modLoc("block/melon_bricks_block");
+          simpleBlock(melon_bricks_block);
 
     //-------------------------------------------------------------doors---------------------------------------------------------------------
       //.........glow berry
