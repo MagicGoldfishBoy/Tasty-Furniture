@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "goldfishmod02tastyfurniture:block/mutton_bricks_block"
+  }
+}
