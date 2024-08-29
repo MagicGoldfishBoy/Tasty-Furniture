@@ -269,6 +269,11 @@ public class foodblockregistry {
          .sound(SoundType.MUD_BRICKS)
          ));
   //.........pumpkin
+    public static final DeferredHolder<Block, Block> PUMPKIN_BRICKS_BLOCK = FOODBLOCK.register("pumpkin_bricks_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
   //.........chicken
   //.........cod
   //.........salmon
