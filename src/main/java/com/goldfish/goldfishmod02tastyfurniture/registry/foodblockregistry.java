@@ -305,6 +305,11 @@ public class foodblockregistry {
          .sound(SoundType.MUD_BRICKS)
          ));
   //.........beef
+    public static final DeferredHolder<Block, Block> BEEF_BRICKS_BLOCK = FOODBLOCK.register("beef_bricks_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
   //.........pork
   //.........rabbit
 

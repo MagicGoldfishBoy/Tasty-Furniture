@@ -129,6 +129,8 @@ public class foodblockitemregistry {
      public static final DeferredHolder<Item, BlockItem> MUTTON_BRICKS_BLOCK_ITEM = FOODBLOCKITEM.register("mutton_bricks_block_item",
      () -> new BlockItem(foodblockregistry.MUTTON_BRICKS_BLOCK.get(), new BlockItem.Properties()));
   //.........beef
+     public static final DeferredHolder<Item, BlockItem> BEEF_BRICKS_BLOCK_ITEM = FOODBLOCKITEM.register("beef_bricks_block_item",
+     () -> new BlockItem(foodblockregistry.BEEF_BRICKS_BLOCK.get(), new BlockItem.Properties()));
   //.........pork
   //.........rabbit
 

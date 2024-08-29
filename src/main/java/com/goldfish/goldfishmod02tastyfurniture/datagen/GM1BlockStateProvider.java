@@ -137,6 +137,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           net.minecraft.world.level.block.Block mutton_bricks_block = foodblockregistry.MUTTON_BRICKS_BLOCK.get();
           ResourceLocation mutton_bricks_texture = modLoc("block/mutton_bricks_block");
           simpleBlock(mutton_bricks_block);
+      //.........beef
+          net.minecraft.world.level.block.Block beef_bricks_block = foodblockregistry.BEEF_BRICKS_BLOCK.get();
+          ResourceLocation beef_bricks_texture = modLoc("block/beef_bricks_block");
+          simpleBlock(beef_bricks_block);
 
     //-------------------------------------------------------------doors---------------------------------------------------------------------
       //.........glow berry
