@@ -330,6 +330,24 @@ public class foodblockregistry {
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
          ));
+  //.........potato
+    public static final DeferredHolder<Block, Block> POTATO_CHISELED_BLOCK = FOODBLOCK.register("potato_chiseled_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
+  //.........beetroot
+    public static final DeferredHolder<Block, Block> BEETROOT_CHISELED_BLOCK = FOODBLOCK.register("beetroot_chiseled_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
+  //.........carrot
+    public static final DeferredHolder<Block, Block> CARROT_CHISELED_BLOCK = FOODBLOCK.register("carrot_chiseled_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
 
 //==============================================================================================================================================================================================
 //                                                                                          Doors

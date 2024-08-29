@@ -141,6 +141,15 @@ public class foodblockitemregistry {
   //.........apple
      public static final DeferredHolder<Item, BlockItem> APPLE_CHISELED_BLOCK_ITEM = FOODBLOCKITEM.register("apple_chiseled_block_item",
      () -> new BlockItem(foodblockregistry.APPLE_CHISELED_BLOCK.get(), new BlockItem.Properties()));
+  //.........potato
+     public static final DeferredHolder<Item, BlockItem> POTATO_CHISELED_BLOCK_ITEM = FOODBLOCKITEM.register("potato_chiseled_block_item",
+     () -> new BlockItem(foodblockregistry.POTATO_CHISELED_BLOCK.get(), new BlockItem.Properties()));
+  //.........beetroot
+     public static final DeferredHolder<Item, BlockItem> BEETROOT_CHISELED_BLOCK_ITEM = FOODBLOCKITEM.register("beetroot_chiseled_block_item",
+     () -> new BlockItem(foodblockregistry.BEETROOT_CHISELED_BLOCK.get(), new BlockItem.Properties()));
+  //.........carrot
+     public static final DeferredHolder<Item, BlockItem> CARROT_CHISELED_BLOCK_ITEM = FOODBLOCKITEM.register("carrot_chiseled_block_item",
+     () -> new BlockItem(foodblockregistry.CARROT_CHISELED_BLOCK.get(), new BlockItem.Properties()));
 
 //==============================================================================================================================================================================================
 //                                                                                         Doors
