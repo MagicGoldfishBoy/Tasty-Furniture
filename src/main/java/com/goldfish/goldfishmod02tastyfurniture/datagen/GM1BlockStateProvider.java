@@ -117,6 +117,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           net.minecraft.world.level.block.Block pumpkin_bricks_block = foodblockregistry.PUMPKIN_BRICKS_BLOCK.get();
           ResourceLocation pumpkin_bricks_texture = modLoc("block/pumpkin_bricks_block");
           simpleBlock(pumpkin_bricks_block);
+      //.........chicken
+          net.minecraft.world.level.block.Block chicken_bricks_block = foodblockregistry.CHICKEN_BRICKS_BLOCK.get();
+          ResourceLocation chicken_bricks_texture = modLoc("block/chicken_bricks_block");
+          simpleBlock(chicken_bricks_block);
 
     //-------------------------------------------------------------doors---------------------------------------------------------------------
       //.........glow berry
