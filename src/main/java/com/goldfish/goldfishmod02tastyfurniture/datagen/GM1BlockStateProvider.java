@@ -129,6 +129,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           net.minecraft.world.level.block.Block salmon_bricks_block = foodblockregistry.SALMON_BRICKS_BLOCK.get();
           ResourceLocation salmon_bricks_texture = modLoc("block/salmon_bricks_block");
           simpleBlock(salmon_bricks_block);
+      //.........tropical_fish
+          net.minecraft.world.level.block.Block tropical_fish_bricks_block = foodblockregistry.TROPICAL_FISH_BRICKS_BLOCK.get();
+          ResourceLocation tropical_fish_bricks_texture = modLoc("block/tropical_fish_bricks_block");
+          simpleBlock(tropical_fish_bricks_block);
 
     //-------------------------------------------------------------doors---------------------------------------------------------------------
       //.........glow berry
