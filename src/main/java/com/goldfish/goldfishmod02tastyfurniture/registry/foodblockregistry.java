@@ -348,6 +348,31 @@ public class foodblockregistry {
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
          ));
+  //.........chorus
+    public static final DeferredHolder<Block, Block> CHORUS_CHISELED_BLOCK = FOODBLOCK.register("chorus_chiseled_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
+  //.........glow_berry
+    public static final DeferredHolder<Block, Block> GLOW_BERRY_CHISELED_BLOCK = FOODBLOCK.register("glow_berry_chiseled_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         .lightLevel(state -> 15)
+         ));
+  //.........melon
+    public static final DeferredHolder<Block, Block> MELON_CHISELED_BLOCK = FOODBLOCK.register("melon_chiseled_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
+  //.........sweet_berry
+    public static final DeferredHolder<Block, Block> SWEET_BERRY_CHISELED_BLOCK = FOODBLOCK.register("sweet_berry_chiseled_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
 
 //==============================================================================================================================================================================================
 //                                                                                          Doors

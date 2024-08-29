@@ -70,6 +70,14 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("beetroot_chiseled_block_item", modLoc("block/beetroot_chiseled_block"));
       //.........carrot
         withExistingParent("carrot_chiseled_block_item", modLoc("block/carrot_chiseled_block"));
+      //.........chorus
+        withExistingParent("chorus_chiseled_block_item", modLoc("block/chorus_chiseled_block"));
+      //.........glow_berry
+        withExistingParent("glow_berry_chiseled_block_item", modLoc("block/glow_berry_chiseled_block"));
+      //.........melon
+        withExistingParent("melon_chiseled_block_item", modLoc("block/melon_chiseled_block"));
+      //.........sweet_berry
+        withExistingParent("sweet_berry_chiseled_block_item", modLoc("block/sweet_berry_chiseled_block"));
 
     //-------------------------------------------------------------doors---------------------------------------------------------------------
       //.........glow berry

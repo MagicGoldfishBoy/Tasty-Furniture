@@ -166,6 +166,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           net.minecraft.world.level.block.Block carrot_chiseled_block = foodblockregistry.CARROT_CHISELED_BLOCK.get();
           ResourceLocation carrot_chiseled_texture = modLoc("block/carrot_chiseled_block");
           simpleBlock(carrot_chiseled_block);
+      //.........chorus
+          net.minecraft.world.level.block.Block chorus_chiseled_block = foodblockregistry.CHORUS_CHISELED_BLOCK.get();
+          ResourceLocation chorus_chiseled_texture = modLoc("block/chorus_chiseled_block");
+          simpleBlock(chorus_chiseled_block);
+      //.........glow_berry
+          net.minecraft.world.level.block.Block glow_berry_chiseled_block = foodblockregistry.GLOW_BERRY_CHISELED_BLOCK.get();
+          ResourceLocation glow_berry_chiseled_texture = modLoc("block/glow_berry_chiseled_block");
+          simpleBlock(glow_berry_chiseled_block);
+      //.........melon
+          net.minecraft.world.level.block.Block melon_chiseled_block = foodblockregistry.MELON_CHISELED_BLOCK.get();
+          ResourceLocation melon_chiseled_texture = modLoc("block/melon_chiseled_block");
+          simpleBlock(melon_chiseled_block);
+      //.........sweet_berry
+          net.minecraft.world.level.block.Block sweet_berry_chiseled_block = foodblockregistry.SWEET_BERRY_CHISELED_BLOCK.get();
+          ResourceLocation sweet_berry_chiseled_texture = modLoc("block/sweet_berry_chiseled_block");
+          simpleBlock(sweet_berry_chiseled_block);
 
     //-------------------------------------------------------------doors---------------------------------------------------------------------
       //.........glow berry

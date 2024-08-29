@@ -306,8 +306,12 @@
       "block.goldfishmod02tastyfurniture.beef_bricks_block": "Beef Bricks Block",
       "block.goldfishmod02tastyfurniture.pork_bricks_block": "Pork Bricks Block",
       "block.goldfishmod02tastyfurniture.rabbit_bricks_block": "Rabbit Bricks Block",
-      "block.goldfishmod02tastyfurniture.apple_chiseled_block": "Apple Chiseled Block",
-      "block.goldfishmod02tastyfurniture.potato_chiseled_block": "Potato Chiseled Block",
-      "block.goldfishmod02tastyfurniture.beetroot_chiseled_block": "Beetroot Chiseled Block",
-      "block.goldfishmod02tastyfurniture.carrot_chiseled_block": "Carrot Chiseled Block"
+        "block.goldfishmod02tastyfurniture.apple_chiseled_block": "Apple Chiseled Block",
+        "block.goldfishmod02tastyfurniture.potato_chiseled_block": "Potato Chiseled Block",
+        "block.goldfishmod02tastyfurniture.beetroot_chiseled_block": "Beetroot Chiseled Block",
+        "block.goldfishmod02tastyfurniture.carrot_chiseled_block": "Carrot Chiseled Block",
+        "block.goldfishmod02tastyfurniture.chorus_chiseled_block": "Chorus Chiseled Block",
+        "block.goldfishmod02tastyfurniture.glow_berry_chiseled_block": "Glowberry Chiseled Block",
+        "block.goldfishmod02tastyfurniture.melon_chiseled_block": "Melon Chiseled Block",
+        "block.goldfishmod02tastyfurniture.sweet_berry_chiseled_block": "Sweetberry Chiseled Block"
 }

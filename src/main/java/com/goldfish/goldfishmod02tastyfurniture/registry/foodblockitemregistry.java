@@ -137,7 +137,7 @@ public class foodblockitemregistry {
   //.........rabbit
      public static final DeferredHolder<Item, BlockItem> RABBIT_BRICKS_BLOCK_ITEM = FOODBLOCKITEM.register("rabbit_bricks_block_item",
      () -> new BlockItem(foodblockregistry.RABBIT_BRICKS_BLOCK.get(), new BlockItem.Properties()));
- //--------------------------------------------------------------------------------------Brick Blocks-------------------------------------------------------------------------------------------
+ //-----------------------------------------------------------------------------------Chiseled Blocks-------------------------------------------------------------------------------------------
   //.........apple
      public static final DeferredHolder<Item, BlockItem> APPLE_CHISELED_BLOCK_ITEM = FOODBLOCKITEM.register("apple_chiseled_block_item",
      () -> new BlockItem(foodblockregistry.APPLE_CHISELED_BLOCK.get(), new BlockItem.Properties()));
@@ -150,6 +150,18 @@ public class foodblockitemregistry {
   //.........carrot
      public static final DeferredHolder<Item, BlockItem> CARROT_CHISELED_BLOCK_ITEM = FOODBLOCKITEM.register("carrot_chiseled_block_item",
      () -> new BlockItem(foodblockregistry.CARROT_CHISELED_BLOCK.get(), new BlockItem.Properties()));
+  //.........chorus
+     public static final DeferredHolder<Item, BlockItem> CHORUS_CHISELED_BLOCK_ITEM = FOODBLOCKITEM.register("chorus_chiseled_block_item",
+     () -> new BlockItem(foodblockregistry.CHORUS_CHISELED_BLOCK.get(), new BlockItem.Properties()));
+  //.........glow_berry
+     public static final DeferredHolder<Item, BlockItem> GLOW_BERRY_CHISELED_BLOCK_ITEM = FOODBLOCKITEM.register("glow_berry_chiseled_block_item",
+     () -> new BlockItem(foodblockregistry.GLOW_BERRY_CHISELED_BLOCK.get(), new BlockItem.Properties()));
+  //.........melon
+     public static final DeferredHolder<Item, BlockItem> MELON_CHISELED_BLOCK_ITEM = FOODBLOCKITEM.register("melon_chiseled_block_item",
+     () -> new BlockItem(foodblockregistry.MELON_CHISELED_BLOCK.get(), new BlockItem.Properties()));
+  //.........sweet_berry
+     public static final DeferredHolder<Item, BlockItem> SWEET_BERRY_CHISELED_BLOCK_ITEM = FOODBLOCKITEM.register("sweet_berry_chiseled_block_item",
+     () -> new BlockItem(foodblockregistry.SWEET_BERRY_CHISELED_BLOCK.get(), new BlockItem.Properties()));
 
 //==============================================================================================================================================================================================
 //                                                                                         Doors
