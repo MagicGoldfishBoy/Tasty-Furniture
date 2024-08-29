@@ -109,6 +109,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           net.minecraft.world.level.block.Block brown_mushroom_bricks_block = foodblockregistry.BROWN_MUSHROOM_BRICKS_BLOCK.get();
           ResourceLocation brown_mushroom_bricks_texture = modLoc("block/brown_mushroom_bricks_block");
           simpleBlock(brown_mushroom_bricks_block);
+      //.........red_mushroom
+          net.minecraft.world.level.block.Block red_mushroom_bricks_block = foodblockregistry.RED_MUSHROOM_BRICKS_BLOCK.get();
+          ResourceLocation red_mushroom_bricks_texture = modLoc("block/red_mushroom_bricks_block");
+          simpleBlock(red_mushroom_bricks_block);
 
     //-------------------------------------------------------------doors---------------------------------------------------------------------
       //.........glow berry
