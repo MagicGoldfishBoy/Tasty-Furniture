@@ -1,4 +1,4 @@
-// 1.21	2024-08-28T22:36:38.921384767	Item Models: goldfishmod02tastyfurniture
+// 1.21	2024-08-28T22:43:38.306060739	Item Models: goldfishmod02tastyfurniture
 5415a5c9e52089186849ab0906ab852e882667f5 assets/goldfishmod02tastyfurniture/models/item/apple_bars_item.json
 66bf13b2fe52a00ffe7f141beaaae9c6792e2759 assets/goldfishmod02tastyfurniture/models/item/apple_bricks_block_item.json
 ed0c1d66825c8212a7e00d0258b74b6a3393e9a6 assets/goldfishmod02tastyfurniture/models/item/apple_button_item.json
@@ -129,6 +129,7 @@ a47feae91db26919ecc724cecdb7e4b9c0adda19 assets/goldfishmod02tastyfurniture/mode
 41e197ad4289b0c09378eea645db7e6cb1711018 assets/goldfishmod02tastyfurniture/models/item/mutton_sword.json
 24998a3dc4d13c10465c4d79148de028ad793b05 assets/goldfishmod02tastyfurniture/models/item/mutton_trapdoor_item.json
 eafa284c36d7fcf7dd448ca514f89472258d5109 assets/goldfishmod02tastyfurniture/models/item/pork_bars_item.json
+a7d002293cb334b50f2a1f0e62ff2cf6aa94421e assets/goldfishmod02tastyfurniture/models/item/pork_bricks_block_item.json
 77fc3e515416efef6cf845c474680b274593e18b assets/goldfishmod02tastyfurniture/models/item/pork_button_item.json
 98797406910f070b266e9328b2c489f17f5578f3 assets/goldfishmod02tastyfurniture/models/item/pork_carpet_item.json
 76b4c16eac38bfad36fbdee71aba1f760616533a assets/goldfishmod02tastyfurniture/models/item/pork_door_item.json
