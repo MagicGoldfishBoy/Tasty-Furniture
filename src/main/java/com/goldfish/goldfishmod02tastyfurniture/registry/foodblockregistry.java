@@ -1169,6 +1169,7 @@ public class foodblockregistry {
 //                                                                                          Stairs
 //==============================================================================================================================================================================================
 
+ //-------------------------------------------------------------------------------------Regular Stairs------------------------------------------------------------------------------------------
    //.........apple
      public static final DeferredHolder<Block, StairBlock> APPLE_STAIRS = FOODBLOCK.register("apple_stairs", () -> new StairBlock(
           APPLE_BLOCK.get().defaultBlockState(),
@@ -1322,6 +1323,161 @@ public class foodblockregistry {
           .explosionResistance(9.5f)
           .sound(SoundType.MUD_BRICKS)
       ));
+
+ //-------------------------------------------------------------------------------------Bricks Stairs------------------------------------------------------------------------------------------
+   //.........apple
+   public static final DeferredHolder<Block, StairBlock> APPLE_BRICKS_STAIRS = FOODBLOCK.register("apple_bricks_stairs", () -> new StairBlock(
+    APPLE_BLOCK.get().defaultBlockState(),
+    BlockBehaviour.Properties.of()
+    .destroyTime(1.75f)
+    .explosionResistance(9.5f)
+    .sound(SoundType.MUD_BRICKS)
+   ));
+  //.........potato
+   public static final DeferredHolder<Block, StairBlock> POTATO_BRICKS_STAIRS = FOODBLOCK.register("potato_bricks_stairs", () -> new StairBlock(
+      POTATO_BLOCK.get().defaultBlockState(),
+      BlockBehaviour.Properties.of()
+      .destroyTime(1.75f)
+      .explosionResistance(9.5f)
+      .sound(SoundType.MUD_BRICKS)
+   ));
+  //.........beetroot
+   public static final DeferredHolder<Block, StairBlock> BEETROOT_BRICKS_STAIRS = FOODBLOCK.register("beetroot_bricks_stairs", () -> new StairBlock(
+      BEETROOT_BLOCK.get().defaultBlockState(),
+      BlockBehaviour.Properties.of()
+      .destroyTime(1.75f)
+      .explosionResistance(9.5f)
+      .sound(SoundType.MUD_BRICKS)
+   ));
+  //.........carrot
+   public static final DeferredHolder<Block, StairBlock> CARROT_BRICKS_STAIRS = FOODBLOCK.register("carrot_bricks_stairs", () -> new StairBlock(
+      CARROT_BLOCK.get().defaultBlockState(),
+      BlockBehaviour.Properties.of()
+      .destroyTime(1.75f)
+      .explosionResistance(9.5f)
+      .sound(SoundType.MUD_BRICKS)
+   ));
+  //.........chorus
+   public static final DeferredHolder<Block, StairBlock> CHORUS_BRICKS_STAIRS = FOODBLOCK.register("chorus_bricks_stairs", () -> new StairBlock(
+      CHORUS_BLOCK.get().defaultBlockState(),
+      BlockBehaviour.Properties.of()
+      .destroyTime(1.75f)
+      .explosionResistance(9.5f)
+      .sound(SoundType.MUD_BRICKS)
+   ));
+  //.........glow_berry
+   public static final DeferredHolder<Block, StairBlock> GLOW_BERRY_BRICKS_STAIRS = FOODBLOCK.register("glow_berry_bricks_stairs", () -> new StairBlock(
+      GLOW_BERRY_BLOCK.get().defaultBlockState(),
+      BlockBehaviour.Properties.of()
+      .destroyTime(1.75f)
+      .explosionResistance(9.5f)
+      .sound(SoundType.MUD_BRICKS)
+      .lightLevel(state -> 15)
+   ));
+  //.........melon
+   public static final DeferredHolder<Block, StairBlock> MELON_BRICKS_STAIRS = FOODBLOCK.register("melon_bricks_stairs", () -> new StairBlock(
+      MELON_BLOCK.get().defaultBlockState(),
+      BlockBehaviour.Properties.of()
+      .destroyTime(1.75f)
+      .explosionResistance(9.5f)
+      .sound(SoundType.MUD_BRICKS)
+   ));
+  //.........sweet_berry
+   public static final DeferredHolder<Block, StairBlock> SWEET_BERRY_BRICKS_STAIRS = FOODBLOCK.register("sweet_berry_bricks_stairs", () -> new StairBlock(
+      SWEET_BERRY_BLOCK.get().defaultBlockState(),
+      BlockBehaviour.Properties.of()
+      .destroyTime(1.75f)
+      .explosionResistance(9.5f)
+      .sound(SoundType.MUD_BRICKS)
+   ));
+  //.........brown_mushroom
+   public static final DeferredHolder<Block, StairBlock> BROWN_MUSHROOM_BRICKS_STAIRS = FOODBLOCK.register("brown_mushroom_bricks_stairs", () -> new StairBlock(
+      BROWN_MUSHROOM_BLOCK.get().defaultBlockState(),
+      BlockBehaviour.Properties.of()
+      .destroyTime(1.75f)
+      .explosionResistance(9.5f)
+      .sound(SoundType.MUD_BRICKS)
+   ));
+  //.........red_mushroom
+   public static final DeferredHolder<Block, StairBlock> RED_MUSHROOM_BRICKS_STAIRS = FOODBLOCK.register("red_mushroom_bricks_stairs", () -> new StairBlock(
+      RED_MUSHROOM_BLOCK.get().defaultBlockState(),
+      BlockBehaviour.Properties.of()
+      .destroyTime(1.75f)
+      .explosionResistance(9.5f)
+      .sound(SoundType.MUD_BRICKS)
+   ));
+  //.........pumpkin
+   public static final DeferredHolder<Block, StairBlock> PUMPKIN_BRICKS_STAIRS = FOODBLOCK.register("pumpkin_bricks_stairs", () -> new StairBlock(
+      PUMPKIN_BLOCK.get().defaultBlockState(),
+      BlockBehaviour.Properties.of()
+      .destroyTime(1.75f)
+      .explosionResistance(9.5f)
+      .sound(SoundType.MUD_BRICKS)
+   ));
+  //.........chicken
+   public static final DeferredHolder<Block, StairBlock> CHICKEN_BRICKS_STAIRS = FOODBLOCK.register("chicken_bricks_stairs", () -> new StairBlock(
+      CHICKEN_BLOCK.get().defaultBlockState(),
+      BlockBehaviour.Properties.of()
+      .destroyTime(1.75f)
+      .explosionResistance(9.5f)
+      .sound(SoundType.MUD_BRICKS)
+   ));
+  //.........cod
+   public static final DeferredHolder<Block, StairBlock> COD_BRICKS_STAIRS = FOODBLOCK.register("cod_bricks_stairs", () -> new StairBlock(
+      COD_BLOCK.get().defaultBlockState(),
+      BlockBehaviour.Properties.of()
+      .destroyTime(1.75f)
+      .explosionResistance(9.5f)
+      .sound(SoundType.MUD_BRICKS)
+   ));
+  //.........salmon
+   public static final DeferredHolder<Block, StairBlock> SALMON_BRICKS_STAIRS = FOODBLOCK.register("salmon_bricks_stairs", () -> new StairBlock(
+      SALMON_BLOCK.get().defaultBlockState(),
+      BlockBehaviour.Properties.of()
+      .destroyTime(1.75f)
+      .explosionResistance(9.5f)
+      .sound(SoundType.MUD_BRICKS)
+   ));
+  //.........tropical_fish
+   public static final DeferredHolder<Block, StairBlock> TROPICAL_FISH_BRICKS_STAIRS = FOODBLOCK.register("tropical_fish_bricks_stairs", () -> new StairBlock(
+      TROPICAL_FISH_BLOCK.get().defaultBlockState(),
+      BlockBehaviour.Properties.of()
+      .destroyTime(1.75f)
+      .explosionResistance(9.5f)
+      .sound(SoundType.MUD_BRICKS)
+   ));
+  //.........mutton
+   public static final DeferredHolder<Block, StairBlock> MUTTON_BRICKS_STAIRS = FOODBLOCK.register("mutton_bricks_stairs", () -> new StairBlock(
+      MUTTON_BLOCK.get().defaultBlockState(),
+      BlockBehaviour.Properties.of()
+      .destroyTime(1.75f)
+      .explosionResistance(9.5f)
+      .sound(SoundType.MUD_BRICKS)
+   ));
+  //.........beef
+   public static final DeferredHolder<Block, StairBlock> BEEF_BRICKS_STAIRS = FOODBLOCK.register("beef_bricks_stairs", () -> new StairBlock(
+      BEEF_BLOCK.get().defaultBlockState(),
+      BlockBehaviour.Properties.of()
+      .destroyTime(1.75f)
+      .explosionResistance(9.5f)
+      .sound(SoundType.MUD_BRICKS)
+   ));
+  //.........pork
+   public static final DeferredHolder<Block, StairBlock> PORK_BRICKS_STAIRS = FOODBLOCK.register("pork_bricks_stairs", () -> new StairBlock(
+      PORK_BLOCK.get().defaultBlockState(),
+      BlockBehaviour.Properties.of()
+      .destroyTime(1.75f)
+      .explosionResistance(9.5f)
+      .sound(SoundType.MUD_BRICKS)
+   ));
+  //.........rabbit
+   public static final DeferredHolder<Block, StairBlock> RABBIT_BRICKS_STAIRS = FOODBLOCK.register("rabbit_bricks_stairs", () -> new StairBlock(
+      RABBIT_BLOCK.get().defaultBlockState(),
+      BlockBehaviour.Properties.of()
+      .destroyTime(1.75f)
+      .explosionResistance(9.5f)
+      .sound(SoundType.MUD_BRICKS)
+   ));
   
 //==============================================================================================================================================================================================
 //                                                                                         Trapdoors

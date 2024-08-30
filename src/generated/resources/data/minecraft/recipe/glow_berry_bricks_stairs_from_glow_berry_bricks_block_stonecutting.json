@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "goldfishmod02tastyfurniture:glow_berry_bricks_block_item"
+  },
+  "result": {
+    "count": 1,
+    "id": "goldfishmod02tastyfurniture:glow_berry_bricks_stairs_item"
+  }
+}

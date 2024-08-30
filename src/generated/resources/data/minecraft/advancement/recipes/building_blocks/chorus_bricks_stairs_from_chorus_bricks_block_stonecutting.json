@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chorus_bricks_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod02tastyfurniture:chorus_bricks_block_item"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:chorus_bricks_stairs_from_chorus_bricks_block_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_chorus_bricks_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:chorus_bricks_stairs_from_chorus_bricks_block_stonecutting"
+    ]
+  }
+}

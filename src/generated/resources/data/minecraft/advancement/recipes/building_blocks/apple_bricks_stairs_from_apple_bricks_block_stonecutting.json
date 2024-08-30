@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_apple_bricks_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod02tastyfurniture:apple_bricks_block_item"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:apple_bricks_stairs_from_apple_bricks_block_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_apple_bricks_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:apple_bricks_stairs_from_apple_bricks_block_stonecutting"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chicken_bricks_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod02tastyfurniture:chicken_bricks_block_item"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:chicken_bricks_stairs_from_chicken_bricks_block_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_chicken_bricks_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:chicken_bricks_stairs_from_chicken_bricks_block_stonecutting"
+    ]
+  }
+}
