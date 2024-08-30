@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "goldfishmod02tastyfurniture:block/chorus_bricks_block",
+    "side": "goldfishmod02tastyfurniture:block/chorus_bricks_block",
+    "top": "goldfishmod02tastyfurniture:block/chorus_bricks_block"
+  }
+}

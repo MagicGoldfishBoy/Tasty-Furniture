@@ -21,7 +21,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
           //withExistingParent("apple_button_item", modLoc("block/apple_button"));
           //withExistingParent("apple_button_item", mcLoc("item/generated")).texture("layer0", "item/example_item");
 
-    //-------------------------------------------------------------blocks---------------------------------------------------------------------
+    //-------------------------------------------------------------blocks--------------------------------------------------------------------
      //____________________________________________________________bricks_____________________________________________________________________
       //.........apple
         withExistingParent("apple_bricks_block_item", modLoc("block/apple_bricks_block"));
@@ -61,7 +61,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("pork_bricks_block_item", modLoc("block/pork_bricks_block"));
       //.........rabbit
         withExistingParent("rabbit_bricks_block_item", modLoc("block/rabbit_bricks_block"));
-     //____________________________________________________________chiseled_____________________________________________________________________
+     //___________________________________________________________chiseled____________________________________________________________________
       //.........apple
         withExistingParent("apple_chiseled_block_item", modLoc("block/apple_chiseled_block"));
       //.........potato
@@ -131,7 +131,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       //...............rabbit
         withExistingParent("rabbit_door_item", mcLoc("item/generated")).texture("layer0", "item/rabbit_door");
 
-    //-----------------------------------------------------------buttons-------------------------------------------------------------------
+    //------------------------------------------------------------buttons--------------------------------------------------------------------
       //..............apple
         buttonInventory("apple_button_item", modLoc("block/apple_block"));
       //.............potato
@@ -171,7 +171,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       //............rabbit
         buttonInventory("rabbit_button_item", modLoc("block/rabbit_block"));
 
-    //-----------------------------------------------------------fences-------------------------------------------------------------------
+    //------------------------------------------------------------fences---------------------------------------------------------------------
       //..............apple
         fenceInventory("apple_fence_item", modLoc("block/apple_block"));
       //..............potato
@@ -210,7 +210,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        fenceInventory("pork_fence_item", modLoc("block/pork_block"));
       //..............rabbit
        fenceInventory("rabbit_fence_item", modLoc("block/rabbit_block"));
-    //------------------------------------------------------pressure plates-------------------------------------------------------------------
+    //-------------------------------------------------------pressure plates-----------------------------------------------------------------
       //..............apple
        pressurePlate("apple_pressure_plate_item", modLoc("block/apple_block"));
       //..............potato
@@ -250,13 +250,14 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       //..............rabbit
        pressurePlate("rabbit_pressure_plate_item", modLoc("block/rabbit_block"));
 
-    //---------------------------------------------------------signs----------------------------------------------------------------------
+    //-------------------------------------------------------------signs---------------------------------------------------------------------
       //..............apple
        withExistingParent("apple_sign_item", mcLoc("item/generated")).texture("layer0", "block/apple_block");
       //..............potato
        withExistingParent("potato_sign_item", mcLoc("item/generated")).texture("layer0", "block/potato_block");
 
-    //--------------------------------------------------------slabs------------------------------------------------------------------------
+    //-------------------------------------------------------------slabs---------------------------------------------------------------------
+     //________________________________________________________Regular Slabs_________________________________________________________________
       //..............apple
        slab("apple_slab_item", modLoc("block/apple_block"), modLoc("block/apple_block"), modLoc("block/apple_block"));
       //..............potato
@@ -295,6 +296,46 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        slab("pork_slab_item", modLoc("block/pork_block"), modLoc("block/pork_block"), modLoc("block/pork_block"));
       //..............rabbit
        slab("rabbit_slab_item", modLoc("block/rabbit_block"), modLoc("block/rabbit_block"), modLoc("block/rabbit_block"));
+
+     //________________________________________________________Bricks Slabs_________________________________________________________________
+      //..............apple
+       slab("apple_bricks_slab_item", modLoc("block/apple_bricks_block"), modLoc("block/apple_bricks_block"), modLoc("block/apple_bricks_block"));
+      //..............potato
+       slab("potato_bricks_slab_item", modLoc("block/potato_bricks_block"), modLoc("block/potato_bricks_block"), modLoc("block/potato_bricks_block"));
+      //..............beetroot
+       slab("beetroot_bricks_slab_item", modLoc("block/beetroot_bricks_block"), modLoc("block/beetroot_bricks_block"), modLoc("block/beetroot_bricks_block"));
+      //..............carrot
+       slab("carrot_bricks_slab_item", modLoc("block/carrot_bricks_block"), modLoc("block/carrot_bricks_block"), modLoc("block/carrot_bricks_block"));
+      //..............chorus
+       slab("chorus_bricks_slab_item", modLoc("block/chorus_bricks_block"), modLoc("block/chorus_bricks_block"), modLoc("block/chorus_bricks_block"));
+      //..............glow_berry
+       slab("glow_berry_bricks_slab_item", modLoc("block/glow_berry_bricks_block"), modLoc("block/glow_berry_bricks_block"), modLoc("block/glow_berry_bricks_block"));
+      //..............melon
+       slab("melon_bricks_slab_item", modLoc("block/melon_bricks_block"), modLoc("block/melon_bricks_block"), modLoc("block/melon_bricks_block"));
+      //..............sweet_berry
+       slab("sweet_berry_bricks_slab_item", modLoc("block/sweet_berry_bricks_block"), modLoc("block/sweet_berry_bricks_block"), modLoc("block/sweet_berry_bricks_block"));
+      //..............brown_mushroom
+       slab("brown_mushroom_bricks_slab_item", modLoc("block/brown_mushroom_bricks_block"), modLoc("block/brown_mushroom_bricks_block"), modLoc("block/brown_mushroom_bricks_block"));
+      //..............red_mushroom
+       slab("red_mushroom_bricks_slab_item", modLoc("block/red_mushroom_bricks_block"), modLoc("block/red_mushroom_bricks_block"), modLoc("block/red_mushroom_bricks_block"));
+      //..............pumpkin
+       slab("pumpkin_bricks_slab_item", modLoc("block/pumpkin_bricks_block"), modLoc("block/pumpkin_bricks_block"), modLoc("block/pumpkin_bricks_block"));
+      //..............chicken
+       slab("chicken_bricks_slab_item", modLoc("block/chicken_bricks_block"), modLoc("block/chicken_bricks_block"), modLoc("block/chicken_bricks_block"));
+      //..............cod
+       slab("cod_bricks_slab_item", modLoc("block/cod_bricks_block"), modLoc("block/cod_bricks_block"), modLoc("block/cod_bricks_block"));
+      //..............salmon
+       slab("salmon_bricks_slab_item", modLoc("block/salmon_bricks_block"), modLoc("block/salmon_bricks_block"), modLoc("block/salmon_bricks_block"));
+      //..............tropical_fish
+       slab("tropical_fish_bricks_slab_item", modLoc("block/tropical_fish_bricks_block"), modLoc("block/tropical_fish_bricks_block"), modLoc("block/tropical_fish_bricks_block"));
+      //..............mutton
+       slab("mutton_bricks_slab_item", modLoc("block/mutton_bricks_block"), modLoc("block/mutton_bricks_block"), modLoc("block/mutton_bricks_block"));
+      //..............beef
+       slab("beef_bricks_slab_item", modLoc("block/beef_bricks_block"), modLoc("block/beef_bricks_block"), modLoc("block/beef_bricks_block"));
+      //..............pork
+       slab("pork_bricks_slab_item", modLoc("block/pork_bricks_block"), modLoc("block/pork_bricks_block"), modLoc("block/pork_bricks_block"));
+      //..............rabbit
+       slab("rabbit_bricks_slab_item", modLoc("block/rabbit_bricks_block"), modLoc("block/rabbit_bricks_block"), modLoc("block/rabbit_bricks_block"));
 
     //--------------------------------------------------------stairs-----------------------------------------------------------------------
       //..............apple

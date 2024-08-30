@@ -930,6 +930,7 @@ public class foodblockregistry {
 //                                                                                          Slabs
 //==============================================================================================================================================================================================
 
+ //-------------------------------------------------------------------------------------Regular Slabs-------------------------------------------------------------------------------------------
    //.........apple
      public static final DeferredHolder<Block, SlabBlock> APPLE_SLAB = FOODBLOCK.register("apple_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
      .destroyTime(1.75f)
@@ -1045,6 +1046,124 @@ public class foodblockregistry {
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)
      ));
+
+ //-------------------------------------------------------------------------------------Brick Slabs--------------------------------------------------------------------------------------------
+   //.........apple
+     public static final DeferredHolder<Block, SlabBlock> APPLE_BRICKS_SLAB = FOODBLOCK.register("apple_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
+   //.........potato
+     public static final DeferredHolder<Block, SlabBlock> POTATO_BRICKS_SLAB = FOODBLOCK.register("potato_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
+   //.........beetroot
+     public static final DeferredHolder<Block, SlabBlock> BEETROOT_BRICKS_SLAB = FOODBLOCK.register("beetroot_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
+   //.........carrot
+     public static final DeferredHolder<Block, SlabBlock> CARROT_BRICKS_SLAB = FOODBLOCK.register("carrot_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
+   //.........chorus
+     public static final DeferredHolder<Block, SlabBlock> CHORUS_BRICKS_SLAB = FOODBLOCK.register("chorus_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
+   //.........glow_berry
+     public static final DeferredHolder<Block, SlabBlock> GLOW_BERRY_BRICKS_SLAB = FOODBLOCK.register("glow_berry_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     .lightLevel(state -> 15)
+     ));
+   //.........melon
+     public static final DeferredHolder<Block, SlabBlock> MELON_BRICKS_SLAB = FOODBLOCK.register("melon_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
+   //.........sweet_berry
+     public static final DeferredHolder<Block, SlabBlock> SWEET_BERRY_BRICKS_SLAB = FOODBLOCK.register("sweet_berry_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
+   //.........brown_mushroom
+     public static final DeferredHolder<Block, SlabBlock> BROWN_MUSHROOM_BRICKS_SLAB = FOODBLOCK.register("brown_mushroom_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
+   //.........red_mushroom
+     public static final DeferredHolder<Block, SlabBlock> RED_MUSHROOM_BRICKS_SLAB = FOODBLOCK.register("red_mushroom_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
+   //.........pumpkin
+     public static final DeferredHolder<Block, SlabBlock> PUMPKIN_BRICKS_SLAB = FOODBLOCK.register("pumpkin_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
+   //.........chicken
+     public static final DeferredHolder<Block, SlabBlock> CHICKEN_BRICKS_SLAB = FOODBLOCK.register("chicken_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
+   //.........cod
+     public static final DeferredHolder<Block, SlabBlock> COD_BRICKS_SLAB = FOODBLOCK.register("cod_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
+   //.........salmon
+     public static final DeferredHolder<Block, SlabBlock> SALMON_BRICKS_SLAB = FOODBLOCK.register("salmon_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
+   //.........tropical_fish
+     public static final DeferredHolder<Block, SlabBlock> TROPICAL_FISH_BRICKS_SLAB = FOODBLOCK.register("tropical_fish_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
+   //.........mutton
+     public static final DeferredHolder<Block, SlabBlock> MUTTON_BRICKS_SLAB = FOODBLOCK.register("mutton_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
+   //.........beef
+     public static final DeferredHolder<Block, SlabBlock> BEEF_BRICKS_SLAB = FOODBLOCK.register("beef_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
+   //.........pork
+     public static final DeferredHolder<Block, SlabBlock> PORK_BRICKS_SLAB = FOODBLOCK.register("pork_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
+   //.........rabbit
+     public static final DeferredHolder<Block, SlabBlock> RABBIT_BRICKS_SLAB = FOODBLOCK.register("rabbit_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
+     
      
 //==============================================================================================================================================================================================
 //                                                                                          Stairs

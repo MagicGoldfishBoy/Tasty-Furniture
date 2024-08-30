@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "goldfishmod02tastyfurniture:block/pork_bricks_slab"
+    },
+    "type=double": {
+      "model": "goldfishmod02tastyfurniture:block/pork_bricks_block"
+    },
+    "type=top": {
+      "model": "goldfishmod02tastyfurniture:block/pork_bricks_slab_top"
+    }
+  }
+}

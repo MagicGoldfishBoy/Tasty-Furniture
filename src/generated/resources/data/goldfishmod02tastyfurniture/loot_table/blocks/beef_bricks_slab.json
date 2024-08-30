@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "conditions": [
+                {
+                  "block": "goldfishmod02tastyfurniture:beef_bricks_slab",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "type": "double"
+                  }
+                }
+              ],
+              "count": 2.0,
+              "function": "minecraft:set_count"
+            },
+            {
+              "function": "minecraft:explosion_decay"
+            }
+          ],
+          "name": "goldfishmod02tastyfurniture:beef_bricks_slab_item"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "goldfishmod02tastyfurniture:blocks/beef_bricks_slab"
+}

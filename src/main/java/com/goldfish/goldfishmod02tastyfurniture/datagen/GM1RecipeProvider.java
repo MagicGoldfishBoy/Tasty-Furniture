@@ -316,7 +316,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.RABBIT_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.RABBIT_BRICKS_BLOCK_ITEM.get())
            .unlockedBy("has_rabbit_block", has(foodblockitemregistry.RABBIT_BLOCK_ITEM.get()))
            .save(output, "rabbit_bricks_block_from_rabbit_block_stonecutting");
-         //____________________________________________________________chiseled_____________________________________________________________________
+         //___________________________________________________________chiseled____________________________________________________________________
 
           //.........apple
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_CHISELED_BLOCK_ITEM.get())
@@ -556,7 +556,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_rabbit_block", has(foodblockitemregistry.RABBIT_BLOCK_ITEM.get()))
             .save(output, "rabbit_chiseled_block_from_rabbit_block_stonecutting");
 
-        //-------------------------------unpack blocks------------------------------------------------
+        //---------------------------------------------------------unpack blocks------------------------------------------------------------------
          //apple_block
             ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.APPLE_INGOT.get(), 9)
             .requires(foodblockitemregistry.APPLE_BLOCK_ITEM.get())
@@ -653,7 +653,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_rabbit_block", has(foodblockitemregistry.RABBIT_BLOCK_ITEM.get()))
             .save(output);
 
-        //--------------------------------pack ingots-------------------------------------------------
+        //----------------------------------------------------------pack ingots-------------------------------------------------------------------
          //apple
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.APPLE_INGOT.get())
           .pattern("AAA")
@@ -807,7 +807,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .unlockedBy("has_rabbit_nugget", has(nuggetregistry.RABBIT_NUGGET.get()))
           .save(output, "rabbit_ingot_from_crafting");
 
-        //-----------------------------------signs----------------------------------------------------
+        //-------------------------------------------------------------signs----------------------------------------------------------------------
          //apple_sign
            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_SIGN_ITEM.get())
            .pattern("AAA")
@@ -827,159 +827,257 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .unlockedBy("has_potato_ingot", has(ingotregistry.POTATO_INGOT.get()))
            .save(output);
 
-        //-----------------------------------slabs----------------------------------------------------
-         //apple
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_SLAB_ITEM.get())
-          .pattern("   ")
-          .pattern("   ")
-          .pattern("AAA")
-          .define('A', ingotregistry.APPLE_INGOT.get())
-          .unlockedBy("has_apple_ingot", has(ingotregistry.APPLE_INGOT.get()))
-          .save(output);
-         //potato
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.POTATO_SLAB_ITEM.get())
-          .pattern("   ")
-          .pattern("   ")
-          .pattern("AAA")
-          .define('A', ingotregistry.POTATO_INGOT.get())
-          .unlockedBy("has_potato_ingot", has(ingotregistry.POTATO_INGOT.get()))
-          .save(output);
-         //beetroot
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEETROOT_SLAB_ITEM.get())
-          .pattern("   ")
-          .pattern("   ")
-          .pattern("AAA")
-          .define('A', ingotregistry.BEETROOT_INGOT.get())
-          .unlockedBy("has_beetroot_ingot", has(ingotregistry.BEETROOT_INGOT.get()))
-          .save(output);
-         //carrot
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CARROT_SLAB_ITEM.get())
-          .pattern("   ")
-          .pattern("   ")
-          .pattern("AAA")
-          .define('A', ingotregistry.CARROT_INGOT.get())
-          .unlockedBy("has_carrot_ingot", has(ingotregistry.CARROT_INGOT.get()))
-          .save(output);
-         //chorus
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHORUS_SLAB_ITEM.get())
-          .pattern("   ")
-          .pattern("   ")
-          .pattern("AAA")
-          .define('A', ingotregistry.CHORUS_INGOT.get())
-          .unlockedBy("has_chorus_ingot", has(ingotregistry.CHORUS_INGOT.get()))
-          .save(output);
-         //glow_berry
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.GLOW_BERRY_SLAB_ITEM.get())
-          .pattern("   ")
-          .pattern("   ")
-          .pattern("AAA")
-          .define('A', ingotregistry.GLOW_BERRY_INGOT.get())
-          .unlockedBy("has_glow_berry_ingot", has(ingotregistry.GLOW_BERRY_INGOT.get()))
-          .save(output);
-         //melon
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MELON_SLAB_ITEM.get())
-          .pattern("   ")
-          .pattern("   ")
-          .pattern("AAA")
-          .define('A', ingotregistry.MELON_INGOT.get())
-          .unlockedBy("has_melon_ingot", has(ingotregistry.MELON_INGOT.get()))
-          .save(output);
-         //sweet_berry
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SWEET_BERRY_SLAB_ITEM.get())
-          .pattern("   ")
-          .pattern("   ")
-          .pattern("AAA")
-          .define('A', ingotregistry.SWEET_BERRY_INGOT.get())
-          .unlockedBy("has_sweet_berry_ingot", has(ingotregistry.SWEET_BERRY_INGOT.get()))
-          .save(output);
-         //brown_mushroom
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BROWN_MUSHROOM_SLAB_ITEM.get())
-          .pattern("   ")
-          .pattern("   ")
-          .pattern("AAA")
-          .define('A', ingotregistry.BROWN_MUSHROOM_INGOT.get())
-          .unlockedBy("has_brown_mushroom_ingot", has(ingotregistry.BROWN_MUSHROOM_INGOT.get()))
-          .save(output);
-         //red_mushroom
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RED_MUSHROOM_SLAB_ITEM.get())
-          .pattern("   ")
-          .pattern("   ")
-          .pattern("AAA")
-          .define('A', ingotregistry.RED_MUSHROOM_INGOT.get())
-          .unlockedBy("has_red_mushroom_ingot", has(ingotregistry.RED_MUSHROOM_INGOT.get()))
-          .save(output);
-         //pumpkin
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PUMPKIN_SLAB_ITEM.get())
-          .pattern("   ")
-          .pattern("   ")
-          .pattern("AAA")
-          .define('A', ingotregistry.PUMPKIN_INGOT.get())
-          .unlockedBy("has_pumpkin_ingot", has(ingotregistry.PUMPKIN_INGOT.get()))
-          .save(output);
-         //chicken
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHICKEN_SLAB_ITEM.get())
-          .pattern("   ")
-          .pattern("   ")
-          .pattern("AAA")
-          .define('A', ingotregistry.CHICKEN_INGOT.get())
-          .unlockedBy("has_chicken_ingot", has(ingotregistry.CHICKEN_INGOT.get()))
-          .save(output);
-         //cod
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.COD_SLAB_ITEM.get())
-          .pattern("   ")
-          .pattern("   ")
-          .pattern("AAA")
-          .define('A', ingotregistry.COD_INGOT.get())
-          .unlockedBy("has_cod_ingot", has(ingotregistry.COD_INGOT.get()))
-          .save(output);
-         //salmon
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SALMON_SLAB_ITEM.get())
-          .pattern("   ")
-          .pattern("   ")
-          .pattern("AAA")
-          .define('A', ingotregistry.SALMON_INGOT.get())
-          .unlockedBy("has_salmon_ingot", has(ingotregistry.SALMON_INGOT.get()))
-          .save(output);
-         //tropical_fish
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.TROPICAL_FISH_SLAB_ITEM.get())
-          .pattern("   ")
-          .pattern("   ")
-          .pattern("AAA")
-          .define('A', ingotregistry.TROPICAL_FISH_INGOT.get())
-          .unlockedBy("has_tropical_fish_ingot", has(ingotregistry.TROPICAL_FISH_INGOT.get()))
-          .save(output);
-         //mutton
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MUTTON_SLAB_ITEM.get())
-          .pattern("   ")
-          .pattern("   ")
-          .pattern("AAA")
-          .define('A', ingotregistry.MUTTON_INGOT.get())
-          .unlockedBy("has_mutton_ingot", has(ingotregistry.MUTTON_INGOT.get()))
-          .save(output);
-         //beef
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEEF_SLAB_ITEM.get())
-          .pattern("   ")
-          .pattern("   ")
-          .pattern("AAA")
-          .define('A', ingotregistry.BEEF_INGOT.get())
-          .unlockedBy("has_beef_ingot", has(ingotregistry.BEEF_INGOT.get()))
-          .save(output);
-         //pork
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PORK_SLAB_ITEM.get())
-          .pattern("   ")
-          .pattern("   ")
-          .pattern("AAA")
-          .define('A', ingotregistry.PORK_INGOT.get())
-          .unlockedBy("has_pork_ingot", has(ingotregistry.PORK_INGOT.get()))
-          .save(output);
-         //rabbit
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RABBIT_SLAB_ITEM.get())
-          .pattern("   ")
-          .pattern("   ")
-          .pattern("AAA")
-          .define('A', ingotregistry.RABBIT_INGOT.get())
-          .unlockedBy("has_rabbit_ingot", has(ingotregistry.RABBIT_INGOT.get()))
-          .save(output);
+        //-------------------------------------------------------------slabs----------------------------------------------------------------------
+         //________________________________________________________Regular Slabs__________________________________________________________________
+          //apple
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_SLAB_ITEM.get())
+            .pattern("   ")
+            .pattern("   ")
+            .pattern("AAA")
+            .define('A', ingotregistry.APPLE_INGOT.get())
+            .unlockedBy("has_apple_ingot", has(ingotregistry.APPLE_INGOT.get()))
+            .save(output);
+          //potato
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.POTATO_SLAB_ITEM.get())
+            .pattern("   ")
+            .pattern("   ")
+            .pattern("AAA")
+            .define('A', ingotregistry.POTATO_INGOT.get())
+            .unlockedBy("has_potato_ingot", has(ingotregistry.POTATO_INGOT.get()))
+            .save(output);
+          //beetroot
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEETROOT_SLAB_ITEM.get())
+            .pattern("   ")
+            .pattern("   ")
+            .pattern("AAA")
+            .define('A', ingotregistry.BEETROOT_INGOT.get())
+            .unlockedBy("has_beetroot_ingot", has(ingotregistry.BEETROOT_INGOT.get()))
+            .save(output);
+          //carrot
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CARROT_SLAB_ITEM.get())
+            .pattern("   ")
+            .pattern("   ")
+            .pattern("AAA")
+            .define('A', ingotregistry.CARROT_INGOT.get())
+            .unlockedBy("has_carrot_ingot", has(ingotregistry.CARROT_INGOT.get()))
+            .save(output);
+          //chorus
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHORUS_SLAB_ITEM.get())
+            .pattern("   ")
+            .pattern("   ")
+            .pattern("AAA")
+            .define('A', ingotregistry.CHORUS_INGOT.get())
+            .unlockedBy("has_chorus_ingot", has(ingotregistry.CHORUS_INGOT.get()))
+            .save(output);
+          //glow_berry
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.GLOW_BERRY_SLAB_ITEM.get())
+            .pattern("   ")
+            .pattern("   ")
+            .pattern("AAA")
+            .define('A', ingotregistry.GLOW_BERRY_INGOT.get())
+            .unlockedBy("has_glow_berry_ingot", has(ingotregistry.GLOW_BERRY_INGOT.get()))
+            .save(output);
+          //melon
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MELON_SLAB_ITEM.get())
+            .pattern("   ")
+            .pattern("   ")
+            .pattern("AAA")
+            .define('A', ingotregistry.MELON_INGOT.get())
+            .unlockedBy("has_melon_ingot", has(ingotregistry.MELON_INGOT.get()))
+            .save(output);
+          //sweet_berry
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SWEET_BERRY_SLAB_ITEM.get())
+            .pattern("   ")
+            .pattern("   ")
+            .pattern("AAA")
+            .define('A', ingotregistry.SWEET_BERRY_INGOT.get())
+            .unlockedBy("has_sweet_berry_ingot", has(ingotregistry.SWEET_BERRY_INGOT.get()))
+            .save(output);
+          //brown_mushroom
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BROWN_MUSHROOM_SLAB_ITEM.get())
+            .pattern("   ")
+            .pattern("   ")
+            .pattern("AAA")
+            .define('A', ingotregistry.BROWN_MUSHROOM_INGOT.get())
+            .unlockedBy("has_brown_mushroom_ingot", has(ingotregistry.BROWN_MUSHROOM_INGOT.get()))
+            .save(output);
+          //red_mushroom
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RED_MUSHROOM_SLAB_ITEM.get())
+            .pattern("   ")
+            .pattern("   ")
+            .pattern("AAA")
+            .define('A', ingotregistry.RED_MUSHROOM_INGOT.get())
+            .unlockedBy("has_red_mushroom_ingot", has(ingotregistry.RED_MUSHROOM_INGOT.get()))
+            .save(output);
+          //pumpkin
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PUMPKIN_SLAB_ITEM.get())
+            .pattern("   ")
+            .pattern("   ")
+            .pattern("AAA")
+            .define('A', ingotregistry.PUMPKIN_INGOT.get())
+            .unlockedBy("has_pumpkin_ingot", has(ingotregistry.PUMPKIN_INGOT.get()))
+            .save(output);
+          //chicken
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHICKEN_SLAB_ITEM.get())
+            .pattern("   ")
+            .pattern("   ")
+            .pattern("AAA")
+            .define('A', ingotregistry.CHICKEN_INGOT.get())
+            .unlockedBy("has_chicken_ingot", has(ingotregistry.CHICKEN_INGOT.get()))
+            .save(output);
+          //cod
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.COD_SLAB_ITEM.get())
+            .pattern("   ")
+            .pattern("   ")
+            .pattern("AAA")
+            .define('A', ingotregistry.COD_INGOT.get())
+            .unlockedBy("has_cod_ingot", has(ingotregistry.COD_INGOT.get()))
+            .save(output);
+          //salmon
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SALMON_SLAB_ITEM.get())
+            .pattern("   ")
+            .pattern("   ")
+            .pattern("AAA")
+            .define('A', ingotregistry.SALMON_INGOT.get())
+            .unlockedBy("has_salmon_ingot", has(ingotregistry.SALMON_INGOT.get()))
+            .save(output);
+          //tropical_fish
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.TROPICAL_FISH_SLAB_ITEM.get())
+            .pattern("   ")
+            .pattern("   ")
+            .pattern("AAA")
+            .define('A', ingotregistry.TROPICAL_FISH_INGOT.get())
+            .unlockedBy("has_tropical_fish_ingot", has(ingotregistry.TROPICAL_FISH_INGOT.get()))
+            .save(output);
+          //mutton
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MUTTON_SLAB_ITEM.get())
+            .pattern("   ")
+            .pattern("   ")
+            .pattern("AAA")
+            .define('A', ingotregistry.MUTTON_INGOT.get())
+            .unlockedBy("has_mutton_ingot", has(ingotregistry.MUTTON_INGOT.get()))
+            .save(output);
+          //beef
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEEF_SLAB_ITEM.get())
+            .pattern("   ")
+            .pattern("   ")
+            .pattern("AAA")
+            .define('A', ingotregistry.BEEF_INGOT.get())
+            .unlockedBy("has_beef_ingot", has(ingotregistry.BEEF_INGOT.get()))
+            .save(output);
+          //pork
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PORK_SLAB_ITEM.get())
+            .pattern("   ")
+            .pattern("   ")
+            .pattern("AAA")
+            .define('A', ingotregistry.PORK_INGOT.get())
+            .unlockedBy("has_pork_ingot", has(ingotregistry.PORK_INGOT.get()))
+            .save(output);
+          //rabbit
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RABBIT_SLAB_ITEM.get())
+            .pattern("   ")
+            .pattern("   ")
+            .pattern("AAA")
+            .define('A', ingotregistry.RABBIT_INGOT.get())
+            .unlockedBy("has_rabbit_ingot", has(ingotregistry.RABBIT_INGOT.get()))
+            .save(output);
+
+         //________________________________________________________Bricks Slabs__________________________________________________________________
+          //apple
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.APPLE_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+            foodblockitemregistry.APPLE_BRICKS_SLAB_ITEM.get(), 2)
+            .unlockedBy("has_apple_bricks_block", has(foodblockitemregistry.APPLE_BRICKS_BLOCK_ITEM.get()))
+            .save(output, "apple_bricks_slab_from_apple_bricks_block_stonecutting");
+          //potato
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.POTATO_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+            foodblockitemregistry.POTATO_BRICKS_SLAB_ITEM.get(), 2)
+            .unlockedBy("has_potato_bricks_block", has(foodblockitemregistry.POTATO_BRICKS_BLOCK_ITEM.get()))
+            .save(output, "potato_bricks_slab_from_potato_bricks_block_stonecutting");
+          //beetroot
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.BEETROOT_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+            foodblockitemregistry.BEETROOT_BRICKS_SLAB_ITEM.get(), 2)
+            .unlockedBy("has_beetroot_bricks_block", has(foodblockitemregistry.BEETROOT_BRICKS_BLOCK_ITEM.get()))
+            .save(output, "beetroot_bricks_slab_from_beetroot_bricks_block_stonecutting");
+          //carrot
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.CARROT_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+            foodblockitemregistry.CARROT_BRICKS_SLAB_ITEM.get(), 2)
+            .unlockedBy("has_carrot_bricks_block", has(foodblockitemregistry.CARROT_BRICKS_BLOCK_ITEM.get()))
+            .save(output, "carrot_bricks_slab_from_carrot_bricks_block_stonecutting");
+          //chorus
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.CHORUS_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+            foodblockitemregistry.CHORUS_BRICKS_SLAB_ITEM.get(), 2)
+            .unlockedBy("has_chorus_bricks_block", has(foodblockitemregistry.CHORUS_BRICKS_BLOCK_ITEM.get()))
+            .save(output, "chorus_bricks_slab_from_chorus_bricks_block_stonecutting");
+          //glow_berry
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.GLOW_BERRY_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+            foodblockitemregistry.GLOW_BERRY_BRICKS_SLAB_ITEM.get(), 2)
+            .unlockedBy("has_glow_berry_bricks_block", has(foodblockitemregistry.GLOW_BERRY_BRICKS_BLOCK_ITEM.get()))
+            .save(output, "glow_berry_bricks_slab_from_glow_berry_bricks_block_stonecutting");
+          //melon
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.MELON_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+            foodblockitemregistry.MELON_BRICKS_SLAB_ITEM.get(), 2)
+            .unlockedBy("has_melon_bricks_block", has(foodblockitemregistry.MELON_BRICKS_BLOCK_ITEM.get()))
+            .save(output, "melon_bricks_slab_from_melon_bricks_block_stonecutting");
+          //sweet_berry
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.SWEET_BERRY_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+            foodblockitemregistry.SWEET_BERRY_BRICKS_SLAB_ITEM.get(), 2)
+            .unlockedBy("has_sweet_berry_bricks_block", has(foodblockitemregistry.SWEET_BERRY_BRICKS_BLOCK_ITEM.get()))
+            .save(output, "sweet_berry_bricks_slab_from_sweet_berry_bricks_block_stonecutting");
+          //brown_mushroom
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.BROWN_MUSHROOM_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+            foodblockitemregistry.BROWN_MUSHROOM_BRICKS_SLAB_ITEM.get(), 2)
+            .unlockedBy("has_brown_mushroom_bricks_block", has(foodblockitemregistry.BROWN_MUSHROOM_BRICKS_BLOCK_ITEM.get()))
+            .save(output, "brown_mushroom_bricks_slab_from_brown_mushroom_bricks_block_stonecutting");
+          //red_mushroom
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.RED_MUSHROOM_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+            foodblockitemregistry.RED_MUSHROOM_BRICKS_SLAB_ITEM.get(), 2)
+            .unlockedBy("has_red_mushroom_bricks_block", has(foodblockitemregistry.RED_MUSHROOM_BRICKS_BLOCK_ITEM.get()))
+            .save(output, "red_mushroom_bricks_slab_from_red_mushroom_bricks_block_stonecutting");
+          //pumpkin
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.PUMPKIN_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+            foodblockitemregistry.PUMPKIN_BRICKS_SLAB_ITEM.get(), 2)
+            .unlockedBy("has_pumpkin_bricks_block", has(foodblockitemregistry.PUMPKIN_BRICKS_BLOCK_ITEM.get()))
+            .save(output, "pumpkin_bricks_slab_from_pumpkin_bricks_block_stonecutting");
+          //chicken
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.CHICKEN_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+            foodblockitemregistry.CHICKEN_BRICKS_SLAB_ITEM.get(), 2)
+            .unlockedBy("has_chicken_bricks_block", has(foodblockitemregistry.CHICKEN_BRICKS_BLOCK_ITEM.get()))
+            .save(output, "chicken_bricks_slab_from_chicken_bricks_block_stonecutting");
+          //cod
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.COD_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+            foodblockitemregistry.COD_BRICKS_SLAB_ITEM.get(), 2)
+            .unlockedBy("has_cod_bricks_block", has(foodblockitemregistry.COD_BRICKS_BLOCK_ITEM.get()))
+            .save(output, "cod_bricks_slab_from_cod_bricks_block_stonecutting");
+          //salmon
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.SALMON_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+            foodblockitemregistry.SALMON_BRICKS_SLAB_ITEM.get(), 2)
+            .unlockedBy("has_salmon_bricks_block", has(foodblockitemregistry.SALMON_BRICKS_BLOCK_ITEM.get()))
+            .save(output, "salmon_bricks_slab_from_salmon_bricks_block_stonecutting");
+          //tropical_fish
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.TROPICAL_FISH_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+            foodblockitemregistry.TROPICAL_FISH_BRICKS_SLAB_ITEM.get(), 2)
+            .unlockedBy("has_tropical_fish_bricks_block", has(foodblockitemregistry.TROPICAL_FISH_BRICKS_BLOCK_ITEM.get()))
+            .save(output, "tropical_fish_bricks_slab_from_tropical_fish_bricks_block_stonecutting");
+          //mutton
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.MUTTON_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+            foodblockitemregistry.MUTTON_BRICKS_SLAB_ITEM.get(), 2)
+            .unlockedBy("has_mutton_bricks_block", has(foodblockitemregistry.MUTTON_BRICKS_BLOCK_ITEM.get()))
+            .save(output, "mutton_bricks_slab_from_mutton_bricks_block_stonecutting");
+          //beef
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.BEEF_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+            foodblockitemregistry.BEEF_BRICKS_SLAB_ITEM.get(), 2)
+            .unlockedBy("has_beef_bricks_block", has(foodblockitemregistry.BEEF_BRICKS_BLOCK_ITEM.get()))
+            .save(output, "beef_bricks_slab_from_beef_bricks_block_stonecutting");
+          //pork
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.PORK_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+            foodblockitemregistry.PORK_BRICKS_SLAB_ITEM.get(), 2)
+            .unlockedBy("has_pork_bricks_block", has(foodblockitemregistry.PORK_BRICKS_BLOCK_ITEM.get()))
+            .save(output, "pork_bricks_slab_from_pork_bricks_block_stonecutting");
+          //rabbit
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.RABBIT_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+            foodblockitemregistry.RABBIT_BRICKS_SLAB_ITEM.get(), 2)
+            .unlockedBy("has_rabbit_bricks_block", has(foodblockitemregistry.RABBIT_BRICKS_BLOCK_ITEM.get()))
+            .save(output, "rabbit_bricks_slab_from_rabbit_bricks_block_stonecutting");
 
         //-----------------------------------stairs----------------------------------------------------
          //apple

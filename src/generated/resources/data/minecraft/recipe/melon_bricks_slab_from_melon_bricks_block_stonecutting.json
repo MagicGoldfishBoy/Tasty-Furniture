@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "goldfishmod02tastyfurniture:melon_bricks_block_item"
+  },
+  "result": {
+    "count": 2,
+    "id": "goldfishmod02tastyfurniture:melon_bricks_slab_item"
+  }
+}
