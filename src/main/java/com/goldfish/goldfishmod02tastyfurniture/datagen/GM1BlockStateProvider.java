@@ -210,6 +210,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           net.minecraft.world.level.block.Block tropical_fish_chiseled_block = foodblockregistry.TROPICAL_FISH_CHISELED_BLOCK.get();
           ResourceLocation tropical_fish_chiseled_texture = modLoc("block/tropical_fish_chiseled_block");
           simpleBlock(tropical_fish_chiseled_block);
+      //.........mutton
+          net.minecraft.world.level.block.Block mutton_chiseled_block = foodblockregistry.MUTTON_CHISELED_BLOCK.get();
+          ResourceLocation mutton_chiseled_texture = modLoc("block/mutton_chiseled_block");
+          simpleBlock(mutton_chiseled_block);
+      //.........beef
+          net.minecraft.world.level.block.Block beef_chiseled_block = foodblockregistry.BEEF_CHISELED_BLOCK.get();
+          ResourceLocation beef_chiseled_texture = modLoc("block/beef_chiseled_block");
+          simpleBlock(beef_chiseled_block);
+      //.........pork
+          net.minecraft.world.level.block.Block pork_chiseled_block = foodblockregistry.PORK_CHISELED_BLOCK.get();
+          ResourceLocation pork_chiseled_texture = modLoc("block/pork_chiseled_block");
+          simpleBlock(pork_chiseled_block);
+      //.........rabbit
+          net.minecraft.world.level.block.Block rabbit_chiseled_block = foodblockregistry.RABBIT_CHISELED_BLOCK.get();
+          ResourceLocation rabbit_chiseled_texture = modLoc("block/rabbit_chiseled_block");
+          simpleBlock(rabbit_chiseled_block);
 
     //-------------------------------------------------------------doors---------------------------------------------------------------------
       //.........glow berry

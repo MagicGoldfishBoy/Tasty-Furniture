@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "goldfishmod02tastyfurniture:beef_block_item"
+  },
+  "result": {
+    "count": 1,
+    "id": "goldfishmod02tastyfurniture:beef_chiseled_block_item"
+  }
+}

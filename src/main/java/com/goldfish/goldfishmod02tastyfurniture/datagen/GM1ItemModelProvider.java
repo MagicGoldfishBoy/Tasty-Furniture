@@ -92,6 +92,14 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("salmon_chiseled_block_item", modLoc("block/salmon_chiseled_block"));
       //.........tropical_fish
         withExistingParent("tropical_fish_chiseled_block_item", modLoc("block/tropical_fish_chiseled_block"));
+      //.........mutton
+        withExistingParent("mutton_chiseled_block_item", modLoc("block/mutton_chiseled_block"));
+      //.........beef
+        withExistingParent("beef_chiseled_block_item", modLoc("block/beef_chiseled_block"));
+      //.........pork
+        withExistingParent("pork_chiseled_block_item", modLoc("block/pork_chiseled_block"));
+      //.........rabbit
+        withExistingParent("rabbit_chiseled_block_item", modLoc("block/rabbit_chiseled_block"));
 
     //-------------------------------------------------------------doors---------------------------------------------------------------------
       //.........glow berry

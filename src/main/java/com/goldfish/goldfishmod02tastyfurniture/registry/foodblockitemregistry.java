@@ -183,6 +183,18 @@ public class foodblockitemregistry {
   //.........tropical_fish
      public static final DeferredHolder<Item, BlockItem> TROPICAL_FISH_CHISELED_BLOCK_ITEM = FOODBLOCKITEM.register("tropical_fish_chiseled_block_item",
      () -> new BlockItem(foodblockregistry.TROPICAL_FISH_CHISELED_BLOCK.get(), new BlockItem.Properties()));
+  //.........mutton
+     public static final DeferredHolder<Item, BlockItem> MUTTON_CHISELED_BLOCK_ITEM = FOODBLOCKITEM.register("mutton_chiseled_block_item",
+     () -> new BlockItem(foodblockregistry.MUTTON_CHISELED_BLOCK.get(), new BlockItem.Properties()));
+  //.........beef
+     public static final DeferredHolder<Item, BlockItem> BEEF_CHISELED_BLOCK_ITEM = FOODBLOCKITEM.register("beef_chiseled_block_item",
+     () -> new BlockItem(foodblockregistry.BEEF_CHISELED_BLOCK.get(), new BlockItem.Properties()));
+  //.........pork
+     public static final DeferredHolder<Item, BlockItem> PORK_CHISELED_BLOCK_ITEM = FOODBLOCKITEM.register("pork_chiseled_block_item",
+     () -> new BlockItem(foodblockregistry.PORK_CHISELED_BLOCK.get(), new BlockItem.Properties()));
+  //.........rabbit
+     public static final DeferredHolder<Item, BlockItem> RABBIT_CHISELED_BLOCK_ITEM = FOODBLOCKITEM.register("rabbit_chiseled_block_item",
+     () -> new BlockItem(foodblockregistry.RABBIT_CHISELED_BLOCK.get(), new BlockItem.Properties()));
 
 //==============================================================================================================================================================================================
 //                                                                                         Doors
