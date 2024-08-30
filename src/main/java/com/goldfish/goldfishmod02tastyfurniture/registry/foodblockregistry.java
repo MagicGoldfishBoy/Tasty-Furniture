@@ -385,6 +385,36 @@ public class foodblockregistry {
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
          ));
+  //.........pumpkin
+    public static final DeferredHolder<Block, Block> PUMPKIN_CHISELED_BLOCK = FOODBLOCK.register("pumpkin_chiseled_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
+  //.........chicken
+    public static final DeferredHolder<Block, Block> CHICKEN_CHISELED_BLOCK = FOODBLOCK.register("chicken_chiseled_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
+  //.........cod
+    public static final DeferredHolder<Block, Block> COD_CHISELED_BLOCK = FOODBLOCK.register("cod_chiseled_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
+  //.........salmon
+    public static final DeferredHolder<Block, Block> SALMON_CHISELED_BLOCK = FOODBLOCK.register("salmon_chiseled_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
+  //.........tropical_fish
+    public static final DeferredHolder<Block, Block> TROPICAL_FISH_CHISELED_BLOCK = FOODBLOCK.register("tropical_fish_chiseled_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
 
 //==============================================================================================================================================================================================
 //                                                                                          Doors

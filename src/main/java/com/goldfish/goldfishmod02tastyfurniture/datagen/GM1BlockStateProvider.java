@@ -190,6 +190,26 @@ public class GM1BlockStateProvider extends BlockStateProvider
           net.minecraft.world.level.block.Block red_mushroom_chiseled_block = foodblockregistry.RED_MUSHROOM_CHISELED_BLOCK.get();
           ResourceLocation red_mushroom_chiseled_texture = modLoc("block/red_mushroom_chiseled_block");
           simpleBlock(red_mushroom_chiseled_block);
+      //.........pumpkin
+          net.minecraft.world.level.block.Block pumpkin_chiseled_block = foodblockregistry.PUMPKIN_CHISELED_BLOCK.get();
+          ResourceLocation pumpkin_chiseled_texture = modLoc("block/pumpkin_chiseled_block");
+          simpleBlock(pumpkin_chiseled_block);
+      //.........chicken
+          net.minecraft.world.level.block.Block chicken_chiseled_block = foodblockregistry.CHICKEN_CHISELED_BLOCK.get();
+          ResourceLocation chicken_chiseled_texture = modLoc("block/chicken_chiseled_block");
+          simpleBlock(chicken_chiseled_block);
+      //.........cod
+          net.minecraft.world.level.block.Block cod_chiseled_block = foodblockregistry.COD_CHISELED_BLOCK.get();
+          ResourceLocation cod_chiseled_texture = modLoc("block/cod_chiseled_block");
+          simpleBlock(cod_chiseled_block);
+      //.........salmon
+          net.minecraft.world.level.block.Block salmon_chiseled_block = foodblockregistry.SALMON_CHISELED_BLOCK.get();
+          ResourceLocation salmon_chiseled_texture = modLoc("block/salmon_chiseled_block");
+          simpleBlock(salmon_chiseled_block);
+      //.........tropical_fish
+          net.minecraft.world.level.block.Block tropical_fish_chiseled_block = foodblockregistry.TROPICAL_FISH_CHISELED_BLOCK.get();
+          ResourceLocation tropical_fish_chiseled_texture = modLoc("block/tropical_fish_chiseled_block");
+          simpleBlock(tropical_fish_chiseled_block);
 
     //-------------------------------------------------------------doors---------------------------------------------------------------------
       //.........glow berry

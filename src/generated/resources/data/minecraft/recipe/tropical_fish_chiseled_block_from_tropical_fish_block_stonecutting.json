@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "goldfishmod02tastyfurniture:tropical_fish_block_item"
+  },
+  "result": {
+    "count": 1,
+    "id": "goldfishmod02tastyfurniture:tropical_fish_chiseled_block_item"
+  }
+}

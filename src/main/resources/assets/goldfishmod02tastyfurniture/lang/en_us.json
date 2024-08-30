@@ -315,5 +315,10 @@
         "block.goldfishmod02tastyfurniture.melon_chiseled_block": "Melon Chiseled Block",
         "block.goldfishmod02tastyfurniture.sweet_berry_chiseled_block": "Sweetberry Chiseled Block",
         "block.goldfishmod02tastyfurniture.brown_mushroom_chiseled_block": "Brown Mushroom Chiseled Block",
-        "block.goldfishmod02tastyfurniture.red_mushroom_chiseled_block": "Red Mushroom Chiseled Block"
+        "block.goldfishmod02tastyfurniture.red_mushroom_chiseled_block": "Red Mushroom Chiseled Block",
+        "block.goldfishmod02tastyfurniture.pumpkin_chiseled_block": "Pumpkin Chiseled Block",
+        "block.goldfishmod02tastyfurniture.chicken_chiseled_block": "Chicken Chiseled Block",
+        "block.goldfishmod02tastyfurniture.cod_chiseled_block": "Cod Chiseled Block",
+        "block.goldfishmod02tastyfurniture.salmon_chiseled_block": "Salmon Chiseled Block",
+        "block.goldfishmod02tastyfurniture.tropical_fish_chiseled_block": "Tropical Fish Chiseled Block"
 }

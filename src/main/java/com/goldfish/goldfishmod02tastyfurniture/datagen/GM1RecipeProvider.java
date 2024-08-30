@@ -447,6 +447,66 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.RED_MUSHROOM_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.RED_MUSHROOM_CHISELED_BLOCK_ITEM.get())
             .unlockedBy("has_red_mushroom_block", has(foodblockitemregistry.RED_MUSHROOM_BLOCK_ITEM.get()))
             .save(output, "red_mushroom_chiseled_block_from_red_mushroom_block_stonecutting");
+          //.........pumpkin
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PUMPKIN_CHISELED_BLOCK_ITEM.get())
+            .pattern("   ")
+            .pattern(" A ")
+            .pattern(" A ")
+            .define('A', foodblockitemregistry.PUMPKIN_SLAB_ITEM.get())
+            .unlockedBy("has_pumpkin_slab", has(foodblockitemregistry.PUMPKIN_SLAB_ITEM.get()))
+            .save(output);
+
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.PUMPKIN_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.PUMPKIN_CHISELED_BLOCK_ITEM.get())
+            .unlockedBy("has_pumpkin_block", has(foodblockitemregistry.PUMPKIN_BLOCK_ITEM.get()))
+            .save(output, "pumpkin_chiseled_block_from_pumpkin_block_stonecutting");
+          //.........chicken
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHICKEN_CHISELED_BLOCK_ITEM.get())
+            .pattern("   ")
+            .pattern(" A ")
+            .pattern(" A ")
+            .define('A', foodblockitemregistry.CHICKEN_SLAB_ITEM.get())
+            .unlockedBy("has_chicken_slab", has(foodblockitemregistry.CHICKEN_SLAB_ITEM.get()))
+            .save(output);
+
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.CHICKEN_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.CHICKEN_CHISELED_BLOCK_ITEM.get())
+            .unlockedBy("has_chicken_block", has(foodblockitemregistry.CHICKEN_BLOCK_ITEM.get()))
+            .save(output, "chicken_chiseled_block_from_chicken_block_stonecutting");
+          //.........cod
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.COD_CHISELED_BLOCK_ITEM.get())
+            .pattern("   ")
+            .pattern(" A ")
+            .pattern(" A ")
+            .define('A', foodblockitemregistry.COD_SLAB_ITEM.get())
+            .unlockedBy("has_cod_slab", has(foodblockitemregistry.COD_SLAB_ITEM.get()))
+            .save(output);
+
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.COD_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.COD_CHISELED_BLOCK_ITEM.get())
+            .unlockedBy("has_cod_block", has(foodblockitemregistry.COD_BLOCK_ITEM.get()))
+            .save(output, "cod_chiseled_block_from_cod_block_stonecutting");
+          //.........salmon
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SALMON_CHISELED_BLOCK_ITEM.get())
+            .pattern("   ")
+            .pattern(" A ")
+            .pattern(" A ")
+            .define('A', foodblockitemregistry.SALMON_SLAB_ITEM.get())
+            .unlockedBy("has_salmon_slab", has(foodblockitemregistry.SALMON_SLAB_ITEM.get()))
+            .save(output);
+
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.SALMON_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.SALMON_CHISELED_BLOCK_ITEM.get())
+            .unlockedBy("has_salmon_block", has(foodblockitemregistry.SALMON_BLOCK_ITEM.get()))
+            .save(output, "salmon_chiseled_block_from_salmon_block_stonecutting");
+          //.........tropical_fish
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.TROPICAL_FISH_CHISELED_BLOCK_ITEM.get())
+            .pattern("   ")
+            .pattern(" A ")
+            .pattern(" A ")
+            .define('A', foodblockitemregistry.TROPICAL_FISH_SLAB_ITEM.get())
+            .unlockedBy("has_tropical_fish_slab", has(foodblockitemregistry.TROPICAL_FISH_SLAB_ITEM.get()))
+            .save(output);
+
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.TROPICAL_FISH_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.TROPICAL_FISH_CHISELED_BLOCK_ITEM.get())
+            .unlockedBy("has_tropical_fish_block", has(foodblockitemregistry.TROPICAL_FISH_BLOCK_ITEM.get()))
+            .save(output, "tropical_fish_chiseled_block_from_tropical_fish_block_stonecutting");
 
         //-------------------------------unpack blocks------------------------------------------------
          //apple_block
