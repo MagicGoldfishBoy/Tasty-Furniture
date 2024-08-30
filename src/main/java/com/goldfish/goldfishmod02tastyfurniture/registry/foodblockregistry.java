@@ -32,6 +32,7 @@ import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
+import net.minecraft.world.level.block.LanternBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SignBlock;
 import net.minecraft.world.level.block.SlabBlock;
@@ -1978,6 +1979,12 @@ public class foodblockregistry {
 //==============================================================================================================================================================================================
 
    //.........apple
+    public static final DeferredHolder<Block, LanternBlock> APPLE_LANTERN = FOODBLOCK.register("apple_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
+     .destroyTime(0.5f)
+     .explosionResistance(0.5f)
+     .sound(SoundType.SHROOMLIGHT)
+     .lightLevel(state  -> 15)
+    ));
    //.........potato
    //.........beetroot
    //.........carrot

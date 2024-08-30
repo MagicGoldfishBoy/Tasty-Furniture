@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.CarpetBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
+import net.minecraft.world.level.block.LanternBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SignBlock;
 import net.minecraft.world.level.block.SlabBlock;
@@ -71,7 +72,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
      public void registerStatesAndModels() {
        // ModelFile apple_button_model = models().withExistingParent("door_bottom_left", "minecraft:block/door_bottom_left");
 
-    //------------------------------------------------------------blocks---------------------------------------------------------------------
+    //----------------------------------------------------------------blocks------------------------------------------------------------------------------
      //____________________________________________________________bricks_____________________________________________________________________
       //.........apple
           net.minecraft.world.level.block.Block apple_bricks_block = foodblockregistry.APPLE_BRICKS_BLOCK.get();
@@ -227,7 +228,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation rabbit_chiseled_texture = modLoc("block/rabbit_chiseled_block");
           simpleBlock(rabbit_chiseled_block);
 
-    //-------------------------------------------------------------doors---------------------------------------------------------------------
+    //-----------------------------------------------------------------doors------------------------------------------------------------------------------
       //.........glow berry
         DoorBlock glow_berry_door_block = foodblockregistry.GLOW_BERRY_DOOR_BLOCK.get();
         ResourceLocation glow_berry_door_bottom_texture = modLoc("block/glow_berry_door_bottom");
@@ -299,7 +300,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
         ResourceLocation rabbit_door_top_texture = modLoc("block/rabbit_door_top");
         doorBlockWithRenderType(rabbit_door_block, rabbit_door_bottom_texture, rabbit_door_top_texture, "cutout_mipped_all");
         
-    //------------------------------------------------------------buttons--------------------------------------------------------------------
+    //----------------------------------------------------------------buttons-----------------------------------------------------------------------------
         //.............apple
           ButtonBlock apple_button = foodblockregistry.APPLE_BUTTON.get();
           ResourceLocation apple_button_texture = modLoc("block/apple_block");
@@ -376,7 +377,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ButtonBlock rabbit_button = foodblockregistry.RABBIT_BUTTON.get();
           ResourceLocation rabbit_button_texture = modLoc("block/rabbit_block");
           buttonBlock(rabbit_button, rabbit_button_texture);
-    //------------------------------------------------------------fences---------------------------------------------------------------------
+    //-----------------------------------------------------------------fences-----------------------------------------------------------------------------
         //.............apple
           FenceBlock apple_fence = foodblockregistry.APPLE_FENCE.get();
           ResourceLocation apple_fence_texture = modLoc("block/apple_block");
@@ -454,7 +455,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation rabbit_fence_texture = modLoc("block/rabbit_block");
           fenceBlock(rabbit_fence, rabbit_fence_texture);
 
-    //--------------------------------------------------------pressure plates----------------------------------------------------------------
+    //------------------------------------------------------------pressure plates-------------------------------------------------------------------------
         //.............apple
           PressurePlateBlock apple_pressure_plate = foodblockregistry.APPLE_PRESSURE_PLATE.get();
           ResourceLocation apple_pressure_plate_texture = modLoc("block/apple_block");
@@ -532,7 +533,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation rabbit_pressure_plate_texture = modLoc("block/rabbit_block");
           pressurePlateBlock(rabbit_pressure_plate, rabbit_pressure_plate_texture);
 
-    //-------------------------------------------------------------signs---------------------------------------------------------------------
+    //-----------------------------------------------------------------signs------------------------------------------------------------------------------
         //.............apple
            StandingSignBlock apple_sign = foodblockregistry.APPLE_STANDING_SIGN.get();
            WallSignBlock apple_wall_sign = foodblockregistry.APPLE_WALL_SIGN.get();
@@ -561,7 +562,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
         //.........pork
         //.........rabbit
 
-    //-------------------------------------------------------------slabs---------------------------------------------------------------------
+    //-----------------------------------------------------------------slabs------------------------------------------------------------------------------
       //_______________________________________________________Regular Slabs_________________________________________________________________
         //............apple
           SlabBlock apple_slab = foodblockregistry.APPLE_SLAB.get();
@@ -719,7 +720,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
           slabBlock(rabbit_bricks_slab, rabbit_bricks_slab_texture, rabbit_bricks_slab_texture);
 
     //-----------------------------------------------------------------stairs-----------------------------------------------------------------------------
-      //_______________________________________________________Regular Stairs_________________________________________________________________
+      //___________________________________________________________Regular Stairs_________________________________________________________________________
         //............apple
           StairBlock apple_stairs = foodblockregistry.APPLE_STAIRS.get();
           ResourceLocation  apple_stair_texture = modLoc("block/apple_block");
@@ -797,7 +798,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation rabbit_stair_texture = modLoc("block/rabbit_block");
           stairsBlock(rabbit_stairs, rabbit_stair_texture);
 
-      //_______________________________________________________Bricks Stairs_________________________________________________________________
+      //___________________________________________________________Bricks Stairs__________________________________________________________________________
         //............apple
           StairBlock apple_bricks_stairs = foodblockregistry.APPLE_BRICKS_STAIRS.get();
           ResourceLocation  apple_bricks_stair_texture = modLoc("block/apple_bricks_block");
@@ -1259,5 +1260,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder rabbit_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(rabbit_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", rabbit_carpet_texture);
           simpleBlock(rabbit_carpet, new ModelFile.UncheckedModelFile(rabbit_carpet_model.getLocation()));
+
+    //----------------------------------------------------------------lanterns-----------------------------------------------------------------------------
+        //.............apple
+          LanternBlock apple_lantern = foodblockregistry.APPLE_LANTERN.get();
+          ResourceLocation apple_lantern_texture = modLoc("block/apple_lantern");
+          BlockModelBuilder apple_lantern_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(apple_lantern).getPath(), mcLoc("block/lantern"))
+          .renderType("cutout_mipped_all")
+          .texture("lantern", apple_lantern_texture)
+          .texture("hanging", apple_lantern_texture);
+          simpleBlock(apple_lantern, new ModelFile.UncheckedModelFile(apple_lantern_model.getLocation()));
 }}
     
