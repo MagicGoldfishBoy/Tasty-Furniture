@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/lantern",
+  "parent": "minecraft:block/template_hanging_lantern",
   "render_type": "minecraft:cutout_mipped_all",
   "textures": {
     "lantern": "goldfishmod02tastyfurniture:block/apple_lantern"

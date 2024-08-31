@@ -1964,7 +1964,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', nuggetregistry.RABBIT_NUGGET.get())
          .unlockedBy("has_rabbit_nugget", has(nuggetregistry.RABBIT_NUGGET.get()))
          .save(output);
-        //-----------------------------------sword----------------------------------------------------
+        //-----------------------------------sword-----------------------------------------------------
          //apple_sword
          ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, food_weapon_registry.APPLE_SWORD.get())
          .pattern(" A ")
@@ -2135,6 +2135,17 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotregistry.RABBIT_INGOT.get())
          .define('B', Items.STICK)
          .unlockedBy("has_rabbit_ingot", has(ingotregistry.RABBIT_INGOT.get()))
+         .save(output);
+
+        //----------------------------------lanterns---------------------------------------------------
+         //apple_lantern
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_LANTERN_ITEM.get())
+         .pattern("AAA")
+         .pattern("ABA")
+         .pattern("AAA")
+         .define('A', nuggetregistry.APPLE_NUGGET.get())
+         .define('B', Items.TORCH)
+         .unlockedBy("has_apple_nugget", has(nuggetregistry.APPLE_NUGGET.get()))
          .save(output);
 
         }

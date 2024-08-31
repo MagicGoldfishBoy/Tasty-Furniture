@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
+    "hanging=false": {
       "model": "goldfishmod02tastyfurniture:block/apple_lantern"
+    },
+    "hanging=true": {
+      "model": "goldfishmod02tastyfurniture:block/apple_hanging_lantern"
     }
   }
 }

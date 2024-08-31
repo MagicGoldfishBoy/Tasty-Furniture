@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod02tastyfurniture:apple_nugget"
+    },
+    "B": {
+      "item": "minecraft:torch"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "ABA",
+    "AAA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "goldfishmod02tastyfurniture:apple_lantern_item"
+  }
+}

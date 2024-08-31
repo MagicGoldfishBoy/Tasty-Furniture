@@ -1263,12 +1263,26 @@ public class GM1BlockStateProvider extends BlockStateProvider
 
     //----------------------------------------------------------------lanterns-----------------------------------------------------------------------------
         //.............apple
+
           LanternBlock apple_lantern = foodblockregistry.APPLE_LANTERN.get();
           ResourceLocation apple_lantern_texture = modLoc("block/apple_lantern");
-          BlockModelBuilder apple_lantern_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(apple_lantern).getPath(), mcLoc("block/lantern"))
-          .renderType("cutout_mipped_all")
-          .texture("lantern", apple_lantern_texture)
-          .texture("hanging", apple_lantern_texture);
-          simpleBlock(apple_lantern, new ModelFile.UncheckedModelFile(apple_lantern_model.getLocation()));
+  
+          BlockModelBuilder apple_lantern_model = models()
+              .withExistingParent("apple_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", apple_lantern_texture);
+  
+          BlockModelBuilder hanging_apple_lantern_model = models()
+              .withExistingParent("apple_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", apple_lantern_texture);
+  
+          getVariantBuilder(apple_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_apple_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(apple_lantern_model).addModel();
+          
 }}
     
+//.rotationX(180)

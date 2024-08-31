@@ -1984,6 +1984,7 @@ public class foodblockregistry {
      .explosionResistance(0.5f)
      .sound(SoundType.SHROOMLIGHT)
      .lightLevel(state  -> 15)
+     .noOcclusion()
     ));
    //.........potato
    //.........beetroot
