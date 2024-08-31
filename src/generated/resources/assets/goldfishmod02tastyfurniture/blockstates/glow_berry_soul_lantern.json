@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "goldfishmod02tastyfurniture:block/glow_berry_soul_lantern"
+    },
+    "hanging=true": {
+      "model": "goldfishmod02tastyfurniture:block/glow_berry_soul_hanging_lantern"
+    }
+  }
+}

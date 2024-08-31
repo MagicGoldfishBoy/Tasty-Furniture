@@ -2064,6 +2064,22 @@ public class foodblockregistry {
       .noOcclusion()
       ));
    //.........glow_berry
+    //regular
+      public static final DeferredHolder<Block, LanternBlock> GLOW_BERRY_LANTERN = FOODBLOCK.register("glow_berry_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.SHROOMLIGHT)
+      .lightLevel(state  -> 15)
+      .noOcclusion()
+      ));
+    //soul
+      public static final DeferredHolder<Block, LanternBlock> GLOW_BERRY_SOUL_LANTERN = FOODBLOCK.register("glow_berry_soul_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.SHROOMLIGHT)
+      .lightLevel(state  -> 10)
+      .noOcclusion()
+      ));
    //.........melon
    //.........sweet_berry
    //.........brown_mushroom

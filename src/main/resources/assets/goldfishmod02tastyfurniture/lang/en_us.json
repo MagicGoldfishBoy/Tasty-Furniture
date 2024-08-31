@@ -372,5 +372,7 @@
       "block.goldfishmod02tastyfurniture.carrot_lantern": "Carrot Lantern",
       "block.goldfishmod02tastyfurniture.carrot_soul_lantern": "Carrot Soul Lantern",
       "block.goldfishmod02tastyfurniture.chorus_lantern": "Chorus Lantern",
-      "block.goldfishmod02tastyfurniture.chorus_soul_lantern": "Chorus Soul Lantern"
+      "block.goldfishmod02tastyfurniture.chorus_soul_lantern": "Chorus Soul Lantern",
+      "block.goldfishmod02tastyfurniture.glow_berry_lantern": "Glowberry Lantern",
+      "block.goldfishmod02tastyfurniture.glow_berry_soul_lantern": "Glowberry Soul Lantern"
 }

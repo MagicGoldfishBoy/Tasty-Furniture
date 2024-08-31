@@ -1461,6 +1461,46 @@ public class GM1BlockStateProvider extends BlockStateProvider
               .modelForState().modelFile(hanging_chorus_soul_lantern_model).addModel()
               .partialState().with(LanternBlock.HANGING, false)
               .modelForState().modelFile(chorus_soul_lantern_model).addModel();
+
+        //.............glow_berry
+         //regular
+          LanternBlock glow_berry_lantern = foodblockregistry.GLOW_BERRY_LANTERN.get();
+          ResourceLocation glow_berry_lantern_texture = modLoc("block/glow_berry_lantern");
+  
+          BlockModelBuilder glow_berry_lantern_model = models()
+              .withExistingParent("glow_berry_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", glow_berry_lantern_texture);
+  
+          BlockModelBuilder hanging_glow_berry_lantern_model = models()
+              .withExistingParent("glow_berry_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", glow_berry_lantern_texture);
+  
+          getVariantBuilder(glow_berry_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_glow_berry_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(glow_berry_lantern_model).addModel();
+         //soul
+          LanternBlock glow_berry_soul_lantern = foodblockregistry.GLOW_BERRY_SOUL_LANTERN.get();
+          ResourceLocation glow_berry_soul_lantern_texture = modLoc("block/glow_berry_soul_lantern");
+  
+          BlockModelBuilder glow_berry_soul_lantern_model = models()
+              .withExistingParent("glow_berry_soul_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", glow_berry_soul_lantern_texture);
+  
+          BlockModelBuilder hanging_glow_berry_soul_lantern_model = models()
+              .withExistingParent("glow_berry_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", glow_berry_soul_lantern_texture);
+  
+          getVariantBuilder(glow_berry_soul_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_glow_berry_soul_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(glow_berry_soul_lantern_model).addModel();
           
 }}
     
