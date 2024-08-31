@@ -1323,24 +1323,24 @@ public class GM1BlockStateProvider extends BlockStateProvider
               .partialState().with(LanternBlock.HANGING, false)
               .modelForState().modelFile(potato_lantern_model).addModel();
          //soul
-         LanternBlock potato_soul_lantern = foodblockregistry.POTATO_SOUL_LANTERN.get();
-         ResourceLocation potato_soul_lantern_texture = modLoc("block/potato_soul_lantern");
- 
-         BlockModelBuilder potato_soul_lantern_model = models()
-             .withExistingParent("potato_soul_lantern", mcLoc("block/lantern"))
-             .renderType("cutout_mipped_all")
-             .texture("lantern", potato_soul_lantern_texture);
- 
-         BlockModelBuilder hanging_potato_soul_lantern_model = models()
-             .withExistingParent("potato_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
-             .renderType("cutout_mipped_all")
-             .texture("lantern", potato_soul_lantern_texture);
- 
-         getVariantBuilder(potato_soul_lantern)
-             .partialState().with(LanternBlock.HANGING, true)
-             .modelForState().modelFile(hanging_potato_soul_lantern_model).addModel()
-             .partialState().with(LanternBlock.HANGING, false)
-             .modelForState().modelFile(potato_soul_lantern_model).addModel();
+          LanternBlock potato_soul_lantern = foodblockregistry.POTATO_SOUL_LANTERN.get();
+          ResourceLocation potato_soul_lantern_texture = modLoc("block/potato_soul_lantern");
+  
+          BlockModelBuilder potato_soul_lantern_model = models()
+              .withExistingParent("potato_soul_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", potato_soul_lantern_texture);
+  
+          BlockModelBuilder hanging_potato_soul_lantern_model = models()
+              .withExistingParent("potato_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", potato_soul_lantern_texture);
+  
+          getVariantBuilder(potato_soul_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_potato_soul_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(potato_soul_lantern_model).addModel();
 
         //.............beetroot
          //regular
@@ -1363,24 +1363,64 @@ public class GM1BlockStateProvider extends BlockStateProvider
               .partialState().with(LanternBlock.HANGING, false)
               .modelForState().modelFile(beetroot_lantern_model).addModel();
          //soul
-         LanternBlock beetroot_soul_lantern = foodblockregistry.BEETROOT_SOUL_LANTERN.get();
-         ResourceLocation beetroot_soul_lantern_texture = modLoc("block/beetroot_soul_lantern");
- 
-         BlockModelBuilder beetroot_soul_lantern_model = models()
-             .withExistingParent("beetroot_soul_lantern", mcLoc("block/lantern"))
-             .renderType("cutout_mipped_all")
-             .texture("lantern", beetroot_soul_lantern_texture);
- 
-         BlockModelBuilder hanging_beetroot_soul_lantern_model = models()
-             .withExistingParent("beetroot_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
-             .renderType("cutout_mipped_all")
-             .texture("lantern", beetroot_soul_lantern_texture);
- 
-         getVariantBuilder(beetroot_soul_lantern)
-             .partialState().with(LanternBlock.HANGING, true)
-             .modelForState().modelFile(hanging_beetroot_soul_lantern_model).addModel()
-             .partialState().with(LanternBlock.HANGING, false)
-             .modelForState().modelFile(beetroot_soul_lantern_model).addModel();
+          LanternBlock beetroot_soul_lantern = foodblockregistry.BEETROOT_SOUL_LANTERN.get();
+          ResourceLocation beetroot_soul_lantern_texture = modLoc("block/beetroot_soul_lantern");
+  
+          BlockModelBuilder beetroot_soul_lantern_model = models()
+              .withExistingParent("beetroot_soul_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", beetroot_soul_lantern_texture);
+  
+          BlockModelBuilder hanging_beetroot_soul_lantern_model = models()
+              .withExistingParent("beetroot_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", beetroot_soul_lantern_texture);
+  
+          getVariantBuilder(beetroot_soul_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_beetroot_soul_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(beetroot_soul_lantern_model).addModel();
+
+        //.............carrot
+         //regular
+          LanternBlock carrot_lantern = foodblockregistry.CARROT_LANTERN.get();
+          ResourceLocation carrot_lantern_texture = modLoc("block/carrot_lantern");
+  
+          BlockModelBuilder carrot_lantern_model = models()
+              .withExistingParent("carrot_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", carrot_lantern_texture);
+  
+          BlockModelBuilder hanging_carrot_lantern_model = models()
+              .withExistingParent("carrot_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", carrot_lantern_texture);
+  
+          getVariantBuilder(carrot_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_carrot_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(carrot_lantern_model).addModel();
+         //soul
+          LanternBlock carrot_soul_lantern = foodblockregistry.CARROT_SOUL_LANTERN.get();
+          ResourceLocation carrot_soul_lantern_texture = modLoc("block/carrot_soul_lantern");
+  
+          BlockModelBuilder carrot_soul_lantern_model = models()
+              .withExistingParent("carrot_soul_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", carrot_soul_lantern_texture);
+  
+          BlockModelBuilder hanging_carrot_soul_lantern_model = models()
+              .withExistingParent("carrot_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", carrot_soul_lantern_texture);
+  
+          getVariantBuilder(carrot_soul_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_carrot_soul_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(carrot_soul_lantern_model).addModel();
           
 }}
     
