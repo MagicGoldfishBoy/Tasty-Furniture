@@ -1421,6 +1421,46 @@ public class GM1BlockStateProvider extends BlockStateProvider
               .modelForState().modelFile(hanging_carrot_soul_lantern_model).addModel()
               .partialState().with(LanternBlock.HANGING, false)
               .modelForState().modelFile(carrot_soul_lantern_model).addModel();
+
+        //.............chorus
+         //regular
+          LanternBlock chorus_lantern = foodblockregistry.CHORUS_LANTERN.get();
+          ResourceLocation chorus_lantern_texture = modLoc("block/chorus_lantern");
+  
+          BlockModelBuilder chorus_lantern_model = models()
+              .withExistingParent("chorus_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", chorus_lantern_texture);
+  
+          BlockModelBuilder hanging_chorus_lantern_model = models()
+              .withExistingParent("chorus_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", chorus_lantern_texture);
+  
+          getVariantBuilder(chorus_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_chorus_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(chorus_lantern_model).addModel();
+         //soul
+          LanternBlock chorus_soul_lantern = foodblockregistry.CHORUS_SOUL_LANTERN.get();
+          ResourceLocation chorus_soul_lantern_texture = modLoc("block/chorus_soul_lantern");
+  
+          BlockModelBuilder chorus_soul_lantern_model = models()
+              .withExistingParent("chorus_soul_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", chorus_soul_lantern_texture);
+  
+          BlockModelBuilder hanging_chorus_soul_lantern_model = models()
+              .withExistingParent("chorus_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", chorus_soul_lantern_texture);
+  
+          getVariantBuilder(chorus_soul_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_chorus_soul_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(chorus_soul_lantern_model).addModel();
           
 }}
     
