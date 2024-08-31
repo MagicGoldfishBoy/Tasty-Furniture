@@ -2278,6 +2278,26 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_melon_nugget", has(nuggetregistry.MELON_NUGGET.get()))
             .save(output);
 
+         //sweet_berry_lantern
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SWEET_BERRY_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetregistry.SWEET_BERRY_NUGGET.get())
+            .define('B', Items.TORCH)
+            .unlockedBy("has_sweet_berry_nugget", has(nuggetregistry.SWEET_BERRY_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SWEET_BERRY_SOUL_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetregistry.SWEET_BERRY_NUGGET.get())
+            .define('B', Items.SOUL_TORCH)
+            .unlockedBy("has_sweet_berry_nugget", has(nuggetregistry.SWEET_BERRY_NUGGET.get()))
+            .save(output);
+
         }
     }
 }
