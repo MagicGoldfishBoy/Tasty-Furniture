@@ -596,9 +596,12 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         ResourceLocation rabbit_carpet_texture = modLoc("block/rabbit_carpet");
         carpet("rabbit_carpet_item", rabbit_carpet_texture);
 
-    //--------------------------------------------------------carpet-----------------------------------------------------------------------
+    //--------------------------------------------------------lanterns-----------------------------------------------------------------------
       //..............apple
-       withExistingParent("apple_lantern_item", modLoc("block/apple_lantern"));
+       //regular
+        withExistingParent("apple_lantern_item", modLoc("block/apple_lantern"));
+       //soul
+        withExistingParent("apple_soul_lantern_item", modLoc("block/apple_soul_lantern"));
     //--------------------------------------------------------swords-----------------------------------------------------------------------
       //..............apple
        withExistingParent("apple_sword", mcLoc("item/handheld")).texture("layer0", "item/apple_sword");

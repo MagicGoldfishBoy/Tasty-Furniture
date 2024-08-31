@@ -2139,14 +2139,24 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
 
         //----------------------------------lanterns---------------------------------------------------
          //apple_lantern
-         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_LANTERN_ITEM.get())
-         .pattern("AAA")
-         .pattern("ABA")
-         .pattern("AAA")
-         .define('A', nuggetregistry.APPLE_NUGGET.get())
-         .define('B', Items.TORCH)
-         .unlockedBy("has_apple_nugget", has(nuggetregistry.APPLE_NUGGET.get()))
-         .save(output);
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetregistry.APPLE_NUGGET.get())
+            .define('B', Items.TORCH)
+            .unlockedBy("has_apple_nugget", has(nuggetregistry.APPLE_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_SOUL_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetregistry.APPLE_NUGGET.get())
+            .define('B', Items.SOUL_TORCH)
+            .unlockedBy("has_apple_nugget", has(nuggetregistry.APPLE_NUGGET.get()))
+            .save(output);
 
         }
     }

@@ -1979,13 +1979,22 @@ public class foodblockregistry {
 //==============================================================================================================================================================================================
 
    //.........apple
-    public static final DeferredHolder<Block, LanternBlock> APPLE_LANTERN = FOODBLOCK.register("apple_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
-     .destroyTime(0.5f)
-     .explosionResistance(0.5f)
-     .sound(SoundType.SHROOMLIGHT)
-     .lightLevel(state  -> 15)
-     .noOcclusion()
-    ));
+    //regular
+      public static final DeferredHolder<Block, LanternBlock> APPLE_LANTERN = FOODBLOCK.register("apple_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.SHROOMLIGHT)
+      .lightLevel(state  -> 15)
+      .noOcclusion()
+      ));
+    //soul
+      public static final DeferredHolder<Block, LanternBlock> APPLE_SOUL_LANTERN = FOODBLOCK.register("apple_soul_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.SHROOMLIGHT)
+      .lightLevel(state  -> 10)
+      .noOcclusion()
+      ));
    //.........potato
    //.........beetroot
    //.........carrot
