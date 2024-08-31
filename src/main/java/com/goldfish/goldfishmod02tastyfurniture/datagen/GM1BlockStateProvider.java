@@ -1501,6 +1501,46 @@ public class GM1BlockStateProvider extends BlockStateProvider
               .modelForState().modelFile(hanging_glow_berry_soul_lantern_model).addModel()
               .partialState().with(LanternBlock.HANGING, false)
               .modelForState().modelFile(glow_berry_soul_lantern_model).addModel();
+              
+        //.............melon
+         //regular
+          LanternBlock melon_lantern = foodblockregistry.MELON_LANTERN.get();
+          ResourceLocation melon_lantern_texture = modLoc("block/melon_lantern");
+  
+          BlockModelBuilder melon_lantern_model = models()
+              .withExistingParent("melon_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", melon_lantern_texture);
+  
+          BlockModelBuilder hanging_melon_lantern_model = models()
+              .withExistingParent("melon_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", melon_lantern_texture);
+  
+          getVariantBuilder(melon_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_melon_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(melon_lantern_model).addModel();
+         //soul
+          LanternBlock melon_soul_lantern = foodblockregistry.MELON_SOUL_LANTERN.get();
+          ResourceLocation melon_soul_lantern_texture = modLoc("block/melon_soul_lantern");
+  
+          BlockModelBuilder melon_soul_lantern_model = models()
+              .withExistingParent("melon_soul_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", melon_soul_lantern_texture);
+  
+          BlockModelBuilder hanging_melon_soul_lantern_model = models()
+              .withExistingParent("melon_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", melon_soul_lantern_texture);
+  
+          getVariantBuilder(melon_soul_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_melon_soul_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(melon_soul_lantern_model).addModel();
           
 }}
     
