@@ -2157,6 +2157,26 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', Items.SOUL_TORCH)
             .unlockedBy("has_apple_nugget", has(nuggetregistry.APPLE_NUGGET.get()))
             .save(output);
+            
+         //potato_lantern
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.POTATO_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetregistry.POTATO_NUGGET.get())
+            .define('B', Items.TORCH)
+            .unlockedBy("has_potato_nugget", has(nuggetregistry.POTATO_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.POTATO_SOUL_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetregistry.POTATO_NUGGET.get())
+            .define('B', Items.SOUL_TORCH)
+            .unlockedBy("has_potato_nugget", has(nuggetregistry.POTATO_NUGGET.get()))
+            .save(output);
 
         }
     }

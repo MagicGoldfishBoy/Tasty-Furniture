@@ -364,5 +364,7 @@
         "block.goldfishmod02tastyfurniture.pork_chiseled_block": "Pork Chiseled Block",
         "block.goldfishmod02tastyfurniture.rabbit_chiseled_block": "Rabbit Chiseled Block",
       "block.goldfishmod02tastyfurniture.apple_lantern": "Apple Lantern",
-      "block.goldfishmod02tastyfurniture.apple_soul_lantern": "Apple Soul Lantern"
+      "block.goldfishmod02tastyfurniture.apple_soul_lantern": "Apple Soul Lantern",
+      "block.goldfishmod02tastyfurniture.potato_lantern": "Potato Lantern",
+      "block.goldfishmod02tastyfurniture.potato_soul_lantern": "Potato Soul Lantern"
 }

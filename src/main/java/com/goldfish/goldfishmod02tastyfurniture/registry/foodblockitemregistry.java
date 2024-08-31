@@ -955,5 +955,12 @@ public class foodblockitemregistry {
     //soul
       public static final DeferredHolder<Item, BlockItem> APPLE_SOUL_LANTERN_ITEM = FOODBLOCKITEM.register("apple_soul_lantern_item",
       () -> new BlockItem(foodblockregistry.APPLE_SOUL_LANTERN.get(), new BlockItem.Properties()));
+   //.........potato
+    //regular
+      public static final DeferredHolder<Item, BlockItem> POTATO_LANTERN_ITEM = FOODBLOCKITEM.register("potato_lantern_item",
+      () -> new BlockItem(foodblockregistry.POTATO_LANTERN.get(), new BlockItem.Properties()));
+    //soul
+      public static final DeferredHolder<Item, BlockItem> POTATO_SOUL_LANTERN_ITEM = FOODBLOCKITEM.register("potato_soul_lantern_item",
+      () -> new BlockItem(foodblockregistry.POTATO_SOUL_LANTERN.get(), new BlockItem.Properties()));
 
 }

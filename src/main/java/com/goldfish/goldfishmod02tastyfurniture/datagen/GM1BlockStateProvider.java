@@ -1301,6 +1301,46 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_apple_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(apple_soul_lantern_model).addModel();
+             
+        //.............potato
+         //regular
+          LanternBlock potato_lantern = foodblockregistry.POTATO_LANTERN.get();
+          ResourceLocation potato_lantern_texture = modLoc("block/potato_lantern");
+  
+          BlockModelBuilder potato_lantern_model = models()
+              .withExistingParent("potato_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", potato_lantern_texture);
+  
+          BlockModelBuilder hanging_potato_lantern_model = models()
+              .withExistingParent("potato_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", potato_lantern_texture);
+  
+          getVariantBuilder(potato_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_potato_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(potato_lantern_model).addModel();
+         //soul
+         LanternBlock potato_soul_lantern = foodblockregistry.POTATO_SOUL_LANTERN.get();
+         ResourceLocation potato_soul_lantern_texture = modLoc("block/potato_soul_lantern");
+ 
+         BlockModelBuilder potato_soul_lantern_model = models()
+             .withExistingParent("potato_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", potato_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_potato_soul_lantern_model = models()
+             .withExistingParent("potato_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", potato_soul_lantern_texture);
+ 
+         getVariantBuilder(potato_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_potato_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(potato_soul_lantern_model).addModel();
           
 }}
     
