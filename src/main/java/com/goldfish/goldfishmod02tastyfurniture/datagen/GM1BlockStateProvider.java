@@ -1341,6 +1341,46 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_potato_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(potato_soul_lantern_model).addModel();
+
+        //.............beetroot
+         //regular
+          LanternBlock beetroot_lantern = foodblockregistry.BEETROOT_LANTERN.get();
+          ResourceLocation beetroot_lantern_texture = modLoc("block/beetroot_lantern");
+  
+          BlockModelBuilder beetroot_lantern_model = models()
+              .withExistingParent("beetroot_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", beetroot_lantern_texture);
+  
+          BlockModelBuilder hanging_beetroot_lantern_model = models()
+              .withExistingParent("beetroot_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", beetroot_lantern_texture);
+  
+          getVariantBuilder(beetroot_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_beetroot_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(beetroot_lantern_model).addModel();
+         //soul
+         LanternBlock beetroot_soul_lantern = foodblockregistry.BEETROOT_SOUL_LANTERN.get();
+         ResourceLocation beetroot_soul_lantern_texture = modLoc("block/beetroot_soul_lantern");
+ 
+         BlockModelBuilder beetroot_soul_lantern_model = models()
+             .withExistingParent("beetroot_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", beetroot_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_beetroot_soul_lantern_model = models()
+             .withExistingParent("beetroot_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", beetroot_soul_lantern_texture);
+ 
+         getVariantBuilder(beetroot_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_beetroot_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(beetroot_soul_lantern_model).addModel();
           
 }}
     
