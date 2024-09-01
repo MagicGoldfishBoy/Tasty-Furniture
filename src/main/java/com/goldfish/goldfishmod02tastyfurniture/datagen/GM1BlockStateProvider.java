@@ -1741,6 +1741,46 @@ public class GM1BlockStateProvider extends BlockStateProvider
               .modelForState().modelFile(hanging_chicken_soul_lantern_model).addModel()
               .partialState().with(LanternBlock.HANGING, false)
               .modelForState().modelFile(chicken_soul_lantern_model).addModel();
+
+        //.............cod
+         //regular
+          LanternBlock cod_lantern = foodblockregistry.COD_LANTERN.get();
+          ResourceLocation cod_lantern_texture = modLoc("block/cod_lantern");
+  
+          BlockModelBuilder cod_lantern_model = models()
+              .withExistingParent("cod_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", cod_lantern_texture);
+  
+          BlockModelBuilder hanging_cod_lantern_model = models()
+              .withExistingParent("cod_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", cod_lantern_texture);
+  
+          getVariantBuilder(cod_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_cod_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(cod_lantern_model).addModel();
+         //soul
+          LanternBlock cod_soul_lantern = foodblockregistry.COD_SOUL_LANTERN.get();
+          ResourceLocation cod_soul_lantern_texture = modLoc("block/cod_soul_lantern");
+  
+          BlockModelBuilder cod_soul_lantern_model = models()
+              .withExistingParent("cod_soul_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", cod_soul_lantern_texture);
+  
+          BlockModelBuilder hanging_cod_soul_lantern_model = models()
+              .withExistingParent("cod_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", cod_soul_lantern_texture);
+  
+          getVariantBuilder(cod_soul_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_cod_soul_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(cod_soul_lantern_model).addModel();
           
 }}
     

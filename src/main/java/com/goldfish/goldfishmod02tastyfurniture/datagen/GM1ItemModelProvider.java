@@ -668,6 +668,12 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("chicken_lantern_item", modLoc("block/chicken_lantern"));
        //soul
         withExistingParent("chicken_soul_lantern_item", modLoc("block/chicken_soul_lantern"));
+
+      //..............cod
+       //regular
+        withExistingParent("cod_lantern_item", modLoc("block/cod_lantern"));
+       //soul
+        withExistingParent("cod_soul_lantern_item", modLoc("block/cod_soul_lantern"));
     //--------------------------------------------------------swords-----------------------------------------------------------------------
       //..............apple
        withExistingParent("apple_sword", mcLoc("item/handheld")).texture("layer0", "item/apple_sword");
