@@ -1901,6 +1901,46 @@ public class GM1BlockStateProvider extends BlockStateProvider
               .modelForState().modelFile(hanging_mutton_soul_lantern_model).addModel()
               .partialState().with(LanternBlock.HANGING, false)
               .modelForState().modelFile(mutton_soul_lantern_model).addModel();
+
+        //.............beef
+         //regular
+          LanternBlock beef_lantern = foodblockregistry.BEEF_LANTERN.get();
+          ResourceLocation beef_lantern_texture = modLoc("block/beef_lantern");
+  
+          BlockModelBuilder beef_lantern_model = models()
+              .withExistingParent("beef_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", beef_lantern_texture);
+  
+          BlockModelBuilder hanging_beef_lantern_model = models()
+              .withExistingParent("beef_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", beef_lantern_texture);
+  
+          getVariantBuilder(beef_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_beef_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(beef_lantern_model).addModel();
+         //soul
+          LanternBlock beef_soul_lantern = foodblockregistry.BEEF_SOUL_LANTERN.get();
+          ResourceLocation beef_soul_lantern_texture = modLoc("block/beef_soul_lantern");
+  
+          BlockModelBuilder beef_soul_lantern_model = models()
+              .withExistingParent("beef_soul_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", beef_soul_lantern_texture);
+  
+          BlockModelBuilder hanging_beef_soul_lantern_model = models()
+              .withExistingParent("beef_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", beef_soul_lantern_texture);
+  
+          getVariantBuilder(beef_soul_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_beef_soul_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(beef_soul_lantern_model).addModel();
           
 }}
     

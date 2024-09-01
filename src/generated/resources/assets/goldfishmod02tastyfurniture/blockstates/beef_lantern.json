@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "goldfishmod02tastyfurniture:block/beef_lantern"
+    },
+    "hanging=true": {
+      "model": "goldfishmod02tastyfurniture:block/beef_hanging_lantern"
+    }
+  }
+}
