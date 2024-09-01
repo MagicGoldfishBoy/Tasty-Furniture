@@ -1331,7 +1331,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_rabbit_bricks_block", has(foodblockitemregistry.RABBIT_BRICKS_BLOCK_ITEM.get()))
             .save(output, "rabbit_bricks_stairs_from_rabbit_bricks_block_stonecutting");
 
-        //---------------------------------trap doors--------------------------------------------------
+        //----------------------------------------------------------trap doors--------------------------------------------------
          //apple
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_TRAPDOOR_ITEM.get())
          .pattern("   ")
@@ -1484,7 +1484,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotregistry.RABBIT_INGOT.get())
          .unlockedBy("has_rabbit_ingot", has(ingotregistry.RABBIT_INGOT.get()))
          .save(output);
-        //------------------------------------bars-----------------------------------------------------
+        //-------------------------------------------------------------bars-----------------------------------------------------
          //apple
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_BARS_ITEM.get())
          .pattern("   ")
@@ -1638,7 +1638,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .unlockedBy("has_rabbit_nugget", has(nuggetregistry.RABBIT_NUGGET.get()))
          .save(output);
 
-        //-----------------------------------lamps-----------------------------------------------------
+        //------------------------------------------------------------lamps-----------------------------------------------------
          //apple
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_LAMP_ITEM.get())
          .pattern("AAA")
@@ -1811,7 +1811,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
          .save(output);
 
-        //-----------------------------------carpet----------------------------------------------------
+        //------------------------------------------------------------carpet----------------------------------------------------
          //apple
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_CARPET_ITEM.get())
          .pattern("   ")
@@ -1964,7 +1964,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', nuggetregistry.RABBIT_NUGGET.get())
          .unlockedBy("has_rabbit_nugget", has(nuggetregistry.RABBIT_NUGGET.get()))
          .save(output);
-        //-----------------------------------sword-----------------------------------------------------
+        //------------------------------------------------------------sword-----------------------------------------------------
          //apple_sword
          ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, food_weapon_registry.APPLE_SWORD.get())
          .pattern(" A ")
@@ -2137,7 +2137,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .unlockedBy("has_rabbit_ingot", has(ingotregistry.RABBIT_INGOT.get()))
          .save(output);
 
-        //----------------------------------lanterns---------------------------------------------------
+        //-----------------------------------------------------------lanterns---------------------------------------------------
          //apple_lantern
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_LANTERN_ITEM.get())
@@ -2336,6 +2336,26 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('A', nuggetregistry.RED_MUSHROOM_NUGGET.get())
             .define('B', Items.SOUL_TORCH)
             .unlockedBy("has_red_mushroom_nugget", has(nuggetregistry.RED_MUSHROOM_NUGGET.get()))
+            .save(output);
+
+         //pumpkin_lantern
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PUMPKIN_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetregistry.PUMPKIN_NUGGET.get())
+            .define('B', Items.TORCH)
+            .unlockedBy("has_pumpkin_nugget", has(nuggetregistry.PUMPKIN_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PUMPKIN_SOUL_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetregistry.PUMPKIN_NUGGET.get())
+            .define('B', Items.SOUL_TORCH)
+            .unlockedBy("has_pumpkin_nugget", has(nuggetregistry.PUMPKIN_NUGGET.get()))
             .save(output);
 
         }

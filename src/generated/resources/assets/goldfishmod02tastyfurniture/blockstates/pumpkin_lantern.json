@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lantern"
+    },
+    "hanging=true": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_hanging_lantern"
+    }
+  }
+}

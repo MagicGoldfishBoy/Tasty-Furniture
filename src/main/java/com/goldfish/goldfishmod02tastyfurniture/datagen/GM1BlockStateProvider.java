@@ -1661,6 +1661,46 @@ public class GM1BlockStateProvider extends BlockStateProvider
               .modelForState().modelFile(hanging_red_mushroom_soul_lantern_model).addModel()
               .partialState().with(LanternBlock.HANGING, false)
               .modelForState().modelFile(red_mushroom_soul_lantern_model).addModel();
+
+        //.............pumpkin
+         //regular
+          LanternBlock pumpkin_lantern = foodblockregistry.PUMPKIN_LANTERN.get();
+          ResourceLocation pumpkin_lantern_texture = modLoc("block/pumpkin_lantern");
+  
+          BlockModelBuilder pumpkin_lantern_model = models()
+              .withExistingParent("pumpkin_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", pumpkin_lantern_texture);
+  
+          BlockModelBuilder hanging_pumpkin_lantern_model = models()
+              .withExistingParent("pumpkin_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", pumpkin_lantern_texture);
+  
+          getVariantBuilder(pumpkin_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_pumpkin_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(pumpkin_lantern_model).addModel();
+         //soul
+          LanternBlock pumpkin_soul_lantern = foodblockregistry.PUMPKIN_SOUL_LANTERN.get();
+          ResourceLocation pumpkin_soul_lantern_texture = modLoc("block/pumpkin_soul_lantern");
+  
+          BlockModelBuilder pumpkin_soul_lantern_model = models()
+              .withExistingParent("pumpkin_soul_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", pumpkin_soul_lantern_texture);
+  
+          BlockModelBuilder hanging_pumpkin_soul_lantern_model = models()
+              .withExistingParent("pumpkin_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", pumpkin_soul_lantern_texture);
+  
+          getVariantBuilder(pumpkin_soul_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_pumpkin_soul_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(pumpkin_soul_lantern_model).addModel();
           
 }}
     
