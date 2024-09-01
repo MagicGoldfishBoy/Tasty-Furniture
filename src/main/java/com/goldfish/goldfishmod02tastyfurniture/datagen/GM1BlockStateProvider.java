@@ -1701,6 +1701,46 @@ public class GM1BlockStateProvider extends BlockStateProvider
               .modelForState().modelFile(hanging_pumpkin_soul_lantern_model).addModel()
               .partialState().with(LanternBlock.HANGING, false)
               .modelForState().modelFile(pumpkin_soul_lantern_model).addModel();
+
+        //.............chicken
+         //regular
+          LanternBlock chicken_lantern = foodblockregistry.CHICKEN_LANTERN.get();
+          ResourceLocation chicken_lantern_texture = modLoc("block/chicken_lantern");
+  
+          BlockModelBuilder chicken_lantern_model = models()
+              .withExistingParent("chicken_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", chicken_lantern_texture);
+  
+          BlockModelBuilder hanging_chicken_lantern_model = models()
+              .withExistingParent("chicken_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", chicken_lantern_texture);
+  
+          getVariantBuilder(chicken_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_chicken_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(chicken_lantern_model).addModel();
+         //soul
+          LanternBlock chicken_soul_lantern = foodblockregistry.CHICKEN_SOUL_LANTERN.get();
+          ResourceLocation chicken_soul_lantern_texture = modLoc("block/chicken_soul_lantern");
+  
+          BlockModelBuilder chicken_soul_lantern_model = models()
+              .withExistingParent("chicken_soul_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", chicken_soul_lantern_texture);
+  
+          BlockModelBuilder hanging_chicken_soul_lantern_model = models()
+              .withExistingParent("chicken_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", chicken_soul_lantern_texture);
+  
+          getVariantBuilder(chicken_soul_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_chicken_soul_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(chicken_soul_lantern_model).addModel();
           
 }}
     
