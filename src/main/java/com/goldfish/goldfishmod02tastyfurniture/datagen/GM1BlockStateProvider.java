@@ -1781,6 +1781,46 @@ public class GM1BlockStateProvider extends BlockStateProvider
               .modelForState().modelFile(hanging_cod_soul_lantern_model).addModel()
               .partialState().with(LanternBlock.HANGING, false)
               .modelForState().modelFile(cod_soul_lantern_model).addModel();
+
+        //.............salmon
+         //regular
+          LanternBlock salmon_lantern = foodblockregistry.SALMON_LANTERN.get();
+          ResourceLocation salmon_lantern_texture = modLoc("block/salmon_lantern");
+  
+          BlockModelBuilder salmon_lantern_model = models()
+              .withExistingParent("salmon_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", salmon_lantern_texture);
+  
+          BlockModelBuilder hanging_salmon_lantern_model = models()
+              .withExistingParent("salmon_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", salmon_lantern_texture);
+  
+          getVariantBuilder(salmon_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_salmon_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(salmon_lantern_model).addModel();
+         //soul
+          LanternBlock salmon_soul_lantern = foodblockregistry.SALMON_SOUL_LANTERN.get();
+          ResourceLocation salmon_soul_lantern_texture = modLoc("block/salmon_soul_lantern");
+  
+          BlockModelBuilder salmon_soul_lantern_model = models()
+              .withExistingParent("salmon_soul_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", salmon_soul_lantern_texture);
+  
+          BlockModelBuilder hanging_salmon_soul_lantern_model = models()
+              .withExistingParent("salmon_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", salmon_soul_lantern_texture);
+  
+          getVariantBuilder(salmon_soul_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_salmon_soul_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(salmon_soul_lantern_model).addModel();
           
 }}
     

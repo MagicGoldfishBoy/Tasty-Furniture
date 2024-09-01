@@ -2200,6 +2200,22 @@ public class foodblockregistry {
       .noOcclusion()
       ));
    //.........salmon
+    //regular
+      public static final DeferredHolder<Block, LanternBlock> SALMON_LANTERN = FOODBLOCK.register("salmon_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MUD)
+      .lightLevel(state  -> 15)
+      .noOcclusion()
+      ));
+    //soul
+      public static final DeferredHolder<Block, LanternBlock> SALMON_SOUL_LANTERN = FOODBLOCK.register("salmon_soul_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MUD)
+      .lightLevel(state  -> 10)
+      .noOcclusion()
+      ));
    //.........tropical_fish
    //.........mutton
    //.........beef
