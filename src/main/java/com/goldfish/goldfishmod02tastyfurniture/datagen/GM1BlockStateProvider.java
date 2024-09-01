@@ -1981,6 +1981,46 @@ public class GM1BlockStateProvider extends BlockStateProvider
               .modelForState().modelFile(hanging_pork_soul_lantern_model).addModel()
               .partialState().with(LanternBlock.HANGING, false)
               .modelForState().modelFile(pork_soul_lantern_model).addModel();
+
+        //.............rabbit
+         //regular
+          LanternBlock rabbit_lantern = foodblockregistry.RABBIT_LANTERN.get();
+          ResourceLocation rabbit_lantern_texture = modLoc("block/rabbit_lantern");
+  
+          BlockModelBuilder rabbit_lantern_model = models()
+              .withExistingParent("rabbit_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", rabbit_lantern_texture);
+  
+          BlockModelBuilder hanging_rabbit_lantern_model = models()
+              .withExistingParent("rabbit_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", rabbit_lantern_texture);
+  
+          getVariantBuilder(rabbit_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_rabbit_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(rabbit_lantern_model).addModel();
+         //soul
+          LanternBlock rabbit_soul_lantern = foodblockregistry.RABBIT_SOUL_LANTERN.get();
+          ResourceLocation rabbit_soul_lantern_texture = modLoc("block/rabbit_soul_lantern");
+  
+          BlockModelBuilder rabbit_soul_lantern_model = models()
+              .withExistingParent("rabbit_soul_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", rabbit_soul_lantern_texture);
+  
+          BlockModelBuilder hanging_rabbit_soul_lantern_model = models()
+              .withExistingParent("rabbit_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", rabbit_soul_lantern_texture);
+  
+          getVariantBuilder(rabbit_soul_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_rabbit_soul_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(rabbit_soul_lantern_model).addModel();
           
 }}
     
