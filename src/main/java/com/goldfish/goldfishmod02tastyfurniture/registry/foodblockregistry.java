@@ -2268,6 +2268,22 @@ public class foodblockregistry {
       .noOcclusion()
       ));
    //.........pork
+    //regular
+      public static final DeferredHolder<Block, LanternBlock> PORK_LANTERN = FOODBLOCK.register("pork_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MUD)
+      .lightLevel(state  -> 15)
+      .noOcclusion()
+      ));
+    //soul
+      public static final DeferredHolder<Block, LanternBlock> PORK_SOUL_LANTERN = FOODBLOCK.register("pork_soul_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MUD)
+      .lightLevel(state  -> 10)
+      .noOcclusion()
+      ));
    //.........rabbit
 //==============================================================================================================================================================================================
 //                                                                                           Tables

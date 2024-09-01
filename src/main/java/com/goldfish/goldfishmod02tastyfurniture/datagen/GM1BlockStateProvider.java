@@ -1941,6 +1941,46 @@ public class GM1BlockStateProvider extends BlockStateProvider
               .modelForState().modelFile(hanging_beef_soul_lantern_model).addModel()
               .partialState().with(LanternBlock.HANGING, false)
               .modelForState().modelFile(beef_soul_lantern_model).addModel();
+
+        //.............pork
+         //regular
+          LanternBlock pork_lantern = foodblockregistry.PORK_LANTERN.get();
+          ResourceLocation pork_lantern_texture = modLoc("block/pork_lantern");
+  
+          BlockModelBuilder pork_lantern_model = models()
+              .withExistingParent("pork_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", pork_lantern_texture);
+  
+          BlockModelBuilder hanging_pork_lantern_model = models()
+              .withExistingParent("pork_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", pork_lantern_texture);
+  
+          getVariantBuilder(pork_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_pork_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(pork_lantern_model).addModel();
+         //soul
+          LanternBlock pork_soul_lantern = foodblockregistry.PORK_SOUL_LANTERN.get();
+          ResourceLocation pork_soul_lantern_texture = modLoc("block/pork_soul_lantern");
+  
+          BlockModelBuilder pork_soul_lantern_model = models()
+              .withExistingParent("pork_soul_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", pork_soul_lantern_texture);
+  
+          BlockModelBuilder hanging_pork_soul_lantern_model = models()
+              .withExistingParent("pork_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", pork_soul_lantern_texture);
+  
+          getVariantBuilder(pork_soul_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_pork_soul_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(pork_soul_lantern_model).addModel();
           
 }}
     
