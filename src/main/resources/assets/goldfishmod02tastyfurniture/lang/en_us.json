@@ -390,5 +390,7 @@
       "block.goldfishmod02tastyfurniture.cod_lantern": "Cod Lantern",
       "block.goldfishmod02tastyfurniture.cod_soul_lantern": "Cod Soul Lantern",
       "block.goldfishmod02tastyfurniture.salmon_lantern": "Salmon Lantern",
-      "block.goldfishmod02tastyfurniture.salmon_soul_lantern": "Salmon Soul Lantern"
+      "block.goldfishmod02tastyfurniture.salmon_soul_lantern": "Salmon Soul Lantern",
+      "block.goldfishmod02tastyfurniture.tropical_fish_lantern": "Tropical Fish Lantern",
+      "block.goldfishmod02tastyfurniture.tropical_fish_soul_lantern": "Tropical Fish Soul Lantern"
 }

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "goldfishmod02tastyfurniture:tropical_fish_soul_lantern_item"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tropical_fish_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod02tastyfurniture:tropical_fish_nugget"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tropical_fish_nugget"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "goldfishmod02tastyfurniture:tropical_fish_soul_lantern_item"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/lantern",
+  "render_type": "minecraft:cutout_mipped_all",
+  "textures": {
+    "lantern": "goldfishmod02tastyfurniture:block/tropical_fish_soul_lantern"
+  }
+}

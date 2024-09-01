@@ -1821,6 +1821,46 @@ public class GM1BlockStateProvider extends BlockStateProvider
               .modelForState().modelFile(hanging_salmon_soul_lantern_model).addModel()
               .partialState().with(LanternBlock.HANGING, false)
               .modelForState().modelFile(salmon_soul_lantern_model).addModel();
+
+        //.............tropical_fish
+         //regular
+          LanternBlock tropical_fish_lantern = foodblockregistry.TROPICAL_FISH_LANTERN.get();
+          ResourceLocation tropical_fish_lantern_texture = modLoc("block/tropical_fish_lantern");
+  
+          BlockModelBuilder tropical_fish_lantern_model = models()
+              .withExistingParent("tropical_fish_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", tropical_fish_lantern_texture);
+  
+          BlockModelBuilder hanging_tropical_fish_lantern_model = models()
+              .withExistingParent("tropical_fish_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", tropical_fish_lantern_texture);
+  
+          getVariantBuilder(tropical_fish_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_tropical_fish_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(tropical_fish_lantern_model).addModel();
+         //soul
+          LanternBlock tropical_fish_soul_lantern = foodblockregistry.TROPICAL_FISH_SOUL_LANTERN.get();
+          ResourceLocation tropical_fish_soul_lantern_texture = modLoc("block/tropical_fish_soul_lantern");
+  
+          BlockModelBuilder tropical_fish_soul_lantern_model = models()
+              .withExistingParent("tropical_fish_soul_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", tropical_fish_soul_lantern_texture);
+  
+          BlockModelBuilder hanging_tropical_fish_soul_lantern_model = models()
+              .withExistingParent("tropical_fish_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", tropical_fish_soul_lantern_texture);
+  
+          getVariantBuilder(tropical_fish_soul_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_tropical_fish_soul_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(tropical_fish_soul_lantern_model).addModel();
           
 }}
     
