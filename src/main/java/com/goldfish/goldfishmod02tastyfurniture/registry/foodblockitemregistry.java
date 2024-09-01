@@ -1011,5 +1011,12 @@ public class foodblockitemregistry {
     //soul
       public static final DeferredHolder<Item, BlockItem> BROWN_MUSHROOM_SOUL_LANTERN_ITEM = FOODBLOCKITEM.register("brown_mushroom_soul_lantern_item",
       () -> new BlockItem(foodblockregistry.BROWN_MUSHROOM_SOUL_LANTERN.get(), new BlockItem.Properties()));
+   //.........red_mushroom
+    //regular
+      public static final DeferredHolder<Item, BlockItem> RED_MUSHROOM_LANTERN_ITEM = FOODBLOCKITEM.register("red_mushroom_lantern_item",
+      () -> new BlockItem(foodblockregistry.RED_MUSHROOM_LANTERN.get(), new BlockItem.Properties()));
+    //soul
+      public static final DeferredHolder<Item, BlockItem> RED_MUSHROOM_SOUL_LANTERN_ITEM = FOODBLOCKITEM.register("red_mushroom_soul_lantern_item",
+      () -> new BlockItem(foodblockregistry.RED_MUSHROOM_SOUL_LANTERN.get(), new BlockItem.Properties()));
 
 }

@@ -1621,6 +1621,46 @@ public class GM1BlockStateProvider extends BlockStateProvider
               .modelForState().modelFile(hanging_brown_mushroom_soul_lantern_model).addModel()
               .partialState().with(LanternBlock.HANGING, false)
               .modelForState().modelFile(brown_mushroom_soul_lantern_model).addModel();
+
+        //.............red_mushroom
+         //regular
+          LanternBlock red_mushroom_lantern = foodblockregistry.RED_MUSHROOM_LANTERN.get();
+          ResourceLocation red_mushroom_lantern_texture = modLoc("block/red_mushroom_lantern");
+  
+          BlockModelBuilder red_mushroom_lantern_model = models()
+              .withExistingParent("red_mushroom_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", red_mushroom_lantern_texture);
+  
+          BlockModelBuilder hanging_red_mushroom_lantern_model = models()
+              .withExistingParent("red_mushroom_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", red_mushroom_lantern_texture);
+  
+          getVariantBuilder(red_mushroom_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_red_mushroom_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(red_mushroom_lantern_model).addModel();
+         //soul
+          LanternBlock red_mushroom_soul_lantern = foodblockregistry.RED_MUSHROOM_SOUL_LANTERN.get();
+          ResourceLocation red_mushroom_soul_lantern_texture = modLoc("block/red_mushroom_soul_lantern");
+  
+          BlockModelBuilder red_mushroom_soul_lantern_model = models()
+              .withExistingParent("red_mushroom_soul_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", red_mushroom_soul_lantern_texture);
+  
+          BlockModelBuilder hanging_red_mushroom_soul_lantern_model = models()
+              .withExistingParent("red_mushroom_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", red_mushroom_soul_lantern_texture);
+  
+          getVariantBuilder(red_mushroom_soul_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_red_mushroom_soul_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(red_mushroom_soul_lantern_model).addModel();
           
 }}
     

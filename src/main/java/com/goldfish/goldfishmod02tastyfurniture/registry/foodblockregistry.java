@@ -2132,6 +2132,22 @@ public class foodblockregistry {
       .noOcclusion()
       ));
    //.........red_mushroom
+    //regular
+      public static final DeferredHolder<Block, LanternBlock> RED_MUSHROOM_LANTERN = FOODBLOCK.register("red_mushroom_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.SHROOMLIGHT)
+      .lightLevel(state  -> 15)
+      .noOcclusion()
+      ));
+    //soul
+      public static final DeferredHolder<Block, LanternBlock> RED_MUSHROOM_SOUL_LANTERN = FOODBLOCK.register("red_mushroom_soul_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.SHROOMLIGHT)
+      .lightLevel(state  -> 10)
+      .noOcclusion()
+      ));
    //.........pumpkin
    //.........chicken
    //.........cod

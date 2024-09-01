@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "goldfishmod02tastyfurniture:block/red_mushroom_soul_lantern"
+    },
+    "hanging=true": {
+      "model": "goldfishmod02tastyfurniture:block/red_mushroom_soul_hanging_lantern"
+    }
+  }
+}
