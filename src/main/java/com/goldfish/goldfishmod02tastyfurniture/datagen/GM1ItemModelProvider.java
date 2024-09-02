@@ -714,6 +714,9 @@ public class GM1ItemModelProvider extends ItemModelProvider {
     //---------------------------------------------------------Chains-----------------------------------------------------------------------
       //..............apple
        withExistingParent("apple_chain_item", modLoc("block/apple_chain"));
+       
+      //..............potato
+       withExistingParent("potato_chain_item", modLoc("block/potato_chain"));
 
     //--------------------------------------------------------swords-----------------------------------------------------------------------
       //..............apple

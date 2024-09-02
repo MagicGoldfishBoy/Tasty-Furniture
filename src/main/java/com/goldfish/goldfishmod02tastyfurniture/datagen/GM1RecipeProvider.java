@@ -2528,6 +2528,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .define('B', ingotregistry.APPLE_INGOT.get())
           .unlockedBy("has_apple_ingot", has(ingotregistry.APPLE_INGOT.get()))
           .save(output);
+          
+         //potato
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.POTATO_CHAIN_ITEM.get())
+          .pattern(" A ")
+          .pattern(" B ")
+          .pattern(" A ")
+          .define('A', nuggetregistry.POTATO_NUGGET.get())
+          .define('B', ingotregistry.POTATO_INGOT.get())
+          .unlockedBy("has_potato_ingot", has(ingotregistry.POTATO_INGOT.get()))
+          .save(output);
 
         }
     }
