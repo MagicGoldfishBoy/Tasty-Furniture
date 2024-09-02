@@ -2321,6 +2321,14 @@ public class foodblockregistry {
     .sound(SoundType.CHAIN)
     .noOcclusion()
     ));
+
+   //.........beetroot
+    public static final DeferredHolder<Block, ChainBlock> BEETROOT_CHAIN = FOODBLOCK.register("beetroot_chain", () -> new ChainBlock(BlockBehaviour.Properties.of()
+    .destroyTime(0.5f)
+    .explosionResistance(0.5f)
+    .sound(SoundType.CHAIN)
+    .noOcclusion()
+    ));
 //==============================================================================================================================================================================================
 //                                                                                           Tables
 //==============================================================================================================================================================================================

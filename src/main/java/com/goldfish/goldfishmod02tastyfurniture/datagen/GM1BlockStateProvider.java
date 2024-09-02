@@ -2059,6 +2059,23 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(potato_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(potato_chain_model).rotationX(90).addModel();     
+
+      //.............beetroot
+         ChainBlock beetroot_chain = foodblockregistry.BEETROOT_CHAIN.get();
+         ResourceLocation beetroot_chain_texture = modLoc("block/beetroot_chain");
+         BlockModelBuilder beetroot_chain_model = models()
+          .withExistingParent("beetroot_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", beetroot_chain_texture)
+          .texture("particle", beetroot_chain_texture);
+
+          getVariantBuilder(beetroot_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(beetroot_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(beetroot_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(beetroot_chain_model).rotationX(90).addModel();     
           
 }}
     

@@ -2539,6 +2539,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .unlockedBy("has_potato_ingot", has(ingotregistry.POTATO_INGOT.get()))
           .save(output);
 
+         //beetroot
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEETROOT_CHAIN_ITEM.get())
+          .pattern(" A ")
+          .pattern(" B ")
+          .pattern(" A ")
+          .define('A', nuggetregistry.BEETROOT_NUGGET.get())
+          .define('B', ingotregistry.BEETROOT_INGOT.get())
+          .unlockedBy("has_beetroot_ingot", has(ingotregistry.BEETROOT_INGOT.get()))
+          .save(output);
+
         }
     }
 }
