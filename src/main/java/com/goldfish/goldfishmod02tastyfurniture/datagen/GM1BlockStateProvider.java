@@ -2093,6 +2093,23 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(carrot_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(carrot_chain_model).rotationX(90).addModel();     
+
+      //.............chorus
+         ChainBlock chorus_chain = foodblockregistry.CHORUS_CHAIN.get();
+         ResourceLocation chorus_chain_texture = modLoc("block/chorus_chain");
+         BlockModelBuilder chorus_chain_model = models()
+          .withExistingParent("chorus_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", chorus_chain_texture)
+          .texture("particle", chorus_chain_texture);
+
+          getVariantBuilder(chorus_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(chorus_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(chorus_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(chorus_chain_model).rotationX(90).addModel();     
           
 }}
     
