@@ -2110,6 +2110,23 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(chorus_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(chorus_chain_model).rotationX(90).addModel();     
+
+      //.............glow_berry
+         ChainBlock glow_berry_chain = foodblockregistry.GLOW_BERRY_CHAIN.get();
+         ResourceLocation glow_berry_chain_texture = modLoc("block/glow_berry_chain");
+         BlockModelBuilder glow_berry_chain_model = models()
+          .withExistingParent("glow_berry_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", glow_berry_chain_texture)
+          .texture("particle", glow_berry_chain_texture);
+
+          getVariantBuilder(glow_berry_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(glow_berry_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(glow_berry_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(glow_berry_chain_model).rotationX(90).addModel();     
           
 }}
     

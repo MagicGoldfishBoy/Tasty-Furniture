@@ -2345,6 +2345,15 @@ public class foodblockregistry {
     .sound(SoundType.CHAIN)
     .noOcclusion()
     ));
+
+   //.........glow_berry
+    public static final DeferredHolder<Block, ChainBlock> GLOW_BERRY_CHAIN = FOODBLOCK.register("glow_berry_chain", () -> new ChainBlock(BlockBehaviour.Properties.of()
+    .destroyTime(0.5f)
+    .explosionResistance(0.5f)
+    .sound(SoundType.CHAIN)
+    .noOcclusion()
+    .lightLevel(state  -> 5)
+    ));
 //==============================================================================================================================================================================================
 //                                                                                           Tables
 //==============================================================================================================================================================================================
