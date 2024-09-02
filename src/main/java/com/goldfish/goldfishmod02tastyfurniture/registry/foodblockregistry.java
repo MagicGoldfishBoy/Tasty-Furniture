@@ -27,6 +27,7 @@ import net.minecraft.world.level.block.Block.*;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.CarpetBlock;
+import net.minecraft.world.level.block.ChainBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
@@ -2301,6 +2302,17 @@ public class foodblockregistry {
       .lightLevel(state  -> 10)
       .noOcclusion()
       ));
+//==============================================================================================================================================================================================
+//                                                                                         Chains
+//==============================================================================================================================================================================================
+
+   //.........apple
+    public static final DeferredHolder<Block, ChainBlock> APPLE_CHAIN = FOODBLOCK.register("apple_chain", () -> new ChainBlock(BlockBehaviour.Properties.of()
+    .destroyTime(0.5f)
+    .explosionResistance(0.5f)
+    .sound(SoundType.CHAIN)
+    .noOcclusion()
+    ));
 //==============================================================================================================================================================================================
 //                                                                                           Tables
 //==============================================================================================================================================================================================
