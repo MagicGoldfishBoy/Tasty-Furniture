@@ -40,6 +40,7 @@ import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.minecraft.client.renderer.block.model.Variant;
 import net.minecraft.core.Cloner;
+import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.core.RegistrySetBuilder;
@@ -2034,121 +2035,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .texture("all", apple_chain_texture)
           .texture("particle", apple_chain_texture);
 
-         ConfiguredModel.Builder<?> builder = ConfiguredModel.builder()
-         .modelFile(apple_chain_model)
-         .rotationX(0)
-         .rotationY(0)
-         .uvLock(false);
-         ConfiguredModel[] apple_chain_configured_model = builder.build();
-
-         simpleBlock(apple_chain, apple_chain_configured_model);
-
-       // axisBlock(apple_chain);
-      //  getVariantBuilder(apple_chain)
-      //  .partialState().with(ChainBlock.AXIS, true)
-      //  .modelForState().modelFile(apple_chain_model).addModel();
-
-      // final record generateSimpleChainModel(String modelName, ResourceLocation texture) {
-      //    getBuilder(modelName) 
-      //     .parent(new UncheckedModelFile(mcLoc("block/chain")))
-      //     .texture("all", texture);
-      // }}
-
-      // generateSimpleChainModel("apple_chain", modLoc("block/apple_chain"));
-
-    // @Override
-    // protected void registerModels() {
-    //     generateSimpleChainModel("apple_chain", modLoc("block/apple_chain"));
-    // }
-
-    // private void generateSimpleChainModel(String modelName, ResourceLocation texture) {
-    //     // Generate a simple chain model using the built-in Minecraft chain template
-    //     getBuilder(modelName)
-    //         .parent(new UncheckedModelFile(mcLoc("block/chain"))) // Use Minecraft's chain model as the parent
-    //         .texture("all", texture); // Set the 'all' texture key
-    // }
-  
-
-       
+          getVariantBuilder(apple_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(apple_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(apple_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(apple_chain_model).rotationX(90).addModel();     
           
 }}
     
-//.rotationX(180)
-
-// public class MyBlockModelProvider extends BlockModelProvider {
-
-//   public MyBlockModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-//       super(generator, "your_mod_id", existingFileHelper);
-//   }
-
-//   @Override
-//   protected void registerModels() {
-//       generateSimpleChainModel("apple_chain", modLoc("block/apple_chain"));
-//   }
-
-//   private void generateSimpleChainModel(String modelName, ResourceLocation texture) {
-//       // Generate a simple chain model using the built-in Minecraft chain template
-//       getBuilder(modelName)
-//           .parent(new UncheckedModelFile(mcLoc("block/chain"))) // Use Minecraft's chain model as the parent
-//           .texture("all", texture); // Set the 'all' texture key
-//   }
-// }
-
-
-// public class MyBlockModelProvider extends BlockModelProvider {
-
-//   public MyBlockModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-//       super(generator, "your_mod_id", existingFileHelper);
-//   }
-
-//   @Override
-//   protected void registerModels() {
-//       // Assuming you are generating a model for a block named "apple_chain"
-//       generateAppleChainModel();
-//   }
-
-//   private void generateAppleChainModel() {
-//       ResourceLocation texture = modLoc("block/apple_chain"); // Ensure this path is correct
-
-//       getBuilder("apple_chain")
-//           .parent(new UncheckedModelFile("block/block")) // Set parent model
-//           .texture("particle", texture) // Set the particle texture
-//           .texture("all", texture)      // Set the "all" texture key
-//           .element()                    // First element
-//               .from(6.5F, 0F, 8F)       // From coordinates
-//               .to(9.5F, 16F, 8F)        // To coordinates
-//               .rotation()
-//                   .origin(8F, 8F, 8F)   // Rotation origin
-//                   .axis(Axis.Y)         // Rotation axis
-//                   .angle(45F)           // Rotation angle
-//                   .end()
-//               .shade(false)
-//               .face(Direction.NORTH)    // North face
-//                   .uvs(3F, 0F, 0F, 16F) // UV coordinates
-//                   .texture("#all")      // Texture reference
-//                   .end()
-//               .face(Direction.SOUTH)    // South face
-//                   .uvs(0F, 0F, 3F, 16F) // UV coordinates
-//                   .texture("#all")      // Texture reference
-//                   .end()
-//               .end()
-//           .element()                    // Second element
-//               .from(8F, 0F, 6.5F)       // From coordinates
-//               .to(8F, 16F, 9.5F)        // To coordinates
-//               .rotation()
-//                   .origin(8F, 8F, 8F)   // Rotation origin
-//                   .axis(Axis.Y)         // Rotation axis
-//                   .angle(45F)           // Rotation angle
-//                   .end()
-//               .shade(false)
-//               .face(Direction.WEST)     // West face
-//                   .uvs(6F, 0F, 3F, 16F) // UV coordinates
-//                   .texture("#all")      // Texture reference
-//                   .end()
-//               .face(Direction.EAST)     // East face
-//                   .uvs(3F, 0F, 6F, 16F) // UV coordinates
-//                   .texture("#all")      // Texture reference
-//                   .end()
-//               .end();
-//   }
-// }
