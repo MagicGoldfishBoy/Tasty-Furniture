@@ -2629,6 +2629,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .unlockedBy("has_pumpkin_ingot", has(ingotregistry.PUMPKIN_INGOT.get()))
           .save(output);
 
+         //chicken
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHICKEN_CHAIN_ITEM.get())
+          .pattern(" A ")
+          .pattern(" B ")
+          .pattern(" A ")
+          .define('A', nuggetregistry.CHICKEN_NUGGET.get())
+          .define('B', ingotregistry.CHICKEN_INGOT.get())
+          .unlockedBy("has_chicken_ingot", has(ingotregistry.CHICKEN_INGOT.get()))
+          .save(output);
+
         }
     }
 }
