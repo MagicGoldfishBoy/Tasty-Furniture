@@ -2354,6 +2354,14 @@ public class foodblockregistry {
     .noOcclusion()
     .lightLevel(state  -> 5)
     ));
+
+   //.........melon
+    public static final DeferredHolder<Block, ChainBlock> MELON_CHAIN = FOODBLOCK.register("melon_chain", () -> new ChainBlock(BlockBehaviour.Properties.of()
+    .destroyTime(0.5f)
+    .explosionResistance(0.5f)
+    .sound(SoundType.CHAIN)
+    .noOcclusion()
+    ));
 //==============================================================================================================================================================================================
 //                                                                                           Tables
 //==============================================================================================================================================================================================

@@ -2579,6 +2579,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .unlockedBy("has_glow_berry_ingot", has(ingotregistry.GLOW_BERRY_INGOT.get()))
           .save(output);
 
+         //melon
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MELON_CHAIN_ITEM.get())
+          .pattern(" A ")
+          .pattern(" B ")
+          .pattern(" A ")
+          .define('A', nuggetregistry.MELON_NUGGET.get())
+          .define('B', ingotregistry.MELON_INGOT.get())
+          .unlockedBy("has_melon_ingot", has(ingotregistry.MELON_INGOT.get()))
+          .save(output);
+
         }
     }
 }
