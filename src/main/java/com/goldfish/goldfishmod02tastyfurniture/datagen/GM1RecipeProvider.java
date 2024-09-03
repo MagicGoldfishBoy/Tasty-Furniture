@@ -2669,6 +2669,46 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .unlockedBy("has_tropical_fish_ingot", has(ingotregistry.TROPICAL_FISH_INGOT.get()))
           .save(output);
 
+         //mutton
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MUTTON_CHAIN_ITEM.get())
+          .pattern(" A ")
+          .pattern(" B ")
+          .pattern(" A ")
+          .define('A', nuggetregistry.MUTTON_NUGGET.get())
+          .define('B', ingotregistry.MUTTON_INGOT.get())
+          .unlockedBy("has_mutton_ingot", has(ingotregistry.MUTTON_INGOT.get()))
+          .save(output);
+
+         //beef
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEEF_CHAIN_ITEM.get())
+          .pattern(" A ")
+          .pattern(" B ")
+          .pattern(" A ")
+          .define('A', nuggetregistry.BEEF_NUGGET.get())
+          .define('B', ingotregistry.BEEF_INGOT.get())
+          .unlockedBy("has_beef_ingot", has(ingotregistry.BEEF_INGOT.get()))
+          .save(output);
+
+         //pork
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PORK_CHAIN_ITEM.get())
+          .pattern(" A ")
+          .pattern(" B ")
+          .pattern(" A ")
+          .define('A', nuggetregistry.PORK_NUGGET.get())
+          .define('B', ingotregistry.PORK_INGOT.get())
+          .unlockedBy("has_pork_ingot", has(ingotregistry.PORK_INGOT.get()))
+          .save(output);
+
+         //rabbit
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RABBIT_CHAIN_ITEM.get())
+          .pattern(" A ")
+          .pattern(" B ")
+          .pattern(" A ")
+          .define('A', nuggetregistry.RABBIT_NUGGET.get())
+          .define('B', ingotregistry.RABBIT_INGOT.get())
+          .unlockedBy("has_rabbit_ingot", has(ingotregistry.RABBIT_INGOT.get()))
+          .save(output);
+
         }
     }
 }

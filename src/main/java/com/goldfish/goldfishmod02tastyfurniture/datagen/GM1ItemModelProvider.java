@@ -779,6 +779,22 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("tropical_fish_chain_item", modLoc("block/tropical_fish_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
        .end();
 
+      //..............mutton
+       withExistingParent("mutton_chain_item", modLoc("block/mutton_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
+
+      //..............beef
+       withExistingParent("beef_chain_item", modLoc("block/beef_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
+
+      //..............pork
+       withExistingParent("pork_chain_item", modLoc("block/pork_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
+
+      //..............rabbit
+       withExistingParent("rabbit_chain_item", modLoc("block/rabbit_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
+
     //--------------------------------------------------------swords-----------------------------------------------------------------------
       //..............apple
        withExistingParent("apple_sword", mcLoc("item/handheld")).texture("layer0", "item/apple_sword");
@@ -820,36 +836,3 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("rabbit_sword", mcLoc("item/handheld")).texture("layer0", "item/rabbit_sword");
   }   
 }
-
-// private ItemModelBuilder generateScaledItemModel(String itemName, String blockModel, float scale) {
-//   return getBuilder(itemName)
-//           .parent(getExistingFile(new ResourceLocation(modid, "block/" + blockModel)))
-//           .transforms()
-//               .transform(ModelProvider.GUI)
-//                   .scale(scale, scale, scale)
-//               .end()
-//               .transform(ModelProvider.GROUND)
-//                   .scale(scale * 0.75f, scale * 0.75f, scale * 0.75f)
-//               .end()
-//               .transform(ModelProvider.FIXED)
-//                   .scale(scale, scale, scale)
-//               .end()
-//               .transform(ModelProvider.THIRDPERSON_RIGHT)
-//                   .scale(scale, scale, scale)
-//               .end()
-//               .transform(ModelProvider.THIRDPERSON_LEFT)
-//                   .scale(scale, scale, scale)
-//               .end()
-//               .transform(ModelProvider.FIRSTPERSON_RIGHT)
-//                   .scale(scale, scale, scale)
-//               .end()
-//               .transform(ModelProvider.FIRSTPERSON_LEFT)
-//                   .scale(scale, scale, scale)
-//               .end();
-// }
-
-// @Override
-// protected void registerStatesAndModels() {
-//   // Example usage
-//   generateScaledItemModel("apple_chain_item", "apple_chain", 2.0f);
-// }

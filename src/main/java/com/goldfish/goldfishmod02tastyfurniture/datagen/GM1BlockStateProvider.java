@@ -2280,6 +2280,74 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(tropical_fish_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(tropical_fish_chain_model).rotationX(90).addModel();     
+
+      //.............mutton
+         ChainBlock mutton_chain = foodblockregistry.MUTTON_CHAIN.get();
+         ResourceLocation mutton_chain_texture = modLoc("block/mutton_chain");
+         BlockModelBuilder mutton_chain_model = models()
+          .withExistingParent("mutton_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", mutton_chain_texture)
+          .texture("particle", mutton_chain_texture);
+
+          getVariantBuilder(mutton_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(mutton_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(mutton_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(mutton_chain_model).rotationX(90).addModel();     
+
+      //.............beef
+         ChainBlock beef_chain = foodblockregistry.BEEF_CHAIN.get();
+         ResourceLocation beef_chain_texture = modLoc("block/beef_chain");
+         BlockModelBuilder beef_chain_model = models()
+          .withExistingParent("beef_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", beef_chain_texture)
+          .texture("particle", beef_chain_texture);
+
+          getVariantBuilder(beef_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(beef_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(beef_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(beef_chain_model).rotationX(90).addModel();     
+
+      //.............pork
+         ChainBlock pork_chain = foodblockregistry.PORK_CHAIN.get();
+         ResourceLocation pork_chain_texture = modLoc("block/pork_chain");
+         BlockModelBuilder pork_chain_model = models()
+          .withExistingParent("pork_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", pork_chain_texture)
+          .texture("particle", pork_chain_texture);
+
+          getVariantBuilder(pork_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(pork_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(pork_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(pork_chain_model).rotationX(90).addModel();     
+
+      //.............rabbit
+         ChainBlock rabbit_chain = foodblockregistry.RABBIT_CHAIN.get();
+         ResourceLocation rabbit_chain_texture = modLoc("block/rabbit_chain");
+         BlockModelBuilder rabbit_chain_model = models()
+          .withExistingParent("rabbit_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", rabbit_chain_texture)
+          .texture("particle", rabbit_chain_texture);
+
+          getVariantBuilder(rabbit_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(rabbit_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(rabbit_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(rabbit_chain_model).rotationX(90).addModel();     
           
 }}
     

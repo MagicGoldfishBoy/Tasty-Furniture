@@ -415,5 +415,9 @@
          "block.goldfishmod02tastyfurniture.chicken_chain": "Chicken Chain",
          "block.goldfishmod02tastyfurniture.cod_chain": "Cod Chain",
          "block.goldfishmod02tastyfurniture.salmon_chain": "Salmon Chain",
-         "block.goldfishmod02tastyfurniture.tropical_fish_chain": "Tropical Fish Chain"
+         "block.goldfishmod02tastyfurniture.tropical_fish_chain": "Tropical Fish Chain",
+         "block.goldfishmod02tastyfurniture.mutton_chain": "Mutton Chain",
+         "block.goldfishmod02tastyfurniture.beef_chain": "Beef Chain",
+         "block.goldfishmod02tastyfurniture.pork_chain": "Pork Chain",
+         "block.goldfishmod02tastyfurniture.rabbit_chain": "Rabbit Chain"
 }
