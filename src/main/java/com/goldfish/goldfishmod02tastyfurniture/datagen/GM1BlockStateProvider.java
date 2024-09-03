@@ -2144,6 +2144,23 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(melon_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(melon_chain_model).rotationX(90).addModel();     
+
+      //.............sweet_berry
+         ChainBlock sweet_berry_chain = foodblockregistry.SWEET_BERRY_CHAIN.get();
+         ResourceLocation sweet_berry_chain_texture = modLoc("block/sweet_berry_chain");
+         BlockModelBuilder sweet_berry_chain_model = models()
+          .withExistingParent("sweet_berry_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", sweet_berry_chain_texture)
+          .texture("particle", sweet_berry_chain_texture);
+
+          getVariantBuilder(sweet_berry_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(sweet_berry_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(sweet_berry_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(sweet_berry_chain_model).rotationX(90).addModel();     
           
 }}
     
