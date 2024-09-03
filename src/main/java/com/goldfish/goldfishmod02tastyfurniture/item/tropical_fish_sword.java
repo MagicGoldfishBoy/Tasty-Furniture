@@ -1,7 +1,7 @@
 package com.goldfish.goldfishmod02tastyfurniture.item;
 
 import net.minecraft.world.item.SwordItem;
-import com.goldfish.goldfishmod02tastyfurniture.registry.food_weapon_registry;
+import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistry;
 
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -12,7 +12,7 @@ import net.minecraft.world.item.Tier;
 
 public class tropical_fish_sword extends SwordItem {
     public tropical_fish_sword(Tier pTier, Properties pProperties) {
-        super(food_weapon_registry.TROPICAL_FISH_TIER, pProperties);
+        super(foodmaterialtyperegistry.TROPICAL_FISH_TIER, pProperties);
     }
 
 @Override

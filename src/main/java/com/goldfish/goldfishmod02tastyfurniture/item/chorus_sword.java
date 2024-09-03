@@ -1,6 +1,6 @@
 package com.goldfish.goldfishmod02tastyfurniture.item;
 
-import com.goldfish.goldfishmod02tastyfurniture.registry.food_weapon_registry;
+import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistry;
 
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -13,7 +13,7 @@ import net.minecraft.world.item.Tier;
 public class chorus_sword extends SwordItem {
 
     public chorus_sword(Tier pTier, Properties pProperties) {
-        super(food_weapon_registry.CHORUS_TIER, pProperties);
+        super(foodmaterialtyperegistry.CHORUS_TIER, pProperties);
     }
 
         @Override

@@ -1,7 +1,7 @@
 package com.goldfish.goldfishmod02tastyfurniture.item;
 
 import net.minecraft.world.item.SwordItem;
-import com.goldfish.goldfishmod02tastyfurniture.registry.food_weapon_registry;
+import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistry;
 
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -13,7 +13,7 @@ import net.minecraft.world.item.Tier;
 
 public class glow_berry_sword extends SwordItem {
     public glow_berry_sword(Tier pTier, Properties pProperties) {
-        super(food_weapon_registry.GLOW_BERRY_TIER, pProperties);
+        super(foodmaterialtyperegistry.GLOW_BERRY_TIER, pProperties);
     }
 
 

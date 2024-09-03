@@ -2,6 +2,7 @@ package com.goldfish.goldfishmod02tastyfurniture.item;
 
 import net.minecraft.world.item.SwordItem;
 import com.goldfish.goldfishmod02tastyfurniture.registry.food_weapon_registry;
+import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistry;
 
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -13,7 +14,7 @@ import net.minecraft.world.item.enchantment.Enchantment;
 
 public class beef_sword extends SwordItem {
     public beef_sword(Tier pTier, Properties pProperties) {
-        super(food_weapon_registry.BEEF_TIER, pProperties);
+        super(foodmaterialtyperegistry.BEEF_TIER, pProperties);
     }
 
 @Override
