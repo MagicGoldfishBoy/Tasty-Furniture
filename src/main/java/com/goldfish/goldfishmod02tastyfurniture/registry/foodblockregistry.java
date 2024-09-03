@@ -2370,6 +2370,14 @@ public class foodblockregistry {
     .sound(SoundType.CHAIN)
     .noOcclusion()
     ));
+
+   //.........brown_mushroom
+    public static final DeferredHolder<Block, ChainBlock> BROWN_MUSHROOM_CHAIN = FOODBLOCK.register("brown_mushroom_chain", () -> new ChainBlock(BlockBehaviour.Properties.of()
+    .destroyTime(0.5f)
+    .explosionResistance(0.5f)
+    .sound(SoundType.CHAIN)
+    .noOcclusion()
+    ));
 //==============================================================================================================================================================================================
 //                                                                                           Tables
 //==============================================================================================================================================================================================
