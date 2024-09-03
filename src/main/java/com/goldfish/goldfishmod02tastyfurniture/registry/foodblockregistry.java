@@ -2378,6 +2378,22 @@ public class foodblockregistry {
     .sound(SoundType.CHAIN)
     .noOcclusion()
     ));
+
+   //.........red_mushroom
+    public static final DeferredHolder<Block, ChainBlock> RED_MUSHROOM_CHAIN = FOODBLOCK.register("red_mushroom_chain", () -> new ChainBlock(BlockBehaviour.Properties.of()
+    .destroyTime(0.5f)
+    .explosionResistance(0.5f)
+    .sound(SoundType.CHAIN)
+    .noOcclusion()
+    ));
+
+   //.........pumpkin
+    public static final DeferredHolder<Block, ChainBlock> PUMPKIN_CHAIN = FOODBLOCK.register("pumpkin_chain", () -> new ChainBlock(BlockBehaviour.Properties.of()
+    .destroyTime(0.5f)
+    .explosionResistance(0.5f)
+    .sound(SoundType.CHAIN)
+    .noOcclusion()
+    ));
 //==============================================================================================================================================================================================
 //                                                                                           Tables
 //==============================================================================================================================================================================================

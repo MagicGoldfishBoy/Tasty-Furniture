@@ -2178,6 +2178,40 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(brown_mushroom_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(brown_mushroom_chain_model).rotationX(90).addModel();     
+
+      //.............red_mushroom
+         ChainBlock red_mushroom_chain = foodblockregistry.RED_MUSHROOM_CHAIN.get();
+         ResourceLocation red_mushroom_chain_texture = modLoc("block/red_mushroom_chain");
+         BlockModelBuilder red_mushroom_chain_model = models()
+          .withExistingParent("red_mushroom_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", red_mushroom_chain_texture)
+          .texture("particle", red_mushroom_chain_texture);
+
+          getVariantBuilder(red_mushroom_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(red_mushroom_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(red_mushroom_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(red_mushroom_chain_model).rotationX(90).addModel();     
+
+      //.............pumpkin
+         ChainBlock pumpkin_chain = foodblockregistry.PUMPKIN_CHAIN.get();
+         ResourceLocation pumpkin_chain_texture = modLoc("block/pumpkin_chain");
+         BlockModelBuilder pumpkin_chain_model = models()
+          .withExistingParent("pumpkin_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", pumpkin_chain_texture)
+          .texture("particle", pumpkin_chain_texture);
+
+          getVariantBuilder(pumpkin_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(pumpkin_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(pumpkin_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(pumpkin_chain_model).rotationX(90).addModel();     
           
 }}
     
