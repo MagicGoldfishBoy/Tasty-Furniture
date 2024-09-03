@@ -2229,6 +2229,57 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(chicken_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(chicken_chain_model).rotationX(90).addModel();     
+
+      //.............cod
+         ChainBlock cod_chain = foodblockregistry.COD_CHAIN.get();
+         ResourceLocation cod_chain_texture = modLoc("block/cod_chain");
+         BlockModelBuilder cod_chain_model = models()
+          .withExistingParent("cod_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", cod_chain_texture)
+          .texture("particle", cod_chain_texture);
+
+          getVariantBuilder(cod_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(cod_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(cod_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(cod_chain_model).rotationX(90).addModel();     
+
+      //.............salmon
+         ChainBlock salmon_chain = foodblockregistry.SALMON_CHAIN.get();
+         ResourceLocation salmon_chain_texture = modLoc("block/salmon_chain");
+         BlockModelBuilder salmon_chain_model = models()
+          .withExistingParent("salmon_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", salmon_chain_texture)
+          .texture("particle", salmon_chain_texture);
+
+          getVariantBuilder(salmon_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(salmon_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(salmon_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(salmon_chain_model).rotationX(90).addModel();     
+
+      //.............tropical_fish
+         ChainBlock tropical_fish_chain = foodblockregistry.TROPICAL_FISH_CHAIN.get();
+         ResourceLocation tropical_fish_chain_texture = modLoc("block/tropical_fish_chain");
+         BlockModelBuilder tropical_fish_chain_model = models()
+          .withExistingParent("tropical_fish_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", tropical_fish_chain_texture)
+          .texture("particle", tropical_fish_chain_texture);
+
+          getVariantBuilder(tropical_fish_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(tropical_fish_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(tropical_fish_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(tropical_fish_chain_model).rotationX(90).addModel();     
           
 }}
     

@@ -1134,4 +1134,16 @@ public class foodblockitemregistry {
     public static final DeferredHolder<Item, BlockItem> CHICKEN_CHAIN_ITEM = FOODBLOCKITEM.register("chicken_chain_item",
     () -> new BlockItem(foodblockregistry.CHICKEN_CHAIN.get(), new BlockItem.Properties()));
 
+   //.........cod
+    public static final DeferredHolder<Item, BlockItem> COD_CHAIN_ITEM = FOODBLOCKITEM.register("cod_chain_item",
+    () -> new BlockItem(foodblockregistry.COD_CHAIN.get(), new BlockItem.Properties()));
+
+   //.........salmon
+    public static final DeferredHolder<Item, BlockItem> SALMON_CHAIN_ITEM = FOODBLOCKITEM.register("salmon_chain_item",
+    () -> new BlockItem(foodblockregistry.SALMON_CHAIN.get(), new BlockItem.Properties()));
+
+   //.........tropical_fish
+    public static final DeferredHolder<Item, BlockItem> TROPICAL_FISH_CHAIN_ITEM = FOODBLOCKITEM.register("tropical_fish_chain_item",
+    () -> new BlockItem(foodblockregistry.TROPICAL_FISH_CHAIN.get(), new BlockItem.Properties()));
+
 }

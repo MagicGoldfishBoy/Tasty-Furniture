@@ -2402,6 +2402,30 @@ public class foodblockregistry {
     .sound(SoundType.CHAIN)
     .noOcclusion()
     ));
+
+   //.........cod
+    public static final DeferredHolder<Block, ChainBlock> COD_CHAIN = FOODBLOCK.register("cod_chain", () -> new ChainBlock(BlockBehaviour.Properties.of()
+    .destroyTime(0.5f)
+    .explosionResistance(0.5f)
+    .sound(SoundType.CHAIN)
+    .noOcclusion()
+    ));
+
+   //.........salmon
+    public static final DeferredHolder<Block, ChainBlock> SALMON_CHAIN = FOODBLOCK.register("salmon_chain", () -> new ChainBlock(BlockBehaviour.Properties.of()
+    .destroyTime(0.5f)
+    .explosionResistance(0.5f)
+    .sound(SoundType.CHAIN)
+    .noOcclusion()
+    ));
+
+   //.........tropical_fish
+    public static final DeferredHolder<Block, ChainBlock> TROPICAL_FISH_CHAIN = FOODBLOCK.register("tropical_fish_chain", () -> new ChainBlock(BlockBehaviour.Properties.of()
+    .destroyTime(0.5f)
+    .explosionResistance(0.5f)
+    .sound(SoundType.CHAIN)
+    .noOcclusion()
+    ));
 //==============================================================================================================================================================================================
 //                                                                                           Tables
 //==============================================================================================================================================================================================

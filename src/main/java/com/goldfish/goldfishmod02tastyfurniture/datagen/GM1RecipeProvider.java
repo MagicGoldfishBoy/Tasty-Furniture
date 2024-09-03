@@ -2639,6 +2639,36 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .unlockedBy("has_chicken_ingot", has(ingotregistry.CHICKEN_INGOT.get()))
           .save(output);
 
+         //cod
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.COD_CHAIN_ITEM.get())
+          .pattern(" A ")
+          .pattern(" B ")
+          .pattern(" A ")
+          .define('A', nuggetregistry.COD_NUGGET.get())
+          .define('B', ingotregistry.COD_INGOT.get())
+          .unlockedBy("has_cod_ingot", has(ingotregistry.COD_INGOT.get()))
+          .save(output);
+
+         //salmon
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SALMON_CHAIN_ITEM.get())
+          .pattern(" A ")
+          .pattern(" B ")
+          .pattern(" A ")
+          .define('A', nuggetregistry.SALMON_NUGGET.get())
+          .define('B', ingotregistry.SALMON_INGOT.get())
+          .unlockedBy("has_salmon_ingot", has(ingotregistry.SALMON_INGOT.get()))
+          .save(output);
+
+         //tropical_fish
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.TROPICAL_FISH_CHAIN_ITEM.get())
+          .pattern(" A ")
+          .pattern(" B ")
+          .pattern(" A ")
+          .define('A', nuggetregistry.TROPICAL_FISH_NUGGET.get())
+          .define('B', ingotregistry.TROPICAL_FISH_INGOT.get())
+          .unlockedBy("has_tropical_fish_ingot", has(ingotregistry.TROPICAL_FISH_INGOT.get()))
+          .save(output);
+
         }
     }
 }
