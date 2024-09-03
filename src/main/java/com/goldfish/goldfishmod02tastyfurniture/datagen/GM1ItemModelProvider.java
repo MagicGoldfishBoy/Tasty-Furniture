@@ -1,14 +1,21 @@
 package com.goldfish.goldfishmod02tastyfurniture.datagen;
 
+import org.apache.commons.compress.archivers.dump.DumpArchiveEntry.TYPE;
+
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockitemregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemDisplayContext;
+import net.minecraft.world.level.ClipContext.Block;
 import net.minecraft.world.level.block.SignBlock;
 import net.minecraft.world.level.block.TrapDoorBlock;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
+import net.neoforged.neoforge.client.model.generators.ModelBuilder;
+import net.neoforged.neoforge.client.model.generators.ModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+
 
 public class GM1ItemModelProvider extends ItemModelProvider {
 
@@ -713,49 +720,64 @@ public class GM1ItemModelProvider extends ItemModelProvider {
 
     //---------------------------------------------------------Chains-----------------------------------------------------------------------
       //..............apple
-       withExistingParent("apple_chain_item", modLoc("block/apple_chain"));
+       withExistingParent("apple_chain_item", modLoc("block/apple_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
        
       //..............potato
-       withExistingParent("potato_chain_item", modLoc("block/potato_chain"));
+       withExistingParent("potato_chain_item", modLoc("block/potato_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
 
       //..............beetroot
-       withExistingParent("beetroot_chain_item", modLoc("block/beetroot_chain"));
+       withExistingParent("beetroot_chain_item", modLoc("block/beetroot_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
 
       //..............carrot
-       withExistingParent("carrot_chain_item", modLoc("block/carrot_chain"));
+       withExistingParent("carrot_chain_item", modLoc("block/carrot_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
 
       //..............chorus
-       withExistingParent("chorus_chain_item", modLoc("block/chorus_chain"));
+       withExistingParent("chorus_chain_item", modLoc("block/chorus_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
 
       //..............glow_berry
-       withExistingParent("glow_berry_chain_item", modLoc("block/glow_berry_chain"));
+       withExistingParent("glow_berry_chain_item", modLoc("block/glow_berry_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
 
       //..............melon
-       withExistingParent("melon_chain_item", modLoc("block/melon_chain"));
+       withExistingParent("melon_chain_item", modLoc("block/melon_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
 
       //..............sweet_berry
-       withExistingParent("sweet_berry_chain_item", modLoc("block/sweet_berry_chain"));
+       withExistingParent("sweet_berry_chain_item", modLoc("block/sweet_berry_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
 
       //..............brown_mushroom
-       withExistingParent("brown_mushroom_chain_item", modLoc("block/brown_mushroom_chain"));
+       withExistingParent("brown_mushroom_chain_item", modLoc("block/brown_mushroom_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
 
       //..............red_mushroom
-       withExistingParent("red_mushroom_chain_item", modLoc("block/red_mushroom_chain"));
+       withExistingParent("red_mushroom_chain_item", modLoc("block/red_mushroom_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
 
       //..............pumpkin
-       withExistingParent("pumpkin_chain_item", modLoc("block/pumpkin_chain"));
+       withExistingParent("pumpkin_chain_item", modLoc("block/pumpkin_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
 
       //..............chicken
-       withExistingParent("chicken_chain_item", modLoc("block/chicken_chain"));
+       withExistingParent("chicken_chain_item", modLoc("block/chicken_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
 
       //..............cod
-       withExistingParent("cod_chain_item", modLoc("block/cod_chain"));
+       withExistingParent("cod_chain_item", modLoc("block/cod_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
 
       //..............salmon
-       withExistingParent("salmon_chain_item", modLoc("block/salmon_chain"));
+       withExistingParent("salmon_chain_item", modLoc("block/salmon_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
 
       //..............tropical_fish
-       withExistingParent("tropical_fish_chain_item", modLoc("block/tropical_fish_chain"));
+       withExistingParent("tropical_fish_chain_item", modLoc("block/tropical_fish_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
 
     //--------------------------------------------------------swords-----------------------------------------------------------------------
       //..............apple
@@ -798,3 +820,36 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("rabbit_sword", mcLoc("item/handheld")).texture("layer0", "item/rabbit_sword");
   }   
 }
+
+// private ItemModelBuilder generateScaledItemModel(String itemName, String blockModel, float scale) {
+//   return getBuilder(itemName)
+//           .parent(getExistingFile(new ResourceLocation(modid, "block/" + blockModel)))
+//           .transforms()
+//               .transform(ModelProvider.GUI)
+//                   .scale(scale, scale, scale)
+//               .end()
+//               .transform(ModelProvider.GROUND)
+//                   .scale(scale * 0.75f, scale * 0.75f, scale * 0.75f)
+//               .end()
+//               .transform(ModelProvider.FIXED)
+//                   .scale(scale, scale, scale)
+//               .end()
+//               .transform(ModelProvider.THIRDPERSON_RIGHT)
+//                   .scale(scale, scale, scale)
+//               .end()
+//               .transform(ModelProvider.THIRDPERSON_LEFT)
+//                   .scale(scale, scale, scale)
+//               .end()
+//               .transform(ModelProvider.FIRSTPERSON_RIGHT)
+//                   .scale(scale, scale, scale)
+//               .end()
+//               .transform(ModelProvider.FIRSTPERSON_LEFT)
+//                   .scale(scale, scale, scale)
+//               .end();
+// }
+
+// @Override
+// protected void registerStatesAndModels() {
+//   // Example usage
+//   generateScaledItemModel("apple_chain_item", "apple_chain", 2.0f);
+// }
