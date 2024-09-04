@@ -837,16 +837,15 @@ public class GM1ItemModelProvider extends ItemModelProvider {
 
     //--------------------------------------------------------tables-----------------------------------------------------------------------
       //..............apple
-       withExistingParent("apple_table_item", modLoc("block/apple_table")).rootTransforms().scale(0.5f).translation(-0.25f, -0.25f, -0.25f)
-       .end();
+       withExistingParent("apple_table_item", modLoc("block/apple_table"));
       //..............potato
-       withExistingParent("potato_table_item", modLoc("block/potato_table")).rootTransforms().scale(0.5f).translation(-0.25f, -0.25f, -0.25f)
-       .end();
+       withExistingParent("potato_table_item", modLoc("block/potato_table"));
       //..............beetroot
-       withExistingParent("beetroot_table_item", modLoc("block/beetroot_table")).rootTransforms().scale(0.5f).translation(-0.25f, -0.25f, -0.25f)
-       .end();
+       withExistingParent("beetroot_table_item", modLoc("block/beetroot_table"));
       //..............carrot
-       withExistingParent("carrot_table_item", modLoc("block/carrot_table")).rootTransforms().scale(0.5f).translation(-0.25f, -0.25f, -0.25f)
-       .end();
+       withExistingParent("carrot_table_item", modLoc("block/carrot_table"));
   }   
 }
+
+// .rootTransforms().scale(0.5f).translation(-0.25f, -0.25f, -0.25f)
+//        .end();
