@@ -3,10 +3,10 @@
   "category": "misc",
   "key": {
     "A": {
-      "item": "goldfishmod02tastyfurniture:melon_slab_item"
+      "item": "goldfishmod02tastyfurniture:pumpkin_slab_item"
     },
     "B": {
-      "item": "goldfishmod02tastyfurniture:melon_ingot"
+      "item": "goldfishmod02tastyfurniture:pumpkin_ingot"
     }
   },
   "pattern": [
@@ -16,6 +16,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "goldfishmod02tastyfurniture:melon_table_item"
+    "id": "goldfishmod02tastyfurniture:pumpkin_table_item"
   }
 }

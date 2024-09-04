@@ -2536,7 +2536,20 @@ public class foodblockregistry {
     .noOcclusion()
     ));
    //.........pumpkin
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> PUMPKIN_TABLE = FOODBLOCK.register("pumpkin_table", () -> new foodtable(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    .lightLevel(state  -> 6)
+    ));
    //.........chicken
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> CHICKEN_TABLE = FOODBLOCK.register("chicken_table", () -> new foodtable(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
    //.........cod
    //.........salmon
    //.........tropical_fish

@@ -2715,7 +2715,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .pattern("AAA")
           .pattern("B B")
           .pattern("B B")
-          .define('A', foodblockitemregistry.APPLE_BLOCK_ITEM.get())
+          .define('A', foodblockitemregistry.APPLE_SLAB_ITEM.get())
           .define('B', ingotregistry.APPLE_INGOT.get())
           .unlockedBy("has_apple_ingot", has(ingotregistry.APPLE_INGOT.get()))
           .save(output);
@@ -2725,7 +2725,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .pattern("AAA")
           .pattern("B B")
           .pattern("B B")
-          .define('A', foodblockitemregistry.POTATO_BLOCK_ITEM.get())
+          .define('A', foodblockitemregistry.POTATO_SLAB_ITEM.get())
           .define('B', ingotregistry.POTATO_INGOT.get())
           .unlockedBy("has_potato_ingot", has(ingotregistry.POTATO_INGOT.get()))
           .save(output);
@@ -2735,7 +2735,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .pattern("AAA")
           .pattern("B B")
           .pattern("B B")
-          .define('A', foodblockitemregistry.BEETROOT_BLOCK_ITEM.get())
+          .define('A', foodblockitemregistry.BEETROOT_SLAB_ITEM.get())
           .define('B', ingotregistry.BEETROOT_INGOT.get())
           .unlockedBy("has_beetroot_ingot", has(ingotregistry.BEETROOT_INGOT.get()))
           .save(output);
@@ -2745,7 +2745,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .pattern("AAA")
           .pattern("B B")
           .pattern("B B")
-          .define('A', foodblockitemregistry.CARROT_BLOCK_ITEM.get())
+          .define('A', foodblockitemregistry.CARROT_SLAB_ITEM.get())
           .define('B', ingotregistry.CARROT_INGOT.get())
           .unlockedBy("has_carrot_ingot", has(ingotregistry.CARROT_INGOT.get()))
           .save(output);
@@ -2755,7 +2755,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .pattern("AAA")
           .pattern("B B")
           .pattern("B B")
-          .define('A', foodblockitemregistry.CHORUS_BLOCK_ITEM.get())
+          .define('A', foodblockitemregistry.CHORUS_SLAB_ITEM.get())
           .define('B', ingotregistry.CHORUS_INGOT.get())
           .unlockedBy("has_chorus_ingot", has(ingotregistry.CHORUS_INGOT.get()))
           .save(output);
@@ -2765,7 +2765,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .pattern("AAA")
           .pattern("B B")
           .pattern("B B")
-          .define('A', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
+          .define('A', foodblockitemregistry.GLOW_BERRY_SLAB_ITEM.get())
           .define('B', ingotregistry.GLOW_BERRY_INGOT.get())
           .unlockedBy("has_glow_berry_ingot", has(ingotregistry.GLOW_BERRY_INGOT.get()))
           .save(output);
@@ -2775,7 +2775,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .pattern("AAA")
           .pattern("B B")
           .pattern("B B")
-          .define('A', foodblockitemregistry.MELON_BLOCK_ITEM.get())
+          .define('A', foodblockitemregistry.MELON_SLAB_ITEM.get())
           .define('B', ingotregistry.MELON_INGOT.get())
           .unlockedBy("has_melon_ingot", has(ingotregistry.MELON_INGOT.get()))
           .save(output);
@@ -2785,7 +2785,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .pattern("AAA")
           .pattern("B B")
           .pattern("B B")
-          .define('A', foodblockitemregistry.SWEET_BERRY_BLOCK_ITEM.get())
+          .define('A', foodblockitemregistry.SWEET_BERRY_SLAB_ITEM.get())
           .define('B', ingotregistry.SWEET_BERRY_INGOT.get())
           .unlockedBy("has_sweet_berry_ingot", has(ingotregistry.SWEET_BERRY_INGOT.get()))
           .save(output);
@@ -2795,7 +2795,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .pattern("AAA")
           .pattern("B B")
           .pattern("B B")
-          .define('A', foodblockitemregistry.BROWN_MUSHROOM_BLOCK_ITEM.get())
+          .define('A', foodblockitemregistry.BROWN_MUSHROOM_SLAB_ITEM.get())
           .define('B', ingotregistry.BROWN_MUSHROOM_INGOT.get())
           .unlockedBy("has_brown_mushroom_ingot", has(ingotregistry.BROWN_MUSHROOM_INGOT.get()))
           .save(output);
@@ -2805,9 +2805,19 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .pattern("AAA")
           .pattern("B B")
           .pattern("B B")
-          .define('A', foodblockitemregistry.RED_MUSHROOM_BLOCK_ITEM.get())
+          .define('A', foodblockitemregistry.RED_MUSHROOM_SLAB_ITEM.get())
           .define('B', ingotregistry.RED_MUSHROOM_INGOT.get())
           .unlockedBy("has_red_mushroom_ingot", has(ingotregistry.RED_MUSHROOM_INGOT.get()))
+          .save(output);
+
+         //pumpkin
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PUMPKIN_TABLE_ITEM.get())
+          .pattern("AAA")
+          .pattern("B B")
+          .pattern("B B")
+          .define('A', foodblockitemregistry.PUMPKIN_SLAB_ITEM.get())
+          .define('B', ingotregistry.PUMPKIN_INGOT.get())
+          .unlockedBy("has_pumpkin_ingot", has(ingotregistry.PUMPKIN_INGOT.get()))
           .save(output);
 
         }
