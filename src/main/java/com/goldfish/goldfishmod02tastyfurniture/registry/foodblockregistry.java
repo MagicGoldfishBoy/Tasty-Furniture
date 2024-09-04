@@ -2504,8 +2504,15 @@ public class foodblockregistry {
     .explosionResistance(1.5f)
     .sound(SoundType.MUD_BRICKS)
     .noOcclusion()
+    .lightLevel(state  -> 7)
     ));
    //.........melon
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> MELON_TABLE = FOODBLOCK.register("melon_table", () -> new foodtable(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
    //.........sweet_berry
    //.........brown_mushroom
    //.........red_mushroom
