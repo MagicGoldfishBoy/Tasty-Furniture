@@ -2492,6 +2492,12 @@ public class foodblockregistry {
     .noOcclusion()
     ));
    //.........chorus
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> CHORUS_TABLE = FOODBLOCK.register("chorus_table", () -> new foodtable(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
    //.........glow_berry
    //.........melon
    //.........sweet_berry
