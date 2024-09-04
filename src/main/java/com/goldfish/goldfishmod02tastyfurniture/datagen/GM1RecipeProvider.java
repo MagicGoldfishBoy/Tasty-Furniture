@@ -2800,6 +2800,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .unlockedBy("has_brown_mushroom_ingot", has(ingotregistry.BROWN_MUSHROOM_INGOT.get()))
           .save(output);
 
+         //red_mushroom
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RED_MUSHROOM_TABLE_ITEM.get())
+          .pattern("AAA")
+          .pattern("B B")
+          .pattern("B B")
+          .define('A', foodblockitemregistry.RED_MUSHROOM_BLOCK_ITEM.get())
+          .define('B', ingotregistry.RED_MUSHROOM_INGOT.get())
+          .unlockedBy("has_red_mushroom_ingot", has(ingotregistry.RED_MUSHROOM_INGOT.get()))
+          .save(output);
+
         }
     }
 }

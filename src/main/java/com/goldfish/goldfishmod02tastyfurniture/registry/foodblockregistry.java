@@ -2529,6 +2529,12 @@ public class foodblockregistry {
     .lightLevel(state  -> 3)
     ));
    //.........red_mushroom
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> RED_MUSHROOM_TABLE = FOODBLOCK.register("red_mushroom_table", () -> new foodtable(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
    //.........pumpkin
    //.........chicken
    //.........cod
