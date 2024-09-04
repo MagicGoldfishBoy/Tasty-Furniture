@@ -1,4 +1,4 @@
-// 1.21	2024-09-04T17:31:36.210334411	Loot Tables
+// 1.21	2024-09-04T18:01:14.536459395	Loot Tables
 f506816aefac13fd3bcb8b3075eefc63b1b6be41 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bars.json
 98b73d11c0b3a3ecadbdd7c289263f01706818e9 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_block.json
 81d69920001f0e32b706a1e1ffa975ddba47869b data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bricks_block.json
@@ -322,6 +322,7 @@ b51a40fe328f85322c5dce6d6e224adb0f7ae5a3 data/goldfishmod02tastyfurniture/loot_t
 8dcf7222b3516e4926f21c8b0257bc5f473bebbc data/goldfishmod02tastyfurniture/loot_table/blocks/salmon_slab.json
 4441df8b25e4a4a53432502e2931db552ac4d211 data/goldfishmod02tastyfurniture/loot_table/blocks/salmon_soul_lantern.json
 0b43ce4fe61f90e2145e2828bec07c133589d8e8 data/goldfishmod02tastyfurniture/loot_table/blocks/salmon_stairs.json
+0b32cd89c32e3ca0fae6ebd5abf70b582003bb74 data/goldfishmod02tastyfurniture/loot_table/blocks/salmon_table.json
 32ce8e0525c84c1b904300562898857dacdf29bb data/goldfishmod02tastyfurniture/loot_table/blocks/salmon_trapdoor.json
 2719fc8ddc3ebe7e8a2117e9acc179c3d377d0cd data/goldfishmod02tastyfurniture/loot_table/blocks/sweet_berry_bars.json
 4cf62aeeba09f076bcd0b130a56223e9a9ca22cc data/goldfishmod02tastyfurniture/loot_table/blocks/sweet_berry_block.json
