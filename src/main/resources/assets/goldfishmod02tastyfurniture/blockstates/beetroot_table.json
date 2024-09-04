@@ -1,0 +1,24 @@
+{
+    "variants": {
+      "facing=east": {
+        "model": "goldfishmod02tastyfurniture:block/beetroot_table",
+        "uvlock": true,
+        "y": 90
+      },
+      "facing=west": {
+        "model": "goldfishmod02tastyfurniture:block/beetroot_table",
+        "uvlock": true,
+        "y": 270
+      },
+      "facing=north": {
+        "model": "goldfishmod02tastyfurniture:block/beetroot_table",
+        "uvlock": true,
+        "y": 0
+      },
+      "facing=south": {
+        "model": "goldfishmod02tastyfurniture:block/beetroot_table",
+        "uvlock": true,
+        "y": 180
+      }
+    }
+  }

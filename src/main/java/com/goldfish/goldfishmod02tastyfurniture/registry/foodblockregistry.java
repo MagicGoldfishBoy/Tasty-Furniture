@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodlamp;
+import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodstandingsign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodwallsign;
@@ -2477,6 +2478,12 @@ public class foodblockregistry {
     .noOcclusion()
     ));
    //.........beetroot
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> BEETROOT_TABLE = FOODBLOCK.register("beetroot_table", () -> new foodtable(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
    //.........carrot
    //.........chorus
    //.........glow_berry
