@@ -419,5 +419,6 @@
          "block.goldfishmod02tastyfurniture.mutton_chain": "Mutton Chain",
          "block.goldfishmod02tastyfurniture.beef_chain": "Beef Chain",
          "block.goldfishmod02tastyfurniture.pork_chain": "Pork Chain",
-         "block.goldfishmod02tastyfurniture.rabbit_chain": "Rabbit Chain"
+         "block.goldfishmod02tastyfurniture.rabbit_chain": "Rabbit Chain",
+  "goldfishmod02tastyfurniture:apple_table": "Apple Table"
 }

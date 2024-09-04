@@ -834,5 +834,10 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("pork_sword", mcLoc("item/handheld")).texture("layer0", "item/pork_sword");
       //..............rabbit
        withExistingParent("rabbit_sword", mcLoc("item/handheld")).texture("layer0", "item/rabbit_sword");
+
+    //--------------------------------------------------------tables-----------------------------------------------------------------------
+      //..............apple
+       withExistingParent("apple_table_item", modLoc("block/apple_table")).rootTransforms().scale(0.5f).translation(-0.25f, -0.25f, -0.25f)
+       .end();
   }   
 }

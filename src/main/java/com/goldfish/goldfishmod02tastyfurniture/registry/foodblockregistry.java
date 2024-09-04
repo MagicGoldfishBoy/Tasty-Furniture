@@ -2463,6 +2463,12 @@ public class foodblockregistry {
 //==============================================================================================================================================================================================
 
    //.........apple
+    public static final DeferredHolder<Block, Block> APPLE_TABLE = FOODBLOCK.register("apple_table", () -> new Block(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
    //.........potato
    //.........beetroot
    //.........carrot
