@@ -2565,6 +2565,12 @@ public class foodblockregistry {
     .noOcclusion()
     ));
    //.........tropical_fish
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> TROPICAL_FISH_TABLE = FOODBLOCK.register("tropical_fish_table", () -> new foodtable(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
    //.........mutton
    //.........beef
    //.........pork

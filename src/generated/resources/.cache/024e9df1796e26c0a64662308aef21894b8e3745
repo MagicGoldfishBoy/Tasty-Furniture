@@ -1,4 +1,4 @@
-// 1.21	2024-09-04T18:01:14.532352613	Item Models: goldfishmod02tastyfurniture
+// 1.21	2024-09-04T18:43:35.128702879	Item Models: goldfishmod02tastyfurniture
 5415a5c9e52089186849ab0906ab852e882667f5 assets/goldfishmod02tastyfurniture/models/item/apple_bars_item.json
 66bf13b2fe52a00ffe7f141beaaae9c6792e2759 assets/goldfishmod02tastyfurniture/models/item/apple_bricks_block_item.json
 93147515ab5bd4d354d8eb60af9faf57459c267f assets/goldfishmod02tastyfurniture/models/item/apple_bricks_slab_item.json
@@ -351,4 +351,5 @@ a1aeffb1eefa3350aa8577ce62d0f13d47deb10d assets/goldfishmod02tastyfurniture/mode
 a18169d462ec217be8fde8f0ed3022c97ba6c0a9 assets/goldfishmod02tastyfurniture/models/item/tropical_fish_soul_lantern_item.json
 d82c7879373bb64873c5604d1066bc36783318e5 assets/goldfishmod02tastyfurniture/models/item/tropical_fish_stairs_item.json
 5fa2ae7579824ff3c46ba63584a722a4b1ba4f17 assets/goldfishmod02tastyfurniture/models/item/tropical_fish_sword.json
+1516a0e128b664f7194d92493cc49c57e97c1e57 assets/goldfishmod02tastyfurniture/models/item/tropical_fish_table_item.json
 339104a8222d599ace842fff0c2dc94dd8ffb36d assets/goldfishmod02tastyfurniture/models/item/tropical_fish_trapdoor_item.json

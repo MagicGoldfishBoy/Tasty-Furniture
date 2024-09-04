@@ -1222,4 +1222,8 @@ public class foodblockitemregistry {
     public static final  DeferredHolder<Item, BlockItem> SALMON_TABLE_ITEM =  FOODBLOCKITEM.register("salmon_table_item",
     () -> new BlockItem(foodblockregistry.SALMON_TABLE.get(), new BlockItem.Properties()));
 
+   //.........tropical_fish
+    public static final  DeferredHolder<Item, BlockItem> TROPICAL_FISH_TABLE_ITEM =  FOODBLOCKITEM.register("tropical_fish_table_item",
+    () -> new BlockItem(foodblockregistry.TROPICAL_FISH_TABLE.get(), new BlockItem.Properties()));
+
 }
