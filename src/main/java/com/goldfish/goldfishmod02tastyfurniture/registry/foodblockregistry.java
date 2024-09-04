@@ -2514,6 +2514,12 @@ public class foodblockregistry {
     .noOcclusion()
     ));
    //.........sweet_berry
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> SWEET_BERRY_TABLE = FOODBLOCK.register("sweet_berry_table", () -> new foodtable(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
    //.........brown_mushroom
    //.........red_mushroom
    //.........pumpkin
