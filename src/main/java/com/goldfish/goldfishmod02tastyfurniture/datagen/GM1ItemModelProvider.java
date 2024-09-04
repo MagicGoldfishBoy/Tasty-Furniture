@@ -845,5 +845,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       //..............beetroot
        withExistingParent("beetroot_table_item", modLoc("block/beetroot_table")).rootTransforms().scale(0.5f).translation(-0.25f, -0.25f, -0.25f)
        .end();
+      //..............carrot
+       withExistingParent("carrot_table_item", modLoc("block/carrot_table")).rootTransforms().scale(0.5f).translation(-0.25f, -0.25f, -0.25f)
+       .end();
   }   
 }
