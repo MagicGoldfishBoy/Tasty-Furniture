@@ -839,5 +839,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       //..............apple
        withExistingParent("apple_table_item", modLoc("block/apple_table")).rootTransforms().scale(0.5f).translation(-0.25f, -0.25f, -0.25f)
        .end();
+      //..............potato
+       withExistingParent("potato_table_item", modLoc("block/potato_table")).rootTransforms().scale(0.5f).translation(-0.25f, -0.25f, -0.25f)
+       .end();
   }   
 }

@@ -1,0 +1,15 @@
+{
+  "parent": "goldfishmod02tastyfurniture:block/potato_table",
+  "transform": {
+    "scale": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "translation": [
+      -0.25,
+      -0.25,
+      -0.25
+    ]
+  }
+}

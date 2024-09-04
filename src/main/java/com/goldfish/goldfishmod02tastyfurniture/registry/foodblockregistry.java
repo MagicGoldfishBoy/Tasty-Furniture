@@ -2470,6 +2470,12 @@ public class foodblockregistry {
     .noOcclusion()
     ));
    //.........potato
+    public static final DeferredHolder<Block, Block> POTATO_TABLE = FOODBLOCK.register("potato_table", () -> new Block(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
    //.........beetroot
    //.........carrot
    //.........chorus
