@@ -1,0 +1,25 @@
+{
+    "variants": {
+      "facing=east": {
+        "model": "goldfishmod02tastyfurniture:block/glow_berry_ladder",
+        "uvlock": false,
+        "y": 270
+      },
+      "facing=west": {
+        "model": "goldfishmod02tastyfurniture:block/glow_berry_ladder",
+        "uvlock": false,
+        "y": 90
+      },
+      "facing=north": {
+        "model": "goldfishmod02tastyfurniture:block/glow_berry_ladder",
+        "uvlock": false,
+        "y": 180
+      },
+      "facing=south": {
+        "model": "goldfishmod02tastyfurniture:block/glow_berry_ladder",
+        "uvlock": false,
+        "y": 0
+      }
+    }
+  }   
+  

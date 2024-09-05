@@ -2640,6 +2640,14 @@ public class foodblockregistry {
     .sound(SoundType.VINE)
     .noOcclusion()
     )); 
+   //.........glow_berry
+    public static final DeferredHolder<Block, LadderBlock> GLOW_BERRY_LADDER = FOODBLOCK.register("glow_berry_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
+    .destroyTime(0.75f)
+    .explosionResistance(0.75f)
+    .sound(SoundType.VINE)
+    .noOcclusion()
+    .lightLevel(state  -> 8)
+    )); 
 
 //==============================================================================================================================================================================================
 //                                                                                           Chairs
