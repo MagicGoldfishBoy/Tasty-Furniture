@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.ChainBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
+import net.minecraft.world.level.block.LadderBlock;
 import net.minecraft.world.level.block.LanternBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SignBlock;
@@ -2348,6 +2349,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(rabbit_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(rabbit_chain_model).rotationX(90).addModel();     
+
+    //----------------------------------------------------------------ladders-----------------------------------------------------------------------------
+      //.............apple
+      //  LadderBlock apple_ladder = foodblockregistry.APPLE_LADDER.get();
+      //  ResourceLocation apple_ladder_texture = modLoc("block/apple_block");
+       
           
 }}
     

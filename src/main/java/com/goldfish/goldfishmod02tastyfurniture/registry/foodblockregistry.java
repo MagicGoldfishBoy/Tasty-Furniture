@@ -34,6 +34,7 @@ import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
+import net.minecraft.world.level.block.LadderBlock;
 import net.minecraft.world.level.block.LanternBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SignBlock;
@@ -2599,6 +2600,19 @@ public class foodblockregistry {
     .sound(SoundType.MUD_BRICKS)
     .noOcclusion()
     ));
+
+//==============================================================================================================================================================================================
+//                                                                                           Ladders
+//==============================================================================================================================================================================================
+
+   //.........apple
+    public static final DeferredHolder<Block, LadderBlock> APPLE_LADDER = FOODBLOCK.register("apple_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
+    .destroyTime(0.75f)
+    .explosionResistance(0.75f)
+    .sound(SoundType.VINE)
+    .noOcclusion()
+    )); 
+
 //==============================================================================================================================================================================================
 //                                                                                           Chairs
 //==============================================================================================================================================================================================
