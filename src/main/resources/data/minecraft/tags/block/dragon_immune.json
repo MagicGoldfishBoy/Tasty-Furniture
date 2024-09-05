@@ -362,6 +362,8 @@
   "goldfishmod02tastyfurniture:mutton_table",
   "goldfishmod02tastyfurniture:beef_table",
   "goldfishmod02tastyfurniture:pork_table",
-  "goldfishmod02tastyfurniture:rabbit_table"
+  "goldfishmod02tastyfurniture:rabbit_table",
+    "goldfishmod02tastyfurniture:apple_ladder",
+    "goldfishmod02tastyfurniture:potato_ladder"
     ]
   }

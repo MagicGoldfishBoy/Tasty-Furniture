@@ -458,5 +458,7 @@
   "block.goldfishmod02tastyfurniture.mutton_table": "Mutton Table",
   "block.goldfishmod02tastyfurniture.beef_table": "Beef Table",
   "block.goldfishmod02tastyfurniture.pork_table": "Pork Table",
-  "block.goldfishmod02tastyfurniture.rabbit_table": "Rabbit Table"
+  "block.goldfishmod02tastyfurniture.rabbit_table": "Rabbit Table",
+    "block.goldfishmod02tastyfurniture.apple_ladder": "Apple Ladder",
+    "block.goldfishmod02tastyfurniture.potato_ladder": "Potato Ladder"
 }
