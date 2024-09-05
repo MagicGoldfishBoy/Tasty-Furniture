@@ -455,5 +455,7 @@
   "block.goldfishmod02tastyfurniture.cod_table": "Cod Table",
   "block.goldfishmod02tastyfurniture.salmon_table": "Salmon Table",
   "block.goldfishmod02tastyfurniture.tropical_fish_table": "Tropical Fish Table",
-  "block.goldfishmod02tastyfurniture.mutton_table": "Mutton Table"
+  "block.goldfishmod02tastyfurniture.mutton_table": "Mutton Table",
+  "block.goldfishmod02tastyfurniture.beef_table": "Beef Table",
+  "block.goldfishmod02tastyfurniture.pork_table": "Pork Table"
 }

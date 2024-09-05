@@ -2579,7 +2579,19 @@ public class foodblockregistry {
     .noOcclusion()
     ));
    //.........beef
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> BEEF_TABLE = FOODBLOCK.register("beef_table", () -> new foodtable(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
    //.........pork
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> PORK_TABLE = FOODBLOCK.register("pork_table", () -> new foodtable(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
    //.........rabbit
 //==============================================================================================================================================================================================
 //                                                                                           Chairs
