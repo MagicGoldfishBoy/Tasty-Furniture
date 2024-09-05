@@ -2633,6 +2633,13 @@ public class foodblockregistry {
     .sound(SoundType.VINE)
     .noOcclusion()
     )); 
+   //.........chorus
+    public static final DeferredHolder<Block, LadderBlock> CHORUS_LADDER = FOODBLOCK.register("chorus_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
+    .destroyTime(0.75f)
+    .explosionResistance(0.75f)
+    .sound(SoundType.VINE)
+    .noOcclusion()
+    )); 
 
 //==============================================================================================================================================================================================
 //                                                                                           Chairs
