@@ -2900,7 +2900,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .unlockedBy("has_rabbit_ingot", has(ingotregistry.RABBIT_INGOT.get()))
           .save(output);
 
-        //------------------------------------------------------------chains----------------------------------------------------
+        //------------------------------------------------------------ladders----------------------------------------------------
          //apple
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_LADDER_ITEM.get())
           .pattern("A A")
@@ -2919,6 +2919,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .define('A', Items.STICK)
           .define('B', ingotregistry.POTATO_INGOT.get())
           .unlockedBy("has_potato_ingot", has(ingotregistry.POTATO_INGOT.get()))
+          .save(output);
+
+         //beetroot
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEETROOT_LADDER_ITEM.get())
+          .pattern("A A")
+          .pattern("ABA")
+          .pattern("A A")
+          .define('A', Items.STICK)
+          .define('B', ingotregistry.BEETROOT_INGOT.get())
+          .unlockedBy("has_beetroot_ingot", has(ingotregistry.BEETROOT_INGOT.get()))
           .save(output);
 
         }
