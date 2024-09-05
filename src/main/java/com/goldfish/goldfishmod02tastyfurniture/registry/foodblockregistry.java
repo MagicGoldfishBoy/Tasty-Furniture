@@ -2593,6 +2593,12 @@ public class foodblockregistry {
     .noOcclusion()
     ));
    //.........rabbit
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> RABBIT_TABLE = FOODBLOCK.register("rabbit_table", () -> new foodtable(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
 //==============================================================================================================================================================================================
 //                                                                                           Chairs
 //==============================================================================================================================================================================================
