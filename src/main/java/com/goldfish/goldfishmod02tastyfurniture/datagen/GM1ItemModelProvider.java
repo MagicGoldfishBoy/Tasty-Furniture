@@ -108,6 +108,10 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       //.........rabbit
         withExistingParent("rabbit_chiseled_block_item", modLoc("block/rabbit_chiseled_block"));
 
+     //___________________________________________________________chiseled____________________________________________________________________
+      //.........apple
+        withExistingParent("apple_tile_block_item", modLoc("block/apple_tile_block"));
+
     //-------------------------------------------------------------doors---------------------------------------------------------------------
       //.........glow berry
         withExistingParent("glow_berry_door_item", mcLoc("item/generated")).texture("layer0", "item/glow_berry_door");

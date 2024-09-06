@@ -232,6 +232,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation rabbit_chiseled_texture = modLoc("block/rabbit_chiseled_block");
           simpleBlock(rabbit_chiseled_block);
 
+     //___________________________________________________________chiseled____________________________________________________________________
+      //.........apple
+          net.minecraft.world.level.block.Block apple_tile_block = foodblockregistry.APPLE_TILE_BLOCK.get();
+          ResourceLocation apple_tile_texture = modLoc("block/apple_tile_block");
+          simpleBlock(apple_tile_block);
+
     //-----------------------------------------------------------------doors------------------------------------------------------------------------------
       //.........glow berry
         DoorBlock glow_berry_door_block = foodblockregistry.GLOW_BERRY_DOOR_BLOCK.get();
