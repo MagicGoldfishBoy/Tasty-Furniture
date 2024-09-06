@@ -2702,6 +2702,13 @@ public class foodblockregistry {
     .sound(meat_ladder_sound)
     .noOcclusion()
     )); 
+   //.........salmon
+    public static final DeferredHolder<Block, LadderBlock> SALMON_LADDER = FOODBLOCK.register("salmon_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
+    .destroyTime(ladder_destroy_time)
+    .explosionResistance(ladder_explosion_resistance)
+    .sound(meat_ladder_sound)
+    .noOcclusion()
+    )); 
 
 //==============================================================================================================================================================================================
 //                                                                                           Chairs
