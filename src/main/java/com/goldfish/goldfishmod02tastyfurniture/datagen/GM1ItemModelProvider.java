@@ -828,6 +828,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("tropical_fish_ladder_item", modLoc("block/tropical_fish_ladder"));
       //..............mutton
        withExistingParent("mutton_ladder_item", modLoc("block/mutton_ladder"));
+      //..............beef
+       withExistingParent("beef_ladder_item", modLoc("block/beef_ladder"));
 
     //--------------------------------------------------------swords-----------------------------------------------------------------------
       //..............apple
