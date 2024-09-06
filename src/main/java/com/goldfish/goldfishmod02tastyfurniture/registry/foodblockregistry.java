@@ -2663,6 +2663,13 @@ public class foodblockregistry {
     .noOcclusion()
     .lightLevel(state  -> 4)
     )); 
+   //.........brown_mushroom
+    public static final DeferredHolder<Block, LadderBlock> BROWN_MUSHROOM_LADDER = FOODBLOCK.register("brown_mushroom_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
+    .destroyTime(0.75f)
+    .explosionResistance(0.75f)
+    .sound(SoundType.VINE)
+    .noOcclusion()
+    )); 
 
 //==============================================================================================================================================================================================
 //                                                                                           Chairs
