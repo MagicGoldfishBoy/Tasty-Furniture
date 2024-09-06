@@ -2604,84 +2604,95 @@ public class foodblockregistry {
 //==============================================================================================================================================================================================
 //                                                                                           Ladders
 //==============================================================================================================================================================================================
+  static float ladder_destroy_time = 0.75f;
+  static float ladder_explosion_resistance = 0.75f;
+  static SoundType plant_ladder_sound = SoundType.VINE;
+  static SoundType meat_ladder_sound = SoundType.MUD_BRICKS;
 
    //.........apple
     public static final DeferredHolder<Block, LadderBlock> APPLE_LADDER = FOODBLOCK.register("apple_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
-    .destroyTime(0.75f)
-    .explosionResistance(0.75f)
-    .sound(SoundType.VINE)
+    .destroyTime(ladder_destroy_time)
+    .explosionResistance(ladder_explosion_resistance)
+    .sound(plant_ladder_sound)
     .noOcclusion()
     )); 
    //.........potato
     public static final DeferredHolder<Block, LadderBlock> POTATO_LADDER = FOODBLOCK.register("potato_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
-    .destroyTime(0.75f)
-    .explosionResistance(0.75f)
-    .sound(SoundType.VINE)
+    .destroyTime(ladder_destroy_time)
+    .explosionResistance(ladder_explosion_resistance)
+    .sound(plant_ladder_sound)
     .noOcclusion()
     )); 
    //.........beetroot
     public static final DeferredHolder<Block, LadderBlock> BEETROOT_LADDER = FOODBLOCK.register("beetroot_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
-    .destroyTime(0.75f)
-    .explosionResistance(0.75f)
-    .sound(SoundType.VINE)
+    .destroyTime(ladder_destroy_time)
+    .explosionResistance(ladder_explosion_resistance)
+    .sound(plant_ladder_sound)
     .noOcclusion()
     )); 
    //.........carrot
     public static final DeferredHolder<Block, LadderBlock> CARROT_LADDER = FOODBLOCK.register("carrot_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
-    .destroyTime(0.75f)
-    .explosionResistance(0.75f)
-    .sound(SoundType.VINE)
+    .destroyTime(ladder_destroy_time)
+    .explosionResistance(ladder_explosion_resistance)
+    .sound(plant_ladder_sound)
     .noOcclusion()
     )); 
    //.........chorus
     public static final DeferredHolder<Block, LadderBlock> CHORUS_LADDER = FOODBLOCK.register("chorus_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
-    .destroyTime(0.75f)
-    .explosionResistance(0.75f)
-    .sound(SoundType.VINE)
+    .destroyTime(ladder_destroy_time)
+    .explosionResistance(ladder_explosion_resistance)
+    .sound(plant_ladder_sound)
     .noOcclusion()
     )); 
    //.........glow_berry
     public static final DeferredHolder<Block, LadderBlock> GLOW_BERRY_LADDER = FOODBLOCK.register("glow_berry_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
-    .destroyTime(0.75f)
-    .explosionResistance(0.75f)
-    .sound(SoundType.VINE)
+    .destroyTime(ladder_destroy_time)
+    .explosionResistance(ladder_explosion_resistance)
+    .sound(plant_ladder_sound)
     .noOcclusion()
     .lightLevel(state  -> 8)
     )); 
    //.........melon
     public static final DeferredHolder<Block, LadderBlock> MELON_LADDER = FOODBLOCK.register("melon_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
-    .destroyTime(0.75f)
-    .explosionResistance(0.75f)
-    .sound(SoundType.VINE)
+    .destroyTime(ladder_destroy_time)
+    .explosionResistance(ladder_explosion_resistance)
+    .sound(plant_ladder_sound)
     .noOcclusion()
     )); 
    //.........sweet_berry
     public static final DeferredHolder<Block, LadderBlock> SWEET_BERRY_LADDER = FOODBLOCK.register("sweet_berry_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
-    .destroyTime(0.75f)
-    .explosionResistance(0.75f)
-    .sound(SoundType.VINE)
+    .destroyTime(ladder_destroy_time)
+    .explosionResistance(ladder_explosion_resistance)
+    .sound(plant_ladder_sound)
     .noOcclusion()
     .lightLevel(state  -> 4)
     )); 
    //.........brown_mushroom
     public static final DeferredHolder<Block, LadderBlock> BROWN_MUSHROOM_LADDER = FOODBLOCK.register("brown_mushroom_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
-    .destroyTime(0.75f)
-    .explosionResistance(0.75f)
-    .sound(SoundType.VINE)
+    .destroyTime(ladder_destroy_time)
+    .explosionResistance(ladder_explosion_resistance)
+    .sound(plant_ladder_sound)
     .noOcclusion()
     )); 
    //.........red_mushroom
     public static final DeferredHolder<Block, LadderBlock> RED_MUSHROOM_LADDER = FOODBLOCK.register("red_mushroom_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
-    .destroyTime(0.75f)
-    .explosionResistance(0.75f)
-    .sound(SoundType.VINE)
+    .destroyTime(ladder_destroy_time)
+    .explosionResistance(ladder_explosion_resistance)
+    .sound(plant_ladder_sound)
     .noOcclusion()
     )); 
    //.........pumpkin
     public static final DeferredHolder<Block, LadderBlock> PUMPKIN_LADDER = FOODBLOCK.register("pumpkin_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
-    .destroyTime(0.75f)
-    .explosionResistance(0.75f)
-    .sound(SoundType.VINE)
+    .destroyTime(ladder_destroy_time)
+    .explosionResistance(ladder_explosion_resistance)
+    .sound(plant_ladder_sound)
+    .noOcclusion()
+    )); 
+   //.........chicken
+    public static final DeferredHolder<Block, LadderBlock> CHICKEN_LADDER = FOODBLOCK.register("chicken_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
+    .destroyTime(ladder_destroy_time)
+    .explosionResistance(ladder_explosion_resistance)
+    .sound(meat_ladder_sound)
     .noOcclusion()
     )); 
 
