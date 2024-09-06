@@ -3001,6 +3001,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .unlockedBy("has_red_mushroom_ingot", has(ingotregistry.RED_MUSHROOM_INGOT.get()))
           .save(output);
 
+         //pumpkin
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PUMPKIN_LADDER_ITEM.get())
+          .pattern("A A")
+          .pattern("ABA")
+          .pattern("A A")
+          .define('A', Items.STICK)
+          .define('B', ingotregistry.PUMPKIN_INGOT.get())
+          .unlockedBy("has_pumpkin_ingot", has(ingotregistry.PUMPKIN_INGOT.get()))
+          .save(output);
+
         }
     }
 }
