@@ -2648,6 +2648,13 @@ public class foodblockregistry {
     .noOcclusion()
     .lightLevel(state  -> 8)
     )); 
+   //.........melon
+    public static final DeferredHolder<Block, LadderBlock> MELON_LADDER = FOODBLOCK.register("melon_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
+    .destroyTime(0.75f)
+    .explosionResistance(0.75f)
+    .sound(SoundType.VINE)
+    .noOcclusion()
+    )); 
 
 //==============================================================================================================================================================================================
 //                                                                                           Chairs
