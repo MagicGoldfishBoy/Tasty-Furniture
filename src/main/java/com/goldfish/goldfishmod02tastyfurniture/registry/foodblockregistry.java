@@ -2655,6 +2655,14 @@ public class foodblockregistry {
     .sound(SoundType.VINE)
     .noOcclusion()
     )); 
+   //.........sweet_berry
+    public static final DeferredHolder<Block, LadderBlock> SWEET_BERRY_LADDER = FOODBLOCK.register("sweet_berry_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
+    .destroyTime(0.75f)
+    .explosionResistance(0.75f)
+    .sound(SoundType.VINE)
+    .noOcclusion()
+    .lightLevel(state  -> 4)
+    )); 
 
 //==============================================================================================================================================================================================
 //                                                                                           Chairs
