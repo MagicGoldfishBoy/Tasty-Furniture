@@ -824,6 +824,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("cod_ladder_item", modLoc("block/cod_ladder"));
       //..............salmon
        withExistingParent("salmon_ladder_item", modLoc("block/salmon_ladder"));
+      //..............tropical_fish
+       withExistingParent("tropical_fish_ladder_item", modLoc("block/tropical_fish_ladder"));
 
     //--------------------------------------------------------swords-----------------------------------------------------------------------
       //..............apple
