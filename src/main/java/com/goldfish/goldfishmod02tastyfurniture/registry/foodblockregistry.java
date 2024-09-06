@@ -451,6 +451,12 @@ public class foodblockregistry {
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
          ));
+  //.........potato
+    public static final DeferredHolder<Block, Block> POTATO_TILE_BLOCK = FOODBLOCK.register("potato_tile_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
 
 //==============================================================================================================================================================================================
 //                                                                                          Doors
