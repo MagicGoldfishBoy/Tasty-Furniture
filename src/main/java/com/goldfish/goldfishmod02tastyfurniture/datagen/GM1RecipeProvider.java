@@ -3081,6 +3081,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .unlockedBy("has_pork_ingot", has(ingotregistry.PORK_INGOT.get()))
           .save(output);
 
+         //rabbit
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RABBIT_LADDER_ITEM.get())
+          .pattern("A A")
+          .pattern("ABA")
+          .pattern("A A")
+          .define('A', Items.STICK)
+          .define('B', ingotregistry.RABBIT_INGOT.get())
+          .unlockedBy("has_rabbit_ingot", has(ingotregistry.RABBIT_INGOT.get()))
+          .save(output);
+
         }
     }
 }

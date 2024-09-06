@@ -1,4 +1,4 @@
-// 1.21	2024-09-06T10:52:29.333945708	Loot Tables
+// 1.21	2024-09-06T11:07:46.292631949	Loot Tables
 f506816aefac13fd3bcb8b3075eefc63b1b6be41 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bars.json
 98b73d11c0b3a3ecadbdd7c289263f01706818e9 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_block.json
 81d69920001f0e32b706a1e1ffa975ddba47869b data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bricks_block.json
@@ -296,6 +296,7 @@ a3ad5c44bfaf11c838d603e54109186be06e02c3 data/goldfishmod02tastyfurniture/loot_t
 97174d21eadc956eb37f6cd927102553b381ef9e data/goldfishmod02tastyfurniture/loot_table/blocks/rabbit_chiseled_block.json
 257560b9069862e9672e5dc3ac8f780fbac05c78 data/goldfishmod02tastyfurniture/loot_table/blocks/rabbit_door.json
 25a5f6bc214b8871585e42ddaa39f85c41365292 data/goldfishmod02tastyfurniture/loot_table/blocks/rabbit_fence.json
+398a6d25478f809837ff6025f863977b6ab2f1a5 data/goldfishmod02tastyfurniture/loot_table/blocks/rabbit_ladder.json
 862066fb9d33ad78d171e5927653ad87b1942af5 data/goldfishmod02tastyfurniture/loot_table/blocks/rabbit_lamp.json
 d956a43d61c93dc8ccbc7ad8cf7bd9ab0d7b248e data/goldfishmod02tastyfurniture/loot_table/blocks/rabbit_lantern.json
 426c215c167c02d3d6891030304873140b13a422 data/goldfishmod02tastyfurniture/loot_table/blocks/rabbit_pressure_plate.json
