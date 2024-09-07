@@ -301,6 +301,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           net.minecraft.world.level.block.Block beef_tile_block = foodblockregistry.BEEF_TILE_BLOCK.get();
           ResourceLocation beef_tile_texture = modLoc("block/beef_tile_block");
           horizontalBlock(beef_tile_block, beef_tile_texture, beef_tile_texture, beef_tile_texture);
+      //.........pork
+          net.minecraft.world.level.block.Block pork_tile_block = foodblockregistry.PORK_TILE_BLOCK.get();
+          ResourceLocation pork_tile_texture = modLoc("block/pork_tile_block");
+          horizontalBlock(pork_tile_block, pork_tile_texture, pork_tile_texture, pork_tile_texture);
 
     //-----------------------------------------------------------------doors------------------------------------------------------------------------------
       //.........glow berry
