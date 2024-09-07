@@ -273,6 +273,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           net.minecraft.world.level.block.Block red_mushroom_tile_block = foodblockregistry.RED_MUSHROOM_TILE_BLOCK.get();
           ResourceLocation red_mushroom_tile_texture = modLoc("block/red_mushroom_tile_block");
           horizontalBlock(red_mushroom_tile_block, red_mushroom_tile_texture, red_mushroom_tile_texture, red_mushroom_tile_texture);
+      //.........pumpkin
+          net.minecraft.world.level.block.Block pumpkin_tile_block = foodblockregistry.PUMPKIN_TILE_BLOCK.get();
+          ResourceLocation pumpkin_tile_texture = modLoc("block/pumpkin_tile_block");
+          horizontalBlock(pumpkin_tile_block, pumpkin_tile_texture, pumpkin_tile_texture, pumpkin_tile_texture);
 
     //-----------------------------------------------------------------doors------------------------------------------------------------------------------
       //.........glow berry
