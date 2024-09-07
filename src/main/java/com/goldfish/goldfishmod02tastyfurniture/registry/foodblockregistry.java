@@ -7,6 +7,7 @@ import java.util.List;
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodlamp;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
+import com.goldfish.goldfishmod02tastyfurniture.block.horizontal_food_block;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodstandingsign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodwallsign;
@@ -446,62 +447,62 @@ public class foodblockregistry {
          ));
  //-------------------------------------------------------------------------------------Tile Blocks---------------------------------------------------------------------------------------------
   //.........apple
-    public static final DeferredHolder<Block, Block> APPLE_TILE_BLOCK = FOODBLOCK.register("apple_tile_block", () -> new Block(BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> APPLE_TILE_BLOCK = FOODBLOCK.register("apple_tile_block", () -> new horizontal_food_block(BlockBehaviour.Properties.of()
          .destroyTime(2.0f)
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
          ));
   //.........potato
-    public static final DeferredHolder<Block, Block> POTATO_TILE_BLOCK = FOODBLOCK.register("potato_tile_block", () -> new Block(BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> POTATO_TILE_BLOCK = FOODBLOCK.register("potato_tile_block", () -> new horizontal_food_block(BlockBehaviour.Properties.of()
          .destroyTime(2.0f)
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
          ));
   //.........beetroot
-    public static final DeferredHolder<Block, Block> BEETROOT_TILE_BLOCK = FOODBLOCK.register("beetroot_tile_block", () -> new Block(BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> BEETROOT_TILE_BLOCK = FOODBLOCK.register("beetroot_tile_block", () -> new horizontal_food_block(BlockBehaviour.Properties.of()
          .destroyTime(2.0f)
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
          ));
   //.........carrot
-    public static final DeferredHolder<Block, Block> CARROT_TILE_BLOCK = FOODBLOCK.register("carrot_tile_block", () -> new Block(BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> CARROT_TILE_BLOCK = FOODBLOCK.register("carrot_tile_block", () -> new horizontal_food_block(BlockBehaviour.Properties.of()
          .destroyTime(2.0f)
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
          ));
   //.........chorus
-    public static final DeferredHolder<Block, Block> CHORUS_TILE_BLOCK = FOODBLOCK.register("chorus_tile_block", () -> new Block(BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> CHORUS_TILE_BLOCK = FOODBLOCK.register("chorus_tile_block", () -> new horizontal_food_block(BlockBehaviour.Properties.of()
          .destroyTime(2.0f)
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
          ));
   //.........glow_berry
-    public static final DeferredHolder<Block, Block> GLOW_BERRY_TILE_BLOCK = FOODBLOCK.register("glow_berry_tile_block", () -> new Block(BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> GLOW_BERRY_TILE_BLOCK = FOODBLOCK.register("glow_berry_tile_block", () -> new horizontal_food_block(BlockBehaviour.Properties.of()
          .destroyTime(2.0f)
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
          .lightLevel(state -> 10)
          ));
   //.........melon
-    public static final DeferredHolder<Block, Block> MELON_TILE_BLOCK = FOODBLOCK.register("melon_tile_block", () -> new Block(BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> MELON_TILE_BLOCK = FOODBLOCK.register("melon_tile_block", () -> new horizontal_food_block(BlockBehaviour.Properties.of()
          .destroyTime(2.0f)
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
          ));
   //.........sweet_berry
-    public static final DeferredHolder<Block, Block> SWEET_BERRY_TILE_BLOCK = FOODBLOCK.register("sweet_berry_tile_block", () -> new Block(BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> SWEET_BERRY_TILE_BLOCK = FOODBLOCK.register("sweet_berry_tile_block", () -> new horizontal_food_block(BlockBehaviour.Properties.of()
          .destroyTime(2.0f)
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
          ));
   //.........brown_mushroom
-    public static final DeferredHolder<Block, Block> BROWN_MUSHROOM_TILE_BLOCK = FOODBLOCK.register("brown_mushroom_tile_block", () -> new Block(BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> BROWN_MUSHROOM_TILE_BLOCK = FOODBLOCK.register("brown_mushroom_tile_block", () -> new horizontal_food_block(BlockBehaviour.Properties.of()
          .destroyTime(2.0f)
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
          ));
   //.........red_mushroom
-    public static final DeferredHolder<Block, Block> RED_MUSHROOM_TILE_BLOCK = FOODBLOCK.register("red_mushroom_tile_block", () -> new Block(BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> RED_MUSHROOM_TILE_BLOCK = FOODBLOCK.register("red_mushroom_tile_block", () -> new horizontal_food_block(BlockBehaviour.Properties.of()
          .destroyTime(2.0f)
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)

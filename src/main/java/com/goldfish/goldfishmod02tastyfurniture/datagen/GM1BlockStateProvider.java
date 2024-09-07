@@ -236,43 +236,43 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........apple
           net.minecraft.world.level.block.Block apple_tile_block = foodblockregistry.APPLE_TILE_BLOCK.get();
           ResourceLocation apple_tile_texture = modLoc("block/apple_tile_block");
-          simpleBlock(apple_tile_block);
+          horizontalBlock(apple_tile_block, apple_tile_texture, apple_tile_texture, apple_tile_texture);
       //.........potato
           net.minecraft.world.level.block.Block potato_tile_block = foodblockregistry.POTATO_TILE_BLOCK.get();
           ResourceLocation potato_tile_texture = modLoc("block/potato_tile_block");
-          simpleBlock(potato_tile_block);
+          horizontalBlock(potato_tile_block, potato_tile_texture, potato_tile_texture, potato_tile_texture);
       //.........beetroot
           net.minecraft.world.level.block.Block beetroot_tile_block = foodblockregistry.BEETROOT_TILE_BLOCK.get();
           ResourceLocation beetroot_tile_texture = modLoc("block/beetroot_tile_block");
-          simpleBlock(beetroot_tile_block);
+          horizontalBlock(beetroot_tile_block, beetroot_tile_texture, beetroot_tile_texture, beetroot_tile_texture);
       //.........carrot
           net.minecraft.world.level.block.Block carrot_tile_block = foodblockregistry.CARROT_TILE_BLOCK.get();
           ResourceLocation carrot_tile_texture = modLoc("block/carrot_tile_block");
-          simpleBlock(carrot_tile_block);
+          horizontalBlock(carrot_tile_block, carrot_tile_texture, carrot_tile_texture, carrot_tile_texture);
       //.........chorus
           net.minecraft.world.level.block.Block chorus_tile_block = foodblockregistry.CHORUS_TILE_BLOCK.get();
           ResourceLocation chorus_tile_texture = modLoc("block/chorus_tile_block");
-          simpleBlock(chorus_tile_block);
+          horizontalBlock(chorus_tile_block, chorus_tile_texture, chorus_tile_texture, chorus_tile_texture);
       //.........glow_berry
           net.minecraft.world.level.block.Block glow_berry_tile_block = foodblockregistry.GLOW_BERRY_TILE_BLOCK.get();
           ResourceLocation glow_berry_tile_texture = modLoc("block/glow_berry_tile_block");
-          simpleBlock(glow_berry_tile_block);
+          horizontalBlock(glow_berry_tile_block, glow_berry_tile_texture, glow_berry_tile_texture, glow_berry_tile_texture);
       //.........melon
           net.minecraft.world.level.block.Block melon_tile_block = foodblockregistry.MELON_TILE_BLOCK.get();
           ResourceLocation melon_tile_texture = modLoc("block/melon_tile_block");
-          simpleBlock(melon_tile_block);
+          horizontalBlock(melon_tile_block, melon_tile_texture, melon_tile_texture, melon_tile_texture);
       //.........sweet_berry
           net.minecraft.world.level.block.Block sweet_berry_tile_block = foodblockregistry.SWEET_BERRY_TILE_BLOCK.get();
           ResourceLocation sweet_berry_tile_texture = modLoc("block/sweet_berry_tile_block");
-          simpleBlock(sweet_berry_tile_block);
+          horizontalBlock(sweet_berry_tile_block, sweet_berry_tile_texture, sweet_berry_tile_texture, sweet_berry_tile_texture);
       //.........brown_mushroom
           net.minecraft.world.level.block.Block brown_mushroom_tile_block = foodblockregistry.BROWN_MUSHROOM_TILE_BLOCK.get();
           ResourceLocation brown_mushroom_tile_texture = modLoc("block/brown_mushroom_tile_block");
-          simpleBlock(brown_mushroom_tile_block);
+          horizontalBlock(brown_mushroom_tile_block, brown_mushroom_tile_texture, brown_mushroom_tile_texture, brown_mushroom_tile_texture);
       //.........red_mushroom
           net.minecraft.world.level.block.Block red_mushroom_tile_block = foodblockregistry.RED_MUSHROOM_TILE_BLOCK.get();
           ResourceLocation red_mushroom_tile_texture = modLoc("block/red_mushroom_tile_block");
-          simpleBlock(red_mushroom_tile_block);
+          horizontalBlock(red_mushroom_tile_block, red_mushroom_tile_texture, red_mushroom_tile_texture, red_mushroom_tile_texture);
 
     //-----------------------------------------------------------------doors------------------------------------------------------------------------------
       //.........glow berry
