@@ -597,6 +597,19 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_beetroot_block", has(foodblockitemregistry.BEETROOT_BLOCK_ITEM.get()))
             .save(output, "beetroot_tile_block_from_beetroot_block_stonecutting");
 
+          //.........carrot
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CARROT_TILE_BLOCK_ITEM.get(),2)
+            .pattern("   ")
+            .pattern("AA ")
+            .pattern("AA ")
+            .define('A', foodblockitemregistry.CARROT_SLAB_ITEM.get())
+            .unlockedBy("has_carrot_slab", has(foodblockitemregistry.CARROT_SLAB_ITEM.get()))
+            .save(output);
+
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.CARROT_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.CARROT_TILE_BLOCK_ITEM.get())
+            .unlockedBy("has_carrot_block", has(foodblockitemregistry.CARROT_BLOCK_ITEM.get()))
+            .save(output, "carrot_tile_block_from_carrot_block_stonecutting");
+
         //---------------------------------------------------------unpack blocks------------------------------------------------------------------
          //apple_block
             ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.APPLE_INGOT.get(), 9)
