@@ -117,6 +117,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("beetroot_tile_block_item", modLoc("block/beetroot_tile_block"));
       //.........carrot
         withExistingParent("carrot_tile_block_item", modLoc("block/carrot_tile_block"));
+      //.........chorus
+        withExistingParent("chorus_tile_block_item", modLoc("block/chorus_tile_block"));
 
     //-------------------------------------------------------------doors---------------------------------------------------------------------
       //.........glow berry
