@@ -531,6 +531,12 @@ public class foodblockregistry {
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
          ));
+  //.........tropical_fish
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> TROPICAL_FISH_TILE_BLOCK = FOODBLOCK.register("tropical_fish_tile_block", () -> new horizontal_food_block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
 
 //==============================================================================================================================================================================================
 //                                                                                          Doors

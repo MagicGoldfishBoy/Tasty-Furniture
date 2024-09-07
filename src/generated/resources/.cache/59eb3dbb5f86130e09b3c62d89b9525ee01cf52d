@@ -1,4 +1,4 @@
-// 1.21	2024-09-07T09:54:29.447538396	Loot Tables
+// 1.21	2024-09-07T10:21:34.387239855	Loot Tables
 f506816aefac13fd3bcb8b3075eefc63b1b6be41 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bars.json
 98b73d11c0b3a3ecadbdd7c289263f01706818e9 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_block.json
 81d69920001f0e32b706a1e1ffa975ddba47869b data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bricks_block.json
@@ -398,4 +398,5 @@ f26f6e883ce351ea5560d0c56f97cd2e57d3682f data/goldfishmod02tastyfurniture/loot_t
 c44cde2a9d0b094d9e882112fbfaac74d487dc8d data/goldfishmod02tastyfurniture/loot_table/blocks/tropical_fish_soul_lantern.json
 394541688ac4731097f9c7b9bf3f5cf2ac22c0a5 data/goldfishmod02tastyfurniture/loot_table/blocks/tropical_fish_stairs.json
 1e30e28954d138ad67f2586d9fe933995473f551 data/goldfishmod02tastyfurniture/loot_table/blocks/tropical_fish_table.json
+cd071bc19fdaec9e00e2d1bd5c0213f74784f90b data/goldfishmod02tastyfurniture/loot_table/blocks/tropical_fish_tile_block.json
 1d749e5832065a5ebda3265925560bebdb12a406 data/goldfishmod02tastyfurniture/loot_table/blocks/tropical_fish_trapdoor.json
