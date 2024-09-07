@@ -281,6 +281,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           net.minecraft.world.level.block.Block chicken_tile_block = foodblockregistry.CHICKEN_TILE_BLOCK.get();
           ResourceLocation chicken_tile_texture = modLoc("block/chicken_tile_block");
           horizontalBlock(chicken_tile_block, chicken_tile_texture, chicken_tile_texture, chicken_tile_texture);
+      //.........cod
+          net.minecraft.world.level.block.Block cod_tile_block = foodblockregistry.COD_TILE_BLOCK.get();
+          ResourceLocation cod_tile_texture = modLoc("block/cod_tile_block");
+          horizontalBlock(cod_tile_block, cod_tile_texture, cod_tile_texture, cod_tile_texture);
 
     //-----------------------------------------------------------------doors------------------------------------------------------------------------------
       //.........glow berry

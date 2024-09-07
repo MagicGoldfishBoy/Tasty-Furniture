@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "goldfishmod02tastyfurniture:block/cod_tile_block",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "goldfishmod02tastyfurniture:block/cod_tile_block"
+    },
+    "facing=south": {
+      "model": "goldfishmod02tastyfurniture:block/cod_tile_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "goldfishmod02tastyfurniture:block/cod_tile_block",
+      "y": 270
+    }
+  }
+}
