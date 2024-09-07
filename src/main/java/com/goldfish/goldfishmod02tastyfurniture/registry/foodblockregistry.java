@@ -494,6 +494,12 @@ public class foodblockregistry {
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
          ));
+  //.........brown_mushroom
+    public static final DeferredHolder<Block, Block> BROWN_MUSHROOM_TILE_BLOCK = FOODBLOCK.register("brown_mushroom_tile_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
 
 //==============================================================================================================================================================================================
 //                                                                                          Doors
