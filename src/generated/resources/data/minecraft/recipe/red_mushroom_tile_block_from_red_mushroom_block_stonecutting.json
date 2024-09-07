@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "goldfishmod02tastyfurniture:red_mushroom_block_item"
+  },
+  "result": {
+    "count": 1,
+    "id": "goldfishmod02tastyfurniture:red_mushroom_tile_block_item"
+  }
+}

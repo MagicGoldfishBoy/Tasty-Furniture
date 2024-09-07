@@ -675,6 +675,19 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_brown_mushroom_block", has(foodblockitemregistry.BROWN_MUSHROOM_BLOCK_ITEM.get()))
             .save(output, "brown_mushroom_tile_block_from_brown_mushroom_block_stonecutting");
 
+          //.........red_mushroom
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RED_MUSHROOM_TILE_BLOCK_ITEM.get(),2)
+            .pattern("   ")
+            .pattern("AA ")
+            .pattern("AA ")
+            .define('A', foodblockitemregistry.RED_MUSHROOM_SLAB_ITEM.get())
+            .unlockedBy("has_red_mushroom_slab", has(foodblockitemregistry.RED_MUSHROOM_SLAB_ITEM.get()))
+            .save(output);
+
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.RED_MUSHROOM_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.RED_MUSHROOM_TILE_BLOCK_ITEM.get())
+            .unlockedBy("has_red_mushroom_block", has(foodblockitemregistry.RED_MUSHROOM_BLOCK_ITEM.get()))
+            .save(output, "red_mushroom_tile_block_from_red_mushroom_block_stonecutting");
+
         //---------------------------------------------------------unpack blocks------------------------------------------------------------------
          //apple_block
             ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.APPLE_INGOT.get(), 9)
