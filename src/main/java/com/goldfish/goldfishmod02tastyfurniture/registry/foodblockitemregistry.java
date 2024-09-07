@@ -243,6 +243,9 @@ public class foodblockitemregistry {
   //.........tropical_fish
      public static final DeferredHolder<Item, BlockItem> TROPICAL_FISH_TILE_BLOCK_ITEM = FOODBLOCKITEM.register("tropical_fish_tile_block_item",
      () -> new BlockItem(foodblockregistry.TROPICAL_FISH_TILE_BLOCK.get(), new BlockItem.Properties()));
+  //.........mutton
+     public static final DeferredHolder<Item, BlockItem> MUTTON_TILE_BLOCK_ITEM = FOODBLOCKITEM.register("mutton_tile_block_item",
+     () -> new BlockItem(foodblockregistry.MUTTON_TILE_BLOCK.get(), new BlockItem.Properties()));
 
 //==============================================================================================================================================================================================
 //                                                                                         Doors

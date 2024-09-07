@@ -293,6 +293,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           net.minecraft.world.level.block.Block tropical_fish_tile_block = foodblockregistry.TROPICAL_FISH_TILE_BLOCK.get();
           ResourceLocation tropical_fish_tile_texture = modLoc("block/tropical_fish_tile_block");
           horizontalBlock(tropical_fish_tile_block, tropical_fish_tile_texture, tropical_fish_tile_texture, tropical_fish_tile_texture);
+      //.........mutton
+          net.minecraft.world.level.block.Block mutton_tile_block = foodblockregistry.MUTTON_TILE_BLOCK.get();
+          ResourceLocation mutton_tile_texture = modLoc("block/mutton_tile_block");
+          horizontalBlock(mutton_tile_block, mutton_tile_texture, mutton_tile_texture, mutton_tile_texture);
 
     //-----------------------------------------------------------------doors------------------------------------------------------------------------------
       //.........glow berry
