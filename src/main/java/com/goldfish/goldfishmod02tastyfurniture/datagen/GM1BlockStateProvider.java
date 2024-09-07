@@ -241,6 +241,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           net.minecraft.world.level.block.Block potato_tile_block = foodblockregistry.POTATO_TILE_BLOCK.get();
           ResourceLocation potato_tile_texture = modLoc("block/potato_tile_block");
           simpleBlock(potato_tile_block);
+      //.........beetroot
+          net.minecraft.world.level.block.Block beetroot_tile_block = foodblockregistry.BEETROOT_TILE_BLOCK.get();
+          ResourceLocation beetroot_tile_texture = modLoc("block/beetroot_tile_block");
+          simpleBlock(beetroot_tile_block);
 
     //-----------------------------------------------------------------doors------------------------------------------------------------------------------
       //.........glow berry
