@@ -253,6 +253,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           net.minecraft.world.level.block.Block chorus_tile_block = foodblockregistry.CHORUS_TILE_BLOCK.get();
           ResourceLocation chorus_tile_texture = modLoc("block/chorus_tile_block");
           simpleBlock(chorus_tile_block);
+      //.........glow_berry
+          net.minecraft.world.level.block.Block glow_berry_tile_block = foodblockregistry.GLOW_BERRY_TILE_BLOCK.get();
+          ResourceLocation glow_berry_tile_texture = modLoc("block/glow_berry_tile_block");
+          simpleBlock(glow_berry_tile_block);
 
     //-----------------------------------------------------------------doors------------------------------------------------------------------------------
       //.........glow berry

@@ -211,7 +211,7 @@ public class foodblockregistry {
          .lightLevel(state -> 0)
          ));
 
- //--------------------------------------------------------------------------------------Brick Blocks-------------------------------------------------------------------------------------------
+ //-------------------------------------------------------------------------------------Brick Blocks--------------------------------------------------------------------------------------------
   //.........apple
     public static final DeferredHolder<Block, Block> APPLE_BRICKS_BLOCK = FOODBLOCK.register("apple_bricks_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(2.0f)
@@ -328,7 +328,7 @@ public class foodblockregistry {
          .sound(SoundType.MUD_BRICKS)
          ));
 
- //------------------------------------------------------------------------------------Chiseled Blocks-------------------------------------------------------------------------------------------
+ //-----------------------------------------------------------------------------------Chiseled Blocks-------------------------------------------------------------------------------------------
   //.........apple
     public static final DeferredHolder<Block, Block> APPLE_CHISELED_BLOCK = FOODBLOCK.register("apple_chiseled_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(2.0f)
@@ -444,7 +444,7 @@ public class foodblockregistry {
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
          ));
- //------------------------------------------------------------------------------------Tile Blocks-------------------------------------------------------------------------------------------
+ //-------------------------------------------------------------------------------------Tile Blocks---------------------------------------------------------------------------------------------
   //.........apple
     public static final DeferredHolder<Block, Block> APPLE_TILE_BLOCK = FOODBLOCK.register("apple_tile_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(2.0f)
@@ -474,6 +474,13 @@ public class foodblockregistry {
          .destroyTime(2.0f)
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
+         ));
+  //.........glow_berry
+    public static final DeferredHolder<Block, Block> GLOW_BERRY_TILE_BLOCK = FOODBLOCK.register("glow_berry_tile_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         .lightLevel(state -> 10)
          ));
 
 //==============================================================================================================================================================================================
