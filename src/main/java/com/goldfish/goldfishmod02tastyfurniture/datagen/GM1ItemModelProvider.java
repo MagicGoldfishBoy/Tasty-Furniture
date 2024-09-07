@@ -123,6 +123,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("glow_berry_tile_block_item", modLoc("block/glow_berry_tile_block"));
       //.........melon
         withExistingParent("melon_tile_block_item", modLoc("block/melon_tile_block"));
+      //.........sweet_berry
+        withExistingParent("sweet_berry_tile_block_item", modLoc("block/sweet_berry_tile_block"));
 
     //-------------------------------------------------------------doors---------------------------------------------------------------------
       //.........glow berry
@@ -360,7 +362,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       //..............rabbit
        slab("rabbit_bricks_slab_item", modLoc("block/rabbit_bricks_block"), modLoc("block/rabbit_bricks_block"), modLoc("block/rabbit_bricks_block"));
 
-    //--------------------------------------------------------stairs-----------------------------------------------------------------------
+    //-------------------------------------------------------------stairs--------------------------------------------------------------------
      //________________________________________________________Regular Stairs_________________________________________________________________
       //..............apple
        withExistingParent("apple_stairs_item", modLoc("block/apple_stairs"));
