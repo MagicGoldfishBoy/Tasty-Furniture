@@ -482,6 +482,12 @@ public class foodblockregistry {
          .sound(SoundType.MUD_BRICKS)
          .lightLevel(state -> 10)
          ));
+  //.........melon
+    public static final DeferredHolder<Block, Block> MELON_TILE_BLOCK = FOODBLOCK.register("melon_tile_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
 
 //==============================================================================================================================================================================================
 //                                                                                          Doors
