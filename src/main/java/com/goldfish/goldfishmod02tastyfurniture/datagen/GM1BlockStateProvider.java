@@ -17,6 +17,7 @@ import net.minecraft.world.level.block.SignBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.StandingSignBlock;
+import net.minecraft.world.level.block.TorchBlock;
 import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WallSignBlock;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -232,7 +233,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation rabbit_chiseled_texture = modLoc("block/rabbit_chiseled_block");
           simpleBlock(rabbit_chiseled_block);
 
-     //___________________________________________________________chiseled____________________________________________________________________
+     //_____________________________________________________________tile____________________________________________________________________
       //.........apple
           net.minecraft.world.level.block.Block apple_tile_block = foodblockregistry.APPLE_TILE_BLOCK.get();
           ResourceLocation apple_tile_texture = modLoc("block/apple_tile_block");
@@ -2428,11 +2429,44 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(rabbit_chain_model).rotationX(90).addModel();     
 
-    //----------------------------------------------------------------ladders-----------------------------------------------------------------------------
+    //----------------------------------------------------------------torches-----------------------------------------------------------------------------
       //.............apple
-      //  LadderBlock apple_ladder = foodblockregistry.APPLE_LADDER.get();
-      //  ResourceLocation apple_ladder_texture = modLoc("block/apple_block");
-       
-          
-}}
+       //regular
+        TorchBlock apple_torch = foodblockregistry.APPLE_TORCH.get();
+        ResourceLocation apple_torch_texture = modLoc("block/apple_torch");
+        BlockModelBuilder apple_torch_model = models()
+        .withExistingParent("apple_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", apple_torch_texture)
+        .texture("particle", apple_torch_texture);
+
+        simpleBlock(apple_torch, apple_torch_model);
+
+        TorchBlock apple_wall_torch = foodblockregistry.APPLE_WALL_TORCH.get();
+        BlockModelBuilder apple_wall_torch_model = models()
+        .withExistingParent("apple_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", apple_torch_texture)
+        .texture("particle", apple_torch_texture);
+        getVariantBuilder(apple_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 0;
+                case EAST -> 90;
+                case SOUTH -> 180;
+                case WEST -> 270;
+                default -> 0;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("apple_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", apple_torch_texture)
+                    .texture("particle", apple_torch_texture))
+                .rotationY(rotation)
+                .build();
+        });
+};
+}
     

@@ -18,6 +18,8 @@ import com.google.common.base.Supplier;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.ParticleType;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EntityType;
@@ -39,13 +41,16 @@ import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.LadderBlock;
 import net.minecraft.world.level.block.LanternBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
+import net.minecraft.world.level.block.RedstoneTorchBlock;
 import net.minecraft.world.level.block.SignBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.StandingSignBlock;
+import net.minecraft.world.level.block.TorchBlock;
 import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WallSignBlock;
+import net.minecraft.world.level.block.WallTorchBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.vault.*;
 import net.minecraft.world.level.block.entity.SignBlockEntity;
@@ -56,6 +61,7 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
+
 import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.obj.ObjMaterialLibrary.Material;
@@ -2862,7 +2868,40 @@ public class foodblockregistry {
     .sound(meat_ladder_sound)
     .noOcclusion()
     )); 
+//==============================================================================================================================================================================================
+//                                                                                         Torches
+//==============================================================================================================================================================================================
 
+   //.........apple
+    //regular
+     public static final DeferredHolder<Block, TorchBlock> APPLE_TORCH = FOODBLOCK.register("apple_torch", () -> new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH)));
+     public static final DeferredHolder<Block, WallTorchBlock> APPLE_WALL_TORCH = FOODBLOCK.register("apple_wall_torch", () -> new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH)));
+
+    public static final DeferredHolder<Block, Block> APPLE_REDSTONE_TORCH = FOODBLOCK.register("apple_redstone_torch", () -> new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH)));
+    // public static final DeferredHolder<Block, foodtorch> APPLE_TORCH = FOODBLOCK.register("apple_torch", () -> foodtorch(ParticleTypes.FLAME, BlockBehaviour.Properties.of()
+    // .noCollission()
+    // .instabreak()
+    // .lightLevel((state) -> 14) 
+    // .sound(SoundType.WOOD)
+    // ));
+   //.........potato
+   //.........beetroot
+   //.........carrot
+   //.........chorus
+   //.........glow_berry
+   //.........melon
+   //.........sweet_berry
+   //.........brown_mushroom
+   //.........red_mushroom
+   //.........pumpkin
+   //.........chicken
+   //.........cod
+   //.........salmon
+   //.........tropical_fish
+   //.........mutton
+   //.........beef
+   //.........pork
+   //.........rabbit
 //==============================================================================================================================================================================================
 //                                                                                         Furnaces
 //==============================================================================================================================================================================================

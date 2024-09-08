@@ -2,10 +2,12 @@ package com.goldfish.goldfishmod02tastyfurniture.registry;
 
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 
+import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SignItem;
+import net.minecraft.world.item.StandingAndWallBlockItem;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -1380,5 +1382,19 @@ public class foodblockitemregistry {
    //.........rabbit
     public static final DeferredHolder<Item, BlockItem> RABBIT_LADDER_ITEM =  FOODBLOCKITEM.register("rabbit_ladder_item",
     () -> new BlockItem(foodblockregistry.RABBIT_LADDER.get(), new BlockItem.Properties()));
+
+//==============================================================================================================================================================================================
+//                                                                                           Torches
+//==============================================================================================================================================================================================
+
+   //.........apple
+    public static final DeferredHolder<Item, StandingAndWallBlockItem> APPLE_TORCH_ITEM = FOODBLOCKITEM.register("apple_torch_item", 
+    () -> new StandingAndWallBlockItem(foodblockregistry.APPLE_TORCH.get(), foodblockregistry.APPLE_WALL_TORCH.get(), new Item.Properties(), Direction.NORTH));
+
+   //  public static final DeferredHolder<Item, BlockItem> APPLE_TORCH_ITEM =  FOODBLOCKITEM.register("apple_torch_item",
+   //  () -> new BlockItem(foodblockregistry.APPLE_TORCH.get(), new BlockItem.Properties()));
+
+    public static final DeferredHolder<Item, BlockItem> APPLE_REDSTONE_TORCH_ITEM =  FOODBLOCKITEM.register("apple_redstone_torch_item",
+    () -> new BlockItem(foodblockregistry.APPLE_REDSTONE_TORCH.get(), new BlockItem.Properties()));
 
 }
