@@ -13,6 +13,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodstandi
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodwallsign;
 // import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodwallsign.foodstandingsign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsignentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsignentity.potato_sign_entity;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistry;
 import com.google.common.base.Supplier;
 
@@ -53,6 +54,7 @@ import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WallSignBlock;
 import net.minecraft.world.level.block.WallTorchBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.entity.FurnaceBlockEntity;
 import net.minecraft.world.level.block.entity.vault.*;
 import net.minecraft.world.level.block.entity.SignBlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -78,7 +80,7 @@ import net.neoforged.neoforge.registries.holdersets.*;
 
 public class foodblockregistry {
     public static final DeferredRegister<Block> FOODBLOCK = DeferredRegister.create(BuiltInRegistries.BLOCK, TastyFurniture.MODID);
-    public static final DeferredRegister<BlockEntityType<?>> FOODSIGNBLOCKENTITY = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, TastyFurniture.MODID);
+    public static final DeferredRegister<BlockEntityType<?>> FOODBLOCKENTITY = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, TastyFurniture.MODID);
     
 //==============================================================================================================================================================================================
 //                                                                                          Blocks
@@ -995,7 +997,7 @@ public class foodblockregistry {
        //WoodType.OAK
        foodmaterialtyperegistry.APPLEWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodsignentity>> APPLE_SIGN_ENTITY = FOODSIGNBLOCKENTITY.register(
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodsignentity>> APPLE_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "apple_sign_entity",
      () -> BlockEntityType.Builder.of(
          foodsignentity::new,
@@ -1045,10 +1047,10 @@ public class foodblockregistry {
        //WoodType.OAK
        foodmaterialtyperegistry.POTATOWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodsignentity>> POTATO_SIGN_ENTITY = FOODSIGNBLOCKENTITY.register(
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<potato_sign_entity>> POTATO_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "potato_sign_entity",
      () -> BlockEntityType.Builder.of(
-         foodsignentity::new,
+         potato_sign_entity::new,
          foodblockregistry.POTATO_SIGN.get(),
          foodblockregistry.POTATO_WALL_SIGN.get(),
          foodblockregistry.POTATO_STANDING_SIGN.get()
@@ -3249,25 +3251,25 @@ public class foodblockregistry {
     
    //.........pork
     //regular
-    public static final DeferredHolder<Block, TorchBlock> PORK_TORCH = FOODBLOCK.register("pork_torch", 
-    () -> new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH)));
+      public static final DeferredHolder<Block, TorchBlock> PORK_TORCH = FOODBLOCK.register("pork_torch", 
+      () -> new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH)));
 
-    public static final DeferredHolder<Block, WallTorchBlock> PORK_WALL_TORCH = FOODBLOCK.register("pork_wall_torch", 
-    () -> new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH)));
+      public static final DeferredHolder<Block, WallTorchBlock> PORK_WALL_TORCH = FOODBLOCK.register("pork_wall_torch", 
+      () -> new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH)));
 
-   //redstone
-    public static final DeferredHolder<Block, RedstoneTorchBlock> PORK_REDSTONE_TORCH = FOODBLOCK.register("pork_redstone_torch", 
-    () -> new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH)));
+    //redstone
+      public static final DeferredHolder<Block, RedstoneTorchBlock> PORK_REDSTONE_TORCH = FOODBLOCK.register("pork_redstone_torch", 
+      () -> new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH)));
 
-    public static final DeferredHolder<Block, RedstoneWallTorchBlock> PORK_REDSTONE_WALL_TORCH = FOODBLOCK.register("pork_redstone_wall_torch", 
-    () -> new RedstoneWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_WALL_TORCH)));
+      public static final DeferredHolder<Block, RedstoneWallTorchBlock> PORK_REDSTONE_WALL_TORCH = FOODBLOCK.register("pork_redstone_wall_torch", 
+      () -> new RedstoneWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_WALL_TORCH)));
 
-   //soul
-    public static final DeferredHolder<Block, TorchBlock> PORK_SOUL_TORCH = FOODBLOCK.register("pork_soul_torch", 
-    () -> new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_TORCH)));
+    //soul
+      public static final DeferredHolder<Block, TorchBlock> PORK_SOUL_TORCH = FOODBLOCK.register("pork_soul_torch", 
+      () -> new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_TORCH)));
 
-    public static final DeferredHolder<Block, WallTorchBlock> PORK_SOUL_WALL_TORCH = FOODBLOCK.register("pork_soul_wall_torch", 
-    () -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH)));
+      public static final DeferredHolder<Block, WallTorchBlock> PORK_SOUL_WALL_TORCH = FOODBLOCK.register("pork_soul_wall_torch", 
+      () -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH)));
    
    //.........rabbit
     //regular
@@ -3277,14 +3279,14 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, WallTorchBlock> RABBIT_WALL_TORCH = FOODBLOCK.register("rabbit_wall_torch", 
     () -> new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH)));
 
-   //redstone
+    //redstone
     public static final DeferredHolder<Block, RedstoneTorchBlock> RABBIT_REDSTONE_TORCH = FOODBLOCK.register("rabbit_redstone_torch", 
     () -> new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH)));
 
     public static final DeferredHolder<Block, RedstoneWallTorchBlock> RABBIT_REDSTONE_WALL_TORCH = FOODBLOCK.register("rabbit_redstone_wall_torch", 
     () -> new RedstoneWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_WALL_TORCH)));
 
-   //soul
+    //soul
     public static final DeferredHolder<Block, TorchBlock> RABBIT_SOUL_TORCH = FOODBLOCK.register("rabbit_soul_torch", 
     () -> new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_TORCH)));
 
@@ -3297,6 +3299,12 @@ public class foodblockregistry {
 
    //.........apple
     //public static final DeferredHolder<Block, FurnaceBlock> APPLE_FURNACE = FOODBLOCK.register("apple_furnace", () -> FurnaceBlock(BlockBehaviour.Properties.of()))
+    public static final DeferredHolder<Block, FurnaceBlock> APPLE_FURNACE = FOODBLOCK.register("apple_furnace", () -> new FurnaceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FURNACE)));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FurnaceBlockEntity>> APPLE_FURNACE_ENTITY = FOODBLOCKENTITY.register("apple_furnace", 
+    () -> BlockEntityType.Builder.of(FurnaceBlockEntity::new, APPLE_FURNACE.get()).build(null));
+
+
    //.........potato
    //.........beetroot
    //.........carrot

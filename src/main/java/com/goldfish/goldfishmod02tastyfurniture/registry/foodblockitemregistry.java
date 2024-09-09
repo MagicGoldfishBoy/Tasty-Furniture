@@ -1588,4 +1588,10 @@ public class foodblockitemregistry {
       public static final DeferredHolder<Item, StandingAndWallBlockItem> RABBIT_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("rabbit_soul_torch_item",
       () -> new StandingAndWallBlockItem(foodblockregistry.RABBIT_SOUL_TORCH.get(), foodblockregistry.RABBIT_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
 
+//==============================================================================================================================================================================================
+//                                                                                         Furnaces
+//==============================================================================================================================================================================================
+
+   //.........apple
+    public static final DeferredHolder<Item, BlockItem> APPLE_FURNACE_ITEM = FOODBLOCKITEM.register("apple_furnace_item", () -> new BlockItem(foodblockregistry.APPLE_FURNACE.get(), new BlockItem.Properties()));
 }

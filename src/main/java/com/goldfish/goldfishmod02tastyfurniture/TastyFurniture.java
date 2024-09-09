@@ -9,7 +9,9 @@ import com.mojang.logging.LogUtils;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.DataGenerator;
@@ -26,9 +28,14 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.FurnaceBlock;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.entity.FurnaceBlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
@@ -83,7 +90,7 @@ public class TastyFurniture
 
     public static final DeferredRegister.Blocks FOODBLOCK = DeferredRegister.createBlocks(MODID);
 
-    public static final DeferredRegister.Blocks FOODSIGNBLOCKENTITY = DeferredRegister.createBlocks(MODID);
+    public static final DeferredRegister.Blocks FOODBLOCKENTITY = DeferredRegister.createBlocks(MODID);
 
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
     
@@ -141,7 +148,7 @@ public class TastyFurniture
 
         foodblockregistry.FOODBLOCK.register(modEventBus);
 
-        foodblockregistry.FOODSIGNBLOCKENTITY.register(modEventBus);
+        foodblockregistry.FOODBLOCKENTITY.register(modEventBus);
 
         ITEMS.register(modEventBus);
 
@@ -198,21 +205,28 @@ public class TastyFurniture
         event.registerBlockEntityRenderer(foodblockregistry.POTATO_SIGN_ENTITY.get(), SignRenderer::new);
         }
 
-        // @SubscribeEvent
-        // public void onPlayerTick() {{
-        //     if (Player.level().isClientSide) {
-        //         ItemStack heldItem = Player.getMainHandItem();
-        //         if (heldItem.getItem() instanceof glow_berry_sword) {
-        //             BlockPos pos = Player.blockPosition();
-        //             Level world = Player.level();
+        //BlockEntityTicker<FurnaceBlockEntity> ticker = (world, pos, state, blockEntity) -> FurnaceBlockEntity.serverTick(world, pos, state, blockEntity);
+
+        private void setup(final FMLCommonSetupEvent event) {
+            event.enqueueWork(() -> {
+                BlockEntityType<FurnaceBlockEntity> appleFurnaceEntityType = foodblockregistry.APPLE_FURNACE_ENTITY.get();
     
-        //             // Emit light at the player's position
-        //             BlockState blockState = world.getBlockState(pos);
-        //             int lightLevel = 14; // Maximum light level is 15 (similar to a torch)
-        //             world.getChunkSource().getLightEngine().checkBlock(pos); // Update lighting
-        //         }
-        //     }
-        // }
+                BlockEntityTicker<FurnaceBlockEntity> furnaceTicker = (level, pos, state, entity) -> {
+                    if (!level.isClientSide) {
+                        FurnaceBlockEntity.serverTick(level, pos, state, entity);
+                    }
+                };
+    
+                // Register the ticker for your custom furnace block
+                registerBlockEntityTicker(appleFurnaceEntityType, furnaceTicker);
+            });
+        }
+    
+        /**
+         * Registers the ticker for the given BlockEntityType.
+         */
+        private <T extends BlockEntity> void registerBlockEntityTicker(BlockEntityType<T> type, BlockEntityTicker<? super T> ticker) {
+        }
     }
 
 
