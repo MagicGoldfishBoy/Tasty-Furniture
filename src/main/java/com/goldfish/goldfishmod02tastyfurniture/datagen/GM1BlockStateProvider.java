@@ -3961,6 +3961,123 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .rotationY(rotation)
                 .build();
             });
+            
+      //.............salmon
+       //regular
+        TorchBlock salmon_torch = foodblockregistry.SALMON_TORCH.get();
+        ResourceLocation salmon_torch_texture = modLoc("block/salmon_torch");
+        BlockModelBuilder salmon_torch_model = models()
+        .withExistingParent("salmon_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", salmon_torch_texture)
+        .texture("particle", salmon_torch_texture);
+
+        simpleBlock(salmon_torch, salmon_torch_model);
+
+        TorchBlock salmon_wall_torch = foodblockregistry.SALMON_WALL_TORCH.get();
+        BlockModelBuilder salmon_wall_torch_model = models()
+        .withExistingParent("salmon_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", salmon_torch_texture)
+        .texture("particle", salmon_torch_texture);
+        getVariantBuilder(salmon_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("salmon_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", salmon_torch_texture)
+                    .texture("particle", salmon_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock salmon_redstone_torch = foodblockregistry.SALMON_REDSTONE_TORCH.get();
+        ResourceLocation salmon_redstone_torch_texture = modLoc("block/salmon_redstone_torch");
+        BlockModelBuilder salmon_redstone_torch_model = models()
+        .withExistingParent("salmon_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", salmon_redstone_torch_texture)
+        .texture("particle", salmon_redstone_torch_texture);
+        
+
+        simpleBlock(salmon_redstone_torch, salmon_redstone_torch_model);
+
+        ResourceLocation salmon_redstone_wall_torch_texture = modLoc("block/salmon_redstone_torch");
+
+        RedstoneTorchBlock salmon_redstone_wall_torch = foodblockregistry.SALMON_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder salmon_redstone_wall_torch_model = models()
+        .withExistingParent("salmon_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", salmon_redstone_wall_torch_texture)
+        .texture("particle", salmon_redstone_wall_torch_texture);
+        getVariantBuilder(salmon_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("salmon_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", salmon_redstone_wall_torch_texture)
+                    .texture("particle", salmon_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock salmon_soul_torch = foodblockregistry.SALMON_SOUL_TORCH.get();
+        ResourceLocation salmon_soul_torch_texture = modLoc("block/salmon_soul_torch");
+        BlockModelBuilder salmon_soul_torch_model = models()
+        .withExistingParent("salmon_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", salmon_soul_torch_texture)
+        .texture("particle", salmon_soul_torch_texture);
+        
+
+        simpleBlock(salmon_soul_torch, salmon_soul_torch_model);
+
+        ResourceLocation salmon_soul_wall_torch_texture = modLoc("block/salmon_soul_torch");
+        TorchBlock salmon_soul_wall_torch = foodblockregistry.SALMON_SOUL_WALL_TORCH.get();
+        BlockModelBuilder salmon_soul_wall_torch_model = models()
+        .withExistingParent("salmon_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", salmon_soul_wall_torch_texture)
+        .texture("particle", salmon_soul_wall_torch_texture);
+        getVariantBuilder(salmon_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("salmon_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", salmon_soul_wall_torch_texture)
+                    .texture("particle", salmon_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
 
 
    };

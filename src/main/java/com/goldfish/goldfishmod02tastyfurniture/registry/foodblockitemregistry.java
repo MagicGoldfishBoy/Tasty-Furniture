@@ -1527,5 +1527,15 @@ public class foodblockitemregistry {
     //soul
       public static final DeferredHolder<Item, StandingAndWallBlockItem> COD_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("cod_soul_torch_item",
       () -> new StandingAndWallBlockItem(foodblockregistry.COD_SOUL_TORCH.get(), foodblockregistry.COD_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+   //.........salmon
+    //regular
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> SALMON_TORCH_ITEM = FOODBLOCKITEM.register("salmon_torch_item", 
+      () -> new StandingAndWallBlockItem(foodblockregistry.SALMON_TORCH.get(), foodblockregistry.SALMON_WALL_TORCH.get(), new Item.Properties(), Direction.NORTH));
+    //redstone
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> SALMON_REDSTONE_TORCH_ITEM =  FOODBLOCKITEM.register("salmon_redstone_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockregistry.SALMON_REDSTONE_TORCH.get(), foodblockregistry.SALMON_REDSTONE_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+    //soul
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> SALMON_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("salmon_soul_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockregistry.SALMON_SOUL_TORCH.get(), foodblockregistry.SALMON_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
 
 }

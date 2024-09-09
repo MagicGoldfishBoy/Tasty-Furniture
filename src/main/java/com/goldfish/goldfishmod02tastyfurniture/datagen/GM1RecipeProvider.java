@@ -3758,6 +3758,37 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('C', Items.SOUL_SAND)
             .unlockedBy("has_cod_nugget", has(nuggetregistry.COD_NUGGET.get()))
             .save(output);
+         //.....salmon
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SALMON_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetregistry.SALMON_NUGGET.get())
+            .define('C', ItemTags.COALS)
+            .unlockedBy("has_salmon_nugget", has(nuggetregistry.SALMON_NUGGET.get()))
+            .save(output);
+          //redstone
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SALMON_REDSTONE_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetregistry.SALMON_NUGGET.get())
+            .define('C', Items.REDSTONE)
+            .unlockedBy("has_salmon_nugget", has(nuggetregistry.SALMON_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SALMON_SOUL_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetregistry.SALMON_NUGGET.get())
+            .define('C', Items.SOUL_SAND)
+            .unlockedBy("has_salmon_nugget", has(nuggetregistry.SALMON_NUGGET.get()))
+            .save(output);
 
         }
     }
