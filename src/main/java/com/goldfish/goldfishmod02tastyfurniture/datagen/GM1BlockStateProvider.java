@@ -2675,6 +2675,123 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .build();
             });
 
+      //.............beetroot
+       //regular
+        TorchBlock beetroot_torch = foodblockregistry.BEETROOT_TORCH.get();
+        ResourceLocation beetroot_torch_texture = modLoc("block/beetroot_torch");
+        BlockModelBuilder beetroot_torch_model = models()
+        .withExistingParent("beetroot_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", beetroot_torch_texture)
+        .texture("particle", beetroot_torch_texture);
+
+        simpleBlock(beetroot_torch, beetroot_torch_model);
+
+        TorchBlock beetroot_wall_torch = foodblockregistry.BEETROOT_WALL_TORCH.get();
+        BlockModelBuilder beetroot_wall_torch_model = models()
+        .withExistingParent("beetroot_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", beetroot_torch_texture)
+        .texture("particle", beetroot_torch_texture);
+        getVariantBuilder(beetroot_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("beetroot_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", beetroot_torch_texture)
+                    .texture("particle", beetroot_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock beetroot_redstone_torch = foodblockregistry.BEETROOT_REDSTONE_TORCH.get();
+        ResourceLocation beetroot_redstone_torch_texture = modLoc("block/beetroot_redstone_torch");
+        BlockModelBuilder beetroot_redstone_torch_model = models()
+        .withExistingParent("beetroot_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", beetroot_redstone_torch_texture)
+        .texture("particle", beetroot_redstone_torch_texture);
+        
+
+        simpleBlock(beetroot_redstone_torch, beetroot_redstone_torch_model);
+
+        ResourceLocation beetroot_redstone_wall_torch_texture = modLoc("block/beetroot_redstone_torch");
+
+        RedstoneTorchBlock beetroot_redstone_wall_torch = foodblockregistry.BEETROOT_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder beetroot_redstone_wall_torch_model = models()
+        .withExistingParent("beetroot_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", beetroot_redstone_wall_torch_texture)
+        .texture("particle", beetroot_redstone_wall_torch_texture);
+        getVariantBuilder(beetroot_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("beetroot_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", beetroot_redstone_wall_torch_texture)
+                    .texture("particle", beetroot_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock beetroot_soul_torch = foodblockregistry.BEETROOT_SOUL_TORCH.get();
+        ResourceLocation beetroot_soul_torch_texture = modLoc("block/beetroot_soul_torch");
+        BlockModelBuilder beetroot_soul_torch_model = models()
+        .withExistingParent("beetroot_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", beetroot_soul_torch_texture)
+        .texture("particle", beetroot_soul_torch_texture);
+        
+
+        simpleBlock(beetroot_soul_torch, beetroot_soul_torch_model);
+
+        ResourceLocation beetroot_soul_wall_torch_texture = modLoc("block/beetroot_soul_torch");
+        TorchBlock beetroot_soul_wall_torch = foodblockregistry.BEETROOT_SOUL_WALL_TORCH.get();
+        BlockModelBuilder beetroot_soul_wall_torch_model = models()
+        .withExistingParent("beetroot_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", beetroot_soul_wall_torch_texture)
+        .texture("particle", beetroot_soul_wall_torch_texture);
+        getVariantBuilder(beetroot_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("beetroot_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", beetroot_soul_wall_torch_texture)
+                    .texture("particle", beetroot_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
 
    };
 }

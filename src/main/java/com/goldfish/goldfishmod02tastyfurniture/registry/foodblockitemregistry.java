@@ -1409,4 +1409,15 @@ public class foodblockitemregistry {
       public static final DeferredHolder<Item, StandingAndWallBlockItem> POTATO_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("potato_soul_torch_item",
       () -> new StandingAndWallBlockItem(foodblockregistry.POTATO_SOUL_TORCH.get(), foodblockregistry.POTATO_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
 
+   //.........beetroot
+    //regular
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> BEETROOT_TORCH_ITEM = FOODBLOCKITEM.register("beetroot_torch_item", 
+      () -> new StandingAndWallBlockItem(foodblockregistry.BEETROOT_TORCH.get(), foodblockregistry.BEETROOT_WALL_TORCH.get(), new Item.Properties(), Direction.NORTH));
+    //redstone
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> BEETROOT_REDSTONE_TORCH_ITEM =  FOODBLOCKITEM.register("beetroot_redstone_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockregistry.BEETROOT_REDSTONE_TORCH.get(), foodblockregistry.BEETROOT_REDSTONE_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+    //soul
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> BEETROOT_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("beetroot_soul_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockregistry.BEETROOT_SOUL_TORCH.get(), foodblockregistry.BEETROOT_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+
 }
