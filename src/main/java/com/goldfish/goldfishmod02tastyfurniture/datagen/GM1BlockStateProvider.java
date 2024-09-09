@@ -3961,7 +3961,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .rotationY(rotation)
                 .build();
             });
-            
+
       //.............salmon
        //regular
         TorchBlock salmon_torch = foodblockregistry.SALMON_TORCH.get();
@@ -4075,6 +4075,123 @@ public class GM1BlockStateProvider extends BlockStateProvider
                     .renderType("cutout_mipped_all")
                     .texture("torch", salmon_soul_wall_torch_texture)
                     .texture("particle", salmon_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+            
+      //.............tropical_fish
+       //regular
+        TorchBlock tropical_fish_torch = foodblockregistry.TROPICAL_FISH_TORCH.get();
+        ResourceLocation tropical_fish_torch_texture = modLoc("block/tropical_fish_torch");
+        BlockModelBuilder tropical_fish_torch_model = models()
+        .withExistingParent("tropical_fish_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", tropical_fish_torch_texture)
+        .texture("particle", tropical_fish_torch_texture);
+
+        simpleBlock(tropical_fish_torch, tropical_fish_torch_model);
+
+        TorchBlock tropical_fish_wall_torch = foodblockregistry.TROPICAL_FISH_WALL_TORCH.get();
+        BlockModelBuilder tropical_fish_wall_torch_model = models()
+        .withExistingParent("tropical_fish_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", tropical_fish_torch_texture)
+        .texture("particle", tropical_fish_torch_texture);
+        getVariantBuilder(tropical_fish_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("tropical_fish_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", tropical_fish_torch_texture)
+                    .texture("particle", tropical_fish_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock tropical_fish_redstone_torch = foodblockregistry.TROPICAL_FISH_REDSTONE_TORCH.get();
+        ResourceLocation tropical_fish_redstone_torch_texture = modLoc("block/tropical_fish_redstone_torch");
+        BlockModelBuilder tropical_fish_redstone_torch_model = models()
+        .withExistingParent("tropical_fish_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", tropical_fish_redstone_torch_texture)
+        .texture("particle", tropical_fish_redstone_torch_texture);
+        
+
+        simpleBlock(tropical_fish_redstone_torch, tropical_fish_redstone_torch_model);
+
+        ResourceLocation tropical_fish_redstone_wall_torch_texture = modLoc("block/tropical_fish_redstone_torch");
+
+        RedstoneTorchBlock tropical_fish_redstone_wall_torch = foodblockregistry.TROPICAL_FISH_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder tropical_fish_redstone_wall_torch_model = models()
+        .withExistingParent("tropical_fish_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", tropical_fish_redstone_wall_torch_texture)
+        .texture("particle", tropical_fish_redstone_wall_torch_texture);
+        getVariantBuilder(tropical_fish_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("tropical_fish_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", tropical_fish_redstone_wall_torch_texture)
+                    .texture("particle", tropical_fish_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock tropical_fish_soul_torch = foodblockregistry.TROPICAL_FISH_SOUL_TORCH.get();
+        ResourceLocation tropical_fish_soul_torch_texture = modLoc("block/tropical_fish_soul_torch");
+        BlockModelBuilder tropical_fish_soul_torch_model = models()
+        .withExistingParent("tropical_fish_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", tropical_fish_soul_torch_texture)
+        .texture("particle", tropical_fish_soul_torch_texture);
+        
+
+        simpleBlock(tropical_fish_soul_torch, tropical_fish_soul_torch_model);
+
+        ResourceLocation tropical_fish_soul_wall_torch_texture = modLoc("block/tropical_fish_soul_torch");
+        TorchBlock tropical_fish_soul_wall_torch = foodblockregistry.TROPICAL_FISH_SOUL_WALL_TORCH.get();
+        BlockModelBuilder tropical_fish_soul_wall_torch_model = models()
+        .withExistingParent("tropical_fish_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", tropical_fish_soul_wall_torch_texture)
+        .texture("particle", tropical_fish_soul_wall_torch_texture);
+        getVariantBuilder(tropical_fish_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("tropical_fish_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", tropical_fish_soul_wall_torch_texture)
+                    .texture("particle", tropical_fish_soul_wall_torch_texture))
                 .rotationY(rotation)
                 .build();
             });

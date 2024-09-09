@@ -1537,5 +1537,15 @@ public class foodblockitemregistry {
     //soul
       public static final DeferredHolder<Item, StandingAndWallBlockItem> SALMON_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("salmon_soul_torch_item",
       () -> new StandingAndWallBlockItem(foodblockregistry.SALMON_SOUL_TORCH.get(), foodblockregistry.SALMON_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+   //.........tropical_fish
+    //regular
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> TROPICAL_FISH_TORCH_ITEM = FOODBLOCKITEM.register("tropical_fish_torch_item", 
+      () -> new StandingAndWallBlockItem(foodblockregistry.TROPICAL_FISH_TORCH.get(), foodblockregistry.TROPICAL_FISH_WALL_TORCH.get(), new Item.Properties(), Direction.NORTH));
+    //redstone
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> TROPICAL_FISH_REDSTONE_TORCH_ITEM =  FOODBLOCKITEM.register("tropical_fish_redstone_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockregistry.TROPICAL_FISH_REDSTONE_TORCH.get(), foodblockregistry.TROPICAL_FISH_REDSTONE_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+    //soul
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> TROPICAL_FISH_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("tropical_fish_soul_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockregistry.TROPICAL_FISH_SOUL_TORCH.get(), foodblockregistry.TROPICAL_FISH_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
 
 }
