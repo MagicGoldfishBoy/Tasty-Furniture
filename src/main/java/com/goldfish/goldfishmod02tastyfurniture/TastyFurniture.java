@@ -64,6 +64,7 @@ import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.food_weapon_registry;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsignentity;
+import com.goldfish.goldfishmod02tastyfurniture.datagen.Custom_Datagen_Methods.DataGenHelper;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1BlockLootTableProvider;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1BlockStateProvider;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1Datagen;
@@ -222,6 +223,8 @@ public class datagathering {
         try {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
+        //DataGenHelper.createRedstoneWallTorch(output, "yourmodid", existingFileHelper,
+        //foodblockregistry.APPLE_REDSTONE_WALL_TORCH.get(), apple_redstone_torch_texture, "apple_redstone_wall_torch");
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
         generator.addProvider(event.includeClient(), new GM1LootTableProvider(output, lookupProvider));

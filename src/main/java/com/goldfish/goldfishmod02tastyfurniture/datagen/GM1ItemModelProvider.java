@@ -955,9 +955,12 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       //..............rabbit
        withExistingParent("rabbit_table_item", modLoc("block/rabbit_table"));
 
-    //--------------------------------------------------------tables-----------------------------------------------------------------------
+    //--------------------------------------------------------torches-----------------------------------------------------------------------
       //..............apple
-       withExistingParent("apple_torch_item", modLoc("block/apple_torch"));
+       //regular
+        withExistingParent("apple_torch_item", modLoc("block/apple_torch"));
+       //redstone
+        withExistingParent("apple_redstone_torch_item", modLoc("block/apple_redstone_torch"));
   }   
 }
 

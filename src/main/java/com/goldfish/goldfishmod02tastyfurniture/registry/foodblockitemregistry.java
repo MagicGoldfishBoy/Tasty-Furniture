@@ -1394,7 +1394,7 @@ public class foodblockitemregistry {
    //  public static final DeferredHolder<Item, BlockItem> APPLE_TORCH_ITEM =  FOODBLOCKITEM.register("apple_torch_item",
    //  () -> new BlockItem(foodblockregistry.APPLE_TORCH.get(), new BlockItem.Properties()));
 
-    public static final DeferredHolder<Item, BlockItem> APPLE_REDSTONE_TORCH_ITEM =  FOODBLOCKITEM.register("apple_redstone_torch_item",
-    () -> new BlockItem(foodblockregistry.APPLE_REDSTONE_TORCH.get(), new BlockItem.Properties()));
+    public static final DeferredHolder<Item, StandingAndWallBlockItem> APPLE_REDSTONE_TORCH_ITEM =  FOODBLOCKITEM.register("apple_redstone_torch_item",
+    () -> new StandingAndWallBlockItem(foodblockregistry.APPLE_REDSTONE_TORCH.get(), foodblockregistry.APPLE_REDSTONE_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
 
 }

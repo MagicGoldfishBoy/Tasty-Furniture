@@ -10,6 +10,7 @@ import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockitemregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.ingotregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.nuggetregistry;
+import com.mojang.datafixers.types.templates.Tag;
 import com.goldfish.goldfishmod02tastyfurniture.registry.food_weapon_registry;
 
 import net.minecraft.advancements.Criterion;
@@ -22,6 +23,8 @@ import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.data.recipes.SingleItemRecipeBuilder;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -3339,6 +3342,19 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .define('B', ingotregistry.RABBIT_INGOT.get())
           .unlockedBy("has_rabbit_ingot", has(ingotregistry.RABBIT_INGOT.get()))
           .save(output);
+
+        //------------------------------------------------------------torches----------------------------------------------------
+         //.....apple
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetregistry.APPLE_NUGGET.get())
+            .define('C', ItemTags.COALS)
+            .unlockedBy("has_apple_nugget", has(nuggetregistry.APPLE_NUGGET.get()))
+            .save(output);
 
         }
     }

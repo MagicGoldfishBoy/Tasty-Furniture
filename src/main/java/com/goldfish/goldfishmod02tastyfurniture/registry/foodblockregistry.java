@@ -42,6 +42,7 @@ import net.minecraft.world.level.block.LadderBlock;
 import net.minecraft.world.level.block.LanternBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.RedstoneTorchBlock;
+import net.minecraft.world.level.block.RedstoneWallTorchBlock;
 import net.minecraft.world.level.block.SignBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
@@ -2877,7 +2878,9 @@ public class foodblockregistry {
      public static final DeferredHolder<Block, TorchBlock> APPLE_TORCH = FOODBLOCK.register("apple_torch", () -> new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH)));
      public static final DeferredHolder<Block, WallTorchBlock> APPLE_WALL_TORCH = FOODBLOCK.register("apple_wall_torch", () -> new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH)));
 
-    public static final DeferredHolder<Block, Block> APPLE_REDSTONE_TORCH = FOODBLOCK.register("apple_redstone_torch", () -> new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH)));
+     public static final DeferredHolder<Block, RedstoneTorchBlock> APPLE_REDSTONE_TORCH = FOODBLOCK.register("apple_redstone_torch", () -> new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH)));
+     public static final DeferredHolder<Block, RedstoneWallTorchBlock> APPLE_REDSTONE_WALL_TORCH = FOODBLOCK.register("apple_redstone_wall_torch", 
+     () -> new RedstoneWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_WALL_TORCH)));
     // public static final DeferredHolder<Block, foodtorch> APPLE_TORCH = FOODBLOCK.register("apple_torch", () -> foodtorch(ParticleTypes.FLAME, BlockBehaviour.Properties.of()
     // .noCollission()
     // .instabreak()
