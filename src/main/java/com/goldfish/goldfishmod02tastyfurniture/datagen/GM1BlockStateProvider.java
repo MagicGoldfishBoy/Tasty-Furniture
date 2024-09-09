@@ -4429,7 +4429,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .rotationY(rotation)
                 .build();
             });
-            
+
       //.............pork
        //regular
         TorchBlock pork_torch = foodblockregistry.PORK_TORCH.get();
@@ -4543,6 +4543,123 @@ public class GM1BlockStateProvider extends BlockStateProvider
                     .renderType("cutout_mipped_all")
                     .texture("torch", pork_soul_wall_torch_texture)
                     .texture("particle", pork_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+            
+      //.............rabbit
+       //regular
+        TorchBlock rabbit_torch = foodblockregistry.RABBIT_TORCH.get();
+        ResourceLocation rabbit_torch_texture = modLoc("block/rabbit_torch");
+        BlockModelBuilder rabbit_torch_model = models()
+        .withExistingParent("rabbit_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", rabbit_torch_texture)
+        .texture("particle", rabbit_torch_texture);
+
+        simpleBlock(rabbit_torch, rabbit_torch_model);
+
+        TorchBlock rabbit_wall_torch = foodblockregistry.RABBIT_WALL_TORCH.get();
+        BlockModelBuilder rabbit_wall_torch_model = models()
+        .withExistingParent("rabbit_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", rabbit_torch_texture)
+        .texture("particle", rabbit_torch_texture);
+        getVariantBuilder(rabbit_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("rabbit_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", rabbit_torch_texture)
+                    .texture("particle", rabbit_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock rabbit_redstone_torch = foodblockregistry.RABBIT_REDSTONE_TORCH.get();
+        ResourceLocation rabbit_redstone_torch_texture = modLoc("block/rabbit_redstone_torch");
+        BlockModelBuilder rabbit_redstone_torch_model = models()
+        .withExistingParent("rabbit_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", rabbit_redstone_torch_texture)
+        .texture("particle", rabbit_redstone_torch_texture);
+        
+
+        simpleBlock(rabbit_redstone_torch, rabbit_redstone_torch_model);
+
+        ResourceLocation rabbit_redstone_wall_torch_texture = modLoc("block/rabbit_redstone_torch");
+
+        RedstoneTorchBlock rabbit_redstone_wall_torch = foodblockregistry.RABBIT_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder rabbit_redstone_wall_torch_model = models()
+        .withExistingParent("rabbit_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", rabbit_redstone_wall_torch_texture)
+        .texture("particle", rabbit_redstone_wall_torch_texture);
+        getVariantBuilder(rabbit_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("rabbit_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", rabbit_redstone_wall_torch_texture)
+                    .texture("particle", rabbit_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock rabbit_soul_torch = foodblockregistry.RABBIT_SOUL_TORCH.get();
+        ResourceLocation rabbit_soul_torch_texture = modLoc("block/rabbit_soul_torch");
+        BlockModelBuilder rabbit_soul_torch_model = models()
+        .withExistingParent("rabbit_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", rabbit_soul_torch_texture)
+        .texture("particle", rabbit_soul_torch_texture);
+        
+
+        simpleBlock(rabbit_soul_torch, rabbit_soul_torch_model);
+
+        ResourceLocation rabbit_soul_wall_torch_texture = modLoc("block/rabbit_soul_torch");
+        TorchBlock rabbit_soul_wall_torch = foodblockregistry.RABBIT_SOUL_WALL_TORCH.get();
+        BlockModelBuilder rabbit_soul_wall_torch_model = models()
+        .withExistingParent("rabbit_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", rabbit_soul_wall_torch_texture)
+        .texture("particle", rabbit_soul_wall_torch_texture);
+        getVariantBuilder(rabbit_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("rabbit_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", rabbit_soul_wall_torch_texture)
+                    .texture("particle", rabbit_soul_wall_torch_texture))
                 .rotationY(rotation)
                 .build();
             });
