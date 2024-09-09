@@ -2792,6 +2792,123 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .build();
             });
 
+      //.............carrot
+       //regular
+        TorchBlock carrot_torch = foodblockregistry.CARROT_TORCH.get();
+        ResourceLocation carrot_torch_texture = modLoc("block/carrot_torch");
+        BlockModelBuilder carrot_torch_model = models()
+        .withExistingParent("carrot_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", carrot_torch_texture)
+        .texture("particle", carrot_torch_texture);
+
+        simpleBlock(carrot_torch, carrot_torch_model);
+
+        TorchBlock carrot_wall_torch = foodblockregistry.CARROT_WALL_TORCH.get();
+        BlockModelBuilder carrot_wall_torch_model = models()
+        .withExistingParent("carrot_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", carrot_torch_texture)
+        .texture("particle", carrot_torch_texture);
+        getVariantBuilder(carrot_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("carrot_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", carrot_torch_texture)
+                    .texture("particle", carrot_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock carrot_redstone_torch = foodblockregistry.CARROT_REDSTONE_TORCH.get();
+        ResourceLocation carrot_redstone_torch_texture = modLoc("block/carrot_redstone_torch");
+        BlockModelBuilder carrot_redstone_torch_model = models()
+        .withExistingParent("carrot_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", carrot_redstone_torch_texture)
+        .texture("particle", carrot_redstone_torch_texture);
+        
+
+        simpleBlock(carrot_redstone_torch, carrot_redstone_torch_model);
+
+        ResourceLocation carrot_redstone_wall_torch_texture = modLoc("block/carrot_redstone_torch");
+
+        RedstoneTorchBlock carrot_redstone_wall_torch = foodblockregistry.CARROT_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder carrot_redstone_wall_torch_model = models()
+        .withExistingParent("carrot_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", carrot_redstone_wall_torch_texture)
+        .texture("particle", carrot_redstone_wall_torch_texture);
+        getVariantBuilder(carrot_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("carrot_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", carrot_redstone_wall_torch_texture)
+                    .texture("particle", carrot_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock carrot_soul_torch = foodblockregistry.CARROT_SOUL_TORCH.get();
+        ResourceLocation carrot_soul_torch_texture = modLoc("block/carrot_soul_torch");
+        BlockModelBuilder carrot_soul_torch_model = models()
+        .withExistingParent("carrot_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", carrot_soul_torch_texture)
+        .texture("particle", carrot_soul_torch_texture);
+        
+
+        simpleBlock(carrot_soul_torch, carrot_soul_torch_model);
+
+        ResourceLocation carrot_soul_wall_torch_texture = modLoc("block/carrot_soul_torch");
+        TorchBlock carrot_soul_wall_torch = foodblockregistry.CARROT_SOUL_WALL_TORCH.get();
+        BlockModelBuilder carrot_soul_wall_torch_model = models()
+        .withExistingParent("carrot_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", carrot_soul_wall_torch_texture)
+        .texture("particle", carrot_soul_wall_torch_texture);
+        getVariantBuilder(carrot_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("carrot_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", carrot_soul_wall_torch_texture)
+                    .texture("particle", carrot_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
 
    };
 }
