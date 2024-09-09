@@ -1040,6 +1040,13 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("chicken_redstone_torch_item", modLoc("block/chicken_redstone_torch"));
        //soul
         withExistingParent("chicken_soul_torch_item", modLoc("block/chicken_soul_torch"));
+      //..............cod
+       //regular
+        withExistingParent("cod_torch_item", modLoc("block/cod_torch"));
+       //redstone
+        withExistingParent("cod_redstone_torch_item", modLoc("block/cod_redstone_torch"));
+       //soul
+        withExistingParent("cod_soul_torch_item", modLoc("block/cod_soul_torch"));
   }   
 }
 
