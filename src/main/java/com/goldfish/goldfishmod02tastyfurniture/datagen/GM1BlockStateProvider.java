@@ -3610,7 +3610,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .rotationY(rotation)
                 .build();
             });
-            
+
       //.............pumpkin
        //regular
         TorchBlock pumpkin_torch = foodblockregistry.PUMPKIN_TORCH.get();
@@ -3724,6 +3724,123 @@ public class GM1BlockStateProvider extends BlockStateProvider
                     .renderType("cutout_mipped_all")
                     .texture("torch", pumpkin_soul_wall_torch_texture)
                     .texture("particle", pumpkin_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+            
+      //.............chicken
+       //regular
+        TorchBlock chicken_torch = foodblockregistry.CHICKEN_TORCH.get();
+        ResourceLocation chicken_torch_texture = modLoc("block/chicken_torch");
+        BlockModelBuilder chicken_torch_model = models()
+        .withExistingParent("chicken_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", chicken_torch_texture)
+        .texture("particle", chicken_torch_texture);
+
+        simpleBlock(chicken_torch, chicken_torch_model);
+
+        TorchBlock chicken_wall_torch = foodblockregistry.CHICKEN_WALL_TORCH.get();
+        BlockModelBuilder chicken_wall_torch_model = models()
+        .withExistingParent("chicken_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", chicken_torch_texture)
+        .texture("particle", chicken_torch_texture);
+        getVariantBuilder(chicken_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("chicken_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", chicken_torch_texture)
+                    .texture("particle", chicken_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock chicken_redstone_torch = foodblockregistry.CHICKEN_REDSTONE_TORCH.get();
+        ResourceLocation chicken_redstone_torch_texture = modLoc("block/chicken_redstone_torch");
+        BlockModelBuilder chicken_redstone_torch_model = models()
+        .withExistingParent("chicken_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", chicken_redstone_torch_texture)
+        .texture("particle", chicken_redstone_torch_texture);
+        
+
+        simpleBlock(chicken_redstone_torch, chicken_redstone_torch_model);
+
+        ResourceLocation chicken_redstone_wall_torch_texture = modLoc("block/chicken_redstone_torch");
+
+        RedstoneTorchBlock chicken_redstone_wall_torch = foodblockregistry.CHICKEN_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder chicken_redstone_wall_torch_model = models()
+        .withExistingParent("chicken_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", chicken_redstone_wall_torch_texture)
+        .texture("particle", chicken_redstone_wall_torch_texture);
+        getVariantBuilder(chicken_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("chicken_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", chicken_redstone_wall_torch_texture)
+                    .texture("particle", chicken_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock chicken_soul_torch = foodblockregistry.CHICKEN_SOUL_TORCH.get();
+        ResourceLocation chicken_soul_torch_texture = modLoc("block/chicken_soul_torch");
+        BlockModelBuilder chicken_soul_torch_model = models()
+        .withExistingParent("chicken_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", chicken_soul_torch_texture)
+        .texture("particle", chicken_soul_torch_texture);
+        
+
+        simpleBlock(chicken_soul_torch, chicken_soul_torch_model);
+
+        ResourceLocation chicken_soul_wall_torch_texture = modLoc("block/chicken_soul_torch");
+        TorchBlock chicken_soul_wall_torch = foodblockregistry.CHICKEN_SOUL_WALL_TORCH.get();
+        BlockModelBuilder chicken_soul_wall_torch_model = models()
+        .withExistingParent("chicken_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", chicken_soul_wall_torch_texture)
+        .texture("particle", chicken_soul_wall_torch_texture);
+        getVariantBuilder(chicken_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("chicken_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", chicken_soul_wall_torch_texture)
+                    .texture("particle", chicken_soul_wall_torch_texture))
                 .rotationY(rotation)
                 .build();
             });

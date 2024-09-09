@@ -465,7 +465,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       //..............rabbit
        withExistingParent("rabbit_bricks_stairs_item", modLoc("block/rabbit_bricks_stairs"));
 
-    //------------------------------------------------------trapdoors----------------------------------------------------------------------
+    //-----------------------------------------------------------trapdoors-------------------------------------------------------------------
       //..............apple
        withExistingParent("apple_trapdoor_item", modLoc("block/apple_trapdoor_trapdoor_bottom"));
       //..............potato
@@ -505,7 +505,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       //..............rabbit
        withExistingParent("rabbit_trapdoor_item", modLoc("block/rabbit_trapdoor_trapdoor_bottom"));
 
-    //---------------------------------------------------------bars------------------------------------------------------------------------
+    //-------------------------------------------------------------bars----------------------------------------------------------------------
       //..............apple
         withExistingParent("apple_bars_item", mcLoc("item/generated")).texture("layer0", "block/apple_bars");
       //..............potato
@@ -544,7 +544,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("pork_bars_item", mcLoc("item/generated")).texture("layer0", "block/pork_bars");
       //..............rabbit
         withExistingParent("rabbit_bars_item", mcLoc("item/generated")).texture("layer0", "block/rabbit_bars");
-    //---------------------------------------------------------lamps-----------------------------------------------------------------------
+    //------------------------------------------------------------lamps----------------------------------------------------------------------
       //..............apple
         withExistingParent("apple_lamp_item", modLoc("block/apple_lamp"));
       //..............potato
@@ -584,7 +584,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       //..............rabbit
         withExistingParent("rabbit_lamp_item", modLoc("block/rabbit_lamp"));
 
-    //--------------------------------------------------------carpet-----------------------------------------------------------------------
+    //------------------------------------------------------------carpet---------------------------------------------------------------------
       //..............apple
         ResourceLocation apple_carpet_texture = modLoc("block/apple_carpet");
         carpet("apple_carpet_item", apple_carpet_texture);
@@ -643,7 +643,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         ResourceLocation rabbit_carpet_texture = modLoc("block/rabbit_carpet");
         carpet("rabbit_carpet_item", rabbit_carpet_texture);
 
-    //--------------------------------------------------------lanterns-----------------------------------------------------------------------
+    //-----------------------------------------------------------lanterns--------------------------------------------------------------------
       //..............apple
        //regular
         withExistingParent("apple_lantern_item", modLoc("block/apple_lantern"));
@@ -758,7 +758,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //soul
         withExistingParent("rabbit_soul_lantern_item", modLoc("block/rabbit_soul_lantern"));
 
-    //---------------------------------------------------------Chains-----------------------------------------------------------------------
+    //------------------------------------------------------------Chains---------------------------------------------------------------------
       //..............apple
        withExistingParent("apple_chain_item", modLoc("block/apple_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
        .end();
@@ -835,7 +835,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("rabbit_chain_item", modLoc("block/rabbit_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
        .end();
 
-    //--------------------------------------------------------ladders-----------------------------------------------------------------------
+    //-----------------------------------------------------------ladders---------------------------------------------------------------------
       //..............apple
        withExistingParent("apple_ladder_item", modLoc("block/apple_ladder"));
       //..............potato
@@ -875,7 +875,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       //..............rabbit
        withExistingParent("rabbit_ladder_item", modLoc("block/rabbit_ladder"));
 
-    //--------------------------------------------------------swords-----------------------------------------------------------------------
+    //------------------------------------------------------------swords---------------------------------------------------------------------
       //..............apple
        withExistingParent("apple_sword", mcLoc("item/handheld")).texture("layer0", "item/apple_sword");
       //..............potato
@@ -915,7 +915,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       //..............rabbit
        withExistingParent("rabbit_sword", mcLoc("item/handheld")).texture("layer0", "item/rabbit_sword");
 
-    //--------------------------------------------------------tables-----------------------------------------------------------------------
+    //------------------------------------------------------------tables---------------------------------------------------------------------
       //..............apple
        withExistingParent("apple_table_item", modLoc("block/apple_table"));
       //..............potato
@@ -955,7 +955,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       //..............rabbit
        withExistingParent("rabbit_table_item", modLoc("block/rabbit_table"));
 
-    //--------------------------------------------------------torches-----------------------------------------------------------------------
+    //-----------------------------------------------------------torches---------------------------------------------------------------------
       //..............apple
        //regular
         withExistingParent("apple_torch_item", modLoc("block/apple_torch"));
@@ -1033,6 +1033,13 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("pumpkin_redstone_torch_item", modLoc("block/pumpkin_redstone_torch"));
        //soul
         withExistingParent("pumpkin_soul_torch_item", modLoc("block/pumpkin_soul_torch"));
+      //..............chicken
+       //regular
+        withExistingParent("chicken_torch_item", modLoc("block/chicken_torch"));
+       //redstone
+        withExistingParent("chicken_redstone_torch_item", modLoc("block/chicken_redstone_torch"));
+       //soul
+        withExistingParent("chicken_soul_torch_item", modLoc("block/chicken_soul_torch"));
   }   
 }
 

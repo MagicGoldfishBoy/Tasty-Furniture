@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "goldfishmod02tastyfurniture:block/chicken_soul_wall_torch_model"
+    },
+    "facing=north": {
+      "model": "goldfishmod02tastyfurniture:block/chicken_soul_wall_torch_model",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "goldfishmod02tastyfurniture:block/chicken_soul_wall_torch_model",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "goldfishmod02tastyfurniture:block/chicken_soul_wall_torch_model",
+      "y": 180
+    }
+  }
+}
