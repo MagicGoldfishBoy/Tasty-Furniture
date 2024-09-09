@@ -1453,4 +1453,26 @@ public class foodblockitemregistry {
       public static final DeferredHolder<Item, StandingAndWallBlockItem> GLOW_BERRY_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("glow_berry_soul_torch_item",
       () -> new StandingAndWallBlockItem(foodblockregistry.GLOW_BERRY_SOUL_TORCH.get(), foodblockregistry.GLOW_BERRY_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
 
+   //.........melon
+    //regular
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> MELON_TORCH_ITEM = FOODBLOCKITEM.register("melon_torch_item", 
+      () -> new StandingAndWallBlockItem(foodblockregistry.MELON_TORCH.get(), foodblockregistry.MELON_WALL_TORCH.get(), new Item.Properties(), Direction.NORTH));
+    //redstone
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> MELON_REDSTONE_TORCH_ITEM =  FOODBLOCKITEM.register("melon_redstone_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockregistry.MELON_REDSTONE_TORCH.get(), foodblockregistry.MELON_REDSTONE_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+    //soul
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> MELON_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("melon_soul_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockregistry.MELON_SOUL_TORCH.get(), foodblockregistry.MELON_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+
+   //.........sweet_berry
+    //regular
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> SWEET_BERRY_TORCH_ITEM = FOODBLOCKITEM.register("sweet_berry_torch_item", 
+      () -> new StandingAndWallBlockItem(foodblockregistry.SWEET_BERRY_TORCH.get(), foodblockregistry.SWEET_BERRY_WALL_TORCH.get(), new Item.Properties(), Direction.NORTH));
+    //redstone
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> SWEET_BERRY_REDSTONE_TORCH_ITEM =  FOODBLOCKITEM.register("sweet_berry_redstone_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockregistry.SWEET_BERRY_REDSTONE_TORCH.get(), foodblockregistry.SWEET_BERRY_REDSTONE_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+    //soul
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> SWEET_BERRY_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("sweet_berry_soul_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockregistry.SWEET_BERRY_SOUL_TORCH.get(), foodblockregistry.SWEET_BERRY_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+
 }

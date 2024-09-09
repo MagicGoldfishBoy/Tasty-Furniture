@@ -512,8 +512,14 @@
    "block.goldfishmod02tastyfurniture.chorus_torch": "Chorus Torch",
    "block.goldfishmod02tastyfurniture.chorus_redstone_torch": "Redstone Chorus Torch",
    "block.goldfishmod02tastyfurniture.chorus_soul_torch": "Chorus Soul Torch",
-   "block.goldfishmod02tastyfurniture.glow_berry_torch": "Glow_berry Torch",
-   "block.goldfishmod02tastyfurniture.glow_berry_redstone_torch": "Redstone Glow_berry Torch",
-   "block.goldfishmod02tastyfurniture.glow_berry_soul_torch": "Glow_berry Soul Torch"
+   "block.goldfishmod02tastyfurniture.glow_berry_torch": "Glowberry Torch",
+   "block.goldfishmod02tastyfurniture.glow_berry_redstone_torch": "Redstone Glowberry Torch",
+   "block.goldfishmod02tastyfurniture.glow_berry_soul_torch": "Glowberry Soul Torch",
+   "block.goldfishmod02tastyfurniture.melon_torch": "Melon Torch",
+   "block.goldfishmod02tastyfurniture.melon_redstone_torch": "Redstone Melon Torch",
+   "block.goldfishmod02tastyfurniture.melon_soul_torch": "Melon Soul Torch",
+   "block.goldfishmod02tastyfurniture.sweet_berry_torch": "Sweet_berry Torch",
+   "block.goldfishmod02tastyfurniture.sweet_berry_redstone_torch": "Redstone Sweet_berry Torch",
+   "block.goldfishmod02tastyfurniture.sweet_berry_soul_torch": "Sweet_berry Soul Torch"
   
 }

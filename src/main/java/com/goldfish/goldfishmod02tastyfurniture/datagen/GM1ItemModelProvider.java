@@ -998,6 +998,20 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("glow_berry_redstone_torch_item", modLoc("block/glow_berry_redstone_torch"));
        //soul
         withExistingParent("glow_berry_soul_torch_item", modLoc("block/glow_berry_soul_torch"));
+      //..............melon
+       //regular
+        withExistingParent("melon_torch_item", modLoc("block/melon_torch"));
+       //redstone
+        withExistingParent("melon_redstone_torch_item", modLoc("block/melon_redstone_torch"));
+       //soul
+        withExistingParent("melon_soul_torch_item", modLoc("block/melon_soul_torch"));
+      //..............sweet_berry
+       //regular
+        withExistingParent("sweet_berry_torch_item", modLoc("block/sweet_berry_torch"));
+       //redstone
+        withExistingParent("sweet_berry_redstone_torch_item", modLoc("block/sweet_berry_redstone_torch"));
+       //soul
+        withExistingParent("sweet_berry_soul_torch_item", modLoc("block/sweet_berry_soul_torch"));
   }   
 }
 

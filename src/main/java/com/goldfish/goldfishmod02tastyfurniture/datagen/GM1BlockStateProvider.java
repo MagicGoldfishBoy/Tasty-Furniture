@@ -3143,6 +3143,240 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .build();
             });
 
+      //.............melon
+       //regular
+        TorchBlock melon_torch = foodblockregistry.MELON_TORCH.get();
+        ResourceLocation melon_torch_texture = modLoc("block/melon_torch");
+        BlockModelBuilder melon_torch_model = models()
+        .withExistingParent("melon_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", melon_torch_texture)
+        .texture("particle", melon_torch_texture);
+
+        simpleBlock(melon_torch, melon_torch_model);
+
+        TorchBlock melon_wall_torch = foodblockregistry.MELON_WALL_TORCH.get();
+        BlockModelBuilder melon_wall_torch_model = models()
+        .withExistingParent("melon_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", melon_torch_texture)
+        .texture("particle", melon_torch_texture);
+        getVariantBuilder(melon_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("melon_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", melon_torch_texture)
+                    .texture("particle", melon_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock melon_redstone_torch = foodblockregistry.MELON_REDSTONE_TORCH.get();
+        ResourceLocation melon_redstone_torch_texture = modLoc("block/melon_redstone_torch");
+        BlockModelBuilder melon_redstone_torch_model = models()
+        .withExistingParent("melon_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", melon_redstone_torch_texture)
+        .texture("particle", melon_redstone_torch_texture);
+        
+
+        simpleBlock(melon_redstone_torch, melon_redstone_torch_model);
+
+        ResourceLocation melon_redstone_wall_torch_texture = modLoc("block/melon_redstone_torch");
+
+        RedstoneTorchBlock melon_redstone_wall_torch = foodblockregistry.MELON_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder melon_redstone_wall_torch_model = models()
+        .withExistingParent("melon_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", melon_redstone_wall_torch_texture)
+        .texture("particle", melon_redstone_wall_torch_texture);
+        getVariantBuilder(melon_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("melon_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", melon_redstone_wall_torch_texture)
+                    .texture("particle", melon_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock melon_soul_torch = foodblockregistry.MELON_SOUL_TORCH.get();
+        ResourceLocation melon_soul_torch_texture = modLoc("block/melon_soul_torch");
+        BlockModelBuilder melon_soul_torch_model = models()
+        .withExistingParent("melon_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", melon_soul_torch_texture)
+        .texture("particle", melon_soul_torch_texture);
+        
+
+        simpleBlock(melon_soul_torch, melon_soul_torch_model);
+
+        ResourceLocation melon_soul_wall_torch_texture = modLoc("block/melon_soul_torch");
+        TorchBlock melon_soul_wall_torch = foodblockregistry.MELON_SOUL_WALL_TORCH.get();
+        BlockModelBuilder melon_soul_wall_torch_model = models()
+        .withExistingParent("melon_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", melon_soul_wall_torch_texture)
+        .texture("particle", melon_soul_wall_torch_texture);
+        getVariantBuilder(melon_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("melon_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", melon_soul_wall_torch_texture)
+                    .texture("particle", melon_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+            
+      //.............sweet_berry
+       //regular
+        TorchBlock sweet_berry_torch = foodblockregistry.SWEET_BERRY_TORCH.get();
+        ResourceLocation sweet_berry_torch_texture = modLoc("block/sweet_berry_torch");
+        BlockModelBuilder sweet_berry_torch_model = models()
+        .withExistingParent("sweet_berry_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", sweet_berry_torch_texture)
+        .texture("particle", sweet_berry_torch_texture);
+
+        simpleBlock(sweet_berry_torch, sweet_berry_torch_model);
+
+        TorchBlock sweet_berry_wall_torch = foodblockregistry.SWEET_BERRY_WALL_TORCH.get();
+        BlockModelBuilder sweet_berry_wall_torch_model = models()
+        .withExistingParent("sweet_berry_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", sweet_berry_torch_texture)
+        .texture("particle", sweet_berry_torch_texture);
+        getVariantBuilder(sweet_berry_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("sweet_berry_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", sweet_berry_torch_texture)
+                    .texture("particle", sweet_berry_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock sweet_berry_redstone_torch = foodblockregistry.SWEET_BERRY_REDSTONE_TORCH.get();
+        ResourceLocation sweet_berry_redstone_torch_texture = modLoc("block/sweet_berry_redstone_torch");
+        BlockModelBuilder sweet_berry_redstone_torch_model = models()
+        .withExistingParent("sweet_berry_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", sweet_berry_redstone_torch_texture)
+        .texture("particle", sweet_berry_redstone_torch_texture);
+        
+
+        simpleBlock(sweet_berry_redstone_torch, sweet_berry_redstone_torch_model);
+
+        ResourceLocation sweet_berry_redstone_wall_torch_texture = modLoc("block/sweet_berry_redstone_torch");
+
+        RedstoneTorchBlock sweet_berry_redstone_wall_torch = foodblockregistry.SWEET_BERRY_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder sweet_berry_redstone_wall_torch_model = models()
+        .withExistingParent("sweet_berry_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", sweet_berry_redstone_wall_torch_texture)
+        .texture("particle", sweet_berry_redstone_wall_torch_texture);
+        getVariantBuilder(sweet_berry_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("sweet_berry_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", sweet_berry_redstone_wall_torch_texture)
+                    .texture("particle", sweet_berry_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock sweet_berry_soul_torch = foodblockregistry.SWEET_BERRY_SOUL_TORCH.get();
+        ResourceLocation sweet_berry_soul_torch_texture = modLoc("block/sweet_berry_soul_torch");
+        BlockModelBuilder sweet_berry_soul_torch_model = models()
+        .withExistingParent("sweet_berry_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", sweet_berry_soul_torch_texture)
+        .texture("particle", sweet_berry_soul_torch_texture);
+        
+
+        simpleBlock(sweet_berry_soul_torch, sweet_berry_soul_torch_model);
+
+        ResourceLocation sweet_berry_soul_wall_torch_texture = modLoc("block/sweet_berry_soul_torch");
+        TorchBlock sweet_berry_soul_wall_torch = foodblockregistry.SWEET_BERRY_SOUL_WALL_TORCH.get();
+        BlockModelBuilder sweet_berry_soul_wall_torch_model = models()
+        .withExistingParent("sweet_berry_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", sweet_berry_soul_wall_torch_texture)
+        .texture("particle", sweet_berry_soul_wall_torch_texture);
+        getVariantBuilder(sweet_berry_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("sweet_berry_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", sweet_berry_soul_wall_torch_texture)
+                    .texture("particle", sweet_berry_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
 
    };
 }
