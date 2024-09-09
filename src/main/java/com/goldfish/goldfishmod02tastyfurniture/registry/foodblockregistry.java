@@ -10,10 +10,10 @@ import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
 import com.goldfish.goldfishmod02tastyfurniture.block.horizontal_food_block;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodstandingsign;
-import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodwallsign;
 // import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodwallsign.foodstandingsign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsignentity;
-import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsignentity.potato_sign_entity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodwallsign;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.potato_sign_entity;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistry;
 import com.google.common.base.Supplier;
 
@@ -972,7 +972,7 @@ public class foodblockregistry {
          foodmaterialtyperegistry.APPLEWOODMAT
    ));
    public static final DeferredHolder<Block, foodwallsign> APPLE_WALL_SIGN = FOODBLOCK.register("apple_wall_sign",
-   () -> new foodsign.foodwallsign(
+   () -> new foodwallsign(
        BlockBehaviour.Properties.of()
        .mapColor(MapColor.WOOD)
        .forceSolidOn()
@@ -1022,7 +1022,7 @@ public class foodblockregistry {
          foodmaterialtyperegistry.POTATOWOODMAT
    ));
    public static final DeferredHolder<Block, foodwallsign> POTATO_WALL_SIGN = FOODBLOCK.register("potato_wall_sign",
-   () -> new foodsign.foodwallsign(
+   () -> new foodwallsign(
        BlockBehaviour.Properties.of()
        .mapColor(MapColor.WOOD)
        .forceSolidOn()

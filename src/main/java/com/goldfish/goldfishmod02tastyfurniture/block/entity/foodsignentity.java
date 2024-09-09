@@ -40,17 +40,6 @@ public class foodsignentity extends SignBlockEntity {
             //System.out.println("Ticking at " + pos);
           }
     }
-
-    public static class potato_sign_entity extends foodsignentity {
-      public potato_sign_entity(BlockPos pos, BlockState state) {
-        super(pos, state);
-      }
-      @Override
-      public @NotNull BlockEntityType<?> getType() {
-          return foodblockregistry.POTATO_SIGN_ENTITY.get();
-      }
-
-    }
     }
 
 
