@@ -3070,8 +3070,29 @@ public class foodblockregistry {
 
      public static final DeferredHolder<Block, WallTorchBlock> BROWN_MUSHROOM_SOUL_WALL_TORCH = FOODBLOCK.register("brown_mushroom_soul_wall_torch", 
      () -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH)));
-     
+
    //.........red_mushroom
+    //regular
+     public static final DeferredHolder<Block, TorchBlock> RED_MUSHROOM_TORCH = FOODBLOCK.register("red_mushroom_torch", 
+     () -> new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH)));
+
+     public static final DeferredHolder<Block, WallTorchBlock> RED_MUSHROOM_WALL_TORCH = FOODBLOCK.register("red_mushroom_wall_torch", 
+     () -> new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH)));
+
+    //redstone
+     public static final DeferredHolder<Block, RedstoneTorchBlock> RED_MUSHROOM_REDSTONE_TORCH = FOODBLOCK.register("red_mushroom_redstone_torch", 
+     () -> new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH)));
+
+     public static final DeferredHolder<Block, RedstoneWallTorchBlock> RED_MUSHROOM_REDSTONE_WALL_TORCH = FOODBLOCK.register("red_mushroom_redstone_wall_torch", 
+     () -> new RedstoneWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_WALL_TORCH)));
+
+    //soul
+     public static final DeferredHolder<Block, TorchBlock> RED_MUSHROOM_SOUL_TORCH = FOODBLOCK.register("red_mushroom_soul_torch", 
+     () -> new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_TORCH)));
+
+     public static final DeferredHolder<Block, WallTorchBlock> RED_MUSHROOM_SOUL_WALL_TORCH = FOODBLOCK.register("red_mushroom_soul_wall_torch", 
+     () -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH)));
+
    //.........pumpkin
    //.........chicken
    //.........cod

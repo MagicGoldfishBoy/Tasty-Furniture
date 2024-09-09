@@ -3376,7 +3376,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .rotationY(rotation)
                 .build();
             });
-            
+
       //.............brown_mushroom
        //regular
         TorchBlock brown_mushroom_torch = foodblockregistry.BROWN_MUSHROOM_TORCH.get();
@@ -3490,6 +3490,123 @@ public class GM1BlockStateProvider extends BlockStateProvider
                     .renderType("cutout_mipped_all")
                     .texture("torch", brown_mushroom_soul_wall_torch_texture)
                     .texture("particle", brown_mushroom_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+            
+      //.............red_mushroom
+       //regular
+        TorchBlock red_mushroom_torch = foodblockregistry.RED_MUSHROOM_TORCH.get();
+        ResourceLocation red_mushroom_torch_texture = modLoc("block/red_mushroom_torch");
+        BlockModelBuilder red_mushroom_torch_model = models()
+        .withExistingParent("red_mushroom_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", red_mushroom_torch_texture)
+        .texture("particle", red_mushroom_torch_texture);
+
+        simpleBlock(red_mushroom_torch, red_mushroom_torch_model);
+
+        TorchBlock red_mushroom_wall_torch = foodblockregistry.RED_MUSHROOM_WALL_TORCH.get();
+        BlockModelBuilder red_mushroom_wall_torch_model = models()
+        .withExistingParent("red_mushroom_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", red_mushroom_torch_texture)
+        .texture("particle", red_mushroom_torch_texture);
+        getVariantBuilder(red_mushroom_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("red_mushroom_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", red_mushroom_torch_texture)
+                    .texture("particle", red_mushroom_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock red_mushroom_redstone_torch = foodblockregistry.RED_MUSHROOM_REDSTONE_TORCH.get();
+        ResourceLocation red_mushroom_redstone_torch_texture = modLoc("block/red_mushroom_redstone_torch");
+        BlockModelBuilder red_mushroom_redstone_torch_model = models()
+        .withExistingParent("red_mushroom_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", red_mushroom_redstone_torch_texture)
+        .texture("particle", red_mushroom_redstone_torch_texture);
+        
+
+        simpleBlock(red_mushroom_redstone_torch, red_mushroom_redstone_torch_model);
+
+        ResourceLocation red_mushroom_redstone_wall_torch_texture = modLoc("block/red_mushroom_redstone_torch");
+
+        RedstoneTorchBlock red_mushroom_redstone_wall_torch = foodblockregistry.RED_MUSHROOM_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder red_mushroom_redstone_wall_torch_model = models()
+        .withExistingParent("red_mushroom_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", red_mushroom_redstone_wall_torch_texture)
+        .texture("particle", red_mushroom_redstone_wall_torch_texture);
+        getVariantBuilder(red_mushroom_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("red_mushroom_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", red_mushroom_redstone_wall_torch_texture)
+                    .texture("particle", red_mushroom_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock red_mushroom_soul_torch = foodblockregistry.RED_MUSHROOM_SOUL_TORCH.get();
+        ResourceLocation red_mushroom_soul_torch_texture = modLoc("block/red_mushroom_soul_torch");
+        BlockModelBuilder red_mushroom_soul_torch_model = models()
+        .withExistingParent("red_mushroom_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", red_mushroom_soul_torch_texture)
+        .texture("particle", red_mushroom_soul_torch_texture);
+        
+
+        simpleBlock(red_mushroom_soul_torch, red_mushroom_soul_torch_model);
+
+        ResourceLocation red_mushroom_soul_wall_torch_texture = modLoc("block/red_mushroom_soul_torch");
+        TorchBlock red_mushroom_soul_wall_torch = foodblockregistry.RED_MUSHROOM_SOUL_WALL_TORCH.get();
+        BlockModelBuilder red_mushroom_soul_wall_torch_model = models()
+        .withExistingParent("red_mushroom_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", red_mushroom_soul_wall_torch_texture)
+        .texture("particle", red_mushroom_soul_wall_torch_texture);
+        getVariantBuilder(red_mushroom_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("red_mushroom_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", red_mushroom_soul_wall_torch_texture)
+                    .texture("particle", red_mushroom_soul_wall_torch_texture))
                 .rotationY(rotation)
                 .build();
             });
