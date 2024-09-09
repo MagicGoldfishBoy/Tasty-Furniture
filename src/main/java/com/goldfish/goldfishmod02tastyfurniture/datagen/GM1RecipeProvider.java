@@ -3355,6 +3355,26 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('C', ItemTags.COALS)
             .unlockedBy("has_apple_nugget", has(nuggetregistry.APPLE_NUGGET.get()))
             .save(output);
+          //redstone
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_REDSTONE_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetregistry.APPLE_NUGGET.get())
+            .define('C', Items.REDSTONE)
+            .unlockedBy("has_apple_nugget", has(nuggetregistry.APPLE_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_SOUL_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetregistry.APPLE_NUGGET.get())
+            .define('C', Items.SOUL_SAND)
+            .unlockedBy("has_apple_nugget", has(nuggetregistry.APPLE_NUGGET.get()))
+            .save(output);
 
         }
     }

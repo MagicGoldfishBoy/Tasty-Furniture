@@ -497,6 +497,8 @@
   "block.goldfishmod02tastyfurniture.beef_tile_block": "Beef Tile Block",
   "block.goldfishmod02tastyfurniture.pork_tile_block": "Pork Tile Block",
   "block.goldfishmod02tastyfurniture.rabbit_tile_block": "Rabbit Tile Block",
-   "block.goldfishmod02tastyfurniture.apple_torch": "Apple Torch"
+   "block.goldfishmod02tastyfurniture.apple_torch": "Apple Torch",
+   "block.goldfishmod02tastyfurniture.apple_redstone_torch": "Redstone Apple Torch",
+   "block.goldfishmod02tastyfurniture.apple_soul_torch": "Apple Soul Torch"
   
 }

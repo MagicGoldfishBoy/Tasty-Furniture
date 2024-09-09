@@ -961,6 +961,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("apple_torch_item", modLoc("block/apple_torch"));
        //redstone
         withExistingParent("apple_redstone_torch_item", modLoc("block/apple_redstone_torch"));
+       //soul
+        withExistingParent("apple_soul_torch_item", modLoc("block/apple_soul_torch"));
   }   
 }
 

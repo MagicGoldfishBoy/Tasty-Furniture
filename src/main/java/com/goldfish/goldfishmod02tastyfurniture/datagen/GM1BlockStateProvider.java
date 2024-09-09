@@ -2519,6 +2519,45 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .build();
             });
 
+       //soul
+        TorchBlock apple_soul_torch = foodblockregistry.APPLE_SOUL_TORCH.get();
+        ResourceLocation apple_soul_torch_texture = modLoc("block/apple_soul_torch");
+        BlockModelBuilder apple_soul_torch_model = models()
+        .withExistingParent("apple_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", apple_soul_torch_texture)
+        .texture("particle", apple_soul_torch_texture);
+        
+
+        simpleBlock(apple_soul_torch, apple_soul_torch_model);
+
+        ResourceLocation apple_soul_wall_torch_texture = modLoc("block/apple_soul_torch");
+        TorchBlock apple_soul_wall_torch = foodblockregistry.APPLE_SOUL_WALL_TORCH.get();
+        BlockModelBuilder apple_soul_wall_torch_model = models()
+        .withExistingParent("apple_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", apple_soul_wall_torch_texture)
+        .texture("particle", apple_soul_wall_torch_texture);
+        getVariantBuilder(apple_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("apple_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", apple_soul_wall_torch_texture)
+                    .texture("particle", apple_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
 
    };
 }
