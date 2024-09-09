@@ -539,8 +539,11 @@
    "block.goldfishmod02tastyfurniture.salmon_torch": "Salmon Torch",
    "block.goldfishmod02tastyfurniture.salmon_redstone_torch": "Redstone Salmon Torch",
    "block.goldfishmod02tastyfurniture.salmon_soul_torch": "Salmon Soul Torch",
-   "block.goldfishmod02tastyfurniture.tropical_fish_torch": "Tropical_fish Torch",
-   "block.goldfishmod02tastyfurniture.tropical_fish_redstone_torch": "Redstone Tropical_fish Torch",
-   "block.goldfishmod02tastyfurniture.tropical_fish_soul_torch": "Tropical_fish Soul Torch"
+   "block.goldfishmod02tastyfurniture.tropical_fish_torch": "Tropical Fish Torch",
+   "block.goldfishmod02tastyfurniture.tropical_fish_redstone_torch": "Redstone Tropical Fish Torch",
+   "block.goldfishmod02tastyfurniture.tropical_fish_soul_torch": "Tropical Fish Soul Torch",
+   "block.goldfishmod02tastyfurniture.mutton_torch": "Mutton Torch",
+   "block.goldfishmod02tastyfurniture.mutton_redstone_torch": "Redstone Mutton Torch",
+   "block.goldfishmod02tastyfurniture.mutton_soul_torch": "Mutton Soul Torch"
   
 }

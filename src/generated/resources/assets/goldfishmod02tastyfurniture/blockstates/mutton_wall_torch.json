@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "goldfishmod02tastyfurniture:block/mutton_wall_torch"
+    },
+    "facing=north": {
+      "model": "goldfishmod02tastyfurniture:block/mutton_wall_torch",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "goldfishmod02tastyfurniture:block/mutton_wall_torch",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "goldfishmod02tastyfurniture:block/mutton_wall_torch",
+      "y": 180
+    }
+  }
+}
