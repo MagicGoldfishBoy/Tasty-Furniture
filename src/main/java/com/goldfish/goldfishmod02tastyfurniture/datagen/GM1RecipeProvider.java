@@ -3886,6 +3886,38 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_beef_nugget", has(nuggetregistry.BEEF_NUGGET.get()))
             .save(output);
 
+         //.....pork
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PORK_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetregistry.PORK_NUGGET.get())
+            .define('C', ItemTags.COALS)
+            .unlockedBy("has_pork_nugget", has(nuggetregistry.PORK_NUGGET.get()))
+            .save(output);
+          //redstone
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PORK_REDSTONE_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetregistry.PORK_NUGGET.get())
+            .define('C', Items.REDSTONE)
+            .unlockedBy("has_pork_nugget", has(nuggetregistry.PORK_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PORK_SOUL_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetregistry.PORK_NUGGET.get())
+            .define('C', Items.SOUL_SAND)
+            .unlockedBy("has_pork_nugget", has(nuggetregistry.PORK_NUGGET.get()))
+            .save(output);
+
         }
     }
 }

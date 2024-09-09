@@ -4312,7 +4312,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .rotationY(rotation)
                 .build();
             });
-            
+
       //.............beef
        //regular
         TorchBlock beef_torch = foodblockregistry.BEEF_TORCH.get();
@@ -4426,6 +4426,123 @@ public class GM1BlockStateProvider extends BlockStateProvider
                     .renderType("cutout_mipped_all")
                     .texture("torch", beef_soul_wall_torch_texture)
                     .texture("particle", beef_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+            
+      //.............pork
+       //regular
+        TorchBlock pork_torch = foodblockregistry.PORK_TORCH.get();
+        ResourceLocation pork_torch_texture = modLoc("block/pork_torch");
+        BlockModelBuilder pork_torch_model = models()
+        .withExistingParent("pork_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", pork_torch_texture)
+        .texture("particle", pork_torch_texture);
+
+        simpleBlock(pork_torch, pork_torch_model);
+
+        TorchBlock pork_wall_torch = foodblockregistry.PORK_WALL_TORCH.get();
+        BlockModelBuilder pork_wall_torch_model = models()
+        .withExistingParent("pork_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", pork_torch_texture)
+        .texture("particle", pork_torch_texture);
+        getVariantBuilder(pork_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("pork_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", pork_torch_texture)
+                    .texture("particle", pork_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock pork_redstone_torch = foodblockregistry.PORK_REDSTONE_TORCH.get();
+        ResourceLocation pork_redstone_torch_texture = modLoc("block/pork_redstone_torch");
+        BlockModelBuilder pork_redstone_torch_model = models()
+        .withExistingParent("pork_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", pork_redstone_torch_texture)
+        .texture("particle", pork_redstone_torch_texture);
+        
+
+        simpleBlock(pork_redstone_torch, pork_redstone_torch_model);
+
+        ResourceLocation pork_redstone_wall_torch_texture = modLoc("block/pork_redstone_torch");
+
+        RedstoneTorchBlock pork_redstone_wall_torch = foodblockregistry.PORK_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder pork_redstone_wall_torch_model = models()
+        .withExistingParent("pork_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", pork_redstone_wall_torch_texture)
+        .texture("particle", pork_redstone_wall_torch_texture);
+        getVariantBuilder(pork_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("pork_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", pork_redstone_wall_torch_texture)
+                    .texture("particle", pork_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock pork_soul_torch = foodblockregistry.PORK_SOUL_TORCH.get();
+        ResourceLocation pork_soul_torch_texture = modLoc("block/pork_soul_torch");
+        BlockModelBuilder pork_soul_torch_model = models()
+        .withExistingParent("pork_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", pork_soul_torch_texture)
+        .texture("particle", pork_soul_torch_texture);
+        
+
+        simpleBlock(pork_soul_torch, pork_soul_torch_model);
+
+        ResourceLocation pork_soul_wall_torch_texture = modLoc("block/pork_soul_torch");
+        TorchBlock pork_soul_wall_torch = foodblockregistry.PORK_SOUL_WALL_TORCH.get();
+        BlockModelBuilder pork_soul_wall_torch_model = models()
+        .withExistingParent("pork_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", pork_soul_wall_torch_texture)
+        .texture("particle", pork_soul_wall_torch_texture);
+        getVariantBuilder(pork_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("pork_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", pork_soul_wall_torch_texture)
+                    .texture("particle", pork_soul_wall_torch_texture))
                 .rotationY(rotation)
                 .build();
             });

@@ -547,6 +547,9 @@
    "block.goldfishmod02tastyfurniture.mutton_soul_torch": "Mutton Soul Torch",
    "block.goldfishmod02tastyfurniture.beef_torch": "Beef Torch",
    "block.goldfishmod02tastyfurniture.beef_redstone_torch": "Redstone Beef Torch",
-   "block.goldfishmod02tastyfurniture.beef_soul_torch": "Beef Soul Torch"
+   "block.goldfishmod02tastyfurniture.beef_soul_torch": "Beef Soul Torch",
+   "block.goldfishmod02tastyfurniture.pork_torch": "Pork Torch",
+   "block.goldfishmod02tastyfurniture.pork_redstone_torch": "Redstone Pork Torch",
+   "block.goldfishmod02tastyfurniture.pork_soul_torch": "Pork Soul Torch"
   
 }

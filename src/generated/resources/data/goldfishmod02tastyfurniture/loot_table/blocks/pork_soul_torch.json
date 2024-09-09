@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "goldfishmod02tastyfurniture:pork_soul_torch_item"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "goldfishmod02tastyfurniture:blocks/pork_soul_torch"
+}
