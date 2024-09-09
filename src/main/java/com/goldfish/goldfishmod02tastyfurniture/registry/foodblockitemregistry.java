@@ -1442,4 +1442,15 @@ public class foodblockitemregistry {
       public static final DeferredHolder<Item, StandingAndWallBlockItem> CHORUS_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("chorus_soul_torch_item",
       () -> new StandingAndWallBlockItem(foodblockregistry.CHORUS_SOUL_TORCH.get(), foodblockregistry.CHORUS_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
 
+   //.........glow_berry
+    //regular
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> GLOW_BERRY_TORCH_ITEM = FOODBLOCKITEM.register("glow_berry_torch_item", 
+      () -> new StandingAndWallBlockItem(foodblockregistry.GLOW_BERRY_TORCH.get(), foodblockregistry.GLOW_BERRY_WALL_TORCH.get(), new Item.Properties(), Direction.NORTH));
+    //redstone
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> GLOW_BERRY_REDSTONE_TORCH_ITEM =  FOODBLOCKITEM.register("glow_berry_redstone_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockregistry.GLOW_BERRY_REDSTONE_TORCH.get(), foodblockregistry.GLOW_BERRY_REDSTONE_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+    //soul
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> GLOW_BERRY_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("glow_berry_soul_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockregistry.GLOW_BERRY_SOUL_TORCH.get(), foodblockregistry.GLOW_BERRY_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+
 }

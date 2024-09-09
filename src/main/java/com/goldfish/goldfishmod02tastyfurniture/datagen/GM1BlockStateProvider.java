@@ -3026,6 +3026,123 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .build();
             });
 
+      //.............glow_berry
+       //regular
+        TorchBlock glow_berry_torch = foodblockregistry.GLOW_BERRY_TORCH.get();
+        ResourceLocation glow_berry_torch_texture = modLoc("block/glow_berry_torch");
+        BlockModelBuilder glow_berry_torch_model = models()
+        .withExistingParent("glow_berry_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", glow_berry_torch_texture)
+        .texture("particle", glow_berry_torch_texture);
+
+        simpleBlock(glow_berry_torch, glow_berry_torch_model);
+
+        TorchBlock glow_berry_wall_torch = foodblockregistry.GLOW_BERRY_WALL_TORCH.get();
+        BlockModelBuilder glow_berry_wall_torch_model = models()
+        .withExistingParent("glow_berry_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", glow_berry_torch_texture)
+        .texture("particle", glow_berry_torch_texture);
+        getVariantBuilder(glow_berry_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("glow_berry_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", glow_berry_torch_texture)
+                    .texture("particle", glow_berry_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock glow_berry_redstone_torch = foodblockregistry.GLOW_BERRY_REDSTONE_TORCH.get();
+        ResourceLocation glow_berry_redstone_torch_texture = modLoc("block/glow_berry_redstone_torch");
+        BlockModelBuilder glow_berry_redstone_torch_model = models()
+        .withExistingParent("glow_berry_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", glow_berry_redstone_torch_texture)
+        .texture("particle", glow_berry_redstone_torch_texture);
+        
+
+        simpleBlock(glow_berry_redstone_torch, glow_berry_redstone_torch_model);
+
+        ResourceLocation glow_berry_redstone_wall_torch_texture = modLoc("block/glow_berry_redstone_torch");
+
+        RedstoneTorchBlock glow_berry_redstone_wall_torch = foodblockregistry.GLOW_BERRY_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder glow_berry_redstone_wall_torch_model = models()
+        .withExistingParent("glow_berry_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", glow_berry_redstone_wall_torch_texture)
+        .texture("particle", glow_berry_redstone_wall_torch_texture);
+        getVariantBuilder(glow_berry_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("glow_berry_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", glow_berry_redstone_wall_torch_texture)
+                    .texture("particle", glow_berry_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock glow_berry_soul_torch = foodblockregistry.GLOW_BERRY_SOUL_TORCH.get();
+        ResourceLocation glow_berry_soul_torch_texture = modLoc("block/glow_berry_soul_torch");
+        BlockModelBuilder glow_berry_soul_torch_model = models()
+        .withExistingParent("glow_berry_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", glow_berry_soul_torch_texture)
+        .texture("particle", glow_berry_soul_torch_texture);
+        
+
+        simpleBlock(glow_berry_soul_torch, glow_berry_soul_torch_model);
+
+        ResourceLocation glow_berry_soul_wall_torch_texture = modLoc("block/glow_berry_soul_torch");
+        TorchBlock glow_berry_soul_wall_torch = foodblockregistry.GLOW_BERRY_SOUL_WALL_TORCH.get();
+        BlockModelBuilder glow_berry_soul_wall_torch_model = models()
+        .withExistingParent("glow_berry_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", glow_berry_soul_wall_torch_texture)
+        .texture("particle", glow_berry_soul_wall_torch_texture);
+        getVariantBuilder(glow_berry_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("glow_berry_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", glow_berry_soul_wall_torch_texture)
+                    .texture("particle", glow_berry_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
 
    };
 }
