@@ -1475,4 +1475,15 @@ public class foodblockitemregistry {
       public static final DeferredHolder<Item, StandingAndWallBlockItem> SWEET_BERRY_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("sweet_berry_soul_torch_item",
       () -> new StandingAndWallBlockItem(foodblockregistry.SWEET_BERRY_SOUL_TORCH.get(), foodblockregistry.SWEET_BERRY_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
 
+   //.........brown_mushroom
+    //regular
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> BROWN_MUSHROOM_TORCH_ITEM = FOODBLOCKITEM.register("brown_mushroom_torch_item", 
+      () -> new StandingAndWallBlockItem(foodblockregistry.BROWN_MUSHROOM_TORCH.get(), foodblockregistry.BROWN_MUSHROOM_WALL_TORCH.get(), new Item.Properties(), Direction.NORTH));
+    //redstone
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> BROWN_MUSHROOM_REDSTONE_TORCH_ITEM =  FOODBLOCKITEM.register("brown_mushroom_redstone_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockregistry.BROWN_MUSHROOM_REDSTONE_TORCH.get(), foodblockregistry.BROWN_MUSHROOM_REDSTONE_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+    //soul
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> BROWN_MUSHROOM_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("brown_mushroom_soul_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockregistry.BROWN_MUSHROOM_SOUL_TORCH.get(), foodblockregistry.BROWN_MUSHROOM_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+
 }

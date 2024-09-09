@@ -520,6 +520,9 @@
    "block.goldfishmod02tastyfurniture.melon_soul_torch": "Melon Soul Torch",
    "block.goldfishmod02tastyfurniture.sweet_berry_torch": "Sweet_berry Torch",
    "block.goldfishmod02tastyfurniture.sweet_berry_redstone_torch": "Redstone Sweet_berry Torch",
-   "block.goldfishmod02tastyfurniture.sweet_berry_soul_torch": "Sweet_berry Soul Torch"
+   "block.goldfishmod02tastyfurniture.sweet_berry_soul_torch": "Sweet_berry Soul Torch",
+   "block.goldfishmod02tastyfurniture.brown_mushroom_torch": "Brown_mushroom Torch",
+   "block.goldfishmod02tastyfurniture.brown_mushroom_redstone_torch": "Redstone Brown_mushroom Torch",
+   "block.goldfishmod02tastyfurniture.brown_mushroom_soul_torch": "Brown_mushroom Soul Torch"
   
 }
