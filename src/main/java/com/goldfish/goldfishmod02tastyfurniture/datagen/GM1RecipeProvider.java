@@ -3821,7 +3821,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('C', Items.SOUL_SAND)
             .unlockedBy("has_tropical_fish_nugget", has(nuggetregistry.TROPICAL_FISH_NUGGET.get()))
             .save(output);
-            
+
          //.....mutton
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MUTTON_TORCH_ITEM.get())
@@ -3852,6 +3852,38 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', nuggetregistry.MUTTON_NUGGET.get())
             .define('C', Items.SOUL_SAND)
             .unlockedBy("has_mutton_nugget", has(nuggetregistry.MUTTON_NUGGET.get()))
+            .save(output);
+            
+         //.....beef
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEEF_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetregistry.BEEF_NUGGET.get())
+            .define('C', ItemTags.COALS)
+            .unlockedBy("has_beef_nugget", has(nuggetregistry.BEEF_NUGGET.get()))
+            .save(output);
+          //redstone
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEEF_REDSTONE_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetregistry.BEEF_NUGGET.get())
+            .define('C', Items.REDSTONE)
+            .unlockedBy("has_beef_nugget", has(nuggetregistry.BEEF_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEEF_SOUL_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetregistry.BEEF_NUGGET.get())
+            .define('C', Items.SOUL_SAND)
+            .unlockedBy("has_beef_nugget", has(nuggetregistry.BEEF_NUGGET.get()))
             .save(output);
 
         }
