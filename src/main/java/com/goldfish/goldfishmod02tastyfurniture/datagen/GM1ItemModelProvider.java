@@ -984,6 +984,13 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("carrot_redstone_torch_item", modLoc("block/carrot_redstone_torch"));
        //soul
         withExistingParent("carrot_soul_torch_item", modLoc("block/carrot_soul_torch"));
+      //..............chorus
+       //regular
+        withExistingParent("chorus_torch_item", modLoc("block/chorus_torch"));
+       //redstone
+        withExistingParent("chorus_redstone_torch_item", modLoc("block/chorus_redstone_torch"));
+       //soul
+        withExistingParent("chorus_soul_torch_item", modLoc("block/chorus_soul_torch"));
   }   
 }
 

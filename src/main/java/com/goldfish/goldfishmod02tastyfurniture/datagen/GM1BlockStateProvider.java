@@ -2909,6 +2909,123 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .build();
             });
 
+      //.............chorus
+       //regular
+        TorchBlock chorus_torch = foodblockregistry.CHORUS_TORCH.get();
+        ResourceLocation chorus_torch_texture = modLoc("block/chorus_torch");
+        BlockModelBuilder chorus_torch_model = models()
+        .withExistingParent("chorus_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", chorus_torch_texture)
+        .texture("particle", chorus_torch_texture);
+
+        simpleBlock(chorus_torch, chorus_torch_model);
+
+        TorchBlock chorus_wall_torch = foodblockregistry.CHORUS_WALL_TORCH.get();
+        BlockModelBuilder chorus_wall_torch_model = models()
+        .withExistingParent("chorus_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", chorus_torch_texture)
+        .texture("particle", chorus_torch_texture);
+        getVariantBuilder(chorus_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("chorus_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", chorus_torch_texture)
+                    .texture("particle", chorus_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock chorus_redstone_torch = foodblockregistry.CHORUS_REDSTONE_TORCH.get();
+        ResourceLocation chorus_redstone_torch_texture = modLoc("block/chorus_redstone_torch");
+        BlockModelBuilder chorus_redstone_torch_model = models()
+        .withExistingParent("chorus_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", chorus_redstone_torch_texture)
+        .texture("particle", chorus_redstone_torch_texture);
+        
+
+        simpleBlock(chorus_redstone_torch, chorus_redstone_torch_model);
+
+        ResourceLocation chorus_redstone_wall_torch_texture = modLoc("block/chorus_redstone_torch");
+
+        RedstoneTorchBlock chorus_redstone_wall_torch = foodblockregistry.CHORUS_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder chorus_redstone_wall_torch_model = models()
+        .withExistingParent("chorus_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", chorus_redstone_wall_torch_texture)
+        .texture("particle", chorus_redstone_wall_torch_texture);
+        getVariantBuilder(chorus_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("chorus_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", chorus_redstone_wall_torch_texture)
+                    .texture("particle", chorus_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock chorus_soul_torch = foodblockregistry.CHORUS_SOUL_TORCH.get();
+        ResourceLocation chorus_soul_torch_texture = modLoc("block/chorus_soul_torch");
+        BlockModelBuilder chorus_soul_torch_model = models()
+        .withExistingParent("chorus_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", chorus_soul_torch_texture)
+        .texture("particle", chorus_soul_torch_texture);
+        
+
+        simpleBlock(chorus_soul_torch, chorus_soul_torch_model);
+
+        ResourceLocation chorus_soul_wall_torch_texture = modLoc("block/chorus_soul_torch");
+        TorchBlock chorus_soul_wall_torch = foodblockregistry.CHORUS_SOUL_WALL_TORCH.get();
+        BlockModelBuilder chorus_soul_wall_torch_model = models()
+        .withExistingParent("chorus_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", chorus_soul_wall_torch_texture)
+        .texture("particle", chorus_soul_wall_torch_texture);
+        getVariantBuilder(chorus_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("chorus_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", chorus_soul_wall_torch_texture)
+                    .texture("particle", chorus_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
 
    };
 }

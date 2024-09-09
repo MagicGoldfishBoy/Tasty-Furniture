@@ -3472,6 +3472,38 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_carrot_nugget", has(nuggetregistry.CARROT_NUGGET.get()))
             .save(output);
 
+         //.....chorus
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHORUS_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetregistry.CHORUS_NUGGET.get())
+            .define('C', ItemTags.COALS)
+            .unlockedBy("has_chorus_nugget", has(nuggetregistry.CHORUS_NUGGET.get()))
+            .save(output);
+          //redstone
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHORUS_REDSTONE_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetregistry.CHORUS_NUGGET.get())
+            .define('C', Items.REDSTONE)
+            .unlockedBy("has_chorus_nugget", has(nuggetregistry.CHORUS_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHORUS_SOUL_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetregistry.CHORUS_NUGGET.get())
+            .define('C', Items.SOUL_SAND)
+            .unlockedBy("has_chorus_nugget", has(nuggetregistry.CHORUS_NUGGET.get()))
+            .save(output);
+
         }
     }
 }
