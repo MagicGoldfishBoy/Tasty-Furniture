@@ -3493,7 +3493,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .rotationY(rotation)
                 .build();
             });
-            
+
       //.............red_mushroom
        //regular
         TorchBlock red_mushroom_torch = foodblockregistry.RED_MUSHROOM_TORCH.get();
@@ -3607,6 +3607,123 @@ public class GM1BlockStateProvider extends BlockStateProvider
                     .renderType("cutout_mipped_all")
                     .texture("torch", red_mushroom_soul_wall_torch_texture)
                     .texture("particle", red_mushroom_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+            
+      //.............pumpkin
+       //regular
+        TorchBlock pumpkin_torch = foodblockregistry.PUMPKIN_TORCH.get();
+        ResourceLocation pumpkin_torch_texture = modLoc("block/pumpkin_torch");
+        BlockModelBuilder pumpkin_torch_model = models()
+        .withExistingParent("pumpkin_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", pumpkin_torch_texture)
+        .texture("particle", pumpkin_torch_texture);
+
+        simpleBlock(pumpkin_torch, pumpkin_torch_model);
+
+        TorchBlock pumpkin_wall_torch = foodblockregistry.PUMPKIN_WALL_TORCH.get();
+        BlockModelBuilder pumpkin_wall_torch_model = models()
+        .withExistingParent("pumpkin_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", pumpkin_torch_texture)
+        .texture("particle", pumpkin_torch_texture);
+        getVariantBuilder(pumpkin_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("pumpkin_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", pumpkin_torch_texture)
+                    .texture("particle", pumpkin_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock pumpkin_redstone_torch = foodblockregistry.PUMPKIN_REDSTONE_TORCH.get();
+        ResourceLocation pumpkin_redstone_torch_texture = modLoc("block/pumpkin_redstone_torch");
+        BlockModelBuilder pumpkin_redstone_torch_model = models()
+        .withExistingParent("pumpkin_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", pumpkin_redstone_torch_texture)
+        .texture("particle", pumpkin_redstone_torch_texture);
+        
+
+        simpleBlock(pumpkin_redstone_torch, pumpkin_redstone_torch_model);
+
+        ResourceLocation pumpkin_redstone_wall_torch_texture = modLoc("block/pumpkin_redstone_torch");
+
+        RedstoneTorchBlock pumpkin_redstone_wall_torch = foodblockregistry.PUMPKIN_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder pumpkin_redstone_wall_torch_model = models()
+        .withExistingParent("pumpkin_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", pumpkin_redstone_wall_torch_texture)
+        .texture("particle", pumpkin_redstone_wall_torch_texture);
+        getVariantBuilder(pumpkin_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("pumpkin_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", pumpkin_redstone_wall_torch_texture)
+                    .texture("particle", pumpkin_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock pumpkin_soul_torch = foodblockregistry.PUMPKIN_SOUL_TORCH.get();
+        ResourceLocation pumpkin_soul_torch_texture = modLoc("block/pumpkin_soul_torch");
+        BlockModelBuilder pumpkin_soul_torch_model = models()
+        .withExistingParent("pumpkin_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", pumpkin_soul_torch_texture)
+        .texture("particle", pumpkin_soul_torch_texture);
+        
+
+        simpleBlock(pumpkin_soul_torch, pumpkin_soul_torch_model);
+
+        ResourceLocation pumpkin_soul_wall_torch_texture = modLoc("block/pumpkin_soul_torch");
+        TorchBlock pumpkin_soul_wall_torch = foodblockregistry.PUMPKIN_SOUL_WALL_TORCH.get();
+        BlockModelBuilder pumpkin_soul_wall_torch_model = models()
+        .withExistingParent("pumpkin_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", pumpkin_soul_wall_torch_texture)
+        .texture("particle", pumpkin_soul_wall_torch_texture);
+        getVariantBuilder(pumpkin_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("pumpkin_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", pumpkin_soul_wall_torch_texture)
+                    .texture("particle", pumpkin_soul_wall_torch_texture))
                 .rotationY(rotation)
                 .build();
             });

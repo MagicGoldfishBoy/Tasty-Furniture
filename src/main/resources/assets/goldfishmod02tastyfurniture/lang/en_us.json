@@ -524,8 +524,11 @@
    "block.goldfishmod02tastyfurniture.brown_mushroom_torch": "Brown Mushroom Torch",
    "block.goldfishmod02tastyfurniture.brown_mushroom_redstone_torch": "Redstone Brown Mushroom Torch",
    "block.goldfishmod02tastyfurniture.brown_mushroom_soul_torch": "Brown Mushroom Soul Torch",
-   "block.goldfishmod02tastyfurniture.red_mushroom_torch": "Red_mushroom Torch",
-   "block.goldfishmod02tastyfurniture.red_mushroom_redstone_torch": "Redstone Red_mushroom Torch",
-   "block.goldfishmod02tastyfurniture.red_mushroom_soul_torch": "Red_mushroom Soul Torch"
+   "block.goldfishmod02tastyfurniture.red_mushroom_torch": "Red Mushroom Torch",
+   "block.goldfishmod02tastyfurniture.red_mushroom_redstone_torch": "Redstone Red Mushroom Torch",
+   "block.goldfishmod02tastyfurniture.red_mushroom_soul_torch": "Red Mushroom Soul Torch",
+   "block.goldfishmod02tastyfurniture.pumpkin_torch": "Pumpkin Torch",
+   "block.goldfishmod02tastyfurniture.pumpkin_redstone_torch": "Redstone Pumpkin Torch",
+   "block.goldfishmod02tastyfurniture.pumpkin_soul_torch": "Pumpkin Soul Torch"
   
 }
