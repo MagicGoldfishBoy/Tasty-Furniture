@@ -2558,6 +2558,123 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .build();
             });
 
+      //.............potato
+       //regular
+        TorchBlock potato_torch = foodblockregistry.POTATO_TORCH.get();
+        ResourceLocation potato_torch_texture = modLoc("block/potato_torch");
+        BlockModelBuilder potato_torch_model = models()
+        .withExistingParent("potato_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", potato_torch_texture)
+        .texture("particle", potato_torch_texture);
+
+        simpleBlock(potato_torch, potato_torch_model);
+
+        TorchBlock potato_wall_torch = foodblockregistry.POTATO_WALL_TORCH.get();
+        BlockModelBuilder potato_wall_torch_model = models()
+        .withExistingParent("potato_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", potato_torch_texture)
+        .texture("particle", potato_torch_texture);
+        getVariantBuilder(potato_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("potato_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", potato_torch_texture)
+                    .texture("particle", potato_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock potato_redstone_torch = foodblockregistry.POTATO_REDSTONE_TORCH.get();
+        ResourceLocation potato_redstone_torch_texture = modLoc("block/potato_redstone_torch");
+        BlockModelBuilder potato_redstone_torch_model = models()
+        .withExistingParent("potato_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", potato_redstone_torch_texture)
+        .texture("particle", potato_redstone_torch_texture);
+        
+
+        simpleBlock(potato_redstone_torch, potato_redstone_torch_model);
+
+        ResourceLocation potato_redstone_wall_torch_texture = modLoc("block/potato_redstone_torch");
+
+        RedstoneTorchBlock potato_redstone_wall_torch = foodblockregistry.POTATO_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder potato_redstone_wall_torch_model = models()
+        .withExistingParent("potato_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", potato_redstone_wall_torch_texture)
+        .texture("particle", potato_redstone_wall_torch_texture);
+        getVariantBuilder(potato_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("potato_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", potato_redstone_wall_torch_texture)
+                    .texture("particle", potato_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock potato_soul_torch = foodblockregistry.POTATO_SOUL_TORCH.get();
+        ResourceLocation potato_soul_torch_texture = modLoc("block/potato_soul_torch");
+        BlockModelBuilder potato_soul_torch_model = models()
+        .withExistingParent("potato_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", potato_soul_torch_texture)
+        .texture("particle", potato_soul_torch_texture);
+        
+
+        simpleBlock(potato_soul_torch, potato_soul_torch_model);
+
+        ResourceLocation potato_soul_wall_torch_texture = modLoc("block/potato_soul_torch");
+        TorchBlock potato_soul_wall_torch = foodblockregistry.POTATO_SOUL_WALL_TORCH.get();
+        BlockModelBuilder potato_soul_wall_torch_model = models()
+        .withExistingParent("potato_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", potato_soul_wall_torch_texture)
+        .texture("particle", potato_soul_wall_torch_texture);
+        getVariantBuilder(potato_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("potato_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", potato_soul_wall_torch_texture)
+                    .texture("particle", potato_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
 
    };
 }
