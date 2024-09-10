@@ -5,9 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
+import com.goldfish.goldfishmod02tastyfurniture.block.applefurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodlamp;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
 import com.goldfish.goldfishmod02tastyfurniture.block.horizontal_food_block;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.applefurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodstandingsign;
 // import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodwallsign.foodstandingsign;
@@ -3299,10 +3301,11 @@ public class foodblockregistry {
 
    //.........apple
     //public static final DeferredHolder<Block, FurnaceBlock> APPLE_FURNACE = FOODBLOCK.register("apple_furnace", () -> FurnaceBlock(BlockBehaviour.Properties.of()))
-    public static final DeferredHolder<Block, FurnaceBlock> APPLE_FURNACE = FOODBLOCK.register("apple_furnace", () -> new FurnaceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FURNACE)));
+    //public static final DeferredHolder<Block, FurnaceBlock> APPLE_FURNACE = FOODBLOCK.register("apple_furnace", () -> new FurnaceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FURNACE)));
+    public static final DeferredHolder<Block, applefurnace> APPLE_FURNACE = FOODBLOCK.register("apple_furnace", applefurnace::new);
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FurnaceBlockEntity>> APPLE_FURNACE_ENTITY = FOODBLOCKENTITY.register("apple_furnace", 
-    () -> BlockEntityType.Builder.of(FurnaceBlockEntity::new, APPLE_FURNACE.get()).build(null));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<applefurnaceentity>> APPLE_FURNACE_ENTITY = FOODBLOCKENTITY.register("apple_furnace", 
+    () -> BlockEntityType.Builder.of(applefurnaceentity::new, APPLE_FURNACE.get()).build(null));
 
 
    //.........potato

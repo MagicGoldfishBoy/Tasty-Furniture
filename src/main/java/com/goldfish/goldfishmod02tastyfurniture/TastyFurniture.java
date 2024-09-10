@@ -70,6 +70,7 @@ import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockitemregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.food_weapon_registry;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.applefurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsignentity;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.Custom_Datagen_Methods.DataGenHelper;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1BlockLootTableProvider;
@@ -206,27 +207,23 @@ public class TastyFurniture
         }
 
         //BlockEntityTicker<FurnaceBlockEntity> ticker = (world, pos, state, blockEntity) -> FurnaceBlockEntity.serverTick(world, pos, state, blockEntity);
-
-        private void setup(final FMLCommonSetupEvent event) {
-            event.enqueueWork(() -> {
-                BlockEntityType<FurnaceBlockEntity> appleFurnaceEntityType = foodblockregistry.APPLE_FURNACE_ENTITY.get();
+        // @SubscribeEvent
+        // private static void setup(final FMLCommonSetupEvent event) {
+        //     event.enqueueWork(() -> {
+        //         BlockEntityType<applefurnaceentity> appleFurnaceEntityType = foodblockregistry.APPLE_FURNACE_ENTITY.get();
     
-                BlockEntityTicker<FurnaceBlockEntity> furnaceTicker = (level, pos, state, entity) -> {
-                    if (!level.isClientSide) {
-                        FurnaceBlockEntity.serverTick(level, pos, state, entity);
-                    }
-                };
+        //         BlockEntityTicker<FurnaceBlockEntity> furnaceTicker = (level, pos, state, entity) -> {
+        //             if (!level.isClientSide) {
+        //                 FurnaceBlockEntity.serverTick(level, pos, state, entity);
+        //             }
+        //         };
     
-                // Register the ticker for your custom furnace block
-                registerBlockEntityTicker(appleFurnaceEntityType, furnaceTicker);
-            });
-        }
-    
-        /**
-         * Registers the ticker for the given BlockEntityType.
-         */
-        private <T extends BlockEntity> void registerBlockEntityTicker(BlockEntityType<T> type, BlockEntityTicker<? super T> ticker) {
-        }
+        //         // Register the ticker for your custom furnace block
+        //         registerBlockEntityTicker(appleFurnaceEntityType, furnaceTicker);
+        //     });
+        // }
+        // private <T extends BlockEntity> void registerBlockEntityTicker(BlockEntityType<T> type, BlockEntityTicker<? super T> ticker) {
+        // }
     }
 
 
