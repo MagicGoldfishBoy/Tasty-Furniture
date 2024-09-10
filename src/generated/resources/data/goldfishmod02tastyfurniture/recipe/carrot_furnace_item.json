@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod02tastyfurniture:carrot_ingot"
+    },
+    "B": {
+      "item": "minecraft:cobblestone"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "B B",
+    "ABA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "goldfishmod02tastyfurniture:carrot_furnace_item"
+  }
+}

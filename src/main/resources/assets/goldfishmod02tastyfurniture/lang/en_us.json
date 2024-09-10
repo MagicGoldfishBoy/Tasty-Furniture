@@ -559,6 +559,8 @@
    "block.goldfishmod02tastyfurniture.potato_furnace": "Potato Furnace",
    "container.potato_furnace": "Potato Furnace",
    "block.goldfishmod02tastyfurniture.beetroot_furnace": "Beetroot Furnace",
-   "container.beetroot_furnace": "Beetroot Furnace"
+   "container.beetroot_furnace": "Beetroot Furnace",
+   "block.goldfishmod02tastyfurniture.carrot_furnace": "Carrot Furnace",
+   "container.carrot_furnace": "Carrot Furnace"
   
 }

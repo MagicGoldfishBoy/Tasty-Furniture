@@ -4754,7 +4754,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
-              
+
         //.............beetroot
           FurnaceBlock beetroot_furnace = foodblockregistry.BEETROOT_FURNACE.get();
           ResourceLocation beetroot_furnace_unlit_texture = modLoc("block/beetroot_furnace_front_unlit");
@@ -4793,6 +4793,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = lit ? modLoc("block/beetroot_furnace_model_lit") : modLoc("block/beetroot_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
+              
+        //.............carrot
+          FurnaceBlock carrot_furnace = foodblockregistry.CARROT_FURNACE.get();
+          ResourceLocation carrot_furnace_unlit_texture = modLoc("block/carrot_furnace_front_unlit");
+          ResourceLocation carrot_furnace_lit_texture = modLoc("block/carrot_furnace_front_lit");
+          ResourceLocation carrot_furnace_side = modLoc("block/carrot_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder carrot_furnace_model_unlit = models()
+              .withExistingParent("carrot_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", carrot_furnace_side)
+              .texture("top", carrot_furnace_side)
+              .texture("front", carrot_furnace_unlit_texture)
+              .texture("particle", carrot_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder carrot_furnace_model_lit = models()
+              .withExistingParent("carrot_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", carrot_furnace_side)
+              .texture("top", carrot_furnace_side)
+              .texture("front", carrot_furnace_lit_texture)
+              .texture("particle", carrot_furnace_side);
+          
+          // Configure variants for the carrot_furnace block
+          getVariantBuilder(carrot_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/carrot_furnace_model_lit") : modLoc("block/carrot_furnace_model_unlit");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))
