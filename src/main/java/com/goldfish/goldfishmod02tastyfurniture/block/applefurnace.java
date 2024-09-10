@@ -1,11 +1,17 @@
 package com.goldfish.goldfishmod02tastyfurniture.block;
 
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FurnaceBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
+
+import javax.annotation.Nullable;
+
+import org.jetbrains.annotations.NotNull;
 
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.applefurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
@@ -28,47 +34,40 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.core.Direction;
 
 public class applefurnace extends FurnaceBlock {
-   // public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
-  //  public static final BooleanProperty LIT = BooleanProperty.create("lit");
 
-    public applefurnace() {
-        super(BlockBehaviour.Properties.of().strength(3.5F));
-        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(LIT, false));
+    public String type;
+
+    public applefurnace(MapColor colour, float strength, String type) {
+        super(Properties.ofFullCopy(Blocks.FURNACE).mapColor(colour).strength(strength));
+        this.type = type;
+    }
+    public applefurnace(MapColor colour, SoundType sound, float strength, String type) {
+        super(Properties.ofFullCopy(Blocks.FURNACE).mapColor(colour).sound(sound).strength(strength));
+        this.type = type;
     }
 
     @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, LIT);
-    }
-
-    // @Override
-    // public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-    //     // Open the furnace GUI when the block is used by the player
-    //     if (!level.isClientSide) {
-    //         openContainer(level, pos, player);
-    //     }
-    //     return InteractionResult.sidedSuccess(level.isClientSide);
-    // }
-
-    @Override
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-         return createTickerHelper(type, foodblockregistry.APPLE_FURNACE_ENTITY.get(), applefurnaceentity::tick);
+    @Nullable
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(@NotNull Level level, @NotNull BlockState state, @NotNull BlockEntityType<T> type) {
+        return applefurnace.createFurnaceTicker(level, type, foodblockregistry.APPLE_FURNACE_ENTITY.get());
     }
 
     @Override
-    protected void openContainer(Level level, BlockPos pos, Player player) {
+    protected void openContainer(Level level, @NotNull BlockPos pos, @NotNull Player player) {
         BlockEntity blockEntity = level.getBlockEntity(pos);
-        if (blockEntity instanceof FurnaceBlockEntity) {
-            player.openMenu((MenuProvider) blockEntity);
+        if (blockEntity instanceof applefurnaceentity) {
+            player.openMenu((MenuProvider)blockEntity);
             player.awardStat(Stats.INTERACT_WITH_FURNACE);
         }
     }
 
+    @Nullable
     @Override
-    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+    public BlockEntity newBlockEntity(@NotNull BlockPos pos, @NotNull BlockState state) {
         return new applefurnaceentity(pos, state);
     }
 }
