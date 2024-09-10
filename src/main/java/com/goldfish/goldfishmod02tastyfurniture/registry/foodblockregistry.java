@@ -9,6 +9,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.applefurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodlamp;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
 import com.goldfish.goldfishmod02tastyfurniture.block.horizontal_food_block;
+import com.goldfish.goldfishmod02tastyfurniture.block.potatofurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.applefurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodstandingsign;
@@ -16,6 +17,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodstandi
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsignentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodwallsign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.potato_sign_entity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.potatofurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistry;
 import com.google.common.base.Supplier;
 
@@ -3306,6 +3308,10 @@ public class foodblockregistry {
     () -> BlockEntityType.Builder.of(applefurnaceentity::new, APPLE_FURNACE.get()).build(null));
 
    //.........potato
+    public static final DeferredHolder<Block, potatofurnace> POTATO_FURNACE = FOODBLOCK.register("potato_furnace", () -> new potatofurnace(MapColor.DEEPSLATE, SoundType.DEEPSLATE, 4.5f, "deepslate"));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<potatofurnaceentity>> POTATO_FURNACE_ENTITY = FOODBLOCKENTITY.register("potato_furnace", 
+    () -> BlockEntityType.Builder.of(potatofurnaceentity::new, POTATO_FURNACE.get()).build(null));
    //.........beetroot
    //.........carrot
    //.........chorus

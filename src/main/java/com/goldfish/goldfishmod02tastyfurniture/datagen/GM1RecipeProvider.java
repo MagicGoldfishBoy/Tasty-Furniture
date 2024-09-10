@@ -3952,7 +3952,6 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
 
         //------------------------------------------------------------furnaces----------------------------------------------------
          //.....apple
-          //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_FURNACE_ITEM.get())
             .pattern("ABA")
             .pattern("B B")
@@ -3960,6 +3959,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('A', ingotregistry.APPLE_INGOT.get())
             .define('B', Items.COBBLESTONE)
             .unlockedBy("has_apple_ingot", has(ingotregistry.APPLE_INGOT.get()))
+            .save(output);
+         //.....potato
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.POTATO_FURNACE_ITEM.get())
+            .pattern("ABA")
+            .pattern("B B")
+            .pattern("ABA")
+            .define('A', ingotregistry.POTATO_INGOT.get())
+            .define('B', Items.COBBLESTONE)
+            .unlockedBy("has_potato_ingot", has(ingotregistry.POTATO_INGOT.get()))
             .save(output);
 
         }

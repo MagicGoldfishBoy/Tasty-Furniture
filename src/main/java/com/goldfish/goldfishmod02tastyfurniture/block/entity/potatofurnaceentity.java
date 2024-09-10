@@ -2,7 +2,7 @@ package com.goldfish.goldfishmod02tastyfurniture.block.entity;
 
 import org.jetbrains.annotations.NotNull;
 
-import com.goldfish.goldfishmod02tastyfurniture.block.applefurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.potatofurnace;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 
 import net.minecraft.core.BlockPos;
@@ -14,14 +14,14 @@ import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class applefurnaceentity extends AbstractFurnaceBlockEntity {
-    public applefurnaceentity(BlockPos pos, BlockState state) {
-        super(foodblockregistry.APPLE_FURNACE_ENTITY.get(), pos, state, RecipeType.SMELTING);
+public class potatofurnaceentity extends AbstractFurnaceBlockEntity {
+    public potatofurnaceentity(BlockPos pos, BlockState state) {
+        super(foodblockregistry.POTATO_FURNACE_ENTITY.get(), pos, state, RecipeType.SMELTING);
     }
 
     @Override
     protected @NotNull Component getDefaultName() {
-        return Component.translatable("container.apple_furnace");
+        return Component.translatable("container.potato_furnace");
     }
 
     @Override
@@ -29,8 +29,8 @@ public class applefurnaceentity extends AbstractFurnaceBlockEntity {
         return new FurnaceMenu(syncId, playerInventory, this, this.dataAccess);
     }
 
-    protected applefurnace getBlock() {
-        return (foodblockregistry.APPLE_FURNACE.get()); //getBlockState().getBlock();
+    protected potatofurnace getBlock() {
+        return (foodblockregistry.POTATO_FURNACE.get()); //getBlockState().getBlock();
     }
 
     
