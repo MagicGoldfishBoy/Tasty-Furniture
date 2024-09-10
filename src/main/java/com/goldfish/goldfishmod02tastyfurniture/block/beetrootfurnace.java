@@ -8,10 +8,9 @@ import javax.annotation.Nullable;
 
 import org.jetbrains.annotations.NotNull;
 
-import com.goldfish.goldfishmod02tastyfurniture.block.entity.applefurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 
-//import net.minecraft.world.level.material.Material;
 import net.minecraft.core.BlockPos;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -22,15 +21,15 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.material.MapColor;
 
-public class applefurnace extends FurnaceBlock {
+public class beetrootfurnace extends FurnaceBlock {
 
     public String type;
 
-    public applefurnace(MapColor colour, float strength, String type) {
-        super(Properties.ofFullCopy(Blocks.FURNACE).mapColor(colour).strength(strength).requiresCorrectToolForDrops());
+    public beetrootfurnace(MapColor colour, float strength, String type) {
+        super(Properties.ofFullCopy(Blocks.FURNACE).mapColor(colour).strength(strength));
         this.type = type;
     }
-    public applefurnace(MapColor colour, SoundType sound, float strength, String type) {
+    public beetrootfurnace(MapColor colour, SoundType sound, float strength, String type) {
         super(Properties.ofFullCopy(Blocks.FURNACE).mapColor(colour).sound(sound).strength(strength));
         this.type = type;
     }
@@ -38,13 +37,13 @@ public class applefurnace extends FurnaceBlock {
     @Override
     @Nullable
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(@NotNull Level level, @NotNull BlockState state, @NotNull BlockEntityType<T> type) {
-        return applefurnace.createFurnaceTicker(level, type, foodblockregistry.APPLE_FURNACE_ENTITY.get());
+        return beetrootfurnace.createFurnaceTicker(level, type, foodblockregistry.BEETROOT_FURNACE_ENTITY.get());
     }
 
     @Override
     protected void openContainer(Level level, @NotNull BlockPos pos, @NotNull Player player) {
         BlockEntity blockEntity = level.getBlockEntity(pos);
-        if (blockEntity instanceof applefurnaceentity) {
+        if (blockEntity instanceof beetrootfurnaceentity) {
             player.openMenu((MenuProvider)blockEntity);
             player.awardStat(Stats.INTERACT_WITH_FURNACE);
         }
@@ -53,6 +52,6 @@ public class applefurnace extends FurnaceBlock {
     @Nullable
     @Override
     public BlockEntity newBlockEntity(@NotNull BlockPos pos, @NotNull BlockState state) {
-        return new applefurnaceentity(pos, state);
+        return new beetrootfurnaceentity(pos, state);
     }
 }

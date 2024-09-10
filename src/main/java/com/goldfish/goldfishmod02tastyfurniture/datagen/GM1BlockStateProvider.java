@@ -4666,94 +4666,139 @@ public class GM1BlockStateProvider extends BlockStateProvider
             });
     //--------------------------------------------------------------furnaces------------------------------------------------------------------------------
         //.............apple
-        FurnaceBlock apple_furnace = foodblockregistry.APPLE_FURNACE.get();
-        ResourceLocation apple_furnace_unlit_texture = modLoc("block/apple_furnace_front_unlit");
-        ResourceLocation apple_furnace_lit_texture = modLoc("block/apple_furnace_front_lit");
-        ResourceLocation apple_furnace_side = modLoc("block/apple_block");
-        
-        // Define the model for the unlit state
-        BlockModelBuilder apple_furnace_model_unlit = models()
-            .withExistingParent("apple_furnace_model_unlit", mcLoc("block/furnace"))
-            .renderType("cutout_mipped_all")
-            .texture("side", apple_furnace_side)
-            .texture("top", apple_furnace_side)
-            .texture("front", apple_furnace_unlit_texture)
-            .texture("particle", apple_furnace_side);
-        
-        // Define the model for the lit state
-        BlockModelBuilder apple_furnace_model_lit = models()
-            .withExistingParent("apple_furnace_model_lit", mcLoc("block/furnace"))
-            .renderType("cutout_mipped_all")
-            .texture("side", apple_furnace_side)
-            .texture("top", apple_furnace_side)
-            .texture("front", apple_furnace_lit_texture)
-            .texture("particle", apple_furnace_side);
-        
-        // Configure variants for the apple_furnace block
-        getVariantBuilder(apple_furnace)
-            .forAllStates(state -> {
-                Boolean lit = state.getValue(BlockStateProperties.LIT);
-                Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-                int rotation = switch (facing) {
-                    case NORTH -> 0;
-                    case EAST -> 90;
-                    case SOUTH -> 180;
-                    case WEST -> 270;
-                    default -> 0;
-                };
+          FurnaceBlock apple_furnace = foodblockregistry.APPLE_FURNACE.get();
+          ResourceLocation apple_furnace_unlit_texture = modLoc("block/apple_furnace_front_unlit");
+          ResourceLocation apple_furnace_lit_texture = modLoc("block/apple_furnace_front_lit");
+          ResourceLocation apple_furnace_side = modLoc("block/apple_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder apple_furnace_model_unlit = models()
+              .withExistingParent("apple_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", apple_furnace_side)
+              .texture("top", apple_furnace_side)
+              .texture("front", apple_furnace_unlit_texture)
+              .texture("particle", apple_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder apple_furnace_model_lit = models()
+              .withExistingParent("apple_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", apple_furnace_side)
+              .texture("top", apple_furnace_side)
+              .texture("front", apple_furnace_lit_texture)
+              .texture("particle", apple_furnace_side);
+          
+          // Configure variants for the apple_furnace block
+          getVariantBuilder(apple_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
 
-                ResourceLocation modelLocation = lit ? modLoc("block/apple_furnace_model_lit") : modLoc("block/apple_furnace_model_unlit");
-            
-                return ConfiguredModel.builder()
-                    .modelFile(models().getExistingFile(modelLocation))
-                    .rotationY(rotation)
-                    .build();
-            });
-            
+                  ResourceLocation modelLocation = lit ? modLoc("block/apple_furnace_model_lit") : modLoc("block/apple_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
+
         //.............potato
-        FurnaceBlock potato_furnace = foodblockregistry.POTATO_FURNACE.get();
-        ResourceLocation potato_furnace_unlit_texture = modLoc("block/potato_furnace_front_unlit");
-        ResourceLocation potato_furnace_lit_texture = modLoc("block/potato_furnace_front_lit");
-        ResourceLocation potato_furnace_side = modLoc("block/potato_block");
-        
-        // Define the model for the unlit state
-        BlockModelBuilder potato_furnace_model_unlit = models()
-            .withExistingParent("potato_furnace_model_unlit", mcLoc("block/furnace"))
-            .renderType("cutout_mipped_all")
-            .texture("side", potato_furnace_side)
-            .texture("top", potato_furnace_side)
-            .texture("front", potato_furnace_unlit_texture)
-            .texture("particle", potato_furnace_side);
-        
-        // Define the model for the lit state
-        BlockModelBuilder potato_furnace_model_lit = models()
-            .withExistingParent("potato_furnace_model_lit", mcLoc("block/furnace"))
-            .renderType("cutout_mipped_all")
-            .texture("side", potato_furnace_side)
-            .texture("top", potato_furnace_side)
-            .texture("front", potato_furnace_lit_texture)
-            .texture("particle", potato_furnace_side);
-        
-        // Configure variants for the potato_furnace block
-        getVariantBuilder(potato_furnace)
-            .forAllStates(state -> {
-                Boolean lit = state.getValue(BlockStateProperties.LIT);
-                Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-                int rotation = switch (facing) {
-                    case NORTH -> 0;
-                    case EAST -> 90;
-                    case SOUTH -> 180;
-                    case WEST -> 270;
-                    default -> 0;
-                };
+          FurnaceBlock potato_furnace = foodblockregistry.POTATO_FURNACE.get();
+          ResourceLocation potato_furnace_unlit_texture = modLoc("block/potato_furnace_front_unlit");
+          ResourceLocation potato_furnace_lit_texture = modLoc("block/potato_furnace_front_lit");
+          ResourceLocation potato_furnace_side = modLoc("block/potato_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder potato_furnace_model_unlit = models()
+              .withExistingParent("potato_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", potato_furnace_side)
+              .texture("top", potato_furnace_side)
+              .texture("front", potato_furnace_unlit_texture)
+              .texture("particle", potato_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder potato_furnace_model_lit = models()
+              .withExistingParent("potato_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", potato_furnace_side)
+              .texture("top", potato_furnace_side)
+              .texture("front", potato_furnace_lit_texture)
+              .texture("particle", potato_furnace_side);
+          
+          // Configure variants for the potato_furnace block
+          getVariantBuilder(potato_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
 
-                ResourceLocation modelLocation = lit ? modLoc("block/potato_furnace_model_lit") : modLoc("block/potato_furnace_model_unlit");
-            
-                return ConfiguredModel.builder()
-                    .modelFile(models().getExistingFile(modelLocation))
-                    .rotationY(rotation)
-                    .build();
-            });
+                  ResourceLocation modelLocation = lit ? modLoc("block/potato_furnace_model_lit") : modLoc("block/potato_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
+              
+        //.............beetroot
+          FurnaceBlock beetroot_furnace = foodblockregistry.BEETROOT_FURNACE.get();
+          ResourceLocation beetroot_furnace_unlit_texture = modLoc("block/beetroot_furnace_front_unlit");
+          ResourceLocation beetroot_furnace_lit_texture = modLoc("block/beetroot_furnace_front_lit");
+          ResourceLocation beetroot_furnace_side = modLoc("block/beetroot_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder beetroot_furnace_model_unlit = models()
+              .withExistingParent("beetroot_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", beetroot_furnace_side)
+              .texture("top", beetroot_furnace_side)
+              .texture("front", beetroot_furnace_unlit_texture)
+              .texture("particle", beetroot_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder beetroot_furnace_model_lit = models()
+              .withExistingParent("beetroot_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", beetroot_furnace_side)
+              .texture("top", beetroot_furnace_side)
+              .texture("front", beetroot_furnace_lit_texture)
+              .texture("particle", beetroot_furnace_side);
+          
+          // Configure variants for the beetroot_furnace block
+          getVariantBuilder(beetroot_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/beetroot_furnace_model_lit") : modLoc("block/beetroot_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
    };
 }
     

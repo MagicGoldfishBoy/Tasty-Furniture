@@ -6,11 +6,13 @@ import java.util.List;
 
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 import com.goldfish.goldfishmod02tastyfurniture.block.applefurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.beetrootfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodlamp;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
 import com.goldfish.goldfishmod02tastyfurniture.block.horizontal_food_block;
 import com.goldfish.goldfishmod02tastyfurniture.block.potatofurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.applefurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodstandingsign;
 // import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodwallsign.foodstandingsign;
@@ -3302,17 +3304,23 @@ public class foodblockregistry {
 //==============================================================================================================================================================================================
 
    //.........apple
-    public static final DeferredHolder<Block, applefurnace> APPLE_FURNACE = FOODBLOCK.register("apple_furnace", () -> new applefurnace(MapColor.DEEPSLATE, SoundType.DEEPSLATE, 4.5f, "deepslate"));
+    public static final DeferredHolder<Block, applefurnace> APPLE_FURNACE = FOODBLOCK.register("apple_furnace", () -> new applefurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<applefurnaceentity>> APPLE_FURNACE_ENTITY = FOODBLOCKENTITY.register("apple_furnace", 
     () -> BlockEntityType.Builder.of(applefurnaceentity::new, APPLE_FURNACE.get()).build(null));
 
    //.........potato
-    public static final DeferredHolder<Block, potatofurnace> POTATO_FURNACE = FOODBLOCK.register("potato_furnace", () -> new potatofurnace(MapColor.DEEPSLATE, SoundType.DEEPSLATE, 4.5f, "deepslate"));
+    public static final DeferredHolder<Block, potatofurnace> POTATO_FURNACE = FOODBLOCK.register("potato_furnace", () -> new potatofurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<potatofurnaceentity>> POTATO_FURNACE_ENTITY = FOODBLOCKENTITY.register("potato_furnace", 
     () -> BlockEntityType.Builder.of(potatofurnaceentity::new, POTATO_FURNACE.get()).build(null));
+
    //.........beetroot
+    public static final DeferredHolder<Block, beetrootfurnace> BEETROOT_FURNACE = FOODBLOCK.register("beetroot_furnace", () -> new beetrootfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<beetrootfurnaceentity>> BEETROOT_FURNACE_ENTITY = FOODBLOCKENTITY.register("beetroot_furnace", 
+    () -> BlockEntityType.Builder.of(beetrootfurnaceentity::new, BEETROOT_FURNACE.get()).build(null));
+
    //.........carrot
    //.........chorus
    //.........glow_berry

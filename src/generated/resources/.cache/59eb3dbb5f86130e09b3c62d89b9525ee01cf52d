@@ -1,4 +1,4 @@
-// 1.21	2024-09-10T18:52:38.781100631	Loot Tables
+// 1.21	2024-09-10T19:30:44.326813697	Loot Tables
 f506816aefac13fd3bcb8b3075eefc63b1b6be41 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bars.json
 98b73d11c0b3a3ecadbdd7c289263f01706818e9 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_block.json
 81d69920001f0e32b706a1e1ffa975ddba47869b data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bricks_block.json
@@ -68,6 +68,7 @@ c7497e6d2f0844dcf051a3f2777a7c3c96d7d24d data/goldfishmod02tastyfurniture/loot_t
 a33f3136abf4b2b57805abf2528063e128504a99 data/goldfishmod02tastyfurniture/loot_table/blocks/beetroot_chiseled_block.json
 873d6821ad6c98be55174286528011f660bf3f23 data/goldfishmod02tastyfurniture/loot_table/blocks/beetroot_door.json
 56f1afa50ec7b216f5abca0ef9a2a34a72ad3642 data/goldfishmod02tastyfurniture/loot_table/blocks/beetroot_fence.json
+fb421137892dbc3e1977c32f6d7b458fcb467105 data/goldfishmod02tastyfurniture/loot_table/blocks/beetroot_furnace.json
 6d242389d0b1d6b857952f1e31eb11f52be7e1ef data/goldfishmod02tastyfurniture/loot_table/blocks/beetroot_ladder.json
 2c5d8aee298e36f1098e4d9bc140ba9437145f12 data/goldfishmod02tastyfurniture/loot_table/blocks/beetroot_lamp.json
 482f30b5277081110b0cefccd42fa5869f284bdc data/goldfishmod02tastyfurniture/loot_table/blocks/beetroot_lantern.json
