@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/furnace",
+  "render_type": "minecraft:cutout_mipped_all",
+  "textures": {
+    "front": "goldfishmod02tastyfurniture:block/apple_furnace_front_unlit",
+    "particle": "goldfishmod02tastyfurniture:block/apple_block",
+    "side": "goldfishmod02tastyfurniture:block/apple_block",
+    "top": "goldfishmod02tastyfurniture:block/apple_block"
+  }
+}

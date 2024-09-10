@@ -553,6 +553,8 @@
    "block.goldfishmod02tastyfurniture.pork_soul_torch": "Pork Soul Torch",
    "block.goldfishmod02tastyfurniture.rabbit_torch": "Rabbit Torch",
    "block.goldfishmod02tastyfurniture.rabbit_redstone_torch": "Redstone Rabbit Torch",
-   "block.goldfishmod02tastyfurniture.rabbit_soul_torch": "Rabbit Soul Torch"
+   "block.goldfishmod02tastyfurniture.rabbit_soul_torch": "Rabbit Soul Torch",
+   "block.goldfishmod02tastyfurniture.apple_furnace": "Apple Furnace",
+   "container.apple_furnace": "Apple Furnace"
   
 }

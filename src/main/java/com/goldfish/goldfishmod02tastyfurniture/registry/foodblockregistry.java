@@ -3300,14 +3300,10 @@ public class foodblockregistry {
 //==============================================================================================================================================================================================
 
    //.........apple
-    //public static final DeferredHolder<Block, FurnaceBlock> APPLE_FURNACE = FOODBLOCK.register("apple_furnace", () -> FurnaceBlock(BlockBehaviour.Properties.of()))
-    //public static final DeferredHolder<Block, FurnaceBlock> APPLE_FURNACE = FOODBLOCK.register("apple_furnace", () -> new FurnaceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FURNACE)));
-    //public static final DeferredHolder<Block, applefurnace> APPLE_FURNACE = FOODBLOCK.register("apple_furnace", applefurnace::new);
     public static final DeferredHolder<Block, applefurnace> APPLE_FURNACE = FOODBLOCK.register("apple_furnace", () -> new applefurnace(MapColor.DEEPSLATE, SoundType.DEEPSLATE, 4.5f, "deepslate"));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<applefurnaceentity>> APPLE_FURNACE_ENTITY = FOODBLOCKENTITY.register("apple_furnace", 
     () -> BlockEntityType.Builder.of(applefurnaceentity::new, APPLE_FURNACE.get()).build(null));
-
 
    //.........potato
    //.........beetroot

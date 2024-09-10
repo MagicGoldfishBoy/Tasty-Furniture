@@ -27,7 +27,7 @@ public class applefurnaceentity extends AbstractFurnaceBlockEntity {
 
     @Override
     protected @NotNull Component getDefaultName() {
-        return Component.translatable("container." + foodblockregistry.APPLE_FURNACE_ENTITY.get() + "_furnace");
+        return Component.translatable("container.apple_furnace");
     }
 
     @Override

@@ -3950,6 +3950,18 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_rabbit_nugget", has(nuggetregistry.RABBIT_NUGGET.get()))
             .save(output);
 
+        //------------------------------------------------------------furnaces----------------------------------------------------
+         //.....apple
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_FURNACE_ITEM.get())
+            .pattern("ABA")
+            .pattern("B B")
+            .pattern("ABA")
+            .define('A', ingotregistry.APPLE_INGOT.get())
+            .define('B', Items.COBBLESTONE)
+            .unlockedBy("has_apple_ingot", has(ingotregistry.APPLE_INGOT.get()))
+            .save(output);
+
         }
     }
 }
