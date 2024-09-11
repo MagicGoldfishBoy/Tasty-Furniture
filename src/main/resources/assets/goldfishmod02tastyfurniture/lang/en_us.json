@@ -565,6 +565,8 @@
    "block.goldfishmod02tastyfurniture.chorus_furnace": "Chorus Furnace",
    "container.chorus_furnace": "Chorus Furnace",
    "block.goldfishmod02tastyfurniture.glowberry_furnace": "Glowberry Furnace",
-   "container.glowberry_furnace": "Glowberry Furnace"
+   "container.glowberry_furnace": "Glowberry Furnace",
+   "block.goldfishmod02tastyfurniture.melon_furnace": "Melon Furnace",
+   "container.melon_furnace": "Melon Furnace"
   
 }
