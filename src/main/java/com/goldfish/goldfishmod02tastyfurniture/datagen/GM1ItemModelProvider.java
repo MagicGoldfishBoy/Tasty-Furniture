@@ -1105,6 +1105,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("glowberry_furnace_item", modLoc("block/glowberry_furnace_model_unlit"));
       //..............melon
         withExistingParent("melon_furnace_item", modLoc("block/melon_furnace_model_unlit"));
+      //..............sweet_berry
+        withExistingParent("sweet_berry_furnace_item", modLoc("block/sweet_berry_furnace_model_unlit"));
   }   
 }
 

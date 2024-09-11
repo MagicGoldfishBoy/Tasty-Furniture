@@ -559,7 +559,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_rabbit_block", has(foodblockitemregistry.RABBIT_BLOCK_ITEM.get()))
             .save(output, "rabbit_chiseled_block_from_rabbit_block_stonecutting");
 
-         //___________________________________________________________tile____________________________________________________________________
+         //_____________________________________________________________tile______________________________________________________________________
 
           //.........apple
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_TILE_BLOCK_ITEM.get(),2)
@@ -4013,6 +4013,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('A', ingotregistry.MELON_INGOT.get())
             .define('B', Items.COBBLESTONE)
             .unlockedBy("has_melon_ingot", has(ingotregistry.MELON_INGOT.get()))
+            .save(output);
+         //.....sweet_berry
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SWEET_BERRY_FURNACE_ITEM.get())
+            .pattern("ABA")
+            .pattern("B B")
+            .pattern("ABA")
+            .define('A', ingotregistry.SWEET_BERRY_INGOT.get())
+            .define('B', Items.COBBLESTONE)
+            .unlockedBy("has_sweet_berry_ingot", has(ingotregistry.SWEET_BERRY_INGOT.get()))
             .save(output);
 
         }
