@@ -3987,6 +3987,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', Items.COBBLESTONE)
             .unlockedBy("has_carrot_ingot", has(ingotregistry.CARROT_INGOT.get()))
             .save(output);
+         //.....chorus
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHORUS_FURNACE_ITEM.get())
+            .pattern("ABA")
+            .pattern("B B")
+            .pattern("ABA")
+            .define('A', ingotregistry.CHORUS_INGOT.get())
+            .define('B', Items.COBBLESTONE)
+            .unlockedBy("has_chorus_ingot", has(ingotregistry.CHORUS_INGOT.get()))
+            .save(output);
 
         }
     }

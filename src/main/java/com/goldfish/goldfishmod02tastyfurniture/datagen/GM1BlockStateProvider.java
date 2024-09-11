@@ -4799,7 +4799,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
-              
+
         //.............carrot
           FurnaceBlock carrot_furnace = foodblockregistry.CARROT_FURNACE.get();
           ResourceLocation carrot_furnace_unlit_texture = modLoc("block/carrot_furnace_front_unlit");
@@ -4838,6 +4838,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = lit ? modLoc("block/carrot_furnace_model_lit") : modLoc("block/carrot_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
+              
+        //.............chorus
+          FurnaceBlock chorus_furnace = foodblockregistry.CHORUS_FURNACE.get();
+          ResourceLocation chorus_furnace_unlit_texture = modLoc("block/chorus_furnace_front_unlit");
+          ResourceLocation chorus_furnace_lit_texture = modLoc("block/chorus_furnace_front_lit");
+          ResourceLocation chorus_furnace_side = modLoc("block/chorus_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder chorus_furnace_model_unlit = models()
+              .withExistingParent("chorus_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", chorus_furnace_side)
+              .texture("top", chorus_furnace_side)
+              .texture("front", chorus_furnace_unlit_texture)
+              .texture("particle", chorus_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder chorus_furnace_model_lit = models()
+              .withExistingParent("chorus_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", chorus_furnace_side)
+              .texture("top", chorus_furnace_side)
+              .texture("front", chorus_furnace_lit_texture)
+              .texture("particle", chorus_furnace_side);
+          
+          // Configure variants for the chorus_furnace block
+          getVariantBuilder(chorus_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/chorus_furnace_model_lit") : modLoc("block/chorus_furnace_model_unlit");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))

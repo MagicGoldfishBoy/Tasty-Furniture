@@ -1600,4 +1600,6 @@ public class foodblockitemregistry {
     public static final DeferredHolder<Item, BlockItem> BEETROOT_FURNACE_ITEM = FOODBLOCKITEM.register("beetroot_furnace_item", () -> new BlockItem(foodblockregistry.BEETROOT_FURNACE.get(), new BlockItem.Properties()));
    //.........carrot
     public static final DeferredHolder<Item, BlockItem> CARROT_FURNACE_ITEM = FOODBLOCKITEM.register("carrot_furnace_item", () -> new BlockItem(foodblockregistry.CARROT_FURNACE.get(), new BlockItem.Properties()));
+   //.........chorus
+    public static final DeferredHolder<Item, BlockItem> CHORUS_FURNACE_ITEM = FOODBLOCKITEM.register("chorus_furnace_item", () -> new BlockItem(foodblockregistry.CHORUS_FURNACE.get(), new BlockItem.Properties()));
 }
