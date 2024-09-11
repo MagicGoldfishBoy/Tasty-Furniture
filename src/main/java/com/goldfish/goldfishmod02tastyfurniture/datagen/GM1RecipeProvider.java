@@ -4086,6 +4086,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', Items.COBBLESTONE)
             .unlockedBy("has_tropical_fish_ingot", has(ingotregistry.TROPICAL_FISH_INGOT.get()))
             .save(output);
+         //.....mutton
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MUTTON_FURNACE_ITEM.get())
+            .pattern("ABA")
+            .pattern("B B")
+            .pattern("ABA")
+            .define('A', ingotregistry.MUTTON_INGOT.get())
+            .define('B', Items.COBBLESTONE)
+            .unlockedBy("has_mutton_ingot", has(ingotregistry.MUTTON_INGOT.get()))
+            .save(output);
 
         }
     }

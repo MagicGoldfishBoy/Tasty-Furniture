@@ -5338,6 +5338,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
+              
+        //.............mutton
+          FurnaceBlock mutton_furnace = foodblockregistry.MUTTON_FURNACE.get();
+          ResourceLocation mutton_furnace_unlit_texture = modLoc("block/mutton_furnace_front_unlit");
+          ResourceLocation mutton_furnace_lit_texture = modLoc("block/mutton_furnace_front_lit");
+          ResourceLocation mutton_furnace_side = modLoc("block/mutton_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder mutton_furnace_model_unlit = models()
+              .withExistingParent("mutton_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", mutton_furnace_side)
+              .texture("top", mutton_furnace_side)
+              .texture("front", mutton_furnace_unlit_texture)
+              .texture("particle", mutton_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder mutton_furnace_model_lit = models()
+              .withExistingParent("mutton_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", mutton_furnace_side)
+              .texture("top", mutton_furnace_side)
+              .texture("front", mutton_furnace_lit_texture)
+              .texture("particle", mutton_furnace_side);
+          
+          // Configure variants for the mutton_furnace block
+          getVariantBuilder(mutton_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/mutton_furnace_model_lit") : modLoc("block/mutton_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
    };
 }
     
