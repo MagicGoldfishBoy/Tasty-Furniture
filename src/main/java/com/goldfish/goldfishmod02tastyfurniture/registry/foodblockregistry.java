@@ -9,6 +9,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.applefurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.beetrootfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.brown_mushroomfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotfurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.chickenfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.chorusfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodlamp;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
@@ -23,6 +24,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.applefurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.brown_mushroomfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.carrotfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.chickenfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chorusfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodstandingsign;
@@ -3385,6 +3387,11 @@ public class foodblockregistry {
     () -> BlockEntityType.Builder.of(pumpkinfurnaceentity::new, PUMPKIN_FURNACE.get()).build(null));
 
    //.........chicken
+    public static final DeferredHolder<Block, chickenfurnace> CHICKEN_FURNACE = FOODBLOCK.register("chicken_furnace", () -> new chickenfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<chickenfurnaceentity>> CHICKEN_FURNACE_ENTITY = FOODBLOCKENTITY.register("chicken_furnace", 
+    () -> BlockEntityType.Builder.of(chickenfurnaceentity::new, CHICKEN_FURNACE.get()).build(null));
+
    //.........cod
    //.........salmon
    //.........tropical_fish

@@ -575,6 +575,8 @@
   "block.goldfishmod02tastyfurniture.red_mushroom_furnace": "Red Mushroom Furnace",
    "container.red_mushroom_furnace": "Red Mushroom Furnace",
   "block.goldfishmod02tastyfurniture.pumpkin_furnace": "Pumpkin Furnace",
-   "container.pumpkin_furnace": "Pumpkin Furnace"
+   "container.pumpkin_furnace": "Pumpkin Furnace",
+  "block.goldfishmod02tastyfurniture.chicken_furnace": "Chicken Furnace",
+   "container.chicken_furnace": "Chicken Furnace"
   
 }
