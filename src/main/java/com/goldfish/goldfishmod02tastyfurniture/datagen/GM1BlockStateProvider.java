@@ -5113,6 +5113,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
+              
+        //.............pumpkin
+          FurnaceBlock pumpkin_furnace = foodblockregistry.PUMPKIN_FURNACE.get();
+          ResourceLocation pumpkin_furnace_unlit_texture = modLoc("block/pumpkin_furnace_front_unlit");
+          ResourceLocation pumpkin_furnace_lit_texture = modLoc("block/pumpkin_furnace_front_lit");
+          ResourceLocation pumpkin_furnace_side = modLoc("block/pumpkin_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder pumpkin_furnace_model_unlit = models()
+              .withExistingParent("pumpkin_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", pumpkin_furnace_side)
+              .texture("top", pumpkin_furnace_side)
+              .texture("front", pumpkin_furnace_unlit_texture)
+              .texture("particle", pumpkin_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder pumpkin_furnace_model_lit = models()
+              .withExistingParent("pumpkin_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", pumpkin_furnace_side)
+              .texture("top", pumpkin_furnace_side)
+              .texture("front", pumpkin_furnace_lit_texture)
+              .texture("particle", pumpkin_furnace_side);
+          
+          // Configure variants for the pumpkin_furnace block
+          getVariantBuilder(pumpkin_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/pumpkin_furnace_model_lit") : modLoc("block/pumpkin_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
    };
 }
     
