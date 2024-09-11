@@ -5158,7 +5158,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
-              
+
         //.............chicken
           FurnaceBlock chicken_furnace = foodblockregistry.CHICKEN_FURNACE.get();
           ResourceLocation chicken_furnace_unlit_texture = modLoc("block/chicken_furnace_front_unlit");
@@ -5197,6 +5197,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = lit ? modLoc("block/chicken_furnace_model_lit") : modLoc("block/chicken_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
+              
+        //.............cod
+          FurnaceBlock cod_furnace = foodblockregistry.COD_FURNACE.get();
+          ResourceLocation cod_furnace_unlit_texture = modLoc("block/cod_furnace_front_unlit");
+          ResourceLocation cod_furnace_lit_texture = modLoc("block/cod_furnace_front_lit");
+          ResourceLocation cod_furnace_side = modLoc("block/cod_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder cod_furnace_model_unlit = models()
+              .withExistingParent("cod_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", cod_furnace_side)
+              .texture("top", cod_furnace_side)
+              .texture("front", cod_furnace_unlit_texture)
+              .texture("particle", cod_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder cod_furnace_model_lit = models()
+              .withExistingParent("cod_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", cod_furnace_side)
+              .texture("top", cod_furnace_side)
+              .texture("front", cod_furnace_lit_texture)
+              .texture("particle", cod_furnace_side);
+          
+          // Configure variants for the cod_furnace block
+          getVariantBuilder(cod_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/cod_furnace_model_lit") : modLoc("block/cod_furnace_model_unlit");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))
