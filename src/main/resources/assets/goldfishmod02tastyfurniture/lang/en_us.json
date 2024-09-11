@@ -579,6 +579,8 @@
   "block.goldfishmod02tastyfurniture.chicken_furnace": "Chicken Furnace",
    "container.chicken_furnace": "Chicken Furnace",
   "block.goldfishmod02tastyfurniture.cod_furnace": "Cod Furnace",
-   "container.cod_furnace": "Cod Furnace"
+   "container.cod_furnace": "Cod Furnace",
+  "block.goldfishmod02tastyfurniture.salmon_furnace": "Salmon Furnace",
+   "container.salmon_furnace": "Salmon Furnace"
   
 }

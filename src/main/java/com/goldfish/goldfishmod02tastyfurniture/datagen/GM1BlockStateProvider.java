@@ -5203,7 +5203,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
-              
+
         //.............cod
           FurnaceBlock cod_furnace = foodblockregistry.COD_FURNACE.get();
           ResourceLocation cod_furnace_unlit_texture = modLoc("block/cod_furnace_front_unlit");
@@ -5242,6 +5242,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = lit ? modLoc("block/cod_furnace_model_lit") : modLoc("block/cod_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
+              
+        //.............salmon
+          FurnaceBlock salmon_furnace = foodblockregistry.SALMON_FURNACE.get();
+          ResourceLocation salmon_furnace_unlit_texture = modLoc("block/salmon_furnace_front_unlit");
+          ResourceLocation salmon_furnace_lit_texture = modLoc("block/salmon_furnace_front_lit");
+          ResourceLocation salmon_furnace_side = modLoc("block/salmon_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder salmon_furnace_model_unlit = models()
+              .withExistingParent("salmon_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", salmon_furnace_side)
+              .texture("top", salmon_furnace_side)
+              .texture("front", salmon_furnace_unlit_texture)
+              .texture("particle", salmon_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder salmon_furnace_model_lit = models()
+              .withExistingParent("salmon_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", salmon_furnace_side)
+              .texture("top", salmon_furnace_side)
+              .texture("front", salmon_furnace_lit_texture)
+              .texture("particle", salmon_furnace_side);
+          
+          // Configure variants for the salmon_furnace block
+          getVariantBuilder(salmon_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/salmon_furnace_model_lit") : modLoc("block/salmon_furnace_model_unlit");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))
