@@ -585,6 +585,8 @@
   "block.goldfishmod02tastyfurniture.tropical_fish_furnace": "Tropical_fish Furnace",
    "container.tropical_fish_furnace": "Tropical_fish Furnace",
   "block.goldfishmod02tastyfurniture.mutton_furnace": "Mutton Furnace",
-   "container.mutton_furnace": "Mutton Furnace"
+   "container.mutton_furnace": "Mutton Furnace",
+  "block.goldfishmod02tastyfurniture.beef_furnace": "Beef Furnace",
+   "container.beef_furnace": "Beef Furnace"
   
 }

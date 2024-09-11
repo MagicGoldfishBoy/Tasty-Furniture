@@ -5338,7 +5338,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
-              
+
         //.............mutton
           FurnaceBlock mutton_furnace = foodblockregistry.MUTTON_FURNACE.get();
           ResourceLocation mutton_furnace_unlit_texture = modLoc("block/mutton_furnace_front_unlit");
@@ -5377,6 +5377,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = lit ? modLoc("block/mutton_furnace_model_lit") : modLoc("block/mutton_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
+              
+        //.............beef
+          FurnaceBlock beef_furnace = foodblockregistry.BEEF_FURNACE.get();
+          ResourceLocation beef_furnace_unlit_texture = modLoc("block/beef_furnace_front_unlit");
+          ResourceLocation beef_furnace_lit_texture = modLoc("block/beef_furnace_front_lit");
+          ResourceLocation beef_furnace_side = modLoc("block/beef_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder beef_furnace_model_unlit = models()
+              .withExistingParent("beef_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", beef_furnace_side)
+              .texture("top", beef_furnace_side)
+              .texture("front", beef_furnace_unlit_texture)
+              .texture("particle", beef_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder beef_furnace_model_lit = models()
+              .withExistingParent("beef_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", beef_furnace_side)
+              .texture("top", beef_furnace_side)
+              .texture("front", beef_furnace_lit_texture)
+              .texture("particle", beef_furnace_side);
+          
+          // Configure variants for the beef_furnace block
+          getVariantBuilder(beef_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/beef_furnace_model_lit") : modLoc("block/beef_furnace_model_unlit");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))

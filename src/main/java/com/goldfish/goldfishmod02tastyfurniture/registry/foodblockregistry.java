@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 import com.goldfish.goldfishmod02tastyfurniture.block.applefurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.beeffurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.beetrootfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.brown_mushroomfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotfurnace;
@@ -25,6 +26,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.salmonfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweet_berryfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.tropical_fishfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.applefurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.beeffurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.brown_mushroomfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.carrotfurnaceentity;
@@ -3425,6 +3427,11 @@ public class foodblockregistry {
     () -> BlockEntityType.Builder.of(muttonfurnaceentity::new, MUTTON_FURNACE.get()).build(null));
 
    //.........beef
+    public static final DeferredHolder<Block, beeffurnace> BEEF_FURNACE = FOODBLOCK.register("beef_furnace", () -> new beeffurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<beeffurnaceentity>> BEEF_FURNACE_ENTITY = FOODBLOCKENTITY.register("beef_furnace", 
+    () -> BlockEntityType.Builder.of(beeffurnaceentity::new, BEEF_FURNACE.get()).build(null));
+
    //.........pork
    //.........rabbit
 
