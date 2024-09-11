@@ -7,6 +7,7 @@ import java.util.List;
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 import com.goldfish.goldfishmod02tastyfurniture.block.applefurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.beetrootfurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.brown_mushroomfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.chorusfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodlamp;
@@ -18,11 +19,11 @@ import com.goldfish.goldfishmod02tastyfurniture.block.potatofurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweet_berryfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.applefurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.brown_mushroomfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.carrotfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chorusfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodstandingsign;
-// import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodwallsign.foodstandingsign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsignentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodwallsign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.glowberryfurnaceentity;
@@ -3350,18 +3351,23 @@ public class foodblockregistry {
     () -> BlockEntityType.Builder.of(glowberryfurnaceentity::new, GLOWBERRY_FURNACE.get()).build(null));
 
    //.........melon
-   public static final DeferredHolder<Block, melonfurnace> MELON_FURNACE = FOODBLOCK.register("melon_furnace", () -> new melonfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
+    public static final DeferredHolder<Block, melonfurnace> MELON_FURNACE = FOODBLOCK.register("melon_furnace", () -> new melonfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<melonfurnaceentity>> MELON_FURNACE_ENTITY = FOODBLOCKENTITY.register("melon_furnace", 
-   () -> BlockEntityType.Builder.of(melonfurnaceentity::new, MELON_FURNACE.get()).build(null));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<melonfurnaceentity>> MELON_FURNACE_ENTITY = FOODBLOCKENTITY.register("melon_furnace", 
+    () -> BlockEntityType.Builder.of(melonfurnaceentity::new, MELON_FURNACE.get()).build(null));
 
    //.........sweet_berry
-   public static final DeferredHolder<Block, sweet_berryfurnace> SWEET_BERRY_FURNACE = FOODBLOCK.register("sweet_berry_furnace", () -> new sweet_berryfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
+    public static final DeferredHolder<Block, sweet_berryfurnace> SWEET_BERRY_FURNACE = FOODBLOCK.register("sweet_berry_furnace", () -> new sweet_berryfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<sweet_berryfurnaceentity>> SWEET_BERRY_FURNACE_ENTITY = FOODBLOCKENTITY.register("sweet_berry_furnace", 
-   () -> BlockEntityType.Builder.of(sweet_berryfurnaceentity::new, SWEET_BERRY_FURNACE.get()).build(null));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<sweet_berryfurnaceentity>> SWEET_BERRY_FURNACE_ENTITY = FOODBLOCKENTITY.register("sweet_berry_furnace", 
+    () -> BlockEntityType.Builder.of(sweet_berryfurnaceentity::new, SWEET_BERRY_FURNACE.get()).build(null));
 
    //.........brown_mushroom
+    public static final DeferredHolder<Block, brown_mushroomfurnace> BROWN_MUSHROOM_FURNACE = FOODBLOCK.register("brown_mushroom_furnace", () -> new brown_mushroomfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<brown_mushroomfurnaceentity>> BROWN_MUSHROOM_FURNACE_ENTITY = FOODBLOCKENTITY.register("brown_mushroom_furnace", 
+    () -> BlockEntityType.Builder.of(brown_mushroomfurnaceentity::new, BROWN_MUSHROOM_FURNACE.get()).build(null));
+
    //.........red_mushroom
    //.........pumpkin
    //.........chicken

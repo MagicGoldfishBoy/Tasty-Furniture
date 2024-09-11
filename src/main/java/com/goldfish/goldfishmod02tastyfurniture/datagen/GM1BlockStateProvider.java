@@ -4934,7 +4934,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
-              
+
         //.............melon
           FurnaceBlock melon_furnace = foodblockregistry.MELON_FURNACE.get();
           ResourceLocation melon_furnace_unlit_texture = modLoc("block/melon_furnace_front_unlit");
@@ -5018,6 +5018,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = lit ? modLoc("block/sweet_berry_furnace_model_lit") : modLoc("block/sweet_berry_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
+              
+        //.............brown_mushroom
+          FurnaceBlock brown_mushroom_furnace = foodblockregistry.BROWN_MUSHROOM_FURNACE.get();
+          ResourceLocation brown_mushroom_furnace_unlit_texture = modLoc("block/brown_mushroom_furnace_front_unlit");
+          ResourceLocation brown_mushroom_furnace_lit_texture = modLoc("block/brown_mushroom_furnace_front_lit");
+          ResourceLocation brown_mushroom_furnace_side = modLoc("block/brown_mushroom_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder brown_mushroom_furnace_model_unlit = models()
+              .withExistingParent("brown_mushroom_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", brown_mushroom_furnace_side)
+              .texture("top", brown_mushroom_furnace_side)
+              .texture("front", brown_mushroom_furnace_unlit_texture)
+              .texture("particle", brown_mushroom_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder brown_mushroom_furnace_model_lit = models()
+              .withExistingParent("brown_mushroom_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", brown_mushroom_furnace_side)
+              .texture("top", brown_mushroom_furnace_side)
+              .texture("front", brown_mushroom_furnace_lit_texture)
+              .texture("particle", brown_mushroom_furnace_side);
+          
+          // Configure variants for the brown_mushroom_furnace block
+          getVariantBuilder(brown_mushroom_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/brown_mushroom_furnace_model_lit") : modLoc("block/brown_mushroom_furnace_model_unlit");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))
