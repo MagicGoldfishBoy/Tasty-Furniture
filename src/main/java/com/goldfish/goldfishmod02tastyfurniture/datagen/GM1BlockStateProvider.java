@@ -5069,6 +5069,50 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
+        //.............red_mushroom
+          FurnaceBlock red_mushroom_furnace = foodblockregistry.RED_MUSHROOM_FURNACE.get();
+          ResourceLocation red_mushroom_furnace_unlit_texture = modLoc("block/red_mushroom_furnace_front_unlit");
+          ResourceLocation red_mushroom_furnace_lit_texture = modLoc("block/red_mushroom_furnace_front_lit");
+          ResourceLocation red_mushroom_furnace_side = modLoc("block/red_mushroom_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder red_mushroom_furnace_model_unlit = models()
+              .withExistingParent("red_mushroom_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", red_mushroom_furnace_side)
+              .texture("top", red_mushroom_furnace_side)
+              .texture("front", red_mushroom_furnace_unlit_texture)
+              .texture("particle", red_mushroom_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder red_mushroom_furnace_model_lit = models()
+              .withExistingParent("red_mushroom_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", red_mushroom_furnace_side)
+              .texture("top", red_mushroom_furnace_side)
+              .texture("front", red_mushroom_furnace_lit_texture)
+              .texture("particle", red_mushroom_furnace_side);
+          
+          // Configure variants for the red_mushroom_furnace block
+          getVariantBuilder(red_mushroom_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/red_mushroom_furnace_model_lit") : modLoc("block/red_mushroom_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
    };
 }
     

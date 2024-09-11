@@ -16,6 +16,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.glowberryfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.horizontal_food_block;
 import com.goldfish.goldfishmod02tastyfurniture.block.melonfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.potatofurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.red_mushroomfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweet_berryfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.applefurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootfurnaceentity;
@@ -30,6 +31,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.glowberryfurnaceent
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.melonfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.potato_sign_entity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.potatofurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.red_mushroomfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.sweet_berryfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistry;
 import com.google.common.base.Supplier;
@@ -3369,6 +3371,11 @@ public class foodblockregistry {
     () -> BlockEntityType.Builder.of(brown_mushroomfurnaceentity::new, BROWN_MUSHROOM_FURNACE.get()).build(null));
 
    //.........red_mushroom
+    public static final DeferredHolder<Block, red_mushroomfurnace> RED_MUSHROOM_FURNACE = FOODBLOCK.register("red_mushroom_furnace", () -> new red_mushroomfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<red_mushroomfurnaceentity>> RED_MUSHROOM_FURNACE_ENTITY = FOODBLOCKENTITY.register("red_mushroom_furnace", 
+    () -> BlockEntityType.Builder.of(red_mushroomfurnaceentity::new, RED_MUSHROOM_FURNACE.get()).build(null));
+
    //.........pumpkin
    //.........chicken
    //.........cod
