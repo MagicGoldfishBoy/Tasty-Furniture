@@ -5248,7 +5248,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
-              
+
         //.............salmon
           FurnaceBlock salmon_furnace = foodblockregistry.SALMON_FURNACE.get();
           ResourceLocation salmon_furnace_unlit_texture = modLoc("block/salmon_furnace_front_unlit");
@@ -5287,6 +5287,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = lit ? modLoc("block/salmon_furnace_model_lit") : modLoc("block/salmon_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
+              
+        //.............tropical_fish
+          FurnaceBlock tropical_fish_furnace = foodblockregistry.TROPICAL_FISH_FURNACE.get();
+          ResourceLocation tropical_fish_furnace_unlit_texture = modLoc("block/tropical_fish_furnace_front_unlit");
+          ResourceLocation tropical_fish_furnace_lit_texture = modLoc("block/tropical_fish_furnace_front_lit");
+          ResourceLocation tropical_fish_furnace_side = modLoc("block/tropical_fish_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder tropical_fish_furnace_model_unlit = models()
+              .withExistingParent("tropical_fish_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", tropical_fish_furnace_side)
+              .texture("top", tropical_fish_furnace_side)
+              .texture("front", tropical_fish_furnace_unlit_texture)
+              .texture("particle", tropical_fish_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder tropical_fish_furnace_model_lit = models()
+              .withExistingParent("tropical_fish_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", tropical_fish_furnace_side)
+              .texture("top", tropical_fish_furnace_side)
+              .texture("front", tropical_fish_furnace_lit_texture)
+              .texture("particle", tropical_fish_furnace_side);
+          
+          // Configure variants for the tropical_fish_furnace block
+          getVariantBuilder(tropical_fish_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/tropical_fish_furnace_model_lit") : modLoc("block/tropical_fish_furnace_model_unlit");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))
