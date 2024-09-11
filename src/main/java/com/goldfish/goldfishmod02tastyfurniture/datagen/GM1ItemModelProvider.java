@@ -1101,6 +1101,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("carrot_furnace_item", modLoc("block/carrot_furnace_model_unlit"));
       //..............chorus
         withExistingParent("chorus_furnace_item", modLoc("block/chorus_furnace_model_unlit"));
+      //..............glowberry
+        withExistingParent("glowberry_furnace_item", modLoc("block/glowberry_furnace_model_unlit"));
   }   
 }
 

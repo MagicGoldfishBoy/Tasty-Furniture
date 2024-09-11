@@ -11,6 +11,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.carrotfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.chorusfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodlamp;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
+import com.goldfish.goldfishmod02tastyfurniture.block.glowberryfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.horizontal_food_block;
 import com.goldfish.goldfishmod02tastyfurniture.block.potatofurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.applefurnaceentity;
@@ -22,6 +23,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodstandi
 // import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign.foodwallsign.foodstandingsign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsignentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodwallsign;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.glowberryfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.potato_sign_entity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.potatofurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistry;
@@ -3338,6 +3340,11 @@ public class foodblockregistry {
     () -> BlockEntityType.Builder.of(chorusfurnaceentity::new, CHORUS_FURNACE.get()).build(null));
 
    //.........glow_berry
+    public static final DeferredHolder<Block, glowberryfurnace> GLOWBERRY_FURNACE = FOODBLOCK.register("glowberry_furnace", () -> new glowberryfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<glowberryfurnaceentity>> GLOWBERRY_FURNACE_ENTITY = FOODBLOCKENTITY.register("glowberry_furnace", 
+    () -> BlockEntityType.Builder.of(glowberryfurnaceentity::new, GLOWBERRY_FURNACE.get()).build(null));
+
    //.........melon
    //.........sweet_berry
    //.........brown_mushroom

@@ -4844,7 +4844,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
-              
+
         //.............chorus
           FurnaceBlock chorus_furnace = foodblockregistry.CHORUS_FURNACE.get();
           ResourceLocation chorus_furnace_unlit_texture = modLoc("block/chorus_furnace_front_unlit");
@@ -4883,6 +4883,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = lit ? modLoc("block/chorus_furnace_model_lit") : modLoc("block/chorus_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
+
+        //.............glowberry
+          FurnaceBlock glowberry_furnace = foodblockregistry.GLOWBERRY_FURNACE.get();
+          ResourceLocation glowberry_furnace_unlit_texture = modLoc("block/glow_berry_furnace_front_unlit");
+          ResourceLocation glowberry_furnace_lit_texture = modLoc("block/glow_berry_furnace_front_lit");
+          ResourceLocation glowberry_furnace_side = modLoc("block/glow_berry_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder glowberry_furnace_model_unlit = models()
+              .withExistingParent("glowberry_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", glowberry_furnace_side)
+              .texture("top", glowberry_furnace_side)
+              .texture("front", glowberry_furnace_unlit_texture)
+              .texture("particle", glowberry_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder glowberry_furnace_model_lit = models()
+              .withExistingParent("glowberry_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", glowberry_furnace_side)
+              .texture("top", glowberry_furnace_side)
+              .texture("front", glowberry_furnace_lit_texture)
+              .texture("particle", glowberry_furnace_side);
+          
+          // Configure variants for the glowberry_furnace block
+          getVariantBuilder(glowberry_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/glowberry_furnace_model_lit") : modLoc("block/glowberry_furnace_model_unlit");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))
