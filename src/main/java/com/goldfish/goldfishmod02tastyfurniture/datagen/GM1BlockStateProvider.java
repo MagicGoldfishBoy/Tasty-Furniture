@@ -5428,6 +5428,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
+              
+        //.............pork
+          FurnaceBlock pork_furnace = foodblockregistry.PORK_FURNACE.get();
+          ResourceLocation pork_furnace_unlit_texture = modLoc("block/pork_furnace_front_unlit");
+          ResourceLocation pork_furnace_lit_texture = modLoc("block/pork_furnace_front_lit");
+          ResourceLocation pork_furnace_side = modLoc("block/pork_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder pork_furnace_model_unlit = models()
+              .withExistingParent("pork_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", pork_furnace_side)
+              .texture("top", pork_furnace_side)
+              .texture("front", pork_furnace_unlit_texture)
+              .texture("particle", pork_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder pork_furnace_model_lit = models()
+              .withExistingParent("pork_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", pork_furnace_side)
+              .texture("top", pork_furnace_side)
+              .texture("front", pork_furnace_lit_texture)
+              .texture("particle", pork_furnace_side);
+          
+          // Configure variants for the pork_furnace block
+          getVariantBuilder(pork_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/pork_furnace_model_lit") : modLoc("block/pork_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
    };
 }
     

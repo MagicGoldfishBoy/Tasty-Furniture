@@ -19,6 +19,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.glowberryfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.horizontal_food_block;
 import com.goldfish.goldfishmod02tastyfurniture.block.melonfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.muttonfurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.porkfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.potatofurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.pumpkinfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.red_mushroomfurnace;
@@ -40,6 +41,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodwallsign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.glowberryfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.melonfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.muttonfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.porkfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.potato_sign_entity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.potatofurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.pumpkinfurnaceentity;
@@ -3433,6 +3435,11 @@ public class foodblockregistry {
     () -> BlockEntityType.Builder.of(beeffurnaceentity::new, BEEF_FURNACE.get()).build(null));
 
    //.........pork
+   public static final DeferredHolder<Block, porkfurnace> PORK_FURNACE = FOODBLOCK.register("pork_furnace", () -> new porkfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
+
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<porkfurnaceentity>> PORK_FURNACE_ENTITY = FOODBLOCKENTITY.register("pork_furnace", 
+   () -> BlockEntityType.Builder.of(porkfurnaceentity::new, PORK_FURNACE.get()).build(null));
+
    //.........rabbit
 
 //==============================================================================================================================================================================================
