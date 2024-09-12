@@ -5428,7 +5428,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
-              
+
         //.............pork
           FurnaceBlock pork_furnace = foodblockregistry.PORK_FURNACE.get();
           ResourceLocation pork_furnace_unlit_texture = modLoc("block/pork_furnace_front_unlit");
@@ -5467,6 +5467,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = lit ? modLoc("block/pork_furnace_model_lit") : modLoc("block/pork_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
+              
+        //.............rabbit
+          FurnaceBlock rabbit_furnace = foodblockregistry.RABBIT_FURNACE.get();
+          ResourceLocation rabbit_furnace_unlit_texture = modLoc("block/rabbit_furnace_front_unlit");
+          ResourceLocation rabbit_furnace_lit_texture = modLoc("block/rabbit_furnace_front_lit");
+          ResourceLocation rabbit_furnace_side = modLoc("block/rabbit_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder rabbit_furnace_model_unlit = models()
+              .withExistingParent("rabbit_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", rabbit_furnace_side)
+              .texture("top", rabbit_furnace_side)
+              .texture("front", rabbit_furnace_unlit_texture)
+              .texture("particle", rabbit_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder rabbit_furnace_model_lit = models()
+              .withExistingParent("rabbit_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", rabbit_furnace_side)
+              .texture("top", rabbit_furnace_side)
+              .texture("front", rabbit_furnace_lit_texture)
+              .texture("particle", rabbit_furnace_side);
+          
+          // Configure variants for the rabbit_furnace block
+          getVariantBuilder(rabbit_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/rabbit_furnace_model_lit") : modLoc("block/rabbit_furnace_model_unlit");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))
