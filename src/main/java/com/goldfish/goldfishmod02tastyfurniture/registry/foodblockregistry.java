@@ -3489,6 +3489,12 @@ public class foodblockregistry {
     .noOcclusion()
     ));
    //.........glow_berry
+    public static final DeferredHolder<Block, foodpathtypeminislab> GLOW_BERRY_STONE_PATH = FOODBLOCK.register("glow_berry_stone_path", () -> new foodpathtypeminislab(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
    //.........melon
    //.........sweet_berry
    //.........brown_mushroom

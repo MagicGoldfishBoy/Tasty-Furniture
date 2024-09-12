@@ -1645,4 +1645,6 @@ public class foodblockitemregistry {
     public static final DeferredHolder<Item, BlockItem> CARROT_STONE_PATH_ITEM = FOODBLOCKITEM.register("carrot_stone_path_item", () -> new BlockItem(foodblockregistry.CARROT_STONE_PATH.get(), new BlockItem.Properties()));
    //.........chorus
     public static final DeferredHolder<Item, BlockItem> CHORUS_STONE_PATH_ITEM = FOODBLOCKITEM.register("chorus_stone_path_item", () -> new BlockItem(foodblockregistry.CHORUS_STONE_PATH.get(), new BlockItem.Properties()));
+   //.........glow_berry
+    public static final DeferredHolder<Item, BlockItem> GLOW_BERRY_STONE_PATH_ITEM = FOODBLOCKITEM.register("glow_berry_stone_path_item", () -> new BlockItem(foodblockregistry.GLOW_BERRY_STONE_PATH.get(), new BlockItem.Properties()));
 }
