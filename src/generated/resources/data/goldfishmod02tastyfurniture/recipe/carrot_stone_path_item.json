@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "goldfishmod02tastyfurniture:carrot_block_item"
+    },
+    {
+      "item": "minecraft:stone"
+    }
+  ],
+  "result": {
+    "count": 6,
+    "id": "goldfishmod02tastyfurniture:carrot_stone_path_item"
+  }
+}

@@ -3475,6 +3475,12 @@ public class foodblockregistry {
     .noOcclusion()
     ));
    //.........carrot
+    public static final DeferredHolder<Block, foodpathtypeminislab> CARROT_STONE_PATH = FOODBLOCK.register("carrot_stone_path", () -> new foodpathtypeminislab(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
    //.........chorus
    //.........glow_berry
    //.........melon
