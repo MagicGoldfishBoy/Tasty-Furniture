@@ -14,6 +14,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.chickenfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.chorusfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.codfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodlamp;
+import com.goldfish.goldfishmod02tastyfurniture.block.foodpathtypeminislab;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
 import com.goldfish.goldfishmod02tastyfurniture.block.glowberryfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.horizontal_food_block;
@@ -3448,9 +3449,39 @@ public class foodblockregistry {
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<rabbitfurnaceentity>> RABBIT_FURNACE_ENTITY = FOODBLOCKENTITY.register("rabbit_furnace", 
     () -> BlockEntityType.Builder.of(rabbitfurnaceentity::new, RABBIT_FURNACE.get()).build(null));
 
+//==============================================================================================================================================================================================
+//                                                                                          Paths
+//==============================================================================================================================================================================================
+
+   //.........apple
+    public static final DeferredHolder<Block, foodpathtypeminislab> APPLE_STONE_PATH = FOODBLOCK.register("apple_stone_path", () -> new foodpathtypeminislab(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
+   //.........potato
+   //.........beetroot
+   //.........carrot
+   //.........chorus
+   //.........glow_berry
+   //.........melon
+   //.........sweet_berry
+   //.........brown_mushroom
+   //.........red_mushroom
+   //.........pumpkin
+   //.........chicken
+   //.........cod
+   //.........salmon
+   //.........tropical_fish
+   //.........mutton
+   //.........beef
+   //.........pork
+   //.........rabbit
+
 
 //==============================================================================================================================================================================================
-//                                                                                            Chests
+//                                                                                          Chests
 //==============================================================================================================================================================================================
 
    //.........apple
