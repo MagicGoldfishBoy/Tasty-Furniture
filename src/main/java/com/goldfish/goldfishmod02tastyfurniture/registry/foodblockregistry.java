@@ -3494,6 +3494,7 @@ public class foodblockregistry {
     .explosionResistance(1.5f)
     .sound(SoundType.MUD_BRICKS)
     .noOcclusion()
+    .lightLevel(state  -> 10)
     ));
    //.........melon
     public static final DeferredHolder<Block, foodpathtypeminislab> MELON_STONE_PATH = FOODBLOCK.register("melon_stone_path", () -> new foodpathtypeminislab(BlockBehaviour.Properties.of()
@@ -3503,6 +3504,12 @@ public class foodblockregistry {
     .noOcclusion()
     ));
    //.........sweet_berry
+    public static final DeferredHolder<Block, foodpathtypeminislab> SWEET_BERRY_STONE_PATH = FOODBLOCK.register("sweet_berry_stone_path", () -> new foodpathtypeminislab(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
    //.........brown_mushroom
    //.........red_mushroom
    //.........pumpkin
