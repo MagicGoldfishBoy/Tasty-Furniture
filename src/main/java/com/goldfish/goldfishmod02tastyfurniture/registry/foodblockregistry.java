@@ -3511,6 +3511,12 @@ public class foodblockregistry {
     .noOcclusion()
     ));
    //.........brown_mushroom
+    public static final DeferredHolder<Block, foodpathtypeminislab> BROWN_MUSHROOM_STONE_PATH = FOODBLOCK.register("brown_mushroom_stone_path", () -> new foodpathtypeminislab(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
    //.........red_mushroom
    //.........pumpkin
    //.........chicken
