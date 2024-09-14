@@ -1632,7 +1632,7 @@ public class foodblockitemregistry {
     public static final DeferredHolder<Item, BlockItem> RABBIT_FURNACE_ITEM = FOODBLOCKITEM.register("rabbit_furnace_item", () -> new BlockItem(foodblockregistry.RABBIT_FURNACE.get(), new BlockItem.Properties()));
 
 //==============================================================================================================================================================================================
-//                                                                                         Furnaces
+//                                                                                         Paths
 //==============================================================================================================================================================================================
 
    //.........apple
@@ -1667,4 +1667,6 @@ public class foodblockitemregistry {
     public static final DeferredHolder<Item, BlockItem> TROPICAL_FISH_STONE_PATH_ITEM = FOODBLOCKITEM.register("tropical_fish_stone_path_item", () -> new BlockItem(foodblockregistry.TROPICAL_FISH_STONE_PATH.get(), new BlockItem.Properties()));
    //.........mutton
     public static final DeferredHolder<Item, BlockItem> MUTTON_STONE_PATH_ITEM = FOODBLOCKITEM.register("mutton_stone_path_item", () -> new BlockItem(foodblockregistry.MUTTON_STONE_PATH.get(), new BlockItem.Properties()));
+   //.........beef
+    public static final DeferredHolder<Item, BlockItem> BEEF_STONE_PATH_ITEM = FOODBLOCKITEM.register("beef_stone_path_item", () -> new BlockItem(foodblockregistry.BEEF_STONE_PATH.get(), new BlockItem.Properties()));
 }
