@@ -3560,6 +3560,12 @@ public class foodblockregistry {
     .noOcclusion()
     ));
    //.........mutton
+    public static final DeferredHolder<Block, foodpathtypeminislab> MUTTON_STONE_PATH = FOODBLOCK.register("mutton_stone_path", () -> new foodpathtypeminislab(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
    //.........beef
    //.........pork
    //.........rabbit
