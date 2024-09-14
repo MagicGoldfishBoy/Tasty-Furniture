@@ -1006,7 +1006,6 @@ public class foodblockregistry {
          .noCollission()
          .strength(1.0F)
          .ignitedByLava(),
-         //WoodType.OAK
          foodmaterialtyperegistry.APPLEWOODMAT
    ));
    public static final DeferredHolder<Block, foodwallsign> APPLE_WALL_SIGN = FOODBLOCK.register("apple_wall_sign",
@@ -1019,7 +1018,6 @@ public class foodblockregistry {
        .strength(1.0F)
        .ignitedByLava()
        .randomTicks(),
-       //WoodType.OAK
        foodmaterialtyperegistry.APPLEWOODMAT
    ));
    public static final DeferredHolder<Block, foodstandingsign> APPLE_STANDING_SIGN = FOODBLOCK.register("apple_standing_sign",
@@ -1032,7 +1030,6 @@ public class foodblockregistry {
        .strength(1.0F)
        .ignitedByLava()
        .randomTicks(),
-       //WoodType.OAK
        foodmaterialtyperegistry.APPLEWOODMAT
    ));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodsignentity>> APPLE_SIGN_ENTITY = FOODBLOCKENTITY.register(
@@ -1056,7 +1053,6 @@ public class foodblockregistry {
          .noCollission()
          .strength(1.0F)
          .ignitedByLava(),
-         //WoodType.OAK
          foodmaterialtyperegistry.POTATOWOODMAT
    ));
    public static final DeferredHolder<Block, foodwallsign> POTATO_WALL_SIGN = FOODBLOCK.register("potato_wall_sign",
@@ -1069,7 +1065,6 @@ public class foodblockregistry {
        .strength(1.0F)
        .ignitedByLava()
        .randomTicks(),
-       //WoodType.OAK
        foodmaterialtyperegistry.POTATOWOODMAT
    ));
    public static final DeferredHolder<Block, foodstandingsign> POTATO_STANDING_SIGN = FOODBLOCK.register("potato_standing_sign",
@@ -1082,7 +1077,6 @@ public class foodblockregistry {
        .strength(1.0F)
        .ignitedByLava()
        .randomTicks(),
-       //WoodType.OAK
        foodmaterialtyperegistry.POTATOWOODMAT
    ));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<potato_sign_entity>> POTATO_SIGN_ENTITY = FOODBLOCKENTITY.register(

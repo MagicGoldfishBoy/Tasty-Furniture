@@ -299,7 +299,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
 
     //-------------------------------------------------------------signs---------------------------------------------------------------------
       //..............apple
-       withExistingParent("apple_sign_item", mcLoc("item/generated")).texture("layer0", "block/apple_block");
+       withExistingParent("apple_sign_item", mcLoc("item/generated")).texture("layer0", "item/apple_sign");
       //..............potato
        withExistingParent("potato_sign_item", mcLoc("item/generated")).texture("layer0", "block/potato_block");
 
@@ -1090,7 +1090,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //soul
         withExistingParent("rabbit_soul_torch_item", modLoc("block/rabbit_soul_torch"));
 
-    //-----------------------------------------------------------furnaces---------------------------------------------------------------------
+    //-----------------------------------------------------------furnaces--------------------------------------------------------------------
       //..............apple
         withExistingParent("apple_furnace_item", modLoc("block/apple_furnace_model_unlit"));
       //..............potato
@@ -1130,7 +1130,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       //..............rabbit
         withExistingParent("rabbit_furnace_item", modLoc("block/rabbit_furnace_model_unlit"));
 
-    //-----------------------------------------------------------paths---------------------------------------------------------------------
+    //------------------------------------------------------------paths----------------------------------------------------------------------
       //..............apple
         withExistingParent("apple_stone_path_item", modLoc("block/apple_stone_path"));
       //..............potato
