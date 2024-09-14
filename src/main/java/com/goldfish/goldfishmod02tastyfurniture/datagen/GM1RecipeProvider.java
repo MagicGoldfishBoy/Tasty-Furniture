@@ -4226,6 +4226,12 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .requires(Items.STONE)
             .unlockedBy("has_beef_block", has(foodblockitemregistry.BEEF_BLOCK_ITEM.get()))
             .save(output);
+         //.....pork
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockitemregistry.PORK_STONE_PATH_ITEM.get(), 6)
+            .requires(foodblockitemregistry.PORK_BLOCK_ITEM.get())
+            .requires(Items.STONE)
+            .unlockedBy("has_pork_block", has(foodblockitemregistry.PORK_BLOCK_ITEM.get()))
+            .save(output);
 
         }
     }
