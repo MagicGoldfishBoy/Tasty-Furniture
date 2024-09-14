@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "goldfishmod02tastyfurniture:block/potato_block"
+    "layer0": "goldfishmod02tastyfurniture:item/potato_sign"
   }
 }
