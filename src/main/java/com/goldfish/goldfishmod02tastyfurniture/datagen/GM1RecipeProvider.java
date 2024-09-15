@@ -1123,6 +1123,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('B', Items.STICK)
            .unlockedBy("has_melon_ingot", has(ingotregistry.MELON_INGOT.get()))
            .save(output);
+         //sweetberry_sign
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SWEETBERRY_SIGN_ITEM.get())
+           .pattern("AAA")
+           .pattern("AAA")
+           .pattern(" B ")
+           .define('A', ingotregistry.SWEET_BERRY_INGOT.get())
+           .define('B', Items.STICK)
+           .unlockedBy("has_sweetberry_ingot", has(ingotregistry.SWEET_BERRY_INGOT.get()))
+           .save(output);
 
         //-------------------------------------------------------------slabs----------------------------------------------------------------------
          //________________________________________________________Regular Slabs__________________________________________________________________

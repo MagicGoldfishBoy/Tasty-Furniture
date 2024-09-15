@@ -93,6 +93,11 @@ public class foodmaterialtyperegistry {
         "melon_wood_mat", 
         PLANT) 
     );
+    public static final WoodType SWEETBERRYWOODMAT = WoodType.register(
+     new WoodType(
+        "sweetberry_wood_mat", 
+        PLANT) 
+    );
 
         public static final Tier APPLE_TIER = new SimpleTier(
             BlockTags.INCORRECT_FOR_STONE_TOOL,

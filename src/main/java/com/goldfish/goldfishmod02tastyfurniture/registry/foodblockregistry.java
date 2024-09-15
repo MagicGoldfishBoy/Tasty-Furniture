@@ -41,6 +41,8 @@ import com.goldfish.goldfishmod02tastyfurniture.block.rabbitfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.red_mushroomfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.salmonfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweet_berryfurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.sweetberrySign;
+import com.goldfish.goldfishmod02tastyfurniture.block.sweetberryWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.tropical_fishfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.applefurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beeffurnaceentity;
@@ -67,6 +69,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.rabbitfurnaceentity
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.red_mushroomfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.salmonfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.sweet_berryfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.sweetberrySignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.tropical_fishfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistry;
 import com.google.common.base.Supplier;
@@ -1335,6 +1338,54 @@ public class foodblockregistry {
           foodblockregistry.MELON_SIGN.get(),
           foodblockregistry.MELON_WALL_SIGN.get(),
           foodblockregistry.MELON_STANDING_SIGN.get()
+      ).build(null
+    ));
+  //.........sweetberry
+    public static final DeferredHolder<Block, sweetberrySign> SWEETBERRY_SIGN = FOODBLOCK.register("sweetberry_sign",
+    () -> new sweetberrySign(
+      BlockBehaviour.Properties.of()
+          .lightLevel(state -> 10)
+          .mapColor(MapColor.WOOD)
+          .forceSolidOn()
+          .instrument(NoteBlockInstrument.BASS)
+          .noCollission()
+          .strength(1.0F)
+          .ignitedByLava(),
+          foodmaterialtyperegistry.SWEETBERRYWOODMAT
+    ));
+    public static final DeferredHolder<Block, sweetberryWallSign> SWEETBERRY_WALL_SIGN = FOODBLOCK.register("sweetberry_wall_sign",
+    () -> new sweetberryWallSign(
+        BlockBehaviour.Properties.of()
+        .lightLevel(state -> 10)
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.SWEETBERRYWOODMAT
+    ));
+    public static final DeferredHolder<Block, sweetberrySign> SWEETBERRY_STANDING_SIGN = FOODBLOCK.register("sweetberry_standing_sign",
+    () -> new sweetberrySign(
+        BlockBehaviour.Properties.of()
+        .lightLevel(state -> 10)
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.SWEETBERRYWOODMAT
+    ));
+      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<sweetberrySignEntity>> SWEETBERRY_SIGN_ENTITY = FOODBLOCKENTITY.register(
+      "sweetberry_sign_entity",
+      () -> BlockEntityType.Builder.of(
+          sweetberrySignEntity::new,
+          foodblockregistry.SWEETBERRY_SIGN.get(),
+          foodblockregistry.SWEETBERRY_WALL_SIGN.get(),
+          foodblockregistry.SWEETBERRY_STANDING_SIGN.get()
       ).build(null
     ));
 
