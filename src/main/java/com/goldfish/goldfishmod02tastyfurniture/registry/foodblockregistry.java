@@ -4,6 +4,8 @@ import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 import com.goldfish.goldfishmod02tastyfurniture.block.appleSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.appleWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.applefurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.beefSign;
+import com.goldfish.goldfishmod02tastyfurniture.block.beefWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.beeffurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.beetrootSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.beetrootWallSign;
@@ -57,6 +59,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.tropical_fishfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.tropicalfishSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.tropicalfishWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.applefurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.beefSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beeffurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootfurnaceentity;
@@ -1759,6 +1762,54 @@ public class foodblockregistry {
           foodblockregistry.MUTTON_SIGN.get(),
           foodblockregistry.MUTTON_WALL_SIGN.get(),
           foodblockregistry.MUTTON_STANDING_SIGN.get()
+      ).build(null
+    ));
+  //.........beef
+    public static final DeferredHolder<Block, beefSign> BEEF_SIGN = FOODBLOCK.register("beef_sign",
+    () -> new beefSign(
+      BlockBehaviour.Properties.of()
+          .lightLevel(state -> 10)
+          .mapColor(MapColor.WOOD)
+          .forceSolidOn()
+          .instrument(NoteBlockInstrument.BASS)
+          .noCollission()
+          .strength(1.0F)
+          .ignitedByLava(),
+          foodmaterialtyperegistry.BEEFWOODMAT
+    ));
+    public static final DeferredHolder<Block, beefWallSign> BEEF_WALL_SIGN = FOODBLOCK.register("beef_wall_sign",
+    () -> new beefWallSign(
+        BlockBehaviour.Properties.of()
+        .lightLevel(state -> 10)
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.BEEFWOODMAT
+    ));
+    public static final DeferredHolder<Block, beefSign> BEEF_STANDING_SIGN = FOODBLOCK.register("beef_standing_sign",
+    () -> new beefSign(
+        BlockBehaviour.Properties.of()
+        .lightLevel(state -> 10)
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.BEEFWOODMAT
+    ));
+      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<beefSignEntity>> BEEF_SIGN_ENTITY = FOODBLOCKENTITY.register(
+      "beef_sign_entity",
+      () -> BlockEntityType.Builder.of(
+          beefSignEntity::new,
+          foodblockregistry.BEEF_SIGN.get(),
+          foodblockregistry.BEEF_WALL_SIGN.get(),
+          foodblockregistry.BEEF_STANDING_SIGN.get()
       ).build(null
     ));
 

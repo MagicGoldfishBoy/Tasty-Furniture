@@ -554,6 +554,9 @@ public class foodblockitemregistry {
   //mutton
      public static final DeferredHolder<Item, SignItem> MUTTON_SIGN_ITEM = FOODBLOCKITEM.register("mutton_sign_item",
      () -> new SignItem(new SignItem.Properties(), foodblockregistry.MUTTON_STANDING_SIGN.get(), foodblockregistry.MUTTON_WALL_SIGN.get()));
+  //beef
+     public static final DeferredHolder<Item, SignItem> BEEF_SIGN_ITEM = FOODBLOCKITEM.register("beef_sign_item",
+     () -> new SignItem(new SignItem.Properties(), foodblockregistry.BEEF_STANDING_SIGN.get(), foodblockregistry.BEEF_WALL_SIGN.get()));
 
 //==============================================================================================================================================================================================
 //                                                                                          Slabs

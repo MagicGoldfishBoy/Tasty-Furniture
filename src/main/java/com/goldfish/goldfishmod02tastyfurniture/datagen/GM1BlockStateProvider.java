@@ -710,6 +710,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
            ResourceLocation mutton_sign_texture = modLoc("block/mutton_block");
            signBlock(mutton_sign, mutton_wall_sign, mutton_sign_texture);
         //.........beef
+           StandingSignBlock beef_sign = foodblockregistry.BEEF_STANDING_SIGN.get();
+           WallSignBlock beef_wall_sign = foodblockregistry.BEEF_WALL_SIGN.get();
+           ResourceLocation beef_sign_texture = modLoc("block/beef_block");
+           signBlock(beef_sign, beef_wall_sign, beef_sign_texture);
         //.........pork
         //.........rabbit
 
