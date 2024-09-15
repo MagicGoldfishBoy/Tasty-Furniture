@@ -123,6 +123,11 @@ public class foodmaterialtyperegistry {
         "cod_wood_mat", 
         MEAT) 
     );
+    public static final WoodType SALMONWOODMAT = WoodType.register(
+     new WoodType(
+        "salmon_wood_mat", 
+        MEAT) 
+    );
 
         public static final Tier APPLE_TIER = new SimpleTier(
             BlockTags.INCORRECT_FOR_STONE_TOOL,

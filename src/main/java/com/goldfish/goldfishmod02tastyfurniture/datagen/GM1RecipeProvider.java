@@ -1177,6 +1177,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('B', Items.STICK)
            .unlockedBy("has_cod_ingot", has(ingotregistry.COD_INGOT.get()))
            .save(output);
+         //salmon_sign
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SALMON_SIGN_ITEM.get())
+           .pattern("AAA")
+           .pattern("AAA")
+           .pattern(" B ")
+           .define('A', ingotregistry.SALMON_INGOT.get())
+           .define('B', Items.STICK)
+           .unlockedBy("has_salmon_ingot", has(ingotregistry.SALMON_INGOT.get()))
+           .save(output);
 
         //-------------------------------------------------------------slabs----------------------------------------------------------------------
          //________________________________________________________Regular Slabs__________________________________________________________________

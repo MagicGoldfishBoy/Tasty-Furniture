@@ -545,6 +545,9 @@ public class foodblockitemregistry {
   //cod
      public static final DeferredHolder<Item, SignItem> COD_SIGN_ITEM = FOODBLOCKITEM.register("cod_sign_item",
      () -> new SignItem(new SignItem.Properties(), foodblockregistry.COD_STANDING_SIGN.get(), foodblockregistry.COD_WALL_SIGN.get()));
+  //salmon
+     public static final DeferredHolder<Item, SignItem> SALMON_SIGN_ITEM = FOODBLOCKITEM.register("salmon_sign_item",
+     () -> new SignItem(new SignItem.Properties(), foodblockregistry.SALMON_STANDING_SIGN.get(), foodblockregistry.SALMON_WALL_SIGN.get()));
 
 //==============================================================================================================================================================================================
 //                                                                                          Slabs

@@ -45,6 +45,8 @@ import com.goldfish.goldfishmod02tastyfurniture.block.rabbitfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.red_mushroomfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.redmushroomSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.redmushroomWallSign;
+import com.goldfish.goldfishmod02tastyfurniture.block.salmonSign;
+import com.goldfish.goldfishmod02tastyfurniture.block.salmonWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.salmonfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweet_berryfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweetberrySign;
@@ -78,6 +80,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.pumpkinfurnaceentit
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.rabbitfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.red_mushroomfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.redmushroomSignEntity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.salmonSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.salmonfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.sweet_berryfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.sweetberrySignEntity;
@@ -1605,6 +1608,54 @@ public class foodblockregistry {
           foodblockregistry.COD_SIGN.get(),
           foodblockregistry.COD_WALL_SIGN.get(),
           foodblockregistry.COD_STANDING_SIGN.get()
+      ).build(null
+    ));
+  //.........salmon
+    public static final DeferredHolder<Block, salmonSign> SALMON_SIGN = FOODBLOCK.register("salmon_sign",
+    () -> new salmonSign(
+      BlockBehaviour.Properties.of()
+          .lightLevel(state -> 10)
+          .mapColor(MapColor.WOOD)
+          .forceSolidOn()
+          .instrument(NoteBlockInstrument.BASS)
+          .noCollission()
+          .strength(1.0F)
+          .ignitedByLava(),
+          foodmaterialtyperegistry.SALMONWOODMAT
+    ));
+    public static final DeferredHolder<Block, salmonWallSign> SALMON_WALL_SIGN = FOODBLOCK.register("salmon_wall_sign",
+    () -> new salmonWallSign(
+        BlockBehaviour.Properties.of()
+        .lightLevel(state -> 10)
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.SALMONWOODMAT
+    ));
+    public static final DeferredHolder<Block, salmonSign> SALMON_STANDING_SIGN = FOODBLOCK.register("salmon_standing_sign",
+    () -> new salmonSign(
+        BlockBehaviour.Properties.of()
+        .lightLevel(state -> 10)
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.SALMONWOODMAT
+    ));
+      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<salmonSignEntity>> SALMON_SIGN_ENTITY = FOODBLOCKENTITY.register(
+      "salmon_sign_entity",
+      () -> BlockEntityType.Builder.of(
+          salmonSignEntity::new,
+          foodblockregistry.SALMON_SIGN.get(),
+          foodblockregistry.SALMON_WALL_SIGN.get(),
+          foodblockregistry.SALMON_STANDING_SIGN.get()
       ).build(null
     ));
 
