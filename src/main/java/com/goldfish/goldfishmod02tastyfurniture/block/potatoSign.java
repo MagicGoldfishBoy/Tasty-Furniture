@@ -1,7 +1,7 @@
 package com.goldfish.goldfishmod02tastyfurniture.block;
 
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.appleSignEntity;
-import com.goldfish.goldfishmod02tastyfurniture.block.entity.potato_sign_entity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.potatoSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 
 import net.minecraft.core.BlockPos;
@@ -27,6 +27,6 @@ public class potatoSign extends StandingSignBlock {
 
      @Override
      public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new potato_sign_entity(pos, state);
+        return new potatoSignEntity(pos, state);
      }
 }

@@ -39,13 +39,13 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.chorusfurnaceentity
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.codfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.appleSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.appleSignEntity;
-import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodwallsign;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.appleWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.glowberryfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.melonfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.muttonfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.porkfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.potatoWallSign;
-import com.goldfish.goldfishmod02tastyfurniture.block.entity.potato_sign_entity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.potatoSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.potatofurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.pumpkinfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.rabbitfurnaceentity;
@@ -1009,8 +1009,8 @@ public class foodblockregistry {
          .ignitedByLava(),
          foodmaterialtyperegistry.APPLEWOODMAT
    ));
-   public static final DeferredHolder<Block, foodwallsign> APPLE_WALL_SIGN = FOODBLOCK.register("apple_wall_sign",
-   () -> new foodwallsign(
+   public static final DeferredHolder<Block, appleWallSign> APPLE_WALL_SIGN = FOODBLOCK.register("apple_wall_sign",
+   () -> new appleWallSign(
        BlockBehaviour.Properties.of()
        .mapColor(MapColor.WOOD)
        .forceSolidOn()
@@ -1080,10 +1080,10 @@ public class foodblockregistry {
        .randomTicks(),
        foodmaterialtyperegistry.POTATOWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<potato_sign_entity>> POTATO_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<potatoSignEntity>> POTATO_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "potato_sign_entity",
      () -> BlockEntityType.Builder.of(
-         potato_sign_entity::new,
+         potatoSignEntity::new,
          foodblockregistry.POTATO_SIGN.get(),
          foodblockregistry.POTATO_WALL_SIGN.get(),
          foodblockregistry.POTATO_STANDING_SIGN.get()

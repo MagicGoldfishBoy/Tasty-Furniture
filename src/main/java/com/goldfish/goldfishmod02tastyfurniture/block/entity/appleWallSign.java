@@ -13,8 +13,8 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.WoodType;
 
-public class foodwallsign extends WallSignBlock {
-     public foodwallsign(BlockBehaviour.Properties properties, WoodType woodType) {
+public class appleWallSign extends WallSignBlock {
+     public appleWallSign(BlockBehaviour.Properties properties, WoodType woodType) {
          super(woodType, properties);
          this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.FALSE));
      }
@@ -26,9 +26,7 @@ public class foodwallsign extends WallSignBlock {
 
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        if (this.getName().toString().matches(".*apple.*")) {return new appleSignEntity(pos, state);}
-       else if (this.getName().toString().matches(".*potato.*")) {return new potato_sign_entity(pos, state);}
-         else return new appleSignEntity(pos, state);
+       return new appleSignEntity(pos, state);
      }
 
     @Override

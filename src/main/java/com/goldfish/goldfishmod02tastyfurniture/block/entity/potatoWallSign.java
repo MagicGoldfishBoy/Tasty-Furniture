@@ -21,12 +21,12 @@ public class potatoWallSign extends WallSignBlock {
 
    @Override
    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        return createTickerHelper(type, foodblockregistry.POTATO_SIGN_ENTITY.get(), potato_sign_entity::tick);
+        return createTickerHelper(type, foodblockregistry.POTATO_SIGN_ENTITY.get(), potatoSignEntity::tick);
    }
 
    @Override
    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-      return new potato_sign_entity(pos, state);
+      return new potatoSignEntity(pos, state);
     }
 
    @Override
