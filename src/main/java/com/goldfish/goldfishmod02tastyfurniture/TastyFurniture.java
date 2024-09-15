@@ -175,26 +175,8 @@ public class TastyFurniture
         event.registerBlockEntityRenderer(foodblockregistry.BEETROOT_SIGN_ENTITY.get(), SignRenderer::new);
         event.registerBlockEntityRenderer(foodblockregistry.CARROT_SIGN_ENTITY.get(), SignRenderer::new);
         event.registerBlockEntityRenderer(foodblockregistry.CHORUS_SIGN_ENTITY.get(), SignRenderer::new);
+        event.registerBlockEntityRenderer(foodblockregistry.GLOWBERRY_SIGN_ENTITY.get(), SignRenderer::new);
         }
-
-        //BlockEntityTicker<FurnaceBlockEntity> ticker = (world, pos, state, blockEntity) -> FurnaceBlockEntity.serverTick(world, pos, state, blockEntity);
-        // @SubscribeEvent
-        // private static void setup(final FMLCommonSetupEvent event) {
-        //     event.enqueueWork(() -> {
-        //         BlockEntityType<applefurnaceentity> appleFurnaceEntityType = foodblockregistry.APPLE_FURNACE_ENTITY.get();
-    
-        //         BlockEntityTicker<FurnaceBlockEntity> furnaceTicker = (level, pos, state, entity) -> {
-        //             if (!level.isClientSide) {
-        //                 FurnaceBlockEntity.serverTick(level, pos, state, entity);
-        //             }
-        //         };
-    
-        //         // Register the ticker for your custom furnace block
-        //         registerBlockEntityTicker(appleFurnaceEntityType, furnaceTicker);
-        //     });
-        // }
-        // private <T extends BlockEntity> void registerBlockEntityTicker(BlockEntityType<T> type, BlockEntityTicker<? super T> ticker) {
-        // }
     }
 
 

@@ -655,6 +655,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
            ResourceLocation chorus_sign_texture = modLoc("block/chorus_block");
            signBlock(chorus_sign, chorus_wall_sign, chorus_sign_texture);
         //.........glow_berry
+           StandingSignBlock glowberry_sign = foodblockregistry.GLOWBERRY_STANDING_SIGN.get();
+           WallSignBlock glowberry_wall_sign = foodblockregistry.GLOWBERRY_WALL_SIGN.get();
+           ResourceLocation glowberry_sign_texture = modLoc("block/glow_berry_block");
+           signBlock(glowberry_sign, glowberry_wall_sign, glowberry_sign_texture);
         //.........melon
         //.........sweet_berry
         //.........brown_mushroom
