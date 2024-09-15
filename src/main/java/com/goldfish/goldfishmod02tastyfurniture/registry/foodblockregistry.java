@@ -38,6 +38,8 @@ import com.goldfish.goldfishmod02tastyfurniture.block.melonfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.muttonSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.muttonWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.muttonfurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.porkSign;
+import com.goldfish.goldfishmod02tastyfurniture.block.porkWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.porkfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.potatoSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.potatoWallSign;
@@ -80,6 +82,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.melonSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.melonfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.muttonSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.muttonfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.porkSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.porkfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.potatoSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.potatofurnaceentity;
@@ -1810,6 +1813,54 @@ public class foodblockregistry {
           foodblockregistry.BEEF_SIGN.get(),
           foodblockregistry.BEEF_WALL_SIGN.get(),
           foodblockregistry.BEEF_STANDING_SIGN.get()
+      ).build(null
+    ));
+  //.........pork
+    public static final DeferredHolder<Block, porkSign> PORK_SIGN = FOODBLOCK.register("pork_sign",
+    () -> new porkSign(
+      BlockBehaviour.Properties.of()
+          .lightLevel(state -> 10)
+          .mapColor(MapColor.WOOD)
+          .forceSolidOn()
+          .instrument(NoteBlockInstrument.BASS)
+          .noCollission()
+          .strength(1.0F)
+          .ignitedByLava(),
+          foodmaterialtyperegistry.PORKWOODMAT
+    ));
+    public static final DeferredHolder<Block, porkWallSign> PORK_WALL_SIGN = FOODBLOCK.register("pork_wall_sign",
+    () -> new porkWallSign(
+        BlockBehaviour.Properties.of()
+        .lightLevel(state -> 10)
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.PORKWOODMAT
+    ));
+    public static final DeferredHolder<Block, porkSign> PORK_STANDING_SIGN = FOODBLOCK.register("pork_standing_sign",
+    () -> new porkSign(
+        BlockBehaviour.Properties.of()
+        .lightLevel(state -> 10)
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.PORKWOODMAT
+    ));
+      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<porkSignEntity>> PORK_SIGN_ENTITY = FOODBLOCKENTITY.register(
+      "pork_sign_entity",
+      () -> BlockEntityType.Builder.of(
+          porkSignEntity::new,
+          foodblockregistry.PORK_SIGN.get(),
+          foodblockregistry.PORK_WALL_SIGN.get(),
+          foodblockregistry.PORK_STANDING_SIGN.get()
       ).build(null
     ));
 

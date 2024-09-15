@@ -453,7 +453,9 @@
     "goldfishmod02tastyfurniture:mutton_standing_sign",
     "goldfishmod02tastyfurniture:mutton_wall_sign",
     "goldfishmod02tastyfurniture:beef_standing_sign",
-    "goldfishmod02tastyfurniture:beef_wall_sign"
+    "goldfishmod02tastyfurniture:beef_wall_sign",
+    "goldfishmod02tastyfurniture:pork_standing_sign",
+    "goldfishmod02tastyfurniture:pork_wall_sign"
     
     ]
   }
