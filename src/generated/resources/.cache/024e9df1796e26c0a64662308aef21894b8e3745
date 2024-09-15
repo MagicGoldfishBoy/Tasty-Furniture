@@ -1,4 +1,4 @@
-// 1.21	2024-09-15T10:29:25.980572619	Item Models: goldfishmod02tastyfurniture
+// 1.21	2024-09-15T10:38:28.551223406	Item Models: goldfishmod02tastyfurniture
 5415a5c9e52089186849ab0906ab852e882667f5 assets/goldfishmod02tastyfurniture/models/item/apple_bars_item.json
 66bf13b2fe52a00ffe7f141beaaae9c6792e2759 assets/goldfishmod02tastyfurniture/models/item/apple_bricks_block_item.json
 93147515ab5bd4d354d8eb60af9faf57459c267f assets/goldfishmod02tastyfurniture/models/item/apple_bricks_slab_item.json
@@ -502,3 +502,4 @@ d82c7879373bb64873c5604d1066bc36783318e5 assets/goldfishmod02tastyfurniture/mode
 cecbbe80d72c5d8a4bafe975d6d0a362df008026 assets/goldfishmod02tastyfurniture/models/item/tropical_fish_tile_block_item.json
 1c9914d46d4e008ffcaae4ee5d55a9ef7040d206 assets/goldfishmod02tastyfurniture/models/item/tropical_fish_torch_item.json
 339104a8222d599ace842fff0c2dc94dd8ffb36d assets/goldfishmod02tastyfurniture/models/item/tropical_fish_trapdoor_item.json
+2b09293eac3ea3396a17277d85b94995745f6f03 assets/goldfishmod02tastyfurniture/models/item/tropicalfish_sign_item.json

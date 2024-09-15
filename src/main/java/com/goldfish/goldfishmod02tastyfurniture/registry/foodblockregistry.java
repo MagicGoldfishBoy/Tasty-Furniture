@@ -52,6 +52,8 @@ import com.goldfish.goldfishmod02tastyfurniture.block.sweet_berryfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweetberrySign;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweetberryWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.tropical_fishfurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.tropicalfishSign;
+import com.goldfish.goldfishmod02tastyfurniture.block.tropicalfishWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.applefurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beeffurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootSignEntity;
@@ -85,6 +87,8 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.salmonfurnaceentity
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.sweet_berryfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.sweetberrySignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.tropical_fishfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.tropicalfishSignEntity;
+
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Block;
@@ -1656,6 +1660,54 @@ public class foodblockregistry {
           foodblockregistry.SALMON_SIGN.get(),
           foodblockregistry.SALMON_WALL_SIGN.get(),
           foodblockregistry.SALMON_STANDING_SIGN.get()
+      ).build(null
+    ));
+  //.........tropicalfish
+    public static final DeferredHolder<Block, tropicalfishSign> TROPICALFISH_SIGN = FOODBLOCK.register("tropicalfish_sign",
+    () -> new tropicalfishSign(
+      BlockBehaviour.Properties.of()
+          .lightLevel(state -> 10)
+          .mapColor(MapColor.WOOD)
+          .forceSolidOn()
+          .instrument(NoteBlockInstrument.BASS)
+          .noCollission()
+          .strength(1.0F)
+          .ignitedByLava(),
+          foodmaterialtyperegistry.TROPICALFISHWOODMAT
+    ));
+    public static final DeferredHolder<Block, tropicalfishWallSign> TROPICALFISH_WALL_SIGN = FOODBLOCK.register("tropicalfish_wall_sign",
+    () -> new tropicalfishWallSign(
+        BlockBehaviour.Properties.of()
+        .lightLevel(state -> 10)
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.TROPICALFISHWOODMAT
+    ));
+    public static final DeferredHolder<Block, tropicalfishSign> TROPICALFISH_STANDING_SIGN = FOODBLOCK.register("tropicalfish_standing_sign",
+    () -> new tropicalfishSign(
+        BlockBehaviour.Properties.of()
+        .lightLevel(state -> 10)
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.TROPICALFISHWOODMAT
+    ));
+      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<tropicalfishSignEntity>> TROPICALFISH_SIGN_ENTITY = FOODBLOCKENTITY.register(
+      "tropicalfish_sign_entity",
+      () -> BlockEntityType.Builder.of(
+          tropicalfishSignEntity::new,
+          foodblockregistry.TROPICALFISH_SIGN.get(),
+          foodblockregistry.TROPICALFISH_WALL_SIGN.get(),
+          foodblockregistry.TROPICALFISH_STANDING_SIGN.get()
       ).build(null
     ));
 

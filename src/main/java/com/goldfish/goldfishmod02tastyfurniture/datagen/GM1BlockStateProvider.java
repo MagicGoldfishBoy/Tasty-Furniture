@@ -700,6 +700,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
            ResourceLocation salmon_sign_texture = modLoc("block/salmon_block");
            signBlock(salmon_sign, salmon_wall_sign, salmon_sign_texture);
         //.........tropical_fish
+           StandingSignBlock tropicalfish_sign = foodblockregistry.TROPICALFISH_STANDING_SIGN.get();
+           WallSignBlock tropicalfish_wall_sign = foodblockregistry.TROPICALFISH_WALL_SIGN.get();
+           ResourceLocation tropicalfish_sign_texture = modLoc("block/tropical_fish_block");
+           signBlock(tropicalfish_sign, tropicalfish_wall_sign, tropicalfish_sign_texture);
         //.........mutton
         //.........beef
         //.........pork

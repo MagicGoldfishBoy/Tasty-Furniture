@@ -319,6 +319,7 @@
            "block.goldfishmod02tastyfurniture.chicken_standing_sign": "Chicken Sign",
            "block.goldfishmod02tastyfurniture.cod_standing_sign": "Cod Sign",
            "block.goldfishmod02tastyfurniture.salmon_standing_sign": "Salmon Sign",
+           "block.goldfishmod02tastyfurniture.tropicalfish_standing_sign": "Tropical Fish Sign",
         "item.goldfishmod02tastyfurniture.apple_sword": "Apple Sword",
          "tooltip.goldfishmod02tastyfurniture.apple_sword.tooltip": "Hitting entities with this sword allow them to start their own space program!",
         "item.goldfishmod02tastyfurniture.potato_sword": "Potato Sword",
