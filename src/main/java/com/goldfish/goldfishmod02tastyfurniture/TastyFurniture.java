@@ -179,6 +179,7 @@ public class TastyFurniture
         event.registerBlockEntityRenderer(foodblockregistry.MELON_SIGN_ENTITY.get(), SignRenderer::new);
         event.registerBlockEntityRenderer(foodblockregistry.SWEETBERRY_SIGN_ENTITY.get(), SignRenderer::new);
         event.registerBlockEntityRenderer(foodblockregistry.BROWNMUSHROOM_SIGN_ENTITY.get(), SignRenderer::new);
+        event.registerBlockEntityRenderer(foodblockregistry.REDMUSHROOM_SIGN_ENTITY.get(), SignRenderer::new);
         }
     }
 

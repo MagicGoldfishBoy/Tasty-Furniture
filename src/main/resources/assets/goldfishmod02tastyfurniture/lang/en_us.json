@@ -314,6 +314,7 @@
            "block.goldfishmod02tastyfurniture.melon_standing_sign": "Melon Sign",
            "block.goldfishmod02tastyfurniture.sweetberry_standing_sign": "Sweetberry Sign",
            "block.goldfishmod02tastyfurniture.brownmushroom_standing_sign": "Brown Mushroom Sign",
+           "block.goldfishmod02tastyfurniture.redmushroom_standing_sign": "Red Mushroom Sign",
         "item.goldfishmod02tastyfurniture.apple_sword": "Apple Sword",
          "tooltip.goldfishmod02tastyfurniture.apple_sword.tooltip": "Hitting entities with this sword allow them to start their own space program!",
         "item.goldfishmod02tastyfurniture.potato_sword": "Potato Sword",

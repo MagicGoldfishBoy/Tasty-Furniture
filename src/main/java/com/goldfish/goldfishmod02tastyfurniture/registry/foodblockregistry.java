@@ -37,6 +37,8 @@ import com.goldfish.goldfishmod02tastyfurniture.block.potatofurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.pumpkinfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.rabbitfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.red_mushroomfurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.redmushroomSign;
+import com.goldfish.goldfishmod02tastyfurniture.block.redmushroomWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.salmonfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweet_berryfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweetberrySign;
@@ -66,6 +68,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.potatofurnaceentity
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.pumpkinfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.rabbitfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.red_mushroomfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.redmushroomSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.salmonfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.sweet_berryfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.sweetberrySignEntity;
@@ -1401,6 +1404,54 @@ public class foodblockregistry {
           foodblockregistry.BROWNMUSHROOM_SIGN.get(),
           foodblockregistry.BROWNMUSHROOM_WALL_SIGN.get(),
           foodblockregistry.BROWNMUSHROOM_STANDING_SIGN.get()
+      ).build(null
+    ));
+  //.........redmushroom
+    public static final DeferredHolder<Block, redmushroomSign> REDMUSHROOM_SIGN = FOODBLOCK.register("redmushroom_sign",
+    () -> new redmushroomSign(
+      BlockBehaviour.Properties.of()
+          .lightLevel(state -> 10)
+          .mapColor(MapColor.WOOD)
+          .forceSolidOn()
+          .instrument(NoteBlockInstrument.BASS)
+          .noCollission()
+          .strength(1.0F)
+          .ignitedByLava(),
+          foodmaterialtyperegistry.REDMUSHROOMWOODMAT
+    ));
+    public static final DeferredHolder<Block, redmushroomWallSign> REDMUSHROOM_WALL_SIGN = FOODBLOCK.register("redmushroom_wall_sign",
+    () -> new redmushroomWallSign(
+        BlockBehaviour.Properties.of()
+        .lightLevel(state -> 10)
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.REDMUSHROOMWOODMAT
+    ));
+    public static final DeferredHolder<Block, redmushroomSign> REDMUSHROOM_STANDING_SIGN = FOODBLOCK.register("redmushroom_standing_sign",
+    () -> new redmushroomSign(
+        BlockBehaviour.Properties.of()
+        .lightLevel(state -> 10)
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.REDMUSHROOMWOODMAT
+    ));
+      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<redmushroomSignEntity>> REDMUSHROOM_SIGN_ENTITY = FOODBLOCKENTITY.register(
+      "redmushroom_sign_entity",
+      () -> BlockEntityType.Builder.of(
+          redmushroomSignEntity::new,
+          foodblockregistry.REDMUSHROOM_SIGN.get(),
+          foodblockregistry.REDMUSHROOM_WALL_SIGN.get(),
+          foodblockregistry.REDMUSHROOM_STANDING_SIGN.get()
       ).build(null
     ));
 
