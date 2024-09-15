@@ -530,6 +530,9 @@ public class foodblockitemregistry {
   //sweetberry
      public static final DeferredHolder<Item, SignItem> SWEETBERRY_SIGN_ITEM = FOODBLOCKITEM.register("sweetberry_sign_item",
      () -> new SignItem(new SignItem.Properties(), foodblockregistry.SWEETBERRY_STANDING_SIGN.get(), foodblockregistry.SWEETBERRY_WALL_SIGN.get()));
+  //brownmushroom
+     public static final DeferredHolder<Item, SignItem> BROWNMUSHROOM_SIGN_ITEM = FOODBLOCKITEM.register("brownmushroom_sign_item",
+     () -> new SignItem(new SignItem.Properties(), foodblockregistry.BROWNMUSHROOM_STANDING_SIGN.get(), foodblockregistry.BROWNMUSHROOM_WALL_SIGN.get()));
 
 //==============================================================================================================================================================================================
 //                                                                                          Slabs

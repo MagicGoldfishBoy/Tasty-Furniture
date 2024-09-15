@@ -670,6 +670,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
            ResourceLocation sweetberry_sign_texture = modLoc("block/sweet_berry_block");
            signBlock(sweetberry_sign, sweetberry_wall_sign, sweetberry_sign_texture);
         //.........brown_mushroom
+           StandingSignBlock brownmushroom_sign = foodblockregistry.BROWNMUSHROOM_STANDING_SIGN.get();
+           WallSignBlock brownmushroom_wall_sign = foodblockregistry.BROWNMUSHROOM_WALL_SIGN.get();
+           ResourceLocation brownmushroom_sign_texture = modLoc("block/brown_mushroom_block");
+           signBlock(brownmushroom_sign, brownmushroom_wall_sign, brownmushroom_sign_texture);
         //.........red_mushroom
         //.........pumpkin
         //.........chicken

@@ -1,9 +1,5 @@
 package com.goldfish.goldfishmod02tastyfurniture.registry;
 
-import java.rmi.registry.Registry;
-import java.util.ArrayList;
-import java.util.List;
-
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 import com.goldfish.goldfishmod02tastyfurniture.block.appleSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.appleWallSign;
@@ -13,6 +9,8 @@ import com.goldfish.goldfishmod02tastyfurniture.block.beetrootSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.beetrootWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.beetrootfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.brown_mushroomfurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.brownmushroomSign;
+import com.goldfish.goldfishmod02tastyfurniture.block.brownmushroomWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotfurnace;
@@ -49,6 +47,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.beeffurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.brown_mushroomfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.brownmushroomSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.carrotSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.carrotfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chickenfurnaceentity;
@@ -71,29 +70,15 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.salmonfurnaceentity
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.sweet_berryfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.sweetberrySignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.tropical_fishfurnaceentity;
-import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistry;
-import com.google.common.base.Supplier;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.ai.behavior.GateBehavior;
-import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Block.*;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.CarpetBlock;
 import net.minecraft.world.level.block.ChainBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
-import net.minecraft.world.level.block.FenceGateBlock;
-import net.minecraft.world.level.block.FurnaceBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.LadderBlock;
@@ -101,37 +86,19 @@ import net.minecraft.world.level.block.LanternBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.RedstoneTorchBlock;
 import net.minecraft.world.level.block.RedstoneWallTorchBlock;
-import net.minecraft.world.level.block.SignBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
-import net.minecraft.world.level.block.StandingSignBlock;
 import net.minecraft.world.level.block.TorchBlock;
 import net.minecraft.world.level.block.TrapDoorBlock;
-import net.minecraft.world.level.block.WallSignBlock;
 import net.minecraft.world.level.block.WallTorchBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.entity.FurnaceBlockEntity;
-import net.minecraft.world.level.block.entity.vault.*;
-import net.minecraft.world.level.block.entity.SignBlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.BlockSetType;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
-import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 
-import net.neoforged.fml.ModList;
-import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
-import net.neoforged.neoforge.client.model.obj.ObjMaterialLibrary.Material;
-import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.neoforged.neoforge.registries.DeferredRegister.Blocks.*;
-import net.neoforged.neoforge.registries.datamaps.builtin.*;
-import net.neoforged.neoforge.registries.callback.*;
-import net.neoforged.neoforge.registries.holdersets.*;
 
 
 
@@ -1386,6 +1353,54 @@ public class foodblockregistry {
           foodblockregistry.SWEETBERRY_SIGN.get(),
           foodblockregistry.SWEETBERRY_WALL_SIGN.get(),
           foodblockregistry.SWEETBERRY_STANDING_SIGN.get()
+      ).build(null
+    ));
+  //.........brownmushroom
+    public static final DeferredHolder<Block, brownmushroomSign> BROWNMUSHROOM_SIGN = FOODBLOCK.register("brownmushroom_sign",
+    () -> new brownmushroomSign(
+      BlockBehaviour.Properties.of()
+          .lightLevel(state -> 10)
+          .mapColor(MapColor.WOOD)
+          .forceSolidOn()
+          .instrument(NoteBlockInstrument.BASS)
+          .noCollission()
+          .strength(1.0F)
+          .ignitedByLava(),
+          foodmaterialtyperegistry.BROWNMUSHROOMWOODMAT
+    ));
+    public static final DeferredHolder<Block, brownmushroomWallSign> BROWNMUSHROOM_WALL_SIGN = FOODBLOCK.register("brownmushroom_wall_sign",
+    () -> new brownmushroomWallSign(
+        BlockBehaviour.Properties.of()
+        .lightLevel(state -> 10)
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.BROWNMUSHROOMWOODMAT
+    ));
+    public static final DeferredHolder<Block, brownmushroomSign> BROWNMUSHROOM_STANDING_SIGN = FOODBLOCK.register("brownmushroom_standing_sign",
+    () -> new brownmushroomSign(
+        BlockBehaviour.Properties.of()
+        .lightLevel(state -> 10)
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.BROWNMUSHROOMWOODMAT
+    ));
+      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<brownmushroomSignEntity>> BROWNMUSHROOM_SIGN_ENTITY = FOODBLOCKENTITY.register(
+      "brownmushroom_sign_entity",
+      () -> BlockEntityType.Builder.of(
+          brownmushroomSignEntity::new,
+          foodblockregistry.BROWNMUSHROOM_SIGN.get(),
+          foodblockregistry.BROWNMUSHROOM_WALL_SIGN.get(),
+          foodblockregistry.BROWNMUSHROOM_STANDING_SIGN.get()
       ).build(null
     ));
 
