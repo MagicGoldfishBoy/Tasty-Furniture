@@ -17,6 +17,8 @@ import com.goldfish.goldfishmod02tastyfurniture.block.carrotSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.chickenfurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.chorusSign;
+import com.goldfish.goldfishmod02tastyfurniture.block.chorusWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.chorusfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.codfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodlamp;
@@ -44,6 +46,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.brown_mushroomfurna
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.carrotSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.carrotfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chickenfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.chorusSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chorusfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.codfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.appleSignEntity;
@@ -1185,6 +1188,51 @@ public class foodblockregistry {
           foodblockregistry.CARROT_SIGN.get(),
           foodblockregistry.CARROT_WALL_SIGN.get(),
           foodblockregistry.CARROT_STANDING_SIGN.get()
+      ).build(null
+    ));
+  //.........chorus
+    public static final DeferredHolder<Block, chorusSign> CHORUS_SIGN = FOODBLOCK.register("chorus_sign",
+    () -> new chorusSign(
+      BlockBehaviour.Properties.of()
+          .mapColor(MapColor.WOOD)
+          .forceSolidOn()
+          .instrument(NoteBlockInstrument.BASS)
+          .noCollission()
+          .strength(1.0F)
+          .ignitedByLava(),
+          foodmaterialtyperegistry.CHORUSWOODMAT
+    ));
+    public static final DeferredHolder<Block, chorusWallSign> CHORUS_WALL_SIGN = FOODBLOCK.register("chorus_wall_sign",
+    () -> new chorusWallSign(
+        BlockBehaviour.Properties.of()
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.CHORUSWOODMAT
+    ));
+    public static final DeferredHolder<Block, chorusSign> CHORUS_STANDING_SIGN = FOODBLOCK.register("chorus_standing_sign",
+    () -> new chorusSign(
+        BlockBehaviour.Properties.of()
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.CHORUSWOODMAT
+    ));
+      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<chorusSignEntity>> CHORUS_SIGN_ENTITY = FOODBLOCKENTITY.register(
+      "chorus_sign_entity",
+      () -> BlockEntityType.Builder.of(
+          chorusSignEntity::new,
+          foodblockregistry.CHORUS_SIGN.get(),
+          foodblockregistry.CHORUS_WALL_SIGN.get(),
+          foodblockregistry.CHORUS_STANDING_SIGN.get()
       ).build(null
     ));
 
