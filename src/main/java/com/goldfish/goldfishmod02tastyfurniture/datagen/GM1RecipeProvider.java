@@ -1150,6 +1150,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('B', Items.STICK)
            .unlockedBy("has_redmushroom_ingot", has(ingotregistry.RED_MUSHROOM_INGOT.get()))
            .save(output);
+         //pumpkin_sign
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PUMPKIN_SIGN_ITEM.get())
+           .pattern("AAA")
+           .pattern("AAA")
+           .pattern(" B ")
+           .define('A', ingotregistry.PUMPKIN_INGOT.get())
+           .define('B', Items.STICK)
+           .unlockedBy("has_pumpkin_ingot", has(ingotregistry.PUMPKIN_INGOT.get()))
+           .save(output);
 
         //-------------------------------------------------------------slabs----------------------------------------------------------------------
          //________________________________________________________Regular Slabs__________________________________________________________________

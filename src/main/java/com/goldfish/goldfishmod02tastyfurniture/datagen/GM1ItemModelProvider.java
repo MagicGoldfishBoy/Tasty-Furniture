@@ -318,6 +318,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("brownmushroom_sign_item", mcLoc("item/generated")).texture("layer0", "item/brownmushroom_sign");
       //..............redmushroom
        withExistingParent("redmushroom_sign_item", mcLoc("item/generated")).texture("layer0", "item/redmushroom_sign");
+      //..............pumpkin
+       withExistingParent("pumpkin_sign_item", mcLoc("item/generated")).texture("layer0", "item/pumpkin_sign");
 
     //-------------------------------------------------------------slabs---------------------------------------------------------------------
      //________________________________________________________Regular Slabs_________________________________________________________________

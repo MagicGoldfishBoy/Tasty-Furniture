@@ -34,6 +34,8 @@ import com.goldfish.goldfishmod02tastyfurniture.block.porkfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.potatoSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.potatoWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.potatofurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.pumpkinSign;
+import com.goldfish.goldfishmod02tastyfurniture.block.pumpkinWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.pumpkinfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.rabbitfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.red_mushroomfurnace;
@@ -65,6 +67,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.muttonfurnaceentity
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.porkfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.potatoSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.potatofurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.pumpkinSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.pumpkinfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.rabbitfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.red_mushroomfurnaceentity;
@@ -1452,6 +1455,54 @@ public class foodblockregistry {
           foodblockregistry.REDMUSHROOM_SIGN.get(),
           foodblockregistry.REDMUSHROOM_WALL_SIGN.get(),
           foodblockregistry.REDMUSHROOM_STANDING_SIGN.get()
+      ).build(null
+    ));
+  //.........pumpkin
+    public static final DeferredHolder<Block, pumpkinSign> PUMPKIN_SIGN = FOODBLOCK.register("pumpkin_sign",
+    () -> new pumpkinSign(
+      BlockBehaviour.Properties.of()
+          .lightLevel(state -> 10)
+          .mapColor(MapColor.WOOD)
+          .forceSolidOn()
+          .instrument(NoteBlockInstrument.BASS)
+          .noCollission()
+          .strength(1.0F)
+          .ignitedByLava(),
+          foodmaterialtyperegistry.PUMPKINWOODMAT
+    ));
+    public static final DeferredHolder<Block, pumpkinWallSign> PUMPKIN_WALL_SIGN = FOODBLOCK.register("pumpkin_wall_sign",
+    () -> new pumpkinWallSign(
+        BlockBehaviour.Properties.of()
+        .lightLevel(state -> 10)
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.PUMPKINWOODMAT
+    ));
+    public static final DeferredHolder<Block, pumpkinSign> PUMPKIN_STANDING_SIGN = FOODBLOCK.register("pumpkin_standing_sign",
+    () -> new pumpkinSign(
+        BlockBehaviour.Properties.of()
+        .lightLevel(state -> 10)
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.PUMPKINWOODMAT
+    ));
+      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<pumpkinSignEntity>> PUMPKIN_SIGN_ENTITY = FOODBLOCKENTITY.register(
+      "pumpkin_sign_entity",
+      () -> BlockEntityType.Builder.of(
+          pumpkinSignEntity::new,
+          foodblockregistry.PUMPKIN_SIGN.get(),
+          foodblockregistry.PUMPKIN_WALL_SIGN.get(),
+          foodblockregistry.PUMPKIN_STANDING_SIGN.get()
       ).build(null
     ));
 
