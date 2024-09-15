@@ -113,6 +113,11 @@ public class foodmaterialtyperegistry {
         "pumpkin_wood_mat", 
         PLANT) 
     );
+    public static final WoodType CHICKENWOODMAT = WoodType.register(
+     new WoodType(
+        "chicken_wood_mat", 
+        MEAT) 
+    );
 
         public static final Tier APPLE_TIER = new SimpleTier(
             BlockTags.INCORRECT_FOR_STONE_TOOL,

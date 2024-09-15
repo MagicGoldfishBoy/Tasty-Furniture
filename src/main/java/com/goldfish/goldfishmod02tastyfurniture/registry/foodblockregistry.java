@@ -14,6 +14,8 @@ import com.goldfish.goldfishmod02tastyfurniture.block.brownmushroomWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotfurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.chickenSign;
+import com.goldfish.goldfishmod02tastyfurniture.block.chickenWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.chickenfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.chorusSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.chorusWallSign;
@@ -54,6 +56,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.brown_mushroomfurna
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.brownmushroomSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.carrotSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.carrotfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.chickenSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chickenfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chorusSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chorusfurnaceentity;
@@ -1503,6 +1506,54 @@ public class foodblockregistry {
           foodblockregistry.PUMPKIN_SIGN.get(),
           foodblockregistry.PUMPKIN_WALL_SIGN.get(),
           foodblockregistry.PUMPKIN_STANDING_SIGN.get()
+      ).build(null
+    ));
+  //.........chicken
+    public static final DeferredHolder<Block, chickenSign> CHICKEN_SIGN = FOODBLOCK.register("chicken_sign",
+    () -> new chickenSign(
+      BlockBehaviour.Properties.of()
+          .lightLevel(state -> 10)
+          .mapColor(MapColor.WOOD)
+          .forceSolidOn()
+          .instrument(NoteBlockInstrument.BASS)
+          .noCollission()
+          .strength(1.0F)
+          .ignitedByLava(),
+          foodmaterialtyperegistry.CHICKENWOODMAT
+    ));
+    public static final DeferredHolder<Block, chickenWallSign> CHICKEN_WALL_SIGN = FOODBLOCK.register("chicken_wall_sign",
+    () -> new chickenWallSign(
+        BlockBehaviour.Properties.of()
+        .lightLevel(state -> 10)
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.CHICKENWOODMAT
+    ));
+    public static final DeferredHolder<Block, chickenSign> CHICKEN_STANDING_SIGN = FOODBLOCK.register("chicken_standing_sign",
+    () -> new chickenSign(
+        BlockBehaviour.Properties.of()
+        .lightLevel(state -> 10)
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.CHICKENWOODMAT
+    ));
+      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<chickenSignEntity>> CHICKEN_SIGN_ENTITY = FOODBLOCKENTITY.register(
+      "chicken_sign_entity",
+      () -> BlockEntityType.Builder.of(
+          chickenSignEntity::new,
+          foodblockregistry.CHICKEN_SIGN.get(),
+          foodblockregistry.CHICKEN_WALL_SIGN.get(),
+          foodblockregistry.CHICKEN_STANDING_SIGN.get()
       ).build(null
     ));
 
