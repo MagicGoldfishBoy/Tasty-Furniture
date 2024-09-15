@@ -20,6 +20,8 @@ import com.goldfish.goldfishmod02tastyfurniture.block.chickenfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.chorusSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.chorusWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.chorusfurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.codSign;
+import com.goldfish.goldfishmod02tastyfurniture.block.codWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.codfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodlamp;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodpathtypeminislab;
@@ -60,6 +62,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.chickenSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chickenfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chorusSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chorusfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.codSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.codfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.glowberrySignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.appleSignEntity;
@@ -1554,6 +1557,54 @@ public class foodblockregistry {
           foodblockregistry.CHICKEN_SIGN.get(),
           foodblockregistry.CHICKEN_WALL_SIGN.get(),
           foodblockregistry.CHICKEN_STANDING_SIGN.get()
+      ).build(null
+    ));
+  //.........cod
+    public static final DeferredHolder<Block, codSign> COD_SIGN = FOODBLOCK.register("cod_sign",
+    () -> new codSign(
+      BlockBehaviour.Properties.of()
+          .lightLevel(state -> 10)
+          .mapColor(MapColor.WOOD)
+          .forceSolidOn()
+          .instrument(NoteBlockInstrument.BASS)
+          .noCollission()
+          .strength(1.0F)
+          .ignitedByLava(),
+          foodmaterialtyperegistry.CODWOODMAT
+    ));
+    public static final DeferredHolder<Block, codWallSign> COD_WALL_SIGN = FOODBLOCK.register("cod_wall_sign",
+    () -> new codWallSign(
+        BlockBehaviour.Properties.of()
+        .lightLevel(state -> 10)
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.CODWOODMAT
+    ));
+    public static final DeferredHolder<Block, codSign> COD_STANDING_SIGN = FOODBLOCK.register("cod_standing_sign",
+    () -> new codSign(
+        BlockBehaviour.Properties.of()
+        .lightLevel(state -> 10)
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.CODWOODMAT
+    ));
+      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<codSignEntity>> COD_SIGN_ENTITY = FOODBLOCKENTITY.register(
+      "cod_sign_entity",
+      () -> BlockEntityType.Builder.of(
+          codSignEntity::new,
+          foodblockregistry.COD_SIGN.get(),
+          foodblockregistry.COD_WALL_SIGN.get(),
+          foodblockregistry.COD_STANDING_SIGN.get()
       ).build(null
     ));
 

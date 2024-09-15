@@ -690,6 +690,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
            ResourceLocation chicken_sign_texture = modLoc("block/chicken_block");
            signBlock(chicken_sign, chicken_wall_sign, chicken_sign_texture);
         //.........cod
+           StandingSignBlock cod_sign = foodblockregistry.COD_STANDING_SIGN.get();
+           WallSignBlock cod_wall_sign = foodblockregistry.COD_WALL_SIGN.get();
+           ResourceLocation cod_sign_texture = modLoc("block/cod_block");
+           signBlock(cod_sign, cod_wall_sign, cod_sign_texture);
         //.........salmon
         //.........tropical_fish
         //.........mutton
