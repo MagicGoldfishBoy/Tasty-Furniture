@@ -1195,6 +1195,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('B', Items.STICK)
            .unlockedBy("has_tropicalfish_ingot", has(ingotregistry.TROPICAL_FISH_INGOT.get()))
            .save(output);
+         //mutton_sign
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MUTTON_SIGN_ITEM.get())
+           .pattern("AAA")
+           .pattern("AAA")
+           .pattern(" B ")
+           .define('A', ingotregistry.MUTTON_INGOT.get())
+           .define('B', Items.STICK)
+           .unlockedBy("has_mutton_ingot", has(ingotregistry.MUTTON_INGOT.get()))
+           .save(output);
 
         //-------------------------------------------------------------slabs----------------------------------------------------------------------
          //________________________________________________________Regular Slabs__________________________________________________________________

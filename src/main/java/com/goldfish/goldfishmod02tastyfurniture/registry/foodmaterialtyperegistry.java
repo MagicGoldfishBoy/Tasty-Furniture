@@ -133,6 +133,11 @@ public class foodmaterialtyperegistry {
         "tropicalfish_wood_mat", 
         MEAT) 
     );
+    public static final WoodType MUTTONWOODMAT = WoodType.register(
+     new WoodType(
+        "mutton_wood_mat", 
+        MEAT) 
+    );
 
         public static final Tier APPLE_TIER = new SimpleTier(
             BlockTags.INCORRECT_FOR_STONE_TOOL,

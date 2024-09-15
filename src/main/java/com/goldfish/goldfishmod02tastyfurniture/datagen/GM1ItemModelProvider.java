@@ -328,6 +328,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("salmon_sign_item", mcLoc("item/generated")).texture("layer0", "item/salmon_sign");
       //..............tropicalfish
        withExistingParent("tropicalfish_sign_item", mcLoc("item/generated")).texture("layer0", "item/tropicalfish_sign");
+      //..............mutton
+       withExistingParent("mutton_sign_item", mcLoc("item/generated")).texture("layer0", "item/mutton_sign");
 
     //-------------------------------------------------------------slabs---------------------------------------------------------------------
      //________________________________________________________Regular Slabs_________________________________________________________________

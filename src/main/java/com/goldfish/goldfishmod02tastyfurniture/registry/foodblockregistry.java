@@ -33,6 +33,8 @@ import com.goldfish.goldfishmod02tastyfurniture.block.horizontal_food_block;
 import com.goldfish.goldfishmod02tastyfurniture.block.melonSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.melonWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.melonfurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.muttonSign;
+import com.goldfish.goldfishmod02tastyfurniture.block.muttonWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.muttonfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.porkfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.potatoSign;
@@ -73,6 +75,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.appleSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.glowberryfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.melonSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.melonfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.muttonSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.muttonfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.porkfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.potatoSignEntity;
@@ -1708,6 +1711,54 @@ public class foodblockregistry {
           foodblockregistry.TROPICALFISH_SIGN.get(),
           foodblockregistry.TROPICALFISH_WALL_SIGN.get(),
           foodblockregistry.TROPICALFISH_STANDING_SIGN.get()
+      ).build(null
+    ));
+  //.........mutton
+    public static final DeferredHolder<Block, muttonSign> MUTTON_SIGN = FOODBLOCK.register("mutton_sign",
+    () -> new muttonSign(
+      BlockBehaviour.Properties.of()
+          .lightLevel(state -> 10)
+          .mapColor(MapColor.WOOD)
+          .forceSolidOn()
+          .instrument(NoteBlockInstrument.BASS)
+          .noCollission()
+          .strength(1.0F)
+          .ignitedByLava(),
+          foodmaterialtyperegistry.MUTTONWOODMAT
+    ));
+    public static final DeferredHolder<Block, muttonWallSign> MUTTON_WALL_SIGN = FOODBLOCK.register("mutton_wall_sign",
+    () -> new muttonWallSign(
+        BlockBehaviour.Properties.of()
+        .lightLevel(state -> 10)
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.MUTTONWOODMAT
+    ));
+    public static final DeferredHolder<Block, muttonSign> MUTTON_STANDING_SIGN = FOODBLOCK.register("mutton_standing_sign",
+    () -> new muttonSign(
+        BlockBehaviour.Properties.of()
+        .lightLevel(state -> 10)
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.MUTTONWOODMAT
+    ));
+      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<muttonSignEntity>> MUTTON_SIGN_ENTITY = FOODBLOCKENTITY.register(
+      "mutton_sign_entity",
+      () -> BlockEntityType.Builder.of(
+          muttonSignEntity::new,
+          foodblockregistry.MUTTON_SIGN.get(),
+          foodblockregistry.MUTTON_WALL_SIGN.get(),
+          foodblockregistry.MUTTON_STANDING_SIGN.get()
       ).build(null
     ));
 

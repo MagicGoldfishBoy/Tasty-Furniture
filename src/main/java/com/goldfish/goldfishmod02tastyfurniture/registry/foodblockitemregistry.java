@@ -551,6 +551,9 @@ public class foodblockitemregistry {
   //tropicalfish
      public static final DeferredHolder<Item, SignItem> TROPICALFISH_SIGN_ITEM = FOODBLOCKITEM.register("tropicalfish_sign_item",
      () -> new SignItem(new SignItem.Properties(), foodblockregistry.TROPICALFISH_STANDING_SIGN.get(), foodblockregistry.TROPICALFISH_WALL_SIGN.get()));
+  //mutton
+     public static final DeferredHolder<Item, SignItem> MUTTON_SIGN_ITEM = FOODBLOCKITEM.register("mutton_sign_item",
+     () -> new SignItem(new SignItem.Properties(), foodblockregistry.MUTTON_STANDING_SIGN.get(), foodblockregistry.MUTTON_WALL_SIGN.get()));
 
 //==============================================================================================================================================================================================
 //                                                                                          Slabs
