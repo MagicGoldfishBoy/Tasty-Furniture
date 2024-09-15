@@ -524,6 +524,9 @@ public class foodblockitemregistry {
   //glowberry
      public static final DeferredHolder<Item, SignItem> GLOWBERRY_SIGN_ITEM = FOODBLOCKITEM.register("glowberry_sign_item",
      () -> new SignItem(new SignItem.Properties(), foodblockregistry.GLOWBERRY_STANDING_SIGN.get(), foodblockregistry.GLOWBERRY_WALL_SIGN.get()));
+  //melon
+     public static final DeferredHolder<Item, SignItem> MELON_SIGN_ITEM = FOODBLOCKITEM.register("melon_sign_item",
+     () -> new SignItem(new SignItem.Properties(), foodblockregistry.MELON_STANDING_SIGN.get(), foodblockregistry.MELON_WALL_SIGN.get()));
 
 //==============================================================================================================================================================================================
 //                                                                                          Slabs

@@ -28,6 +28,8 @@ import com.goldfish.goldfishmod02tastyfurniture.block.glowberrySign;
 import com.goldfish.goldfishmod02tastyfurniture.block.glowberryWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.glowberryfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.horizontal_food_block;
+import com.goldfish.goldfishmod02tastyfurniture.block.melonSign;
+import com.goldfish.goldfishmod02tastyfurniture.block.melonWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.melonfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.muttonfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.porkfurnace;
@@ -54,6 +56,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.codfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.glowberrySignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.appleSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.glowberryfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.melonSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.melonfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.muttonfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.porkfurnaceentity;
@@ -1284,6 +1287,54 @@ public class foodblockregistry {
           foodblockregistry.GLOWBERRY_SIGN.get(),
           foodblockregistry.GLOWBERRY_WALL_SIGN.get(),
           foodblockregistry.GLOWBERRY_STANDING_SIGN.get()
+      ).build(null
+    ));
+  //.........melon
+    public static final DeferredHolder<Block, melonSign> MELON_SIGN = FOODBLOCK.register("melon_sign",
+    () -> new melonSign(
+      BlockBehaviour.Properties.of()
+          .lightLevel(state -> 10)
+          .mapColor(MapColor.WOOD)
+          .forceSolidOn()
+          .instrument(NoteBlockInstrument.BASS)
+          .noCollission()
+          .strength(1.0F)
+          .ignitedByLava(),
+          foodmaterialtyperegistry.MELONWOODMAT
+    ));
+    public static final DeferredHolder<Block, melonWallSign> MELON_WALL_SIGN = FOODBLOCK.register("melon_wall_sign",
+    () -> new melonWallSign(
+        BlockBehaviour.Properties.of()
+        .lightLevel(state -> 10)
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.MELONWOODMAT
+    ));
+    public static final DeferredHolder<Block, melonSign> MELON_STANDING_SIGN = FOODBLOCK.register("melon_standing_sign",
+    () -> new melonSign(
+        BlockBehaviour.Properties.of()
+        .lightLevel(state -> 10)
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.MELONWOODMAT
+    ));
+      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<melonSignEntity>> MELON_SIGN_ENTITY = FOODBLOCKENTITY.register(
+      "melon_sign_entity",
+      () -> BlockEntityType.Builder.of(
+          melonSignEntity::new,
+          foodblockregistry.MELON_SIGN.get(),
+          foodblockregistry.MELON_WALL_SIGN.get(),
+          foodblockregistry.MELON_STANDING_SIGN.get()
       ).build(null
     ));
 

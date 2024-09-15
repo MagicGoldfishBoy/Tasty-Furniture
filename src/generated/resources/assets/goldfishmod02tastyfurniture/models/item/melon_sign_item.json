@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "goldfishmod02tastyfurniture:item/melon_sign"
+  }
+}
