@@ -73,6 +73,11 @@ public class foodmaterialtyperegistry {
         "beetroot_wood_mat", 
         PLANT) 
     );
+    public static final WoodType CARROTWOODMAT = WoodType.register(
+     new WoodType(
+        "carrot_wood_mat", 
+        PLANT) 
+    );
 
         public static final Tier APPLE_TIER = new SimpleTier(
             BlockTags.INCORRECT_FOR_STONE_TOOL,

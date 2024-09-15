@@ -515,6 +515,9 @@ public class foodblockitemregistry {
   //beetroot
      public static final DeferredHolder<Item, SignItem> BEETROOT_SIGN_ITEM = FOODBLOCKITEM.register("beetroot_sign_item",
      () -> new SignItem(new SignItem.Properties(), foodblockregistry.BEETROOT_STANDING_SIGN.get(), foodblockregistry.BEETROOT_WALL_SIGN.get()));
+  //carrot
+     public static final DeferredHolder<Item, SignItem> CARROT_SIGN_ITEM = FOODBLOCKITEM.register("carrot_sign_item",
+     () -> new SignItem(new SignItem.Properties(), foodblockregistry.CARROT_STANDING_SIGN.get(), foodblockregistry.CARROT_WALL_SIGN.get()));
 
 //==============================================================================================================================================================================================
 //                                                                                          Slabs

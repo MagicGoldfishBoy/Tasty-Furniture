@@ -13,6 +13,8 @@ import com.goldfish.goldfishmod02tastyfurniture.block.beetrootSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.beetrootWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.beetrootfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.brown_mushroomfurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.carrotSign;
+import com.goldfish.goldfishmod02tastyfurniture.block.carrotWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.chickenfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.chorusfurnace;
@@ -39,6 +41,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.beeffurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.brown_mushroomfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.carrotSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.carrotfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chickenfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chorusfurnaceentity;
@@ -1137,6 +1140,51 @@ public class foodblockregistry {
           foodblockregistry.BEETROOT_SIGN.get(),
           foodblockregistry.BEETROOT_WALL_SIGN.get(),
           foodblockregistry.BEETROOT_STANDING_SIGN.get()
+      ).build(null
+    ));
+  //.........carrot
+    public static final DeferredHolder<Block, carrotSign> CARROT_SIGN = FOODBLOCK.register("carrot_sign",
+    () -> new carrotSign(
+      BlockBehaviour.Properties.of()
+          .mapColor(MapColor.WOOD)
+          .forceSolidOn()
+          .instrument(NoteBlockInstrument.BASS)
+          .noCollission()
+          .strength(1.0F)
+          .ignitedByLava(),
+          foodmaterialtyperegistry.CARROTWOODMAT
+    ));
+    public static final DeferredHolder<Block, carrotWallSign> CARROT_WALL_SIGN = FOODBLOCK.register("carrot_wall_sign",
+    () -> new carrotWallSign(
+        BlockBehaviour.Properties.of()
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.CARROTWOODMAT
+    ));
+    public static final DeferredHolder<Block, carrotSign> CARROT_STANDING_SIGN = FOODBLOCK.register("carrot_standing_sign",
+    () -> new carrotSign(
+        BlockBehaviour.Properties.of()
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.CARROTWOODMAT
+    ));
+      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<carrotSignEntity>> CARROT_SIGN_ENTITY = FOODBLOCKENTITY.register(
+      "carrot_sign_entity",
+      () -> BlockEntityType.Builder.of(
+          carrotSignEntity::new,
+          foodblockregistry.CARROT_SIGN.get(),
+          foodblockregistry.CARROT_WALL_SIGN.get(),
+          foodblockregistry.CARROT_STANDING_SIGN.get()
       ).build(null
     ));
 
