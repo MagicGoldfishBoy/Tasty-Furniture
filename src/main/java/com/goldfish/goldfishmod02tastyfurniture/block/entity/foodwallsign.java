@@ -21,14 +21,14 @@ public class foodwallsign extends WallSignBlock {
 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-         return createTickerHelper(type, foodblockregistry.APPLE_SIGN_ENTITY.get(), foodsignentity::tick);
+         return createTickerHelper(type, foodblockregistry.APPLE_SIGN_ENTITY.get(), appleSignEntity::tick);
     }
 
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        if (this.getName().toString().matches(".*apple.*")) {return new foodsignentity(pos, state);}
+        if (this.getName().toString().matches(".*apple.*")) {return new appleSignEntity(pos, state);}
        else if (this.getName().toString().matches(".*potato.*")) {return new potato_sign_entity(pos, state);}
-         else return new foodsignentity(pos, state);
+         else return new appleSignEntity(pos, state);
      }
 
     @Override

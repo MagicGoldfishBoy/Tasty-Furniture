@@ -71,7 +71,7 @@ import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.food_weapon_registry;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.applefurnaceentity;
-import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsignentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.appleSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.Custom_Datagen_Methods.DataGenHelper;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1BlockLootTableProvider;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1BlockStateProvider;

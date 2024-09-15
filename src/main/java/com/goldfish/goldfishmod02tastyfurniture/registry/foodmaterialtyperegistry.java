@@ -1,7 +1,7 @@
 package com.goldfish.goldfishmod02tastyfurniture.registry;
 
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
-import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodsign;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.appleSign;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.sounds.SoundEvents;

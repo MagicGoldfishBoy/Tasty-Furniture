@@ -23,8 +23,8 @@ import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-public class foodsignentity extends SignBlockEntity {
-    public foodsignentity(/*BlockEntityType<?> type, */BlockPos pos, BlockState state) {
+public class appleSignEntity extends SignBlockEntity {
+    public appleSignEntity(/*BlockEntityType<?> type, */BlockPos pos, BlockState state) {
       super(/*getSignEntityType(state.getBlock()), */pos, state);
     }
     @Override
@@ -35,9 +35,8 @@ public class foodsignentity extends SignBlockEntity {
      //   return foodblockregistry.APPLE_SIGN_ENTITY.get();
     // }
 
-    public static void tick(Level level, BlockPos pos, BlockState state, foodsignentity entity) {
+    public static void tick(Level level, BlockPos pos, BlockState state, appleSignEntity entity) {
           if (level instanceof ServerLevel) {
-            //System.out.println("Ticking at " + pos);
           }
     }
     }

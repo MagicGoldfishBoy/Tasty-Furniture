@@ -10,7 +10,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class potato_sign_entity extends foodsignentity {
+public class potato_sign_entity extends appleSignEntity {
   public potato_sign_entity(BlockPos pos, BlockState state) {
     super(pos, state);
   }
@@ -20,7 +20,7 @@ public class potato_sign_entity extends foodsignentity {
   }
   
 
-public static void tick(Level level, BlockPos pos, BlockState state, foodsignentity entity) {
+public static void tick(Level level, BlockPos pos, BlockState state, appleSignEntity entity) {
         if (level instanceof ServerLevel) {
         //System.out.println("Ticking at " + pos);
         }
