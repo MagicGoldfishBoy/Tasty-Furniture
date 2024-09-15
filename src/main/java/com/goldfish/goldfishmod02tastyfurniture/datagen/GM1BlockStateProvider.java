@@ -720,6 +720,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
            ResourceLocation pork_sign_texture = modLoc("block/pork_block");
            signBlock(pork_sign, pork_wall_sign, pork_sign_texture);
         //.........rabbit
+           StandingSignBlock rabbit_sign = foodblockregistry.RABBIT_STANDING_SIGN.get();
+           WallSignBlock rabbit_wall_sign = foodblockregistry.RABBIT_WALL_SIGN.get();
+           ResourceLocation rabbit_sign_texture = modLoc("block/rabbit_block");
+           signBlock(rabbit_sign, rabbit_wall_sign, rabbit_sign_texture);
 
     //----------------------------------------------------------------slabs-------------------------------------------------------------------------------
       //_______________________________________________________Regular Slabs_________________________________________________________________

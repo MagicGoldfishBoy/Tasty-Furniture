@@ -47,6 +47,8 @@ import com.goldfish.goldfishmod02tastyfurniture.block.potatofurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.pumpkinSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.pumpkinWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.pumpkinfurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.rabbitSign;
+import com.goldfish.goldfishmod02tastyfurniture.block.rabbitWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.rabbitfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.red_mushroomfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.redmushroomSign;
@@ -88,6 +90,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.potatoSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.potatofurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.pumpkinSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.pumpkinfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.rabbitSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.rabbitfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.red_mushroomfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.redmushroomSignEntity;
@@ -1861,6 +1864,54 @@ public class foodblockregistry {
           foodblockregistry.PORK_SIGN.get(),
           foodblockregistry.PORK_WALL_SIGN.get(),
           foodblockregistry.PORK_STANDING_SIGN.get()
+      ).build(null
+    ));
+  //.........rabbit
+    public static final DeferredHolder<Block, rabbitSign> RABBIT_SIGN = FOODBLOCK.register("rabbit_sign",
+    () -> new rabbitSign(
+      BlockBehaviour.Properties.of()
+          .lightLevel(state -> 10)
+          .mapColor(MapColor.WOOD)
+          .forceSolidOn()
+          .instrument(NoteBlockInstrument.BASS)
+          .noCollission()
+          .strength(1.0F)
+          .ignitedByLava(),
+          foodmaterialtyperegistry.RABBITWOODMAT
+    ));
+    public static final DeferredHolder<Block, rabbitWallSign> RABBIT_WALL_SIGN = FOODBLOCK.register("rabbit_wall_sign",
+    () -> new rabbitWallSign(
+        BlockBehaviour.Properties.of()
+        .lightLevel(state -> 10)
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.RABBITWOODMAT
+    ));
+    public static final DeferredHolder<Block, rabbitSign> RABBIT_STANDING_SIGN = FOODBLOCK.register("rabbit_standing_sign",
+    () -> new rabbitSign(
+        BlockBehaviour.Properties.of()
+        .lightLevel(state -> 10)
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.RABBITWOODMAT
+    ));
+      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<rabbitSignEntity>> RABBIT_SIGN_ENTITY = FOODBLOCKENTITY.register(
+      "rabbit_sign_entity",
+      () -> BlockEntityType.Builder.of(
+          rabbitSignEntity::new,
+          foodblockregistry.RABBIT_SIGN.get(),
+          foodblockregistry.RABBIT_WALL_SIGN.get(),
+          foodblockregistry.RABBIT_STANDING_SIGN.get()
       ).build(null
     ));
 
