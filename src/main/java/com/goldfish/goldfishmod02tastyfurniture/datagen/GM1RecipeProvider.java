@@ -1078,6 +1078,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('B', Items.STICK)
            .unlockedBy("has_potato_ingot", has(ingotregistry.POTATO_INGOT.get()))
            .save(output);
+         //beetroot_sign
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEETROOT_SIGN_ITEM.get())
+           .pattern("AAA")
+           .pattern("AAA")
+           .pattern(" B ")
+           .define('A', ingotregistry.BEETROOT_INGOT.get())
+           .define('B', Items.STICK)
+           .unlockedBy("has_beetroot_ingot", has(ingotregistry.BEETROOT_INGOT.get()))
+           .save(output);
 
         //-------------------------------------------------------------slabs----------------------------------------------------------------------
          //________________________________________________________Regular Slabs__________________________________________________________________

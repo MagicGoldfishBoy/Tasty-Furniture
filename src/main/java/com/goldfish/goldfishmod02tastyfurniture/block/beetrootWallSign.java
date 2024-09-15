@@ -1,5 +1,6 @@
-package com.goldfish.goldfishmod02tastyfurniture.block.entity;
+package com.goldfish.goldfishmod02tastyfurniture.block;
 
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 
 import net.minecraft.core.BlockPos;
@@ -13,20 +14,20 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.WoodType;
 
-public class potatoWallSign extends WallSignBlock {
-    public potatoWallSign(BlockBehaviour.Properties properties, WoodType woodType) {
+public class beetrootWallSign extends WallSignBlock {
+    public beetrootWallSign(BlockBehaviour.Properties properties, WoodType woodType) {
         super(woodType, properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.FALSE));
     }
 
    @Override
    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        return createTickerHelper(type, foodblockregistry.POTATO_SIGN_ENTITY.get(), potatoSignEntity::tick);
+        return createTickerHelper(type, foodblockregistry.BEETROOT_SIGN_ENTITY.get(), beetrootSignEntity::tick);
    }
 
    @Override
    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-      return new potatoSignEntity(pos, state);
+      return new beetrootSignEntity(pos, state);
     }
 
    @Override
@@ -36,7 +37,8 @@ public class potatoWallSign extends WallSignBlock {
 
    @Override
    public String getDescriptionId() {
-   return "potato_wall_sign";
+   return "beetroot_wall_sign";
    }
    
 }
+

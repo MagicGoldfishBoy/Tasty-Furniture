@@ -1,7 +1,7 @@
 package com.goldfish.goldfishmod02tastyfurniture.registry;
 
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
-import com.goldfish.goldfishmod02tastyfurniture.block.entity.appleSign;
+import com.goldfish.goldfishmod02tastyfurniture.block.appleSign;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.sounds.SoundEvents;
@@ -66,6 +66,11 @@ public class foodmaterialtyperegistry {
     public static final WoodType POTATOWOODMAT = WoodType.register(
      new WoodType(
         "potato_wood_mat", 
+        PLANT) 
+    );
+    public static final WoodType BEETROOTWOODMAT = WoodType.register(
+     new WoodType(
+        "beetroot_wood_mat", 
         PLANT) 
     );
 

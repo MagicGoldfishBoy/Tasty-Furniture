@@ -172,6 +172,7 @@ public class TastyFurniture
         public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(foodblockregistry.APPLE_SIGN_ENTITY.get(), SignRenderer::new);
         event.registerBlockEntityRenderer(foodblockregistry.POTATO_SIGN_ENTITY.get(), SignRenderer::new);
+        event.registerBlockEntityRenderer(foodblockregistry.BEETROOT_SIGN_ENTITY.get(), SignRenderer::new);
         }
 
         //BlockEntityTicker<FurnaceBlockEntity> ticker = (world, pos, state, blockEntity) -> FurnaceBlockEntity.serverTick(world, pos, state, blockEntity);

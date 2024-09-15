@@ -1,5 +1,6 @@
-package com.goldfish.goldfishmod02tastyfurniture.block.entity;
+package com.goldfish.goldfishmod02tastyfurniture.block;
 
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.appleSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 
 import net.minecraft.core.BlockPos;

@@ -1,6 +1,8 @@
-package com.goldfish.goldfishmod02tastyfurniture.block.entity;
+package com.goldfish.goldfishmod02tastyfurniture.block;
 
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.StandingSignBlock;
@@ -11,23 +13,19 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.WoodType;
 
-
-public class appleSign extends StandingSignBlock {
-    public appleSign(BlockBehaviour.Properties properties, WoodType woodType) {
+public class beetrootSign extends StandingSignBlock {
+    public beetrootSign(BlockBehaviour.Properties properties, WoodType woodType) {
         super(woodType, properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.FALSE));
     }
 
      @Override
      public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-         return createTickerHelper(type, foodblockregistry.APPLE_SIGN_ENTITY.get(), appleSignEntity::tick);
+         return createTickerHelper(type, foodblockregistry.BEETROOT_SIGN_ENTITY.get(), beetrootSignEntity::tick);
      }
 
      @Override
      public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-          return new appleSignEntity(pos, state);
+        return new beetrootSignEntity(pos, state);
      }
 }
-
-
-

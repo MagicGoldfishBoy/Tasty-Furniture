@@ -5,8 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
+import com.goldfish.goldfishmod02tastyfurniture.block.appleSign;
+import com.goldfish.goldfishmod02tastyfurniture.block.appleWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.applefurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.beeffurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.beetrootSign;
+import com.goldfish.goldfishmod02tastyfurniture.block.beetrootWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.beetrootfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.brown_mushroomfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotfurnace;
@@ -22,6 +26,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.melonfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.muttonfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.porkfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.potatoSign;
+import com.goldfish.goldfishmod02tastyfurniture.block.potatoWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.potatofurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.pumpkinfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.rabbitfurnace;
@@ -31,20 +36,18 @@ import com.goldfish.goldfishmod02tastyfurniture.block.sweet_berryfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.tropical_fishfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.applefurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beeffurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.brown_mushroomfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.carrotfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chickenfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chorusfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.codfurnaceentity;
-import com.goldfish.goldfishmod02tastyfurniture.block.entity.appleSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.appleSignEntity;
-import com.goldfish.goldfishmod02tastyfurniture.block.entity.appleWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.glowberryfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.melonfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.muttonfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.porkfurnaceentity;
-import com.goldfish.goldfishmod02tastyfurniture.block.entity.potatoWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.potatoSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.potatofurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.pumpkinfurnaceentity;
@@ -1041,54 +1044,101 @@ public class foodblockregistry {
          foodblockregistry.APPLE_WALL_SIGN.get(),
          foodblockregistry.APPLE_STANDING_SIGN.get()
      ).build(null)
- );
+   );
  
 
-   //.........potato
-   public static final DeferredHolder<Block, potatoSign> POTATO_SIGN = FOODBLOCK.register("potato_sign",
-   () -> new potatoSign(
-     BlockBehaviour.Properties.of()
-         .mapColor(MapColor.WOOD)
-         .forceSolidOn()
-         .instrument(NoteBlockInstrument.BASS)
-         .noCollission()
-         .strength(1.0F)
-         .ignitedByLava(),
-         foodmaterialtyperegistry.POTATOWOODMAT
-   ));
-   public static final DeferredHolder<Block, potatoWallSign> POTATO_WALL_SIGN = FOODBLOCK.register("potato_wall_sign",
-   () -> new potatoWallSign(
-       BlockBehaviour.Properties.of()
-       .mapColor(MapColor.WOOD)
-       .forceSolidOn()
-       .instrument(NoteBlockInstrument.BASS)
-       .noCollission()
-       .strength(1.0F)
-       .ignitedByLava()
-       .randomTicks(),
-       foodmaterialtyperegistry.POTATOWOODMAT
-   ));
-   public static final DeferredHolder<Block, potatoSign> POTATO_STANDING_SIGN = FOODBLOCK.register("potato_standing_sign",
-   () -> new potatoSign(
-       BlockBehaviour.Properties.of()
-       .mapColor(MapColor.WOOD)
-       .forceSolidOn()
-       .instrument(NoteBlockInstrument.BASS)
-       .noCollission()
-       .strength(1.0F)
-       .ignitedByLava()
-       .randomTicks(),
-       foodmaterialtyperegistry.POTATOWOODMAT
-   ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<potatoSignEntity>> POTATO_SIGN_ENTITY = FOODBLOCKENTITY.register(
-     "potato_sign_entity",
-     () -> BlockEntityType.Builder.of(
-         potatoSignEntity::new,
-         foodblockregistry.POTATO_SIGN.get(),
-         foodblockregistry.POTATO_WALL_SIGN.get(),
-         foodblockregistry.POTATO_STANDING_SIGN.get()
-     ).build(null
-   ));
+  //.........potato
+    public static final DeferredHolder<Block, potatoSign> POTATO_SIGN = FOODBLOCK.register("potato_sign",
+    () -> new potatoSign(
+      BlockBehaviour.Properties.of()
+          .mapColor(MapColor.WOOD)
+          .forceSolidOn()
+          .instrument(NoteBlockInstrument.BASS)
+          .noCollission()
+          .strength(1.0F)
+          .ignitedByLava(),
+          foodmaterialtyperegistry.POTATOWOODMAT
+    ));
+    public static final DeferredHolder<Block, potatoWallSign> POTATO_WALL_SIGN = FOODBLOCK.register("potato_wall_sign",
+    () -> new potatoWallSign(
+        BlockBehaviour.Properties.of()
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.POTATOWOODMAT
+    ));
+    public static final DeferredHolder<Block, potatoSign> POTATO_STANDING_SIGN = FOODBLOCK.register("potato_standing_sign",
+    () -> new potatoSign(
+        BlockBehaviour.Properties.of()
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.POTATOWOODMAT
+    ));
+      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<potatoSignEntity>> POTATO_SIGN_ENTITY = FOODBLOCKENTITY.register(
+      "potato_sign_entity",
+      () -> BlockEntityType.Builder.of(
+          potatoSignEntity::new,
+          foodblockregistry.POTATO_SIGN.get(),
+          foodblockregistry.POTATO_WALL_SIGN.get(),
+          foodblockregistry.POTATO_STANDING_SIGN.get()
+      ).build(null
+    ));
+
+
+  //.........beetroot
+    public static final DeferredHolder<Block, beetrootSign> BEETROOT_SIGN = FOODBLOCK.register("beetroot_sign",
+    () -> new beetrootSign(
+      BlockBehaviour.Properties.of()
+          .mapColor(MapColor.WOOD)
+          .forceSolidOn()
+          .instrument(NoteBlockInstrument.BASS)
+          .noCollission()
+          .strength(1.0F)
+          .ignitedByLava(),
+          foodmaterialtyperegistry.BEETROOTWOODMAT
+    ));
+    public static final DeferredHolder<Block, beetrootWallSign> BEETROOT_WALL_SIGN = FOODBLOCK.register("beetroot_wall_sign",
+    () -> new beetrootWallSign(
+        BlockBehaviour.Properties.of()
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.BEETROOTWOODMAT
+    ));
+    public static final DeferredHolder<Block, beetrootSign> BEETROOT_STANDING_SIGN = FOODBLOCK.register("beetroot_standing_sign",
+    () -> new beetrootSign(
+        BlockBehaviour.Properties.of()
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.BEETROOTWOODMAT
+    ));
+      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<beetrootSignEntity>> BEETROOT_SIGN_ENTITY = FOODBLOCKENTITY.register(
+      "beetroot_sign_entity",
+      () -> BlockEntityType.Builder.of(
+          beetrootSignEntity::new,
+          foodblockregistry.BEETROOT_SIGN.get(),
+          foodblockregistry.BEETROOT_WALL_SIGN.get(),
+          foodblockregistry.BEETROOT_STANDING_SIGN.get()
+      ).build(null
+    ));
 
 //==============================================================================================================================================================================================
 //                                                                                          Slabs

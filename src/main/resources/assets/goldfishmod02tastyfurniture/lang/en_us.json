@@ -307,6 +307,7 @@
           "block.goldfishmod02tastyfurniture.rabbit_carpet": "Rabbit Carpet",
            "block.goldfishmod02tastyfurniture.apple_standing_sign": "Apple Sign",
            "block.goldfishmod02tastyfurniture.potato_standing_sign": "Potato Sign",
+           "block.goldfishmod02tastyfurniture.beetroot_standing_sign": "Beetroot Sign",
         "item.goldfishmod02tastyfurniture.apple_sword": "Apple Sword",
          "tooltip.goldfishmod02tastyfurniture.apple_sword.tooltip": "Hitting entities with this sword allow them to start their own space program!",
         "item.goldfishmod02tastyfurniture.potato_sword": "Potato Sword",
