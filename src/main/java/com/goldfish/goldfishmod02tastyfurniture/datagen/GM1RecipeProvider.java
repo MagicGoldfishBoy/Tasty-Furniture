@@ -4391,8 +4391,8 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .requires(Items.STONE)
             .unlockedBy("has_rabbit_block", has(foodblockitemregistry.RABBIT_BLOCK_ITEM.get()))
             .save(output);
-        //-------------------------------------------------------------barrels----------------------------------------------------------------------
-         //apple_sign
+        //-----------------------------------------------------------barrels----------------------------------------------------------------------
+         //apple
            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_BARREL_ITEM.get())
            .pattern("ABA")
            .pattern("A A")
@@ -4400,6 +4400,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('A', foodblockitemregistry.APPLE_BLOCK_ITEM.get())
            .define('B', foodblockitemregistry.APPLE_SLAB_ITEM.get())
            .unlockedBy("has_apple_block", has(foodblockitemregistry.APPLE_BLOCK_ITEM.get()))
+           .save(output);
+         //potato
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.POTATO_BARREL_ITEM.get())
+           .pattern("ABA")
+           .pattern("A A")
+           .pattern("ABA")
+           .define('A', foodblockitemregistry.POTATO_BLOCK_ITEM.get())
+           .define('B', foodblockitemregistry.POTATO_SLAB_ITEM.get())
+           .unlockedBy("has_potato_block", has(foodblockitemregistry.POTATO_BLOCK_ITEM.get()))
            .save(output);
 
         }

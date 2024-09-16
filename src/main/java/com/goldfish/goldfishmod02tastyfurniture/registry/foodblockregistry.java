@@ -43,6 +43,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.muttonfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.porkSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.porkWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.porkfurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.potatoBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.potatoSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.potatoWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.potatofurnace;
@@ -90,6 +91,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.muttonSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.muttonfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.porkSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.porkfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.potatoBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.potatoSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.potatofurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.pumpkinSignEntity;
@@ -4463,6 +4465,15 @@ public class foodblockregistry {
      () -> BlockEntityType.Builder.of(appleBarrelEntity::new, foodblockregistry.APPLE_BARREL.get()).build(null));
 
    //.........potato
+     public static final DeferredHolder<Block, potatoBarrel> POTATO_BARREL = FOODBLOCK.register("potato_barrel", () -> new potatoBarrel(BlockBehaviour.Properties.of()
+     .sound(plant_barrel_sound)
+     .destroyTime(barrel_destroy_time)
+     .explosionResistance(barrel_explosion_resistance)
+     ));
+
+     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<potatoBarrelEntity>> POTATO_BARREL_ENTITY = FOODBLOCKENTITY.register("potato_barrel_entity", 
+     () -> BlockEntityType.Builder.of(potatoBarrelEntity::new, foodblockregistry.POTATO_BARREL.get()).build(null));
+
    //.........beetroot
    //.........carrot
    //.........chorus
