@@ -68,6 +68,7 @@ import java.util.stream.Stream;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistry;
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
+import com.goldfish.goldfishmod02tastyfurniture.block.appleBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.Custom_Datagen_Methods.DataGenHelper;
 
 public class GM1BlockStateProvider extends BlockStateProvider 
@@ -5616,6 +5617,56 @@ public class GM1BlockStateProvider extends BlockStateProvider
           //             .rotationY(rotation)
           //             .build();
           //     });
+
+    //---------------------------------------------------------------barrels-------------------------------------------------------------------------------
+        //.............apple
+          appleBarrel apple_barrel = foodblockregistry.APPLE_BARREL.get();
+          ResourceLocation apple_barrel_closed_texture = modLoc("block/apple_barrel_top_closed");
+          ResourceLocation apple_barrel_open_texture = modLoc("block/apple_barrel_top_open");
+          ResourceLocation apple_barrel_side = modLoc("block/apple_barrel");
+          ResourceLocation apple_barrel_bottom = modLoc("block/apple_barrel_bottom");
+          
+          BlockModelBuilder apple_barrel_model_closed = models()
+              .withExistingParent("apple_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", apple_barrel_side)
+              .texture("bottom", apple_barrel_bottom)
+              .texture("top", apple_barrel_closed_texture)
+              .texture("particle", apple_barrel_side);
+          
+          BlockModelBuilder apple_barrel_model_open = models()
+              .withExistingParent("apple_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", apple_barrel_side)
+              .texture("bottom", apple_barrel_bottom)
+              .texture("top", apple_barrel_open_texture)
+              .texture("particle", apple_barrel_side);
+          
+          getVariantBuilder(apple_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/apple_barrel_model_open") : modLoc("block/apple_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
    };
 }
     
