@@ -7,6 +7,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.CarpetBlock;
 import net.minecraft.world.level.block.ChainBlock;
+import net.minecraft.world.level.block.ChestBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FurnaceBlock;
@@ -5580,6 +5581,32 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = lit ? modLoc("block/rabbit_furnace_model_lit") : modLoc("block/rabbit_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
+    //---------------------------------------------------------------chests-------------------------------------------------------------------------------
+        //.............apple
+          ChestBlock apple_chest = foodblockregistry.APPLE_CHEST.get();
+          ResourceLocation apple_chest_texture = modLoc("block/apple_block");
+          BlockModelBuilder apple_chest_model = models()
+          .withExistingParent("apple_chest_model", mcLoc("block/chest"))
+          .texture("wood", apple_chest_texture);
+
+          getVariantBuilder(apple_chest)
+              .forAllStates(state -> {
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = modLoc("block/apple_chest_model");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))
