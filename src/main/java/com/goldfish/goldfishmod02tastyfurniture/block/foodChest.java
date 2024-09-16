@@ -1,5 +1,6 @@
 package com.goldfish.goldfishmod02tastyfurniture.block;
 
+import net.minecraft.client.resources.model.Material;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -30,6 +31,7 @@ import org.jetbrains.annotations.Nullable;
 
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodChestEntity;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
+import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistry;
 
 import java.util.*;
 import java.util.function.Supplier;
@@ -38,21 +40,45 @@ public class foodChest extends ChestBlock {
     public DoubleBlockCombiner.Combiner<ChestBlockEntity, Optional<MenuProvider>> NAME_RETRIEVER;
     public final String chestType;
 
-    public foodChest(MapColor colour, String chestType) {
-        super(Properties.ofFullCopy(Blocks.CHEST).mapColor(colour), () -> BlockEntityType.CHEST);
-        this.chestType = chestType;
 
+    public foodChest(MapColor colour, String chestType) {
+        super(Properties.of()
+            .strength(2.5F)
+            .sound(SoundType.WOOD)
+            .mapColor(colour), 
+            () -> foodblockregistry.APPLE_CHEST_ENTITY.get()
+        );
+        this.chestType = chestType;
+        this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.FALSE));
         registerMaterialNameRetriever();
     }
 
+    // public foodChest(MapColor colour, String chestType) {
+    //     super(Properties.ofFullCopy(Blocks.CHEST).mapColor(colour), () -> BlockEntityType.CHEST);
+    //     this.chestType = chestType;
+
+    //     registerMaterialNameRetriever();
+    // }
+
     public foodChest(MapColor colour, SoundType sound, String chestType) {
-        //super(Properties.ofFullCopy(Blocks.CHEST).mapColor(colour).sound(sound), () -> foodblockregistry.APPLE_CHEST_ENTITY);
-        super(Properties.ofFullCopy(Blocks.CHEST).mapColor(colour).sound(sound), () -> foodblockregistry.APPLE_CHEST_ENTITY.get());//BlockEntityType.CHEST);
+        super(Properties.of()
+        .strength(2.5F)
+        .sound(SoundType.WOOD)
+        .mapColor(colour),  
+        () -> foodblockregistry.APPLE_CHEST_ENTITY.get());//BlockEntityType.CHEST);
         this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.FALSE));
         this.chestType = chestType;
 
         registerMaterialNameRetriever();
     }
+    // public foodChest(MapColor colour, SoundType sound, String chestType) {
+    //     //super(Properties.ofFullCopy(Blocks.CHEST).mapColor(colour).sound(sound), () -> foodblockregistry.APPLE_CHEST_ENTITY);
+    //     super(Properties.ofFullCopy(Blocks.CHEST).mapColor(colour).sound(sound), () -> foodblockregistry.APPLE_CHEST_ENTITY.get());//BlockEntityType.CHEST);
+    //     this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.FALSE));
+    //     this.chestType = chestType;
+
+    //     registerMaterialNameRetriever();
+    // }
 
     public foodChest(BlockBehaviour.Properties properties, Supplier<BlockEntityType<? extends ChestBlockEntity>> supplier, String chestType) {
         super(properties, supplier);

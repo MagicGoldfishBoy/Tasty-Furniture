@@ -5593,26 +5593,29 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation apple_chest_texture = modLoc("block/apple_block");
           BlockModelBuilder apple_chest_model = models()
           .withExistingParent("apple_chest_model", mcLoc("block/chest"))
-          .texture("wood", apple_chest_texture);
+          .texture("wood_type", apple_chest_texture)
+          .texture("particle", apple_chest_texture);
 
-          getVariantBuilder(apple_chest)
-              .forAllStates(state -> {
-                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-                  int rotation = switch (facing) {
-                      case NORTH -> 0;
-                      case EAST -> 90;
-                      case SOUTH -> 180;
-                      case WEST -> 270;
-                      default -> 0;
-                  };
+          simpleBlock(apple_chest, apple_chest_model);
 
-                  ResourceLocation modelLocation = modLoc("block/apple_chest_model");
+          // getVariantBuilder(apple_chest)
+          //     .forAllStates(state -> {
+          //         Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+          //         int rotation = switch (facing) {
+          //             case NORTH -> 0;
+          //             case EAST -> 90;
+          //             case SOUTH -> 180;
+          //             case WEST -> 270;
+          //             default -> 0;
+          //         };
+
+          //         ResourceLocation modelLocation = modLoc("block/apple_chest_model");
               
-                  return ConfiguredModel.builder()
-                      .modelFile(models().getExistingFile(modelLocation))
-                      .rotationY(rotation)
-                      .build();
-              });
+          //         return ConfiguredModel.builder()
+          //             .modelFile(models().getExistingFile(modelLocation))
+          //             .rotationY(rotation)
+          //             .build();
+          //     });
    };
 }
     

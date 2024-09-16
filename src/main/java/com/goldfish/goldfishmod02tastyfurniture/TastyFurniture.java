@@ -192,7 +192,9 @@ public class TastyFurniture
         event.registerBlockEntityRenderer(foodblockregistry.RABBIT_SIGN_ENTITY.get(), SignRenderer::new);
 
         event.registerBlockEntityRenderer(foodblockregistry.APPLE_CHEST_ENTITY.get(), ChestRenderer::new);
+        //event.registerBlockEntityRenderer(foodblockregistry.APPLE_CHEST_ENTITY.value(), ChestRenderer::new);
         }
+        
     }
 
 

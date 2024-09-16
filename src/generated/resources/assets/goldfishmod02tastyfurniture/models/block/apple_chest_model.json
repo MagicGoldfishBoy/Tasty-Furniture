@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:block/chest",
   "textures": {
-    "wood": "goldfishmod02tastyfurniture:block/apple_block"
+    "particle": "goldfishmod02tastyfurniture:block/apple_block",
+    "wood_type": "goldfishmod02tastyfurniture:block/apple_block"
   }
 }
