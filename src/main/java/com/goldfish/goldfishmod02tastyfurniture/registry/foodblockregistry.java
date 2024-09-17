@@ -45,6 +45,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.melonBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.melonSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.melonWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.melonfurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.muttonBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.muttonSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.muttonWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.muttonfurnace;
@@ -108,6 +109,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.glowberryfurnaceent
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.melonBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.melonSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.melonfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.muttonBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.muttonSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.muttonfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.porkSignEntity;
@@ -4632,6 +4634,15 @@ public class foodblockregistry {
      () -> BlockEntityType.Builder.of(tropicalfishBarrelEntity::new, foodblockregistry.TROPICALFISH_BARREL.get()).build(null));
 
    //.........mutton
+     public static final DeferredHolder<Block, muttonBarrel> MUTTON_BARREL = FOODBLOCK.register("mutton_barrel", () -> new muttonBarrel(BlockBehaviour.Properties.of()
+     .sound(meat_barrel_sound)
+     .destroyTime(barrel_destroy_time)
+     .explosionResistance(barrel_explosion_resistance)
+     ));
+
+     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<muttonBarrelEntity>> MUTTON_BARREL_ENTITY = FOODBLOCKENTITY.register("mutton_barrel_entity", 
+     () -> BlockEntityType.Builder.of(muttonBarrelEntity::new, foodblockregistry.MUTTON_BARREL.get()).build(null));
+
    //.........beef
    //.........pork
    //.........rabbit

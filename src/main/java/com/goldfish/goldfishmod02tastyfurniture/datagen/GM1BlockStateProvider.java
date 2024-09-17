@@ -77,6 +77,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.chorusBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.codBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.glowberryBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.melonBarrel;
+import com.goldfish.goldfishmod02tastyfurniture.block.muttonBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.potatoBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.pumpkinBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.redmushroomBarrel;
@@ -6346,6 +6347,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = open ? modLoc("block/tropicalfish_barrel_model_open") : modLoc("block/tropicalfish_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
+        //.............mutton
+          muttonBarrel mutton_barrel = foodblockregistry.MUTTON_BARREL.get();
+          ResourceLocation mutton_barrel_closed_texture = modLoc("block/mutton_barrel_top_closed");
+          ResourceLocation mutton_barrel_open_texture = modLoc("block/mutton_barrel_top_open");
+          ResourceLocation mutton_barrel_side = modLoc("block/mutton_barrel");
+          ResourceLocation mutton_barrel_bottom = modLoc("block/mutton_barrel_bottom");
+          
+          BlockModelBuilder mutton_barrel_model_closed = models()
+              .withExistingParent("mutton_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", mutton_barrel_side)
+              .texture("bottom", mutton_barrel_bottom)
+              .texture("top", mutton_barrel_closed_texture)
+              .texture("particle", mutton_barrel_side);
+          
+          BlockModelBuilder mutton_barrel_model_open = models()
+              .withExistingParent("mutton_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", mutton_barrel_side)
+              .texture("bottom", mutton_barrel_bottom)
+              .texture("top", mutton_barrel_open_texture)
+              .texture("particle", mutton_barrel_side);
+          
+          getVariantBuilder(mutton_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/mutton_barrel_model_open") : modLoc("block/mutton_barrel_model_closed");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))
