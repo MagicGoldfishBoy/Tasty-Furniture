@@ -20,6 +20,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.carrotBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotfurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.chickenBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.chickenSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.chickenWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.chickenfurnace;
@@ -86,6 +87,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.brownmushroomSignEn
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.carrotBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.carrotSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.carrotfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.chickenBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chickenSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chickenfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chorusBarrelEntity;
@@ -4584,6 +4586,15 @@ public class foodblockregistry {
      () -> BlockEntityType.Builder.of(pumpkinBarrelEntity::new, foodblockregistry.PUMPKIN_BARREL.get()).build(null));
 
    //.........chicken
+     public static final DeferredHolder<Block, chickenBarrel> CHICKEN_BARREL = FOODBLOCK.register("chicken_barrel", () -> new chickenBarrel(BlockBehaviour.Properties.of()
+     .sound(meat_barrel_sound)
+     .destroyTime(barrel_destroy_time)
+     .explosionResistance(barrel_explosion_resistance)
+     ));
+
+     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<chickenBarrelEntity>> CHICKEN_BARREL_ENTITY = FOODBLOCKENTITY.register("chicken_barrel_entity", 
+     () -> BlockEntityType.Builder.of(chickenBarrelEntity::new, foodblockregistry.CHICKEN_BARREL.get()).build(null));
+
    //.........cod
    //.........salmon
    //.........tropical_fish

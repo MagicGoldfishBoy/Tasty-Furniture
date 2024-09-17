@@ -1,4 +1,4 @@
-// 1.21	2024-09-17T08:53:30.22944624	Loot Tables
+// 1.21	2024-09-17T09:27:06.415750774	Loot Tables
 56ddb3b4406d93958c51301ca7c44f265c39bbc2 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_barrel.json
 f506816aefac13fd3bcb8b3075eefc63b1b6be41 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bars.json
 98b73d11c0b3a3ecadbdd7c289263f01706818e9 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_block.json
@@ -164,6 +164,7 @@ ce408f55ce6719059d5bdfa29995b3a5f7218867 data/goldfishmod02tastyfurniture/loot_t
 4a77a6e9680caa508c64c5796a547663e626f0eb data/goldfishmod02tastyfurniture/loot_table/blocks/carrot_trapdoor.json
 497ae79c3c46a7a6fb43cb70d0c5f0a618e6ee45 data/goldfishmod02tastyfurniture/loot_table/blocks/carrot_wall_sign.json
 5614af14be23bf1e2de151eddd4bb6da9e5920e0 data/goldfishmod02tastyfurniture/loot_table/blocks/carrot_wall_torch.json
+9eabeb594601c98d1cc5454ad76ec10e7a37f4cf data/goldfishmod02tastyfurniture/loot_table/blocks/chicken_barrel.json
 4aa09c1f4e73cce79800095aa1ff0428c4eb1220 data/goldfishmod02tastyfurniture/loot_table/blocks/chicken_bars.json
 8fba7173a4eaf0f2df5be72f3f37efc90e54afa3 data/goldfishmod02tastyfurniture/loot_table/blocks/chicken_block.json
 d205482e0cbac1990cc5b912e4de648e2be5ac0a data/goldfishmod02tastyfurniture/loot_table/blocks/chicken_bricks_block.json
