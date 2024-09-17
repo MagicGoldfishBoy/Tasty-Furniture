@@ -53,6 +53,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.potatoBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.potatoSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.potatoWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.potatofurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.pumpkinBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.pumpkinSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.pumpkinWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.pumpkinfurnace;
@@ -108,6 +109,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.porkfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.potatoBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.potatoSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.potatofurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.pumpkinBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.pumpkinSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.pumpkinfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.rabbitSignEntity;
@@ -4572,6 +4574,15 @@ public class foodblockregistry {
      () -> BlockEntityType.Builder.of(redmushroomBarrelEntity::new, foodblockregistry.REDMUSHROOM_BARREL.get()).build(null));
 
    //.........pumpkin
+     public static final DeferredHolder<Block, pumpkinBarrel> PUMPKIN_BARREL = FOODBLOCK.register("pumpkin_barrel", () -> new pumpkinBarrel(BlockBehaviour.Properties.of()
+     .sound(plant_barrel_sound)
+     .destroyTime(barrel_destroy_time)
+     .explosionResistance(barrel_explosion_resistance)
+     ));
+
+     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<pumpkinBarrelEntity>> PUMPKIN_BARREL_ENTITY = FOODBLOCKENTITY.register("pumpkin_barrel_entity", 
+     () -> BlockEntityType.Builder.of(pumpkinBarrelEntity::new, foodblockregistry.PUMPKIN_BARREL.get()).build(null));
+
    //.........chicken
    //.........cod
    //.........salmon
