@@ -60,6 +60,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.rabbitSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.rabbitWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.rabbitfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.red_mushroomfurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.redmushroomBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.redmushroomSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.redmushroomWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.salmonSign;
@@ -112,6 +113,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.pumpkinfurnaceentit
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.rabbitSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.rabbitfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.red_mushroomfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.redmushroomBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.redmushroomSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.salmonSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.salmonfurnaceentity;
@@ -4534,7 +4536,6 @@ public class foodblockregistry {
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
-     .lightLevel(state  -> 10)
      ));
 
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<melonBarrelEntity>> MELON_BARREL_ENTITY = FOODBLOCKENTITY.register("melon_barrel_entity", 
@@ -4545,7 +4546,6 @@ public class foodblockregistry {
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
-     .lightLevel(state  -> 10)
      ));
 
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<sweetberryBarrelEntity>> SWEETBERRY_BARREL_ENTITY = FOODBLOCKENTITY.register("sweetberry_barrel_entity", 
@@ -4556,13 +4556,21 @@ public class foodblockregistry {
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
-     .lightLevel(state  -> 10)
      ));
 
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<brownmushroomBarrelEntity>> BROWNMUSHROOM_BARREL_ENTITY = FOODBLOCKENTITY.register("brownmushroom_barrel_entity", 
      () -> BlockEntityType.Builder.of(brownmushroomBarrelEntity::new, foodblockregistry.BROWNMUSHROOM_BARREL.get()).build(null));
 
    //.........red_mushroom
+     public static final DeferredHolder<Block, redmushroomBarrel> REDMUSHROOM_BARREL = FOODBLOCK.register("redmushroom_barrel", () -> new redmushroomBarrel(BlockBehaviour.Properties.of()
+     .sound(plant_barrel_sound)
+     .destroyTime(barrel_destroy_time)
+     .explosionResistance(barrel_explosion_resistance)
+     ));
+
+     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<redmushroomBarrelEntity>> REDMUSHROOM_BARREL_ENTITY = FOODBLOCKENTITY.register("redmushroom_barrel_entity", 
+     () -> BlockEntityType.Builder.of(redmushroomBarrelEntity::new, foodblockregistry.REDMUSHROOM_BARREL.get()).build(null));
+
    //.........pumpkin
    //.........chicken
    //.........cod

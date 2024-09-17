@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_redmushroom_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod02tastyfurniture:red_mushroom_block_item"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "goldfishmod02tastyfurniture:redmushroom_barrel_item"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_redmushroom_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "goldfishmod02tastyfurniture:redmushroom_barrel_item"
+    ]
+  }
+}

@@ -76,6 +76,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.chorusBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.glowberryBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.melonBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.potatoBarrel;
+import com.goldfish.goldfishmod02tastyfurniture.block.redmushroomBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweetberryBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.Custom_Datagen_Methods.DataGenHelper;
 
@@ -6052,6 +6053,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = open ? modLoc("block/brownmushroom_barrel_model_open") : modLoc("block/brownmushroom_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
+        //.............redmushroom
+          redmushroomBarrel redmushroom_barrel = foodblockregistry.REDMUSHROOM_BARREL.get();
+          ResourceLocation redmushroom_barrel_closed_texture = modLoc("block/redmushroom_barrel_top_closed");
+          ResourceLocation redmushroom_barrel_open_texture = modLoc("block/redmushroom_barrel_top_open");
+          ResourceLocation redmushroom_barrel_side = modLoc("block/redmushroom_barrel");
+          ResourceLocation redmushroom_barrel_bottom = modLoc("block/redmushroom_barrel_bottom");
+          
+          BlockModelBuilder redmushroom_barrel_model_closed = models()
+              .withExistingParent("redmushroom_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", redmushroom_barrel_side)
+              .texture("bottom", redmushroom_barrel_bottom)
+              .texture("top", redmushroom_barrel_closed_texture)
+              .texture("particle", redmushroom_barrel_side);
+          
+          BlockModelBuilder redmushroom_barrel_model_open = models()
+              .withExistingParent("redmushroom_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", redmushroom_barrel_side)
+              .texture("bottom", redmushroom_barrel_bottom)
+              .texture("top", redmushroom_barrel_open_texture)
+              .texture("particle", redmushroom_barrel_side);
+          
+          getVariantBuilder(redmushroom_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/redmushroom_barrel_model_open") : modLoc("block/redmushroom_barrel_model_closed");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))
