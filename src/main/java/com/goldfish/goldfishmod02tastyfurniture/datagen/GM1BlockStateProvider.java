@@ -82,6 +82,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.pumpkinBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.redmushroomBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.salmonBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweetberryBarrel;
+import com.goldfish.goldfishmod02tastyfurniture.block.tropicalfishBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.Custom_Datagen_Methods.DataGenHelper;
 
 public class GM1BlockStateProvider extends BlockStateProvider 
@@ -6297,6 +6298,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = open ? modLoc("block/salmon_barrel_model_open") : modLoc("block/salmon_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
+        //.............tropicalfish
+          tropicalfishBarrel tropicalfish_barrel = foodblockregistry.TROPICALFISH_BARREL.get();
+          ResourceLocation tropicalfish_barrel_closed_texture = modLoc("block/tropicalfish_barrel_top_closed");
+          ResourceLocation tropicalfish_barrel_open_texture = modLoc("block/tropicalfish_barrel_top_open");
+          ResourceLocation tropicalfish_barrel_side = modLoc("block/tropicalfish_barrel");
+          ResourceLocation tropicalfish_barrel_bottom = modLoc("block/tropicalfish_barrel_bottom");
+          
+          BlockModelBuilder tropicalfish_barrel_model_closed = models()
+              .withExistingParent("tropicalfish_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", tropicalfish_barrel_side)
+              .texture("bottom", tropicalfish_barrel_bottom)
+              .texture("top", tropicalfish_barrel_closed_texture)
+              .texture("particle", tropicalfish_barrel_side);
+          
+          BlockModelBuilder tropicalfish_barrel_model_open = models()
+              .withExistingParent("tropicalfish_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", tropicalfish_barrel_side)
+              .texture("bottom", tropicalfish_barrel_bottom)
+              .texture("top", tropicalfish_barrel_open_texture)
+              .texture("particle", tropicalfish_barrel_side);
+          
+          getVariantBuilder(tropicalfish_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/tropicalfish_barrel_model_open") : modLoc("block/tropicalfish_barrel_model_closed");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))

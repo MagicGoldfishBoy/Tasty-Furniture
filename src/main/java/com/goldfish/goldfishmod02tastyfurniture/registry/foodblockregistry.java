@@ -75,6 +75,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.sweetberryBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweetberrySign;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweetberryWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.tropical_fishfurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.tropicalfishBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.tropicalfishSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.tropicalfishWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.applefurnaceentity;
@@ -129,6 +130,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.sweet_berryfurnacee
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.sweetberryBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.sweetberrySignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.tropical_fishfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.tropicalfishBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.tropicalfishSignEntity;
 
 import net.minecraft.core.particles.ParticleTypes;
@@ -4620,6 +4622,15 @@ public class foodblockregistry {
      () -> BlockEntityType.Builder.of(salmonBarrelEntity::new, foodblockregistry.SALMON_BARREL.get()).build(null));
 
    //.........tropical_fish
+     public static final DeferredHolder<Block, tropicalfishBarrel> TROPICALFISH_BARREL = FOODBLOCK.register("tropicalfish_barrel", () -> new tropicalfishBarrel(BlockBehaviour.Properties.of()
+     .sound(meat_barrel_sound)
+     .destroyTime(barrel_destroy_time)
+     .explosionResistance(barrel_explosion_resistance)
+     ));
+
+     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<tropicalfishBarrelEntity>> TROPICALFISH_BARREL_ENTITY = FOODBLOCKENTITY.register("tropicalfish_barrel_entity", 
+     () -> BlockEntityType.Builder.of(tropicalfishBarrelEntity::new, foodblockregistry.TROPICALFISH_BARREL.get()).build(null));
+
    //.........mutton
    //.........beef
    //.........pork
