@@ -72,6 +72,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.appleBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.beetrootBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.chorusBarrel;
+import com.goldfish.goldfishmod02tastyfurniture.block.glowberryBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.potatoBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.Custom_Datagen_Methods.DataGenHelper;
 
@@ -5856,6 +5857,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = open ? modLoc("block/chorus_barrel_model_open") : modLoc("block/chorus_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
+        //.............glowberry
+          glowberryBarrel glowberry_barrel = foodblockregistry.GLOWBERRY_BARREL.get();
+          ResourceLocation glowberry_barrel_closed_texture = modLoc("block/glowberry_barrel_top_closed");
+          ResourceLocation glowberry_barrel_open_texture = modLoc("block/glowberry_barrel_top_open");
+          ResourceLocation glowberry_barrel_side = modLoc("block/glowberry_barrel");
+          ResourceLocation glowberry_barrel_bottom = modLoc("block/glowberry_barrel_bottom");
+          
+          BlockModelBuilder glowberry_barrel_model_closed = models()
+              .withExistingParent("glowberry_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", glowberry_barrel_side)
+              .texture("bottom", glowberry_barrel_bottom)
+              .texture("top", glowberry_barrel_closed_texture)
+              .texture("particle", glowberry_barrel_side);
+          
+          BlockModelBuilder glowberry_barrel_model_open = models()
+              .withExistingParent("glowberry_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", glowberry_barrel_side)
+              .texture("bottom", glowberry_barrel_bottom)
+              .texture("top", glowberry_barrel_open_texture)
+              .texture("particle", glowberry_barrel_side);
+          
+          getVariantBuilder(glowberry_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/glowberry_barrel_model_open") : modLoc("block/glowberry_barrel_model_closed");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))

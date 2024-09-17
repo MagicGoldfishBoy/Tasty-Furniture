@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod02tastyfurniture:glow_berry_block_item"
+    },
+    "B": {
+      "item": "goldfishmod02tastyfurniture:glow_berry_slab_item"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "A A",
+    "ABA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "goldfishmod02tastyfurniture:glowberry_barrel_item"
+  }
+}
