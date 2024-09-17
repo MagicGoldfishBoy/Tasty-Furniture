@@ -74,6 +74,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.brownmushroomBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.chickenBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.chorusBarrel;
+import com.goldfish.goldfishmod02tastyfurniture.block.codBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.glowberryBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.melonBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.potatoBarrel;
@@ -6199,6 +6200,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = open ? modLoc("block/chicken_barrel_model_open") : modLoc("block/chicken_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
+        //.............cod
+          codBarrel cod_barrel = foodblockregistry.COD_BARREL.get();
+          ResourceLocation cod_barrel_closed_texture = modLoc("block/cod_barrel_top_closed");
+          ResourceLocation cod_barrel_open_texture = modLoc("block/cod_barrel_top_open");
+          ResourceLocation cod_barrel_side = modLoc("block/cod_barrel");
+          ResourceLocation cod_barrel_bottom = modLoc("block/cod_barrel_bottom");
+          
+          BlockModelBuilder cod_barrel_model_closed = models()
+              .withExistingParent("cod_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", cod_barrel_side)
+              .texture("bottom", cod_barrel_bottom)
+              .texture("top", cod_barrel_closed_texture)
+              .texture("particle", cod_barrel_side);
+          
+          BlockModelBuilder cod_barrel_model_open = models()
+              .withExistingParent("cod_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", cod_barrel_side)
+              .texture("bottom", cod_barrel_bottom)
+              .texture("top", cod_barrel_open_texture)
+              .texture("particle", cod_barrel_side);
+          
+          getVariantBuilder(cod_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/cod_barrel_model_open") : modLoc("block/cod_barrel_model_closed");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))

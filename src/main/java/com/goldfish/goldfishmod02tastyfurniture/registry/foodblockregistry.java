@@ -28,6 +28,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.chorusBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.chorusSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.chorusWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.chorusfurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.codBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.codSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.codWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.codfurnace;
@@ -93,6 +94,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.chickenfurnaceentit
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chorusBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chorusSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chorusfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.codBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.codSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.codfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodChestEntity;
@@ -4596,6 +4598,15 @@ public class foodblockregistry {
      () -> BlockEntityType.Builder.of(chickenBarrelEntity::new, foodblockregistry.CHICKEN_BARREL.get()).build(null));
 
    //.........cod
+     public static final DeferredHolder<Block, codBarrel> COD_BARREL = FOODBLOCK.register("cod_barrel", () -> new codBarrel(BlockBehaviour.Properties.of()
+     .sound(meat_barrel_sound)
+     .destroyTime(barrel_destroy_time)
+     .explosionResistance(barrel_explosion_resistance)
+     ));
+
+     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<codBarrelEntity>> COD_BARREL_ENTITY = FOODBLOCKENTITY.register("cod_barrel_entity", 
+     () -> BlockEntityType.Builder.of(codBarrelEntity::new, foodblockregistry.COD_BARREL.get()).build(null));
+
    //.........salmon
    //.........tropical_fish
    //.........mutton
