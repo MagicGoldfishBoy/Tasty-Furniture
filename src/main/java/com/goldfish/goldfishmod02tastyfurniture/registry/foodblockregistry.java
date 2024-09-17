@@ -15,6 +15,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.beetrootfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.brown_mushroomfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.brownmushroomSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.brownmushroomWallSign;
+import com.goldfish.goldfishmod02tastyfurniture.block.carrotBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotfurnace;
@@ -74,6 +75,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.brown_mushroomfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.brownmushroomSignEntity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.carrotBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.carrotSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.carrotfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chickenSignEntity;
@@ -4487,6 +4489,15 @@ public class foodblockregistry {
      () -> BlockEntityType.Builder.of(beetrootBarrelEntity::new, foodblockregistry.BEETROOT_BARREL.get()).build(null));
 
    //.........carrot
+     public static final DeferredHolder<Block, carrotBarrel> CARROT_BARREL = FOODBLOCK.register("carrot_barrel", () -> new carrotBarrel(BlockBehaviour.Properties.of()
+     .sound(plant_barrel_sound)
+     .destroyTime(barrel_destroy_time)
+     .explosionResistance(barrel_explosion_resistance)
+     ));
+
+     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<carrotBarrelEntity>> CARROT_BARREL_ENTITY = FOODBLOCKENTITY.register("carrot_barrel_entity", 
+     () -> BlockEntityType.Builder.of(carrotBarrelEntity::new, foodblockregistry.CARROT_BARREL.get()).build(null));
+
    //.........chorus
    //.........glow_berry
    //.........melon

@@ -1213,6 +1213,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       withExistingParent("potato_barrel_item", modLoc("block/potato_barrel_model_closed"));
       //..............beetroot
       withExistingParent("beetroot_barrel_item", modLoc("block/beetroot_barrel_model_closed"));
+      //..............carrot
+      withExistingParent("carrot_barrel_item", modLoc("block/carrot_barrel_model_closed"));
   }   
 }
 

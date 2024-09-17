@@ -4419,6 +4419,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('B', foodblockitemregistry.BEETROOT_SLAB_ITEM.get())
            .unlockedBy("has_beetroot_block", has(foodblockitemregistry.BEETROOT_BLOCK_ITEM.get()))
            .save(output);
+         //carrot
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CARROT_BARREL_ITEM.get())
+           .pattern("ABA")
+           .pattern("A A")
+           .pattern("ABA")
+           .define('A', foodblockitemregistry.CARROT_BLOCK_ITEM.get())
+           .define('B', foodblockitemregistry.CARROT_SLAB_ITEM.get())
+           .unlockedBy("has_carrot_block", has(foodblockitemregistry.CARROT_BLOCK_ITEM.get()))
+           .save(output);
 
         }
     }
