@@ -66,6 +66,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.red_mushroomfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.redmushroomBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.redmushroomSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.redmushroomWallSign;
+import com.goldfish.goldfishmod02tastyfurniture.block.salmonBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.salmonSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.salmonWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.salmonfurnace;
@@ -121,6 +122,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.rabbitfurnaceentity
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.red_mushroomfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.redmushroomBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.redmushroomSignEntity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.salmonBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.salmonSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.salmonfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.sweet_berryfurnaceentity;
@@ -4608,6 +4610,15 @@ public class foodblockregistry {
      () -> BlockEntityType.Builder.of(codBarrelEntity::new, foodblockregistry.COD_BARREL.get()).build(null));
 
    //.........salmon
+     public static final DeferredHolder<Block, salmonBarrel> SALMON_BARREL = FOODBLOCK.register("salmon_barrel", () -> new salmonBarrel(BlockBehaviour.Properties.of()
+     .sound(meat_barrel_sound)
+     .destroyTime(barrel_destroy_time)
+     .explosionResistance(barrel_explosion_resistance)
+     ));
+
+     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<salmonBarrelEntity>> SALMON_BARREL_ENTITY = FOODBLOCKENTITY.register("salmon_barrel_entity", 
+     () -> BlockEntityType.Builder.of(salmonBarrelEntity::new, foodblockregistry.SALMON_BARREL.get()).build(null));
+
    //.........tropical_fish
    //.........mutton
    //.........beef
