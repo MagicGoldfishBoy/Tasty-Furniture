@@ -71,6 +71,7 @@ import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 import com.goldfish.goldfishmod02tastyfurniture.block.appleBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.beetrootBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotBarrel;
+import com.goldfish.goldfishmod02tastyfurniture.block.chorusBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.potatoBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.Custom_Datagen_Methods.DataGenHelper;
 
@@ -5807,6 +5808,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = open ? modLoc("block/carrot_barrel_model_open") : modLoc("block/carrot_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
+        //.............chorus
+          chorusBarrel chorus_barrel = foodblockregistry.CHORUS_BARREL.get();
+          ResourceLocation chorus_barrel_closed_texture = modLoc("block/chorus_barrel_top_closed");
+          ResourceLocation chorus_barrel_open_texture = modLoc("block/chorus_barrel_top_open");
+          ResourceLocation chorus_barrel_side = modLoc("block/chorus_barrel");
+          ResourceLocation chorus_barrel_bottom = modLoc("block/chorus_barrel_bottom");
+          
+          BlockModelBuilder chorus_barrel_model_closed = models()
+              .withExistingParent("chorus_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", chorus_barrel_side)
+              .texture("bottom", chorus_barrel_bottom)
+              .texture("top", chorus_barrel_closed_texture)
+              .texture("particle", chorus_barrel_side);
+          
+          BlockModelBuilder chorus_barrel_model_open = models()
+              .withExistingParent("chorus_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", chorus_barrel_side)
+              .texture("bottom", chorus_barrel_bottom)
+              .texture("top", chorus_barrel_open_texture)
+              .texture("particle", chorus_barrel_side);
+          
+          getVariantBuilder(chorus_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/chorus_barrel_model_open") : modLoc("block/chorus_barrel_model_closed");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))

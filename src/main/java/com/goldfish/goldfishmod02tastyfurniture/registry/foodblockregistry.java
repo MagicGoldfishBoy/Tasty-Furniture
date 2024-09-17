@@ -22,6 +22,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.carrotfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.chickenSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.chickenWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.chickenfurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.chorusBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.chorusSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.chorusWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.chorusfurnace;
@@ -80,6 +81,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.carrotSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.carrotfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chickenSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chickenfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.chorusBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chorusSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chorusfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.codSignEntity;
@@ -4499,6 +4501,15 @@ public class foodblockregistry {
      () -> BlockEntityType.Builder.of(carrotBarrelEntity::new, foodblockregistry.CARROT_BARREL.get()).build(null));
 
    //.........chorus
+     public static final DeferredHolder<Block, chorusBarrel> CHORUS_BARREL = FOODBLOCK.register("chorus_barrel", () -> new chorusBarrel(BlockBehaviour.Properties.of()
+     .sound(plant_barrel_sound)
+     .destroyTime(barrel_destroy_time)
+     .explosionResistance(barrel_explosion_resistance)
+     ));
+
+     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<chorusBarrelEntity>> CHORUS_BARREL_ENTITY = FOODBLOCKENTITY.register("chorus_barrel_entity", 
+     () -> BlockEntityType.Builder.of(chorusBarrelEntity::new, foodblockregistry.CHORUS_BARREL.get()).build(null));
+
    //.........glow_berry
    //.........melon
    //.........sweet_berry
