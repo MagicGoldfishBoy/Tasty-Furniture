@@ -65,6 +65,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.salmonSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.salmonWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.salmonfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweet_berryfurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.sweetberryBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweetberrySign;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweetberryWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.tropical_fishfurnace;
@@ -113,6 +114,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.redmushroomSignEnti
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.salmonSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.salmonfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.sweet_berryfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.sweetberryBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.sweetberrySignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.tropical_fishfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.tropicalfishSignEntity;
@@ -4536,7 +4538,17 @@ public class foodblockregistry {
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<melonBarrelEntity>> MELON_BARREL_ENTITY = FOODBLOCKENTITY.register("melon_barrel_entity", 
      () -> BlockEntityType.Builder.of(melonBarrelEntity::new, foodblockregistry.MELON_BARREL.get()).build(null));
 
-   //.........sweet_berry
+   //.........sweetberry
+     public static final DeferredHolder<Block, sweetberryBarrel> SWEETBERRY_BARREL = FOODBLOCK.register("sweetberry_barrel", () -> new sweetberryBarrel(BlockBehaviour.Properties.of()
+     .sound(plant_barrel_sound)
+     .destroyTime(barrel_destroy_time)
+     .explosionResistance(barrel_explosion_resistance)
+     .lightLevel(state  -> 10)
+     ));
+
+     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<sweetberryBarrelEntity>> SWEETBERRY_BARREL_ENTITY = FOODBLOCKENTITY.register("sweetberry_barrel_entity", 
+     () -> BlockEntityType.Builder.of(sweetberryBarrelEntity::new, foodblockregistry.SWEETBERRY_BARREL.get()).build(null));
+
    //.........brown_mushroom
    //.........red_mushroom
    //.........pumpkin
