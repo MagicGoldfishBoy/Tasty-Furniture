@@ -1,4 +1,4 @@
-// 1.21	2024-09-16T21:16:26.002855593	Loot Tables
+// 1.21	2024-09-17T06:30:34.036335258	Loot Tables
 56ddb3b4406d93958c51301ca7c44f265c39bbc2 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_barrel.json
 f506816aefac13fd3bcb8b3075eefc63b1b6be41 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bars.json
 98b73d11c0b3a3ecadbdd7c289263f01706818e9 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_block.json
@@ -293,6 +293,7 @@ f25f7d4d0b6f736f9e8b1898e1749ec5284c7262 data/goldfishmod02tastyfurniture/loot_t
 39940fda90d4039841768b81d038de6fcb268d55 data/goldfishmod02tastyfurniture/loot_table/blocks/glowberry_sign.json
 9e92493c01f20627474c4872aeb7d936dc16fea4 data/goldfishmod02tastyfurniture/loot_table/blocks/glowberry_standing_sign.json
 2c65b5cc244876c8396a2f0b65dc25010cc2d2fe data/goldfishmod02tastyfurniture/loot_table/blocks/glowberry_wall_sign.json
+0c6520c946186c63eaadd9f98a7599bb463cf1fa data/goldfishmod02tastyfurniture/loot_table/blocks/melon_barrel.json
 f97e5cbd7dda40dde631a68829cb5156364e8c26 data/goldfishmod02tastyfurniture/loot_table/blocks/melon_bars.json
 68d9cc30669f68bf46c5b59ed84b39db45dd9ce2 data/goldfishmod02tastyfurniture/loot_table/blocks/melon_block.json
 fb5a011e364d24c508a1957797608e962cb9ed0d data/goldfishmod02tastyfurniture/loot_table/blocks/melon_bricks_block.json

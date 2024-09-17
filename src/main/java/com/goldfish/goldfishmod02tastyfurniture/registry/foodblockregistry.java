@@ -38,6 +38,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.glowberrySign;
 import com.goldfish.goldfishmod02tastyfurniture.block.glowberryWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.glowberryfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.horizontal_food_block;
+import com.goldfish.goldfishmod02tastyfurniture.block.melonBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.melonSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.melonWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.melonfurnace;
@@ -93,6 +94,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.glowberrySignEntity
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.appleBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.appleSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.glowberryfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.melonBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.melonSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.melonfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.muttonSignEntity;
@@ -4524,6 +4526,16 @@ public class foodblockregistry {
      () -> BlockEntityType.Builder.of(glowberryBarrelEntity::new, foodblockregistry.GLOWBERRY_BARREL.get()).build(null));
 
    //.........melon
+     public static final DeferredHolder<Block, melonBarrel> MELON_BARREL = FOODBLOCK.register("melon_barrel", () -> new melonBarrel(BlockBehaviour.Properties.of()
+     .sound(plant_barrel_sound)
+     .destroyTime(barrel_destroy_time)
+     .explosionResistance(barrel_explosion_resistance)
+     .lightLevel(state  -> 10)
+     ));
+
+     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<melonBarrelEntity>> MELON_BARREL_ENTITY = FOODBLOCKENTITY.register("melon_barrel_entity", 
+     () -> BlockEntityType.Builder.of(melonBarrelEntity::new, foodblockregistry.MELON_BARREL.get()).build(null));
+
    //.........sweet_berry
    //.........brown_mushroom
    //.........red_mushroom
