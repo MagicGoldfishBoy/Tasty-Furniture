@@ -69,6 +69,7 @@ import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistry;
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 import com.goldfish.goldfishmod02tastyfurniture.block.appleBarrel;
+import com.goldfish.goldfishmod02tastyfurniture.block.beefBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.beetrootBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.brownmushroomBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotBarrel;
@@ -6395,6 +6396,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = open ? modLoc("block/mutton_barrel_model_open") : modLoc("block/mutton_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
+        //.............beef
+          beefBarrel beef_barrel = foodblockregistry.BEEF_BARREL.get();
+          ResourceLocation beef_barrel_closed_texture = modLoc("block/beef_barrel_top_closed");
+          ResourceLocation beef_barrel_open_texture = modLoc("block/beef_barrel_top_open");
+          ResourceLocation beef_barrel_side = modLoc("block/beef_barrel");
+          ResourceLocation beef_barrel_bottom = modLoc("block/beef_barrel_bottom");
+          
+          BlockModelBuilder beef_barrel_model_closed = models()
+              .withExistingParent("beef_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", beef_barrel_side)
+              .texture("bottom", beef_barrel_bottom)
+              .texture("top", beef_barrel_closed_texture)
+              .texture("particle", beef_barrel_side);
+          
+          BlockModelBuilder beef_barrel_model_open = models()
+              .withExistingParent("beef_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", beef_barrel_side)
+              .texture("bottom", beef_barrel_bottom)
+              .texture("top", beef_barrel_open_texture)
+              .texture("particle", beef_barrel_side);
+          
+          getVariantBuilder(beef_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/beef_barrel_model_open") : modLoc("block/beef_barrel_model_closed");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))

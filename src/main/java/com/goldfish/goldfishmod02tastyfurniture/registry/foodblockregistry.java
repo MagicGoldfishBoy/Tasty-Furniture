@@ -5,6 +5,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.appleBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.appleSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.appleWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.applefurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.beefBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.beefSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.beefWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.beeffurnace;
@@ -80,6 +81,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.tropicalfishBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.tropicalfishSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.tropicalfishWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.applefurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.beefBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beefSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beeffurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootBarrelEntity;
@@ -4644,6 +4646,15 @@ public class foodblockregistry {
      () -> BlockEntityType.Builder.of(muttonBarrelEntity::new, foodblockregistry.MUTTON_BARREL.get()).build(null));
 
    //.........beef
+     public static final DeferredHolder<Block, beefBarrel> BEEF_BARREL = FOODBLOCK.register("beef_barrel", () -> new beefBarrel(BlockBehaviour.Properties.of()
+     .sound(meat_barrel_sound)
+     .destroyTime(barrel_destroy_time)
+     .explosionResistance(barrel_explosion_resistance)
+     ));
+
+     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<beefBarrelEntity>> BEEF_BARREL_ENTITY = FOODBLOCKENTITY.register("beef_barrel_entity", 
+     () -> BlockEntityType.Builder.of(beefBarrelEntity::new, foodblockregistry.BEEF_BARREL.get()).build(null));
+
    //.........pork
    //.........rabbit
 
