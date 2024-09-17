@@ -69,6 +69,7 @@ import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistry;
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 import com.goldfish.goldfishmod02tastyfurniture.block.appleBarrel;
+import com.goldfish.goldfishmod02tastyfurniture.block.beetrootBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.potatoBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.Custom_Datagen_Methods.DataGenHelper;
 
@@ -5709,6 +5710,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = open ? modLoc("block/potato_barrel_model_open") : modLoc("block/potato_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
+        //.............beetroot
+          beetrootBarrel beetroot_barrel = foodblockregistry.BEETROOT_BARREL.get();
+          ResourceLocation beetroot_barrel_closed_texture = modLoc("block/beetroot_barrel_top_closed");
+          ResourceLocation beetroot_barrel_open_texture = modLoc("block/beetroot_barrel_top_open");
+          ResourceLocation beetroot_barrel_side = modLoc("block/beetroot_barrel");
+          ResourceLocation beetroot_barrel_bottom = modLoc("block/beetroot_barrel_bottom");
+          
+          BlockModelBuilder beetroot_barrel_model_closed = models()
+              .withExistingParent("beetroot_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", beetroot_barrel_side)
+              .texture("bottom", beetroot_barrel_bottom)
+              .texture("top", beetroot_barrel_closed_texture)
+              .texture("particle", beetroot_barrel_side);
+          
+          BlockModelBuilder beetroot_barrel_model_open = models()
+              .withExistingParent("beetroot_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", beetroot_barrel_side)
+              .texture("bottom", beetroot_barrel_bottom)
+              .texture("top", beetroot_barrel_open_texture)
+              .texture("particle", beetroot_barrel_side);
+          
+          getVariantBuilder(beetroot_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/beetroot_barrel_model_open") : modLoc("block/beetroot_barrel_model_closed");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))

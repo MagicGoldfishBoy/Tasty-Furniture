@@ -8,6 +8,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.applefurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.beefSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.beefWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.beeffurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.beetrootBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.beetrootSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.beetrootWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.beetrootfurnace;
@@ -68,6 +69,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.tropicalfishWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.applefurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beefSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beeffurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.brown_mushroomfurnaceentity;
@@ -4475,6 +4477,15 @@ public class foodblockregistry {
      () -> BlockEntityType.Builder.of(potatoBarrelEntity::new, foodblockregistry.POTATO_BARREL.get()).build(null));
 
    //.........beetroot
+     public static final DeferredHolder<Block, beetrootBarrel> BEETROOT_BARREL = FOODBLOCK.register("beetroot_barrel", () -> new beetrootBarrel(BlockBehaviour.Properties.of()
+     .sound(plant_barrel_sound)
+     .destroyTime(barrel_destroy_time)
+     .explosionResistance(barrel_explosion_resistance)
+     ));
+
+     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<beetrootBarrelEntity>> BEETROOT_BARREL_ENTITY = FOODBLOCKENTITY.register("beetroot_barrel_entity", 
+     () -> BlockEntityType.Builder.of(beetrootBarrelEntity::new, foodblockregistry.BEETROOT_BARREL.get()).build(null));
+
    //.........carrot
    //.........chorus
    //.........glow_berry
