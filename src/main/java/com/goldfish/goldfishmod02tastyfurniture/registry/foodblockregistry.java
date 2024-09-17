@@ -62,6 +62,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.pumpkinBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.pumpkinSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.pumpkinWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.pumpkinfurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.rabbitBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.rabbitSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.rabbitWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.rabbitfurnace;
@@ -124,6 +125,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.potatofurnaceentity
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.pumpkinBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.pumpkinSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.pumpkinfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.rabbitBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.rabbitSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.rabbitfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.red_mushroomfurnaceentity;
@@ -4668,6 +4670,15 @@ public class foodblockregistry {
      () -> BlockEntityType.Builder.of(porkBarrelEntity::new, foodblockregistry.PORK_BARREL.get()).build(null));
 
    //.........rabbit
+     public static final DeferredHolder<Block, rabbitBarrel> RABBIT_BARREL = FOODBLOCK.register("rabbit_barrel", () -> new rabbitBarrel(BlockBehaviour.Properties.of()
+     .sound(meat_barrel_sound)
+     .destroyTime(barrel_destroy_time)
+     .explosionResistance(barrel_explosion_resistance)
+     ));
+
+     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<rabbitBarrelEntity>> RABBIT_BARREL_ENTITY = FOODBLOCKENTITY.register("rabbit_barrel_entity", 
+     () -> BlockEntityType.Builder.of(rabbitBarrelEntity::new, foodblockregistry.RABBIT_BARREL.get()).build(null));
+
 
 
 //==============================================================================================================================================================================================
