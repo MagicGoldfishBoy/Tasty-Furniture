@@ -13,6 +13,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.beetrootSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.beetrootWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.beetrootfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.brown_mushroomfurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.brownmushroomBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.brownmushroomSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.brownmushroomWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotBarrel;
@@ -78,6 +79,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootBarrelEntit
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.brown_mushroomfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.brownmushroomBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.brownmushroomSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.carrotBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.carrotSignEntity;
@@ -4550,6 +4552,16 @@ public class foodblockregistry {
      () -> BlockEntityType.Builder.of(sweetberryBarrelEntity::new, foodblockregistry.SWEETBERRY_BARREL.get()).build(null));
 
    //.........brown_mushroom
+     public static final DeferredHolder<Block, brownmushroomBarrel> BROWNMUSHROOM_BARREL = FOODBLOCK.register("brownmushroom_barrel", () -> new brownmushroomBarrel(BlockBehaviour.Properties.of()
+     .sound(plant_barrel_sound)
+     .destroyTime(barrel_destroy_time)
+     .explosionResistance(barrel_explosion_resistance)
+     .lightLevel(state  -> 10)
+     ));
+
+     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<brownmushroomBarrelEntity>> BROWNMUSHROOM_BARREL_ENTITY = FOODBLOCKENTITY.register("brownmushroom_barrel_entity", 
+     () -> BlockEntityType.Builder.of(brownmushroomBarrelEntity::new, foodblockregistry.BROWNMUSHROOM_BARREL.get()).build(null));
+
    //.........red_mushroom
    //.........pumpkin
    //.........chicken
