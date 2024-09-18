@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench",
+	"render_type": "cutout_mipped_all",
 	"textures": {
 		"0": "goldfishmod02tastyfurniture:block/potato_block",
 		"1": "goldfishmod02tastyfurniture:block/potato_carpet",

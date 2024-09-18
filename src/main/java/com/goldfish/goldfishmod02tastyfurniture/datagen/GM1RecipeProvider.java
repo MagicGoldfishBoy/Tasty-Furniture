@@ -4565,23 +4565,32 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .save(output);
         //-----------------------------------------------------------cabinets----------------------------------------------------------------------
          //apple
-         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SMALL_APPLE_CABINET_ITEM.get())
-         .pattern("AAA")
-         .pattern("B B")
-         .pattern("AAA")
-         .define('A', foodblockitemregistry.APPLE_SLAB_ITEM.get())
-         .define('B', Items.IRON_INGOT)
-         .unlockedBy("has_apple_slab", has(foodblockitemregistry.APPLE_SLAB_ITEM.get()))
-         .save(output);
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SMALL_APPLE_CABINET_ITEM.get())
+          .pattern("AAA")
+          .pattern("B B")
+          .pattern("AAA")
+          .define('A', foodblockitemregistry.APPLE_SLAB_ITEM.get())
+          .define('B', Items.IRON_INGOT)
+          .unlockedBy("has_apple_slab", has(foodblockitemregistry.APPLE_SLAB_ITEM.get()))
+          .save(output);
          //potato
-         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SMALL_POTATO_CABINET_ITEM.get())
-         .pattern("AAA")
-         .pattern("B B")
-         .pattern("AAA")
-         .define('A', foodblockitemregistry.POTATO_SLAB_ITEM.get())
-         .define('B', Items.IRON_INGOT)
-         .unlockedBy("has_potato_slab", has(foodblockitemregistry.POTATO_SLAB_ITEM.get()))
-         .save(output);
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SMALL_POTATO_CABINET_ITEM.get())
+          .pattern("AAA")
+          .pattern("B B")
+          .pattern("AAA")
+          .define('A', foodblockitemregistry.POTATO_SLAB_ITEM.get())
+          .define('B', Items.IRON_INGOT)
+          .unlockedBy("has_potato_slab", has(foodblockitemregistry.POTATO_SLAB_ITEM.get()))
+          .save(output);
+         //beetroot
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SMALL_BEETROOT_CABINET_ITEM.get())
+          .pattern("AAA")
+          .pattern("B B")
+          .pattern("AAA")
+          .define('A', foodblockitemregistry.BEETROOT_SLAB_ITEM.get())
+          .define('B', Items.IRON_INGOT)
+          .unlockedBy("has_beetroot_slab", has(foodblockitemregistry.BEETROOT_SLAB_ITEM.get()))
+          .save(output);
 
         }
     }
