@@ -1801,4 +1801,7 @@ public class foodblockitemregistry {
    //.........apple
     public static final DeferredHolder<Item, BlockItem> SMALL_APPLE_CABINET_ITEM = FOODBLOCKITEM.register("small_apple_cabinet_item", () -> new BlockItem(foodblockregistry.SMALL_APPLE_CABINET.get(),
     new BlockItem.Properties()));
+   //.........potato
+    public static final DeferredHolder<Item, BlockItem> SMALL_POTATO_CABINET_ITEM = FOODBLOCKITEM.register("small_potato_cabinet_item", () -> new BlockItem(foodblockregistry.SMALL_POTATO_CABINET.get(),
+    new BlockItem.Properties()));
 }

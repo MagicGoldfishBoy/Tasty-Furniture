@@ -28,7 +28,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public class smallFoodContainerEntity extends RandomizableContainerBlockEntity {
 
     public smallFoodContainerEntity(BlockPos pPos, BlockState pBlockState) {
-        super(foodblockregistry.APPLE_BARREL_ENTITY.get(), pPos, pBlockState);
+        super(foodblockregistry.SMALL_APPLE_CABINET_ENTITY.get(), pPos, pBlockState);
     }
 
     private NonNullList<ItemStack> items = NonNullList.withSize(27, ItemStack.EMPTY);
