@@ -4793,6 +4793,7 @@ public class foodblockregistry {
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
+     .noOcclusion()
      ));
 
     //  public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<smallFoodContainerEntity>> SMALL_APPLE_CABINET_ENTITY = FOODBLOCKENTITY.register("small_apple_cabinet_entity", 

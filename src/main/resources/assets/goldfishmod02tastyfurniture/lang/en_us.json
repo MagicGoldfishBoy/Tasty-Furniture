@@ -647,6 +647,8 @@
   "block.goldfishmod02tastyfurniture.mutton_barrel": "Mutton Barrel",
   "block.goldfishmod02tastyfurniture.beef_barrel": "Beef Barrel",
   "block.goldfishmod02tastyfurniture.pork_barrel": "Pork Barrel",
-  "block.goldfishmod02tastyfurniture.rabbit_barrel": "Rabbit Barrel"
+  "block.goldfishmod02tastyfurniture.rabbit_barrel": "Rabbit Barrel",
+"block.goldfishmod02tastyfurniture.small_apple_cabinet": "Small Apple Cabinet",
+  "container.small_food_container": "Small Container"
   
 }

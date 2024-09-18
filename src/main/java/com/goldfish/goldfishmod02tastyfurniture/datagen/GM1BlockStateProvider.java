@@ -85,6 +85,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.pumpkinBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.rabbitBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.redmushroomBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.salmonBarrel;
+import com.goldfish.goldfishmod02tastyfurniture.block.smallFoodContainer;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweetberryBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.tropicalfishBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.Custom_Datagen_Methods.DataGenHelper;
@@ -6549,6 +6550,29 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationX(rotationX)
                       .build();
               });
+    //---------------------------------------------------------------cabinets-------------------------------------------------------------------------------
+        //.............apple
+          smallFoodContainer appleCabinet = foodblockregistry.SMALL_APPLE_CABINET.get();
+
+          getVariantBuilder(appleCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/apple_cabinet_open") : modLoc("block/apple_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
    };
 }
     
