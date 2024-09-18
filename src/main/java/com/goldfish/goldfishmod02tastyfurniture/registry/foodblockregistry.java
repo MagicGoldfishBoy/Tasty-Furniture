@@ -74,6 +74,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.salmonBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.salmonSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.salmonWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.salmonfurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.smallFoodContainer;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweet_berryfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweetberryBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweetberrySign;
@@ -134,6 +135,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.redmushroomSignEnti
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.salmonBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.salmonSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.salmonfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.smallFoodContainerEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.sweet_berryfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.sweetberryBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.sweetberrySignEntity;
@@ -141,6 +143,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.tropical_fishfurnac
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.tropicalfishBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.tropicalfishSignEntity;
 
+import net.minecraft.core.RegistryAccess.RegistryEntry;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Block;
@@ -4776,4 +4779,26 @@ public class foodblockregistry {
    //.........beef
    //.........pork
    //.........rabbit
+//==============================================================================================================================================================================================
+//                                                                                          Cabinets
+//==============================================================================================================================================================================================
+
+   static float cabinet_destroy_time = 1.25f;
+   static float cabinet_explosion_resistance = 0.75f;
+   static SoundType plant_cabinet_sound = SoundType.MUD_BRICKS;
+   static SoundType meat_cabinet_sound = SoundType.MUD;
+
+   //.........apple
+     public static final DeferredHolder<Block, smallFoodContainer> SMALL_APPLE_CABINET = FOODBLOCK.register("small_apple_cabinet", () -> new smallFoodContainer(BlockBehaviour.Properties.of()
+     .sound(plant_cabinet_sound)
+     .destroyTime(cabinet_destroy_time)
+     .explosionResistance(cabinet_explosion_resistance)
+     ));
+
+    //  public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<smallFoodContainerEntity>> SMALL_APPLE_CABINET_ENTITY = FOODBLOCKENTITY.register("small_apple_cabinet_entity", 
+    //  () -> BlockEntityType.Builder.of(smallFoodContainerEntity::new, () -> new Block[] {SMALL_APPLE_CABINET.get()}));
+
+     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<smallFoodContainerEntity>> SMALL_APPLE_CABINET_ENTITY = FOODBLOCKENTITY.register("small_apple_cabinet_entity",
+     () -> BlockEntityType.Builder.of(smallFoodContainerEntity::new, SMALL_APPLE_CABINET.get()).build(null));
+
 }
