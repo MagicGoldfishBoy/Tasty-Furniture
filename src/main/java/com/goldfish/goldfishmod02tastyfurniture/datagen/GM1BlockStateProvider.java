@@ -6837,6 +6837,28 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+        //.............salmon
+          smallFoodContainer salmonCabinet = foodblockregistry.SMALL_SALMON_CABINET.get();
+
+          getVariantBuilder(salmonCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/salmon_cabinet_open") : modLoc("block/salmon_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
    };
 }
     
