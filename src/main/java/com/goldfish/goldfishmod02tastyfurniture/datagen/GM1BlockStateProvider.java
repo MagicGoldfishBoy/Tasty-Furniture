@@ -6557,7 +6557,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
           getVariantBuilder(appleCabinet)
           .forAllStates(state -> {
               Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.FACING);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
               int rotationY = switch (facing) {
                   case NORTH -> 180;
                   case EAST -> 270;
@@ -6579,7 +6579,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
           getVariantBuilder(potatoCabinet)
           .forAllStates(state -> {
               Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.FACING);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
               int rotationY = switch (facing) {
                   case NORTH -> 180;
                   case EAST -> 270;
@@ -6601,7 +6601,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
           getVariantBuilder(beetrootCabinet)
           .forAllStates(state -> {
               Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.FACING);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
               int rotationY = switch (facing) {
                   case NORTH -> 180;
                   case EAST -> 270;
@@ -6623,7 +6623,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
           getVariantBuilder(carrotCabinet)
           .forAllStates(state -> {
               Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.FACING);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
               int rotationY = switch (facing) {
                   case NORTH -> 180;
                   case EAST -> 270;

@@ -1,5 +1,6 @@
 package com.goldfish.goldfishmod02tastyfurniture.block.entity;
 
+import com.goldfish.goldfishmod02tastyfurniture.block.smallFoodContainer;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 
 import net.minecraft.core.BlockPos;
@@ -19,7 +20,6 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ChestMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.BarrelBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.ContainerOpenersCounter;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
@@ -123,11 +123,11 @@ public class smallFoodContainerEntity extends RandomizableContainerBlockEntity {
     }
 
     void updateBlockState(BlockState pState, boolean pOpen) {
-        this.level.setBlock(this.getBlockPos(), pState.setValue(BarrelBlock.OPEN, Boolean.valueOf(pOpen)), 3);
+        this.level.setBlock(this.getBlockPos(), pState.setValue(smallFoodContainer.OPEN, Boolean.valueOf(pOpen)), 3);
     }
 
     void playSound(BlockState pState, SoundEvent pSound) {
-        Vec3i vec3i = pState.getValue(BarrelBlock.FACING).getNormal();
+        Vec3i vec3i = pState.getValue(smallFoodContainer.HORIZONTALFACING).getNormal();
         double d0 = (double)this.worldPosition.getX() + 0.5 + (double)vec3i.getX() / 2.0;
         double d1 = (double)this.worldPosition.getY() + 0.5 + (double)vec3i.getY() / 2.0;
         double d2 = (double)this.worldPosition.getZ() + 0.5 + (double)vec3i.getZ() / 2.0;

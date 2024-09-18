@@ -42,8 +42,9 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class smallFoodContainer extends HorizontalDirectionalBlock implements EntityBlock {
-        public static final MapCodec<smallFoodContainer> CODEC = simpleCodec(smallFoodContainer::new);
-    public static final DirectionProperty FACING = BlockStateProperties.FACING;
+    public static final MapCodec<smallFoodContainer> CODEC = simpleCodec(smallFoodContainer::new);
+    //public static final DirectionProperty FACING = BlockStateProperties.FACING;
+    public static final DirectionProperty HORIZONTALFACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
 
     @Override
@@ -53,15 +54,12 @@ public class smallFoodContainer extends HorizontalDirectionalBlock implements En
 
     public smallFoodContainer(BlockBehaviour.Properties p_49046_) {
         super(p_49046_);
-        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(OPEN, Boolean.valueOf(false)));
+        this.registerDefaultState(this.stateDefinition.any().setValue(HORIZONTALFACING, Direction.NORTH).setValue(OPEN, Boolean.valueOf(false)));
     }
-
-   // private static final VoxelShape SHAPE_NORTH = Shapes.box(0.05, 0.25, 0.0, 0.945, 0.75, 0.50);
-    //private static final VoxelShape SHAPE_SOUTH = Shapes.box(0.05, 0.75, 0.0, 0.945, 0.25, 0.50);
 
         @Override
     public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, net.minecraft.world.phys.shapes.CollisionContext context) {
-        VoxelShape facing = switch (state.getValue(FACING)) {
+        VoxelShape facing = switch (state.getValue(HORIZONTALFACING)) {
             case Direction.NORTH -> Shapes.box(0.05, 0.25, 0.50, 0.945, 0.75, 1.0);
             case EAST -> Shapes.box(0.0, 0.25, 0.05, 0.5, 0.75, 0.945); 
             case SOUTH -> Shapes.box(0.05, 0.25, 0.0, 0.945, 0.75, 0.50); 
@@ -113,50 +111,15 @@ public class smallFoodContainer extends HorizontalDirectionalBlock implements En
         return RenderShape.MODEL;
     }
 
-    /**
-     * @deprecated call via {@link net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#hasAnalogOutputSignal} whenever possible. Implementing/overriding is fine.
-     */
-    @Override
-    protected boolean hasAnalogOutputSignal(BlockState pState) {
-        return true;
-    }
-
-    /**
-     * Returns the analog signal this block emits. This is the signal a comparator can read from it.
-     *
-     * @deprecated call via {@link net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#getAnalogOutputSignal} whenever possible. Implementing/overriding is fine.
-     */
-    @Override
-    protected int getAnalogOutputSignal(BlockState pBlockState, Level pLevel, BlockPos pPos) {
-        return AbstractContainerMenu.getRedstoneSignalFromBlockEntity(pLevel.getBlockEntity(pPos));
-    }
-
-    /**
-     * Returns the blockstate with the given rotation from the passed blockstate. If inapplicable, returns the passed blockstate.
-     * @deprecated call via {@link net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#rotate} whenever possible. Implementing/overriding is fine.
-     */
-    @Override
-    protected BlockState rotate(BlockState pState, Rotation pRotation) {
-        return pState.setValue(FACING, pRotation.rotate(pState.getValue(FACING)));
-    }
-
-    /**
-     * Returns the blockstate with the given mirror of the passed blockstate. If inapplicable, returns the passed blockstate.
-     * @deprecated call via {@link net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#mirror} whenever possible. Implementing/overriding is fine.
-     */
-    @Override
-    protected BlockState mirror(BlockState pState, Mirror pMirror) {
-        return pState.rotate(pMirror.getRotation(pState.getValue(FACING)));
-    }
-
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
-        pBuilder.add(FACING, OPEN);
+        pBuilder.add(HORIZONTALFACING, OPEN);
     }
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {
-        return this.defaultBlockState().setValue(FACING, pContext.getNearestLookingDirection().getOpposite());
+        return this.defaultBlockState().setValue(HORIZONTALFACING, pContext.getHorizontalDirection().getOpposite());
+       // return this.defaultBlockState().setValue(FACING, pContext.getNearestLookingDirection().getOpposite());
     }
     
 }

@@ -1,13 +1,5 @@
 {
   "variants": {
-    "facing=down,open=false": {
-      "model": "goldfishmod02tastyfurniture:block/apple_cabinet",
-      "y": 180
-    },
-    "facing=down,open=true": {
-      "model": "goldfishmod02tastyfurniture:block/apple_cabinet_open",
-      "y": 180
-    },
     "facing=east,open=false": {
       "model": "goldfishmod02tastyfurniture:block/apple_cabinet",
       "y": 270
@@ -29,14 +21,6 @@
     },
     "facing=south,open=true": {
       "model": "goldfishmod02tastyfurniture:block/apple_cabinet_open"
-    },
-    "facing=up,open=false": {
-      "model": "goldfishmod02tastyfurniture:block/apple_cabinet",
-      "y": 180
-    },
-    "facing=up,open=true": {
-      "model": "goldfishmod02tastyfurniture:block/apple_cabinet_open",
-      "y": 180
     },
     "facing=west,open=false": {
       "model": "goldfishmod02tastyfurniture:block/apple_cabinet",
