@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod02tastyfurniture:beef_slab_item"
+    },
+    "B": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "B B",
+    "AAA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "goldfishmod02tastyfurniture:small_beef_cabinet_item"
+  }
+}
