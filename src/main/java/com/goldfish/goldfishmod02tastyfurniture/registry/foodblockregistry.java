@@ -84,7 +84,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.codfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodChestEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.glowberrySignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodBarrelEntity;
-import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodChairBlockEntity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodChairEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.appleSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.glowberryfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.melonSignEntity;
@@ -111,6 +111,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.tropicalfishSignEnt
 
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ButtonBlock;
@@ -144,6 +145,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class foodblockregistry {
     public static final DeferredRegister<Block> FOODBLOCK = DeferredRegister.create(BuiltInRegistries.BLOCK, TastyFurniture.MODID);
     public static final DeferredRegister<BlockEntityType<?>> FOODBLOCKENTITY = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, TastyFurniture.MODID);
+    public static final DeferredRegister<EntityType<?>> FOODENTITY = DeferredRegister.create(BuiltInRegistries.ENTITY_TYPE, TastyFurniture.MODID);
     
 //==============================================================================================================================================================================================
 //                                                                                          Blocks
@@ -4627,9 +4629,9 @@ public class foodblockregistry {
    //.........beef
    //.........pork
    //.........rabbit
-   
-   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodChairBlockEntity>> SMALL_CHAIR_ENTITY = FOODBLOCKENTITY.register("small_chair_entity",
-   () -> BlockEntityType.Builder.of(foodChairBlockEntity::new, APPLE_CHAIR.get()).build(null));
+   //   public static final DeferredHolder<EntityType<?>, EntityType<foodChairEntity>> CHAIR_ENTITY = FOODENTITY.register("chair_entity", () -> EntityType.Builder.of(foodChairEntity::new))
+  //  public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodChairBlockEntity>> SMALL_CHAIR_ENTITY = FOODBLOCKENTITY.register("small_chair_entity",
+  //  () -> BlockEntityType.Builder.of(foodChairBlockEntity::new, APPLE_CHAIR.get()).build(null));
 
 //==============================================================================================================================================================================================
 //                                                                                           Beds

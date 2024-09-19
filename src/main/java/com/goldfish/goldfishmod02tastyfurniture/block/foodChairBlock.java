@@ -2,7 +2,7 @@ package com.goldfish.goldfishmod02tastyfurniture.block;
 
 import javax.annotation.Nullable;
 
-import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodChairBlockEntity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodChairEntity;
 import com.mojang.serialization.MapCodec;
 
 import net.minecraft.core.BlockPos;
@@ -11,6 +11,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.BlockGetter;
@@ -28,7 +29,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class foodChairBlock extends HorizontalDirectionalBlock implements EntityBlock {
+public class foodChairBlock extends HorizontalDirectionalBlock {
 
     public static final MapCodec<foodChairBlock> CODEC = simpleCodec(foodChairBlock::new);
     public static final DirectionProperty HORIZONTALFACING = BlockStateProperties.HORIZONTAL_FACING;
@@ -60,6 +61,8 @@ public class foodChairBlock extends HorizontalDirectionalBlock implements Entity
           //  level.setBlock(pos, state.setValue(TUCKED, !state.getValue(TUCKED)), UPDATE_ALL);
            // return InteractionResult.SUCCESS;
         }
+        else if (!level.isClientSide()) {
+          return player.startRiding(this.getChairEntity(level)) ? InteractionResult.CONSUME : InteractionResult.PASS;}
         else //state.getValue(BlockStateProperties.HORIZONTAL_FACING).getOpposite();
         {
             //return InteractionResult.CONSUME;
@@ -68,11 +71,14 @@ public class foodChairBlock extends HorizontalDirectionalBlock implements Entity
       //  return InteractionResult.SUCCESS;
     }
 
-    @Override
-    @Nullable
-    public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
-        return new foodChairBlockEntity(pPos, pState);
+    public Entity getChairEntity(Level level) {
+        return new foodChairEntity(/*ModEntityTypes.FOOD_CHAIR.get(),*/null, level); //need to make entity type object. will need new registry
     }
+    // @Override
+    // @Nullable
+    // public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
+    //     return new foodChairBlockEntity(pPos, pState);
+    // }
 
         @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
@@ -81,7 +87,7 @@ public class foodChairBlock extends HorizontalDirectionalBlock implements Entity
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, net.minecraft.world.phys.shapes.CollisionContext context) {
-        return SHAPE; // Return the mini slab shape
+        return SHAPE;
     }
 
     // public static void sitDown(Level level, BlockPos pos, Entity entity) {
