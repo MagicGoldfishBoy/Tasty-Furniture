@@ -2,6 +2,7 @@ package com.goldfish.goldfishmod02tastyfurniture.datagen;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import com.goldfish.goldfishmod02tastyfurniture.block.foodChairBlock;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.CarpetBlock;
 import net.minecraft.world.level.block.ChainBlock;
@@ -6491,6 +6492,28 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationX(rotationX)
                       .build();
               });
+    //---------------------------------------------------------------chairs-------------------------------------------------------------------------------
+        //.............apple
+          foodChairBlock appleChair = foodblockregistry.APPLE_CHAIR.get();
+
+          getVariantBuilder(appleChair)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/apple_chair");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
     //---------------------------------------------------------------cabinets-------------------------------------------------------------------------------
         //.............apple
           smallFoodCabinet appleCabinet = foodblockregistry.SMALL_APPLE_CABINET.get();
