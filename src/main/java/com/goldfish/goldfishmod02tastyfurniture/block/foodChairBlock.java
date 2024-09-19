@@ -11,7 +11,9 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.EntityBlock;
@@ -23,11 +25,14 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class foodChairBlock extends HorizontalDirectionalBlock implements EntityBlock {
 
     public static final MapCodec<foodChairBlock> CODEC = simpleCodec(foodChairBlock::new);
     public static final DirectionProperty HORIZONTALFACING = BlockStateProperties.HORIZONTAL_FACING;
+    private static final VoxelShape SHAPE = Shapes.box(0.0, 0.0, 0.0, 1.0, 0.6, 1.0);
 
     @Override
     public MapCodec<foodChairBlock> codec() {
@@ -73,5 +78,22 @@ public class foodChairBlock extends HorizontalDirectionalBlock implements Entity
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
         pBuilder.add(HORIZONTALFACING);
     }
+
+    @Override
+    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, net.minecraft.world.phys.shapes.CollisionContext context) {
+        return SHAPE; // Return the mini slab shape
+    }
+
+    // public static void sitDown(Level level, BlockPos pos, Entity entity) {
+    //     if (level.isClientSide) return;
+
+    //     foodChairBlockEntity chair = new foodChairBlockEntity(level, pos);
+    //     level.addFreshEntity(chair);
+    //     entity.startRiding(chair);
+
+    //     level.updateNeighbourForOutputSignal(pos, level.getBlockState(pos).getBlock());
+
+    //     if (entity instanceof TamableAnimal ta) ta.setInSittingPose(true);
+    // }
     
 }
