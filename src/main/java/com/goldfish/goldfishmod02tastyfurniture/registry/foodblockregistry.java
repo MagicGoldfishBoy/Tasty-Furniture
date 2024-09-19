@@ -2,6 +2,7 @@ package com.goldfish.goldfishmod02tastyfurniture.registry;
 
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodBarrel;
+import com.goldfish.goldfishmod02tastyfurniture.block.foodChairBlock;
 import com.goldfish.goldfishmod02tastyfurniture.block.appleSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.appleWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.applefurnace;
@@ -83,6 +84,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.codfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodChestEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.glowberrySignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodBarrelEntity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodChairBlockEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.appleSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.glowberryfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.melonSignEntity;
@@ -4594,7 +4596,19 @@ public class foodblockregistry {
 //                                                                                          Chairs
 //==============================================================================================================================================================================================
 
+   static float chair_destroy_time = 1.25f;
+   static float chair_explosion_resistance = 0.75f;
+   static SoundType plant_chair_sound = SoundType.MUD_BRICKS;
+   static SoundType meat_chair_sound = SoundType.MUD;
+
    //.........apple
+     public static final DeferredHolder<Block, foodChairBlock> APPLE_CHAIR = FOODBLOCK.register("apple_chair", () -> new foodChairBlock(BlockBehaviour.Properties.of()
+     .sound(plant_chair_sound)
+     .destroyTime(chair_destroy_time)
+     .explosionResistance(chair_explosion_resistance)
+     .noOcclusion()
+     ));
+
    //.........potato
    //.........beetroot
    //.........carrot
@@ -4613,6 +4627,9 @@ public class foodblockregistry {
    //.........beef
    //.........pork
    //.........rabbit
+   
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodChairBlockEntity>> SMALL_CHAIR_ENTITY = FOODBLOCKENTITY.register("small_chair_entity",
+   () -> BlockEntityType.Builder.of(foodChairBlockEntity::new, APPLE_CHAIR.get()).build(null));
 
 //==============================================================================================================================================================================================
 //                                                                                           Beds
