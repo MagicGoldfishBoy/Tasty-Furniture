@@ -70,14 +70,11 @@ import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistr
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.beefBarrel;
-import com.goldfish.goldfishmod02tastyfurniture.block.brownmushroomBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.chickenBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.codBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.muttonBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.porkBarrel;
-import com.goldfish.goldfishmod02tastyfurniture.block.pumpkinBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.rabbitBarrel;
-import com.goldfish.goldfishmod02tastyfurniture.block.redmushroomBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.salmonBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.smallFoodCabinet;
 import com.goldfish.goldfishmod02tastyfurniture.block.tropicalfishBarrel;
@@ -5824,7 +5821,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
         //.............chorus
-        foodBarrel chorus_barrel = foodblockregistry.CHORUS_BARREL.get();
+          foodBarrel chorus_barrel = foodblockregistry.CHORUS_BARREL.get();
           ResourceLocation chorus_barrel_closed_texture = modLoc("block/chorus_barrel_top_closed");
           ResourceLocation chorus_barrel_open_texture = modLoc("block/chorus_barrel_top_open");
           ResourceLocation chorus_barrel_side = modLoc("block/chorus_barrel");
@@ -6016,7 +6013,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
         //.............brownmushroom
-          brownmushroomBarrel brownmushroom_barrel = foodblockregistry.BROWNMUSHROOM_BARREL.get();
+          foodBarrel brownmushroom_barrel = foodblockregistry.BROWNMUSHROOM_BARREL.get();
           ResourceLocation brownmushroom_barrel_closed_texture = modLoc("block/brownmushroom_barrel_top_closed");
           ResourceLocation brownmushroom_barrel_open_texture = modLoc("block/brownmushroom_barrel_top_open");
           ResourceLocation brownmushroom_barrel_side = modLoc("block/brownmushroom_barrel");
@@ -6064,7 +6061,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
         //.............redmushroom
-          redmushroomBarrel redmushroom_barrel = foodblockregistry.REDMUSHROOM_BARREL.get();
+          foodBarrel redmushroom_barrel = foodblockregistry.REDMUSHROOM_BARREL.get();
           ResourceLocation redmushroom_barrel_closed_texture = modLoc("block/redmushroom_barrel_top_closed");
           ResourceLocation redmushroom_barrel_open_texture = modLoc("block/redmushroom_barrel_top_open");
           ResourceLocation redmushroom_barrel_side = modLoc("block/redmushroom_barrel");
@@ -6112,7 +6109,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
         //.............pumpkin
-          pumpkinBarrel pumpkin_barrel = foodblockregistry.PUMPKIN_BARREL.get();
+          foodBarrel pumpkin_barrel = foodblockregistry.PUMPKIN_BARREL.get();
           ResourceLocation pumpkin_barrel_closed_texture = modLoc("block/pumpkin_barrel_top_closed");
           ResourceLocation pumpkin_barrel_open_texture = modLoc("block/pumpkin_barrel_top_open");
           ResourceLocation pumpkin_barrel_side = modLoc("block/pumpkin_barrel");
