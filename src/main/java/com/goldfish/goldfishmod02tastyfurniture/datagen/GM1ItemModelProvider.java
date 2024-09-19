@@ -1283,6 +1283,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("small_beef_cabinet_item", modLoc("block/beef_cabinet"));
       //..............pork
         withExistingParent("small_pork_cabinet_item", modLoc("block/pork_cabinet"));
+      //..............rabbit
+        withExistingParent("small_rabbit_cabinet_item", modLoc("block/rabbit_cabinet"));
   }   
 }
 
