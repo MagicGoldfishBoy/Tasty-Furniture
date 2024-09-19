@@ -70,7 +70,6 @@ import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistr
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.beefBarrel;
-import com.goldfish.goldfishmod02tastyfurniture.block.beetrootBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.brownmushroomBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.chickenBarrel;
@@ -5734,7 +5733,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
         //.............beetroot
-          beetrootBarrel beetroot_barrel = foodblockregistry.BEETROOT_BARREL.get();
+          foodBarrel beetroot_barrel = foodblockregistry.BEETROOT_BARREL.get();
           ResourceLocation beetroot_barrel_closed_texture = modLoc("block/beetroot_barrel_top_closed");
           ResourceLocation beetroot_barrel_open_texture = modLoc("block/beetroot_barrel_top_open");
           ResourceLocation beetroot_barrel_side = modLoc("block/beetroot_barrel");
