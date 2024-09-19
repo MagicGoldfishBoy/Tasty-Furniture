@@ -68,7 +68,7 @@ import java.util.stream.Stream;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistry;
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
-import com.goldfish.goldfishmod02tastyfurniture.block.appleBarrel;
+import com.goldfish.goldfishmod02tastyfurniture.block.foodBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.beefBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.beetrootBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.brownmushroomBarrel;
@@ -5639,7 +5639,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
 
     //---------------------------------------------------------------barrels-------------------------------------------------------------------------------
         //.............apple
-          appleBarrel apple_barrel = foodblockregistry.APPLE_BARREL.get();
+          foodBarrel apple_barrel = foodblockregistry.APPLE_BARREL.get();
           ResourceLocation apple_barrel_closed_texture = modLoc("block/apple_barrel_top_closed");
           ResourceLocation apple_barrel_open_texture = modLoc("block/apple_barrel_top_open");
           ResourceLocation apple_barrel_side = modLoc("block/apple_barrel");

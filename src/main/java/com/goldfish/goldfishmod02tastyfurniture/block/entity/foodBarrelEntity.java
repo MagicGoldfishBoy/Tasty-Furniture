@@ -23,9 +23,9 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.ContainerOpenersCounter;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class appleBarrelEntity extends BarrelBlockEntity {
+public class foodBarrelEntity extends BarrelBlockEntity {
 
-    public appleBarrelEntity(BlockPos pPos, BlockState pBlockState) {
+    public foodBarrelEntity(BlockPos pPos, BlockState pBlockState) {
         super(pPos, pBlockState);
     }
 
@@ -33,14 +33,14 @@ public class appleBarrelEntity extends BarrelBlockEntity {
     private final ContainerOpenersCounter openersCounter = new ContainerOpenersCounter() {
         @Override
         protected void onOpen(Level p_155062_, BlockPos p_155063_, BlockState p_155064_) {
-            appleBarrelEntity.this.playSound(p_155064_, SoundEvents.BARREL_OPEN);
-            appleBarrelEntity.this.updateBlockState(p_155064_, true);
+            foodBarrelEntity.this.playSound(p_155064_, SoundEvents.BARREL_OPEN);
+            foodBarrelEntity.this.updateBlockState(p_155064_, true);
         }
 
         @Override
         protected void onClose(Level p_155072_, BlockPos p_155073_, BlockState p_155074_) {
-            appleBarrelEntity.this.playSound(p_155074_, SoundEvents.BARREL_CLOSE);
-            appleBarrelEntity.this.updateBlockState(p_155074_, false);
+            foodBarrelEntity.this.playSound(p_155074_, SoundEvents.BARREL_CLOSE);
+            foodBarrelEntity.this.updateBlockState(p_155074_, false);
         }
 
         @Override
@@ -51,7 +51,7 @@ public class appleBarrelEntity extends BarrelBlockEntity {
         protected boolean isOwnContainer(Player p_155060_) {
             if (p_155060_.containerMenu instanceof ChestMenu) {
                 Container container = ((ChestMenu)p_155060_.containerMenu).getContainer();
-                return container == appleBarrelEntity.this;
+                return container == foodBarrelEntity.this;
             } else {
                 return false;
             }

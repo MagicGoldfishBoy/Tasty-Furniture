@@ -24,8 +24,8 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
 
-public class appleBarrel extends BarrelBlock {
-    public static final MapCodec<BarrelBlock> CODEC = simpleCodec(appleBarrel::new);
+public class foodBarrel extends BarrelBlock {
+    public static final MapCodec<BarrelBlock> CODEC = simpleCodec(foodBarrel::new);
     public static final DirectionProperty FACING = BlockStateProperties.FACING;
     public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
 
@@ -34,7 +34,7 @@ public class appleBarrel extends BarrelBlock {
         return CODEC;
     }
 
-    public appleBarrel(Properties properties) {
+    public foodBarrel(Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(OPEN, Boolean.valueOf(false)));
     }
