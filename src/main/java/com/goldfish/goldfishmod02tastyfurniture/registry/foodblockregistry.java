@@ -4924,6 +4924,14 @@ public class foodblockregistry {
      .noOcclusion()
      ));
 
+   //.........pork
+     public static final DeferredHolder<Block, smallFoodContainer> SMALL_PORK_CABINET = FOODBLOCK.register("small_pork_cabinet", () -> new smallFoodContainer(BlockBehaviour.Properties.of()
+     .sound(plant_cabinet_sound)
+     .destroyTime(cabinet_destroy_time)
+     .explosionResistance(cabinet_explosion_resistance)
+     .noOcclusion()
+     ));
+
 
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<smallFoodContainerEntity>> SMALL_CABINET_ENTITY = FOODBLOCKENTITY.register("small_cabinet_entity",
      () -> BlockEntityType.Builder.of(smallFoodContainerEntity::new, SMALL_APPLE_CABINET.get(), SMALL_POTATO_CABINET.get()).build(null));
