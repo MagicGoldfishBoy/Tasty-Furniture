@@ -73,7 +73,6 @@ import com.goldfish.goldfishmod02tastyfurniture.block.beefBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.brownmushroomBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.chickenBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.codBarrel;
-import com.goldfish.goldfishmod02tastyfurniture.block.melonBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.muttonBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.porkBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.pumpkinBarrel;
@@ -81,7 +80,6 @@ import com.goldfish.goldfishmod02tastyfurniture.block.rabbitBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.redmushroomBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.salmonBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.smallFoodCabinet;
-import com.goldfish.goldfishmod02tastyfurniture.block.sweetberryBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.tropicalfishBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.Custom_Datagen_Methods.DataGenHelper;
 
@@ -5922,7 +5920,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
         //.............melon
-          melonBarrel melon_barrel = foodblockregistry.MELON_BARREL.get();
+          foodBarrel melon_barrel = foodblockregistry.MELON_BARREL.get();
           ResourceLocation melon_barrel_closed_texture = modLoc("block/melon_barrel_top_closed");
           ResourceLocation melon_barrel_open_texture = modLoc("block/melon_barrel_top_open");
           ResourceLocation melon_barrel_side = modLoc("block/melon_barrel");
@@ -5970,7 +5968,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
         //.............sweetberry
-          sweetberryBarrel sweetberry_barrel = foodblockregistry.SWEETBERRY_BARREL.get();
+          foodBarrel sweetberry_barrel = foodblockregistry.SWEETBERRY_BARREL.get();
           ResourceLocation sweetberry_barrel_closed_texture = modLoc("block/sweetberry_barrel_top_closed");
           ResourceLocation sweetberry_barrel_open_texture = modLoc("block/sweetberry_barrel_top_open");
           ResourceLocation sweetberry_barrel_side = modLoc("block/sweetberry_barrel");

@@ -1,5 +1,7 @@
 package com.goldfish.goldfishmod02tastyfurniture.block.entity;
 
+import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
@@ -21,12 +23,13 @@ import net.minecraft.world.level.block.BarrelBlock;
 import net.minecraft.world.level.block.entity.BarrelBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.ContainerOpenersCounter;
+import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class foodBarrelEntity extends BarrelBlockEntity {
+public class foodBarrelEntity extends RandomizableContainerBlockEntity {
 
     public foodBarrelEntity(BlockPos pPos, BlockState pBlockState) {
-        super(pPos, pBlockState);
+        super(foodblockregistry.FOOD_BARREL_ENTITY.get(), pPos, pBlockState);
     }
 
     private NonNullList<ItemStack> items = NonNullList.withSize(27, ItemStack.EMPTY);

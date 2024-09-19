@@ -38,7 +38,6 @@ import com.goldfish.goldfishmod02tastyfurniture.block.glowberrySign;
 import com.goldfish.goldfishmod02tastyfurniture.block.glowberryWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.glowberryfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.horizontal_food_block;
-import com.goldfish.goldfishmod02tastyfurniture.block.melonBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.melonSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.melonWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.melonfurnace;
@@ -71,7 +70,6 @@ import com.goldfish.goldfishmod02tastyfurniture.block.salmonWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.salmonfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.smallFoodCabinet;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweet_berryfurnace;
-import com.goldfish.goldfishmod02tastyfurniture.block.sweetberryBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweetberrySign;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweetberryWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.tropical_fishfurnace;
@@ -102,7 +100,6 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.glowberrySignEntity
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.appleSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.glowberryfurnaceentity;
-import com.goldfish.goldfishmod02tastyfurniture.block.entity.melonBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.melonSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.melonfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.muttonBarrelEntity;
@@ -127,13 +124,11 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.salmonSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.salmonfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.smallFoodContainerEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.sweet_berryfurnaceentity;
-import com.goldfish.goldfishmod02tastyfurniture.block.entity.sweetberryBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.sweetberrySignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.tropical_fishfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.tropicalfishBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.tropicalfishSignEntity;
 
-import net.minecraft.core.RegistryAccess.RegistryEntry;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Block;
@@ -141,7 +136,6 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.CarpetBlock;
 import net.minecraft.world.level.block.ChainBlock;
-import net.minecraft.world.level.block.ChestBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
@@ -158,7 +152,6 @@ import net.minecraft.world.level.block.TorchBlock;
 import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WallTorchBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.entity.ChestBlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
@@ -4525,24 +4518,18 @@ public class foodblockregistry {
      ));
 
    //.........melon
-     public static final DeferredHolder<Block, melonBarrel> MELON_BARREL = FOODBLOCK.register("melon_barrel", () -> new melonBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, foodBarrel> MELON_BARREL = FOODBLOCK.register("melon_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
-
-     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<melonBarrelEntity>> MELON_BARREL_ENTITY = FOODBLOCKENTITY.register("melon_barrel_entity", 
-     () -> BlockEntityType.Builder.of(melonBarrelEntity::new, foodblockregistry.MELON_BARREL.get()).build(null));
 
    //.........sweetberry
-     public static final DeferredHolder<Block, sweetberryBarrel> SWEETBERRY_BARREL = FOODBLOCK.register("sweetberry_barrel", () -> new sweetberryBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, foodBarrel> SWEETBERRY_BARREL = FOODBLOCK.register("sweetberry_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
-
-     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<sweetberryBarrelEntity>> SWEETBERRY_BARREL_ENTITY = FOODBLOCKENTITY.register("sweetberry_barrel_entity", 
-     () -> BlockEntityType.Builder.of(sweetberryBarrelEntity::new, foodblockregistry.SWEETBERRY_BARREL.get()).build(null));
 
    //.........brown_mushroom
      public static final DeferredHolder<Block, brownmushroomBarrel> BROWNMUSHROOM_BARREL = FOODBLOCK.register("brownmushroom_barrel", () -> new brownmushroomBarrel(BlockBehaviour.Properties.of()
@@ -4654,7 +4641,7 @@ public class foodblockregistry {
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<rabbitBarrelEntity>> RABBIT_BARREL_ENTITY = FOODBLOCKENTITY.register("rabbit_barrel_entity", 
      () -> BlockEntityType.Builder.of(rabbitBarrelEntity::new, foodblockregistry.RABBIT_BARREL.get()).build(null));
 //------
-     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodBarrelEntity>> APPLE_BARREL_ENTITY = FOODBLOCKENTITY.register("apple_barrel_entity", 
+     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodBarrelEntity>> FOOD_BARREL_ENTITY = FOODBLOCKENTITY.register("apple_barrel_entity", 
      () -> BlockEntityType.Builder.of(foodBarrelEntity::new, foodblockregistry.APPLE_BARREL.get(), foodblockregistry.POTATO_BARREL.get()).build(null));
 
 //==============================================================================================================================================================================================
