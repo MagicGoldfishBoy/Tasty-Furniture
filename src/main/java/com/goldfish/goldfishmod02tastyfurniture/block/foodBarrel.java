@@ -2,6 +2,7 @@ package com.goldfish.goldfishmod02tastyfurniture.block;
 
 import javax.annotation.Nullable;
 
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodBarrelEntity;
 import com.mojang.serialization.MapCodec;
 
 import net.minecraft.core.BlockPos;
@@ -45,8 +46,8 @@ public class foodBarrel extends BarrelBlock {
             return InteractionResult.SUCCESS;
         } else {
             BlockEntity blockentity = pLevel.getBlockEntity(pPos);
-            if (blockentity instanceof BarrelBlockEntity) {
-                pPlayer.openMenu((BarrelBlockEntity)blockentity);
+            if (blockentity instanceof foodBarrelEntity) {
+                pPlayer.openMenu((foodBarrelEntity)blockentity);
                 pPlayer.awardStat(Stats.OPEN_BARREL);
                 PiglinAi.angerNearbyPiglins(pPlayer, true);
             }
@@ -64,15 +65,15 @@ public class foodBarrel extends BarrelBlock {
     @Override
     protected void tick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
         BlockEntity blockentity = pLevel.getBlockEntity(pPos);
-        if (blockentity instanceof BarrelBlockEntity) {
-            ((BarrelBlockEntity)blockentity).recheckOpen();
+        if (blockentity instanceof foodBarrelEntity) {
+            ((foodBarrelEntity)blockentity).recheckOpen();
         }
     }
 
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
-        return new BarrelBlockEntity(pPos, pState);
+        return new foodBarrelEntity(pPos, pState);
     }
 
     @Override

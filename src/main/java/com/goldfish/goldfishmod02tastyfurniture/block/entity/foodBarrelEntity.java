@@ -96,7 +96,7 @@ public class foodBarrelEntity extends BarrelBlockEntity {
 
     @Override
     protected Component getDefaultName() {
-        return Component.translatable("container.appleBarrel");
+        return Component.translatable("container.foodBarrel");
     }
 
     @Override
