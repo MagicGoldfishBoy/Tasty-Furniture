@@ -1,6 +1,6 @@
 package com.goldfish.goldfishmod02tastyfurniture.block.entity;
 
-import com.goldfish.goldfishmod02tastyfurniture.block.smallFoodContainer;
+import com.goldfish.goldfishmod02tastyfurniture.block.smallFoodCabinet;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 
 import net.minecraft.core.BlockPos;
@@ -123,11 +123,11 @@ public class smallFoodContainerEntity extends RandomizableContainerBlockEntity {
     }
 
     void updateBlockState(BlockState pState, boolean pOpen) {
-        this.level.setBlock(this.getBlockPos(), pState.setValue(smallFoodContainer.OPEN, Boolean.valueOf(pOpen)), 3);
+        this.level.setBlock(this.getBlockPos(), pState.setValue(smallFoodCabinet.OPEN, Boolean.valueOf(pOpen)), 3);
     }
 
     void playSound(BlockState pState, SoundEvent pSound) {
-        Vec3i vec3i = pState.getValue(smallFoodContainer.HORIZONTALFACING).getNormal();
+        Vec3i vec3i = pState.getValue(smallFoodCabinet.HORIZONTALFACING).getNormal();
         double d0 = (double)this.worldPosition.getX() + 0.5 + (double)vec3i.getX() / 2.0;
         double d1 = (double)this.worldPosition.getY() + 0.5 + (double)vec3i.getY() / 2.0;
         double d2 = (double)this.worldPosition.getZ() + 0.5 + (double)vec3i.getZ() / 2.0;

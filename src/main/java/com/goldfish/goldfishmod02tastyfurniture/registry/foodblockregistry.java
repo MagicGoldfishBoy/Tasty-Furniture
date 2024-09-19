@@ -74,7 +74,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.salmonBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.salmonSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.salmonWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.salmonfurnace;
-import com.goldfish.goldfishmod02tastyfurniture.block.smallFoodContainer;
+import com.goldfish.goldfishmod02tastyfurniture.block.smallFoodCabinet;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweet_berryfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweetberryBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweetberrySign;
@@ -4789,7 +4789,7 @@ public class foodblockregistry {
    static SoundType meat_cabinet_sound = SoundType.MUD;
 
    //.........apple
-     public static final DeferredHolder<Block, smallFoodContainer> SMALL_APPLE_CABINET = FOODBLOCK.register("small_apple_cabinet", () -> new smallFoodContainer(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_APPLE_CABINET = FOODBLOCK.register("small_apple_cabinet", () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
@@ -4797,7 +4797,7 @@ public class foodblockregistry {
      ));
 
    //.........potato
-     public static final DeferredHolder<Block, smallFoodContainer> SMALL_POTATO_CABINET = FOODBLOCK.register("small_potato_cabinet", () -> new smallFoodContainer(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_POTATO_CABINET = FOODBLOCK.register("small_potato_cabinet", () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
@@ -4805,7 +4805,7 @@ public class foodblockregistry {
      ));
 
    //.........beetroot
-     public static final DeferredHolder<Block, smallFoodContainer> SMALL_BEETROOT_CABINET = FOODBLOCK.register("small_beetroot_cabinet", () -> new smallFoodContainer(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_BEETROOT_CABINET = FOODBLOCK.register("small_beetroot_cabinet", () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
@@ -4813,7 +4813,7 @@ public class foodblockregistry {
      ));
 
    //.........carrot
-     public static final DeferredHolder<Block, smallFoodContainer> SMALL_CARROT_CABINET = FOODBLOCK.register("small_carrot_cabinet", () -> new smallFoodContainer(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_CARROT_CABINET = FOODBLOCK.register("small_carrot_cabinet", () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
@@ -4821,7 +4821,7 @@ public class foodblockregistry {
      ));
 
    //.........chorus
-     public static final DeferredHolder<Block, smallFoodContainer> SMALL_CHORUS_CABINET = FOODBLOCK.register("small_chorus_cabinet", () -> new smallFoodContainer(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_CHORUS_CABINET = FOODBLOCK.register("small_chorus_cabinet", () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
@@ -4829,7 +4829,7 @@ public class foodblockregistry {
      ));
 
    //.........glow_berry
-     public static final DeferredHolder<Block, smallFoodContainer> SMALL_GLOW_BERRY_CABINET = FOODBLOCK.register("small_glow_berry_cabinet", () -> new smallFoodContainer(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_GLOW_BERRY_CABINET = FOODBLOCK.register("small_glow_berry_cabinet", () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
@@ -4837,7 +4837,7 @@ public class foodblockregistry {
      ));
 
    //.........melon
-     public static final DeferredHolder<Block, smallFoodContainer> SMALL_MELON_CABINET = FOODBLOCK.register("small_melon_cabinet", () -> new smallFoodContainer(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_MELON_CABINET = FOODBLOCK.register("small_melon_cabinet", () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
@@ -4845,7 +4845,7 @@ public class foodblockregistry {
      ));
 
    //.........sweet_berry
-     public static final DeferredHolder<Block, smallFoodContainer> SMALL_SWEET_BERRY_CABINET = FOODBLOCK.register("small_sweet_berry_cabinet", () -> new smallFoodContainer(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_SWEET_BERRY_CABINET = FOODBLOCK.register("small_sweet_berry_cabinet", () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
@@ -4853,7 +4853,7 @@ public class foodblockregistry {
      ));
 
    //.........brown_mushroom
-     public static final DeferredHolder<Block, smallFoodContainer> SMALL_BROWN_MUSHROOM_CABINET = FOODBLOCK.register("small_brown_mushroom_cabinet", () -> new smallFoodContainer(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_BROWN_MUSHROOM_CABINET = FOODBLOCK.register("small_brown_mushroom_cabinet", () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
@@ -4861,7 +4861,7 @@ public class foodblockregistry {
      ));
 
    //.........red_mushroom
-     public static final DeferredHolder<Block, smallFoodContainer> SMALL_RED_MUSHROOM_CABINET = FOODBLOCK.register("small_red_mushroom_cabinet", () -> new smallFoodContainer(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_RED_MUSHROOM_CABINET = FOODBLOCK.register("small_red_mushroom_cabinet", () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
@@ -4869,7 +4869,7 @@ public class foodblockregistry {
      ));
 
    //.........pumpkin
-     public static final DeferredHolder<Block, smallFoodContainer> SMALL_PUMPKIN_CABINET = FOODBLOCK.register("small_pumpkin_cabinet", () -> new smallFoodContainer(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_PUMPKIN_CABINET = FOODBLOCK.register("small_pumpkin_cabinet", () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
@@ -4877,7 +4877,7 @@ public class foodblockregistry {
      ));
 
    //.........chicken
-     public static final DeferredHolder<Block, smallFoodContainer> SMALL_CHICKEN_CABINET = FOODBLOCK.register("small_chicken_cabinet", () -> new smallFoodContainer(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_CHICKEN_CABINET = FOODBLOCK.register("small_chicken_cabinet", () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
@@ -4885,7 +4885,7 @@ public class foodblockregistry {
      ));
 
    //.........cod
-     public static final DeferredHolder<Block, smallFoodContainer> SMALL_COD_CABINET = FOODBLOCK.register("small_cod_cabinet", () -> new smallFoodContainer(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_COD_CABINET = FOODBLOCK.register("small_cod_cabinet", () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
@@ -4893,7 +4893,7 @@ public class foodblockregistry {
      ));
 
    //.........salmon
-     public static final DeferredHolder<Block, smallFoodContainer> SMALL_SALMON_CABINET = FOODBLOCK.register("small_salmon_cabinet", () -> new smallFoodContainer(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_SALMON_CABINET = FOODBLOCK.register("small_salmon_cabinet", () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
@@ -4901,7 +4901,7 @@ public class foodblockregistry {
      ));
 
    //.........tropical_fish
-     public static final DeferredHolder<Block, smallFoodContainer> SMALL_TROPICAL_FISH_CABINET = FOODBLOCK.register("small_tropical_fish_cabinet", () -> new smallFoodContainer(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_TROPICAL_FISH_CABINET = FOODBLOCK.register("small_tropical_fish_cabinet", () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
@@ -4909,7 +4909,7 @@ public class foodblockregistry {
      ));
 
    //.........mutton
-     public static final DeferredHolder<Block, smallFoodContainer> SMALL_MUTTON_CABINET = FOODBLOCK.register("small_mutton_cabinet", () -> new smallFoodContainer(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_MUTTON_CABINET = FOODBLOCK.register("small_mutton_cabinet", () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
@@ -4917,7 +4917,7 @@ public class foodblockregistry {
      ));
 
    //.........beef
-     public static final DeferredHolder<Block, smallFoodContainer> SMALL_BEEF_CABINET = FOODBLOCK.register("small_beef_cabinet", () -> new smallFoodContainer(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_BEEF_CABINET = FOODBLOCK.register("small_beef_cabinet", () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
@@ -4925,7 +4925,7 @@ public class foodblockregistry {
      ));
 
    //.........pork
-     public static final DeferredHolder<Block, smallFoodContainer> SMALL_PORK_CABINET = FOODBLOCK.register("small_pork_cabinet", () -> new smallFoodContainer(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_PORK_CABINET = FOODBLOCK.register("small_pork_cabinet", () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
@@ -4933,7 +4933,7 @@ public class foodblockregistry {
      ));
 
    //.........rabbit
-     public static final DeferredHolder<Block, smallFoodContainer> SMALL_RABBIT_CABINET = FOODBLOCK.register("small_rabbit_cabinet", () -> new smallFoodContainer(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_RABBIT_CABINET = FOODBLOCK.register("small_rabbit_cabinet", () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)

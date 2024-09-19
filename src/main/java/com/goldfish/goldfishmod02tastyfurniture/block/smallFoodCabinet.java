@@ -41,18 +41,18 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class smallFoodContainer extends HorizontalDirectionalBlock implements EntityBlock {
-    public static final MapCodec<smallFoodContainer> CODEC = simpleCodec(smallFoodContainer::new);
+public class smallFoodCabinet extends HorizontalDirectionalBlock implements EntityBlock {
+    public static final MapCodec<smallFoodCabinet> CODEC = simpleCodec(smallFoodCabinet::new);
     //public static final DirectionProperty FACING = BlockStateProperties.FACING;
     public static final DirectionProperty HORIZONTALFACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
 
     @Override
-    public MapCodec<smallFoodContainer> codec() {
+    public MapCodec<smallFoodCabinet> codec() {
         return CODEC;
     }
 
-    public smallFoodContainer(BlockBehaviour.Properties p_49046_) {
+    public smallFoodCabinet(BlockBehaviour.Properties p_49046_) {
         super(p_49046_);
         this.registerDefaultState(this.stateDefinition.any().setValue(HORIZONTALFACING, Direction.NORTH).setValue(OPEN, Boolean.valueOf(false)));
     }
