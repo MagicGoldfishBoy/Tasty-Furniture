@@ -80,7 +80,6 @@ import com.goldfish.goldfishmod02tastyfurniture.block.glowberryBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.melonBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.muttonBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.porkBarrel;
-import com.goldfish.goldfishmod02tastyfurniture.block.potatoBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.pumpkinBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.rabbitBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.redmushroomBarrel;
@@ -5687,7 +5686,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
         //.............potato
-          potatoBarrel potato_barrel = foodblockregistry.POTATO_BARREL.get();
+          foodBarrel potato_barrel = foodblockregistry.POTATO_BARREL.get();
           ResourceLocation potato_barrel_closed_texture = modLoc("block/potato_barrel_top_closed");
           ResourceLocation potato_barrel_open_texture = modLoc("block/potato_barrel_top_open");
           ResourceLocation potato_barrel_side = modLoc("block/potato_barrel");
