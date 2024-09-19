@@ -71,9 +71,7 @@ import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.beefBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.brownmushroomBarrel;
-import com.goldfish.goldfishmod02tastyfurniture.block.carrotBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.chickenBarrel;
-import com.goldfish.goldfishmod02tastyfurniture.block.chorusBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.codBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.glowberryBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.melonBarrel;
@@ -5781,7 +5779,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
         //.............carrot
-          carrotBarrel carrot_barrel = foodblockregistry.CARROT_BARREL.get();
+          foodBarrel carrot_barrel = foodblockregistry.CARROT_BARREL.get();
           ResourceLocation carrot_barrel_closed_texture = modLoc("block/carrot_barrel_top_closed");
           ResourceLocation carrot_barrel_open_texture = modLoc("block/carrot_barrel_top_open");
           ResourceLocation carrot_barrel_side = modLoc("block/carrot_barrel");
@@ -5829,7 +5827,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
         //.............chorus
-          chorusBarrel chorus_barrel = foodblockregistry.CHORUS_BARREL.get();
+        foodBarrel chorus_barrel = foodblockregistry.CHORUS_BARREL.get();
           ResourceLocation chorus_barrel_closed_texture = modLoc("block/chorus_barrel_top_closed");
           ResourceLocation chorus_barrel_open_texture = modLoc("block/chorus_barrel_top_open");
           ResourceLocation chorus_barrel_side = modLoc("block/chorus_barrel");

@@ -16,7 +16,6 @@ import com.goldfish.goldfishmod02tastyfurniture.block.brown_mushroomfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.brownmushroomBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.brownmushroomSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.brownmushroomWallSign;
-import com.goldfish.goldfishmod02tastyfurniture.block.carrotBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.carrotfurnace;
@@ -24,7 +23,6 @@ import com.goldfish.goldfishmod02tastyfurniture.block.chickenBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.chickenSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.chickenWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.chickenfurnace;
-import com.goldfish.goldfishmod02tastyfurniture.block.chorusBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.chorusSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.chorusWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.chorusfurnace;
@@ -90,13 +88,11 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootfurnaceenti
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.brown_mushroomfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.brownmushroomBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.brownmushroomSignEntity;
-import com.goldfish.goldfishmod02tastyfurniture.block.entity.carrotBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.carrotSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.carrotfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chickenBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chickenSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chickenfurnaceentity;
-import com.goldfish.goldfishmod02tastyfurniture.block.entity.chorusBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chorusSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chorusfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.codBarrelEntity;
@@ -4509,24 +4505,18 @@ public class foodblockregistry {
      ));
 
    //.........carrot
-     public static final DeferredHolder<Block, carrotBarrel> CARROT_BARREL = FOODBLOCK.register("carrot_barrel", () -> new carrotBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, foodBarrel> CARROT_BARREL = FOODBLOCK.register("carrot_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
-
-     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<carrotBarrelEntity>> CARROT_BARREL_ENTITY = FOODBLOCKENTITY.register("carrot_barrel_entity", 
-     () -> BlockEntityType.Builder.of(carrotBarrelEntity::new, foodblockregistry.CARROT_BARREL.get()).build(null));
 
    //.........chorus
-     public static final DeferredHolder<Block, chorusBarrel> CHORUS_BARREL = FOODBLOCK.register("chorus_barrel", () -> new chorusBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, foodBarrel> CHORUS_BARREL = FOODBLOCK.register("chorus_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
-
-     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<chorusBarrelEntity>> CHORUS_BARREL_ENTITY = FOODBLOCKENTITY.register("chorus_barrel_entity", 
-     () -> BlockEntityType.Builder.of(chorusBarrelEntity::new, foodblockregistry.CHORUS_BARREL.get()).build(null));
 
    //.........glowberry
      public static final DeferredHolder<Block, glowberryBarrel> GLOWBERRY_BARREL = FOODBLOCK.register("glowberry_barrel", () -> new glowberryBarrel(BlockBehaviour.Properties.of()
