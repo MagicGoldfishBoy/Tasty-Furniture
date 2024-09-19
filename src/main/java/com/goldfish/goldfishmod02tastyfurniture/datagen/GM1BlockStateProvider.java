@@ -73,7 +73,6 @@ import com.goldfish.goldfishmod02tastyfurniture.block.beefBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.brownmushroomBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.chickenBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.codBarrel;
-import com.goldfish.goldfishmod02tastyfurniture.block.glowberryBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.melonBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.muttonBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.porkBarrel;
@@ -5875,7 +5874,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
         //.............glowberry
-          glowberryBarrel glowberry_barrel = foodblockregistry.GLOWBERRY_BARREL.get();
+          foodBarrel glowberry_barrel = foodblockregistry.GLOWBERRY_BARREL.get();
           ResourceLocation glowberry_barrel_closed_texture = modLoc("block/glowberry_barrel_top_closed");
           ResourceLocation glowberry_barrel_open_texture = modLoc("block/glowberry_barrel_top_open");
           ResourceLocation glowberry_barrel_side = modLoc("block/glowberry_barrel");

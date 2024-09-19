@@ -34,7 +34,6 @@ import com.goldfish.goldfishmod02tastyfurniture.block.foodChest;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodlamp;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodpathtypeminislab;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
-import com.goldfish.goldfishmod02tastyfurniture.block.glowberryBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.glowberrySign;
 import com.goldfish.goldfishmod02tastyfurniture.block.glowberryWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.glowberryfurnace;
@@ -99,7 +98,6 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.codBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.codSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.codfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodChestEntity;
-import com.goldfish.goldfishmod02tastyfurniture.block.entity.glowberryBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.glowberrySignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.appleSignEntity;
@@ -4519,15 +4517,12 @@ public class foodblockregistry {
      ));
 
    //.........glowberry
-     public static final DeferredHolder<Block, glowberryBarrel> GLOWBERRY_BARREL = FOODBLOCK.register("glowberry_barrel", () -> new glowberryBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, foodBarrel> GLOWBERRY_BARREL = FOODBLOCK.register("glowberry_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      .lightLevel(state  -> 10)
      ));
-
-     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<glowberryBarrelEntity>> GLOWBERRY_BARREL_ENTITY = FOODBLOCKENTITY.register("glowberry_barrel_entity", 
-     () -> BlockEntityType.Builder.of(glowberryBarrelEntity::new, foodblockregistry.GLOWBERRY_BARREL.get()).build(null));
 
    //.........melon
      public static final DeferredHolder<Block, melonBarrel> MELON_BARREL = FOODBLOCK.register("melon_barrel", () -> new melonBarrel(BlockBehaviour.Properties.of()
