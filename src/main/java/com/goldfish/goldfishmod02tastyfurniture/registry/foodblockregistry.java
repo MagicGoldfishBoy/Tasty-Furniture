@@ -4619,6 +4619,13 @@ public class foodblockregistry {
      ));
 
    //.........beetroot
+     public static final DeferredHolder<Block, foodChairBlock> BEETROOT_CHAIR = FOODBLOCK.register("beetroot_chair", () -> new foodChairBlock(BlockBehaviour.Properties.of()
+     .sound(plant_chair_sound)
+     .destroyTime(chair_destroy_time)
+     .explosionResistance(chair_explosion_resistance)
+     .noOcclusion()
+     ));
+
    //.........carrot
    //.........chorus
    //.........glow_berry
