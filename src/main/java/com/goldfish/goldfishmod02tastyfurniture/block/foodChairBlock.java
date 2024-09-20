@@ -46,38 +46,34 @@ public class foodChairBlock extends HorizontalDirectionalBlock {
         this.registerDefaultState(this.getStateDefinition().any().setValue(HORIZONTALFACING, Direction.NORTH));
     }
 
-        @Override
-    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult result) //trying to sit sends player under map for some reason only computer cthulu knows
-    {
-        if(player.isCrouching())
-        {
+
+    @Override
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult result) {
+        if (player.isCrouching()) {
+            // Rotate the chair block
             level.playSound(player, pos, SoundEvents.MUD_BRICKS_HIT, SoundSource.BLOCKS, 1.0F, 0.9F + 0.1F * level.random.nextFloat());
-            Direction blockDirection = state.getValue(FACING);
+            Direction blockDirection = state.getValue(HORIZONTALFACING);
             Direction newDirection = blockDirection.getClockWise();
-            BlockState newState = state.setValue(FACING, newDirection);
-    
+            BlockState newState = state.setValue(HORIZONTALFACING, newDirection);
             level.setBlock(pos, newState, Block.UPDATE_ALL);
-    
-            return InteractionResult.CONSUME; 
-        }
-        else if (!level.isClientSide()) {
-          return player.startRiding(this.getChairEntity(level)) ? InteractionResult.CONSUME : InteractionResult.PASS;}
-        else //state.getValue(BlockStateProperties.HORIZONTAL_FACING).getOpposite();
-        {
-            //return InteractionResult.CONSUME;
+            return InteractionResult.CONSUME;
+        } else if (!level.isClientSide()) {
+            Entity chairEntity = this.getChairEntity(level, pos);
+            if (chairEntity != null && !player.isPassenger()) {
+                return player.startRiding(chairEntity) ? InteractionResult.CONSUME : InteractionResult.PASS;
+            }
+            return InteractionResult.PASS;
+        } else {
             return InteractionResult.SUCCESS;
         }
-      //  return InteractionResult.SUCCESS;
     }
 
-    public Entity getChairEntity(Level level) {
-        return new foodChairEntity(foodEntityRegistry.CHAIR_ENTITY.get(), level);
+    public Entity getChairEntity(Level level, BlockPos pos) {
+        foodChairEntity entity = new foodChairEntity(foodEntityRegistry.CHAIR_ENTITY.get(), level);
+        entity.setPos(pos.getX() + 0.5, pos.getY() + 0.2, pos.getZ() + 0.5); 
+        level.addFreshEntity(entity); 
+        return entity;
     }
-    // @Override
-    // @Nullable
-    // public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
-    //     return new foodChairBlockEntity(pPos, pState);
-    // }
 
         @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
@@ -87,18 +83,5 @@ public class foodChairBlock extends HorizontalDirectionalBlock {
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, net.minecraft.world.phys.shapes.CollisionContext context) {
         return SHAPE;
-    }
-
-    // public static void sitDown(Level level, BlockPos pos, Entity entity) {
-    //     if (level.isClientSide) return;
-
-    //     foodChairBlockEntity chair = new foodChairBlockEntity(level, pos);
-    //     level.addFreshEntity(chair);
-    //     entity.startRiding(chair);
-
-    //     level.updateNeighbourForOutputSignal(pos, level.getBlockState(pos).getBlock());
-
-    //     if (entity instanceof TamableAnimal ta) ta.setInSittingPose(true);
-    // }
-    
+    } 
 }

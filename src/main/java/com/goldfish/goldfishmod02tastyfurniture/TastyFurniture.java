@@ -9,6 +9,7 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.blockentity.ChestRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -45,6 +46,7 @@ import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodEntityRegistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.food_weapon_registry;
+import com.goldfish.goldfishmod02tastyfurniture.client.renderer.foodChairEntityRenderer;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1BlockLootTableProvider;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1Datagen;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1LootTableProvider;
@@ -197,6 +199,8 @@ public class TastyFurniture
         event.registerBlockEntityRenderer(foodblockregistry.RABBIT_SIGN_ENTITY.get(), SignRenderer::new);
 
         event.registerBlockEntityRenderer(foodblockregistry.APPLE_CHEST_ENTITY.get(), ChestRenderer::new);
+
+        event.registerEntityRenderer(foodEntityRegistry.CHAIR_ENTITY.get(), foodChairEntityRenderer::new);
         //event.registerBlockEntityRenderer(foodblockregistry.APPLE_CHEST_ENTITY.value(), ChestRenderer::new);
         }
         

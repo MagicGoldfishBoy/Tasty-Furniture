@@ -19,7 +19,8 @@ public class foodChairEntity extends Entity {
     }
 
     public boolean startRiding(Entity pVehicle) {
-        return this.startRiding(pVehicle);
+       // return this.startRiding(pVehicle);
+       return super.startRiding(pVehicle);
     }
 
     @Override
