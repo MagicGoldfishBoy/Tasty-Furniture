@@ -3,6 +3,7 @@ package com.goldfish.goldfishmod02tastyfurniture.block;
 import javax.annotation.Nullable;
 
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodChairEntity;
+import com.goldfish.goldfishmod02tastyfurniture.registry.foodEntityRegistry;
 import com.mojang.serialization.MapCodec;
 
 import net.minecraft.core.BlockPos;
@@ -46,7 +47,7 @@ public class foodChairBlock extends HorizontalDirectionalBlock {
     }
 
         @Override
-    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult result)
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult result) //trying to sit sends player under map for some reason only computer cthulu knows
     {
         if(player.isCrouching())
         {
@@ -58,8 +59,6 @@ public class foodChairBlock extends HorizontalDirectionalBlock {
             level.setBlock(pos, newState, Block.UPDATE_ALL);
     
             return InteractionResult.CONSUME; 
-          //  level.setBlock(pos, state.setValue(TUCKED, !state.getValue(TUCKED)), UPDATE_ALL);
-           // return InteractionResult.SUCCESS;
         }
         else if (!level.isClientSide()) {
           return player.startRiding(this.getChairEntity(level)) ? InteractionResult.CONSUME : InteractionResult.PASS;}
@@ -72,7 +71,7 @@ public class foodChairBlock extends HorizontalDirectionalBlock {
     }
 
     public Entity getChairEntity(Level level) {
-        return new foodChairEntity(/*ModEntityTypes.FOOD_CHAIR.get(),*/null, level); //need to make entity type object. will need new registry
+        return new foodChairEntity(foodEntityRegistry.CHAIR_ENTITY.get(), level);
     }
     // @Override
     // @Nullable

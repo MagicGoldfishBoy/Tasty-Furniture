@@ -24,17 +24,14 @@ public class foodChairEntity extends Entity {
 
     @Override
     protected void defineSynchedData(Builder pBuilder) {
-        throw new UnsupportedOperationException("Unimplemented method 'defineSynchedData'");
     }
 
     @Override
     protected void readAdditionalSaveData(CompoundTag pCompound) {
-        throw new UnsupportedOperationException("Unimplemented method 'readAdditionalSaveData'");
     }
 
     @Override
     protected void addAdditionalSaveData(CompoundTag pCompound) {
-        throw new UnsupportedOperationException("Unimplemented method 'addAdditionalSaveData'");
     }
     
 }

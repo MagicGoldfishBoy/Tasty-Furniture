@@ -43,6 +43,7 @@ import com.goldfish.goldfishmod02tastyfurniture.registry.nuggetregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockitemregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistry;
+import com.goldfish.goldfishmod02tastyfurniture.registry.foodEntityRegistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.food_weapon_registry;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1BlockLootTableProvider;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1Datagen;
@@ -61,6 +62,8 @@ public class TastyFurniture
     public static final DeferredRegister.Blocks FOODBLOCK = DeferredRegister.createBlocks(MODID);
 
     public static final DeferredRegister.Blocks FOODBLOCKENTITY = DeferredRegister.createBlocks(MODID);
+
+   // public static final DeferredRegister.Blocks FOODENTITY = DeferredRegister.createBlocks(MODID);
 
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
     
@@ -119,6 +122,8 @@ public class TastyFurniture
         foodblockregistry.FOODBLOCK.register(modEventBus);
 
         foodblockregistry.FOODBLOCKENTITY.register(modEventBus);
+
+        foodEntityRegistry.FOODENTITY.register(modEventBus);
 
         ITEMS.register(modEventBus);
 
