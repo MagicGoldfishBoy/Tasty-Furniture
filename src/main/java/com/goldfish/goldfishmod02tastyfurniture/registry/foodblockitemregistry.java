@@ -1810,6 +1810,10 @@ public class foodblockitemregistry {
     public static final DeferredHolder<Item, BlockItem> BEETROOT_CHAIR_ITEM = FOODBLOCKITEM.register("beetroot_chair_item", () -> new BlockItem(foodblockregistry.BEETROOT_CHAIR.get(),
     new BlockItem.Properties()));
 
+   //.........carrot
+    public static final DeferredHolder<Item, BlockItem> CARROT_CHAIR_ITEM = FOODBLOCKITEM.register("carrot_chair_item", () -> new BlockItem(foodblockregistry.CARROT_CHAIR.get(),
+    new BlockItem.Properties()));
+
 //==============================================================================================================================================================================================
 //                                                                                         Cabinets
 //==============================================================================================================================================================================================
