@@ -6661,6 +6661,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+        //.............brown_mushroom
+          foodChairBlock brown_mushroomChair = foodblockregistry.BROWN_MUSHROOM_CHAIR.get();
+
+          getVariantBuilder(brown_mushroomChair)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/brown_mushroom_chair");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
     //---------------------------------------------------------------cabinets-------------------------------------------------------------------------------
         //.............apple
           smallFoodCabinet appleCabinet = foodblockregistry.SMALL_APPLE_CABINET.get();

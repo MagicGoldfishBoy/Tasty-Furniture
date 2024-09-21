@@ -4667,6 +4667,13 @@ public class foodblockregistry {
      ));
 
    //.........brown_mushroom
+     public static final DeferredHolder<Block, foodChairBlock> BROWN_MUSHROOM_CHAIR = FOODBLOCK.register("brown_mushroom_chair", () -> new foodChairBlock(BlockBehaviour.Properties.of()
+     .sound(plant_chair_sound)
+     .destroyTime(chair_destroy_time)
+     .explosionResistance(chair_explosion_resistance)
+     .noOcclusion()
+     ));
+
    //.........red_mushroom
    //.........pumpkin
    //.........chicken
