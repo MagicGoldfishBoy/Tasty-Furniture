@@ -4643,6 +4643,13 @@ public class foodblockregistry {
      ));
 
    //.........glow_berry
+     public static final DeferredHolder<Block, foodChairBlock> GLOW_BERRY_CHAIR = FOODBLOCK.register("glow_berry_chair", () -> new foodChairBlock(BlockBehaviour.Properties.of()
+     .sound(plant_chair_sound)
+     .destroyTime(chair_destroy_time)
+     .explosionResistance(chair_explosion_resistance)
+     .noOcclusion()
+     ));
+
    //.........melon
    //.........sweet_berry
    //.........brown_mushroom
