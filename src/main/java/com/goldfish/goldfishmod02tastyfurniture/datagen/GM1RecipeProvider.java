@@ -4600,6 +4600,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('B', foodblockitemregistry.CARROT_SLAB_ITEM.get())
            .unlockedBy("has_carrot_slab", has(foodblockitemregistry.CARROT_SLAB_ITEM.get()))
            .save(output);
+         //chorus
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHORUS_CHAIR_ITEM.get())
+           .pattern("AAA")
+           .pattern("BBB")
+           .pattern("A A")
+           .define('A', ingotregistry.CHORUS_INGOT.get())
+           .define('B', foodblockitemregistry.CHORUS_SLAB_ITEM.get())
+           .unlockedBy("has_chorus_slab", has(foodblockitemregistry.CHORUS_SLAB_ITEM.get()))
+           .save(output);
         //-----------------------------------------------------------cabinets----------------------------------------------------------------------
          //apple
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SMALL_APPLE_CABINET_ITEM.get())
