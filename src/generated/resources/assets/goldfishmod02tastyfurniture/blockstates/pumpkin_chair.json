@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_chair",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_chair",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_chair"
+    },
+    "facing=west": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_chair",
+      "y": 90
+    }
+  }
+}

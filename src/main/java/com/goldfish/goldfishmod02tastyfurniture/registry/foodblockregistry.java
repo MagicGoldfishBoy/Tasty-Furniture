@@ -4683,6 +4683,13 @@ public class foodblockregistry {
      ));
 
    //.........pumpkin
+     public static final DeferredHolder<Block, foodChairBlock> PUMPKIN_CHAIR = FOODBLOCK.register("pumpkin_chair", () -> new foodChairBlock(BlockBehaviour.Properties.of()
+     .sound(plant_chair_sound)
+     .destroyTime(chair_destroy_time)
+     .explosionResistance(chair_explosion_resistance)
+     .noOcclusion()
+     ));
+
    //.........chicken
    //.........cod
    //.........salmon
@@ -4691,9 +4698,6 @@ public class foodblockregistry {
    //.........beef
    //.........pork
    //.........rabbit
-   //   public static final DeferredHolder<EntityType<?>, EntityType<foodChairEntity>> CHAIR_ENTITY = FOODENTITY.register("chair_entity", () -> EntityType.Builder.of(foodChairEntity::new))
-  //  public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodChairBlockEntity>> SMALL_CHAIR_ENTITY = FOODBLOCKENTITY.register("small_chair_entity",
-  //  () -> BlockEntityType.Builder.of(foodChairBlockEntity::new, APPLE_CHAIR.get()).build(null));
 
 //==============================================================================================================================================================================================
 //                                                                                           Beds
