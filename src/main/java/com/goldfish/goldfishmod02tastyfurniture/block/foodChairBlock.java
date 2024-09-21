@@ -1,5 +1,7 @@
 package com.goldfish.goldfishmod02tastyfurniture.block;
 
+import java.util.List;
+
 import javax.annotation.Nullable;
 
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodChairEntity;
@@ -15,6 +17,9 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -84,4 +89,10 @@ public class foodChairBlock extends HorizontalDirectionalBlock {
     public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, net.minecraft.world.phys.shapes.CollisionContext context) {
         return SHAPE;
     } 
+
+    @Override
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<net.minecraft.network.chat.Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        tooltipComponents.add(net.minecraft.network.chat.Component.translatable("tooltip.goldfishmod02tastyfurniture.food_chair.tooltip"));
+        super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+    }
 }

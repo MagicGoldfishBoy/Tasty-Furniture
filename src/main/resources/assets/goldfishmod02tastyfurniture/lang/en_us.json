@@ -649,6 +649,7 @@
   "block.goldfishmod02tastyfurniture.beef_barrel": "Beef Barrel",
   "block.goldfishmod02tastyfurniture.pork_barrel": "Pork Barrel",
   "block.goldfishmod02tastyfurniture.rabbit_barrel": "Rabbit Barrel",
+"tooltip.goldfishmod02tastyfurniture.food_chair.tooltip": "Right-Click to sit, crouch and right-click to rotate",
 "block.goldfishmod02tastyfurniture.apple_chair": "Apple Chair",
 "block.goldfishmod02tastyfurniture.potato_chair": "Potato Chair",
 "block.goldfishmod02tastyfurniture.beetroot_chair": "Beetroot Chair",
