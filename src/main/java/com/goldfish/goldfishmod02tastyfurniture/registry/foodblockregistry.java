@@ -4699,6 +4699,13 @@ public class foodblockregistry {
      ));
 
    //.........cod
+     public static final DeferredHolder<Block, foodChairBlock> COD_CHAIR = FOODBLOCK.register("cod_chair", () -> new foodChairBlock(BlockBehaviour.Properties.of()
+     .sound(plant_chair_sound)
+     .destroyTime(chair_destroy_time)
+     .explosionResistance(chair_explosion_resistance)
+     .noOcclusion()
+     ));
+
    //.........salmon
    //.........tropical_fish
    //.........mutton
