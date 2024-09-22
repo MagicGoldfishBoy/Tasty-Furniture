@@ -4717,6 +4717,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('B', foodblockitemregistry.BEEF_SLAB_ITEM.get())
            .unlockedBy("has_beef_slab", has(foodblockitemregistry.BEEF_SLAB_ITEM.get()))
            .save(output);
+         //pork
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PORK_CHAIR_ITEM.get())
+           .pattern("AAA")
+           .pattern("BBB")
+           .pattern("A A")
+           .define('A', ingotregistry.PORK_INGOT.get())
+           .define('B', foodblockitemregistry.PORK_SLAB_ITEM.get())
+           .unlockedBy("has_pork_slab", has(foodblockitemregistry.PORK_SLAB_ITEM.get()))
+           .save(output);
         //-----------------------------------------------------------cabinets----------------------------------------------------------------------
          //apple
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SMALL_APPLE_CABINET_ITEM.get())
