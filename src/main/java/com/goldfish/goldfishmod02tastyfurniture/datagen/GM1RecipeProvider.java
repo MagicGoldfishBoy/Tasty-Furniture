@@ -4699,6 +4699,24 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('B', foodblockitemregistry.TROPICAL_FISH_SLAB_ITEM.get())
            .unlockedBy("has_tropical_fish_slab", has(foodblockitemregistry.TROPICAL_FISH_SLAB_ITEM.get()))
            .save(output);
+         //mutton
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MUTTON_CHAIR_ITEM.get())
+           .pattern("AAA")
+           .pattern("BBB")
+           .pattern("A A")
+           .define('A', ingotregistry.MUTTON_INGOT.get())
+           .define('B', foodblockitemregistry.MUTTON_SLAB_ITEM.get())
+           .unlockedBy("has_mutton_slab", has(foodblockitemregistry.MUTTON_SLAB_ITEM.get()))
+           .save(output);
+         //beef
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEEF_CHAIR_ITEM.get())
+           .pattern("AAA")
+           .pattern("BBB")
+           .pattern("A A")
+           .define('A', ingotregistry.BEEF_INGOT.get())
+           .define('B', foodblockitemregistry.BEEF_SLAB_ITEM.get())
+           .unlockedBy("has_beef_slab", has(foodblockitemregistry.BEEF_SLAB_ITEM.get()))
+           .save(output);
         //-----------------------------------------------------------cabinets----------------------------------------------------------------------
          //apple
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SMALL_APPLE_CABINET_ITEM.get())

@@ -1858,6 +1858,14 @@ public class foodblockitemregistry {
     public static final DeferredHolder<Item, BlockItem> TROPICAL_FISH_CHAIR_ITEM = FOODBLOCKITEM.register("tropical_fish_chair_item", () -> new BlockItem(foodblockregistry.TROPICAL_FISH_CHAIR.get(),
     new BlockItem.Properties()));
 
+   //.........mutton
+    public static final DeferredHolder<Item, BlockItem> MUTTON_CHAIR_ITEM = FOODBLOCKITEM.register("mutton_chair_item", () -> new BlockItem(foodblockregistry.MUTTON_CHAIR.get(),
+    new BlockItem.Properties()));
+
+   //.........beef
+    public static final DeferredHolder<Item, BlockItem> BEEF_CHAIR_ITEM = FOODBLOCKITEM.register("beef_chair_item", () -> new BlockItem(foodblockregistry.BEEF_CHAIR.get(),
+    new BlockItem.Properties()));
+
 //==============================================================================================================================================================================================
 //                                                                                         Cabinets
 //==============================================================================================================================================================================================

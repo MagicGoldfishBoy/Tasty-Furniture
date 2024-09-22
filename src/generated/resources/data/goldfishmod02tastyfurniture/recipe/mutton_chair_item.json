@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod02tastyfurniture:mutton_ingot"
+    },
+    "B": {
+      "item": "goldfishmod02tastyfurniture:mutton_slab_item"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "BBB",
+    "A A"
+  ],
+  "result": {
+    "count": 1,
+    "id": "goldfishmod02tastyfurniture:mutton_chair_item"
+  }
+}

@@ -4723,7 +4723,21 @@ public class foodblockregistry {
      ));
 
    //.........mutton
+     public static final DeferredHolder<Block, foodChairBlock> MUTTON_CHAIR = FOODBLOCK.register("mutton_chair", () -> new foodChairBlock(BlockBehaviour.Properties.of()
+     .sound(plant_chair_sound)
+     .destroyTime(chair_destroy_time)
+     .explosionResistance(chair_explosion_resistance)
+     .noOcclusion()
+     ));
+
    //.........beef
+     public static final DeferredHolder<Block, foodChairBlock> BEEF_CHAIR = FOODBLOCK.register("beef_chair", () -> new foodChairBlock(BlockBehaviour.Properties.of()
+     .sound(plant_chair_sound)
+     .destroyTime(chair_destroy_time)
+     .explosionResistance(chair_explosion_resistance)
+     .noOcclusion()
+     ));
+
    //.........pork
    //.........rabbit
 
