@@ -7,6 +7,7 @@ import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -61,47 +62,77 @@ public class foodBed extends HorizontalDirectionalBlock {
         };
         return facing;
     }
-    
-
-    @Override
-    protected InteractionResult useWithoutItem(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, BlockHitResult pHitResult) {
-        if (pLevel.isClientSide) {
-            return InteractionResult.CONSUME;
-        } else {
-            // if (pState.getValue(PART) != BedPart.HEAD) {
-            //     pPos = pPos.relative(pState.getValue(FACING));
-            //     pState = pLevel.getBlockState(pPos);
-            //     if (!pState.is(this)) {
-            //         return InteractionResult.CONSUME;
-            //     }
-            // }
-
-            if (!canSetSpawn(pLevel)) {
-                pLevel.removeBlock(pPos, false);
-                BlockPos blockpos = pPos.relative(pState.getValue(FACING).getOpposite());
-                if (pLevel.getBlockState(blockpos).is(this)) {
-                    pLevel.removeBlock(blockpos, false);
-                }
-
-                Vec3 vec3 = pPos.getCenter();
-                pLevel.explode(null, pLevel.damageSources().badRespawnPointExplosion(vec3), null, vec3, 5.0F, true, Level.ExplosionInteraction.BLOCK);
-                return InteractionResult.SUCCESS;
-            } else if (pState.getValue(OCCUPIED)) {
-                if (!this.kickVillagerOutOfBed(pLevel, pPos)) {
-                    pPlayer.displayClientMessage(Component.translatable("block.minecraft.bed.occupied"), true);
-                }
-
-                return InteractionResult.SUCCESS;
-            } else {
-                pPlayer.startSleepInBed(pPos).ifLeft(p_49477_ -> {
-                    if (p_49477_.getMessage() != null) {
-                        pPlayer.displayClientMessage(p_49477_.getMessage(), true);
-                    }
-                });
-                return InteractionResult.SUCCESS;
+@Override
+protected InteractionResult useWithoutItem(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, BlockHitResult pHitResult) {
+    if (pLevel.isClientSide) {
+        return InteractionResult.CONSUME;
+    } else {
+        if (!canSetSpawn(pLevel)) {
+            pLevel.removeBlock(pPos, false);
+            BlockPos blockpos = pPos.relative(pState.getValue(FACING).getOpposite());
+            if (pLevel.getBlockState(blockpos).is(this)) {
+                pLevel.removeBlock(blockpos, false);
             }
+
+            Vec3 vec3 = pPos.getCenter();
+            pLevel.explode(null, pLevel.damageSources().badRespawnPointExplosion(vec3), null, vec3, 5.0F, true, Level.ExplosionInteraction.BLOCK);
+            return InteractionResult.SUCCESS;
+        } else if (pState.getValue(OCCUPIED)) {
+            if (!this.kickVillagerOutOfBed(pLevel, pPos)) {
+                pPlayer.displayClientMessage(Component.translatable("block.minecraft.bed.occupied"), true);
+            }
+            return InteractionResult.SUCCESS;
+        } else {
+            pPlayer.startSleepInBed(pPos).ifLeft(sleepResult -> {
+                if (sleepResult.getMessage() != null) {
+                    pPlayer.displayClientMessage(sleepResult.getMessage(), true);
+                }
+            });
+
+            // Manually advance the time to day
+            if (pLevel instanceof ServerLevel serverLevel) {
+                serverLevel.setDayTime(0);  // Set time to day
+            }
+
+            return InteractionResult.SUCCESS;
         }
     }
+}
+ 
+
+    // @Override
+    // protected InteractionResult useWithoutItem(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, BlockHitResult pHitResult) {
+    //     if (pLevel.isClientSide) {
+    //         return InteractionResult.CONSUME;
+    //     } else {
+
+    //         if (!canSetSpawn(pLevel)) {
+    //             pLevel.removeBlock(pPos, false);
+    //             BlockPos blockpos = pPos.relative(pState.getValue(FACING).getOpposite());
+    //             if (pLevel.getBlockState(blockpos).is(this)) {
+    //                 pLevel.removeBlock(blockpos, false);
+    //             }
+
+    //             Vec3 vec3 = pPos.getCenter();
+    //             pLevel.explode(null, pLevel.damageSources().badRespawnPointExplosion(vec3), null, vec3, 5.0F, true, Level.ExplosionInteraction.BLOCK);
+    //             return InteractionResult.SUCCESS;
+    //         } else if (pState.getValue(OCCUPIED)) {
+    //             if (!this.kickVillagerOutOfBed(pLevel, pPos)) {
+    //                 pPlayer.displayClientMessage(Component.translatable("block.minecraft.bed.occupied"), true);
+    //             }
+
+    //             return InteractionResult.SUCCESS;
+    //         } else {
+    //             pPlayer.startSleepInBed(pPos).ifLeft(p_49477_ -> {
+    //                 System.out.println(pState);
+    //                 if (p_49477_.getMessage() != null) {
+    //                     pPlayer.displayClientMessage(p_49477_.getMessage(), true);
+    //                 }
+    //             });
+    //             return InteractionResult.SUCCESS;
+    //         }
+    //     }
+    // }
 
         public static boolean canSetSpawn(Level pLevel) {
         return pLevel.dimensionType().bedWorks();
