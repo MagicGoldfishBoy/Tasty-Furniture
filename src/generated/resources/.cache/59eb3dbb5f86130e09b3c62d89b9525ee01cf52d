@@ -1,6 +1,7 @@
-// 1.21	2024-09-22T10:51:08.69927272	Loot Tables
+// 1.21	2024-09-22T12:21:41.467540361	Loot Tables
 56ddb3b4406d93958c51301ca7c44f265c39bbc2 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_barrel.json
 f506816aefac13fd3bcb8b3075eefc63b1b6be41 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bars.json
+7922a4aff64facc1d1fca57e74153e1ad6451e89 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bed.json
 98b73d11c0b3a3ecadbdd7c289263f01706818e9 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_block.json
 81d69920001f0e32b706a1e1ffa975ddba47869b data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bricks_block.json
 5b38abce73b00a2aaae16ef3f193608a3d884f13 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bricks_slab.json

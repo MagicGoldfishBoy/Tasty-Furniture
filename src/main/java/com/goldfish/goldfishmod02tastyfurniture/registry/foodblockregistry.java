@@ -2,6 +2,7 @@ package com.goldfish.goldfishmod02tastyfurniture.registry;
 
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodBarrel;
+import com.goldfish.goldfishmod02tastyfurniture.block.foodBed;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodChairBlock;
 import com.goldfish.goldfishmod02tastyfurniture.block.appleSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.appleWallSign;
@@ -4759,7 +4760,17 @@ public class foodblockregistry {
 //                                                                                           Beds
 //==============================================================================================================================================================================================
 
+   static float bed_destroy_time = 1.75f;
+   static float bed_explosion_resistance = 1.25f;
+   static SoundType plant_bed_sound = SoundType.MUD_BRICKS;
+   static SoundType meat_bed_sound = SoundType.MUD;
    //.........apple
+     public static final DeferredHolder<Block, foodBed> APPLE_BED = FOODBLOCK.register("apple_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     .sound(plant_bed_sound)
+     .destroyTime(bed_destroy_time)
+     .explosionResistance(bed_explosion_resistance)
+     .noOcclusion()
+     ));
    //.........potato
    //.........beetroot
    //.........carrot
