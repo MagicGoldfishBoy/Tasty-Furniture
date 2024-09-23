@@ -4771,7 +4771,15 @@ public class foodblockregistry {
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
+
    //.........potato
+     public static final DeferredHolder<Block, foodBed> POTATO_BED = FOODBLOCK.register("potato_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     .sound(plant_bed_sound)
+     .destroyTime(bed_destroy_time)
+     .explosionResistance(bed_explosion_resistance)
+     .noOcclusion()
+     ));
+     
    //.........beetroot
    //.........carrot
    //.........chorus

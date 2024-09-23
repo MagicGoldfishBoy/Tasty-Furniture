@@ -514,7 +514,9 @@
     "goldfishmod02tastyfurniture:mutton_chair",
     "goldfishmod02tastyfurniture:beef_chair",
     "goldfishmod02tastyfurniture:pork_chair",
-    "goldfishmod02tastyfurniture:rabbit_chair"
+    "goldfishmod02tastyfurniture:rabbit_chair",
+      "goldfishmod02tastyfurniture:apple_bed",
+      "goldfishmod02tastyfurniture:potato_bed"
     
     ]
   }

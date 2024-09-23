@@ -1,4 +1,4 @@
-// 1.21	2024-09-22T12:21:41.467540361	Loot Tables
+// 1.21	2024-09-22T22:03:33.765710704	Loot Tables
 56ddb3b4406d93958c51301ca7c44f265c39bbc2 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_barrel.json
 f506816aefac13fd3bcb8b3075eefc63b1b6be41 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bars.json
 7922a4aff64facc1d1fca57e74153e1ad6451e89 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bed.json
@@ -411,6 +411,7 @@ fe8ca8790dd6de13143c675c460d2b2a8c061f79 data/goldfishmod02tastyfurniture/loot_t
 a17b490eb81e19b9c5819856c72cc6eb9184a93b data/goldfishmod02tastyfurniture/loot_table/blocks/pork_wall_torch.json
 a7cdd4b50e67577309c306b7e105f312430cecf0 data/goldfishmod02tastyfurniture/loot_table/blocks/potato_barrel.json
 632f3b5108b519040031d7c49136bf5e93a26063 data/goldfishmod02tastyfurniture/loot_table/blocks/potato_bars.json
+6490232fcabbede8109500dd392a16a520f3c698 data/goldfishmod02tastyfurniture/loot_table/blocks/potato_bed.json
 fcf69b00f3cc7007f7002cd8b9006f86da1c7fa3 data/goldfishmod02tastyfurniture/loot_table/blocks/potato_block.json
 df7ff37e4136e9f7fa692812fddaf5fb097296b7 data/goldfishmod02tastyfurniture/loot_table/blocks/potato_bricks_block.json
 db04b6c8e758f235834f1da5733dc8163dbfd85c data/goldfishmod02tastyfurniture/loot_table/blocks/potato_bricks_slab.json

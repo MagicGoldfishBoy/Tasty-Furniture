@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values": [
-     "goldfishmod02tastyfurniture:apple_bed"
+     "goldfishmod02tastyfurniture:apple_bed",
+     "goldfishmod02tastyfurniture:potato_bed"
     ]
   }

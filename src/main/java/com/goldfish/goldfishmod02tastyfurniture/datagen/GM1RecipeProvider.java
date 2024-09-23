@@ -4735,6 +4735,27 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('B', foodblockitemregistry.RABBIT_SLAB_ITEM.get())
            .unlockedBy("has_rabbit_slab", has(foodblockitemregistry.RABBIT_SLAB_ITEM.get()))
            .save(output);
+        //-----------------------------------------------------------chairs----------------------------------------------------------------------
+         //apple
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_BED_ITEM.get())
+           .pattern("CCC")
+           .pattern("BBB")
+           .pattern("A A")
+           .define('A', ingotregistry.APPLE_INGOT.get())
+           .define('B', foodblockitemregistry.APPLE_SLAB_ITEM.get())
+           .define('C', foodblockitemregistry.APPLE_CARPET_ITEM.get())
+           .unlockedBy("has_apple_ingot", has(ingotregistry.APPLE_INGOT.get()))
+           .save(output);
+         //potato
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.POTATO_BED_ITEM.get())
+           .pattern("CCC")
+           .pattern("BBB")
+           .pattern("A A")
+           .define('A', ingotregistry.POTATO_INGOT.get())
+           .define('B', foodblockitemregistry.POTATO_SLAB_ITEM.get())
+           .define('C', foodblockitemregistry.POTATO_CARPET_ITEM.get())
+           .unlockedBy("has_potato_ingot", has(ingotregistry.POTATO_INGOT.get()))
+           .save(output);
         //-----------------------------------------------------------cabinets----------------------------------------------------------------------
          //apple
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SMALL_APPLE_CABINET_ITEM.get())
