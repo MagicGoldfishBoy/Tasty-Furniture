@@ -4805,6 +4805,13 @@ public class foodblockregistry {
      ));
      
    //.........glow_berry
+     public static final DeferredHolder<Block, foodBed> GLOW_BERRY_BED = FOODBLOCK.register("glow_berry_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     .sound(plant_bed_sound)
+     .destroyTime(bed_destroy_time)
+     .explosionResistance(bed_explosion_resistance)
+     .noOcclusion()
+     ));
+     
    //.........melon
    //.........sweet_berry
    //.........brown_mushroom
