@@ -2,6 +2,10 @@ package com.goldfish.goldfishmod02tastyfurniture.block;
 
 import java.util.List;
 
+import javax.annotation.Nullable;
+
+import com.mojang.datafixers.util.Either;
+import com.mojang.datafixers.util.Unit;
 import com.mojang.serialization.MapCodec;
 
 import net.minecraft.core.BlockPos;
@@ -13,25 +17,33 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Player.BedSleepingProblem;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BedBlock;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.world.level.block.entity.BedBlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class foodBed extends HorizontalDirectionalBlock {
+public class foodBed extends HorizontalDirectionalBlock implements EntityBlock {
     public static final MapCodec<foodBed> CODEC = simpleCodec(foodBed::new);
     public static final BooleanProperty OCCUPIED = BlockStateProperties.OCCUPIED;
     public static final DirectionProperty HORIZONTALFACING = BlockStateProperties.HORIZONTAL_FACING;
@@ -62,77 +74,32 @@ public class foodBed extends HorizontalDirectionalBlock {
         };
         return facing;
     }
+    
 @Override
 protected InteractionResult useWithoutItem(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, BlockHitResult pHitResult) {
-    if (pLevel.isClientSide) {
-        return InteractionResult.CONSUME;
-    } else {
-        if (!canSetSpawn(pLevel)) {
-            pLevel.removeBlock(pPos, false);
-            BlockPos blockpos = pPos.relative(pState.getValue(FACING).getOpposite());
-            if (pLevel.getBlockState(blockpos).is(this)) {
-                pLevel.removeBlock(blockpos, false);
-            }
+    if (pLevel instanceof ServerLevel serverLevel) {
+        Either<BedSleepingProblem, net.minecraft.util.Unit> sleepResult = pPlayer.startSleepInBed(pPos);
 
-            Vec3 vec3 = pPos.getCenter();
-            pLevel.explode(null, pLevel.damageSources().badRespawnPointExplosion(vec3), null, vec3, 5.0F, true, Level.ExplosionInteraction.BLOCK);
-            return InteractionResult.SUCCESS;
-        } else if (pState.getValue(OCCUPIED)) {
-            if (!this.kickVillagerOutOfBed(pLevel, pPos)) {
-                pPlayer.displayClientMessage(Component.translatable("block.minecraft.bed.occupied"), true);
+        // Handle the case where the player cannot sleep (left side of Either)
+        if (sleepResult.left().isPresent()) {
+            Player.BedSleepingProblem problem = sleepResult.left().get();
+            if (problem.getMessage() != null) {
+                pPlayer.displayClientMessage(problem.getMessage(), true);
+                System.out.println("Sleep message: " + problem.getMessage());
             }
-            return InteractionResult.SUCCESS;
-        } else {
-            pPlayer.startSleepInBed(pPos).ifLeft(sleepResult -> {
-                if (sleepResult.getMessage() != null) {
-                    pPlayer.displayClientMessage(sleepResult.getMessage(), true);
-                }
-            });
+            return InteractionResult.FAIL; // Return failure if there was a problem
+        }
 
-            // Manually advance the time to day
-            if (pLevel instanceof ServerLevel serverLevel) {
-                serverLevel.setDayTime(0);  // Set time to day
-            }
-
+        // Handle the case where the player successfully starts sleeping (right side of Either)
+        if (sleepResult.right().isPresent()) {
+            // If no issues, change the time to day
+            serverLevel.setDayTime(0);
             return InteractionResult.SUCCESS;
         }
     }
+
+    return InteractionResult.PASS; // If the level is not ServerLevel or no interaction occurred
 }
- 
-
-    // @Override
-    // protected InteractionResult useWithoutItem(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, BlockHitResult pHitResult) {
-    //     if (pLevel.isClientSide) {
-    //         return InteractionResult.CONSUME;
-    //     } else {
-
-    //         if (!canSetSpawn(pLevel)) {
-    //             pLevel.removeBlock(pPos, false);
-    //             BlockPos blockpos = pPos.relative(pState.getValue(FACING).getOpposite());
-    //             if (pLevel.getBlockState(blockpos).is(this)) {
-    //                 pLevel.removeBlock(blockpos, false);
-    //             }
-
-    //             Vec3 vec3 = pPos.getCenter();
-    //             pLevel.explode(null, pLevel.damageSources().badRespawnPointExplosion(vec3), null, vec3, 5.0F, true, Level.ExplosionInteraction.BLOCK);
-    //             return InteractionResult.SUCCESS;
-    //         } else if (pState.getValue(OCCUPIED)) {
-    //             if (!this.kickVillagerOutOfBed(pLevel, pPos)) {
-    //                 pPlayer.displayClientMessage(Component.translatable("block.minecraft.bed.occupied"), true);
-    //             }
-
-    //             return InteractionResult.SUCCESS;
-    //         } else {
-    //             pPlayer.startSleepInBed(pPos).ifLeft(p_49477_ -> {
-    //                 System.out.println(pState);
-    //                 if (p_49477_.getMessage() != null) {
-    //                     pPlayer.displayClientMessage(p_49477_.getMessage(), true);
-    //                 }
-    //             });
-    //             return InteractionResult.SUCCESS;
-    //         }
-    //     }
-    // }
 
         public static boolean canSetSpawn(Level pLevel) {
         return pLevel.dimensionType().bedWorks();
@@ -174,5 +141,38 @@ protected InteractionResult useWithoutItem(BlockState pState, Level pLevel, Bloc
             pEntity.setDeltaMovement(vec3.x, -vec3.y * 0.66F * d0, vec3.z);
         }
     }
+
+    @Override
+    protected RenderShape getRenderShape(BlockState pState) {
+        return RenderShape.MODEL;
+    }
+
+    @Override
+    public void setPlacedBy(Level pLevel, BlockPos pPos, BlockState pState, @Nullable LivingEntity pPlacer, ItemStack pStack) {
+        super.setPlacedBy(pLevel, pPos, pState, pPlacer, pStack);
+        if (!pLevel.isClientSide) {
+            BlockPos blockpos = pPos.relative(pState.getValue(FACING));
+         //   pLevel.setBlock(blockpos, pState.setValue(PART, BedPart.HEAD), 3);
+            pLevel.blockUpdated(pPos, Blocks.AIR);
+            pState.updateNeighbourShapes(pLevel, pPos, 3);
+        }
+    }
+
+    @Override
+    @Nullable
+    public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
+      return new BedBlockEntity(pPos, pState, null);
+        }
+        
+    @Override
+    protected boolean isPathfindable(BlockState pState, PathComputationType pPathComputationType) {
+        return false;
+    }
     
 }
+
+// private boolean checkBedExists() {
+//     // Neo: Overwrite the vanilla instanceof BedBlock check with isBed and fire the CanContinueSleepingEvent.
+//     boolean hasBed = this.getSleepingPos().map(pos -> this.level().getBlockState(pos).isBed(this.level(), pos, this)).orElse(false);
+//     return net.neoforged.neoforge.event.EventHooks.canEntityContinueSleeping(this, hasBed ? null : Player.BedSleepingProblem.NOT_POSSIBLE_HERE);
+// }
