@@ -4829,6 +4829,13 @@ public class foodblockregistry {
      ));
      
    //.........brown_mushroom
+     public static final DeferredHolder<Block, foodBed> BROWN_MUSHROOM_BED = FOODBLOCK.register("brown_mushroom_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     .sound(plant_bed_sound)
+     .destroyTime(bed_destroy_time)
+     .explosionResistance(bed_explosion_resistance)
+     .noOcclusion()
+     ));
+  
    //.........red_mushroom
    //.........pumpkin
    //.........chicken

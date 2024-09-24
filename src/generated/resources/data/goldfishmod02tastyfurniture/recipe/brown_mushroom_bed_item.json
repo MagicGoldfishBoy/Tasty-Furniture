@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod02tastyfurniture:brown_mushroom_ingot"
+    },
+    "B": {
+      "item": "goldfishmod02tastyfurniture:brown_mushroom_slab_item"
+    },
+    "C": {
+      "item": "goldfishmod02tastyfurniture:brown_mushroom_carpet_item"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "BBB",
+    "A A"
+  ],
+  "result": {
+    "count": 1,
+    "id": "goldfishmod02tastyfurniture:brown_mushroom_bed_item"
+  }
+}
