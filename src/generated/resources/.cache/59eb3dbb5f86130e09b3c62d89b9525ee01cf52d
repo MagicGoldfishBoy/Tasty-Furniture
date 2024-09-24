@@ -1,4 +1,4 @@
-// 1.21	2024-09-24T16:00:31.36184766	Loot Tables
+// 1.21	2024-09-24T16:36:55.838553081	Loot Tables
 56ddb3b4406d93958c51301ca7c44f265c39bbc2 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_barrel.json
 f506816aefac13fd3bcb8b3075eefc63b1b6be41 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bars.json
 7922a4aff64facc1d1fca57e74153e1ad6451e89 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bed.json
@@ -246,6 +246,7 @@ cbf1df12c0926b3e27e43a5d84339c579cb43430 data/goldfishmod02tastyfurniture/loot_t
 f8b612352cc0c56911f27ede9ff2dc3979c6de14 data/goldfishmod02tastyfurniture/loot_table/blocks/chorus_wall_torch.json
 5633ea6bbec0830145383b2af98334469279129f data/goldfishmod02tastyfurniture/loot_table/blocks/cod_barrel.json
 5fe73b225890f85e84ab4b4f6698908e83e6cc02 data/goldfishmod02tastyfurniture/loot_table/blocks/cod_bars.json
+2005bbb91ecd27d9774fbe421de7bd9b9ebf7510 data/goldfishmod02tastyfurniture/loot_table/blocks/cod_bed.json
 93cbad32ebc9069b316ae1bacf59ee8f20c2afe9 data/goldfishmod02tastyfurniture/loot_table/blocks/cod_block.json
 b1f3918ada61a0073cf5276247eb0d99bc4dc00b data/goldfishmod02tastyfurniture/loot_table/blocks/cod_bricks_block.json
 b9e71201b802678c4ee030fdffaabbfc07cfe2e8 data/goldfishmod02tastyfurniture/loot_table/blocks/cod_bricks_slab.json

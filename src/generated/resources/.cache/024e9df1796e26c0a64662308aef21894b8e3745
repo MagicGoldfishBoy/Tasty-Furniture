@@ -1,4 +1,4 @@
-// 1.21	2024-09-24T16:00:31.358454709	Item Models: goldfishmod02tastyfurniture
+// 1.21	2024-09-24T16:36:55.834435533	Item Models: goldfishmod02tastyfurniture
 a579f875ecc0b10b53317a1629bcbc385110157f assets/goldfishmod02tastyfurniture/models/item/apple_barrel_item.json
 5415a5c9e52089186849ab0906ab852e882667f5 assets/goldfishmod02tastyfurniture/models/item/apple_bars_item.json
 b9370292566e90dea58d9e24cab155f1fc255f1c assets/goldfishmod02tastyfurniture/models/item/apple_bed_item.json
@@ -207,6 +207,7 @@ c669f9414005851e84677994b985cc1442e70a68 assets/goldfishmod02tastyfurniture/mode
 12ecb2a1a5f14ae22ce6c24afbc7a54874f1f1af assets/goldfishmod02tastyfurniture/models/item/chorus_trapdoor_item.json
 2d109e0881e8b97a6b397b27277da0cd1b3ed13f assets/goldfishmod02tastyfurniture/models/item/cod_barrel_item.json
 c66f09826bfd7d361eb03d7bedf4ba86e7c0db19 assets/goldfishmod02tastyfurniture/models/item/cod_bars_item.json
+5100d98306b2d86f83aa708c50564e8fd4474c25 assets/goldfishmod02tastyfurniture/models/item/cod_bed_item.json
 4f0bcdcf60452738c7b8f3c30f0bd72103bb3121 assets/goldfishmod02tastyfurniture/models/item/cod_bricks_block_item.json
 fc63268b4e467cf31b1b35f751c3769d19890ed7 assets/goldfishmod02tastyfurniture/models/item/cod_bricks_slab_item.json
 f022a4979b35c860b9f199697b8e1cc90a280031 assets/goldfishmod02tastyfurniture/models/item/cod_bricks_stairs_item.json
