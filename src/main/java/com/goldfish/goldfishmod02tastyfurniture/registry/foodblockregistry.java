@@ -4877,6 +4877,13 @@ public class foodblockregistry {
      ));
   
    //.........tropical_fish
+     public static final DeferredHolder<Block, foodBed> TROPICAL_FISH_BED = FOODBLOCK.register("tropical_fish_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     .sound(plant_bed_sound)
+     .destroyTime(bed_destroy_time)
+     .explosionResistance(bed_explosion_resistance)
+     .noOcclusion()
+     ));
+  
    //.........mutton
    //.........beef
    //.........pork

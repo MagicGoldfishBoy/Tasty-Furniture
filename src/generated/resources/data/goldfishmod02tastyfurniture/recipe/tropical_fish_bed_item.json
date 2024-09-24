@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod02tastyfurniture:tropical_fish_ingot"
+    },
+    "B": {
+      "item": "goldfishmod02tastyfurniture:tropical_fish_slab_item"
+    },
+    "C": {
+      "item": "goldfishmod02tastyfurniture:tropical_fish_carpet_item"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "BBB",
+    "A A"
+  ],
+  "result": {
+    "count": 1,
+    "id": "goldfishmod02tastyfurniture:tropical_fish_bed_item"
+  }
+}
