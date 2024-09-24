@@ -1,4 +1,4 @@
-// 1.21	2024-09-24T15:20:31.773277917	Loot Tables
+// 1.21	2024-09-24T15:40:49.644590016	Loot Tables
 56ddb3b4406d93958c51301ca7c44f265c39bbc2 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_barrel.json
 f506816aefac13fd3bcb8b3075eefc63b1b6be41 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bars.json
 7922a4aff64facc1d1fca57e74153e1ad6451e89 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bed.json
@@ -452,6 +452,7 @@ f3e7760caa95d689c8b3a55a9f0650fae1828eb3 data/goldfishmod02tastyfurniture/loot_t
 ce90008881ec7e0795b4321f9ba9a4c2792a3362 data/goldfishmod02tastyfurniture/loot_table/blocks/potato_wall_torch.json
 baff0091738d237403c11b53d055d794b8424121 data/goldfishmod02tastyfurniture/loot_table/blocks/pumpkin_barrel.json
 391085ba24404e31817dcceee0849093dcb303f1 data/goldfishmod02tastyfurniture/loot_table/blocks/pumpkin_bars.json
+8e4d2d3475d55eccbca6a25cdea3830363442999 data/goldfishmod02tastyfurniture/loot_table/blocks/pumpkin_bed.json
 20899429402abfbf602520850456105fe9f0e4f5 data/goldfishmod02tastyfurniture/loot_table/blocks/pumpkin_block.json
 a4f50b5dd3ba20d2dafae1b37b2a14189ff922b4 data/goldfishmod02tastyfurniture/loot_table/blocks/pumpkin_bricks_block.json
 73ff158c3b4042b8b161fcceed9bd5c3a36d32b1 data/goldfishmod02tastyfurniture/loot_table/blocks/pumpkin_bricks_slab.json

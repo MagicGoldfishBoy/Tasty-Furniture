@@ -4845,6 +4845,13 @@ public class foodblockregistry {
      ));
   
    //.........pumpkin
+     public static final DeferredHolder<Block, foodBed> PUMPKIN_BED = FOODBLOCK.register("pumpkin_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     .sound(plant_bed_sound)
+     .destroyTime(bed_destroy_time)
+     .explosionResistance(bed_explosion_resistance)
+     .noOcclusion()
+     ));
+  
    //.........chicken
    //.........cod
    //.........salmon
