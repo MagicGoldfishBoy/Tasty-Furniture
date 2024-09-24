@@ -4649,6 +4649,7 @@ public class foodblockregistry {
      .destroyTime(chair_destroy_time)
      .explosionResistance(chair_explosion_resistance)
      .noOcclusion()
+     .lightLevel(state  -> 8)
      ));
 
    //.........melon
@@ -4810,6 +4811,7 @@ public class foodblockregistry {
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
+     .lightLevel(state  -> 10)
      ));
      
    //.........melon
@@ -4854,7 +4856,7 @@ public class foodblockregistry {
   
    //.........chicken
      public static final DeferredHolder<Block, foodBed> CHICKEN_BED = FOODBLOCK.register("chicken_bed", () -> new foodBed(BlockBehaviour.Properties.of()
-     .sound(plant_bed_sound)
+     .sound(meat_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
@@ -4862,7 +4864,7 @@ public class foodblockregistry {
   
    //.........cod
      public static final DeferredHolder<Block, foodBed> COD_BED = FOODBLOCK.register("cod_bed", () -> new foodBed(BlockBehaviour.Properties.of()
-     .sound(plant_bed_sound)
+     .sound(meat_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
@@ -4870,7 +4872,7 @@ public class foodblockregistry {
   
    //.........salmon
      public static final DeferredHolder<Block, foodBed> SALMON_BED = FOODBLOCK.register("salmon_bed", () -> new foodBed(BlockBehaviour.Properties.of()
-     .sound(plant_bed_sound)
+     .sound(meat_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
@@ -4878,7 +4880,7 @@ public class foodblockregistry {
   
    //.........tropical_fish
      public static final DeferredHolder<Block, foodBed> TROPICAL_FISH_BED = FOODBLOCK.register("tropical_fish_bed", () -> new foodBed(BlockBehaviour.Properties.of()
-     .sound(plant_bed_sound)
+     .sound(meat_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
@@ -4886,13 +4888,20 @@ public class foodblockregistry {
   
    //.........mutton
      public static final DeferredHolder<Block, foodBed> MUTTON_BED = FOODBLOCK.register("mutton_bed", () -> new foodBed(BlockBehaviour.Properties.of()
-     .sound(plant_bed_sound)
+     .sound(meat_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
   
    //.........beef
+     public static final DeferredHolder<Block, foodBed> BEEF_BED = FOODBLOCK.register("beef_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     .sound(meat_bed_sound)
+     .destroyTime(bed_destroy_time)
+     .explosionResistance(bed_explosion_resistance)
+     .noOcclusion()
+     ));
+  
    //.........pork
    //.........rabbit
 
