@@ -4846,6 +4846,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('C', foodblockitemregistry.PUMPKIN_CARPET_ITEM.get())
            .unlockedBy("has_pumpkin_ingot", has(ingotregistry.PUMPKIN_INGOT.get()))
            .save(output);
+         //chicken
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHICKEN_BED_ITEM.get())
+           .pattern("CCC")
+           .pattern("BBB")
+           .pattern("A A")
+           .define('A', ingotregistry.CHICKEN_INGOT.get())
+           .define('B', foodblockitemregistry.CHICKEN_SLAB_ITEM.get())
+           .define('C', foodblockitemregistry.CHICKEN_CARPET_ITEM.get())
+           .unlockedBy("has_chicken_ingot", has(ingotregistry.CHICKEN_INGOT.get()))
+           .save(output);
         //-----------------------------------------------------------cabinets----------------------------------------------------------------------
          //apple
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SMALL_APPLE_CABINET_ITEM.get())
