@@ -4885,6 +4885,13 @@ public class foodblockregistry {
      ));
   
    //.........mutton
+     public static final DeferredHolder<Block, foodBed> MUTTON_BED = FOODBLOCK.register("mutton_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     .sound(plant_bed_sound)
+     .destroyTime(bed_destroy_time)
+     .explosionResistance(bed_explosion_resistance)
+     .noOcclusion()
+     ));
+  
    //.........beef
    //.........pork
    //.........rabbit
