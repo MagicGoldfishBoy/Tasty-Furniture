@@ -1304,6 +1304,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
          withExistingParent("sweet_berry_bed_item", modLoc("block/sweet_berry_bed"));
         //.............brown_mushroom
          withExistingParent("brown_mushroom_bed_item", modLoc("block/brown_mushroom_bed"));
+        //.............red_mushroom
+         withExistingParent("red_mushroom_bed_item", modLoc("block/red_mushroom_bed"));
     //-----------------------------------------------------------cabinets----------------------------------------------------------------------
       //..............apple
         withExistingParent("small_apple_cabinet_item", modLoc("block/apple_cabinet"));

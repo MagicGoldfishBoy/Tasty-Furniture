@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,occupied=false": {
+      "model": "goldfishmod02tastyfurniture:block/red_mushroom_bed",
+      "y": 270
+    },
+    "facing=east,occupied=true": {
+      "model": "goldfishmod02tastyfurniture:block/red_mushroom_bed",
+      "y": 270
+    },
+    "facing=north,occupied=false": {
+      "model": "goldfishmod02tastyfurniture:block/red_mushroom_bed",
+      "y": 180
+    },
+    "facing=north,occupied=true": {
+      "model": "goldfishmod02tastyfurniture:block/red_mushroom_bed",
+      "y": 180
+    },
+    "facing=south,occupied=false": {
+      "model": "goldfishmod02tastyfurniture:block/red_mushroom_bed"
+    },
+    "facing=south,occupied=true": {
+      "model": "goldfishmod02tastyfurniture:block/red_mushroom_bed"
+    },
+    "facing=west,occupied=false": {
+      "model": "goldfishmod02tastyfurniture:block/red_mushroom_bed",
+      "y": 90
+    },
+    "facing=west,occupied=true": {
+      "model": "goldfishmod02tastyfurniture:block/red_mushroom_bed",
+      "y": 90
+    }
+  }
+}
