@@ -4813,6 +4813,13 @@ public class foodblockregistry {
      ));
      
    //.........melon
+     public static final DeferredHolder<Block, foodBed> MELON_BED = FOODBLOCK.register("melon_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     .sound(plant_bed_sound)
+     .destroyTime(bed_destroy_time)
+     .explosionResistance(bed_explosion_resistance)
+     .noOcclusion()
+     ));
+     
    //.........sweet_berry
    //.........brown_mushroom
    //.........red_mushroom
