@@ -4911,6 +4911,13 @@ public class foodblockregistry {
      ));
   
    //.........rabbit
+     public static final DeferredHolder<Block, foodBed> RABBIT_BED = FOODBLOCK.register("rabbit_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     .sound(meat_bed_sound)
+     .destroyTime(bed_destroy_time)
+     .explosionResistance(bed_explosion_resistance)
+     .noOcclusion()
+     ));
+  
 
 //==============================================================================================================================================================================================
 //                                                                                         Record Players

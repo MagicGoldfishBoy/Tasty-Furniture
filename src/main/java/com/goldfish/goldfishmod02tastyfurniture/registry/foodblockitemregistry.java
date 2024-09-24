@@ -1949,6 +1949,10 @@ public class foodblockitemregistry {
     public static final DeferredHolder<Item, BlockItem> PORK_BED_ITEM = FOODBLOCKITEM.register("pork_bed_item", () -> new BlockItem(foodblockregistry.PORK_BED.get(),
     new BlockItem.Properties()));
 
+   //.........rabbit
+    public static final DeferredHolder<Item, BlockItem> RABBIT_BED_ITEM = FOODBLOCKITEM.register("rabbit_bed_item", () -> new BlockItem(foodblockregistry.RABBIT_BED.get(),
+    new BlockItem.Properties()));
+
 
 //==============================================================================================================================================================================================
 //                                                                                         Cabinets
