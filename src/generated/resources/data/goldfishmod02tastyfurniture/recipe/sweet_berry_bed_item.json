@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod02tastyfurniture:sweet_berry_ingot"
+    },
+    "B": {
+      "item": "goldfishmod02tastyfurniture:sweet_berry_slab_item"
+    },
+    "C": {
+      "item": "goldfishmod02tastyfurniture:sweet_berry_carpet_item"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "BBB",
+    "A A"
+  ],
+  "result": {
+    "count": 1,
+    "id": "goldfishmod02tastyfurniture:sweet_berry_bed_item"
+  }
+}
