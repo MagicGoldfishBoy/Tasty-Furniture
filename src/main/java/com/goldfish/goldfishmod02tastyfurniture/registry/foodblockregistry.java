@@ -944,6 +944,24 @@ public class foodblockregistry {
             .explosionResistance(8.0f)
     ));
 
+    public static final DeferredHolder<Block, FenceGateBlock>  BEETROOT_GATE = FOODBLOCK.register("beetroot_fence_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtyperegistry.BEETROOTWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.ROOTED_DIRT)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+    ));
+
+    public static final DeferredHolder<Block, FenceGateBlock>  CARROT_GATE = FOODBLOCK.register("carrot_fence_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtyperegistry.CARROTWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.ROOTED_DIRT)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+    ));
+
 //==============================================================================================================================================================================================
 //                                                                                      Pressure Plates
 //==============================================================================================================================================================================================

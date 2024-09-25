@@ -1089,6 +1089,24 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('B', Items.STICK)
            .unlockedBy("has_potato_ingot", has(ingotregistry.POTATO_INGOT.get()))
            .save(output);
+         //beetroot_gate
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEETROOT_GATE_ITEM.get())
+           .pattern("BAB")
+           .pattern("BAB")
+           .pattern("   ")
+           .define('A', ingotregistry.BEETROOT_INGOT.get())
+           .define('B', Items.STICK)
+           .unlockedBy("has_beetroot_ingot", has(ingotregistry.BEETROOT_INGOT.get()))
+           .save(output);
+         //carrot_gate
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CARROT_GATE_ITEM.get())
+           .pattern("BAB")
+           .pattern("BAB")
+           .pattern("   ")
+           .define('A', ingotregistry.CARROT_INGOT.get())
+           .define('B', Items.STICK)
+           .unlockedBy("has_carrot_ingot", has(ingotregistry.CARROT_INGOT.get()))
+           .save(output);
 
         //-------------------------------------------------------------signs----------------------------------------------------------------------
          //apple_sign

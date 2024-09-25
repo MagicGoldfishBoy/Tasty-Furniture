@@ -450,6 +450,12 @@ public class foodblockitemregistry {
 
      public static final DeferredHolder<Item, BlockItem> POTATO_GATE_ITEM = FOODBLOCKITEM.register("potato_gate_item",
      () -> new BlockItem(foodblockregistry.POTATO_GATE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> BEETROOT_GATE_ITEM = FOODBLOCKITEM.register("beetroot_gate_item",
+     () -> new BlockItem(foodblockregistry.BEETROOT_GATE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> CARROT_GATE_ITEM = FOODBLOCKITEM.register("carrot_gate_item",
+     () -> new BlockItem(foodblockregistry.CARROT_GATE.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                      Pressure Plates
 //==============================================================================================================================================================================================
