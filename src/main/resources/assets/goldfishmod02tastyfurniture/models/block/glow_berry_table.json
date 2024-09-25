@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
 	"textures": {
 		"0": "goldfishmod02tastyfurniture:block/glow_berry_block",
 		"2": "goldfishmod02tastyfurniture:block/glow_berry_bars",
@@ -309,6 +310,9 @@
 		},
 		"firstperson_lefthand": {
 			"translation": [3.25, -1.5, -1.5],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"ground": {
 			"scale": [0.5, 0.5, 0.5]
 		},
 		"gui": {

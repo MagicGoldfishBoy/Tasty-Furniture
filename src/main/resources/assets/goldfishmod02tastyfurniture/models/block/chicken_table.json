@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
 	"textures": {
 		"0": "goldfishmod02tastyfurniture:block/bone_block",
 		"2": "goldfishmod02tastyfurniture:block/bone_pillar_end",
@@ -314,6 +315,9 @@
 			"rotation": [9, 28, 0],
 			"translation": [0, -0.5, -0.25],
 			"scale": [0.75, 0.75, 0.75]
+		},
+		"ground": {
+			"scale": [0.5, 0.5, 0.5]
 		},
 		"gui": {
 			"rotation": [23, 118, 0],

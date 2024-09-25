@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
 	"textures": {
 		"0": "goldfishmod02tastyfurniture:block/red_mushroom_block",
 		"4": "goldfishmod02tastyfurniture:block/red_mushroom_door_top",
@@ -337,6 +338,9 @@
 		"firstperson_lefthand": {
 			"rotation": [-4, 54, 0],
 			"translation": [0, 0, -0.75],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"ground": {
 			"scale": [0.5, 0.5, 0.5]
 		},
 		"gui": {

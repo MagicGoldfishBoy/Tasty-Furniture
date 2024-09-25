@@ -3639,14 +3639,14 @@ public class foodblockregistry {
 //==============================================================================================================================================================================================
 
    //.........apple
-    public static final DeferredHolder<Block, Block> APPLE_TABLE = FOODBLOCK.register("apple_table", () -> new Block(BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> APPLE_TABLE = FOODBLOCK.register("apple_table", () -> new foodtable(BlockBehaviour.Properties.of()
     .destroyTime(1.5f)
     .explosionResistance(1.5f)
     .sound(SoundType.MUD_BRICKS)
     .noOcclusion()
     ));
    //.........potato
-    public static final DeferredHolder<Block, Block> POTATO_TABLE = FOODBLOCK.register("potato_table", () -> new Block(BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> POTATO_TABLE = FOODBLOCK.register("potato_table", () -> new foodtable(BlockBehaviour.Properties.of()
     .destroyTime(1.5f)
     .explosionResistance(1.5f)
     .sound(SoundType.MUD_BRICKS)

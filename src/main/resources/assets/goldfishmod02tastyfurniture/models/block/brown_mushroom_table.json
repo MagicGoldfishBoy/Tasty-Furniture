@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
 	"textures": {
 		"0": "goldfishmod02tastyfurniture:block/brown_mushroom_block",
 		"5": "goldfishmod02tastyfurniture:block/brown_mushroom_lamp",
@@ -524,6 +525,9 @@
 		},
 		"firstperson_lefthand": {
 			"scale": [0.75, 0.75, 0.75]
+		},
+		"ground": {
+			"scale": [0.5, 0.5, 0.5]
 		},
 		"gui": {
 			"rotation": [8, 36, 0],

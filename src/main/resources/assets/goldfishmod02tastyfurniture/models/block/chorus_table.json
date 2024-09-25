@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
 	"render_type": "cutout_mipped_all",
 	"textures": {
 		"0": "goldfishmod02tastyfurniture:block/chorus_block",
@@ -351,9 +352,12 @@
 			"translation": [3.25, -1.5, -1.5],
 			"scale": [0.5, 0.5, 0.5]
 		},
+		"ground": {
+			"scale": [0.5, 0.5, 0.5]
+		},
 		"gui": {
-			"rotation": [17, 46, 0],
-			"scale": [0.65, 0.65, 0.65]
+			"rotation": [19, 40, 0],
+			"scale": [0.55, 0.55, 0.55]
 		}
 	},
 	"groups": [

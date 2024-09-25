@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
 	"textures": {
 		"0": "goldfishmod02tastyfurniture:block/sweet_berry_block",
 		"2": "goldfishmod02tastyfurniture:block/sweet_berry_carpet",
@@ -287,6 +288,9 @@
 			"rotation": [19, 40, 0],
 			"translation": [3, 0.75, -1],
 			"scale": [0.65, 0.65, 0.65]
+		},
+		"ground": {
+			"scale": [0.5, 0.5, 0.5]
 		},
 		"gui": {
 			"rotation": [19, 40, 0],
