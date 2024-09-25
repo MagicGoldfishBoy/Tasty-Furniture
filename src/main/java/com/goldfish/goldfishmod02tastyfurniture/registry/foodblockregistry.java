@@ -999,6 +999,33 @@ public class foodblockregistry {
             .explosionResistance(8.0f)
     ));
 
+    public static final DeferredHolder<Block, FenceGateBlock>  BROWN_MUSHROOM_GATE = FOODBLOCK.register("brown_mushroom_fence_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtyperegistry.BROWNMUSHROOMWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.ROOTED_DIRT)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+    ));
+
+    public static final DeferredHolder<Block, FenceGateBlock>  RED_MUSHROOM_GATE = FOODBLOCK.register("red_mushroom_fence_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtyperegistry.REDMUSHROOMWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.ROOTED_DIRT)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+    ));
+
+    public static final DeferredHolder<Block, FenceGateBlock>  PUMPKIN_GATE = FOODBLOCK.register("pumpkin_fence_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtyperegistry.PUMPKINWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.ROOTED_DIRT)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+    ));
+
 //==============================================================================================================================================================================================
 //                                                                                      Pressure Plates
 //==============================================================================================================================================================================================

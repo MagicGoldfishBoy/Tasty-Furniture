@@ -468,6 +468,15 @@ public class foodblockitemregistry {
      
      public static final DeferredHolder<Item, BlockItem> SWEET_BERRY_GATE_ITEM = FOODBLOCKITEM.register("sweet_berry_gate_item",
      () -> new BlockItem(foodblockregistry.SWEET_BERRY_GATE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> BROWN_MUSHROOM_GATE_ITEM = FOODBLOCKITEM.register("brown_mushroom_gate_item",
+     () -> new BlockItem(foodblockregistry.BROWN_MUSHROOM_GATE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> RED_MUSHROOM_GATE_ITEM = FOODBLOCKITEM.register("red_mushroom_gate_item",
+     () -> new BlockItem(foodblockregistry.RED_MUSHROOM_GATE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> PUMPKIN_GATE_ITEM = FOODBLOCKITEM.register("pumpkin_gate_item",
+     () -> new BlockItem(foodblockregistry.PUMPKIN_GATE.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                      Pressure Plates
 //==============================================================================================================================================================================================
