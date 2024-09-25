@@ -280,6 +280,14 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("red_mushroom_gate_item", modLoc("block/red_mushroom_fence_gate"));
       //..............pumpkin
        withExistingParent("pumpkin_gate_item", modLoc("block/pumpkin_fence_gate"));
+      //..............chicken
+       withExistingParent("chicken_gate_item", modLoc("block/chicken_fence_gate"));
+      //..............cod
+       withExistingParent("cod_gate_item", modLoc("block/cod_fence_gate"));
+      //..............salmon
+       withExistingParent("salmon_gate_item", modLoc("block/salmon_fence_gate"));
+      //..............tropical_fish
+       withExistingParent("tropical_fish_gate_item", modLoc("block/tropical_fish_fence_gate"));
     //-------------------------------------------------------pressure plates-----------------------------------------------------------------
       //..............apple
        pressurePlate("apple_pressure_plate_item", modLoc("block/apple_block"));

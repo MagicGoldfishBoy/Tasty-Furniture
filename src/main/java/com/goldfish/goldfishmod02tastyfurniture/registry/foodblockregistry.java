@@ -1026,6 +1026,42 @@ public class foodblockregistry {
             .explosionResistance(8.0f)
     ));
 
+    public static final DeferredHolder<Block, FenceGateBlock>  CHICKEN_GATE = FOODBLOCK.register("chicken_fence_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtyperegistry.CHICKENWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.MUD)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+    ));
+
+    public static final DeferredHolder<Block, FenceGateBlock>  COD_GATE = FOODBLOCK.register("cod_fence_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtyperegistry.CODWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.MUD)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+    ));
+
+    public static final DeferredHolder<Block, FenceGateBlock>  SALMON_GATE = FOODBLOCK.register("salmon_fence_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtyperegistry.SALMONWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.MUD)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+    ));
+
+    public static final DeferredHolder<Block, FenceGateBlock>  TROPICAL_FISH_GATE = FOODBLOCK.register("tropical_fish_fence_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtyperegistry.TROPICALFISHWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.MUD)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+    ));
+
 //==============================================================================================================================================================================================
 //                                                                                      Pressure Plates
 //==============================================================================================================================================================================================

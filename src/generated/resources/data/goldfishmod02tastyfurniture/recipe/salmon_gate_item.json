@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod02tastyfurniture:salmon_ingot"
+    },
+    "B": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "BAB",
+    "BAB",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "goldfishmod02tastyfurniture:salmon_gate_item"
+  }
+}
