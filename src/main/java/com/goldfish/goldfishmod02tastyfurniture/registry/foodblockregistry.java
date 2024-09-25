@@ -962,6 +962,43 @@ public class foodblockregistry {
             .explosionResistance(8.0f)
     ));
 
+    public static final DeferredHolder<Block, FenceGateBlock>  CHORUS_GATE = FOODBLOCK.register("chorus_fence_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtyperegistry.CHORUSWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.ROOTED_DIRT)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+    ));
+
+    public static final DeferredHolder<Block, FenceGateBlock>  GLOW_BERRY_GATE = FOODBLOCK.register("glow_berry_fence_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtyperegistry.GLOWBERRYWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.ROOTED_DIRT)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+            .lightLevel(state -> 15)
+    ));
+
+    public static final DeferredHolder<Block, FenceGateBlock>  MELON_GATE = FOODBLOCK.register("melon_fence_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtyperegistry.MELONWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.ROOTED_DIRT)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+    ));
+
+    public static final DeferredHolder<Block, FenceGateBlock>  SWEET_BERRY_GATE = FOODBLOCK.register("sweet_berry_fence_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtyperegistry.SWEETBERRYWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.ROOTED_DIRT)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+    ));
+
 //==============================================================================================================================================================================================
 //                                                                                      Pressure Plates
 //==============================================================================================================================================================================================

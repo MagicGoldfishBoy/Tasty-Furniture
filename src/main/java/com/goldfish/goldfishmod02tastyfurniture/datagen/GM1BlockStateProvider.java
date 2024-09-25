@@ -536,6 +536,26 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation carrot_gate_texture = modLoc("block/carrot_block");
           fenceGateBlock(carrot_gate, carrot_gate_texture);
 
+        //.............chorus
+          FenceGateBlock chorus_gate = foodblockregistry.CHORUS_GATE.get();
+          ResourceLocation chorus_gate_texture = modLoc("block/chorus_block");
+          fenceGateBlock(chorus_gate, chorus_gate_texture);
+
+        //.............glow_berry
+          FenceGateBlock glow_berry_gate = foodblockregistry.GLOW_BERRY_GATE.get();
+          ResourceLocation glow_berry_gate_texture = modLoc("block/glow_berry_block");
+          fenceGateBlock(glow_berry_gate, glow_berry_gate_texture);
+
+        //.............melon
+          FenceGateBlock melon_gate = foodblockregistry.MELON_GATE.get();
+          ResourceLocation melon_gate_texture = modLoc("block/melon_block");
+          fenceGateBlock(melon_gate, melon_gate_texture);
+
+        //.............sweet_berry
+          FenceGateBlock sweet_berry_gate = foodblockregistry.SWEET_BERRY_GATE.get();
+          ResourceLocation sweet_berry_gate_texture = modLoc("block/sweet_berry_block");
+          fenceGateBlock(sweet_berry_gate, sweet_berry_gate_texture);
+
     //------------------------------------------------------------pressure plates-------------------------------------------------------------------------
         //.............apple
           PressurePlateBlock apple_pressure_plate = foodblockregistry.APPLE_PRESSURE_PLATE.get();
