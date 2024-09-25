@@ -1059,6 +1059,37 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .unlockedBy("has_rabbit_nugget", has(nuggetregistry.RABBIT_NUGGET.get()))
           .save(output, "rabbit_ingot_from_crafting");
 
+        //-------------------------------------------------------------fences----------------------------------------------------------------------
+         //apple_fence
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_FENCE_ITEM.get())
+           .pattern("ABA")
+           .pattern("ABA")
+           .pattern("   ")
+           .define('A', ingotregistry.APPLE_INGOT.get())
+           .define('B', Items.STICK)
+           .unlockedBy("has_apple_ingot", has(ingotregistry.APPLE_INGOT.get()))
+           .save(output);
+
+        //-------------------------------------------------------------gates----------------------------------------------------------------------
+         //apple_gate
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_GATE_ITEM.get())
+           .pattern("BAB")
+           .pattern("BAB")
+           .pattern("   ")
+           .define('A', ingotregistry.APPLE_INGOT.get())
+           .define('B', Items.STICK)
+           .unlockedBy("has_apple_ingot", has(ingotregistry.APPLE_INGOT.get()))
+           .save(output);
+         //potato_gate
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.POTATO_GATE_ITEM.get())
+           .pattern("BAB")
+           .pattern("BAB")
+           .pattern("   ")
+           .define('A', ingotregistry.POTATO_INGOT.get())
+           .define('B', Items.STICK)
+           .unlockedBy("has_potato_ingot", has(ingotregistry.POTATO_INGOT.get()))
+           .save(output);
+
         //-------------------------------------------------------------signs----------------------------------------------------------------------
          //apple_sign
            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_SIGN_ITEM.get())
@@ -1231,6 +1262,8 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('B', Items.STICK)
            .unlockedBy("has_rabbit_ingot", has(ingotregistry.RABBIT_INGOT.get()))
            .save(output);
+
+
 
         //-------------------------------------------------------------slabs----------------------------------------------------------------------
          //________________________________________________________Regular Slabs__________________________________________________________________
@@ -4735,7 +4768,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('B', foodblockitemregistry.RABBIT_SLAB_ITEM.get())
            .unlockedBy("has_rabbit_slab", has(foodblockitemregistry.RABBIT_SLAB_ITEM.get()))
            .save(output);
-        //-----------------------------------------------------------chairs----------------------------------------------------------------------
+        //-----------------------------------------------------------beds----------------------------------------------------------------------
          //apple
            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_BED_ITEM.get())
            .pattern("CCC")

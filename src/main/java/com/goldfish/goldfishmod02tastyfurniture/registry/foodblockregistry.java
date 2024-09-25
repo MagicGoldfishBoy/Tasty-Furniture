@@ -933,8 +933,16 @@ public class foodblockregistry {
             .sound(SoundType.ROOTED_DIRT)
             .destroyTime(1.5f)
             .explosionResistance(8.0f)
-    )
-);
+    ));
+
+    public static final DeferredHolder<Block, FenceGateBlock>  POTATO_GATE = FOODBLOCK.register("potato_fence_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtyperegistry.POTATOWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.ROOTED_DIRT)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+    ));
 
 //==============================================================================================================================================================================================
 //                                                                                      Pressure Plates

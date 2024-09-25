@@ -260,6 +260,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
     //------------------------------------------------------------gates---------------------------------------------------------------------
       //..............apple
        withExistingParent("apple_gate_item", modLoc("block/apple_fence_gate"));
+      //..............potato
+       withExistingParent("potato_gate_item", modLoc("block/potato_fence_gate"));
     //-------------------------------------------------------pressure plates-----------------------------------------------------------------
       //..............apple
        pressurePlate("apple_pressure_plate_item", modLoc("block/apple_block"));

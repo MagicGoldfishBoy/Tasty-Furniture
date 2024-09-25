@@ -515,11 +515,16 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation rabbit_fence_texture = modLoc("block/rabbit_block");
           fenceBlock(rabbit_fence, rabbit_fence_texture);
 
-    //----------------------------------------------------------------fences------------------------------------------------------------------------------
+    //----------------------------------------------------------------gates------------------------------------------------------------------------------
         //.............apple
           FenceGateBlock apple_gate = foodblockregistry.APPLE_GATE.get();
           ResourceLocation apple_gate_texture = modLoc("block/apple_block");
           fenceGateBlock(apple_gate, apple_gate_texture);
+          
+        //.............potato
+          FenceGateBlock potato_gate = foodblockregistry.POTATO_GATE.get();
+          ResourceLocation potato_gate_texture = modLoc("block/potato_block");
+          fenceGateBlock(potato_gate, potato_gate_texture);
 
     //------------------------------------------------------------pressure plates-------------------------------------------------------------------------
         //.............apple

@@ -442,11 +442,14 @@ public class foodblockitemregistry {
      () -> new BlockItem(foodblockregistry.RABBIT_FENCE.get(), new BlockItem.Properties()));
 
 //==============================================================================================================================================================================================
-//                                                                                         Fences
+//                                                                                         Gates
 //==============================================================================================================================================================================================
 
      public static final DeferredHolder<Item, BlockItem> APPLE_GATE_ITEM = FOODBLOCKITEM.register("apple_gate_item",
      () -> new BlockItem(foodblockregistry.APPLE_GATE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> POTATO_GATE_ITEM = FOODBLOCKITEM.register("potato_gate_item",
+     () -> new BlockItem(foodblockregistry.POTATO_GATE.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                      Pressure Plates
 //==============================================================================================================================================================================================
