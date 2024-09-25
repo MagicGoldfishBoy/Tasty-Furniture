@@ -120,6 +120,7 @@ import net.minecraft.world.level.block.CarpetBlock;
 import net.minecraft.world.level.block.ChainBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
+import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.LadderBlock;
@@ -135,7 +136,9 @@ import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WallTorchBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -918,6 +921,20 @@ public class foodblockregistry {
     .destroyTime(1.25f)
     .explosionResistance(8.0f)
     ));
+
+//==============================================================================================================================================================================================
+//                                                                                         Gates
+//==============================================================================================================================================================================================
+
+    public static final DeferredHolder<Block, FenceGateBlock>  APPLE_GATE = FOODBLOCK.register("apple_fence_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtyperegistry.APPLEWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.ROOTED_DIRT)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+    )
+);
 
 //==============================================================================================================================================================================================
 //                                                                                      Pressure Plates

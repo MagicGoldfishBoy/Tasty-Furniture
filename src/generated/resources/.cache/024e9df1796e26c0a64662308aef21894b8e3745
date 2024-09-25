@@ -1,4 +1,4 @@
-// 1.21	2024-09-24T18:40:28.539487181	Item Models: goldfishmod02tastyfurniture
+// 1.21	2024-09-25T10:38:35.239291365	Item Models: goldfishmod02tastyfurniture
 a579f875ecc0b10b53317a1629bcbc385110157f assets/goldfishmod02tastyfurniture/models/item/apple_barrel_item.json
 5415a5c9e52089186849ab0906ab852e882667f5 assets/goldfishmod02tastyfurniture/models/item/apple_bars_item.json
 b9370292566e90dea58d9e24cab155f1fc255f1c assets/goldfishmod02tastyfurniture/models/item/apple_bed_item.json
@@ -13,6 +13,7 @@ e8f4b2246356c0c73fcd00301ab07f8c37bfefd7 assets/goldfishmod02tastyfurniture/mode
 c456fdc0715394f78f82240856447dc3cfba80de assets/goldfishmod02tastyfurniture/models/item/apple_chiseled_block_item.json
 1f34d168302521d9046cd4b7cc2f5cceeea72d1d assets/goldfishmod02tastyfurniture/models/item/apple_fence_item.json
 a23585ec730c604d8f090e366dc3cd6178963534 assets/goldfishmod02tastyfurniture/models/item/apple_furnace_item.json
+5a9e017d47b6713627dd4f87dbc039dd92fb4162 assets/goldfishmod02tastyfurniture/models/item/apple_gate_item.json
 f4d85c65178ebe12c5bbcb6c4d0993c673539879 assets/goldfishmod02tastyfurniture/models/item/apple_ladder_item.json
 9ab2b64ef3bf1f544defaacbde3afa084f4641ae assets/goldfishmod02tastyfurniture/models/item/apple_lamp_item.json
 3d38386758d5c42004af962424af7b0ecaf71348 assets/goldfishmod02tastyfurniture/models/item/apple_lantern_item.json

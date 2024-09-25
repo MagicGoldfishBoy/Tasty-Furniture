@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.ChainBlock;
 import net.minecraft.world.level.block.ChestBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
+import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.FurnaceBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.LanternBlock;
@@ -513,6 +514,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceBlock rabbit_fence = foodblockregistry.RABBIT_FENCE.get();
           ResourceLocation rabbit_fence_texture = modLoc("block/rabbit_block");
           fenceBlock(rabbit_fence, rabbit_fence_texture);
+
+    //----------------------------------------------------------------fences------------------------------------------------------------------------------
+        //.............apple
+          FenceGateBlock apple_gate = foodblockregistry.APPLE_GATE.get();
+          ResourceLocation apple_gate_texture = modLoc("block/apple_block");
+          fenceGateBlock(apple_gate, apple_gate_texture);
 
     //------------------------------------------------------------pressure plates-------------------------------------------------------------------------
         //.............apple

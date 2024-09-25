@@ -257,6 +257,9 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        fenceInventory("pork_fence_item", modLoc("block/pork_block"));
       //..............rabbit
        fenceInventory("rabbit_fence_item", modLoc("block/rabbit_block"));
+    //------------------------------------------------------------gates---------------------------------------------------------------------
+      //..............apple
+       withExistingParent("apple_gate_item", modLoc("block/apple_fence_gate"));
     //-------------------------------------------------------pressure plates-----------------------------------------------------------------
       //..............apple
        pressurePlate("apple_pressure_plate_item", modLoc("block/apple_block"));
