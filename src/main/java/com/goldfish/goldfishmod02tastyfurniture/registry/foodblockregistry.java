@@ -1062,6 +1062,42 @@ public class foodblockregistry {
             .explosionResistance(8.0f)
     ));
 
+    public static final DeferredHolder<Block, FenceGateBlock>  MUTTON_GATE = FOODBLOCK.register("mutton_fence_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtyperegistry.MUTTONWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.MUD)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+    ));
+
+    public static final DeferredHolder<Block, FenceGateBlock>  BEEF_GATE = FOODBLOCK.register("beef_fence_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtyperegistry.BEEFWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.MUD)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+    ));
+
+    public static final DeferredHolder<Block, FenceGateBlock>  PORK_GATE = FOODBLOCK.register("pork_fence_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtyperegistry.PORKWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.MUD)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+    ));
+
+    public static final DeferredHolder<Block, FenceGateBlock>  RABBIT_GATE = FOODBLOCK.register("rabbit_fence_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtyperegistry.RABBITWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.MUD)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+    ));
+
 //==============================================================================================================================================================================================
 //                                                                                      Pressure Plates
 //==============================================================================================================================================================================================

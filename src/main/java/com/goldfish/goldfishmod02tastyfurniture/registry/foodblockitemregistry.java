@@ -489,6 +489,18 @@ public class foodblockitemregistry {
 
      public static final DeferredHolder<Item, BlockItem> TROPICAL_FISH_GATE_ITEM = FOODBLOCKITEM.register("tropical_fish_gate_item",
      () -> new BlockItem(foodblockregistry.TROPICAL_FISH_GATE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> MUTTON_GATE_ITEM = FOODBLOCKITEM.register("mutton_gate_item",
+     () -> new BlockItem(foodblockregistry.MUTTON_GATE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> BEEF_GATE_ITEM = FOODBLOCKITEM.register("beef_gate_item",
+     () -> new BlockItem(foodblockregistry.BEEF_GATE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> PORK_GATE_ITEM = FOODBLOCKITEM.register("pork_gate_item",
+     () -> new BlockItem(foodblockregistry.PORK_GATE.get(), new BlockItem.Properties()));
+
+     public static final DeferredHolder<Item, BlockItem> RABBIT_GATE_ITEM = FOODBLOCKITEM.register("rabbit_gate_item",
+     () -> new BlockItem(foodblockregistry.RABBIT_GATE.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                      Pressure Plates
 //==============================================================================================================================================================================================

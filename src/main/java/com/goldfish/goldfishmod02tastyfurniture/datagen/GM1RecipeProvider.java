@@ -1206,6 +1206,42 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('B', Items.STICK)
            .unlockedBy("has_tropical_fish_ingot", has(ingotregistry.TROPICAL_FISH_INGOT.get()))
            .save(output);
+         //mutton_gate
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MUTTON_GATE_ITEM.get())
+           .pattern("BAB")
+           .pattern("BAB")
+           .pattern("   ")
+           .define('A', ingotregistry.MUTTON_INGOT.get())
+           .define('B', Items.STICK)
+           .unlockedBy("has_mutton_ingot", has(ingotregistry.MUTTON_INGOT.get()))
+           .save(output);
+         //beef_gate
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEEF_GATE_ITEM.get())
+           .pattern("BAB")
+           .pattern("BAB")
+           .pattern("   ")
+           .define('A', ingotregistry.BEEF_INGOT.get())
+           .define('B', Items.STICK)
+           .unlockedBy("has_beef_ingot", has(ingotregistry.BEEF_INGOT.get()))
+           .save(output);
+         //pork_gate
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PORK_GATE_ITEM.get())
+           .pattern("BAB")
+           .pattern("BAB")
+           .pattern("   ")
+           .define('A', ingotregistry.PORK_INGOT.get())
+           .define('B', Items.STICK)
+           .unlockedBy("has_pork_ingot", has(ingotregistry.PORK_INGOT.get()))
+           .save(output);
+         //rabbit_gate
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RABBIT_GATE_ITEM.get())
+           .pattern("BAB")
+           .pattern("BAB")
+           .pattern("   ")
+           .define('A', ingotregistry.RABBIT_INGOT.get())
+           .define('B', Items.STICK)
+           .unlockedBy("has_rabbit_ingot", has(ingotregistry.RABBIT_INGOT.get()))
+           .save(output);
 
         //-------------------------------------------------------------signs----------------------------------------------------------------------
          //apple_sign

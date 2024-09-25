@@ -591,6 +591,26 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation tropical_fish_gate_texture = modLoc("block/tropical_fish_block");
           fenceGateBlock(tropical_fish_gate, tropical_fish_gate_texture);
 
+        //.............mutton
+          FenceGateBlock mutton_gate = foodblockregistry.MUTTON_GATE.get();
+          ResourceLocation mutton_gate_texture = modLoc("block/mutton_block");
+          fenceGateBlock(mutton_gate, mutton_gate_texture);
+
+        //.............beef
+          FenceGateBlock beef_gate = foodblockregistry.BEEF_GATE.get();
+          ResourceLocation beef_gate_texture = modLoc("block/beef_block");
+          fenceGateBlock(beef_gate, beef_gate_texture);
+
+        //.............pork
+          FenceGateBlock pork_gate = foodblockregistry.PORK_GATE.get();
+          ResourceLocation pork_gate_texture = modLoc("block/pork_block");
+          fenceGateBlock(pork_gate, pork_gate_texture);
+
+        //.............rabbit
+          FenceGateBlock rabbit_gate = foodblockregistry.RABBIT_GATE.get();
+          ResourceLocation rabbit_gate_texture = modLoc("block/rabbit_block");
+          fenceGateBlock(rabbit_gate, rabbit_gate_texture);
+
     //------------------------------------------------------------pressure plates-------------------------------------------------------------------------
         //.............apple
           PressurePlateBlock apple_pressure_plate = foodblockregistry.APPLE_PRESSURE_PLATE.get();
