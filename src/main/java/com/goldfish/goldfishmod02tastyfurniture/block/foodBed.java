@@ -7,11 +7,15 @@ import javax.annotation.Nullable;
 import com.mojang.datafixers.util.Either;
 import com.mojang.datafixers.util.Unit;
 import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.MapDecoder;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -58,7 +62,7 @@ public class foodBed extends HorizontalDirectionalBlock implements EntityBlock {
     }
 
     @Override
-    protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
+    protected MapCodec<foodBed> codec() {
         return CODEC;
     }
 
@@ -87,38 +91,50 @@ public class foodBed extends HorizontalDirectionalBlock implements EntityBlock {
     @Override
     public boolean isCollisionShapeFullBlock(BlockState state, BlockGetter world, BlockPos pos) {
     return false;
-}
+    }
 
-
-    
-@Override
-protected InteractionResult useWithoutItem(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, BlockHitResult pHitResult) {
+// setting respawn location only works when forced, may need to create method to prevent getting stuck
+    @Override
+    protected InteractionResult useWithoutItem(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, BlockHitResult pHitResult) {
     if (pLevel instanceof ServerLevel serverLevel) {
         Either<BedSleepingProblem, net.minecraft.util.Unit> sleepResult = pPlayer.startSleepInBed(pPos);
 
-        // Handle the case where the player cannot sleep (left side of Either)
         if (sleepResult.left().isPresent()) {
+            ServerPlayer serverPlayer = (ServerPlayer) pPlayer;
+            BlockPos spawnPos = pPos.above();
+            
+            serverPlayer.setRespawnPosition(pLevel.dimension(), spawnPos, 0.0F, true, true);
             Player.BedSleepingProblem problem = sleepResult.left().get();
-            if (problem.getMessage() != null) {
-                pPlayer.displayClientMessage(problem.getMessage(), true);
-                System.out.println("Sleep message: " + problem.getMessage());
-            }
-            return InteractionResult.FAIL; // Return failure if there was a problem
+            pPlayer.displayClientMessage(problem.getMessage(), true);
+            return InteractionResult.FAIL;
         }
 
-        // Handle the case where the player successfully starts sleeping (right side of Either)
         if (sleepResult.right().isPresent()) {
-            // If no issues, change the time to day
-            serverLevel.setDayTime(0);
+            if (!pLevel.isClientSide) {
+                ServerPlayer serverPlayer = (ServerPlayer) pPlayer;
+                BlockPos spawnPos = pPos.above();
+                
+                serverPlayer.setRespawnPosition(pLevel.dimension(), spawnPos, 0.0F, true, true);
+                
+                pLevel.playSound(
+                    null,
+                    pPos,
+                    SoundEvents.WOOL_HIT, 
+                    SoundSource.BLOCKS,
+                    2.0F,
+                    1.0F
+                );
+                
+                serverLevel.setDayTime(0);  // Reset the time if needed
+            }
             return InteractionResult.SUCCESS;
         }
+     }
+     return InteractionResult.PASS;
     }
 
-    return InteractionResult.PASS; // If the level is not ServerLevel or no interaction occurred
-}
-
-        public static boolean canSetSpawn(Level pLevel) {
-        return pLevel.dimensionType().bedWorks();
+    public static boolean canSetSpawn(Level pLevel) {
+     return pLevel.dimensionType().bedWorks();
     }
 
     private boolean kickVillagerOutOfBed(Level pLevel, BlockPos pPos) {
@@ -165,13 +181,14 @@ protected InteractionResult useWithoutItem(BlockState pState, Level pLevel, Bloc
 
     @Override
     public void setPlacedBy(Level pLevel, BlockPos pPos, BlockState pState, @Nullable LivingEntity pPlacer, ItemStack pStack) {
-        super.setPlacedBy(pLevel, pPos, pState, pPlacer, pStack);
+     //   super.setPlacedBy(pLevel, pPos, pState, pPlacer, pStack);
         if (!pLevel.isClientSide) {
             BlockPos blockpos = pPos.relative(pState.getValue(FACING));
            // pLevel.setBlock(blockpos, pState.setValue(PART, BedPart.HEAD), 3);
-            pLevel.blockUpdated(pPos, Blocks.AIR);
-            pState.updateNeighbourShapes(pLevel, pPos, 3);
+            pLevel.blockUpdated(blockpos, Blocks.AIR);
+            pState.updateNeighbourShapes(pLevel, blockpos, 3);
         }
+        super.setPlacedBy(pLevel, pPos, pState, pPlacer, pStack);
     }
 
     @Override
@@ -199,8 +216,7 @@ protected InteractionResult useWithoutItem(BlockState pState, Level pLevel, Bloc
 
     // Check if the block above is air or some other passable block
     return stateAbove.isAir(); //|| stateAbove.getMaterial().isReplaceable();
-}
-    
+   }
 }
 
 // private boolean checkBedExists() {
