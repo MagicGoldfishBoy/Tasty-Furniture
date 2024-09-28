@@ -32,7 +32,7 @@ public class foodBarrelEntity extends RandomizableContainerBlockEntity {
         super(foodblockregistry.FOOD_BARREL_ENTITY.get(), pPos, pBlockState);
     }
 
-    private NonNullList<ItemStack> items = NonNullList.withSize(27, ItemStack.EMPTY);
+    private NonNullList<ItemStack> items = NonNullList.withSize(54, ItemStack.EMPTY);
     private final ContainerOpenersCounter openersCounter = new ContainerOpenersCounter() {
         @Override
         protected void onOpen(Level p_155062_, BlockPos p_155063_, BlockState p_155064_) {
@@ -84,7 +84,7 @@ public class foodBarrelEntity extends RandomizableContainerBlockEntity {
 
     @Override
     public int getContainerSize() {
-        return 27;
+        return 54;
     }
 
     @Override
@@ -104,7 +104,7 @@ public class foodBarrelEntity extends RandomizableContainerBlockEntity {
 
     @Override
     protected AbstractContainerMenu createMenu(int pId, Inventory pPlayer) {
-        return ChestMenu.threeRows(pId, pPlayer, this);
+        return ChestMenu.sixRows(pId, pPlayer, this);
     }
 
     @Override
