@@ -3655,7 +3655,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
 
         //------------------------------------------------------------ladders----------------------------------------------------
          //apple
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_LADDER_ITEM.get())
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_LADDER_ITEM.get(), 3)
           .pattern("A A")
           .pattern("ABA")
           .pattern("A A")
@@ -3665,7 +3665,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .save(output);
           
          //potato
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.POTATO_LADDER_ITEM.get())
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.POTATO_LADDER_ITEM.get(), 3)
           .pattern("A A")
           .pattern("ABA")
           .pattern("A A")
@@ -3675,7 +3675,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .save(output);
 
          //beetroot
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEETROOT_LADDER_ITEM.get())
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEETROOT_LADDER_ITEM.get(), 3)
           .pattern("A A")
           .pattern("ABA")
           .pattern("A A")
@@ -3685,7 +3685,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .save(output);
 
          //carrot
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CARROT_LADDER_ITEM.get())
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CARROT_LADDER_ITEM.get(), 3)
           .pattern("A A")
           .pattern("ABA")
           .pattern("A A")
@@ -3695,7 +3695,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .save(output);
 
          //chorus
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHORUS_LADDER_ITEM.get())
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHORUS_LADDER_ITEM.get(), 3)
           .pattern("A A")
           .pattern("ABA")
           .pattern("A A")
@@ -3705,7 +3705,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .save(output);
 
          //glow_berry
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.GLOW_BERRY_LADDER_ITEM.get())
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.GLOW_BERRY_LADDER_ITEM.get(), 3)
           .pattern("A A")
           .pattern("ABA")
           .pattern("A A")
@@ -3715,7 +3715,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .save(output);
 
          //melon
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MELON_LADDER_ITEM.get())
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MELON_LADDER_ITEM.get(), 3)
           .pattern("A A")
           .pattern("ABA")
           .pattern("A A")
@@ -3725,7 +3725,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .save(output);
 
          //sweet_berry
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SWEET_BERRY_LADDER_ITEM.get())
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SWEET_BERRY_LADDER_ITEM.get(), 3)
           .pattern("A A")
           .pattern("ABA")
           .pattern("A A")
@@ -3735,7 +3735,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .save(output);
 
          //brown_mushroom
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BROWN_MUSHROOM_LADDER_ITEM.get())
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BROWN_MUSHROOM_LADDER_ITEM.get(), 3)
           .pattern("A A")
           .pattern("ABA")
           .pattern("A A")
@@ -3745,7 +3745,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .save(output);
 
          //red_mushroom
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RED_MUSHROOM_LADDER_ITEM.get())
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RED_MUSHROOM_LADDER_ITEM.get(), 3)
           .pattern("A A")
           .pattern("ABA")
           .pattern("A A")
@@ -3755,7 +3755,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .save(output);
 
          //pumpkin
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PUMPKIN_LADDER_ITEM.get())
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PUMPKIN_LADDER_ITEM.get(), 3)
           .pattern("A A")
           .pattern("ABA")
           .pattern("A A")
@@ -3765,7 +3765,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .save(output);
 
          //chicken
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHICKEN_LADDER_ITEM.get())
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHICKEN_LADDER_ITEM.get(), 3)
           .pattern("A A")
           .pattern("ABA")
           .pattern("A A")
@@ -3775,7 +3775,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .save(output);
 
          //cod
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.COD_LADDER_ITEM.get())
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.COD_LADDER_ITEM.get(), 3)
           .pattern("A A")
           .pattern("ABA")
           .pattern("A A")
@@ -3785,7 +3785,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .save(output);
 
          //salmon
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SALMON_LADDER_ITEM.get())
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SALMON_LADDER_ITEM.get(), 3)
           .pattern("A A")
           .pattern("ABA")
           .pattern("A A")
@@ -3795,7 +3795,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .save(output);
 
          //tropical_fish
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.TROPICAL_FISH_LADDER_ITEM.get())
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.TROPICAL_FISH_LADDER_ITEM.get(), 3)
           .pattern("A A")
           .pattern("ABA")
           .pattern("A A")
@@ -3805,7 +3805,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .save(output);
 
          //mutton
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MUTTON_LADDER_ITEM.get())
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MUTTON_LADDER_ITEM.get(), 3)
           .pattern("A A")
           .pattern("ABA")
           .pattern("A A")
@@ -3815,7 +3815,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .save(output);
 
          //beef
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEEF_LADDER_ITEM.get())
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEEF_LADDER_ITEM.get(), 3)
           .pattern("A A")
           .pattern("ABA")
           .pattern("A A")
@@ -3825,7 +3825,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .save(output);
 
          //pork
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PORK_LADDER_ITEM.get())
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PORK_LADDER_ITEM.get(), 3)
           .pattern("A A")
           .pattern("ABA")
           .pattern("A A")
@@ -3835,7 +3835,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .save(output);
 
          //rabbit
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RABBIT_LADDER_ITEM.get())
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RABBIT_LADDER_ITEM.get(), 3)
           .pattern("A A")
           .pattern("ABA")
           .pattern("A A")
