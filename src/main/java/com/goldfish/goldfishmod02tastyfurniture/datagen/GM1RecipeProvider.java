@@ -1058,7 +1058,159 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .define('A', nuggetregistry.RABBIT_NUGGET.get())
           .unlockedBy("has_rabbit_nugget", has(nuggetregistry.RABBIT_NUGGET.get()))
           .save(output, "rabbit_ingot_from_crafting");
-
+        //-------------------------------------------------------------doors-----------------------------------------------------------------------
+            //apple
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_DOOR_ITEM.get(), 3)
+              .pattern("AA ")
+              .pattern("AA ")
+              .pattern("AA ")
+              .define('A', ingotregistry.APPLE_INGOT.get())
+              .unlockedBy("has_apple_ingot", has(ingotregistry.APPLE_INGOT.get()))
+              .save(output);
+            //potato
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.POTATO_DOOR_ITEM.get(), 3)
+              .pattern("AA ")
+              .pattern("AA ")
+              .pattern("AA ")
+              .define('A', ingotregistry.POTATO_INGOT.get())
+              .unlockedBy("has_potato_ingot", has(ingotregistry.POTATO_INGOT.get()))
+              .save(output);
+            //beetroot
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEETROOT_DOOR_ITEM.get(), 3)
+              .pattern("AA ")
+              .pattern("AA ")
+              .pattern("AA ")
+              .define('A', ingotregistry.BEETROOT_INGOT.get())
+              .unlockedBy("has_beetroot_ingot", has(ingotregistry.BEETROOT_INGOT.get()))
+              .save(output);
+            //carrot
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CARROT_DOOR_ITEM.get(), 3)
+              .pattern("AA ")
+              .pattern("AA ")
+              .pattern("AA ")
+              .define('A', ingotregistry.CARROT_INGOT.get())
+              .unlockedBy("has_carrot_ingot", has(ingotregistry.CARROT_INGOT.get()))
+              .save(output);
+            //chorus
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHORUS_DOOR_ITEM.get(), 3)
+              .pattern("AA ")
+              .pattern("AA ")
+              .pattern("AA ")
+              .define('A', ingotregistry.CHORUS_INGOT.get())
+              .unlockedBy("has_chorus_ingot", has(ingotregistry.CHORUS_INGOT.get()))
+              .save(output);
+            //glow_berry
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.GLOW_BERRY_DOOR_ITEM.get(), 3)
+              .pattern("AA ")
+              .pattern("AA ")
+              .pattern("AA ")
+              .define('A', ingotregistry.GLOW_BERRY_INGOT.get())
+              .unlockedBy("has_glow_berry_ingot", has(ingotregistry.GLOW_BERRY_INGOT.get()))
+              .save(output);
+            //melon
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MELON_DOOR_ITEM.get(), 3)
+              .pattern("AA ")
+              .pattern("AA ")
+              .pattern("AA ")
+              .define('A', ingotregistry.MELON_INGOT.get())
+              .unlockedBy("has_melon_ingot", has(ingotregistry.MELON_INGOT.get()))
+              .save(output);
+            //sweet_berry
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SWEET_BERRY_DOOR_ITEM.get(), 3)
+              .pattern("AA ")
+              .pattern("AA ")
+              .pattern("AA ")
+              .define('A', ingotregistry.SWEET_BERRY_INGOT.get())
+              .unlockedBy("has_sweet_berry_ingot", has(ingotregistry.SWEET_BERRY_INGOT.get()))
+              .save(output);
+            //brown_mushroom
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BROWN_MUSHROOM_DOOR_ITEM.get(), 3)
+              .pattern("AA ")
+              .pattern("AA ")
+              .pattern("AA ")
+              .define('A', ingotregistry.BROWN_MUSHROOM_INGOT.get())
+              .unlockedBy("has_brown_mushroom_ingot", has(ingotregistry.BROWN_MUSHROOM_INGOT.get()))
+              .save(output);
+            //red_mushroom
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RED_MUSHROOM_DOOR_ITEM.get(), 3)
+              .pattern("AA ")
+              .pattern("AA ")
+              .pattern("AA ")
+              .define('A', ingotregistry.RED_MUSHROOM_INGOT.get())
+              .unlockedBy("has_red_mushroom_ingot", has(ingotregistry.RED_MUSHROOM_INGOT.get()))
+              .save(output);
+            //pumpkin
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PUMPKIN_DOOR_ITEM.get(), 3)
+              .pattern("AA ")
+              .pattern("AA ")
+              .pattern("AA ")
+              .define('A', ingotregistry.PUMPKIN_INGOT.get())
+              .unlockedBy("has_pumpkin_ingot", has(ingotregistry.PUMPKIN_INGOT.get()))
+              .save(output);
+            //chicken
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHICKEN_DOOR_ITEM.get(), 3)
+              .pattern("AA ")
+              .pattern("AA ")
+              .pattern("AA ")
+              .define('A', ingotregistry.CHICKEN_INGOT.get())
+              .unlockedBy("has_chicken_ingot", has(ingotregistry.CHICKEN_INGOT.get()))
+              .save(output);
+            //cod
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.COD_DOOR_ITEM.get(), 3)
+              .pattern("AA ")
+              .pattern("AA ")
+              .pattern("AA ")
+              .define('A', ingotregistry.COD_INGOT.get())
+              .unlockedBy("has_cod_ingot", has(ingotregistry.COD_INGOT.get()))
+              .save(output);
+            //salmon
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SALMON_DOOR_ITEM.get(), 3)
+              .pattern("AA ")
+              .pattern("AA ")
+              .pattern("AA ")
+              .define('A', ingotregistry.SALMON_INGOT.get())
+              .unlockedBy("has_salmon_ingot", has(ingotregistry.SALMON_INGOT.get()))
+              .save(output);
+            //tropical_fish
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.TROPICAL_FISH_DOOR_ITEM.get(), 3)
+              .pattern("AA ")
+              .pattern("AA ")
+              .pattern("AA ")
+              .define('A', ingotregistry.TROPICAL_FISH_INGOT.get())
+              .unlockedBy("has_tropical_fish_ingot", has(ingotregistry.TROPICAL_FISH_INGOT.get()))
+              .save(output);
+            //mutton
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MUTTON_DOOR_ITEM.get(), 3)
+              .pattern("AA ")
+              .pattern("AA ")
+              .pattern("AA ")
+              .define('A', ingotregistry.MUTTON_INGOT.get())
+              .unlockedBy("has_mutton_ingot", has(ingotregistry.MUTTON_INGOT.get()))
+              .save(output);
+            //beef
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEEF_DOOR_ITEM.get(), 3)
+              .pattern("AA ")
+              .pattern("AA ")
+              .pattern("AA ")
+              .define('A', ingotregistry.BEEF_INGOT.get())
+              .unlockedBy("has_beef_ingot", has(ingotregistry.BEEF_INGOT.get()))
+              .save(output);
+            //pork
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PORK_DOOR_ITEM.get(), 3)
+              .pattern("AA ")
+              .pattern("AA ")
+              .pattern("AA ")
+              .define('A', ingotregistry.PORK_INGOT.get())
+              .unlockedBy("has_pork_ingot", has(ingotregistry.PORK_INGOT.get()))
+              .save(output);
+            //rabbit
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RABBIT_DOOR_ITEM.get(), 3)
+              .pattern("AA ")
+              .pattern("AA ")
+              .pattern("AA ")
+              .define('A', ingotregistry.RABBIT_INGOT.get())
+              .unlockedBy("has_rabbit_ingot", has(ingotregistry.RABBIT_INGOT.get()))
+              .save(output);
         //-------------------------------------------------------------fences----------------------------------------------------------------------
          //apple_fence
            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_FENCE_ITEM.get(), 3)
