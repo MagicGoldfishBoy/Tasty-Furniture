@@ -3999,7 +3999,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         //------------------------------------------------------------torches----------------------------------------------------
          //.....apple
           //regular
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4019,7 +4019,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_apple_nugget", has(nuggetregistry.APPLE_NUGGET.get()))
             .save(output);
           //soul
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_SOUL_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_SOUL_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4031,7 +4031,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             
          //.....potato
           //regular
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.POTATO_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.POTATO_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4051,7 +4051,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_potato_nugget", has(nuggetregistry.POTATO_NUGGET.get()))
             .save(output);
           //soul
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.POTATO_SOUL_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.POTATO_SOUL_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4063,7 +4063,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
 
          //.....beetroot
           //regular
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEETROOT_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEETROOT_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4083,7 +4083,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_beetroot_nugget", has(nuggetregistry.BEETROOT_NUGGET.get()))
             .save(output);
           //soul
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEETROOT_SOUL_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEETROOT_SOUL_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4095,7 +4095,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
 
          //.....carrot
           //regular
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CARROT_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CARROT_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4115,7 +4115,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_carrot_nugget", has(nuggetregistry.CARROT_NUGGET.get()))
             .save(output);
           //soul
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CARROT_SOUL_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CARROT_SOUL_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4127,7 +4127,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
 
          //.....chorus
           //regular
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHORUS_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHORUS_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4147,7 +4147,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_chorus_nugget", has(nuggetregistry.CHORUS_NUGGET.get()))
             .save(output);
           //soul
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHORUS_SOUL_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHORUS_SOUL_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4159,7 +4159,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
 
          //.....glow_berry
           //regular
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.GLOW_BERRY_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.GLOW_BERRY_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4179,7 +4179,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_glow_berry_nugget", has(nuggetregistry.GLOW_BERRY_NUGGET.get()))
             .save(output);
           //soul
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.GLOW_BERRY_SOUL_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.GLOW_BERRY_SOUL_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4191,7 +4191,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
 
          //.....melon
           //regular
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MELON_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MELON_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4211,7 +4211,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_melon_nugget", has(nuggetregistry.MELON_NUGGET.get()))
             .save(output);
           //soul
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MELON_SOUL_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MELON_SOUL_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4223,7 +4223,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
 
          //.....sweet_berry
           //regular
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SWEET_BERRY_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SWEET_BERRY_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4243,7 +4243,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_sweet_berry_nugget", has(nuggetregistry.SWEET_BERRY_NUGGET.get()))
             .save(output);
           //soul
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SWEET_BERRY_SOUL_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SWEET_BERRY_SOUL_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4255,7 +4255,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
 
          //.....brown_mushroom
           //regular
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BROWN_MUSHROOM_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BROWN_MUSHROOM_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4275,7 +4275,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_brown_mushroom_nugget", has(nuggetregistry.BROWN_MUSHROOM_NUGGET.get()))
             .save(output);
           //soul
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BROWN_MUSHROOM_SOUL_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BROWN_MUSHROOM_SOUL_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4286,7 +4286,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .save(output);
          //.....red_mushroom
           //regular
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RED_MUSHROOM_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RED_MUSHROOM_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4306,7 +4306,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_red_mushroom_nugget", has(nuggetregistry.RED_MUSHROOM_NUGGET.get()))
             .save(output);
           //soul
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RED_MUSHROOM_SOUL_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RED_MUSHROOM_SOUL_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4318,7 +4318,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             
          //.....pumpkin
           //regular
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PUMPKIN_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PUMPKIN_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4338,7 +4338,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_pumpkin_nugget", has(nuggetregistry.PUMPKIN_NUGGET.get()))
             .save(output);
           //soul
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PUMPKIN_SOUL_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PUMPKIN_SOUL_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4350,7 +4350,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
 
          //.....chicken
           //regular
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHICKEN_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHICKEN_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4370,7 +4370,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_chicken_nugget", has(nuggetregistry.CHICKEN_NUGGET.get()))
             .save(output);
           //soul
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHICKEN_SOUL_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHICKEN_SOUL_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4382,7 +4382,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
 
          //.....cod
           //regular
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.COD_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.COD_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4402,7 +4402,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_cod_nugget", has(nuggetregistry.COD_NUGGET.get()))
             .save(output);
           //soul
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.COD_SOUL_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.COD_SOUL_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4413,7 +4413,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .save(output);
          //.....salmon
           //regular
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SALMON_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SALMON_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4433,7 +4433,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_salmon_nugget", has(nuggetregistry.SALMON_NUGGET.get()))
             .save(output);
           //soul
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SALMON_SOUL_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SALMON_SOUL_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4445,7 +4445,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
 
          //.....tropical_fish
           //regular
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.TROPICAL_FISH_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.TROPICAL_FISH_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4465,7 +4465,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_tropical_fish_nugget", has(nuggetregistry.TROPICAL_FISH_NUGGET.get()))
             .save(output);
           //soul
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.TROPICAL_FISH_SOUL_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.TROPICAL_FISH_SOUL_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4477,7 +4477,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
 
          //.....mutton
           //regular
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MUTTON_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MUTTON_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4497,7 +4497,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_mutton_nugget", has(nuggetregistry.MUTTON_NUGGET.get()))
             .save(output);
           //soul
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MUTTON_SOUL_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MUTTON_SOUL_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4509,7 +4509,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             
          //.....beef
           //regular
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEEF_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEEF_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4529,7 +4529,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_beef_nugget", has(nuggetregistry.BEEF_NUGGET.get()))
             .save(output);
           //soul
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEEF_SOUL_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEEF_SOUL_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4541,7 +4541,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
 
          //.....pork
           //regular
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PORK_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PORK_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4561,7 +4561,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_pork_nugget", has(nuggetregistry.PORK_NUGGET.get()))
             .save(output);
           //soul
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PORK_SOUL_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PORK_SOUL_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4573,7 +4573,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
 
          //.....rabbit
           //regular
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RABBIT_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RABBIT_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
@@ -4593,7 +4593,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_rabbit_nugget", has(nuggetregistry.RABBIT_NUGGET.get()))
             .save(output);
           //soul
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RABBIT_SOUL_TORCH_ITEM.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RABBIT_SOUL_TORCH_ITEM.get(), 4)
             .pattern(" C ")
             .pattern(" B ")
             .pattern(" A ")
