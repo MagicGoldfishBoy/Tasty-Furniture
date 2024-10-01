@@ -125,8 +125,8 @@ public class foodBed extends HorizontalDirectionalBlock implements EntityBlock {
                     1.0F
                 );
                 
-                serverLevel.setDayTime(0);  // Reset the time if needed
-                serverLevel.setWeatherParameters(9999, 9999, false, false);
+                serverLevel.setDayTime(0);
+                serverLevel.resetWeatherCycle();
             }
             return InteractionResult.SUCCESS;
         }
