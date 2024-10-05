@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod02tastyfurniture:meatgrinder"
+    },
+    "B": {
+      "tag": "goldfishmod02tastyfurniture:pork"
+    }
+  },
+  "pattern": [
+    "ABB",
+    "BB ",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "goldfishmod02tastyfurniture:ground_pork"
+  }
+}

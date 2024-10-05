@@ -73,12 +73,35 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
 
     public static class GM1RecipeProviderConcrete extends GM1RecipeProvider {
 
-      public static final TagKey<Item> CHICKEN_TAG = TagKey.create(
-        // The registry key. The type of the registry must match the generic type of the tag.
-        Registries.ITEM,
-        // The location of the tag. This example will put our tag at data/examplemod/tags/blocks/example_tag.json.
-        ResourceLocation.fromNamespaceAndPath(TastyFurniture.MODID, "chicken")
-      );
+        //tags
+          public static final TagKey<Item> CHICKEN_TAG = TagKey.create(
+            Registries.ITEM,
+            ResourceLocation.fromNamespaceAndPath(TastyFurniture.MODID, "chicken")
+          );
+          public static final TagKey<Item> COD_TAG = TagKey.create(
+            Registries.ITEM,
+            ResourceLocation.fromNamespaceAndPath(TastyFurniture.MODID, "cod")
+          );
+          public static final TagKey<Item> SALMON_TAG = TagKey.create(
+            Registries.ITEM,
+            ResourceLocation.fromNamespaceAndPath(TastyFurniture.MODID, "salmon")
+          );
+          public static final TagKey<Item> MUTTON_TAG = TagKey.create(
+            Registries.ITEM,
+            ResourceLocation.fromNamespaceAndPath(TastyFurniture.MODID, "mutton")
+          );
+          public static final TagKey<Item> BEEF_TAG = TagKey.create(
+            Registries.ITEM,
+            ResourceLocation.fromNamespaceAndPath(TastyFurniture.MODID, "beef")
+          );
+          public static final TagKey<Item> PORK_TAG = TagKey.create(
+            Registries.ITEM,
+            ResourceLocation.fromNamespaceAndPath(TastyFurniture.MODID, "pork")
+          );
+          public static final TagKey<Item> RABBIT_TAG = TagKey.create(
+            Registries.ITEM,
+            ResourceLocation.fromNamespaceAndPath(TastyFurniture.MODID, "rabbit")
+          );
 
 
         public GM1RecipeProviderConcrete(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
@@ -194,71 +217,71 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .pattern("   ")
               .define('A', mushregistry.meatgrinder.get())
               .define('B', CHICKEN_TAG)
-              .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
+              .unlockedBy("has_meat_grinder", has(mushregistry.meatgrinder.get()))
               .save(output);
-            // //cod
-            //   ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_COD.get(), 1)
-            //   .pattern("ABB")
-            //   .pattern("BB ")
-            //   .pattern("   ")
-            //   .define('A', mushregistry.meatgrinder.get())
-            //   .define('B', Items.COD)
-            //   .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
-            //   .save(output);
-            // //salmon
-            //   ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_SALMON.get(), 1)
-            //   .pattern("ABB")
-            //   .pattern("BB ")
-            //   .pattern("   ")
-            //   .define('A', mushregistry.meatgrinder.get())
-            //   .define('B', Items.SALMON)
-            //   .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
-            //   .save(output);
-            // //tropical_fish
-            //   ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_TROPICAL_FISH.get(), 1)
-            //   .pattern("ABB")
-            //   .pattern("BB ")
-            //   .pattern("   ")
-            //   .define('A', mushregistry.meatgrinder.get())
-            //   .define('B', Items.TROPICAL_FISH)
-            //   .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
-            //   .save(output);
-            // //mutton
-            //   ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_MUTTON.get(), 1)
-            //   .pattern("ABB")
-            //   .pattern("BB ")
-            //   .pattern("   ")
-            //   .define('A', mushregistry.meatgrinder.get())
-            //   .define('B', Items.MUTTON)
-            //   .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
-            //   .save(output);
-            // //beef
-            //   ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_BEEF.get(), 1)
-            //   .pattern("ABB")
-            //   .pattern("BB ")
-            //   .pattern("   ")
-            //   .define('A', mushregistry.meatgrinder.get())
-            //   .define('B', Items.BEEF)
-            //   .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
-            //   .save(output);
-            // //pork
-            //   ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_PORK.get(), 1)
-            //   .pattern("ABB")
-            //   .pattern("BB ")
-            //   .pattern("   ")
-            //   .define('A', mushregistry.meatgrinder.get())
-            //   .define('B', Items.PORK)
-            //   .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
-            //   .save(output);
-            // //rabbit
-            //   ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_RABBIT.get(), 1)
-            //   .pattern("ABB")
-            //   .pattern("BB ")
-            //   .pattern("   ")
-            //   .define('A', mushregistry.meatgrinder.get())
-            //   .define('B', Items.RABBIT)
-            //   .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
-            //   .save(output);
+            //cod
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_COD.get(), 1)
+              .pattern("ABB")
+              .pattern("BB ")
+              .pattern("   ")
+              .define('A', mushregistry.meatgrinder.get())
+              .define('B', COD_TAG)
+              .unlockedBy("has_meat_grinder", has(mushregistry.meatgrinder.get()))
+              .save(output);
+            //salmon
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_SALMON.get(), 1)
+              .pattern("ABB")
+              .pattern("BB ")
+              .pattern("   ")
+              .define('A', mushregistry.meatgrinder.get())
+              .define('B', SALMON_TAG)
+              .unlockedBy("has_meat_grinder", has(mushregistry.meatgrinder.get()))
+              .save(output);
+            //tropical_fish
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_TROPICAL_FISH.get(), 1)
+              .pattern("ABB")
+              .pattern("BB ")
+              .pattern("   ")
+              .define('A', mushregistry.meatgrinder.get())
+              .define('B', Items.TROPICAL_FISH)
+              .unlockedBy("has_meat_grinder", has(mushregistry.meatgrinder.get()))
+              .save(output);
+            //mutton
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_MUTTON.get(), 1)
+              .pattern("ABB")
+              .pattern("BB ")
+              .pattern("   ")
+              .define('A', mushregistry.meatgrinder.get())
+              .define('B', MUTTON_TAG)
+              .unlockedBy("has_meat_grinder", has(mushregistry.meatgrinder.get()))
+              .save(output);
+            //beef
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_BEEF.get(), 1)
+              .pattern("ABB")
+              .pattern("BB ")
+              .pattern("   ")
+              .define('A', mushregistry.meatgrinder.get())
+              .define('B', BEEF_TAG)
+              .unlockedBy("has_meat_grinder", has(mushregistry.meatgrinder.get()))
+              .save(output);
+            //pork
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_PORK.get(), 1)
+              .pattern("ABB")
+              .pattern("BB ")
+              .pattern("   ")
+              .define('A', mushregistry.meatgrinder.get())
+              .define('B', PORK_TAG)
+              .unlockedBy("has_meat_grinder", has(mushregistry.meatgrinder.get()))
+              .save(output);
+            //rabbit
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_RABBIT.get(), 1)
+              .pattern("ABB")
+              .pattern("BB ")
+              .pattern("   ")
+              .define('A', mushregistry.meatgrinder.get())
+              .define('B', RABBIT_TAG)
+              .unlockedBy("has_meat_grinder", has(mushregistry.meatgrinder.get()))
+              .save(output);
         //-------------------------------------------------------------blocks---------------------------------------------------------------------
          //____________________________________________________________bricks_____________________________________________________________________
           //.........apple

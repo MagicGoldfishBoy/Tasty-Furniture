@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "goldfishmod02tastyfurniture:ground_chicken"
+        "recipe": "goldfishmod02tastyfurniture:ground_beef"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "goldfishmod02tastyfurniture:ground_chicken"
+      "goldfishmod02tastyfurniture:ground_beef"
     ]
   }
 }
