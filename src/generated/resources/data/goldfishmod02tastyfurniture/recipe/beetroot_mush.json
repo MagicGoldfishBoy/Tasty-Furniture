@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod02tastyfurniture:mush_hammer"
+    },
+    "B": {
+      "item": "minecraft:beetroot"
+    }
+  },
+  "pattern": [
+    "ABB",
+    "BB ",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "goldfishmod02tastyfurniture:beetroot_mush"
+  }
+}

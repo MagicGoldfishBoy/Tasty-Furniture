@@ -3,7 +3,11 @@ package com.goldfish.goldfishmod02tastyfurniture.registry;
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 
 import net.minecraft.core.Direction;
+import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SignItem;
@@ -17,6 +21,7 @@ import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 public class foodblockitemregistry {
     
     public static DeferredRegister<Item> FOODBLOCKITEM = DeferredRegister.create(BuiltInRegistries.ITEM, TastyFurniture.MODID);
+
 
 //==============================================================================================================================================================================================
 //                                                                                         Blocks
