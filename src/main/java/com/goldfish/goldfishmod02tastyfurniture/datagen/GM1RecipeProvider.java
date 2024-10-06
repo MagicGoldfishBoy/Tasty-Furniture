@@ -171,7 +171,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .pattern("BB ")
               .pattern("   ")
               .define('A', mushregistry.mushhammer.get())
-              .define('B', Items.MELON)
+              .define('B', Items.MELON_SLICE)
               .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
               .save(output);
             //sweet_berry
@@ -204,7 +204,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             //pumpkin
               ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.PUMPKIN_MUSH.get(), 1)
               .pattern("ABB")
-              .pattern("BB ")
+              .pattern("   ")
               .pattern("   ")
               .define('A', mushregistry.mushhammer.get())
               .define('B', Items.PUMPKIN)
@@ -2602,7 +2602,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .save(output);
         //-------------------------------------------------------------bars-----------------------------------------------------
          //apple
-         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_BARS_ITEM.get())
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_BARS_ITEM.get(), 8)
          .pattern("   ")
          .pattern("AAA")
          .pattern("AAA")
@@ -2610,7 +2610,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .unlockedBy("has_apple_nugget", has(nuggetregistry.APPLE_NUGGET.get()))
          .save(output);
          //potato
-         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.POTATO_BARS_ITEM.get())
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.POTATO_BARS_ITEM.get(), 8)
          .pattern("   ")
          .pattern("AAA")
          .pattern("AAA")
@@ -2618,7 +2618,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .unlockedBy("has_potato_nugget", has(nuggetregistry.POTATO_NUGGET.get()))
          .save(output);
          //beetroot
-         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEETROOT_BARS_ITEM.get())
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEETROOT_BARS_ITEM.get(), 8)
          .pattern("   ")
          .pattern("AAA")
          .pattern("AAA")
@@ -2626,7 +2626,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .unlockedBy("has_beetroot_nugget", has(nuggetregistry.BEETROOT_NUGGET.get()))
          .save(output);
          //carrot
-         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CARROT_BARS_ITEM.get())
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CARROT_BARS_ITEM.get(), 8)
          .pattern("   ")
          .pattern("AAA")
          .pattern("AAA")
@@ -2634,7 +2634,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .unlockedBy("has_carrot_nugget", has(nuggetregistry.CARROT_NUGGET.get()))
          .save(output);
          //chorus
-         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHORUS_BARS_ITEM.get())
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHORUS_BARS_ITEM.get(), 8)
          .pattern("   ")
          .pattern("AAA")
          .pattern("AAA")
@@ -2642,7 +2642,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .unlockedBy("has_chorus_nugget", has(nuggetregistry.CHORUS_NUGGET.get()))
          .save(output);
          //glow_berry
-         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.GLOW_BERRY_BARS_ITEM.get())
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.GLOW_BERRY_BARS_ITEM.get(), 8)
          .pattern("   ")
          .pattern("AAA")
          .pattern("AAA")
@@ -2650,7 +2650,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .unlockedBy("has_glow_berry_nugget", has(nuggetregistry.GLOW_BERRY_NUGGET.get()))
          .save(output);        
          //melon
-         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MELON_BARS_ITEM.get())
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MELON_BARS_ITEM.get(), 8)
          .pattern("   ")
          .pattern("AAA")
          .pattern("AAA")
@@ -2658,7 +2658,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .unlockedBy("has_melon_nugget", has(nuggetregistry.MELON_NUGGET.get()))
          .save(output);
          //sweet_berry
-         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SWEET_BERRY_BARS_ITEM.get())
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SWEET_BERRY_BARS_ITEM.get(), 8)
          .pattern("   ")
          .pattern("AAA")
          .pattern("AAA")
@@ -2666,7 +2666,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .unlockedBy("has_sweet_berry_nugget", has(nuggetregistry.SWEET_BERRY_NUGGET.get()))
          .save(output);
          //brown_mushroom
-         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BROWN_MUSHROOM_BARS_ITEM.get())
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BROWN_MUSHROOM_BARS_ITEM.get(), 8)
          .pattern("   ")
          .pattern("AAA")
          .pattern("AAA")
@@ -2674,7 +2674,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .unlockedBy("has_brown_mushroom_nugget", has(nuggetregistry.BROWN_MUSHROOM_NUGGET.get()))
          .save(output);
          //red_mushroom
-         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RED_MUSHROOM_BARS_ITEM.get())
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RED_MUSHROOM_BARS_ITEM.get(), 8)
          .pattern("   ")
          .pattern("AAA")
          .pattern("AAA")
@@ -2682,7 +2682,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .unlockedBy("has_red_mushroom_nugget", has(nuggetregistry.RED_MUSHROOM_NUGGET.get()))
          .save(output);
          //pumpkin
-         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PUMPKIN_BARS_ITEM.get())
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PUMPKIN_BARS_ITEM.get(), 8)
          .pattern("   ")
          .pattern("AAA")
          .pattern("AAA")
@@ -2690,7 +2690,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .unlockedBy("has_pumpkin_nugget", has(nuggetregistry.PUMPKIN_NUGGET.get()))
          .save(output);
          //chicken
-         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHICKEN_BARS_ITEM.get())
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHICKEN_BARS_ITEM.get(), 8)
          .pattern("   ")
          .pattern("AAA")
          .pattern("AAA")
@@ -2698,7 +2698,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .unlockedBy("has_chicken_nugget", has(nuggetregistry.CHICKEN_NUGGET.get()))
          .save(output);
          //cod
-         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.COD_BARS_ITEM.get())
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.COD_BARS_ITEM.get(), 8)
          .pattern("   ")
          .pattern("AAA")
          .pattern("AAA")
@@ -2706,7 +2706,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .unlockedBy("has_cod_nugget", has(nuggetregistry.COD_NUGGET.get()))
          .save(output);
          //salmon
-         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SALMON_BARS_ITEM.get())
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SALMON_BARS_ITEM.get(), 8)
          .pattern("   ")
          .pattern("AAA")
          .pattern("AAA")
@@ -2714,7 +2714,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .unlockedBy("has_salmon_nugget", has(nuggetregistry.SALMON_NUGGET.get()))
          .save(output);
          //tropical_fish
-         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.TROPICAL_FISH_BARS_ITEM.get())
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.TROPICAL_FISH_BARS_ITEM.get(), 8)
          .pattern("   ")
          .pattern("AAA")
          .pattern("AAA")
@@ -2722,7 +2722,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .unlockedBy("has_tropical_fish_nugget", has(nuggetregistry.TROPICAL_FISH_NUGGET.get()))
          .save(output);
          //mutton
-         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MUTTON_BARS_ITEM.get())
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MUTTON_BARS_ITEM.get(), 8)
          .pattern("   ")
          .pattern("AAA")
          .pattern("AAA")
@@ -2730,7 +2730,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .unlockedBy("has_mutton_nugget", has(nuggetregistry.MUTTON_NUGGET.get()))
          .save(output);
          //beef
-         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEEF_BARS_ITEM.get())
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEEF_BARS_ITEM.get(), 8)
          .pattern("   ")
          .pattern("AAA")
          .pattern("AAA")
@@ -2738,7 +2738,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .unlockedBy("has_beef_nugget", has(nuggetregistry.BEEF_NUGGET.get()))
          .save(output);
          //pork
-         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PORK_BARS_ITEM.get())
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PORK_BARS_ITEM.get(), 8)
          .pattern("   ")
          .pattern("AAA")
          .pattern("AAA")
@@ -2746,7 +2746,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .unlockedBy("has_pork_nugget", has(nuggetregistry.PORK_NUGGET.get()))
          .save(output);
          //rabbit
-         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RABBIT_BARS_ITEM.get())
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.RABBIT_BARS_ITEM.get(), 8)
          .pattern("   ")
          .pattern("AAA")
          .pattern("AAA")
