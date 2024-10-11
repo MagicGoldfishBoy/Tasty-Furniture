@@ -1,10 +1,5 @@
 package com.goldfish.goldfishmod02tastyfurniture.block;
 
-import org.spongepowered.asm.mixin.injection.struct.InjectorGroupInfo.Map;
-
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
-
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
