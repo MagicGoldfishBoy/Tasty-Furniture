@@ -4768,10 +4768,14 @@ public class foodblockregistry {
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
-
+   //NOTE! ALL barrels must be added to this, otherwise it will crash in version 1.21.1! :P
    //------entity
-     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodBarrelEntity>> FOOD_BARREL_ENTITY = FOODBLOCKENTITY.register("apple_barrel_entity", 
-     () -> BlockEntityType.Builder.of(foodBarrelEntity::new, foodblockregistry.APPLE_BARREL.get(), foodblockregistry.POTATO_BARREL.get()).build(null));
+     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodBarrelEntity>> FOOD_BARREL_ENTITY = FOODBLOCKENTITY.register("food_barrel_entity", 
+     () -> BlockEntityType.Builder.of(foodBarrelEntity::new, foodblockregistry.APPLE_BARREL.get(), foodblockregistry.POTATO_BARREL.get(), foodblockregistry.BEETROOT_BARREL.get(), 
+     foodblockregistry.CARROT_BARREL.get(), foodblockregistry.CHORUS_BARREL.get(), foodblockregistry.GLOWBERRY_BARREL.get(), foodblockregistry.MELON_BARREL.get(), 
+     foodblockregistry.SWEETBERRY_BARREL.get(), foodblockregistry.PUMPKIN_BARREL.get(), foodblockregistry.BROWNMUSHROOM_BARREL.get(), foodblockregistry.REDMUSHROOM_BARREL.get(), 
+     foodblockregistry.CHICKEN_BARREL.get(), foodblockregistry.COD_BARREL.get(), foodblockregistry.SALMON_BARREL.get(), foodblockregistry.TROPICALFISH_BARREL.get(), 
+     foodblockregistry.MUTTON_BARREL.get(), foodblockregistry.BEEF_BARREL.get(), foodblockregistry.PORK_BARREL.get(), foodblockregistry.RABBIT_BARREL.get()).build(null));
 
 //==============================================================================================================================================================================================
 //                                                                                          Chairs
