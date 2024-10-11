@@ -68,6 +68,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.tropical_fishfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.tropicalfishSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.tropicalfishWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.applefurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.bedEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beefSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beeffurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.beetrootSignEntity;
@@ -134,6 +135,7 @@ import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.TorchBlock;
 import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WallTorchBlock;
+import net.minecraft.world.level.block.entity.BedBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -4768,7 +4770,7 @@ public class foodblockregistry {
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
-   //NOTE! ALL barrels must be added to this, otherwise it will crash in version 1.21.1! :P
+
    //------entity
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodBarrelEntity>> FOOD_BARREL_ENTITY = FOODBLOCKENTITY.register("food_barrel_entity", 
      () -> BlockEntityType.Builder.of(foodBarrelEntity::new, foodblockregistry.APPLE_BARREL.get(), foodblockregistry.POTATO_BARREL.get(), foodblockregistry.BEETROOT_BARREL.get(), 
@@ -5100,6 +5102,13 @@ public class foodblockregistry {
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
+
+   //.........entity
+     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<bedEntity>> FOOD_BED_ENTITY = FOODBLOCKENTITY.register("food_bed_entity",
+     () -> BlockEntityType.Builder.of(bedEntity::new, APPLE_BED.get(), POTATO_BED.get(), BEETROOT_BED.get(), CARROT_BED.get(), 
+     CHORUS_BED.get(), GLOW_BERRY_BED.get(), MELON_BED.get(), SWEET_BERRY_BED.get(), PUMPKIN_BED.get(), BROWN_MUSHROOM_BED.get(), 
+     RED_MUSHROOM_BED.get(), CHICKEN_BED.get(), COD_BED.get(), SALMON_BED.get(), TROPICAL_FISH_BED.get(), 
+     MUTTON_BED.get(), BEEF_BED.get(), PORK_BED.get(), RABBIT_BED.get()).build(null));
   
 
 //==============================================================================================================================================================================================
@@ -5312,7 +5321,10 @@ public class foodblockregistry {
 
 
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<smallFoodContainerEntity>> SMALL_CABINET_ENTITY = FOODBLOCKENTITY.register("small_cabinet_entity",
-     () -> BlockEntityType.Builder.of(smallFoodContainerEntity::new, SMALL_APPLE_CABINET.get(), SMALL_POTATO_CABINET.get()).build(null));
+     () -> BlockEntityType.Builder.of(smallFoodContainerEntity::new, SMALL_APPLE_CABINET.get(), SMALL_POTATO_CABINET.get(), SMALL_BEETROOT_CABINET.get(), SMALL_CARROT_CABINET.get(), 
+     SMALL_CHORUS_CABINET.get(), SMALL_GLOW_BERRY_CABINET.get(), SMALL_MELON_CABINET.get(), SMALL_SWEET_BERRY_CABINET.get(), SMALL_PUMPKIN_CABINET.get(), SMALL_BROWN_MUSHROOM_CABINET.get(), 
+     SMALL_RED_MUSHROOM_CABINET.get(), SMALL_CHICKEN_CABINET.get(), SMALL_COD_CABINET.get(), SMALL_SALMON_CABINET.get(), SMALL_TROPICAL_FISH_CABINET.get(), 
+     SMALL_MUTTON_CABINET.get(), SMALL_BEEF_CABINET.get(), SMALL_PORK_CABINET.get(), SMALL_RABBIT_CABINET.get()).build(null));
 
 
 }

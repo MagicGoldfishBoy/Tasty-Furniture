@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.bedEntity;
 import com.mojang.datafixers.util.Either;
 import com.mojang.datafixers.util.Unit;
 import com.mojang.serialization.MapCodec;
@@ -195,7 +196,7 @@ public class foodBed extends HorizontalDirectionalBlock implements EntityBlock {
     @Override
     @Nullable
     public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
-      return new BedBlockEntity(pPos, pState, null);
+      return new bedEntity(pPos, pState, null);
         }
         
     @Override
