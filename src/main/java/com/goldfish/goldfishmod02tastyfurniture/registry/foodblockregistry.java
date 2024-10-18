@@ -957,6 +957,11 @@ public class foodblockregistry {
     .destroyTime(1.25f)
     .explosionResistance(8.0f)
     ));
+    public static final DeferredHolder<Block, FenceBlock> SUGAR_FENCE = FOODBLOCK.register("sugar_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+    .sound(SoundType.MUD_BRICKS)
+    .destroyTime(1.25f)
+    .explosionResistance(8.0f)
+    ));
 
 //==============================================================================================================================================================================================
 //                                                                                         Gates
