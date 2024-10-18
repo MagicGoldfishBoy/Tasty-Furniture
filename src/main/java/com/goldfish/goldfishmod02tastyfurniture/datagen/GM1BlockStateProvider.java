@@ -137,6 +137,9 @@ public class GM1BlockStateProvider extends BlockStateProvider
           net.minecraft.world.level.block.Block rabbit_bricks_block = foodblockregistry.RABBIT_BRICKS_BLOCK.get();
           ResourceLocation rabbit_bricks_texture = modLoc("block/rabbit_bricks_block");
           simpleBlock(rabbit_bricks_block);
+      //.........sugar
+          net.minecraft.world.level.block.Block sugar_bricks_block = foodblockregistry.SUGAR_BRICKS_BLOCK.get();
+          simpleBlock(sugar_bricks_block);
      //___________________________________________________________chiseled____________________________________________________________________
       //.........apple
           net.minecraft.world.level.block.Block apple_chiseled_block = foodblockregistry.APPLE_CHISELED_BLOCK.get();

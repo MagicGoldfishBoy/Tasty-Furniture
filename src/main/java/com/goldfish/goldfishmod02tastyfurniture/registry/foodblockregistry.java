@@ -414,6 +414,12 @@ public class foodblockregistry {
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
          ));
+  //.........sugar
+    public static final DeferredHolder<Block, Block> SUGAR_BRICKS_BLOCK = FOODBLOCK.register("sugar_bricks_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.BASALT)
+         ));
 
  //-----------------------------------------------------------------------------------Chiseled Blocks-------------------------------------------------------------------------------------------
   //.........apple
