@@ -2305,6 +2305,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             foodblockitemregistry.RABBIT_BRICKS_SLAB_ITEM.get(), 2)
             .unlockedBy("has_rabbit_bricks_block", has(foodblockitemregistry.RABBIT_BRICKS_BLOCK_ITEM.get()))
             .save(output, "rabbit_bricks_slab_from_rabbit_bricks_block_stonecutting");
+          //sugar
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.SUGAR_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+            foodblockitemregistry.SUGAR_BRICKS_SLAB_ITEM.get(), 2)
+            .unlockedBy("has_sugar_bricks_block", has(foodblockitemregistry.SUGAR_BRICKS_BLOCK_ITEM.get()))
+            .save(output, "sugar_bricks_slab_from_sugar_bricks_block_stonecutting");
 
         //------------------------------------------------------------stairs----------------------------------------------------
          //________________________________________________________Regular Stairs__________________________________________________________________

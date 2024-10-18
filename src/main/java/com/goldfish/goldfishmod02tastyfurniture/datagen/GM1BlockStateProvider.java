@@ -961,6 +961,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           SlabBlock rabbit_bricks_slab = foodblockregistry.RABBIT_BRICKS_SLAB.get();
           ResourceLocation  rabbit_bricks_slab_texture = modLoc("block/rabbit_bricks_block");
           slabBlock(rabbit_bricks_slab, rabbit_bricks_slab_texture, rabbit_bricks_slab_texture);
+        //.........sugar
+          SlabBlock sugar_bricks_slab = foodblockregistry.SUGAR_BRICKS_SLAB.get();
+          ResourceLocation  sugar_bricks_slab_texture = modLoc("block/sugar_bricks_block");
+          slabBlock(sugar_bricks_slab, sugar_bricks_slab_texture, sugar_bricks_slab_texture);
 
     //---------------------------------------------------------------stairs-------------------------------------------------------------------------------
       //___________________________________________________________Regular Stairs_________________________________________________________________________

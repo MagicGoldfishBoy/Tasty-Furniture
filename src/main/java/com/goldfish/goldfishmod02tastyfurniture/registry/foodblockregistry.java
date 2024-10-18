@@ -2374,6 +2374,12 @@ public class foodblockregistry {
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)
      ));
+   //.........sugar
+     public static final DeferredHolder<Block, SlabBlock> SUGAR_BRICKS_SLAB = FOODBLOCK.register("sugar_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.BASALT)
+     ));
      
      
 //==============================================================================================================================================================================================
