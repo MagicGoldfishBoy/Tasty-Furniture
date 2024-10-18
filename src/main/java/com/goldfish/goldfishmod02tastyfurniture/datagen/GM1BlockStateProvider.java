@@ -1235,6 +1235,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock rabbit_trapdoor = foodblockregistry.RABBIT_TRAPDOOR.get(); 
           ResourceLocation rabbit_trapdoor_texture = modLoc("block/rabbit_block");
           trapdoorBlockWithRenderType(rabbit_trapdoor, "rabbit_trapdoor", rabbit_trapdoor_texture, false, rabbit_trapdoor_texture);
+        //............sugar
+          TrapDoorBlock sugar_trapdoor = foodblockregistry.SUGAR_TRAPDOOR.get(); 
+          ResourceLocation sugar_trapdoor_texture = modLoc("block/sugar_block");
+          trapdoorBlockWithRenderType(sugar_trapdoor, "sugar_trapdoor", sugar_trapdoor_texture, false, sugar_trapdoor_texture);
 
     //----------------------------------------------------------------bars--------------------------------------------------------------------------------
         //............apple
