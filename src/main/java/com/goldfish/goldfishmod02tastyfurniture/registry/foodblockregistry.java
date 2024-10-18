@@ -537,6 +537,12 @@ public class foodblockregistry {
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
          ));
+  //.........sugar
+    public static final DeferredHolder<Block, Block> SUGAR_CHISELED_BLOCK = FOODBLOCK.register("sugar_chiseled_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.BASALT)
+         ));
  //-------------------------------------------------------------------------------------Tile Blocks---------------------------------------------------------------------------------------------
   //.........apple
     public static final DeferredHolder<Block, HorizontalDirectionalBlock> APPLE_TILE_BLOCK = FOODBLOCK.register("apple_tile_block", () -> new horizontal_food_block(BlockBehaviour.Properties.of()
@@ -2238,6 +2244,12 @@ public class foodblockregistry {
      .destroyTime(1.75f)
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)
+     ));
+   //.........sugar
+     public static final DeferredHolder<Block, SlabBlock> SUGAR_SLAB = FOODBLOCK.register("sugar_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.BASALT)
      ));
 
  //-------------------------------------------------------------------------------------Brick Slabs--------------------------------------------------------------------------------------------

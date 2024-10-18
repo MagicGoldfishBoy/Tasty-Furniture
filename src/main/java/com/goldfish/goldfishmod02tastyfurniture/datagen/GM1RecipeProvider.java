@@ -834,6 +834,18 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.RABBIT_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.RABBIT_CHISELED_BLOCK_ITEM.get())
             .unlockedBy("has_rabbit_block", has(foodblockitemregistry.RABBIT_BLOCK_ITEM.get()))
             .save(output, "rabbit_chiseled_block_from_rabbit_block_stonecutting");
+          //.........sugar
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SUGAR_CHISELED_BLOCK_ITEM.get())
+            .pattern("   ")
+            .pattern(" A ")
+            .pattern(" A ")
+            .define('A', foodblockitemregistry.SUGAR_SLAB_ITEM.get())
+            .unlockedBy("has_sugar_slab", has(foodblockitemregistry.SUGAR_SLAB_ITEM.get()))
+            .save(output);
+
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.SUGAR_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.SUGAR_CHISELED_BLOCK_ITEM.get())
+            .unlockedBy("has_sugar_block", has(foodblockitemregistry.SUGAR_BLOCK_ITEM.get()))
+            .save(output, "sugar_chiseled_block_from_sugar_block_stonecutting");
 
          //_____________________________________________________________tile______________________________________________________________________
 
@@ -2174,6 +2186,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .pattern("AAA")
               .define('A', ingotregistry.RABBIT_INGOT.get())
               .unlockedBy("has_rabbit_ingot", has(ingotregistry.RABBIT_INGOT.get()))
+              .save(output);
+            //sugar
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SUGAR_SLAB_ITEM.get())
+              .pattern("   ")
+              .pattern("   ")
+              .pattern("AAA")
+              .define('A', ingotregistry.SUGAR_INGOT.get())
+              .unlockedBy("has_sugar_ingot", has(ingotregistry.SUGAR_INGOT.get()))
               .save(output);
 
         //________________________________________________________Bricks Slabs__________________________________________________________________

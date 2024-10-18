@@ -120,6 +120,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("pork_chiseled_block_item", modLoc("block/pork_chiseled_block"));
       //.........rabbit
         withExistingParent("rabbit_chiseled_block_item", modLoc("block/rabbit_chiseled_block"));
+      //.........sugar
+        withExistingParent("sugar_chiseled_block_item", modLoc("block/sugar_chiseled_block"));
 
      //___________________________________________________________tile____________________________________________________________________
       //.........apple
@@ -429,6 +431,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        slab("pork_slab_item", modLoc("block/pork_block"), modLoc("block/pork_block"), modLoc("block/pork_block"));
       //..............rabbit
        slab("rabbit_slab_item", modLoc("block/rabbit_block"), modLoc("block/rabbit_block"), modLoc("block/rabbit_block"));
+      //..............sugar
+       slab("sugar_slab_item", modLoc("block/sugar_block"), modLoc("block/sugar_block"), modLoc("block/sugar_block"));
 
      //_________________________________________________________Bricks Slabs_________________________________________________________________
       //..............apple

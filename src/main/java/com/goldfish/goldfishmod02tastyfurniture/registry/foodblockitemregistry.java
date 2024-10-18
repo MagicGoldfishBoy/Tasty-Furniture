@@ -208,6 +208,9 @@ public class foodblockitemregistry {
   //.........rabbit
      public static final DeferredHolder<Item, BlockItem> RABBIT_CHISELED_BLOCK_ITEM = FOODBLOCKITEM.register("rabbit_chiseled_block_item",
      () -> new BlockItem(foodblockregistry.RABBIT_CHISELED_BLOCK.get(), new BlockItem.Properties()));
+  //.........sugar
+     public static final DeferredHolder<Item, BlockItem> SUGAR_CHISELED_BLOCK_ITEM = FOODBLOCKITEM.register("sugar_chiseled_block_item",
+     () -> new BlockItem(foodblockregistry.SUGAR_CHISELED_BLOCK.get(), new BlockItem.Properties()));
 
  //------------------------------------------------------------------------------------Tile Blocks-------------------------------------------------------------------------------------------
   //.........apple
@@ -695,6 +698,9 @@ public class foodblockitemregistry {
    //.........rabbit
      public static final DeferredHolder<Item, BlockItem> RABBIT_SLAB_ITEM = FOODBLOCKITEM.register("rabbit_slab_item",
      () -> new BlockItem(foodblockregistry.RABBIT_SLAB.get(), new BlockItem.Properties()));
+   //.........sugar
+     public static final DeferredHolder<Item, BlockItem> SUGAR_SLAB_ITEM = FOODBLOCKITEM.register("sugar_slab_item",
+     () -> new BlockItem(foodblockregistry.SUGAR_SLAB.get(), new BlockItem.Properties()));
 
  //------------------------------------------------------------------------------------Bricks Slabs-------------------------------------------------------------------------------------------
    //.........apple

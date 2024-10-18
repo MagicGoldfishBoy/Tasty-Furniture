@@ -217,6 +217,9 @@ public class GM1BlockStateProvider extends BlockStateProvider
           net.minecraft.world.level.block.Block rabbit_chiseled_block = foodblockregistry.RABBIT_CHISELED_BLOCK.get();
           ResourceLocation rabbit_chiseled_texture = modLoc("block/rabbit_chiseled_block");
           simpleBlock(rabbit_chiseled_block);
+      //.........sugar
+          net.minecraft.world.level.block.Block sugar_chiseled_block = foodblockregistry.SUGAR_CHISELED_BLOCK.get();
+          simpleBlock(sugar_chiseled_block);
 
      //_____________________________________________________________tile____________________________________________________________________
       //.........apple
@@ -872,6 +875,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           SlabBlock rabbit_slab = foodblockregistry.RABBIT_SLAB.get();
           ResourceLocation  rabbit_slab_texture = modLoc("block/rabbit_block");
           slabBlock(rabbit_slab, rabbit_slab_texture, rabbit_slab_texture);
+        //.........sugar
+          SlabBlock sugar_slab = foodblockregistry.SUGAR_SLAB.get();
+          ResourceLocation  sugar_slab_texture = modLoc("block/sugar_block");
+          slabBlock(sugar_slab, sugar_slab_texture, sugar_slab_texture);
 
       //_______________________________________________________Bricks Slabs__________________________________________________________________
         //............apple
