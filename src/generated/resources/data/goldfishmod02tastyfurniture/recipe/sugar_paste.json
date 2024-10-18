@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:water_bucket"
+    },
+    "B": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "pattern": [
+    "ABB",
+    "BB ",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "goldfishmod02tastyfurniture:sugar_paste"
+  }
+}

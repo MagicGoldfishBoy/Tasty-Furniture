@@ -282,6 +282,21 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .define('B', RABBIT_TAG)
               .unlockedBy("has_meat_grinder", has(mushregistry.meatgrinder.get()))
               .save(output);
+            //sugar
+              ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.SUGAR, 3)
+              .requires(mushregistry.mushhammer.get())
+              .requires(Items.SUGAR_CANE)
+              .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
+              .save(output, "sugar_from_mushhammer");
+            //sugar_paste
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.SUGAR_PASTE.get(), 1)
+              .pattern("ABB")
+              .pattern("BB ")
+              .pattern("   ")
+              .define('A', Items.WATER_BUCKET)
+              .define('B', Items.SUGAR)
+              .unlockedBy("has_sugar", has(Items.SUGAR))
+              .save(output);
         //-------------------------------------------------------------blocks---------------------------------------------------------------------
          //____________________________________________________________bricks_____________________________________________________________________
           //.........apple
@@ -2098,7 +2113,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .unlockedBy("has_rabbit_ingot", has(ingotregistry.RABBIT_INGOT.get()))
               .save(output);
 
-         //________________________________________________________Bricks Slabs__________________________________________________________________
+        //________________________________________________________Bricks Slabs__________________________________________________________________
           //apple
             SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.APPLE_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
             foodblockitemregistry.APPLE_BRICKS_SLAB_ITEM.get(), 2)
