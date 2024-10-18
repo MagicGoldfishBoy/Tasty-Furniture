@@ -236,6 +236,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         buttonInventory("pork_button_item", modLoc("block/pork_block"));
       //............rabbit
         buttonInventory("rabbit_button_item", modLoc("block/rabbit_block"));
+      //............sugar
+        buttonInventory("sugar_button_item", modLoc("block/sugar_block"));
 
     //------------------------------------------------------------fences---------------------------------------------------------------------
       //..............apple
