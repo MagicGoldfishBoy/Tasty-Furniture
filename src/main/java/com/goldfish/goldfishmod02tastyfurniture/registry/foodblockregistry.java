@@ -659,6 +659,12 @@ public class foodblockregistry {
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
          ));
+  //.........sugar
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> SUGAR_TILE_BLOCK = FOODBLOCK.register("sugar_tile_block", () -> new horizontal_food_block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.BASALT)
+         ));
 
 //==============================================================================================================================================================================================
 //                                                                                          Doors
