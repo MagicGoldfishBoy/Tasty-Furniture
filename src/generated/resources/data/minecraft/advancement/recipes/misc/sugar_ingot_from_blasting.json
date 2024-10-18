@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "goldfishmod02tastyfurniture:sugar_ingot"
+        "recipe": "minecraft:sugar_ingot_from_blasting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "goldfishmod02tastyfurniture:sugar_ingot"
+      "minecraft:sugar_ingot_from_blasting"
     ]
   }
 }

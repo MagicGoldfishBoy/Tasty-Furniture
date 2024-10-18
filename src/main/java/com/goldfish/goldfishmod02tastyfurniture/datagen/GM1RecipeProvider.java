@@ -301,14 +301,30 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .save(output);
         //-------------------------------------------------------------ingots---------------------------------------------------------------------
           //sugar_ingot
+           //smelting
             SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushregistry.SUGAR_PASTE.get()),
             RecipeCategory.MISC,
             ingotregistry.SUGAR_INGOT.get(),
-            0.5f,
+            1.0f,
             200
             )
             .unlockedBy("has_sugar_paste", has(mushregistry.SUGAR_PASTE.get()))
-            .save(output);
+            .save(output, "sugar_ingot_from_smelting");
+           //blasting
+            SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushregistry.SUGAR_PASTE.get()),
+            RecipeCategory.MISC, 
+            ingotregistry.SUGAR_INGOT.get(), 
+            1.0f, 
+            100
+            )
+            .unlockedBy("has_sugar_paste", has(mushregistry.SUGAR_PASTE.get()))
+            .save(output, "sugar_ingot_from_blasting");
+        //------------------------------------------------------------nuggets---------------------------------------------------------------------
+          //sugar_nugget
+           ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, nuggetregistry.SUGAR_NUGGET.get(), 9)
+           .requires(ingotregistry.SUGAR_INGOT.get())
+           .unlockedBy("has_sugar_ingot", has(ingotregistry.SUGAR_INGOT.get()))
+           .save(output);
         //-------------------------------------------------------------blocks---------------------------------------------------------------------
          //____________________________________________________________bricks_____________________________________________________________________
           //.........apple
@@ -1296,6 +1312,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .define('A', nuggetregistry.RABBIT_NUGGET.get())
           .unlockedBy("has_rabbit_nugget", has(nuggetregistry.RABBIT_NUGGET.get()))
           .save(output, "rabbit_ingot_from_crafting");
+         //sugar
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.SUGAR_INGOT.get())
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', nuggetregistry.SUGAR_NUGGET.get())
+          .unlockedBy("has_sugar_nugget", has(nuggetregistry.SUGAR_NUGGET.get()))
+          .save(output, "sugar_ingot_from_crafting");
         //-------------------------------------------------------------doors-----------------------------------------------------------------------
             //apple
               ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_DOOR_ITEM.get(), 3)
