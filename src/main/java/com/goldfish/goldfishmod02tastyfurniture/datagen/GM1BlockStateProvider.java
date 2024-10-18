@@ -822,6 +822,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock rabbit_wall_sign = foodblockregistry.RABBIT_WALL_SIGN.get();
            ResourceLocation rabbit_sign_texture = modLoc("block/rabbit_block");
            signBlock(rabbit_sign, rabbit_wall_sign, rabbit_sign_texture);
+        //.........sugar
+           StandingSignBlock sugar_sign = foodblockregistry.SUGAR_STANDING_SIGN.get();
+           WallSignBlock sugar_wall_sign = foodblockregistry.SUGAR_WALL_SIGN.get();
+           ResourceLocation sugar_sign_texture = modLoc("block/sugar_block");
+           signBlock(sugar_sign, sugar_wall_sign, sugar_sign_texture);
 
     //----------------------------------------------------------------slabs-------------------------------------------------------------------------------
       //_______________________________________________________Regular Slabs_________________________________________________________________

@@ -1,4 +1,4 @@
-// 1.21	2024-10-18T15:16:55.616245046	Item Models: goldfishmod02tastyfurniture
+// 1.21	2024-10-18T15:39:20.890294482	Item Models: goldfishmod02tastyfurniture
 a579f875ecc0b10b53317a1629bcbc385110157f assets/goldfishmod02tastyfurniture/models/item/apple_barrel_item.json
 5415a5c9e52089186849ab0906ab852e882667f5 assets/goldfishmod02tastyfurniture/models/item/apple_bars_item.json
 b9370292566e90dea58d9e24cab155f1fc255f1c assets/goldfishmod02tastyfurniture/models/item/apple_bed_item.json
@@ -554,6 +554,7 @@ f1f5a3f90d5e44cc51baada138b9553a2323175e assets/goldfishmod02tastyfurniture/mode
 32377c7ca2a786a586418635c36cc8ffd2916a63 assets/goldfishmod02tastyfurniture/models/item/sugar_nugget.json
 291e819d17df869396eb32a6f4bfa173fef9eb78 assets/goldfishmod02tastyfurniture/models/item/sugar_paste.json
 1521392f7ad6d0d6a8283a473e3decd8eda292bc assets/goldfishmod02tastyfurniture/models/item/sugar_pressure_plate_item.json
+426b026c15b5f8759a561abc4027b99a5afca809 assets/goldfishmod02tastyfurniture/models/item/sugar_sign_item.json
 15805b282c6497a249d6adde18d25e9268620618 assets/goldfishmod02tastyfurniture/models/item/sugar_slab_item.json
 6a78ccf938bf97034e3be66c7a2fd5b926f4f9da assets/goldfishmod02tastyfurniture/models/item/sugar_stairs_item.json
 650e958ca54b8606f2bd1c43a31d8754bdbda90b assets/goldfishmod02tastyfurniture/models/item/sugar_tile_block_item.json

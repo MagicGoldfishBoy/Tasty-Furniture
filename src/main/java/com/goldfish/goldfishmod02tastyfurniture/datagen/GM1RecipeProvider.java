@@ -2085,6 +2085,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('B', Items.STICK)
            .unlockedBy("has_rabbit_ingot", has(ingotregistry.RABBIT_INGOT.get()))
            .save(output);
+         //sugar_sign
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SUGAR_SIGN_ITEM.get(), 3)
+           .pattern("AAA")
+           .pattern("AAA")
+           .pattern(" B ")
+           .define('A', ingotregistry.SUGAR_INGOT.get())
+           .define('B', Items.STICK)
+           .unlockedBy("has_sugar_ingot", has(ingotregistry.SUGAR_INGOT.get()))
+           .save(output);
 
 
 

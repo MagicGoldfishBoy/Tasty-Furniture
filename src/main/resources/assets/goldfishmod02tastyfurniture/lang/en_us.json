@@ -357,6 +357,7 @@
            "block.goldfishmod02tastyfurniture.beef_standing_sign": "Beef Sign",
            "block.goldfishmod02tastyfurniture.pork_standing_sign": "Pork Sign",
            "block.goldfishmod02tastyfurniture.rabbit_standing_sign": "Rabbit Sign",
+           "block.goldfishmod02tastyfurniture.sugar_standing_sign": "Sugar Sign",
         "item.goldfishmod02tastyfurniture.apple_sword": "Apple Sword",
          "tooltip.goldfishmod02tastyfurniture.apple_sword.tooltip": "Hitting mobs with this sword allow them to start their own space program!",
         "item.goldfishmod02tastyfurniture.potato_sword": "Potato Sword",

@@ -654,6 +654,9 @@ public class foodblockitemregistry {
   //rabbit
      public static final DeferredHolder<Item, SignItem> RABBIT_SIGN_ITEM = FOODBLOCKITEM.register("rabbit_sign_item",
      () -> new SignItem(new SignItem.Properties(), foodblockregistry.RABBIT_STANDING_SIGN.get(), foodblockregistry.RABBIT_WALL_SIGN.get()));
+  //sugar
+     public static final DeferredHolder<Item, SignItem> SUGAR_SIGN_ITEM = FOODBLOCKITEM.register("sugar_sign_item",
+     () -> new SignItem(new SignItem.Properties(), foodblockregistry.SUGAR_STANDING_SIGN.get(), foodblockregistry.SUGAR_WALL_SIGN.get()));
 
 //==============================================================================================================================================================================================
 //                                                                                          Slabs
