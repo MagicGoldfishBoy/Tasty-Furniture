@@ -1240,6 +1240,21 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation sugar_trapdoor_texture = modLoc("block/sugar_block");
           trapdoorBlockWithRenderType(sugar_trapdoor, "sugar_trapdoor", sugar_trapdoor_texture, false, sugar_trapdoor_texture);
 
+    //----------------------------------------------------------------sugar glass--------------------------------------------------------------------------------
+        //.........sugar
+
+        net.minecraft.world.level.block.Block plain_sugar_glass_block = foodblockregistry.PLAIN_SUGAR_GLASS_BLOCK.get();
+          simpleBlock(plain_sugar_glass_block);
+          ResourceLocation plain_sugar_glass_texture = modLoc("block/plain_sugar_glass_block");
+          
+         BlockModelBuilder plain_sugar_glass_block_model = models()
+             .withExistingParent("plain_sugar_glass_block", mcLoc("block/barrel"))
+             .renderType("translucent")
+             .texture("side", plain_sugar_glass_texture)
+             .texture("bottom", plain_sugar_glass_texture)
+             .texture("top", plain_sugar_glass_texture)
+             .texture("particle", plain_sugar_glass_texture);
+
     //----------------------------------------------------------------bars--------------------------------------------------------------------------------
         //............apple
           IronBarsBlock apple_bars = foodblockregistry.APPLE_BARS.get(); 
