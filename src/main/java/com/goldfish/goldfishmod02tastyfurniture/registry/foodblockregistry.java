@@ -1139,6 +1139,15 @@ public class foodblockregistry {
             .explosionResistance(8.0f)
     ));
 
+    public static final DeferredHolder<Block, FenceGateBlock>  SUGAR_GATE = FOODBLOCK.register("sugar_fence_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtyperegistry.SUGARWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.MUD)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+    ));
+
 //==============================================================================================================================================================================================
 //                                                                                      Pressure Plates
 //==============================================================================================================================================================================================
