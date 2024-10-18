@@ -2465,6 +2465,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('A', ingotregistry.RABBIT_INGOT.get())
             .unlockedBy("has_rabbit_ingot", has(ingotregistry.RABBIT_INGOT.get()))
             .save(output);
+          //sugar
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SUGAR_STAIRS_ITEM.get())
+            .pattern("A  ")
+            .pattern("AA ")
+            .pattern("AAA")
+            .define('A', ingotregistry.SUGAR_INGOT.get())
+            .unlockedBy("has_sugar_ingot", has(ingotregistry.SUGAR_INGOT.get()))
+            .save(output);
          //________________________________________________________Bricks Stairs__________________________________________________________________
 
           //apple
@@ -2562,6 +2570,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             foodblockitemregistry.RABBIT_BRICKS_STAIRS_ITEM.get())
             .unlockedBy("has_rabbit_bricks_block", has(foodblockitemregistry.RABBIT_BRICKS_BLOCK_ITEM.get()))
             .save(output, "rabbit_bricks_stairs_from_rabbit_bricks_block_stonecutting");
+          //sugar
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.SUGAR_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+            foodblockitemregistry.SUGAR_BRICKS_STAIRS_ITEM.get())
+            .unlockedBy("has_sugar_bricks_block", has(foodblockitemregistry.SUGAR_BRICKS_BLOCK_ITEM.get()))
+            .save(output, "sugar_bricks_stairs_from_sugar_bricks_block_stonecutting");
 
         //----------------------------------------------------------trap doors--------------------------------------------------
          //apple

@@ -2540,6 +2540,14 @@ public class foodblockregistry {
           .explosionResistance(9.5f)
           .sound(SoundType.MUD_BRICKS)
       ));
+   //.........sugar
+     public static final DeferredHolder<Block, StairBlock> SUGAR_STAIRS = FOODBLOCK.register("sugar_stairs", () -> new StairBlock(
+          SUGAR_BLOCK.get().defaultBlockState(),
+          BlockBehaviour.Properties.of()
+          .destroyTime(1.75f)
+          .explosionResistance(9.5f)
+          .sound(SoundType.BASALT)
+      ));
 
  //-------------------------------------------------------------------------------------Bricks Stairs------------------------------------------------------------------------------------------
    //.........apple
@@ -2690,6 +2698,14 @@ public class foodblockregistry {
   //.........rabbit
    public static final DeferredHolder<Block, StairBlock> RABBIT_BRICKS_STAIRS = FOODBLOCK.register("rabbit_bricks_stairs", () -> new StairBlock(
       RABBIT_BLOCK.get().defaultBlockState(),
+      BlockBehaviour.Properties.of()
+      .destroyTime(1.75f)
+      .explosionResistance(9.5f)
+      .sound(SoundType.MUD_BRICKS)
+   ));
+  //.........sugar
+   public static final DeferredHolder<Block, StairBlock> SUGAR_BRICKS_STAIRS = FOODBLOCK.register("sugar_bricks_stairs", () -> new StairBlock(
+      SUGAR_BLOCK.get().defaultBlockState(),
       BlockBehaviour.Properties.of()
       .destroyTime(1.75f)
       .explosionResistance(9.5f)

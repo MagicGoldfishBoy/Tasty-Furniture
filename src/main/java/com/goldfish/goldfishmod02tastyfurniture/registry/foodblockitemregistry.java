@@ -830,6 +830,9 @@ public class foodblockitemregistry {
    //.........rabbit
      public static final DeferredHolder<Item, BlockItem> RABBIT_STAIRS_ITEM = FOODBLOCKITEM.register("rabbit_stairs_item",
      () -> new BlockItem(foodblockregistry.RABBIT_STAIRS.get(), new BlockItem.Properties()));
+   //.........sugar
+     public static final DeferredHolder<Item, BlockItem> SUGAR_STAIRS_ITEM = FOODBLOCKITEM.register("sugar_stairs_item",
+     () -> new BlockItem(foodblockregistry.SUGAR_STAIRS.get(), new BlockItem.Properties()));
 
  //-------------------------------------------------------------------------------------Bricks Stairs-------------------------------------------------------------------------------------------
    //.........apple
@@ -889,6 +892,9 @@ public class foodblockitemregistry {
    //.........rabbit
       public static final DeferredHolder<Item, BlockItem> RABBIT_BRICKS_STAIRS_ITEM = FOODBLOCKITEM.register("rabbit_bricks_stairs_item",
       () -> new BlockItem(foodblockregistry.RABBIT_BRICKS_STAIRS.get(), new BlockItem.Properties()));
+   //.........sugar
+      public static final DeferredHolder<Item, BlockItem> SUGAR_BRICKS_STAIRS_ITEM = FOODBLOCKITEM.register("sugar_bricks_stairs_item",
+      () -> new BlockItem(foodblockregistry.SUGAR_BRICKS_STAIRS.get(), new BlockItem.Properties()));
 
 //==============================================================================================================================================================================================
 //                                                                                         Trapdoors
