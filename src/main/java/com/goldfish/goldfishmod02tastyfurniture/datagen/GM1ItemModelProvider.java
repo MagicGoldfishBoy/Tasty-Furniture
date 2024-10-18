@@ -360,6 +360,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        pressurePlate("pork_pressure_plate_item", modLoc("block/pork_block"));
       //..............rabbit
        pressurePlate("rabbit_pressure_plate_item", modLoc("block/rabbit_block"));
+      //..............sugar
+       pressurePlate("sugar_pressure_plate_item", modLoc("block/sugar_block"));
 
     //-------------------------------------------------------------signs---------------------------------------------------------------------
       //..............apple

@@ -590,6 +590,9 @@ public class foodblockitemregistry {
      public static final DeferredHolder<Item, BlockItem> RABBIT_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("rabbit_pressure_plate_item",
      () -> new BlockItem(foodblockregistry.RABBIT_PRESSURE_PLATE.get(), new BlockItem.Properties()));
 
+     public static final DeferredHolder<Item, BlockItem> SUGAR_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("sugar_pressure_plate_item",
+     () -> new BlockItem(foodblockregistry.SUGAR_PRESSURE_PLATE.get(), new BlockItem.Properties()));
+
 //==============================================================================================================================================================================================
 //                                                                                          Signs
 //==============================================================================================================================================================================================

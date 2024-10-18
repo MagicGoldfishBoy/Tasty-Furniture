@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod02tastyfurniture:sugar_block_item"
+    }
+  },
+  "pattern": [
+    "   ",
+    "AA ",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "goldfishmod02tastyfurniture:sugar_pressure_plate_item"
+  }
+}
