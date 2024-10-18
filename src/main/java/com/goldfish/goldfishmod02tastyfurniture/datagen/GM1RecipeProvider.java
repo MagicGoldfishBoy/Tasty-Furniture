@@ -26,6 +26,7 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
 import net.minecraft.data.recipes.SingleItemRecipeBuilder;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -36,6 +37,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeManager;
+import net.minecraft.world.item.crafting.SmeltingRecipe;
 import net.minecraft.world.level.block.Blocks;
 
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -297,6 +299,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .define('B', Items.SUGAR)
               .unlockedBy("has_sugar", has(Items.SUGAR))
               .save(output);
+        //-------------------------------------------------------------ingots---------------------------------------------------------------------
+          //sugar_ingot
+            SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushregistry.SUGAR_PASTE.get()),
+            RecipeCategory.MISC,
+            ingotregistry.SUGAR_INGOT.get(),
+            0.5f,
+            200
+            )
+            .unlockedBy("has_sugar_paste", has(mushregistry.SUGAR_PASTE.get()))
+            .save(output);
         //-------------------------------------------------------------blocks---------------------------------------------------------------------
          //____________________________________________________________bricks_____________________________________________________________________
           //.........apple
