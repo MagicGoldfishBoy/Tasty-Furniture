@@ -326,6 +326,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .unlockedBy("has_sugar_ingot", has(ingotregistry.SUGAR_INGOT.get()))
            .save(output);
         //-------------------------------------------------------------blocks---------------------------------------------------------------------
+         //___________________________________________________________regular_____________________________________________________________________
+          //sugar block
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SUGAR_BLOCK_ITEM.get(), 1)
+            .pattern("AAA")
+            .pattern("AAA")
+            .pattern("AAA")
+            .define('A', ingotregistry.SUGAR_INGOT.get())
+            .unlockedBy("has_sugar_ingot", has(ingotregistry.SUGAR_INGOT.get()))
+            .save(output);
          //____________________________________________________________bricks_____________________________________________________________________
           //.........apple
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_BRICKS_BLOCK_ITEM.get(), 4)
@@ -1157,6 +1166,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.RABBIT_INGOT.get(), 9)
             .requires(foodblockitemregistry.RABBIT_BLOCK_ITEM.get())
             .unlockedBy("has_rabbit_block", has(foodblockitemregistry.RABBIT_BLOCK_ITEM.get()))
+            .save(output);
+         //sugar_block
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.SUGAR_INGOT.get(), 9)
+            .requires(foodblockitemregistry.SUGAR_BLOCK_ITEM.get())
+            .unlockedBy("has_sugar_block", has(foodblockitemregistry.SUGAR_BLOCK_ITEM.get()))
             .save(output);
 
         //----------------------------------------------------------pack ingots-------------------------------------------------------------------

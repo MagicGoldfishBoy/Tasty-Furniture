@@ -290,6 +290,13 @@ public class foodblockregistry {
          .sound(SoundType.MUD)
          .lightLevel(state -> 0)
          ));
+  //.........sugar
+    public static final DeferredHolder<Block, Block> SUGAR_BLOCK = FOODBLOCK.register("sugar_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.25f)
+         .explosionResistance(9.5f)
+         .sound(SoundType.BASALT)
+         .lightLevel(state -> 0)
+         ));
 
  //-------------------------------------------------------------------------------------Brick Blocks--------------------------------------------------------------------------------------------
   //.........apple
