@@ -2790,6 +2790,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .save(output);
         //-------------------------------------------------------------sugar glass-----------------------------------------------------
          //plain
+          //block
             SimpleCookingRecipeBuilder.smelting(Ingredient.of(foodblockitemregistry.SUGAR_BLOCK_ITEM.get()),
             RecipeCategory.MISC,
             foodblockitemregistry.PLAIN_SUGAR_GLASS_ITEM.get(),
@@ -2797,6 +2798,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             200
             )
             .unlockedBy("has_sugar_block", has(foodblockitemregistry.SUGAR_BLOCK_ITEM.get()))
+            .save(output);
+          //sugar
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PLAIN_SUGAR_GLASS_PANE_ITEM.get(), 16)
+            .pattern("   ")
+            .pattern("AAA")
+            .pattern("AAA")
+            .define('A', foodblockitemregistry.PLAIN_SUGAR_GLASS_ITEM.get())
+            .unlockedBy("has_plain_sugar_glass_block_item", has(foodblockitemregistry.PLAIN_SUGAR_GLASS_ITEM.get()))
             .save(output);
         //-------------------------------------------------------------bars-----------------------------------------------------
          //apple
