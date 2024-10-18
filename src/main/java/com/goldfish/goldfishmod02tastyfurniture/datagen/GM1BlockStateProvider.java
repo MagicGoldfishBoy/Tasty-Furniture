@@ -374,6 +374,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
         ResourceLocation rabbit_door_bottom_texture = modLoc("block/rabbit_door_bottom");
         ResourceLocation rabbit_door_top_texture = modLoc("block/rabbit_door_top");
         doorBlockWithRenderType(rabbit_door_block, rabbit_door_bottom_texture, rabbit_door_top_texture, "cutout_mipped_all");
+      //.............sugar
+        DoorBlock sugar_door_block = foodblockregistry.SUGAR_DOOR_BLOCK.get();
+        ResourceLocation sugar_door_bottom_texture = modLoc("block/sugar_door_bottom");
+        ResourceLocation sugar_door_top_texture = modLoc("block/sugar_door_top");
+        doorBlockWithRenderType(sugar_door_block, sugar_door_bottom_texture, sugar_door_top_texture, "translucent");
         
     //---------------------------------------------------------------buttons------------------------------------------------------------------------------
         //.............apple

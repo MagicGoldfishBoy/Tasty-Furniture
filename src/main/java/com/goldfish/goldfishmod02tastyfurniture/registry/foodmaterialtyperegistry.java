@@ -58,6 +58,24 @@ public class foodmaterialtyperegistry {
      SoundEvents.MAGMA_CUBE_SQUISH
     )
     );
+    public static final BlockSetType CRYSTAL = BlockSetType.register(
+     new BlockSetType(
+     "crystal", 
+     true, 
+     false, 
+     false, 
+     BlockSetType.PressurePlateSensitivity.EVERYTHING, 
+     SoundType.BASALT, 
+     SoundEvents.BASALT_HIT, 
+     SoundEvents.BASALT_HIT, 
+     SoundEvents.BASALT_HIT, 
+     SoundEvents.BASALT_HIT, 
+     SoundEvents.BASALT_PLACE, 
+     SoundEvents.BASALT_PLACE, 
+     SoundEvents.BASALT_FALL, 
+     SoundEvents.BASALT_FALL
+    )
+    );
     public static final WoodType APPLEWOODMAT = WoodType.register(
      new WoodType(
         "apple_wood_mat", 
