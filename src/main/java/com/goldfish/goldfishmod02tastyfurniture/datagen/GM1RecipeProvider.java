@@ -291,6 +291,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
               .save(output, "sugar_from_mushhammer");
             //sugar_paste
+             //one
               ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.SUGAR_PASTE.get(), 1)
               .pattern("ABB")
               .pattern("BB ")
@@ -299,6 +300,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .define('B', Items.SUGAR)
               .unlockedBy("has_sugar", has(Items.SUGAR))
               .save(output);
+            //sugar_paste
+             //two
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.SUGAR_PASTE.get(), 2)
+              .pattern("BBB")
+              .pattern("BAB")
+              .pattern("BBB")
+              .define('A', Items.WATER_BUCKET)
+              .define('B', Items.SUGAR)
+              .unlockedBy("has_sugar", has(Items.SUGAR))
+              .save(output, "two_sugar_pastes_recipe");
         //-------------------------------------------------------------ingots---------------------------------------------------------------------
           //sugar_ingot
            //smelting
