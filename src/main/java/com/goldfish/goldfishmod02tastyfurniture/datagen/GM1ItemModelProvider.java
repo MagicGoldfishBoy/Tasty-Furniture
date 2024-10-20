@@ -693,6 +693,11 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("gray_sugar_glass_item", modLoc("block/gray_sugar_glass_block"));
        //pane
         withExistingParent("gray_sugar_glass_pane_item", mcLoc("item/generated")).texture("layer0", "block/gray_sugar_glass_block").renderType("translucent");
+      //..............black
+       //block
+        withExistingParent("black_sugar_glass_item", modLoc("block/black_sugar_glass_block"));
+       //pane
+        withExistingParent("black_sugar_glass_pane_item", mcLoc("item/generated")).texture("layer0", "block/black_sugar_glass_block").renderType("translucent");
 
     //-------------------------------------------------------------bars----------------------------------------------------------------------
       //..............apple
