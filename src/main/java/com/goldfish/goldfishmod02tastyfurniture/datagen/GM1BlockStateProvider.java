@@ -2979,6 +2979,23 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(rabbit_chain_model).rotationX(90).addModel();     
 
+      //.............sugar
+         ChainBlock sugar_chain = foodblockregistry.SUGAR_CHAIN.get();
+         ResourceLocation sugar_chain_texture = modLoc("block/sugar_chain");
+         BlockModelBuilder sugar_chain_model = models()
+          .withExistingParent("sugar_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", sugar_chain_texture)
+          .texture("particle", sugar_chain_texture);
+
+          getVariantBuilder(sugar_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(sugar_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(sugar_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(sugar_chain_model).rotationX(90).addModel();     
+
     //---------------------------------------------------------------torches------------------------------------------------------------------------------
       //.............apple
        //regular

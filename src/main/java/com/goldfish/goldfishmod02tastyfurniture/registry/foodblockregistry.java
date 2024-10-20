@@ -3832,7 +3832,7 @@ public class foodblockregistry {
       public static final DeferredHolder<Block, LanternBlock> SUGAR_LANTERN = FOODBLOCK.register("sugar_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
       .destroyTime(0.5f)
       .explosionResistance(0.5f)
-      .sound(SoundType.MUD)
+      .sound(SoundType.BASALT)
       .lightLevel(state  -> 15)
       .noOcclusion()
       ));
@@ -3840,7 +3840,7 @@ public class foodblockregistry {
       public static final DeferredHolder<Block, LanternBlock> SUGAR_SOUL_LANTERN = FOODBLOCK.register("sugar_soul_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
       .destroyTime(0.5f)
       .explosionResistance(0.5f)
-      .sound(SoundType.MUD)
+      .sound(SoundType.BASALT)
       .lightLevel(state  -> 10)
       .noOcclusion()
       ));
@@ -3995,6 +3995,13 @@ public class foodblockregistry {
 
    //.........rabbit
     public static final DeferredHolder<Block, ChainBlock> RABBIT_CHAIN = FOODBLOCK.register("rabbit_chain", () -> new ChainBlock(BlockBehaviour.Properties.of()
+    .destroyTime(0.5f)
+    .explosionResistance(0.5f)
+    .sound(SoundType.CHAIN)
+    .noOcclusion()
+    ));
+   //.........sugar
+    public static final DeferredHolder<Block, ChainBlock> SUGAR_CHAIN = FOODBLOCK.register("sugar_chain", () -> new ChainBlock(BlockBehaviour.Properties.of()
     .destroyTime(0.5f)
     .explosionResistance(0.5f)
     .sound(SoundType.CHAIN)
