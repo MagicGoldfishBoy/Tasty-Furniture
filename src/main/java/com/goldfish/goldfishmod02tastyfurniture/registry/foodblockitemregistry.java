@@ -1003,6 +1003,13 @@ public class foodblockitemregistry {
    //pane
     public static final DeferredHolder<Item, BlockItem> ORANGE_SUGAR_GLASS_PANE_ITEM = FOODBLOCKITEM.register("orange_sugar_glass_pane_item", 
     () -> new BlockItem(foodblockregistry.ORANGE_SUGAR_GLASS_PANE.get(), new BlockItem.Properties()));
+  //..........yellow
+   //block
+    public static final DeferredHolder<Item, BlockItem> YELLOW_SUGAR_GLASS_ITEM = FOODBLOCKITEM.register("yellow_sugar_glass_item", 
+    () -> new BlockItem(foodblockregistry.YELLOW_SUGAR_GLASS_BLOCK.get(), new BlockItem.Properties()));
+   //pane
+    public static final DeferredHolder<Item, BlockItem> YELLOW_SUGAR_GLASS_PANE_ITEM = FOODBLOCKITEM.register("yellow_sugar_glass_pane_item", 
+    () -> new BlockItem(foodblockregistry.YELLOW_SUGAR_GLASS_PANE.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                           Bars
 //==============================================================================================================================================================================================

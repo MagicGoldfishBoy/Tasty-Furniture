@@ -1,4 +1,4 @@
-// 1.21	2024-10-20T08:54:23.754620365	Loot Tables
+// 1.21	2024-10-20T09:06:35.82751192	Loot Tables
 56ddb3b4406d93958c51301ca7c44f265c39bbc2 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_barrel.json
 f506816aefac13fd3bcb8b3075eefc63b1b6be41 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bars.json
 7922a4aff64facc1d1fca57e74153e1ad6451e89 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bed.json
@@ -726,3 +726,5 @@ bdccfe5f631693c9cbd802fc555cbed52eab5a99 data/goldfishmod02tastyfurniture/loot_t
 6e954761f21d4dd52df8060a6d4ac4207aa8740c data/goldfishmod02tastyfurniture/loot_table/blocks/tropicalfish_sign.json
 46c630b442a7c082680c62c57f98172178592942 data/goldfishmod02tastyfurniture/loot_table/blocks/tropicalfish_standing_sign.json
 9eec297e884a6d5250facbd499e163d8472ec160 data/goldfishmod02tastyfurniture/loot_table/blocks/tropicalfish_wall_sign.json
+98910f734c4998d22d04226dc6d76170a062de2a data/goldfishmod02tastyfurniture/loot_table/blocks/yellow_sugar_glass_block.json
+84928bf22df09756efc34740f9986454cf294a4b data/goldfishmod02tastyfurniture/loot_table/blocks/yellow_sugar_glass_pane.json
