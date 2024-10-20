@@ -964,6 +964,12 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //soul
         withExistingParent("rabbit_soul_lantern_item", modLoc("block/rabbit_soul_lantern"));
 
+      //..............sugar
+       //regular
+        withExistingParent("sugar_lantern_item", modLoc("block/sugar_lantern"));
+       //soul
+        withExistingParent("sugar_soul_lantern_item", modLoc("block/sugar_soul_lantern"));
+
     //------------------------------------------------------------Chains---------------------------------------------------------------------
       //..............apple
        withExistingParent("apple_chain_item", modLoc("block/apple_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)

@@ -1433,6 +1433,13 @@ public class foodblockitemregistry {
     //soul
       public static final DeferredHolder<Item, BlockItem> RABBIT_SOUL_LANTERN_ITEM = FOODBLOCKITEM.register("rabbit_soul_lantern_item",
       () -> new BlockItem(foodblockregistry.RABBIT_SOUL_LANTERN.get(), new BlockItem.Properties()));
+   //.........sugar
+    //regular
+      public static final DeferredHolder<Item, BlockItem> SUGAR_LANTERN_ITEM = FOODBLOCKITEM.register("sugar_lantern_item",
+      () -> new BlockItem(foodblockregistry.SUGAR_LANTERN.get(), new BlockItem.Properties()));
+    //soul
+      public static final DeferredHolder<Item, BlockItem> SUGAR_SOUL_LANTERN_ITEM = FOODBLOCKITEM.register("sugar_soul_lantern_item",
+      () -> new BlockItem(foodblockregistry.SUGAR_SOUL_LANTERN.get(), new BlockItem.Properties()));
 
 //==============================================================================================================================================================================================
 //                                                                                           Chains

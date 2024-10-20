@@ -3827,6 +3827,23 @@ public class foodblockregistry {
       .lightLevel(state  -> 10)
       .noOcclusion()
       ));
+   //.........sugar
+    //regular
+      public static final DeferredHolder<Block, LanternBlock> SUGAR_LANTERN = FOODBLOCK.register("sugar_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MUD)
+      .lightLevel(state  -> 15)
+      .noOcclusion()
+      ));
+    //soul
+      public static final DeferredHolder<Block, LanternBlock> SUGAR_SOUL_LANTERN = FOODBLOCK.register("sugar_soul_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MUD)
+      .lightLevel(state  -> 10)
+      .noOcclusion()
+      ));
 //==============================================================================================================================================================================================
 //                                                                                         Chains
 //==============================================================================================================================================================================================

@@ -2615,6 +2615,45 @@ public class GM1BlockStateProvider extends BlockStateProvider
               .modelForState().modelFile(hanging_rabbit_soul_lantern_model).addModel()
               .partialState().with(LanternBlock.HANGING, false)
               .modelForState().modelFile(rabbit_soul_lantern_model).addModel();
+        //.............sugar
+         //regular
+          LanternBlock sugar_lantern = foodblockregistry.SUGAR_LANTERN.get();
+          ResourceLocation sugar_lantern_texture = modLoc("block/sugar_lantern");
+  
+          BlockModelBuilder sugar_lantern_model = models()
+              .withExistingParent("sugar_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", sugar_lantern_texture);
+  
+          BlockModelBuilder hanging_sugar_lantern_model = models()
+              .withExistingParent("sugar_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", sugar_lantern_texture);
+  
+          getVariantBuilder(sugar_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_sugar_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(sugar_lantern_model).addModel();
+         //soul
+          LanternBlock sugar_soul_lantern = foodblockregistry.SUGAR_SOUL_LANTERN.get();
+          ResourceLocation sugar_soul_lantern_texture = modLoc("block/sugar_soul_lantern");
+  
+          BlockModelBuilder sugar_soul_lantern_model = models()
+              .withExistingParent("sugar_soul_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", sugar_soul_lantern_texture);
+  
+          BlockModelBuilder hanging_sugar_soul_lantern_model = models()
+              .withExistingParent("sugar_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", sugar_soul_lantern_texture);
+  
+          getVariantBuilder(sugar_soul_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_sugar_soul_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(sugar_soul_lantern_model).addModel();
 
     //---------------------------------------------------------------chains-------------------------------------------------------------------------------
       //.............apple

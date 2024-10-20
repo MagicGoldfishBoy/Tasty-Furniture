@@ -4324,6 +4324,26 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', Items.SOUL_TORCH)
             .unlockedBy("has_rabbit_nugget", has(nuggetregistry.RABBIT_NUGGET.get()))
             .save(output);
+
+         //sugar_lantern
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SUGAR_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetregistry.SUGAR_NUGGET.get())
+            .define('B', Items.TORCH)
+            .unlockedBy("has_sugar_nugget", has(nuggetregistry.SUGAR_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SUGAR_SOUL_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetregistry.SUGAR_NUGGET.get())
+            .define('B', Items.SOUL_TORCH)
+            .unlockedBy("has_sugar_nugget", has(nuggetregistry.SUGAR_NUGGET.get()))
+            .save(output);
       
         //------------------------------------------------------------chains----------------------------------------------------
          //apple

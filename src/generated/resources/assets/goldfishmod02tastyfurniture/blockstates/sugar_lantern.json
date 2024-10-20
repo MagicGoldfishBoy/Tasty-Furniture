@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "goldfishmod02tastyfurniture:block/sugar_lantern"
+    },
+    "hanging=true": {
+      "model": "goldfishmod02tastyfurniture:block/sugar_hanging_lantern"
+    }
+  }
+}
