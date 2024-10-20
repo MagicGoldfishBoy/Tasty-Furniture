@@ -1242,7 +1242,8 @@ public class GM1BlockStateProvider extends BlockStateProvider
 
     //----------------------------------------------------------------sugar glass--------------------------------------------------------------------------------
      //.........sugar
-      //block  
+      //plain
+       //block  
         net.minecraft.world.level.block.Block plain_sugar_glass_block = foodblockregistry.PLAIN_SUGAR_GLASS_BLOCK.get();
           simpleBlock(plain_sugar_glass_block);
           ResourceLocation plain_sugar_glass_texture = modLoc("block/plain_sugar_glass_block");
@@ -1254,10 +1255,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .texture("bottom", plain_sugar_glass_texture)
              .texture("top", plain_sugar_glass_texture)
              .texture("particle", plain_sugar_glass_texture);
-      //pane
+       //pane
         IronBarsBlock plain_sugar_glass_pane = foodblockregistry.PLAIN_SUGAR_GLASS_PANE.get();
         ResourceLocation plain_sugar_glass_pane_texture = modLoc("block/plain_sugar_glass_block");
         paneBlockWithRenderType(plain_sugar_glass_pane, "plain_sugar_glass_pane", plain_sugar_glass_pane_texture, plain_sugar_glass_pane_texture, "translucent"); 
+      //red
+       //block  
+        net.minecraft.world.level.block.Block red_sugar_glass_block = foodblockregistry.RED_SUGAR_GLASS_BLOCK.get();
+          simpleBlock(red_sugar_glass_block);
+          ResourceLocation red_sugar_glass_texture = modLoc("block/red_sugar_glass_block");
+          
+         BlockModelBuilder red_sugar_glass_block_model = models()
+             .withExistingParent("red_sugar_glass_block", mcLoc("block/barrel"))
+             .renderType("translucent")
+             .texture("side", red_sugar_glass_texture)
+             .texture("bottom", red_sugar_glass_texture)
+             .texture("top", red_sugar_glass_texture)
+             .texture("particle", red_sugar_glass_texture);
+       //pane
+        IronBarsBlock red_sugar_glass_pane = foodblockregistry.RED_SUGAR_GLASS_PANE.get();
+        ResourceLocation red_sugar_glass_pane_texture = modLoc("block/red_sugar_glass_block");
+        paneBlockWithRenderType(red_sugar_glass_pane, "red_sugar_glass_pane", red_sugar_glass_pane_texture, red_sugar_glass_pane_texture, "translucent"); 
 
     //----------------------------------------------------------------bars--------------------------------------------------------------------------------
         //............apple
