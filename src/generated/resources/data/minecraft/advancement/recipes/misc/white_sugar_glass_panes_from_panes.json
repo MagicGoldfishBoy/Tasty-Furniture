@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_plain_sugar_glass_pane": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod02tastyfurniture:plain_sugar_glass_pane_item"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:white_sugar_glass_panes_from_panes"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_white_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:dyes/white"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_white_dye",
+      "has_plain_sugar_glass_pane"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:white_sugar_glass_panes_from_panes"
+    ]
+  }
+}
