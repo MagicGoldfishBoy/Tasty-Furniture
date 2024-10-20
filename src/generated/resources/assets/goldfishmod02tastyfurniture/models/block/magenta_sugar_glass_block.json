@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/barrel",
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "all": "goldfishmod02tastyfurniture:block/magenta_sugar_glass_block",
+    "bottom": "goldfishmod02tastyfurniture:block/magenta_sugar_glass_block",
+    "particle": "goldfishmod02tastyfurniture:block/magenta_sugar_glass_block",
+    "side": "goldfishmod02tastyfurniture:block/magenta_sugar_glass_block",
+    "top": "goldfishmod02tastyfurniture:block/magenta_sugar_glass_block"
+  }
+}

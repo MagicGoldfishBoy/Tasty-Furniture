@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "goldfishmod02tastyfurniture:magenta_sugar_glass_pane_item"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "goldfishmod02tastyfurniture:blocks/magenta_sugar_glass_pane"
+}
