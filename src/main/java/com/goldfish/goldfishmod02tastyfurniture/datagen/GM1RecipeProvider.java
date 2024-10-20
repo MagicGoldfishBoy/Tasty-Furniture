@@ -3098,6 +3098,34 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_magenta_dye", has(Tags.Items.DYES_MAGENTA))
             .unlockedBy("has_plain_sugar_glass_pane", has(foodblockitemregistry.PLAIN_SUGAR_GLASS_PANE_ITEM.get()))
             .save(output, "magenta_sugar_glass_panes_from_panes");
+         //pink
+          //block
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PINK_SUGAR_GLASS_ITEM.get(), 8)
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', foodblockitemregistry.PLAIN_SUGAR_GLASS_ITEM.get())
+            .define('B', Tags.Items.DYES_PINK)
+            .unlockedBy("has_sugar_glass_item", has(foodblockitemregistry.PLAIN_SUGAR_GLASS_ITEM.get()))
+            .save(output);
+          //pane from block
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PINK_SUGAR_GLASS_PANE_ITEM.get(), 16)
+            .pattern("   ")
+            .pattern("AAA")
+            .pattern("AAA")
+            .define('A', foodblockitemregistry.PINK_SUGAR_GLASS_ITEM.get())
+            .unlockedBy("has_pink_sugar_glass_block_item", has(foodblockitemregistry.PINK_SUGAR_GLASS_ITEM.get()))
+            .save(output);
+          //pane from pane
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PINK_SUGAR_GLASS_PANE_ITEM.get(), 8)
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', foodblockitemregistry.PLAIN_SUGAR_GLASS_PANE_ITEM.get())
+            .define('B', Tags.Items.DYES_PINK)
+            .unlockedBy("has_pink_dye", has(Tags.Items.DYES_PINK))
+            .unlockedBy("has_plain_sugar_glass_pane", has(foodblockitemregistry.PLAIN_SUGAR_GLASS_PANE_ITEM.get()))
+            .save(output, "pink_sugar_glass_panes_from_panes");
         //-------------------------------------------------------------bars-----------------------------------------------------
          //apple
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_BARS_ITEM.get(), 8)

@@ -1429,6 +1429,23 @@ public class GM1BlockStateProvider extends BlockStateProvider
         IronBarsBlock magenta_sugar_glass_pane = foodblockregistry.MAGENTA_SUGAR_GLASS_PANE.get();
         ResourceLocation magenta_sugar_glass_pane_texture = modLoc("block/magenta_sugar_glass_block");
         paneBlockWithRenderType(magenta_sugar_glass_pane, "magenta_sugar_glass_pane", magenta_sugar_glass_pane_texture, magenta_sugar_glass_pane_texture, "translucent"); 
+      //pink
+       //block  
+        net.minecraft.world.level.block.Block pink_sugar_glass_block = foodblockregistry.PINK_SUGAR_GLASS_BLOCK.get();
+          simpleBlock(pink_sugar_glass_block);
+          ResourceLocation pink_sugar_glass_texture = modLoc("block/pink_sugar_glass_block");
+          
+         BlockModelBuilder pink_sugar_glass_block_model = models()
+             .withExistingParent("pink_sugar_glass_block", mcLoc("block/barrel"))
+             .renderType("translucent")
+             .texture("side", pink_sugar_glass_texture)
+             .texture("bottom", pink_sugar_glass_texture)
+             .texture("top", pink_sugar_glass_texture)
+             .texture("particle", pink_sugar_glass_texture);
+       //pane
+        IronBarsBlock pink_sugar_glass_pane = foodblockregistry.PINK_SUGAR_GLASS_PANE.get();
+        ResourceLocation pink_sugar_glass_pane_texture = modLoc("block/pink_sugar_glass_block");
+        paneBlockWithRenderType(pink_sugar_glass_pane, "pink_sugar_glass_pane", pink_sugar_glass_pane_texture, pink_sugar_glass_pane_texture, "translucent"); 
 
     //----------------------------------------------------------------bars--------------------------------------------------------------------------------
         //............apple
