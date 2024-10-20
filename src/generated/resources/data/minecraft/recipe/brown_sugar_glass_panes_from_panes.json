@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod02tastyfurniture:plain_sugar_glass_pane_item"
+    },
+    "B": {
+      "tag": "c:dyes/brown"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "ABA",
+    "AAA"
+  ],
+  "result": {
+    "count": 8,
+    "id": "goldfishmod02tastyfurniture:brown_sugar_glass_pane_item"
+  }
+}
