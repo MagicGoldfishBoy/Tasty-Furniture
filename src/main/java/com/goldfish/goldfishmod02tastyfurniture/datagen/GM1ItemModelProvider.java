@@ -743,6 +743,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("pork_bars_item", mcLoc("item/generated")).texture("layer0", "block/pork_bars");
       //..............rabbit
         withExistingParent("rabbit_bars_item", mcLoc("item/generated")).texture("layer0", "block/rabbit_bars");
+      //..............sugar
+        withExistingParent("sugar_bars_item", mcLoc("item/generated")).texture("layer0", "block/sugar_bars");
     //------------------------------------------------------------lamps----------------------------------------------------------------------
       //..............apple
         withExistingParent("apple_lamp_item", modLoc("block/apple_lamp"));

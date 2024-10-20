@@ -1628,6 +1628,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation rabbit_bars_texture = modLoc("block/rabbit_bars");
           ResourceLocation rabbit_bars_rim_texture = modLoc("block/rabbit_block");
           paneBlockWithRenderType(rabbit_bars, "rabbit_bars", rabbit_bars_texture, rabbit_bars_rim_texture, "cutout_mipped_all");    
+        //............sugar
+          IronBarsBlock sugar_bars = foodblockregistry.SUGAR_BARS.get(); 
+          ResourceLocation sugar_bars_texture = modLoc("block/sugar_bars");
+          ResourceLocation sugar_bars_rim_texture = modLoc("block/sugar_block");
+          paneBlockWithRenderType(sugar_bars, "sugar_bars", sugar_bars_texture, sugar_bars_rim_texture, "cutout_mipped_all");    
 
     //---------------------------------------------------------------lamps--------------------------------------------------------------------------------
         //............apple

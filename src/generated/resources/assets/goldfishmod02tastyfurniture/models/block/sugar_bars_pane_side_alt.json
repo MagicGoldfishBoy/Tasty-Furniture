@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/template_glass_pane_side_alt",
+  "render_type": "minecraft:cutout_mipped_all",
+  "textures": {
+    "edge": "goldfishmod02tastyfurniture:block/sugar_block",
+    "pane": "goldfishmod02tastyfurniture:block/sugar_bars"
+  }
+}
