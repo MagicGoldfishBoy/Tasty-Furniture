@@ -2985,6 +2985,17 @@ public class foodblockregistry {
    .strength(0.25F, 0.25F)
    .sound(SoundType.GLASS)
    .noOcclusion()));
+ //.........cyan
+  //block
+   public static final DeferredHolder<Block, Block> CYAN_SUGAR_GLASS_BLOCK = FOODBLOCK.register("cyan_sugar_glass_block", () -> new Block(BlockBehaviour.Properties.of()
+   .strength(0.5F, 0.5F)
+   .sound(SoundType.GLASS)
+   .noOcclusion()));
+  //pane
+   public static final DeferredHolder<Block, IronBarsBlock> CYAN_SUGAR_GLASS_PANE = FOODBLOCK.register("cyan_sugar_glass_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+   .strength(0.25F, 0.25F)
+   .sound(SoundType.GLASS)
+   .noOcclusion()));
 //==============================================================================================================================================================================================
 //                                                                                           Bars
 //==============================================================================================================================================================================================

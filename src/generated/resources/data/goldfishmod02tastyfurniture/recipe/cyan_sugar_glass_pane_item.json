@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod02tastyfurniture:cyan_sugar_glass_item"
+    }
+  },
+  "pattern": [
+    "   ",
+    "AAA",
+    "AAA"
+  ],
+  "result": {
+    "count": 16,
+    "id": "goldfishmod02tastyfurniture:cyan_sugar_glass_pane_item"
+  }
+}
