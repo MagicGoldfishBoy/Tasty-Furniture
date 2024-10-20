@@ -3492,6 +3492,14 @@ public class foodblockregistry {
       .friction(0.3f)
       .ignitedByLava()
       ));
+   //.........sugar
+    public static final DeferredHolder<Block, CarpetBlock> SUGAR_CARPET = FOODBLOCK.register("sugar_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MOSS_CARPET)
+      .friction(0.3f)
+      .ignitedByLava()
+      ));
 //==============================================================================================================================================================================================
 //                                                                                         Lanterns
 //==============================================================================================================================================================================================

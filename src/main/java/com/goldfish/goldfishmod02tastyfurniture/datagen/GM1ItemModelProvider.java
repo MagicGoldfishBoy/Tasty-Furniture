@@ -845,6 +845,9 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       //..............rabbit
         ResourceLocation rabbit_carpet_texture = modLoc("block/rabbit_carpet");
         carpet("rabbit_carpet_item", rabbit_carpet_texture);
+      //..............sugar
+        ResourceLocation sugar_carpet_texture = modLoc("block/sugar_carpet");
+        carpet("sugar_carpet_item", sugar_carpet_texture);
 
     //-----------------------------------------------------------lanterns--------------------------------------------------------------------
       //..............apple
