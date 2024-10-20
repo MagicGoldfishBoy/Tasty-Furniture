@@ -2926,6 +2926,33 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', Tags.Items.DYES_LIME)
             .unlockedBy("has_lime_green_sugar_glass_block_item", has(foodblockitemregistry.LIME_GREEN_SUGAR_GLASS_ITEM.get()))
             .save(output, "lime_green_sugar_glass_panes_from_panes");
+         //green
+          //block
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.GREEN_SUGAR_GLASS_ITEM.get(), 8)
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', foodblockitemregistry.PLAIN_SUGAR_GLASS_ITEM.get())
+            .define('B', Tags.Items.DYES_GREEN)
+            .unlockedBy("has_sugar_glass_item", has(foodblockitemregistry.PLAIN_SUGAR_GLASS_ITEM.get()))
+            .save(output);
+          //pane from block
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.GREEN_SUGAR_GLASS_PANE_ITEM.get(), 16)
+            .pattern("   ")
+            .pattern("AAA")
+            .pattern("AAA")
+            .define('A', foodblockitemregistry.GREEN_SUGAR_GLASS_ITEM.get())
+            .unlockedBy("has_green_sugar_glass_block_item", has(foodblockitemregistry.GREEN_SUGAR_GLASS_ITEM.get()))
+            .save(output);
+          //pane from pane
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.GREEN_SUGAR_GLASS_PANE_ITEM.get(), 8)
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', foodblockitemregistry.PLAIN_SUGAR_GLASS_PANE_ITEM.get())
+            .define('B', Tags.Items.DYES_GREEN)
+            .unlockedBy("has_green_sugar_glass_block_item", has(foodblockitemregistry.GREEN_SUGAR_GLASS_ITEM.get()))
+            .save(output, "green_sugar_glass_panes_from_panes");
         //-------------------------------------------------------------bars-----------------------------------------------------
          //apple
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_BARS_ITEM.get(), 8)

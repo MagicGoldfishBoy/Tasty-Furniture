@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_green_sugar_glass_block_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod02tastyfurniture:green_sugar_glass_item"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:green_sugar_glass_panes_from_panes"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_green_sugar_glass_block_item"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:green_sugar_glass_panes_from_panes"
+    ]
+  }
+}
