@@ -1727,6 +1727,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation rabbit_lamp_texture = modLoc("block/rabbit_lamp");
           ResourceLocation rabbit_lamp_top_texture = modLoc("block/rabbit_lamp_top");
           horizontalBlock(rabbit_lamp, rabbit_lamp_texture, rabbit_lamp_texture, rabbit_lamp_top_texture);
+        //............sugar
+          net.minecraft.world.level.block.Block sugar_lamp = foodblockregistry.SUGAR_LAMP.get();
+          ResourceLocation sugar_lamp_texture = modLoc("block/sugar_lamp");
+          ResourceLocation sugar_lamp_top_texture = modLoc("block/sugar_lamp_top");
+          horizontalBlock(sugar_lamp, sugar_lamp_texture, sugar_lamp_texture, sugar_lamp_top_texture);
 
     //--------------------------------------------------------------carpets-------------------------------------------------------------------------------
         //.............apple
