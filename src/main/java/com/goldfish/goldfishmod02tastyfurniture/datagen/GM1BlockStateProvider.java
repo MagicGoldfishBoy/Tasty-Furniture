@@ -1463,6 +1463,23 @@ public class GM1BlockStateProvider extends BlockStateProvider
         IronBarsBlock white_sugar_glass_pane = foodblockregistry.WHITE_SUGAR_GLASS_PANE.get();
         ResourceLocation white_sugar_glass_pane_texture = modLoc("block/white_sugar_glass_block");
         paneBlockWithRenderType(white_sugar_glass_pane, "white_sugar_glass_pane", white_sugar_glass_pane_texture, white_sugar_glass_pane_texture, "translucent"); 
+      //light_gray
+       //block  
+        net.minecraft.world.level.block.Block light_gray_sugar_glass_block = foodblockregistry.LIGHT_GRAY_SUGAR_GLASS_BLOCK.get();
+          simpleBlock(light_gray_sugar_glass_block);
+          ResourceLocation light_gray_sugar_glass_texture = modLoc("block/light_gray_sugar_glass_block");
+          
+         BlockModelBuilder light_gray_sugar_glass_block_model = models()
+             .withExistingParent("light_gray_sugar_glass_block", mcLoc("block/barrel"))
+             .renderType("translucent")
+             .texture("side", light_gray_sugar_glass_texture)
+             .texture("bottom", light_gray_sugar_glass_texture)
+             .texture("top", light_gray_sugar_glass_texture)
+             .texture("particle", light_gray_sugar_glass_texture);
+       //pane
+        IronBarsBlock light_gray_sugar_glass_pane = foodblockregistry.LIGHT_GRAY_SUGAR_GLASS_PANE.get();
+        ResourceLocation light_gray_sugar_glass_pane_texture = modLoc("block/light_gray_sugar_glass_block");
+        paneBlockWithRenderType(light_gray_sugar_glass_pane, "light_gray_sugar_glass_pane", light_gray_sugar_glass_pane_texture, light_gray_sugar_glass_pane_texture, "translucent"); 
 
     //----------------------------------------------------------------bars--------------------------------------------------------------------------------
         //............apple
