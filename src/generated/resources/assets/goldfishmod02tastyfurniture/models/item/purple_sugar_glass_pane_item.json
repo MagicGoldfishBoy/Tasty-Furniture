@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "layer0": "goldfishmod02tastyfurniture:block/purple_sugar_glass_block"
+  }
+}
