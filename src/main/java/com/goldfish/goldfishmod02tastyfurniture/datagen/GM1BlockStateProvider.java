@@ -3,6 +3,8 @@ package com.goldfish.goldfishmod02tastyfurniture.datagen;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodChairBlock;
+import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
+
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.CarpetBlock;
 import net.minecraft.world.level.block.ChainBlock;
@@ -11,6 +13,7 @@ import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.FurnaceBlock;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.LanternBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
@@ -2996,6 +2999,28 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(sugar_chain_model).rotationX(90).addModel();     
 
+    //---------------------------------------------------------------tables-------------------------------------------------------------------------------
+      //.............sugar
+          HorizontalDirectionalBlock sugartable = foodblockregistry.SUGAR_TABLE.get();
+
+          getVariantBuilder(sugartable)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/sugar_table");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
     //---------------------------------------------------------------torches------------------------------------------------------------------------------
       //.............apple
        //regular
