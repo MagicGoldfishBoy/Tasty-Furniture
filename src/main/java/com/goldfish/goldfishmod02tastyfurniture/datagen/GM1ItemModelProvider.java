@@ -1050,10 +1050,6 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       //..............sugar
        withExistingParent("sugar_chain_item", modLoc("block/sugar_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
        .end();
-
-    //---------------------------------------------------------------chairs-------------------------------------------------------------------------------
-        //.............sugar
-         withExistingParent("sugar_table_item", modLoc("block/sugar_table"));
     //-----------------------------------------------------------ladders---------------------------------------------------------------------
       //..............apple
        withExistingParent("apple_ladder_item", modLoc("block/apple_ladder"));
@@ -1175,6 +1171,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("pork_table_item", modLoc("block/pork_table"));
       //..............rabbit
        withExistingParent("rabbit_table_item", modLoc("block/rabbit_table"));
+      //.............sugar
+        withExistingParent("sugar_table_item", modLoc("block/sugar_table"));
 
     //-----------------------------------------------------------torches---------------------------------------------------------------------
       //..............apple
@@ -1310,6 +1308,13 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("rabbit_redstone_torch_item", modLoc("block/rabbit_redstone_torch"));
        //soul
         withExistingParent("rabbit_soul_torch_item", modLoc("block/rabbit_soul_torch"));
+      //..............sugar
+       //regular
+        withExistingParent("sugar_torch_item", modLoc("block/sugar_torch"));
+       //redstone
+        withExistingParent("sugar_redstone_torch_item", modLoc("block/sugar_redstone_torch"));
+       //soul
+        withExistingParent("sugar_soul_torch_item", modLoc("block/sugar_soul_torch"));
 
     //-----------------------------------------------------------furnaces--------------------------------------------------------------------
       //..............apple

@@ -5554,6 +5554,37 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('C', Items.SOUL_SAND)
             .unlockedBy("has_rabbit_nugget", has(nuggetregistry.RABBIT_NUGGET.get()))
             .save(output);
+         //.....sugar
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SUGAR_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetregistry.SUGAR_NUGGET.get())
+            .define('C', ItemTags.COALS)
+            .unlockedBy("has_sugar_nugget", has(nuggetregistry.SUGAR_NUGGET.get()))
+            .save(output);
+          //redstone
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SUGAR_REDSTONE_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetregistry.SUGAR_NUGGET.get())
+            .define('C', Items.REDSTONE)
+            .unlockedBy("has_sugar_nugget", has(nuggetregistry.SUGAR_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SUGAR_SOUL_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetregistry.SUGAR_NUGGET.get())
+            .define('C', Items.SOUL_SAND)
+            .unlockedBy("has_sugar_nugget", has(nuggetregistry.SUGAR_NUGGET.get()))
+            .save(output);
 
         //------------------------------------------------------------furnaces----------------------------------------------------
          //.....apple
