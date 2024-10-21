@@ -63,6 +63,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.salmonfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.smallFoodCabinet;
 import com.goldfish.goldfishmod02tastyfurniture.block.sugarSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.sugarWallSign;
+import com.goldfish.goldfishmod02tastyfurniture.block.sugarfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweet_berryfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweetberrySign;
 import com.goldfish.goldfishmod02tastyfurniture.block.sweetberryWallSign;
@@ -108,6 +109,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.salmonSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.salmonfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.smallFoodContainerEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.sugarSignEntity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.sugarfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.sweet_berryfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.sweetberrySignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.tropical_fishfurnaceentity;
@@ -4861,6 +4863,11 @@ public class foodblockregistry {
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<rabbitfurnaceentity>> RABBIT_FURNACE_ENTITY = FOODBLOCKENTITY.register("rabbit_furnace", 
     () -> BlockEntityType.Builder.of(rabbitfurnaceentity::new, RABBIT_FURNACE.get()).build(null));
+   //.........sugar
+    public static final DeferredHolder<Block, sugarfurnace> SUGAR_FURNACE = FOODBLOCK.register("sugar_furnace", () -> new sugarfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<sugarfurnaceentity>> SUGAR_FURNACE_ENTITY = FOODBLOCKENTITY.register("sugar_furnace", 
+    () -> BlockEntityType.Builder.of(sugarfurnaceentity::new, SUGAR_FURNACE.get()).build(null));
 
 //==============================================================================================================================================================================================
 //                                                                                          Paths

@@ -6237,6 +6237,50 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
+        //.............sugar
+          FurnaceBlock sugar_furnace = foodblockregistry.SUGAR_FURNACE.get();
+          ResourceLocation sugar_furnace_unlit_texture = modLoc("block/sugar_furnace_front_unlit");
+          ResourceLocation sugar_furnace_lit_texture = modLoc("block/sugar_furnace_front_lit");
+          ResourceLocation sugar_furnace_side = modLoc("block/sugar_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder sugar_furnace_model_unlit = models()
+              .withExistingParent("sugar_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", sugar_furnace_side)
+              .texture("top", sugar_furnace_side)
+              .texture("front", sugar_furnace_unlit_texture)
+              .texture("particle", sugar_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder sugar_furnace_model_lit = models()
+              .withExistingParent("sugar_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", sugar_furnace_side)
+              .texture("top", sugar_furnace_side)
+              .texture("front", sugar_furnace_lit_texture)
+              .texture("particle", sugar_furnace_side);
+          
+          // Configure variants for the sugar_furnace block
+          getVariantBuilder(sugar_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/sugar_furnace_model_lit") : modLoc("block/sugar_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
     //---------------------------------------------------------------chests-------------------------------------------------------------------------------
         //.............apple
           ChestBlock apple_chest = foodblockregistry.APPLE_CHEST.get();
