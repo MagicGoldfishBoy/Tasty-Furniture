@@ -3,6 +3,7 @@ package com.goldfish.goldfishmod02tastyfurniture.datagen;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodChairBlock;
+import com.goldfish.goldfishmod02tastyfurniture.block.foodpathtypeminislab;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
 
 import net.minecraft.world.level.block.ButtonBlock;
@@ -6281,6 +6282,21 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
+    //----------------------------------------------------------------paths------------------------------------------------------------------------------
+     //___________________________________________________________stone_____________________________________________________________________
+      //.........sugar
+          foodpathtypeminislab sugar_stone_path = foodblockregistry.SUGAR_STONE_PATH.get();
+
+          getVariantBuilder(sugar_stone_path)
+          .forAllStates(state -> {
+
+
+              ResourceLocation modelLocation = modLoc("block/sugar_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
     //---------------------------------------------------------------chests-------------------------------------------------------------------------------
         //.............apple
           ChestBlock apple_chest = foodblockregistry.APPLE_CHEST.get();

@@ -5007,6 +5007,13 @@ public class foodblockregistry {
     .sound(SoundType.MUD_BRICKS)
     .noOcclusion()
     ));
+   //.........sugar
+    public static final DeferredHolder<Block, foodpathtypeminislab> SUGAR_STONE_PATH = FOODBLOCK.register("sugar_stone_path", () -> new foodpathtypeminislab(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.BASALT)
+    .noOcclusion()
+    ));
 
 
 //==============================================================================================================================================================================================
@@ -5728,7 +5735,7 @@ public class foodblockregistry {
      .noOcclusion()
      ));
 
-
+   //.........entity
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<smallFoodContainerEntity>> SMALL_CABINET_ENTITY = FOODBLOCKENTITY.register("small_cabinet_entity",
      () -> BlockEntityType.Builder.of(smallFoodContainerEntity::new, SMALL_APPLE_CABINET.get(), SMALL_POTATO_CABINET.get(), SMALL_BEETROOT_CABINET.get(), SMALL_CARROT_CABINET.get(), 
      SMALL_CHORUS_CABINET.get(), SMALL_GLOW_BERRY_CABINET.get(), SMALL_MELON_CABINET.get(), SMALL_SWEET_BERRY_CABINET.get(), SMALL_PUMPKIN_CABINET.get(), SMALL_BROWN_MUSHROOM_CABINET.get(), 
