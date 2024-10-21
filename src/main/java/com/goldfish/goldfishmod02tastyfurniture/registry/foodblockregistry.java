@@ -4157,6 +4157,7 @@ public class foodblockregistry {
   static float ladder_explosion_resistance = 0.75f;
   static SoundType plant_ladder_sound = SoundType.VINE;
   static SoundType meat_ladder_sound = SoundType.MUD_BRICKS;
+  static SoundType crystal_ladder_sound = SoundType.BASALT;
 
    //.........apple
     public static final DeferredHolder<Block, LadderBlock> APPLE_LADDER = FOODBLOCK.register("apple_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
@@ -4291,6 +4292,13 @@ public class foodblockregistry {
     .destroyTime(ladder_destroy_time)
     .explosionResistance(ladder_explosion_resistance)
     .sound(meat_ladder_sound)
+    .noOcclusion()
+    )); 
+   //.........sugar
+    public static final DeferredHolder<Block, LadderBlock> SUGAR_LADDER = FOODBLOCK.register("sugar_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
+    .destroyTime(ladder_destroy_time)
+    .explosionResistance(ladder_explosion_resistance)
+    .sound(crystal_ladder_sound)
     .noOcclusion()
     )); 
 //==============================================================================================================================================================================================
