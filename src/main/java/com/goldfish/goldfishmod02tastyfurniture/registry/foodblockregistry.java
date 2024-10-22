@@ -5189,7 +5189,7 @@ public class foodblockregistry {
      ));
    //.........sugar
      public static final DeferredHolder<Block, foodBarrel> SUGAR_BARREL = FOODBLOCK.register("sugar_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
-     .sound(meat_barrel_sound)
+     .sound(crystal_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
@@ -5211,6 +5211,7 @@ public class foodblockregistry {
    static float chair_explosion_resistance = 0.75f;
    static SoundType plant_chair_sound = SoundType.MUD_BRICKS;
    static SoundType meat_chair_sound = SoundType.MUD;
+   static SoundType crystal_chair_sound = SoundType.BASALT;
 
    //.........apple
      public static final DeferredHolder<Block, foodChairBlock> APPLE_CHAIR = FOODBLOCK.register("apple_chair", () -> new foodChairBlock(BlockBehaviour.Properties.of()
@@ -5360,6 +5361,13 @@ public class foodblockregistry {
    //.........rabbit
      public static final DeferredHolder<Block, foodChairBlock> RABBIT_CHAIR = FOODBLOCK.register("rabbit_chair", () -> new foodChairBlock(BlockBehaviour.Properties.of()
      .sound(plant_chair_sound)
+     .destroyTime(chair_destroy_time)
+     .explosionResistance(chair_explosion_resistance)
+     .noOcclusion()
+     ));
+   //.........sugar
+     public static final DeferredHolder<Block, foodChairBlock> SUGAR_CHAIR = FOODBLOCK.register("sugar_chair", () -> new foodChairBlock(BlockBehaviour.Properties.of()
+     .sound(crystal_chair_sound)
      .destroyTime(chair_destroy_time)
      .explosionResistance(chair_explosion_resistance)
      .noOcclusion()
