@@ -5606,6 +5606,7 @@ public class foodblockregistry {
    static float cabinet_explosion_resistance = 0.75f;
    static SoundType plant_cabinet_sound = SoundType.MUD_BRICKS;
    static SoundType meat_cabinet_sound = SoundType.MUD;
+   static SoundType crystal_cabinet_sound = SoundType.BASALT;
 
    //.........apple
      public static final DeferredHolder<Block, smallFoodCabinet> SMALL_APPLE_CABINET = FOODBLOCK.register("small_apple_cabinet", () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
@@ -5758,13 +5759,20 @@ public class foodblockregistry {
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
+   //.........sugar
+     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_SUGAR_CABINET = FOODBLOCK.register("small_sugar_cabinet", () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     .sound(crystal_cabinet_sound)
+     .destroyTime(cabinet_destroy_time)
+     .explosionResistance(cabinet_explosion_resistance)
+     .noOcclusion()
+     ));
 
    //.........entity
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<smallFoodContainerEntity>> SMALL_CABINET_ENTITY = FOODBLOCKENTITY.register("small_cabinet_entity",
      () -> BlockEntityType.Builder.of(smallFoodContainerEntity::new, SMALL_APPLE_CABINET.get(), SMALL_POTATO_CABINET.get(), SMALL_BEETROOT_CABINET.get(), SMALL_CARROT_CABINET.get(), 
      SMALL_CHORUS_CABINET.get(), SMALL_GLOW_BERRY_CABINET.get(), SMALL_MELON_CABINET.get(), SMALL_SWEET_BERRY_CABINET.get(), SMALL_PUMPKIN_CABINET.get(), SMALL_BROWN_MUSHROOM_CABINET.get(), 
      SMALL_RED_MUSHROOM_CABINET.get(), SMALL_CHICKEN_CABINET.get(), SMALL_COD_CABINET.get(), SMALL_SALMON_CABINET.get(), SMALL_TROPICAL_FISH_CABINET.get(), 
-     SMALL_MUTTON_CABINET.get(), SMALL_BEEF_CABINET.get(), SMALL_PORK_CABINET.get(), SMALL_RABBIT_CABINET.get()).build(null));
+     SMALL_MUTTON_CABINET.get(), SMALL_BEEF_CABINET.get(), SMALL_PORK_CABINET.get(), SMALL_RABBIT_CABINET.get(), SMALL_SUGAR_CABINET.get()).build(null));
 
 
 }
