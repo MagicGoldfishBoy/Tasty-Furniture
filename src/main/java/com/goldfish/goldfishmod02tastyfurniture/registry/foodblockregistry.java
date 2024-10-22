@@ -5382,6 +5382,7 @@ public class foodblockregistry {
    static float bed_explosion_resistance = 1.25f;
    static SoundType plant_bed_sound = SoundType.MUD_BRICKS;
    static SoundType meat_bed_sound = SoundType.MUD;
+   static SoundType crystal_bed_sound = SoundType.BASALT;
    //.........apple
      public static final DeferredHolder<Block, foodBed> APPLE_BED = FOODBLOCK.register("apple_bed", () -> new foodBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
@@ -5534,13 +5535,20 @@ public class foodblockregistry {
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
+   //.........sugar
+     public static final DeferredHolder<Block, foodBed> SUGAR_BED = FOODBLOCK.register("sugar_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     .sound(crystal_bed_sound)
+     .destroyTime(bed_destroy_time)
+     .explosionResistance(bed_explosion_resistance)
+     .noOcclusion()
+     ));
 
    //.........entity
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<bedEntity>> FOOD_BED_ENTITY = FOODBLOCKENTITY.register("food_bed_entity",
      () -> BlockEntityType.Builder.of(bedEntity::new, APPLE_BED.get(), POTATO_BED.get(), BEETROOT_BED.get(), CARROT_BED.get(), 
      CHORUS_BED.get(), GLOW_BERRY_BED.get(), MELON_BED.get(), SWEET_BERRY_BED.get(), PUMPKIN_BED.get(), BROWN_MUSHROOM_BED.get(), 
      RED_MUSHROOM_BED.get(), CHICKEN_BED.get(), COD_BED.get(), SALMON_BED.get(), TROPICAL_FISH_BED.get(), 
-     MUTTON_BED.get(), BEEF_BED.get(), PORK_BED.get(), RABBIT_BED.get()).build(null));
+     MUTTON_BED.get(), BEEF_BED.get(), PORK_BED.get(), RABBIT_BED.get(), SUGAR_BED.get()).build(null));
   
 
 //==============================================================================================================================================================================================
