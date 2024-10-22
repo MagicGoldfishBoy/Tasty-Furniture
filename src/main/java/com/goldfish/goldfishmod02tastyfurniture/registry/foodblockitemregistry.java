@@ -2066,6 +2066,9 @@ public class foodblockitemregistry {
    //.........rabbit
     public static final DeferredHolder<Item, BlockItem> RABBIT_BARREL_ITEM = FOODBLOCKITEM.register("rabbit_barrel_item", () -> new BlockItem(foodblockregistry.RABBIT_BARREL.get(),
     new BlockItem.Properties()));
+   //.........sugar
+    public static final DeferredHolder<Item, BlockItem> SUGAR_BARREL_ITEM = FOODBLOCKITEM.register("sugar_barrel_item", () -> new BlockItem(foodblockregistry.SUGAR_BARREL.get(),
+    new BlockItem.Properties()));
 
 //==============================================================================================================================================================================================
 //                                                                                         Chairs

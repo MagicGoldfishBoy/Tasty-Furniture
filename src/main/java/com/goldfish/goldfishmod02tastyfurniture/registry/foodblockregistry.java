@@ -5052,6 +5052,7 @@ public class foodblockregistry {
    static float barrel_explosion_resistance = 0.75f;
    static SoundType plant_barrel_sound = SoundType.MUD_BRICKS;
    static SoundType meat_barrel_sound = SoundType.MUD;
+   static SoundType crystal_barrel_sound = SoundType.BASALT;
 
    //.........apple
      public static final DeferredHolder<Block, foodBarrel> APPLE_BARREL = FOODBLOCK.register("apple_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
@@ -5186,6 +5187,12 @@ public class foodblockregistry {
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
+   //.........sugar
+     public static final DeferredHolder<Block, foodBarrel> SUGAR_BARREL = FOODBLOCK.register("sugar_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     .sound(meat_barrel_sound)
+     .destroyTime(barrel_destroy_time)
+     .explosionResistance(barrel_explosion_resistance)
+     ));
 
    //------entity
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodBarrelEntity>> FOOD_BARREL_ENTITY = FOODBLOCKENTITY.register("food_barrel_entity", 
@@ -5193,7 +5200,8 @@ public class foodblockregistry {
      foodblockregistry.CARROT_BARREL.get(), foodblockregistry.CHORUS_BARREL.get(), foodblockregistry.GLOWBERRY_BARREL.get(), foodblockregistry.MELON_BARREL.get(), 
      foodblockregistry.SWEETBERRY_BARREL.get(), foodblockregistry.PUMPKIN_BARREL.get(), foodblockregistry.BROWNMUSHROOM_BARREL.get(), foodblockregistry.REDMUSHROOM_BARREL.get(), 
      foodblockregistry.CHICKEN_BARREL.get(), foodblockregistry.COD_BARREL.get(), foodblockregistry.SALMON_BARREL.get(), foodblockregistry.TROPICALFISH_BARREL.get(), 
-     foodblockregistry.MUTTON_BARREL.get(), foodblockregistry.BEEF_BARREL.get(), foodblockregistry.PORK_BARREL.get(), foodblockregistry.RABBIT_BARREL.get()).build(null));
+     foodblockregistry.MUTTON_BARREL.get(), foodblockregistry.BEEF_BARREL.get(), foodblockregistry.PORK_BARREL.get(), foodblockregistry.RABBIT_BARREL.get(),
+     foodblockregistry.SUGAR_BARREL.get()).build(null));
 
 //==============================================================================================================================================================================================
 //                                                                                          Chairs
