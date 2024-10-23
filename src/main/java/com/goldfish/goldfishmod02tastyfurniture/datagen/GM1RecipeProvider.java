@@ -122,6 +122,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .define('B', Items.STICK)
               .unlockedBy("has_gold_ingot", has(Items.GOLD_INGOT))
               .save(output);
+
+            //advanced meatgrinder
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.advanced_meatgrinder.get(), 1)
+              .pattern("BA ")
+              .pattern("A A")
+              .pattern(" A ")
+              .define('A', Items.GOLD_INGOT)
+              .define('B', Items.STICK)
+              .unlockedBy("has_gold_ingot", has(Items.GOLD_INGOT))
+              .save(output);
         //-------------------------------------------------------------mush-----------------------------------------------------------------------
             //apple
               ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.APPLE_MUSH.get(), 1)
@@ -132,7 +142,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .define('B', Items.APPLE)
               .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
               .save(output);
-            //advanced apple
+             //advanced apple
               ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.APPLE_MUSH.get(), 2)
               .pattern("ABB")
               .pattern("BB ")
@@ -151,7 +161,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .define('B', Items.POTATO)
               .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
               .save(output);
-            //advanced potato
+             //advanced potato
               ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.POTATO_MUSH.get(), 2)
               .pattern("ABB")
               .pattern("BB ")
@@ -170,7 +180,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .define('B', Items.BEETROOT)
               .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
               .save(output);
-            //advanced beetroot
+             //advanced beetroot
               ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.BEETROOT_MUSH.get(), 2)
               .pattern("ABB")
               .pattern("BB ")
@@ -189,7 +199,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .define('B', Items.CARROT)
               .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
               .save(output);
-            //advanced carrot
+             //advanced carrot
               ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.CARROT_MUSH.get(), 2)
               .pattern("ABB")
               .pattern("BB ")
@@ -208,7 +218,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .define('B', Items.CHORUS_FRUIT)
               .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
               .save(output);
-            //advanced chorus
+             //advanced chorus
               ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.CHORUS_MUSH.get(), 2)
               .pattern("ABB")
               .pattern("BB ")
@@ -227,7 +237,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .define('B', Items.GLOW_BERRIES)
               .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
               .save(output);
-            //advanced glow_berry
+             //advanced glow_berry
               ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GLOWBERRY_MUSH.get(), 2)
               .pattern("ABB")
               .pattern("BB ")
@@ -246,7 +256,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .define('B', Items.MELON_SLICE)
               .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
               .save(output);
-            //advanced melon
+             //advanced melon
               ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.MELON_MUSH.get(), 2)
               .pattern("ABB")
               .pattern("BB ")
@@ -265,7 +275,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .define('B', Items.SWEET_BERRIES)
               .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
               .save(output);
-            //advanced sweet_berry
+             //advanced sweet_berry
               ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.SWEETBERRY_MUSH.get(), 2)
               .pattern("ABB")
               .pattern("BB ")
@@ -284,14 +294,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .define('B', Items.BROWN_MUSHROOM)
               .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
               .save(output);
-            //advanced brown_mushroom
+             //advanced brown_mushroom
               ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.BROWN_MUSHROOM_MUSH.get(), 2)
               .pattern("ABB")
               .pattern("BB ")
               .pattern("   ")
               .define('A', mushregistry.advanced_mushhammer.get())
               .define('B', Items.BROWN_MUSHROOM)
-              .unlockedBy("has_mush_hammer", has(mushregistry.advanced_mushhammer.get()))
+              .unlockedBy("has_advanced_mush_hammer", has(mushregistry.advanced_mushhammer.get()))
               .save(output, "brown_mushroom_mush_by_advanced_mush_hammer");
 
             //red_mushroom
@@ -303,14 +313,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .define('B', Items.RED_MUSHROOM)
               .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
               .save(output);
-            //advanced red_mushroom
+             //advanced red_mushroom
               ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.RED_MUSHROOM_MUSH.get(), 2)
               .pattern("ABB")
               .pattern("BB ")
               .pattern("   ")
               .define('A', mushregistry.advanced_mushhammer.get())
               .define('B', Items.RED_MUSHROOM)
-              .unlockedBy("has_mush_hammer", has(mushregistry.advanced_mushhammer.get()))
+              .unlockedBy("has_advanced_mush_hammer", has(mushregistry.advanced_mushhammer.get()))
               .save(output, "red_mushroom_mush_by_advanced_mush_hammer");
 
             //pumpkin
@@ -322,14 +332,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .define('B', Items.PUMPKIN)
               .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
               .save(output);
-            //advanced pumpkin
+             //advanced pumpkin
               ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.PUMPKIN_MUSH.get(), 2)
               .pattern("ABB")
               .pattern("   ")
               .pattern("   ")
               .define('A', mushregistry.advanced_mushhammer.get())
               .define('B', Items.PUMPKIN)
-              .unlockedBy("has_mush_hammer", has(mushregistry.advanced_mushhammer.get()))
+              .unlockedBy("has_advanced_mush_hammer", has(mushregistry.advanced_mushhammer.get()))
               .save(output, "pumpkin_mush_by_advanced_mush_hammer");
 
             //chicken
@@ -341,6 +351,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .define('B', CHICKEN_TAG)
               .unlockedBy("has_meat_grinder", has(mushregistry.meatgrinder.get()))
               .save(output);
+             //advanced chicken
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_CHICKEN.get(), 2)
+              .pattern("ABB")
+              .pattern("BB ")
+              .pattern("   ")
+              .define('A', mushregistry.advanced_meatgrinder.get())
+              .define('B', CHICKEN_TAG)
+              .unlockedBy("has_advanced_meat_grinder", has(mushregistry.advanced_meatgrinder.get()))
+              .save(output, "ground_chicken_by_advanced_meatgrinder");
+
             //cod
               ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_COD.get(), 1)
               .pattern("ABB")
@@ -350,6 +370,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .define('B', COD_TAG)
               .unlockedBy("has_meat_grinder", has(mushregistry.meatgrinder.get()))
               .save(output);
+             //advanced cod
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_COD.get(), 2)
+              .pattern("ABB")
+              .pattern("BB ")
+              .pattern("   ")
+              .define('A', mushregistry.advanced_meatgrinder.get())
+              .define('B', COD_TAG)
+              .unlockedBy("has_meat_grinder", has(mushregistry.advanced_meatgrinder.get()))
+              .save(output, "ground_cod_by_advanced_meatgrinder");
+
             //salmon
               ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_SALMON.get(), 1)
               .pattern("ABB")
@@ -359,6 +389,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .define('B', SALMON_TAG)
               .unlockedBy("has_meat_grinder", has(mushregistry.meatgrinder.get()))
               .save(output);
+             //advanced salmon
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_SALMON.get(), 2)
+              .pattern("ABB")
+              .pattern("BB ")
+              .pattern("   ")
+              .define('A', mushregistry.advanced_meatgrinder.get())
+              .define('B', SALMON_TAG)
+              .unlockedBy("has_meat_grinder", has(mushregistry.advanced_meatgrinder.get()))
+              .save(output, "ground_salmon_by_advanced_meatgrinder");
+
             //tropical_fish
               ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_TROPICAL_FISH.get(), 1)
               .pattern("ABB")
@@ -368,6 +408,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .define('B', Items.TROPICAL_FISH)
               .unlockedBy("has_meat_grinder", has(mushregistry.meatgrinder.get()))
               .save(output);
+             //advanced tropical_fish
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_TROPICAL_FISH.get(), 2)
+              .pattern("ABB")
+              .pattern("BB ")
+              .pattern("   ")
+              .define('A', mushregistry.advanced_meatgrinder.get())
+              .define('B', Items.TROPICAL_FISH)
+              .unlockedBy("has_meat_grinder", has(mushregistry.advanced_meatgrinder.get()))
+              .save(output, "ground_tropical_fish_by_advanced_meatgrinder");
+
             //mutton
               ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_MUTTON.get(), 1)
               .pattern("ABB")
@@ -377,6 +427,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .define('B', MUTTON_TAG)
               .unlockedBy("has_meat_grinder", has(mushregistry.meatgrinder.get()))
               .save(output);
+             //advanced mutton
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_MUTTON.get(), 2)
+              .pattern("ABB")
+              .pattern("BB ")
+              .pattern("   ")
+              .define('A', mushregistry.advanced_meatgrinder.get())
+              .define('B', MUTTON_TAG)
+              .unlockedBy("has_meat_grinder", has(mushregistry.advanced_meatgrinder.get()))
+              .save(output, "ground_mutton_by_advanced_meatgrinder");
+
             //beef
               ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_BEEF.get(), 1)
               .pattern("ABB")
@@ -386,6 +446,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .define('B', BEEF_TAG)
               .unlockedBy("has_meat_grinder", has(mushregistry.meatgrinder.get()))
               .save(output);
+            //advanced beef
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_BEEF.get(), 2)
+              .pattern("ABB")
+              .pattern("BB ")
+              .pattern("   ")
+              .define('A', mushregistry.advanced_meatgrinder.get())
+              .define('B', BEEF_TAG)
+              .unlockedBy("has_meat_grinder", has(mushregistry.advanced_meatgrinder.get()))
+              .save(output, "ground_beef_by_advanced_meatgrinder");
+
             //pork
               ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_PORK.get(), 1)
               .pattern("ABB")
@@ -395,6 +465,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .define('B', PORK_TAG)
               .unlockedBy("has_meat_grinder", has(mushregistry.meatgrinder.get()))
               .save(output);
+            //advanced pork
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_PORK.get(), 2)
+              .pattern("ABB")
+              .pattern("BB ")
+              .pattern("   ")
+              .define('A', mushregistry.advanced_meatgrinder.get())
+              .define('B', PORK_TAG)
+              .unlockedBy("has_meat_grinder", has(mushregistry.advanced_meatgrinder.get()))
+              .save(output, "ground_pork_by_advanced_meatgrinder");
+
             //rabbit
               ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_RABBIT.get(), 1)
               .pattern("ABB")
@@ -404,6 +484,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .define('B', RABBIT_TAG)
               .unlockedBy("has_meat_grinder", has(mushregistry.meatgrinder.get()))
               .save(output);
+            //advanced rabbit
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.GROUND_RABBIT.get(), 2)
+              .pattern("ABB")
+              .pattern("BB ")
+              .pattern("   ")
+              .define('A', mushregistry.advanced_meatgrinder.get())
+              .define('B', RABBIT_TAG)
+              .unlockedBy("has_meat_grinder", has(mushregistry.advanced_meatgrinder.get()))
+              .save(output, "ground_rabbit_by_advanced_meatgrinder");
+
             //sugar
               ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.SUGAR, 3)
               .requires(mushregistry.mushhammer.get())
@@ -416,7 +506,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .requires(Items.SUGAR_CANE)
               .unlockedBy("has_mush_hammer", has(mushregistry.advanced_mushhammer.get()))
               .save(output, "sugar_from_advanced_mushhammer");
-              
+
             //sugar_paste
              //one
               ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.SUGAR_PASTE.get(), 1)

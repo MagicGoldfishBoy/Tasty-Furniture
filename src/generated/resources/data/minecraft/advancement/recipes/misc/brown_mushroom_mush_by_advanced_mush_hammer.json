@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_mush_hammer": {
+    "has_advanced_mush_hammer": {
       "conditions": {
         "items": [
           {
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_mush_hammer"
+      "has_advanced_mush_hammer"
     ]
   ],
   "rewards": {

@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_advanced_mush_hammer": {
+    "has_meat_grinder": {
       "conditions": {
         "items": [
           {
-            "items": "goldfishmod02tastyfurniture:advanced_mush_hammer"
+            "items": "goldfishmod02tastyfurniture:advanced_meatgrinder"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:red_mushroom_mush_by_advanced_mush_hammer"
+        "recipe": "minecraft:ground_rabbit_by_advanced_meatgrinder"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_advanced_mush_hammer"
+      "has_meat_grinder"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:red_mushroom_mush_by_advanced_mush_hammer"
+      "minecraft:ground_rabbit_by_advanced_meatgrinder"
     ]
   }
 }

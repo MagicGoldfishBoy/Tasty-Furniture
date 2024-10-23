@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod02tastyfurniture:advanced_meatgrinder"
+    },
+    "B": {
+      "item": "minecraft:tropical_fish"
+    }
+  },
+  "pattern": [
+    "ABB",
+    "BB ",
+    "   "
+  ],
+  "result": {
+    "count": 2,
+    "id": "goldfishmod02tastyfurniture:ground_tropical_fish"
+  }
+}
