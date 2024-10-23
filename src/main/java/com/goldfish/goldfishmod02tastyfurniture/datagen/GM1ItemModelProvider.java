@@ -27,6 +27,9 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         protected void registerModels() {
           //withExistingParent("apple_button_item", modLoc("block/apple_button"));
           //withExistingParent("apple_button_item", mcLoc("item/generated")).texture("layer0", "item/example_item");
+    //-------------------------------------------------------------mushes--------------------------------------------------------------------
+      withExistingParent("advanced_mush_hammer", mcLoc("item/generated")).texture("layer0", "item/advanced_mush_hammer");
+
     //-------------------------------------------------------------pastes--------------------------------------------------------------------
 
       withExistingParent("sugar_paste", mcLoc("item/generated")).texture("layer0", "item/sugar_paste");

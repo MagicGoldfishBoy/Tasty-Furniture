@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod02tastyfurniture:advanced_mush_hammer"
+    },
+    "B": {
+      "item": "minecraft:pumpkin"
+    }
+  },
+  "pattern": [
+    "ABB",
+    "   ",
+    "   "
+  ],
+  "result": {
+    "count": 2,
+    "id": "goldfishmod02tastyfurniture:pumpkin_mush"
+  }
+}
