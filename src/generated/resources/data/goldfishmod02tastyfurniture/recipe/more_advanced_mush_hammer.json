@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "A": {
-      "item": "minecraft:gold_ingot"
+      "item": "minecraft:diamond"
     },
     "B": {
       "item": "minecraft:stick"
@@ -16,6 +16,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "goldfishmod02tastyfurniture:advanced_mush_hammer"
+    "id": "goldfishmod02tastyfurniture:more_advanced_mush_hammer"
   }
 }

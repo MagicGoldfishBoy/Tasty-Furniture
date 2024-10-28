@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_more_advanced_mush_hammer": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod02tastyfurniture:more_advanced_mush_hammer"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:carrot_mush_by_more_advanced_mush_hammer"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_more_advanced_mush_hammer"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:carrot_mush_by_more_advanced_mush_hammer"
+    ]
+  }
+}

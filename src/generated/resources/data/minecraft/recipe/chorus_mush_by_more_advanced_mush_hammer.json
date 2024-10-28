@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod02tastyfurniture:more_advanced_mush_hammer"
+    },
+    "B": {
+      "item": "minecraft:chorus_fruit"
+    }
+  },
+  "pattern": [
+    "ABB",
+    "BB ",
+    "   "
+  ],
+  "result": {
+    "count": 4,
+    "id": "goldfishmod02tastyfurniture:chorus_mush"
+  }
+}

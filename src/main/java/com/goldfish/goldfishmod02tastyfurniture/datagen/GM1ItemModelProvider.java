@@ -32,6 +32,10 @@ public class GM1ItemModelProvider extends ItemModelProvider {
 
       withExistingParent("advanced_meatgrinder", mcLoc("item/generated")).texture("layer0", "item/advanced_meatgrinder");
 
+      withExistingParent("more_advanced_mush_hammer", mcLoc("item/generated")).texture("layer0", "item/more_advanced_mush_hammer");
+
+      withExistingParent("more_advanced_meatgrinder", mcLoc("item/generated")).texture("layer0", "item/more_advanced_meatgrinder");
+
     //-------------------------------------------------------------pastes--------------------------------------------------------------------
 
       withExistingParent("sugar_paste", mcLoc("item/generated")).texture("layer0", "item/sugar_paste");

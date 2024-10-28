@@ -63,6 +63,8 @@ public class mushregistry {
 
       public static final Supplier<Item> advanced_mushhammer = MUSH.register("advanced_mush_hammer", () -> new mushhammer((new Item.Properties().stacksTo(1))));
 
+      public static final Supplier<Item> more_advanced_mushhammer = MUSH.register("more_advanced_mush_hammer", () -> new mushhammer((new Item.Properties().stacksTo(1))));
+
         public static final DeferredHolder<Item, Item> APPLE_MUSH = MUSH.register("apple_mush",
                 () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
                 .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
@@ -110,6 +112,8 @@ public class mushregistry {
        public static final Supplier<Item> meatgrinder = MUSH.register("meatgrinder", () -> new meatgrinder((new Item.Properties().stacksTo(1))));
 
        public static final Supplier<Item> advanced_meatgrinder = MUSH.register("advanced_meatgrinder", () -> new meatgrinder((new Item.Properties().stacksTo(1))));
+
+       public static final Supplier<Item> more_advanced_meatgrinder = MUSH.register("more_advanced_meatgrinder", () -> new meatgrinder((new Item.Properties().stacksTo(1))));
 
         public static final DeferredHolder<Item, Item> GROUND_CHICKEN = MUSH.register("ground_chicken",
                 () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
