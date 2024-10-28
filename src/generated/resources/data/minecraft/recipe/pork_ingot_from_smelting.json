@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredient": {
+    "item": "goldfishmod02tastyfurniture:ground_pork"
+  },
+  "result": {
+    "count": 1,
+    "id": "goldfishmod02tastyfurniture:pork_ingot"
+  }
+}

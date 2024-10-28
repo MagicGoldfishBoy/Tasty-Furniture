@@ -78,26 +78,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         protected void buildRecipes(RecipeOutput output) {
           buildToolRecipes(output);
           buildMushRecipes(output);
-        //-------------------------------------------------------------ingots---------------------------------------------------------------------
-          //sugar_ingot
-           //smelting
-            SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushregistry.SUGAR_PASTE.get()),
-            RecipeCategory.MISC,
-            ingotregistry.SUGAR_INGOT.get(),
-            1.0f,
-            200
-            )
-            .unlockedBy("has_sugar_paste", has(mushregistry.SUGAR_PASTE.get()))
-            .save(output, "sugar_ingot_from_smelting");
-           //blasting
-            SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushregistry.SUGAR_PASTE.get()),
-            RecipeCategory.MISC, 
-            ingotregistry.SUGAR_INGOT.get(), 
-            1.0f, 
-            100
-            )
-            .unlockedBy("has_sugar_paste", has(mushregistry.SUGAR_PASTE.get()))
-            .save(output, "sugar_ingot_from_blasting");
+          buildIngotRecipes(output);
         //------------------------------------------------------------nuggets---------------------------------------------------------------------
           //sugar_nugget
            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, nuggetregistry.SUGAR_NUGGET.get(), 9)
@@ -888,269 +869,8 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_sugar_block", has(foodblockitemregistry.SUGAR_BLOCK_ITEM.get()))
             .save(output, "sugar_tile_block_from_sugar_block_stonecutting");
 
-        //---------------------------------------------------------unpack blocks------------------------------------------------------------------
-         //apple_block
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.APPLE_INGOT.get(), 9)
-            .requires(foodblockitemregistry.APPLE_BLOCK_ITEM.get())
-            .unlockedBy("has_apple_block", has(foodblockitemregistry.APPLE_BLOCK_ITEM.get()))
-            .save(output);
-         //potato_block
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.POTATO_INGOT.get(), 9)
-            .requires(foodblockitemregistry.POTATO_BLOCK_ITEM.get())
-            .unlockedBy("has_potato_block", has(foodblockitemregistry.POTATO_BLOCK_ITEM.get()))
-            .save(output);
-         //beetroot_block
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.BEETROOT_INGOT.get(), 9)
-            .requires(foodblockitemregistry.BEETROOT_BLOCK_ITEM.get())
-            .unlockedBy("has_beetroot_block", has(foodblockitemregistry.BEETROOT_BLOCK_ITEM.get()))
-            .save(output);
-         //carrot_block
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.CARROT_INGOT.get(), 9)
-            .requires(foodblockitemregistry.CARROT_BLOCK_ITEM.get())
-            .unlockedBy("has_carrot_block", has(foodblockitemregistry.CARROT_BLOCK_ITEM.get()))
-            .save(output);
-         //chorus_block
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.CHORUS_INGOT.get(), 9)
-            .requires(foodblockitemregistry.CHORUS_BLOCK_ITEM.get())
-            .unlockedBy("has_chorus_block", has(foodblockitemregistry.CHORUS_BLOCK_ITEM.get()))
-            .save(output);
-         //glow_berry_block
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.GLOW_BERRY_INGOT.get(), 9)
-            .requires(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
-            .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
-            .save(output);
-         //melon_block
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.MELON_INGOT.get(), 9)
-            .requires(foodblockitemregistry.MELON_BLOCK_ITEM.get())
-            .unlockedBy("has_melon_block", has(foodblockitemregistry.MELON_BLOCK_ITEM.get()))
-            .save(output);
-         //sweet_berry_block
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.SWEET_BERRY_INGOT.get(), 9)
-            .requires(foodblockitemregistry.SWEET_BERRY_BLOCK_ITEM.get())
-            .unlockedBy("has_sweet_berry_block", has(foodblockitemregistry.SWEET_BERRY_BLOCK_ITEM.get()))
-            .save(output);
-         //brown_mushroom_block
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.BROWN_MUSHROOM_INGOT.get(), 9)
-            .requires(foodblockitemregistry.BROWN_MUSHROOM_BLOCK_ITEM.get())
-            .unlockedBy("has_brown_mushroom_block", has(foodblockitemregistry.BROWN_MUSHROOM_BLOCK_ITEM.get()))
-            .save(output);
-         //red_mushroom_block
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.RED_MUSHROOM_INGOT.get(), 9)
-            .requires(foodblockitemregistry.RED_MUSHROOM_BLOCK_ITEM.get())
-            .unlockedBy("has_red_mushroom_block", has(foodblockitemregistry.RED_MUSHROOM_BLOCK_ITEM.get()))
-            .save(output);
-         //pumpkin_block
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.PUMPKIN_INGOT.get(), 9)
-            .requires(foodblockitemregistry.PUMPKIN_BLOCK_ITEM.get())
-            .unlockedBy("has_pumpkin_block", has(foodblockitemregistry.PUMPKIN_BLOCK_ITEM.get()))
-            .save(output);
-         //chicken_block
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.CHICKEN_INGOT.get(), 9)
-            .requires(foodblockitemregistry.CHICKEN_BLOCK_ITEM.get())
-            .unlockedBy("has_chicken_block", has(foodblockitemregistry.CHICKEN_BLOCK_ITEM.get()))
-            .save(output);
-         //cod_block
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.COD_INGOT.get(), 9)
-            .requires(foodblockitemregistry.COD_BLOCK_ITEM.get())
-            .unlockedBy("has_cod_block", has(foodblockitemregistry.COD_BLOCK_ITEM.get()))
-            .save(output);
-         //salmon_block
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.SALMON_INGOT.get(), 9)
-            .requires(foodblockitemregistry.SALMON_BLOCK_ITEM.get())
-            .unlockedBy("has_salmon_block", has(foodblockitemregistry.SALMON_BLOCK_ITEM.get()))
-            .save(output);
-         //tropical_fish_block
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.TROPICAL_FISH_INGOT.get(), 9)
-            .requires(foodblockitemregistry.TROPICAL_FISH_BLOCK_ITEM.get())
-            .unlockedBy("has_tropical_fish_block", has(foodblockitemregistry.TROPICAL_FISH_BLOCK_ITEM.get()))
-            .save(output);
-         //mutton_block
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.MUTTON_INGOT.get(), 9)
-            .requires(foodblockitemregistry.MUTTON_BLOCK_ITEM.get())
-            .unlockedBy("has_mutton_block", has(foodblockitemregistry.MUTTON_BLOCK_ITEM.get()))
-            .save(output);
-         //beef_block
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.BEEF_INGOT.get(), 9)
-            .requires(foodblockitemregistry.BEEF_BLOCK_ITEM.get())
-            .unlockedBy("has_beef_block", has(foodblockitemregistry.BEEF_BLOCK_ITEM.get()))
-            .save(output);
-         //pork_block
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.PORK_INGOT.get(), 9)
-            .requires(foodblockitemregistry.PORK_BLOCK_ITEM.get())
-            .unlockedBy("has_pork_block", has(foodblockitemregistry.PORK_BLOCK_ITEM.get()))
-            .save(output);
-         //rabbit_block
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.RABBIT_INGOT.get(), 9)
-            .requires(foodblockitemregistry.RABBIT_BLOCK_ITEM.get())
-            .unlockedBy("has_rabbit_block", has(foodblockitemregistry.RABBIT_BLOCK_ITEM.get()))
-            .save(output);
-         //sugar_block
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.SUGAR_INGOT.get(), 9)
-            .requires(foodblockitemregistry.SUGAR_BLOCK_ITEM.get())
-            .unlockedBy("has_sugar_block", has(foodblockitemregistry.SUGAR_BLOCK_ITEM.get()))
-            .save(output);
 
-        //----------------------------------------------------------pack ingots-------------------------------------------------------------------
-         //apple
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.APPLE_INGOT.get())
-          .pattern("AAA")
-          .pattern("AAA")
-          .pattern("AAA")
-          .define('A', nuggetregistry.APPLE_NUGGET.get())
-          .unlockedBy("has_apple_nugget", has(nuggetregistry.APPLE_NUGGET.get()))
-          .save(output, "apple_ingot_from_crafting");
-         //potato
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.POTATO_INGOT.get())
-          .pattern("AAA")
-          .pattern("AAA")
-          .pattern("AAA")
-          .define('A', nuggetregistry.POTATO_NUGGET.get())
-          .unlockedBy("has_potato_nugget", has(nuggetregistry.POTATO_NUGGET.get()))
-          .save(output, "potato_ingot_from_crafting");
-         //beetroot
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.BEETROOT_INGOT.get())
-          .pattern("AAA")
-          .pattern("AAA")
-          .pattern("AAA")
-          .define('A', nuggetregistry.BEETROOT_NUGGET.get())
-          .unlockedBy("has_beetroot_nugget", has(nuggetregistry.BEETROOT_NUGGET.get()))
-          .save(output, "beetroot_ingot_from_crafting");
-         //carrot
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.CARROT_INGOT.get())
-          .pattern("AAA")
-          .pattern("AAA")
-          .pattern("AAA")
-          .define('A', nuggetregistry.CARROT_NUGGET.get())
-          .unlockedBy("has_carrot_nugget", has(nuggetregistry.CARROT_NUGGET.get()))
-          .save(output, "carrot_ingot_from_crafting");
-         //chorus
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.CHORUS_INGOT.get())
-          .pattern("AAA")
-          .pattern("AAA")
-          .pattern("AAA")
-          .define('A', nuggetregistry.CHORUS_NUGGET.get())
-          .unlockedBy("has_chorus_nugget", has(nuggetregistry.CHORUS_NUGGET.get()))
-          .save(output, "chorus_ingot_from_crafting");
-         //glow_berry
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.GLOW_BERRY_INGOT.get())
-          .pattern("AAA")
-          .pattern("AAA")
-          .pattern("AAA")
-          .define('A', nuggetregistry.GLOW_BERRY_NUGGET.get())
-          .unlockedBy("has_glow_berry_nugget", has(nuggetregistry.GLOW_BERRY_NUGGET.get()))
-          .save(output, "glow_berry_ingot_from_crafting");
-         //melon
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.MELON_INGOT.get())
-          .pattern("AAA")
-          .pattern("AAA")
-          .pattern("AAA")
-          .define('A', nuggetregistry.MELON_NUGGET.get())
-          .unlockedBy("has_melon_nugget", has(nuggetregistry.MELON_NUGGET.get()))
-          .save(output, "melon_ingot_from_crafting");
-         //sweet_berry
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.SWEET_BERRY_INGOT.get())
-          .pattern("AAA")
-          .pattern("AAA")
-          .pattern("AAA")
-          .define('A', nuggetregistry.SWEET_BERRY_NUGGET.get())
-          .unlockedBy("has_sweet_berry_nugget", has(nuggetregistry.SWEET_BERRY_NUGGET.get()))
-          .save(output, "sweet_berry_ingot_from_crafting");
-         //brown_mushroom
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.BROWN_MUSHROOM_INGOT.get())
-          .pattern("AAA")
-          .pattern("AAA")
-          .pattern("AAA")
-          .define('A', nuggetregistry.BROWN_MUSHROOM_NUGGET.get())
-          .unlockedBy("has_brown_mushroom_nugget", has(nuggetregistry.BROWN_MUSHROOM_NUGGET.get()))
-          .save(output, "brown_mushroom_ingot_from_crafting");
-         //red_mushroom
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.RED_MUSHROOM_INGOT.get())
-          .pattern("AAA")
-          .pattern("AAA")
-          .pattern("AAA")
-          .define('A', nuggetregistry.RED_MUSHROOM_NUGGET.get())
-          .unlockedBy("has_red_mushroom_nugget", has(nuggetregistry.RED_MUSHROOM_NUGGET.get()))
-          .save(output, "red_mushroom_ingot_from_crafting");
-         //pumpkin
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.PUMPKIN_INGOT.get())
-          .pattern("AAA")
-          .pattern("AAA")
-          .pattern("AAA")
-          .define('A', nuggetregistry.PUMPKIN_NUGGET.get())
-          .unlockedBy("has_pumpkin_nugget", has(nuggetregistry.PUMPKIN_NUGGET.get()))
-          .save(output, "pumpkin_ingot_from_crafting");
-         //chicken
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.CHICKEN_INGOT.get())
-          .pattern("AAA")
-          .pattern("AAA")
-          .pattern("AAA")
-          .define('A', nuggetregistry.CHICKEN_NUGGET.get())
-          .unlockedBy("has_chicken_nugget", has(nuggetregistry.CHICKEN_NUGGET.get()))
-          .save(output, "chicken_ingot_from_crafting");
-         //cod
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.COD_INGOT.get())
-          .pattern("AAA")
-          .pattern("AAA")
-          .pattern("AAA")
-          .define('A', nuggetregistry.COD_NUGGET.get())
-          .unlockedBy("has_cod_nugget", has(nuggetregistry.COD_NUGGET.get()))
-          .save(output, "cod_ingot_from_crafting");
-         //salmon
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.SALMON_INGOT.get())
-          .pattern("AAA")
-          .pattern("AAA")
-          .pattern("AAA")
-          .define('A', nuggetregistry.SALMON_NUGGET.get())
-          .unlockedBy("has_salmon_nugget", has(nuggetregistry.SALMON_NUGGET.get()))
-          .save(output, "salmon_ingot_from_crafting");
-         //tropical_fish
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.TROPICAL_FISH_INGOT.get())
-          .pattern("AAA")
-          .pattern("AAA")
-          .pattern("AAA")
-          .define('A', nuggetregistry.TROPICAL_FISH_NUGGET.get())
-          .unlockedBy("has_tropical_fish_nugget", has(nuggetregistry.TROPICAL_FISH_NUGGET.get()))
-          .save(output, "tropical_fish_ingot_from_crafting");
-         //mutton
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.MUTTON_INGOT.get())
-          .pattern("AAA")
-          .pattern("AAA")
-          .pattern("AAA")
-          .define('A', nuggetregistry.MUTTON_NUGGET.get())
-          .unlockedBy("has_mutton_nugget", has(nuggetregistry.MUTTON_NUGGET.get()))
-          .save(output, "mutton_ingot_from_crafting");
-         //beef
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.BEEF_INGOT.get())
-          .pattern("AAA")
-          .pattern("AAA")
-          .pattern("AAA")
-          .define('A', nuggetregistry.BEEF_NUGGET.get())
-          .unlockedBy("has_beef_nugget", has(nuggetregistry.BEEF_NUGGET.get()))
-          .save(output, "beef_ingot_from_crafting");
-         //pork
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.PORK_INGOT.get())
-          .pattern("AAA")
-          .pattern("AAA")
-          .pattern("AAA")
-          .define('A', nuggetregistry.PORK_NUGGET.get())
-          .unlockedBy("has_pork_nugget", has(nuggetregistry.PORK_NUGGET.get()))
-          .save(output, "pork_ingot_from_crafting");
-         //rabbit
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.RABBIT_INGOT.get())
-          .pattern("AAA")
-          .pattern("AAA")
-          .pattern("AAA")
-          .define('A', nuggetregistry.RABBIT_NUGGET.get())
-          .unlockedBy("has_rabbit_nugget", has(nuggetregistry.RABBIT_NUGGET.get()))
-          .save(output, "rabbit_ingot_from_crafting");
-         //sugar
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.SUGAR_INGOT.get())
-          .pattern("AAA")
-          .pattern("AAA")
-          .pattern("AAA")
-          .define('A', nuggetregistry.SUGAR_NUGGET.get())
-          .unlockedBy("has_sugar_nugget", has(nuggetregistry.SUGAR_NUGGET.get()))
-          .save(output, "sugar_ingot_from_crafting");
+
         //-------------------------------------------------------------doors-----------------------------------------------------------------------
             //apple
               ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_DOOR_ITEM.get(), 3)
@@ -7211,6 +6931,648 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', Items.SUGAR)
         .unlockedBy("has_sugar", has(Items.SUGAR))
         .save(output, "two_sugar_pastes_recipe");
-       };
+      };
+     protected void buildIngotRecipes(RecipeOutput output) {
+      //apple
+        //packing
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.APPLE_INGOT.get())
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', nuggetregistry.APPLE_NUGGET.get())
+        .unlockedBy("has_apple_nugget", has(nuggetregistry.APPLE_NUGGET.get()))
+        .save(output, "apple_ingot_from_crafting");
+        //unpacking
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.APPLE_INGOT.get(), 9)
+        .requires(foodblockitemregistry.APPLE_BLOCK_ITEM.get())
+        .unlockedBy("has_apple_block", has(foodblockitemregistry.APPLE_BLOCK_ITEM.get()))
+        .save(output);
+        //smelting
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushregistry.APPLE_MUSH.get()),
+        RecipeCategory.MISC,
+        ingotregistry.APPLE_INGOT.get(),
+        1.0f,
+        200
+        )
+        .unlockedBy("has_apple_mush", has(mushregistry.APPLE_MUSH.get()))
+        .save(output, "apple_ingot_from_smelting");
+        //blasting
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushregistry.APPLE_MUSH.get()),
+        RecipeCategory.MISC, 
+        ingotregistry.APPLE_INGOT.get(), 
+        1.0f, 
+        100
+        )
+        .unlockedBy("has_apple_mush", has(mushregistry.APPLE_MUSH.get()))
+        .save(output, "apple_ingot_from_blasting");
+      //potato
+        //packing
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.POTATO_INGOT.get())
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', nuggetregistry.POTATO_NUGGET.get())
+        .unlockedBy("has_potato_nugget", has(nuggetregistry.POTATO_NUGGET.get()))
+        .save(output, "potato_ingot_from_crafting");
+        //unpacking
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.POTATO_INGOT.get(), 9)
+        .requires(foodblockitemregistry.POTATO_BLOCK_ITEM.get())
+        .unlockedBy("has_potato_block", has(foodblockitemregistry.POTATO_BLOCK_ITEM.get()))
+        .save(output);
+        //smelting
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushregistry.POTATO_MUSH.get()),
+        RecipeCategory.MISC,
+        ingotregistry.POTATO_INGOT.get(),
+        1.0f,
+        200
+        )
+        .unlockedBy("has_potato_mush", has(mushregistry.POTATO_MUSH.get()))
+        .save(output, "potato_ingot_from_smelting");
+        //blasting
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushregistry.POTATO_MUSH.get()),
+        RecipeCategory.MISC, 
+        ingotregistry.POTATO_INGOT.get(), 
+        1.0f, 
+        100
+        )
+        .unlockedBy("has_potato_mush", has(mushregistry.POTATO_MUSH.get()))
+        .save(output, "potato_ingot_from_blasting");
+      //beetroot
+        //packing
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.BEETROOT_INGOT.get())
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', nuggetregistry.BEETROOT_NUGGET.get())
+        .unlockedBy("has_beetroot_nugget", has(nuggetregistry.BEETROOT_NUGGET.get()))
+        .save(output, "beetroot_ingot_from_crafting");
+        //unpacking
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.BEETROOT_INGOT.get(), 9)
+        .requires(foodblockitemregistry.BEETROOT_BLOCK_ITEM.get())
+        .unlockedBy("has_beetroot_block", has(foodblockitemregistry.BEETROOT_BLOCK_ITEM.get()))
+        .save(output);
+        //smelting
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushregistry.BEETROOT_MUSH.get()),
+        RecipeCategory.MISC,
+        ingotregistry.BEETROOT_INGOT.get(),
+        1.0f,
+        200
+        )
+        .unlockedBy("has_beetroot_mush", has(mushregistry.BEETROOT_MUSH.get()))
+        .save(output, "beetroot_ingot_from_smelting");
+        //blasting
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushregistry.BEETROOT_MUSH.get()),
+        RecipeCategory.MISC, 
+        ingotregistry.BEETROOT_INGOT.get(), 
+        1.0f, 
+        100
+        )
+        .unlockedBy("has_beetroot_mush", has(mushregistry.BEETROOT_MUSH.get()))
+        .save(output, "beetroot_ingot_from_blasting");
+      //carrot
+        //packing
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.CARROT_INGOT.get())
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', nuggetregistry.CARROT_NUGGET.get())
+        .unlockedBy("has_carrot_nugget", has(nuggetregistry.CARROT_NUGGET.get()))
+        .save(output, "carrot_ingot_from_crafting");
+        //unpacking
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.CARROT_INGOT.get(), 9)
+        .requires(foodblockitemregistry.CARROT_BLOCK_ITEM.get())
+        .unlockedBy("has_carrot_block", has(foodblockitemregistry.CARROT_BLOCK_ITEM.get()))
+        .save(output);
+        //smelting
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushregistry.CARROT_MUSH.get()),
+        RecipeCategory.MISC,
+        ingotregistry.CARROT_INGOT.get(),
+        1.0f,
+        200
+        )
+        .unlockedBy("has_carrot_mush", has(mushregistry.CARROT_MUSH.get()))
+        .save(output, "carrot_ingot_from_smelting");
+        //blasting
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushregistry.CARROT_MUSH.get()),
+        RecipeCategory.MISC, 
+        ingotregistry.CARROT_INGOT.get(), 
+        1.0f, 
+        100
+        )
+        .unlockedBy("has_carrot_mush", has(mushregistry.CARROT_MUSH.get()))
+        .save(output, "carrot_ingot_from_blasting");
+      //chorus
+        //packing
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.CHORUS_INGOT.get())
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', nuggetregistry.CHORUS_NUGGET.get())
+        .unlockedBy("has_chorus_nugget", has(nuggetregistry.CHORUS_NUGGET.get()))
+        .save(output, "chorus_ingot_from_crafting");
+        //unpacking
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.CHORUS_INGOT.get(), 9)
+        .requires(foodblockitemregistry.CHORUS_BLOCK_ITEM.get())
+        .unlockedBy("has_chorus_block", has(foodblockitemregistry.CHORUS_BLOCK_ITEM.get()))
+        .save(output);
+        //smelting
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushregistry.CHORUS_MUSH.get()),
+        RecipeCategory.MISC,
+        ingotregistry.CHORUS_INGOT.get(),
+        1.0f,
+        200
+        )
+        .unlockedBy("has_chorus_mush", has(mushregistry.CHORUS_MUSH.get()))
+        .save(output, "chorus_ingot_from_smelting");
+        //blasting
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushregistry.CHORUS_MUSH.get()),
+        RecipeCategory.MISC, 
+        ingotregistry.CHORUS_INGOT.get(), 
+        1.0f, 
+        100
+        )
+        .unlockedBy("has_chorus_mush", has(mushregistry.CHORUS_MUSH.get()))
+        .save(output, "chorus_ingot_from_blasting");
+      //glow_berry
+        //packing
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.GLOW_BERRY_INGOT.get())
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', nuggetregistry.GLOW_BERRY_NUGGET.get())
+        .unlockedBy("has_glow_berry_nugget", has(nuggetregistry.GLOW_BERRY_NUGGET.get()))
+        .save(output, "glow_berry_ingot_from_crafting");
+        //unpacking
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.GLOW_BERRY_INGOT.get(), 9)
+        .requires(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
+        .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
+        .save(output);
+        //smelting
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushregistry.GLOWBERRY_MUSH.get()),
+        RecipeCategory.MISC,
+        ingotregistry.GLOW_BERRY_INGOT.get(),
+        1.0f,
+        200
+        )
+        .unlockedBy("has_glow_berry_mush", has(mushregistry.GLOWBERRY_MUSH.get()))
+        .save(output, "glow_berry_ingot_from_smelting");
+        //blasting
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushregistry.GLOWBERRY_MUSH.get()),
+        RecipeCategory.MISC, 
+        ingotregistry.GLOW_BERRY_INGOT.get(), 
+        1.0f, 
+        100
+        )
+        .unlockedBy("has_glow_berry_mush", has(mushregistry.GLOWBERRY_MUSH.get()))
+        .save(output, "glow_berry_ingot_from_blasting");
+      //melon
+        //packing
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.MELON_INGOT.get())
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', nuggetregistry.MELON_NUGGET.get())
+        .unlockedBy("has_melon_nugget", has(nuggetregistry.MELON_NUGGET.get()))
+        .save(output, "melon_ingot_from_crafting");
+        //unpacking
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.MELON_INGOT.get(), 9)
+        .requires(foodblockitemregistry.MELON_BLOCK_ITEM.get())
+        .unlockedBy("has_melon_block", has(foodblockitemregistry.MELON_BLOCK_ITEM.get()))
+        .save(output);
+        //smelting
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushregistry.MELON_MUSH.get()),
+        RecipeCategory.MISC,
+        ingotregistry.MELON_INGOT.get(),
+        1.0f,
+        200
+        )
+        .unlockedBy("has_melon_mush", has(mushregistry.MELON_MUSH.get()))
+        .save(output, "melon_ingot_from_smelting");
+        //blasting
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushregistry.MELON_MUSH.get()),
+        RecipeCategory.MISC, 
+        ingotregistry.MELON_INGOT.get(), 
+        1.0f, 
+        100
+        )
+        .unlockedBy("has_melon_mush", has(mushregistry.MELON_MUSH.get()))
+        .save(output, "melon_ingot_from_blasting");
+      //sweet_berry
+        //packing
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.SWEET_BERRY_INGOT.get())
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', nuggetregistry.SWEET_BERRY_NUGGET.get())
+        .unlockedBy("has_sweet_berry_nugget", has(nuggetregistry.SWEET_BERRY_NUGGET.get()))
+        .save(output, "sweet_berry_ingot_from_crafting");
+        //unpacking
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.SWEET_BERRY_INGOT.get(), 9)
+        .requires(foodblockitemregistry.SWEET_BERRY_BLOCK_ITEM.get())
+        .unlockedBy("has_sweet_berry_block", has(foodblockitemregistry.SWEET_BERRY_BLOCK_ITEM.get()))
+        .save(output);
+        //smelting
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushregistry.SWEETBERRY_MUSH.get()),
+        RecipeCategory.MISC,
+        ingotregistry.SWEET_BERRY_INGOT.get(),
+        1.0f,
+        200
+        )
+        .unlockedBy("has_sweet_berry_mush", has(mushregistry.SWEETBERRY_MUSH.get()))
+        .save(output, "sweet_berry_ingot_from_smelting");
+        //blasting
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushregistry.SWEETBERRY_MUSH.get()),
+        RecipeCategory.MISC, 
+        ingotregistry.SWEET_BERRY_INGOT.get(), 
+        1.0f, 
+        100
+        )
+        .unlockedBy("has_sweet_berry_mush", has(mushregistry.SWEETBERRY_MUSH.get()))
+        .save(output, "sweet_berry_ingot_from_blasting");
+      //brown_mushroom
+        //packing
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.BROWN_MUSHROOM_INGOT.get())
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', nuggetregistry.BROWN_MUSHROOM_NUGGET.get())
+        .unlockedBy("has_brown_mushroom_nugget", has(nuggetregistry.BROWN_MUSHROOM_NUGGET.get()))
+        .save(output, "brown_mushroom_ingot_from_crafting");
+        //unpacking
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.BROWN_MUSHROOM_INGOT.get(), 9)
+        .requires(foodblockitemregistry.BROWN_MUSHROOM_BLOCK_ITEM.get())
+        .unlockedBy("has_brown_mushroom_block", has(foodblockitemregistry.BROWN_MUSHROOM_BLOCK_ITEM.get()))
+        .save(output);
+        //smelting
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushregistry.BROWN_MUSHROOM_MUSH.get()),
+        RecipeCategory.MISC,
+        ingotregistry.BROWN_MUSHROOM_INGOT.get(),
+        1.0f,
+        200
+        )
+        .unlockedBy("has_brown_mushroom_mush", has(mushregistry.BROWN_MUSHROOM_MUSH.get()))
+        .save(output, "brown_mushroom_ingot_from_smelting");
+        //blasting
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushregistry.BROWN_MUSHROOM_MUSH.get()),
+        RecipeCategory.MISC, 
+        ingotregistry.BROWN_MUSHROOM_INGOT.get(), 
+        1.0f, 
+        100
+        )
+        .unlockedBy("has_brown_mushroom_mush", has(mushregistry.BROWN_MUSHROOM_MUSH.get()))
+        .save(output, "brown_mushroom_ingot_from_blasting");
+      //red_mushroom
+        //packing
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.RED_MUSHROOM_INGOT.get())
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', nuggetregistry.RED_MUSHROOM_NUGGET.get())
+        .unlockedBy("has_red_mushroom_nugget", has(nuggetregistry.RED_MUSHROOM_NUGGET.get()))
+        .save(output, "red_mushroom_ingot_from_crafting");
+        //unpacking
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.RED_MUSHROOM_INGOT.get(), 9)
+        .requires(foodblockitemregistry.RED_MUSHROOM_BLOCK_ITEM.get())
+        .unlockedBy("has_red_mushroom_block", has(foodblockitemregistry.RED_MUSHROOM_BLOCK_ITEM.get()))
+        .save(output);
+        //smelting
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushregistry.RED_MUSHROOM_MUSH.get()),
+        RecipeCategory.MISC,
+        ingotregistry.RED_MUSHROOM_INGOT.get(),
+        1.0f,
+        200
+        )
+        .unlockedBy("has_red_mushroom_mush", has(mushregistry.RED_MUSHROOM_MUSH.get()))
+        .save(output, "red_mushroom_ingot_from_smelting");
+        //blasting
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushregistry.RED_MUSHROOM_MUSH.get()),
+        RecipeCategory.MISC, 
+        ingotregistry.RED_MUSHROOM_INGOT.get(), 
+        1.0f, 
+        100
+        )
+        .unlockedBy("has_red_mushroom_mush", has(mushregistry.RED_MUSHROOM_MUSH.get()))
+        .save(output, "red_mushroom_ingot_from_blasting");
+      //pumpkin
+        //packing
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.PUMPKIN_INGOT.get())
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', nuggetregistry.PUMPKIN_NUGGET.get())
+        .unlockedBy("has_pumpkin_nugget", has(nuggetregistry.PUMPKIN_NUGGET.get()))
+        .save(output, "pumpkin_ingot_from_crafting");
+        //unpacking
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.PUMPKIN_INGOT.get(), 9)
+        .requires(foodblockitemregistry.PUMPKIN_BLOCK_ITEM.get())
+        .unlockedBy("has_pumpkin_block", has(foodblockitemregistry.PUMPKIN_BLOCK_ITEM.get()))
+        .save(output);
+        //smelting
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushregistry.PUMPKIN_MUSH.get()),
+        RecipeCategory.MISC,
+        ingotregistry.PUMPKIN_INGOT.get(),
+        1.0f,
+        200
+        )
+        .unlockedBy("has_pumpkin_mush", has(mushregistry.PUMPKIN_MUSH.get()))
+        .save(output, "pumpkin_ingot_from_smelting");
+        //blasting
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushregistry.PUMPKIN_MUSH.get()),
+        RecipeCategory.MISC, 
+        ingotregistry.PUMPKIN_INGOT.get(), 
+        1.0f, 
+        100
+        )
+        .unlockedBy("has_pumpkin_mush", has(mushregistry.PUMPKIN_MUSH.get()))
+        .save(output, "pumpkin_ingot_from_blasting");
+      //chicken
+       //packing
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.CHICKEN_INGOT.get())
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', nuggetregistry.CHICKEN_NUGGET.get())
+        .unlockedBy("has_chicken_nugget", has(nuggetregistry.CHICKEN_NUGGET.get()))
+        .save(output, "chicken_ingot_from_crafting");
+       //unpacking
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.CHICKEN_INGOT.get(), 9)
+        .requires(foodblockitemregistry.CHICKEN_BLOCK_ITEM.get())
+        .unlockedBy("has_chicken_block", has(foodblockitemregistry.CHICKEN_BLOCK_ITEM.get()))
+        .save(output);
+       //smelting
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushregistry.GROUND_CHICKEN.get()),
+        RecipeCategory.MISC,
+        ingotregistry.CHICKEN_INGOT.get(),
+        1.0f,
+        200
+        )
+        .unlockedBy("has_ground_chicken", has(mushregistry.GROUND_CHICKEN.get()))
+        .save(output, "chicken_ingot_from_smelting");
+       //blasting
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushregistry.GROUND_CHICKEN.get()),
+        RecipeCategory.MISC, 
+        ingotregistry.CHICKEN_INGOT.get(), 
+        1.0f, 
+        100
+        )
+        .unlockedBy("has_ground_chicken", has(mushregistry.GROUND_CHICKEN.get()))
+        .save(output, "chicken_ingot_from_blasting");
+      //cod
+       //packing
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.COD_INGOT.get())
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', nuggetregistry.COD_NUGGET.get())
+        .unlockedBy("has_cod_nugget", has(nuggetregistry.COD_NUGGET.get()))
+        .save(output, "cod_ingot_from_crafting");
+       //unpacking
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.COD_INGOT.get(), 9)
+        .requires(foodblockitemregistry.COD_BLOCK_ITEM.get())
+        .unlockedBy("has_cod_block", has(foodblockitemregistry.COD_BLOCK_ITEM.get()))
+        .save(output);
+       //smelting
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushregistry.GROUND_COD.get()),
+        RecipeCategory.MISC,
+        ingotregistry.COD_INGOT.get(),
+        1.0f,
+        200
+        )
+        .unlockedBy("has_ground_cod", has(mushregistry.GROUND_COD.get()))
+        .save(output, "cod_ingot_from_smelting");
+       //blasting
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushregistry.GROUND_COD.get()),
+        RecipeCategory.MISC, 
+        ingotregistry.COD_INGOT.get(), 
+        1.0f, 
+        100
+        )
+        .unlockedBy("has_ground_cod", has(mushregistry.GROUND_COD.get()))
+        .save(output, "cod_ingot_from_blasting");
+      //salmon
+       //packing
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.SALMON_INGOT.get())
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', nuggetregistry.SALMON_NUGGET.get())
+        .unlockedBy("has_salmon_nugget", has(nuggetregistry.SALMON_NUGGET.get()))
+        .save(output, "salmon_ingot_from_crafting");
+       //unpacking
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.SALMON_INGOT.get(), 9)
+        .requires(foodblockitemregistry.SALMON_BLOCK_ITEM.get())
+        .unlockedBy("has_salmon_block", has(foodblockitemregistry.SALMON_BLOCK_ITEM.get()))
+        .save(output);
+       //smelting
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushregistry.GROUND_SALMON.get()),
+        RecipeCategory.MISC,
+        ingotregistry.SALMON_INGOT.get(),
+        1.0f,
+        200
+        )
+        .unlockedBy("has_ground_salmon", has(mushregistry.GROUND_SALMON.get()))
+        .save(output, "salmon_ingot_from_smelting");
+       //blasting
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushregistry.GROUND_SALMON.get()),
+        RecipeCategory.MISC, 
+        ingotregistry.SALMON_INGOT.get(), 
+        1.0f, 
+        100
+        )
+        .unlockedBy("has_ground_salmon", has(mushregistry.GROUND_SALMON.get()))
+        .save(output, "salmon_ingot_from_blasting");
+      //tropical_fish
+       //packing
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.TROPICAL_FISH_INGOT.get())
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', nuggetregistry.TROPICAL_FISH_NUGGET.get())
+        .unlockedBy("has_tropical_fish_nugget", has(nuggetregistry.TROPICAL_FISH_NUGGET.get()))
+        .save(output, "tropical_fish_ingot_from_crafting");
+       //unpacking
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.TROPICAL_FISH_INGOT.get(), 9)
+        .requires(foodblockitemregistry.TROPICAL_FISH_BLOCK_ITEM.get())
+        .unlockedBy("has_tropical_fish_block", has(foodblockitemregistry.TROPICAL_FISH_BLOCK_ITEM.get()))
+        .save(output);
+       //smelting
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushregistry.GROUND_TROPICAL_FISH.get()),
+        RecipeCategory.MISC,
+        ingotregistry.TROPICAL_FISH_INGOT.get(),
+        1.0f,
+        200
+        )
+        .unlockedBy("has_ground_tropical_fish", has(mushregistry.GROUND_TROPICAL_FISH.get()))
+        .save(output, "tropical_fish_ingot_from_smelting");
+       //blasting
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushregistry.GROUND_TROPICAL_FISH.get()),
+        RecipeCategory.MISC, 
+        ingotregistry.TROPICAL_FISH_INGOT.get(), 
+        1.0f, 
+        100
+       )
+       .unlockedBy("has_ground_tropical_fish", has(mushregistry.GROUND_TROPICAL_FISH.get()))
+       .save(output, "tropical_fish_ingot_from_blasting");
+      //mutton
+       //packing
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.MUTTON_INGOT.get())
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', nuggetregistry.MUTTON_NUGGET.get())
+        .unlockedBy("has_mutton_nugget", has(nuggetregistry.MUTTON_NUGGET.get()))
+        .save(output, "mutton_ingot_from_crafting");
+       //unpacking
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.MUTTON_INGOT.get(), 9)
+        .requires(foodblockitemregistry.MUTTON_BLOCK_ITEM.get())
+        .unlockedBy("has_mutton_block", has(foodblockitemregistry.MUTTON_BLOCK_ITEM.get()))
+        .save(output);
+       //smelting
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushregistry.GROUND_MUTTON.get()),
+        RecipeCategory.MISC,
+        ingotregistry.MUTTON_INGOT.get(),
+        1.0f,
+        200
+        )
+        .unlockedBy("has_ground_mutton", has(mushregistry.GROUND_MUTTON.get()))
+        .save(output, "mutton_ingot_from_smelting");
+       //blasting
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushregistry.GROUND_MUTTON.get()),
+        RecipeCategory.MISC, 
+        ingotregistry.MUTTON_INGOT.get(), 
+        1.0f, 
+        100
+        )
+        .unlockedBy("has_ground_mutton", has(mushregistry.GROUND_MUTTON.get()))
+        .save(output, "mutton_ingot_from_blasting");
+      //beef
+        //packing
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.BEEF_INGOT.get())
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', nuggetregistry.BEEF_NUGGET.get())
+          .unlockedBy("has_beef_nugget", has(nuggetregistry.BEEF_NUGGET.get()))
+          .save(output, "beef_ingot_from_crafting");
+        //unpacking
+          ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.BEEF_INGOT.get(), 9)
+          .requires(foodblockitemregistry.BEEF_BLOCK_ITEM.get())
+          .unlockedBy("has_beef_block", has(foodblockitemregistry.BEEF_BLOCK_ITEM.get()))
+          .save(output);
+        //smelting
+          SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushregistry.GROUND_BEEF.get()),
+          RecipeCategory.MISC,
+          ingotregistry.BEEF_INGOT.get(),
+          1.0f,
+          200
+          )
+          .unlockedBy("has_ground_beef", has(mushregistry.GROUND_BEEF.get()))
+          .save(output, "beef_ingot_from_smelting");
+        //blasting
+          SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushregistry.GROUND_BEEF.get()),
+          RecipeCategory.MISC, 
+          ingotregistry.BEEF_INGOT.get(), 
+          1.0f, 
+          100
+          )
+          .unlockedBy("has_ground_beef", has(mushregistry.GROUND_BEEF.get()))
+          .save(output, "beef_ingot_from_blasting");
+      //pork
+       //packing
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.PORK_INGOT.get())
+         .pattern("AAA")
+         .pattern("AAA")
+         .pattern("AAA")
+         .define('A', nuggetregistry.PORK_NUGGET.get())
+         .unlockedBy("has_pork_nugget", has(nuggetregistry.PORK_NUGGET.get()))
+         .save(output, "pork_ingot_from_crafting");
+       //unpacking
+         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.PORK_INGOT.get(), 9)
+         .requires(foodblockitemregistry.PORK_BLOCK_ITEM.get())
+         .unlockedBy("has_pork_block", has(foodblockitemregistry.PORK_BLOCK_ITEM.get()))
+         .save(output);
+       //smelting
+         SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushregistry.GROUND_PORK.get()),
+         RecipeCategory.MISC,
+         ingotregistry.PORK_INGOT.get(),
+         1.0f,
+         200
+         )
+         .unlockedBy("has_ground_pork", has(mushregistry.GROUND_PORK.get()))
+         .save(output, "pork_ingot_from_smelting");
+       //blasting
+         SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushregistry.GROUND_PORK.get()),
+         RecipeCategory.MISC, 
+         ingotregistry.PORK_INGOT.get(), 
+         1.0f, 
+         100
+         )
+         .unlockedBy("has_ground_pork", has(mushregistry.GROUND_PORK.get()))
+         .save(output, "pork_ingot_from_blasting");
+      //rabbit
+       //packing
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.RABBIT_INGOT.get())
+         .pattern("AAA")
+         .pattern("AAA")
+         .pattern("AAA")
+         .define('A', nuggetregistry.RABBIT_NUGGET.get())
+         .unlockedBy("has_rabbit_nugget", has(nuggetregistry.RABBIT_NUGGET.get()))
+         .save(output, "rabbit_ingot_from_crafting");
+       //unpacking
+         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.RABBIT_INGOT.get(), 9)
+         .requires(foodblockitemregistry.RABBIT_BLOCK_ITEM.get())
+         .unlockedBy("has_rabbit_block", has(foodblockitemregistry.RABBIT_BLOCK_ITEM.get()))
+         .save(output);
+       //smelting
+         SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushregistry.GROUND_RABBIT.get()),
+         RecipeCategory.MISC,
+         ingotregistry.RABBIT_INGOT.get(),
+         1.0f,
+         200
+         )
+         .unlockedBy("has_ground_rabbit", has(mushregistry.GROUND_RABBIT.get()))
+         .save(output, "rabbit_ingot_from_smelting");
+       //blasting
+         SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushregistry.GROUND_RABBIT.get()),
+         RecipeCategory.MISC, 
+         ingotregistry.RABBIT_INGOT.get(), 
+         1.0f, 
+         100
+         )
+         .unlockedBy("has_ground_rabbit", has(mushregistry.GROUND_RABBIT.get()))
+         .save(output, "rabbit_ingot_from_blasting");
+      //sugar
+       //packing
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.SUGAR_INGOT.get())
+         .pattern("AAA")
+         .pattern("AAA")
+         .pattern("AAA")
+         .define('A', nuggetregistry.SUGAR_NUGGET.get())
+         .unlockedBy("has_sugar_nugget", has(nuggetregistry.SUGAR_NUGGET.get()))
+         .save(output, "sugar_ingot_from_crafting");
+       //unpacking
+         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.SUGAR_INGOT.get(), 9)
+         .requires(foodblockitemregistry.SUGAR_BLOCK_ITEM.get())
+         .unlockedBy("has_sugar_block", has(foodblockitemregistry.SUGAR_BLOCK_ITEM.get()))
+         .save(output);
+       //smelting
+         SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushregistry.SUGAR_PASTE.get()),
+         RecipeCategory.MISC,
+         ingotregistry.SUGAR_INGOT.get(),
+         1.0f,
+         200
+         )
+         .unlockedBy("has_sugar_paste", has(mushregistry.SUGAR_PASTE.get()))
+         .save(output, "sugar_ingot_from_smelting");
+       //blasting
+         SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushregistry.SUGAR_PASTE.get()),
+         RecipeCategory.MISC, 
+         ingotregistry.SUGAR_INGOT.get(), 
+         1.0f, 
+         100
+         )
+         .unlockedBy("has_sugar_paste", has(mushregistry.SUGAR_PASTE.get()))
+         .save(output, "sugar_ingot_from_blasting");
+      };
     }
 }

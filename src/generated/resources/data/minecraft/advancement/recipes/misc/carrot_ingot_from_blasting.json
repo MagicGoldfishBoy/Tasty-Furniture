@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_carrot_mush": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod02tastyfurniture:carrot_mush"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:carrot_ingot_from_blasting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_carrot_mush"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:carrot_ingot_from_blasting"
+    ]
+  }
+}

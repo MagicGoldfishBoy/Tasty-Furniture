@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ground_tropical_fish": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod02tastyfurniture:ground_tropical_fish"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:tropical_fish_ingot_from_smelting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_ground_tropical_fish"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:tropical_fish_ingot_from_smelting"
+    ]
+  }
+}
