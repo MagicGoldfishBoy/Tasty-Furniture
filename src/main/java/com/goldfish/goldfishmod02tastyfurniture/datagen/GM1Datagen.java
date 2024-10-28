@@ -1,23 +1,15 @@
 package com.goldfish.goldfishmod02tastyfurniture.datagen;
 
-import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
-import  com.goldfish.goldfishmod02tastyfurniture.datagen.GM1RecipeProvider;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1RecipeProvider.GM1RecipeProviderConcrete;
-import com.mojang.datafixers.types.templates.List;
 import com.mojang.logging.LogUtils;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 import org.slf4j.Logger;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
-import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
@@ -63,12 +55,10 @@ public class GM1Datagen {
             generator.addProvider(
                 event.includeServer(),
                 new GM1RecipeProviderConcrete(output, lookupProvider));
-            
-
-            
+          
         } catch (Exception e) {
             LOGGER.error("failed to generate recipes");
-        }     
+        }         
  }
 }
 

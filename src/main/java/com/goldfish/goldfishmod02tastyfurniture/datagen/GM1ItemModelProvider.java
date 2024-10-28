@@ -1,19 +1,8 @@
 package com.goldfish.goldfishmod02tastyfurniture.datagen;
 
-import org.apache.commons.compress.archivers.dump.DumpArchiveEntry.TYPE;
-
-import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockitemregistry;
-import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
-
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.ItemDisplayContext;
-import net.minecraft.world.level.ClipContext.Block;
-import net.minecraft.world.level.block.SignBlock;
-import net.minecraft.world.level.block.TrapDoorBlock;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
-import net.neoforged.neoforge.client.model.generators.ModelBuilder;
-import net.neoforged.neoforge.client.model.generators.ModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 
@@ -35,6 +24,10 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       withExistingParent("more_advanced_mush_hammer", mcLoc("item/generated")).texture("layer0", "item/more_advanced_mush_hammer");
 
       withExistingParent("more_advanced_meatgrinder", mcLoc("item/generated")).texture("layer0", "item/more_advanced_meatgrinder");
+
+      withExistingParent("most_advanced_mush_hammer", mcLoc("item/generated")).texture("layer0", "item/most_advanced_mush_hammer");
+
+      withExistingParent("most_advanced_meatgrinder", mcLoc("item/generated")).texture("layer0", "item/most_advanced_meatgrinder");
 
     //-------------------------------------------------------------pastes--------------------------------------------------------------------
 

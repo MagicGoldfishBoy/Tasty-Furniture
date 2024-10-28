@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_meat_grinder": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod02tastyfurniture:most_advanced_meatgrinder"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:ground_salmon_by_most_advanced_meatgrinder"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_meat_grinder"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:ground_salmon_by_most_advanced_meatgrinder"
+    ]
+  }
+}

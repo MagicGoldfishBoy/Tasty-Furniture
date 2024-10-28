@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_most_advanced_mush_hammer": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod02tastyfurniture:most_advanced_mush_hammer"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:glow_berry_mush_by_most_advanced_mush_hammer"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_most_advanced_mush_hammer"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:glow_berry_mush_by_most_advanced_mush_hammer"
+    ]
+  }
+}
