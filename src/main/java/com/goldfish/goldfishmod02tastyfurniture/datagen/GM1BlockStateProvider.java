@@ -8403,6 +8403,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
         //.............melon
+         //small
           smallFoodCabinet melonCabinet = foodblockregistry.SMALL_MELON_CABINET.get();
 
           getVariantBuilder(melonCabinet)
@@ -8418,6 +8419,28 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = open ? modLoc("block/melon_cabinet_open") : modLoc("block/melon_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+         //medium
+          mediumFoodCabinet mediumMelonCabinet = foodblockregistry.MEDIUM_MELON_CABINET.get();
+
+          getVariantBuilder(mediumMelonCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/medium_melon_cabinet_open") : modLoc("block/medium_melon_cabinet");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
