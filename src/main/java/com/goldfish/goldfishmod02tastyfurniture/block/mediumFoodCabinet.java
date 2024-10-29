@@ -55,11 +55,11 @@ public class mediumFoodCabinet extends HorizontalDirectionalBlock implements Ent
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, net.minecraft.world.phys.shapes.CollisionContext context) {
         VoxelShape facing = switch (state.getValue(HORIZONTALFACING)) {
-            case Direction.NORTH -> Shapes.box(0.05, 0.25, 0.50, 0.945, 0.75, 1.0);
-            case EAST -> Shapes.box(0.0, 0.25, 0.05, 0.5, 0.75, 0.945); 
-            case SOUTH -> Shapes.box(0.05, 0.25, 0.0, 0.945, 0.75, 0.50); 
-            case WEST -> Shapes.box(0.50, 0.25, 0.05, 1.0, 0.75, 0.945);
-            default -> Shapes.box(0.05, 0.25, 0.0, 0.945, 0.75, 0.50);
+            case Direction.NORTH -> Shapes.box(0.0, 0.125, 0.125, 1.0, 1.0, 1.0);
+            case EAST -> Shapes.box(0.0, 0.125, 0.0, 0.875, 1.0, 1.0); 
+            case SOUTH -> Shapes.box(0.0, 0.125, 0.0, 1.0, 1.0, 0.875); 
+            case WEST -> Shapes.box(0.125, 0.125, 0.0, 1.0, 1.0, 1.0);
+            default -> Shapes.box(0.0, 0.125, 0.0, 1.0, 1.0, 0.50);
         };
         return facing;
     }
