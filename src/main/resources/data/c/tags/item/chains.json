@@ -1,0 +1,25 @@
+{
+    "replace": false,
+    "values": [
+        "goldfishmod02tastyfurniture:apple_chain_item",
+        "goldfishmod02tastyfurniture:potato_chain_item",
+        "goldfishmod02tastyfurniture:beetroot_chain_item",
+        "goldfishmod02tastyfurniture:carrot_chain_item",
+        "goldfishmod02tastyfurniture:chorus_chain_item",
+        "goldfishmod02tastyfurniture:glow_berry_chain_item",
+        "goldfishmod02tastyfurniture:melon_chain_item",
+        "goldfishmod02tastyfurniture:sweet_berry_chain_item",
+        "goldfishmod02tastyfurniture:brown_mushroom_chain_item",
+        "goldfishmod02tastyfurniture:red_mushroom_chain_item",
+        "goldfishmod02tastyfurniture:pumpkin_chain_item",
+        "goldfishmod02tastyfurniture:chicken_chain_item",
+        "goldfishmod02tastyfurniture:cod_chain_item",
+        "goldfishmod02tastyfurniture:salmon_chain_item",
+        "goldfishmod02tastyfurniture:tropical_fish_chain_item",
+        "goldfishmod02tastyfurniture:mutton_chain_item",
+        "goldfishmod02tastyfurniture:beef_chain_item",
+        "goldfishmod02tastyfurniture:pork_chain_item",
+        "goldfishmod02tastyfurniture:rabbit_chain_item",
+        "goldfishmod02tastyfurniture:sugar_chain_item"
+    ]
+  }

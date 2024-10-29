@@ -1,0 +1,25 @@
+{
+    "replace": false,
+    "values": [
+        "goldfishmod02tastyfurniture:apple_block",
+        "goldfishmod02tastyfurniture:potato_block",
+        "goldfishmod02tastyfurniture:beetroot_block",
+        "goldfishmod02tastyfurniture:carrot_block",
+        "goldfishmod02tastyfurniture:chorus_block",
+        "goldfishmod02tastyfurniture:glow_berry_block",
+        "goldfishmod02tastyfurniture:melon_block",
+        "goldfishmod02tastyfurniture:sweet_berry_block",
+        "goldfishmod02tastyfurniture:brown_mushroom_block",
+        "goldfishmod02tastyfurniture:red_mushroom_block",
+        "goldfishmod02tastyfurniture:pumpkin_block",
+        "goldfishmod02tastyfurniture:chicken_block",
+        "goldfishmod02tastyfurniture:cod_block",
+        "goldfishmod02tastyfurniture:salmon_block",
+        "goldfishmod02tastyfurniture:tropical_fish_block",
+        "goldfishmod02tastyfurniture:mutton_block",
+        "goldfishmod02tastyfurniture:beef_block",
+        "goldfishmod02tastyfurniture:pork_block",
+        "goldfishmod02tastyfurniture:rabbit_block",
+        "goldfishmod02tastyfurniture:sugar_block"
+    ]
+  }

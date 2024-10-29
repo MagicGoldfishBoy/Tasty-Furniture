@@ -1,0 +1,25 @@
+{
+    "replace": false,
+    "values": [
+        "goldfishmod02tastyfurniture:apple_barrel_item",
+        "goldfishmod02tastyfurniture:potato_barrel_item",
+        "goldfishmod02tastyfurniture:beetroot_barrel_item",
+        "goldfishmod02tastyfurniture:carrot_barrel_item",
+        "goldfishmod02tastyfurniture:chorus_barrel_item",
+        "goldfishmod02tastyfurniture:glowberry_barrel_item",
+        "goldfishmod02tastyfurniture:melon_barrel_item",
+        "goldfishmod02tastyfurniture:sweetberry_barrel_item",
+        "goldfishmod02tastyfurniture:brownmushroom_barrel_item",
+        "goldfishmod02tastyfurniture:redmushroom_barrel_item",
+        "goldfishmod02tastyfurniture:pumpkin_barrel_item",
+        "goldfishmod02tastyfurniture:chicken_barrel_item",
+        "goldfishmod02tastyfurniture:cod_barrel_item",
+        "goldfishmod02tastyfurniture:salmon_barrel_item",
+        "goldfishmod02tastyfurniture:tropicalfish_barrel_item",
+        "goldfishmod02tastyfurniture:mutton_barrel_item",
+        "goldfishmod02tastyfurniture:beef_barrel_item",
+        "goldfishmod02tastyfurniture:pork_barrel_item",
+        "goldfishmod02tastyfurniture:rabbit_barrel_item",
+        "goldfishmod02tastyfurniture:sugar_barrel_item"
+    ]
+  }

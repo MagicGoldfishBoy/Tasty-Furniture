@@ -1,0 +1,21 @@
+{
+    "replace": false,
+    "values": [
+        "goldfishmod02tastyfurniture:plain_sugar_glass_pane",
+        "goldfishmod02tastyfurniture:red_sugar_glass_pane",
+        "goldfishmod02tastyfurniture:orange_sugar_glass_pane",
+        "goldfishmod02tastyfurniture:yellow_sugar_glass_pane",
+        "goldfishmod02tastyfurniture:lime_green_sugar_glass_pane",
+        "goldfishmod02tastyfurniture:green_sugar_glass_pane",
+        "goldfishmod02tastyfurniture:cyan_sugar_glass_pane",
+        "goldfishmod02tastyfurniture:light_blue_sugar_glass_pane",
+        "goldfishmod02tastyfurniture:blue_sugar_glass_pane",
+        "goldfishmod02tastyfurniture:purple_sugar_glass_pane",
+        "goldfishmod02tastyfurniture:magenta_sugar_glass_pane",
+        "goldfishmod02tastyfurniture:pink_sugar_glass_pane",
+        "goldfishmod02tastyfurniture:white_sugar_glass_pane",
+        "goldfishmod02tastyfurniture:light_gray_sugar_glass_pane",
+        "goldfishmod02tastyfurniture:gray_sugar_glass_pane",
+        "goldfishmod02tastyfurniture:black_sugar_glass_pane"
+    ]
+  }
