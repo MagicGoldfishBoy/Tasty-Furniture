@@ -5,6 +5,7 @@ import net.minecraft.resources.ResourceLocation;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodChairBlock;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodpathtypeminislab;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
+import com.goldfish.goldfishmod02tastyfurniture.block.mediumFoodCabinet;
 
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.CarpetBlock;
@@ -8132,6 +8133,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
           });
     //---------------------------------------------------------------cabinets-------------------------------------------------------------------------------
         //.............apple
+         //small
           smallFoodCabinet appleCabinet = foodblockregistry.SMALL_APPLE_CABINET.get();
 
           getVariantBuilder(appleCabinet)
@@ -8147,6 +8149,28 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = open ? modLoc("block/apple_cabinet_open") : modLoc("block/apple_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+         //medium
+          mediumFoodCabinet appleMediumCabinet = foodblockregistry.MEDIUM_APPLE_CABINET.get();
+
+          getVariantBuilder(appleMediumCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/medium_apple_cabinet_open") : modLoc("block/medium_apple_cabinet");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))

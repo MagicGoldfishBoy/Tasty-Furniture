@@ -79,6 +79,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           buildToolRecipes(output);
           buildMushRecipes(output);
           buildIngotRecipes(output);
+          buildCabinetRecipes(output);
         //------------------------------------------------------------nuggets---------------------------------------------------------------------
           //sugar_nugget
            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, nuggetregistry.SUGAR_NUGGET.get(), 9)
@@ -5941,15 +5942,6 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .unlockedBy("has_sugar_ingot", has(ingotregistry.SUGAR_INGOT.get()))
            .save(output);
         //-----------------------------------------------------------cabinets----------------------------------------------------------------------
-         //apple
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SMALL_APPLE_CABINET_ITEM.get())
-          .pattern("AAA")
-          .pattern("B B")
-          .pattern("AAA")
-          .define('A', foodblockitemregistry.APPLE_SLAB_ITEM.get())
-          .define('B', Items.IRON_INGOT)
-          .unlockedBy("has_apple_slab", has(foodblockitemregistry.APPLE_SLAB_ITEM.get()))
-          .save(output);
          //potato
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SMALL_POTATO_CABINET_ITEM.get())
           .pattern("AAA")
@@ -7573,6 +7565,28 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          )
          .unlockedBy("has_sugar_paste", has(mushregistry.SUGAR_PASTE.get()))
          .save(output, "sugar_ingot_from_blasting");
+      };
+    protected void buildCabinetRecipes(RecipeOutput output) {
+      //apple
+       //small
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SMALL_APPLE_CABINET_ITEM.get())
+         .pattern("AAA")
+         .pattern("B B")
+         .pattern("AAA")
+         .define('A', foodblockitemregistry.APPLE_SLAB_ITEM.get())
+         .define('B', Items.IRON_INGOT)
+         .unlockedBy("has_apple_slab", has(foodblockitemregistry.APPLE_SLAB_ITEM.get()))
+         .save(output);
+       //medium
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MEDIUM_APPLE_CABINET_ITEM.get())
+         .pattern("AAA")
+         .pattern("BCB")
+         .pattern("AAA")
+         .define('A', foodblockitemregistry.APPLE_SLAB_ITEM.get())
+         .define('B', Items.IRON_INGOT)
+         .define('C', foodblockitemregistry.SMALL_APPLE_CABINET_ITEM.get())
+         .unlockedBy("has_apple_slab", has(foodblockitemregistry.APPLE_SLAB_ITEM.get()))
+         .save(output);
       };
     }
 }
