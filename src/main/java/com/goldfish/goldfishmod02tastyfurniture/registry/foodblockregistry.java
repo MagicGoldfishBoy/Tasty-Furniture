@@ -5675,7 +5675,15 @@ public class foodblockregistry {
      ));
 
    //.........chorus
+    //small
      public static final DeferredHolder<Block, smallFoodCabinet> SMALL_CHORUS_CABINET = FOODBLOCK.register("small_chorus_cabinet", () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     .sound(plant_cabinet_sound)
+     .destroyTime(cabinet_destroy_time)
+     .explosionResistance(cabinet_explosion_resistance)
+     .noOcclusion()
+     ));
+    //medium
+     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_CHORUS_CABINET = FOODBLOCK.register("medium_chorus_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
