@@ -5691,11 +5691,21 @@ public class foodblockregistry {
      ));
 
    //.........glow_berry
+    //small
      public static final DeferredHolder<Block, smallFoodCabinet> SMALL_GLOW_BERRY_CABINET = FOODBLOCK.register("small_glow_berry_cabinet", () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
+     .lightLevel(state  -> 5)
+     ));
+    //medium
+     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_GLOW_BERRY_CABINET = FOODBLOCK.register("medium_glow_berry_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     .sound(plant_cabinet_sound)
+     .destroyTime(cabinet_destroy_time)
+     .explosionResistance(cabinet_explosion_resistance)
+     .noOcclusion()
+     .lightLevel(state  -> 7)
      ));
 
    //.........melon

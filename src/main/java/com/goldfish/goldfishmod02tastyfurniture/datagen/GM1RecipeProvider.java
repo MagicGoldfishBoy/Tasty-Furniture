@@ -5942,15 +5942,6 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .unlockedBy("has_sugar_ingot", has(ingotregistry.SUGAR_INGOT.get()))
            .save(output);
         //-----------------------------------------------------------cabinets----------------------------------------------------------------------
-         //glow_berry
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SMALL_GLOW_BERRY_CABINET_ITEM.get())
-          .pattern("AAA")
-          .pattern("B B")
-          .pattern("AAA")
-          .define('A', foodblockitemregistry.GLOW_BERRY_SLAB_ITEM.get())
-          .define('B', Items.IRON_INGOT)
-          .unlockedBy("has_glow_berry_slab", has(foodblockitemregistry.GLOW_BERRY_SLAB_ITEM.get()))
-          .save(output);
          //melon
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SMALL_MELON_CABINET_ITEM.get())
           .pattern("AAA")
@@ -7630,6 +7621,26 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .define('B', Items.IRON_INGOT)
           .define('C', foodblockitemregistry.SMALL_CHORUS_CABINET_ITEM.get())
           .unlockedBy("has_chorus_slab", has(foodblockitemregistry.CHORUS_SLAB_ITEM.get()))
+          .save(output);
+      //glow_berry
+       //small
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SMALL_GLOW_BERRY_CABINET_ITEM.get())
+          .pattern("AAA")
+          .pattern("B B")
+          .pattern("AAA")
+          .define('A', foodblockitemregistry.GLOW_BERRY_SLAB_ITEM.get())
+          .define('B', Items.IRON_INGOT)
+          .unlockedBy("has_glow_berry_slab", has(foodblockitemregistry.GLOW_BERRY_SLAB_ITEM.get()))
+          .save(output);
+       //medium
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MEDIUM_GLOW_BERRY_CABINET_ITEM.get())
+          .pattern("AAA")
+          .pattern("BCB")
+          .pattern("AAA")
+          .define('A', foodblockitemregistry.GLOW_BERRY_SLAB_ITEM.get())
+          .define('B', Items.IRON_INGOT)
+          .define('C', foodblockitemregistry.SMALL_GLOW_BERRY_CABINET_ITEM.get())
+          .unlockedBy("has_glow_berry_slab", has(foodblockitemregistry.GLOW_BERRY_SLAB_ITEM.get()))
           .save(output);
       };
     }
