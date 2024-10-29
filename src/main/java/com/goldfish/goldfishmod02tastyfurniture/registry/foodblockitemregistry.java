@@ -2292,8 +2292,12 @@ public class foodblockitemregistry {
       public static final DeferredHolder<Item, BlockItem> MEDIUM_MELON_CABINET_ITEM = FOODBLOCKITEM.register("medium_melon_cabinet_item", () -> new BlockItem(foodblockregistry.MEDIUM_MELON_CABINET.get(),
       new BlockItem.Properties()));
    //.........sweet_berry
-    public static final DeferredHolder<Item, BlockItem> SMALL_SWEET_BERRY_CABINET_ITEM = FOODBLOCKITEM.register("small_sweet_berry_cabinet_item", () -> new BlockItem(foodblockregistry.SMALL_SWEET_BERRY_CABINET.get(),
-    new BlockItem.Properties()));
+    //small
+      public static final DeferredHolder<Item, BlockItem> SMALL_SWEET_BERRY_CABINET_ITEM = FOODBLOCKITEM.register("small_sweet_berry_cabinet_item", () -> new BlockItem(foodblockregistry.SMALL_SWEET_BERRY_CABINET.get(),
+      new BlockItem.Properties()));
+    //medium
+      public static final DeferredHolder<Item, BlockItem> MEDIUM_SWEET_BERRY_CABINET_ITEM = FOODBLOCKITEM.register("medium_sweet_berry_cabinet_item", () -> new BlockItem(foodblockregistry.MEDIUM_SWEET_BERRY_CABINET.get(),
+      new BlockItem.Properties()));
    //.........brown_mushroom
     public static final DeferredHolder<Item, BlockItem> SMALL_BROWN_MUSHROOM_CABINET_ITEM = FOODBLOCKITEM.register("small_brown_mushroom_cabinet_item", () -> new BlockItem(foodblockregistry.SMALL_BROWN_MUSHROOM_CABINET.get(),
     new BlockItem.Properties()));
