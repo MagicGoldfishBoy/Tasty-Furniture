@@ -2257,8 +2257,12 @@ public class foodblockitemregistry {
       public static final DeferredHolder<Item, BlockItem> MEDIUM_POTATO_CABINET_ITEM = FOODBLOCKITEM.register("medium_potato_cabinet_item", () -> new BlockItem(foodblockregistry.MEDIUM_POTATO_CABINET.get(),
       new BlockItem.Properties()));
    //.........beetroot
-    public static final DeferredHolder<Item, BlockItem> SMALL_BEETROOT_CABINET_ITEM = FOODBLOCKITEM.register("small_beetroot_cabinet_item", () -> new BlockItem(foodblockregistry.SMALL_BEETROOT_CABINET.get(),
-    new BlockItem.Properties()));
+    //small
+      public static final DeferredHolder<Item, BlockItem> SMALL_BEETROOT_CABINET_ITEM = FOODBLOCKITEM.register("small_beetroot_cabinet_item", () -> new BlockItem(foodblockregistry.SMALL_BEETROOT_CABINET.get(),
+      new BlockItem.Properties()));
+    //medium
+      public static final DeferredHolder<Item, BlockItem> MEDIUM_BEETROOT_CABINET_ITEM = FOODBLOCKITEM.register("medium_beetroot_cabinet_item", () -> new BlockItem(foodblockregistry.MEDIUM_BEETROOT_CABINET.get(),
+      new BlockItem.Properties()));
    //.........carrot
     public static final DeferredHolder<Item, BlockItem> SMALL_CARROT_CABINET_ITEM = FOODBLOCKITEM.register("small_carrot_cabinet_item", () -> new BlockItem(foodblockregistry.SMALL_CARROT_CABINET.get(),
     new BlockItem.Properties()));
