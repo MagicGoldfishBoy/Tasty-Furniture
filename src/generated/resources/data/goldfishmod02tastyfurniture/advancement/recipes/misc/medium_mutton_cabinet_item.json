@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mutton_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod02tastyfurniture:mutton_slab_item"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "goldfishmod02tastyfurniture:medium_mutton_cabinet_item"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mutton_slab"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "goldfishmod02tastyfurniture:medium_mutton_cabinet_item"
+    ]
+  }
+}

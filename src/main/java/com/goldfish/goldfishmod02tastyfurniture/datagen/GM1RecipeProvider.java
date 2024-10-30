@@ -5941,15 +5941,6 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .unlockedBy("has_sugar_ingot", has(ingotregistry.SUGAR_INGOT.get()))
            .save(output);
         //-----------------------------------------------------------cabinets----------------------------------------------------------------------
-         //mutton
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SMALL_MUTTON_CABINET_ITEM.get())
-          .pattern("AAA")
-          .pattern("B B")
-          .pattern("AAA")
-          .define('A', foodblockitemregistry.MUTTON_SLAB_ITEM.get())
-          .define('B', Items.IRON_INGOT)
-          .unlockedBy("has_mutton_slab", has(foodblockitemregistry.MUTTON_SLAB_ITEM.get()))
-          .save(output);
          //beef
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SMALL_BEEF_CABINET_ITEM.get())
           .pattern("AAA")
@@ -7739,6 +7730,26 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .define('B', Items.IRON_INGOT)
           .define('C', foodblockitemregistry.SMALL_TROPICAL_FISH_CABINET_ITEM.get())
           .unlockedBy("has_tropical_fish_slab", has(foodblockitemregistry.TROPICAL_FISH_SLAB_ITEM.get()))
+          .save(output);
+      //mutton
+        //small
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SMALL_MUTTON_CABINET_ITEM.get())
+          .pattern("AAA")
+          .pattern("B B")
+          .pattern("AAA")
+          .define('A', foodblockitemregistry.MUTTON_SLAB_ITEM.get())
+          .define('B', Items.IRON_INGOT)
+          .unlockedBy("has_mutton_slab", has(foodblockitemregistry.MUTTON_SLAB_ITEM.get()))
+          .save(output);
+        //medium
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MEDIUM_MUTTON_CABINET_ITEM.get())
+          .pattern("AAA")
+          .pattern("BCB")
+          .pattern("AAA")
+          .define('A', foodblockitemregistry.MUTTON_SLAB_ITEM.get())
+          .define('B', Items.IRON_INGOT)
+          .define('C', foodblockitemregistry.SMALL_MUTTON_CABINET_ITEM.get())
+          .unlockedBy("has_mutton_slab", has(foodblockitemregistry.MUTTON_SLAB_ITEM.get()))
           .save(output);
       };
     }
