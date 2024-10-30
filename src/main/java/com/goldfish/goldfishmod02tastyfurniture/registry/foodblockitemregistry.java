@@ -2376,6 +2376,10 @@ public class foodblockitemregistry {
       public static final DeferredHolder<Item, BlockItem> MEDIUM_RABBIT_CABINET_ITEM = FOODBLOCKITEM.register("medium_rabbit_cabinet_item", () -> new BlockItem(foodblockregistry.MEDIUM_RABBIT_CABINET.get(),
       new BlockItem.Properties()));
    //.........sugar
-    public static final DeferredHolder<Item, BlockItem> SMALL_SUGAR_CABINET_ITEM = FOODBLOCKITEM.register("small_sugar_cabinet_item", () -> new BlockItem(foodblockregistry.SMALL_SUGAR_CABINET.get(),
-    new BlockItem.Properties()));
+    //small
+      public static final DeferredHolder<Item, BlockItem> SMALL_SUGAR_CABINET_ITEM = FOODBLOCKITEM.register("small_sugar_cabinet_item", () -> new BlockItem(foodblockregistry.SMALL_SUGAR_CABINET.get(),
+      new BlockItem.Properties()));
+    //medium
+      public static final DeferredHolder<Item, BlockItem> MEDIUM_SUGAR_CABINET_ITEM = FOODBLOCKITEM.register("medium_sugar_cabinet_item", () -> new BlockItem(foodblockregistry.MEDIUM_SUGAR_CABINET.get(),
+      new BlockItem.Properties()));
 }

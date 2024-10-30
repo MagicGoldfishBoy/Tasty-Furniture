@@ -5916,7 +5916,16 @@ public class foodblockregistry {
      .noOcclusion()
      ));
    //.........sugar
+    //small
      public static final DeferredHolder<Block, smallFoodCabinet> SMALL_SUGAR_CABINET = FOODBLOCK.register("small_sugar_cabinet", () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     .sound(crystal_cabinet_sound)
+     .destroyTime(cabinet_destroy_time)
+     .explosionResistance(cabinet_explosion_resistance)
+     .noOcclusion()
+     ));
+   //.........sugar
+    //medium
+     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_SUGAR_CABINET = FOODBLOCK.register("medium_sugar_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(crystal_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
@@ -5935,6 +5944,6 @@ public class foodblockregistry {
      () -> BlockEntityType.Builder.of(mediumFoodContainerEntity::new, MEDIUM_APPLE_CABINET.get(), MEDIUM_POTATO_CABINET.get(), MEDIUM_BEETROOT_CABINET.get(), MEDIUM_CARROT_CABINET.get(), 
      MEDIUM_CHORUS_CABINET.get(), MEDIUM_GLOW_BERRY_CABINET.get(), MEDIUM_MELON_CABINET.get(), MEDIUM_SWEET_BERRY_CABINET.get(), MEDIUM_BROWN_MUSHROOM_CABINET.get(), 
      MEDIUM_RED_MUSHROOM_CABINET.get(), MEDIUM_PUMPKIN_CABINET.get(), MEDIUM_CHICKEN_CABINET.get(), MEDIUM_COD_CABINET.get(), MEDIUM_SALMON_CABINET.get(), MEDIUM_TROPICAL_FISH_CABINET.get(), 
-     MEDIUM_MUTTON_CABINET.get(), MEDIUM_BEEF_CABINET.get(), MEDIUM_PORK_CABINET.get(), MEDIUM_RABBIT_CABINET.get()).build(null));
+     MEDIUM_MUTTON_CABINET.get(), MEDIUM_BEEF_CABINET.get(), MEDIUM_PORK_CABINET.get(), MEDIUM_RABBIT_CABINET.get(), MEDIUM_SUGAR_CABINET.get()).build(null));
 
 }
