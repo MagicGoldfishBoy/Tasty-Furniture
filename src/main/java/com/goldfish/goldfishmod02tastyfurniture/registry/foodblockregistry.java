@@ -5837,7 +5837,15 @@ public class foodblockregistry {
      ));
 
    //.........tropical_fish
+    //small
      public static final DeferredHolder<Block, smallFoodCabinet> SMALL_TROPICAL_FISH_CABINET = FOODBLOCK.register("small_tropical_fish_cabinet", () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     .sound(plant_cabinet_sound)
+     .destroyTime(cabinet_destroy_time)
+     .explosionResistance(cabinet_explosion_resistance)
+     .noOcclusion()
+     ));
+    //medium
+     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_TROPICAL_FISH_CABINET = FOODBLOCK.register("medium_tropical_fish_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
@@ -5894,6 +5902,6 @@ public class foodblockregistry {
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<mediumFoodContainerEntity>> MEDIUM_CABINET_ENTITY = FOODBLOCKENTITY.register("medium_cabinet_entity",
      () -> BlockEntityType.Builder.of(mediumFoodContainerEntity::new, MEDIUM_APPLE_CABINET.get(), MEDIUM_POTATO_CABINET.get(), MEDIUM_BEETROOT_CABINET.get(), MEDIUM_CARROT_CABINET.get(), 
      MEDIUM_CHORUS_CABINET.get(), MEDIUM_GLOW_BERRY_CABINET.get(), MEDIUM_MELON_CABINET.get(), MEDIUM_SWEET_BERRY_CABINET.get(), MEDIUM_BROWN_MUSHROOM_CABINET.get(), 
-     MEDIUM_RED_MUSHROOM_CABINET.get(), MEDIUM_PUMPKIN_CABINET.get(), MEDIUM_CHICKEN_CABINET.get(), MEDIUM_COD_CABINET.get()).build(null));
+     MEDIUM_RED_MUSHROOM_CABINET.get(), MEDIUM_PUMPKIN_CABINET.get(), MEDIUM_CHICKEN_CABINET.get(), MEDIUM_COD_CABINET.get(), MEDIUM_SALMON_CABINET.get(), MEDIUM_TROPICAL_FISH_CABINET.get()).build(null));
 
 }

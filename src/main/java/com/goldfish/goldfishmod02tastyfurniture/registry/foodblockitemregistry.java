@@ -2341,8 +2341,12 @@ public class foodblockitemregistry {
       public static final DeferredHolder<Item, BlockItem> MEDIUM_SALMON_CABINET_ITEM = FOODBLOCKITEM.register("medium_salmon_cabinet_item", () -> new BlockItem(foodblockregistry.MEDIUM_SALMON_CABINET.get(),
       new BlockItem.Properties()));
    //.........tropical_fish
-    public static final DeferredHolder<Item, BlockItem> SMALL_TROPICAL_FISH_CABINET_ITEM = FOODBLOCKITEM.register("small_tropical_fish_cabinet_item", () -> new BlockItem(foodblockregistry.SMALL_TROPICAL_FISH_CABINET.get(),
-    new BlockItem.Properties()));
+    //small
+      public static final DeferredHolder<Item, BlockItem> SMALL_TROPICAL_FISH_CABINET_ITEM = FOODBLOCKITEM.register("small_tropical_fish_cabinet_item", () -> new BlockItem(foodblockregistry.SMALL_TROPICAL_FISH_CABINET.get(),
+      new BlockItem.Properties()));
+    //medium
+      public static final DeferredHolder<Item, BlockItem> MEDIUM_TROPICAL_FISH_CABINET_ITEM = FOODBLOCKITEM.register("medium_tropical_fish_cabinet_item", () -> new BlockItem(foodblockregistry.MEDIUM_TROPICAL_FISH_CABINET.get(),
+      new BlockItem.Properties()));
    //.........mutton
     public static final DeferredHolder<Item, BlockItem> SMALL_MUTTON_CABINET_ITEM = FOODBLOCKITEM.register("small_mutton_cabinet_item", () -> new BlockItem(foodblockregistry.SMALL_MUTTON_CABINET.get(),
     new BlockItem.Properties()));
