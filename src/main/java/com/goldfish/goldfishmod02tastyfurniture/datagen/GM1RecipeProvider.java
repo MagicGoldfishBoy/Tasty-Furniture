@@ -5941,15 +5941,6 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .unlockedBy("has_sugar_ingot", has(ingotregistry.SUGAR_INGOT.get()))
            .save(output);
         //-----------------------------------------------------------cabinets----------------------------------------------------------------------
-         //rabbit
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SMALL_RABBIT_CABINET_ITEM.get())
-          .pattern("AAA")
-          .pattern("B B")
-          .pattern("AAA")
-          .define('A', foodblockitemregistry.RABBIT_SLAB_ITEM.get())
-          .define('B', Items.IRON_INGOT)
-          .unlockedBy("has_rabbit_slab", has(foodblockitemregistry.RABBIT_SLAB_ITEM.get()))
-          .save(output);
          //sugar
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SMALL_SUGAR_CABINET_ITEM.get())
           .pattern("AAA")
@@ -7772,6 +7763,26 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .define('B', Items.IRON_INGOT)
           .define('C', foodblockitemregistry.SMALL_PORK_CABINET_ITEM.get())
           .unlockedBy("has_pork_slab", has(foodblockitemregistry.PORK_SLAB_ITEM.get()))
+          .save(output);
+      //rabbit
+        //small
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SMALL_RABBIT_CABINET_ITEM.get())
+          .pattern("AAA")
+          .pattern("B B")
+          .pattern("AAA")
+          .define('A', foodblockitemregistry.RABBIT_SLAB_ITEM.get())
+          .define('B', Items.IRON_INGOT)
+          .unlockedBy("has_rabbit_slab", has(foodblockitemregistry.RABBIT_SLAB_ITEM.get()))
+          .save(output);
+        //medium
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MEDIUM_RABBIT_CABINET_ITEM.get())
+          .pattern("AAA")
+          .pattern("BCB")
+          .pattern("AAA")
+          .define('A', foodblockitemregistry.RABBIT_SLAB_ITEM.get())
+          .define('B', Items.IRON_INGOT)
+          .define('C', foodblockitemregistry.SMALL_RABBIT_CABINET_ITEM.get())
+          .unlockedBy("has_rabbit_slab", has(foodblockitemregistry.RABBIT_SLAB_ITEM.get()))
           .save(output);
       };
     }
