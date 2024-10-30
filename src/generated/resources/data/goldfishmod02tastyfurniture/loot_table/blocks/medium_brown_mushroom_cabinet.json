@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "goldfishmod02tastyfurniture:medium_brown_mushroom_cabinet_item"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "goldfishmod02tastyfurniture:blocks/medium_brown_mushroom_cabinet"
+}
