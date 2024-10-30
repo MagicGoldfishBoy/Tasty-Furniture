@@ -5941,15 +5941,6 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .unlockedBy("has_sugar_ingot", has(ingotregistry.SUGAR_INGOT.get()))
            .save(output);
         //-----------------------------------------------------------cabinets----------------------------------------------------------------------
-         //chicken
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SMALL_CHICKEN_CABINET_ITEM.get())
-          .pattern("AAA")
-          .pattern("B B")
-          .pattern("AAA")
-          .define('A', foodblockitemregistry.CHICKEN_SLAB_ITEM.get())
-          .define('B', Items.IRON_INGOT)
-          .unlockedBy("has_chicken_slab", has(foodblockitemregistry.CHICKEN_SLAB_ITEM.get()))
-          .save(output);
          //cod
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SMALL_COD_CABINET_ITEM.get())
           .pattern("AAA")
@@ -7695,6 +7686,26 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .define('B', Items.IRON_INGOT)
           .define('C', foodblockitemregistry.SMALL_PUMPKIN_CABINET_ITEM.get())
           .unlockedBy("has_pumpkin_slab", has(foodblockitemregistry.PUMPKIN_SLAB_ITEM.get()))
+          .save(output);
+      //chicken
+       //small
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SMALL_CHICKEN_CABINET_ITEM.get())
+          .pattern("AAA")
+          .pattern("B B")
+          .pattern("AAA")
+          .define('A', foodblockitemregistry.CHICKEN_SLAB_ITEM.get())
+          .define('B', Items.IRON_INGOT)
+          .unlockedBy("has_chicken_slab", has(foodblockitemregistry.CHICKEN_SLAB_ITEM.get()))
+          .save(output);
+       //medium
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MEDIUM_CHICKEN_CABINET_ITEM.get())
+          .pattern("AAA")
+          .pattern("BCB")
+          .pattern("AAA")
+          .define('A', foodblockitemregistry.CHICKEN_SLAB_ITEM.get())
+          .define('B', Items.IRON_INGOT)
+          .define('C', foodblockitemregistry.SMALL_CHICKEN_CABINET_ITEM.get())
+          .unlockedBy("has_chicken_slab", has(foodblockitemregistry.CHICKEN_SLAB_ITEM.get()))
           .save(output);
       };
     }

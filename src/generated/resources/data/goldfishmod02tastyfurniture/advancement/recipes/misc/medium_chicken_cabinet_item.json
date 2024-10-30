@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chicken_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod02tastyfurniture:chicken_slab_item"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "goldfishmod02tastyfurniture:medium_chicken_cabinet_item"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_chicken_slab"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "goldfishmod02tastyfurniture:medium_chicken_cabinet_item"
+    ]
+  }
+}

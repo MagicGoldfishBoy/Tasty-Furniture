@@ -8628,6 +8628,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
         //.............chicken
+         //small
           smallFoodCabinet chickenCabinet = foodblockregistry.SMALL_CHICKEN_CABINET.get();
 
           getVariantBuilder(chickenCabinet)
@@ -8643,6 +8644,28 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = open ? modLoc("block/chicken_cabinet_open") : modLoc("block/chicken_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+         //medium
+          mediumFoodCabinet mediumChickenCabinet = foodblockregistry.MEDIUM_CHICKEN_CABINET.get();
+
+          getVariantBuilder(mediumChickenCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/medium_chicken_cabinet_open") : modLoc("block/medium_chicken_cabinet");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
