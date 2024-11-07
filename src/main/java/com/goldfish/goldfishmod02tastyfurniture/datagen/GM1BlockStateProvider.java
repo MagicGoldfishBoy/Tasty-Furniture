@@ -317,6 +317,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           net.minecraft.world.level.block.Block sugar_tile_block = foodblockregistry.SUGAR_TILE_BLOCK.get();
           ResourceLocation sugar_tile_texture = modLoc("block/sugar_tile_block");
           horizontalBlock(sugar_tile_block, sugar_tile_texture, sugar_tile_texture, sugar_tile_texture);
+      //.........honeycomb
+          net.minecraft.world.level.block.Block honeycomb_tile_block = foodblockregistry.HONEYCOMB_TILE_BLOCK.get();
+          ResourceLocation honeycomb_tile_texture = modLoc("block/honeycomb_tile_block");
+          horizontalBlock(honeycomb_tile_block, honeycomb_tile_texture, honeycomb_tile_texture, honeycomb_tile_texture);
 
     //----------------------------------------------------------------doors-------------------------------------------------------------------------------
       //.........glow berry
