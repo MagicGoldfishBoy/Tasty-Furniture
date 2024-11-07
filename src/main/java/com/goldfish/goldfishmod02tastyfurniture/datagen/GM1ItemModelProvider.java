@@ -465,6 +465,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        slab("rabbit_slab_item", modLoc("block/rabbit_block"), modLoc("block/rabbit_block"), modLoc("block/rabbit_block"));
       //..............sugar
        slab("sugar_slab_item", modLoc("block/sugar_block"), modLoc("block/sugar_block"), modLoc("block/sugar_block"));
+      //..............honeycomb
+       slab("processed_honeycomb_slab_item", modLoc("block/processed_honeycomb_block"), modLoc("block/processed_honeycomb_block"), modLoc("block/processed_honeycomb_block"));
 
      //_________________________________________________________Bricks Slabs_________________________________________________________________
       //..............apple

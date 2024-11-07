@@ -632,6 +632,18 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.SUGAR_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.SUGAR_CHISELED_BLOCK_ITEM.get())
             .unlockedBy("has_sugar_block", has(foodblockitemregistry.SUGAR_BLOCK_ITEM.get()))
             .save(output, "sugar_chiseled_block_from_sugar_block_stonecutting");
+          //.........honeycomb
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.HONEYCOMB_CHISELED_BLOCK_ITEM.get())
+            .pattern("   ")
+            .pattern(" A ")
+            .pattern(" A ")
+            .define('A', foodblockitemregistry.PROCESSED_HONEYCOMB_SLAB_ITEM.get())
+            .unlockedBy("has_honeycomb_slab", has(foodblockitemregistry.PROCESSED_HONEYCOMB_SLAB_ITEM.get()))
+            .save(output);
+
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.PROCESSED_HONEYCOMB_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.HONEYCOMB_CHISELED_BLOCK_ITEM.get())
+            .unlockedBy("has_honeycomb_block", has(foodblockitemregistry.PROCESSED_HONEYCOMB_BLOCK_ITEM.get()))
+            .save(output, "honeycomb_chiseled_block_from_honeycomb_block_stonecutting");
 
          //_____________________________________________________________tile______________________________________________________________________
 
@@ -894,6 +906,19 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.SUGAR_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.SUGAR_TILE_BLOCK_ITEM.get())
             .unlockedBy("has_sugar_block", has(foodblockitemregistry.SUGAR_BLOCK_ITEM.get()))
             .save(output, "sugar_tile_block_from_sugar_block_stonecutting");
+
+          //.........honeycomb
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.HONEYCOMB_TILE_BLOCK_ITEM.get(),2)
+            .pattern("   ")
+            .pattern("AA ")
+            .pattern("AA ")
+            .define('A', foodblockitemregistry.PROCESSED_HONEYCOMB_SLAB_ITEM.get())
+            .unlockedBy("has_honeycomb_slab", has(foodblockitemregistry.PROCESSED_HONEYCOMB_SLAB_ITEM.get()))
+            .save(output);
+
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.PROCESSED_HONEYCOMB_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.HONEYCOMB_TILE_BLOCK_ITEM.get())
+            .unlockedBy("has_honeycomb_block", has(foodblockitemregistry.PROCESSED_HONEYCOMB_BLOCK_ITEM.get()))
+            .save(output, "honeycomb_tile_block_from_honeycomb_block_stonecutting");
 
 
 
@@ -1783,6 +1808,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .pattern("AAA")
               .define('A', ingotregistry.SUGAR_INGOT.get())
               .unlockedBy("has_sugar_ingot", has(ingotregistry.SUGAR_INGOT.get()))
+              .save(output);
+            //honeycomb
+              ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PROCESSED_HONEYCOMB_SLAB_ITEM.get())
+              .pattern("   ")
+              .pattern("   ")
+              .pattern("AAA")
+              .define('A', ingotregistry.HONEYCOMB_INGOT.get())
+              .unlockedBy("has_honeycomb_ingot", has(ingotregistry.HONEYCOMB_INGOT.get()))
               .save(output);
 
         //________________________________________________________Bricks Slabs__________________________________________________________________
