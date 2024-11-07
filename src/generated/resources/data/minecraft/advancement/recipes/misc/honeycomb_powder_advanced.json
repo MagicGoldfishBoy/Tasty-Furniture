@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_honeycomb": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:honeycomb"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_mush_hammer": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod02tastyfurniture:advanced_mush_hammer"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:honeycomb_powder_advanced"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mush_hammer",
+      "has_honeycomb"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:honeycomb_powder_advanced"
+    ]
+  }
+}

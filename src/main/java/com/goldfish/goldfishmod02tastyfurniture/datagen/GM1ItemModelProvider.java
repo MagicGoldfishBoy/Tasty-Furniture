@@ -32,12 +32,20 @@ public class GM1ItemModelProvider extends ItemModelProvider {
     //-------------------------------------------------------------pastes--------------------------------------------------------------------
 
       withExistingParent("sugar_paste", mcLoc("item/generated")).texture("layer0", "item/sugar_paste");
+
+    //-------------------------------------------------------------powders--------------------------------------------------------------------
+
+      withExistingParent("honeycomb_powder", mcLoc("item/generated")).texture("layer0", "item/honeycomb_powder");
     //-------------------------------------------------------------ingots--------------------------------------------------------------------
-     
+     //sugar
       withExistingParent("sugar_ingot", mcLoc("item/generated")).texture("layer0", "item/sugar_ingot");
+     //honeycomb
+      withExistingParent("honeycomb_ingot", mcLoc("item/generated")).texture("layer0", "item/honeycomb_ingot");
     //-------------------------------------------------------------nuggets--------------------------------------------------------------------
-     
+     //sugar
       withExistingParent("sugar_nugget", mcLoc("item/generated")).texture("layer0", "item/sugar_nugget");
+     //honeycomb
+      withExistingParent("honeycomb_nugget", mcLoc("item/generated")).texture("layer0", "item/honeycomb_nugget");
     //-------------------------------------------------------------blocks--------------------------------------------------------------------
      //___________________________________________________________regular_____________________________________________________________________
       //.........sugar

@@ -111,6 +111,10 @@ public class mushregistry {
                 () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
                 .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
 
+        public static final DeferredHolder<Item, Item> HONEYCOMB_POWDER = MUSH.register("honeycomb_powder",
+               () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+               .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
+
        public static final Supplier<Item> meatgrinder = MUSH.register("meatgrinder", () -> new meatgrinder((new Item.Properties().stacksTo(1))));
 
        public static final Supplier<Item> advanced_meatgrinder = MUSH.register("advanced_meatgrinder", () -> new meatgrinder((new Item.Properties().stacksTo(1))));

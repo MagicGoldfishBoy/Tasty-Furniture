@@ -85,6 +85,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .requires(ingotregistry.SUGAR_INGOT.get())
            .unlockedBy("has_sugar_ingot", has(ingotregistry.SUGAR_INGOT.get()))
            .save(output);
+          //honeycomb_nugget
+           ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, nuggetregistry.HONEYCOMB_NUGGET.get(), 9)
+           .requires(ingotregistry.HONEYCOMB_INGOT.get())
+           .unlockedBy("has_honeycomb_ingot", has(ingotregistry.HONEYCOMB_INGOT.get()))
+           .save(output);
         //-------------------------------------------------------------blocks---------------------------------------------------------------------
          //___________________________________________________________regular_____________________________________________________________________
           //sugar block
@@ -6751,6 +6756,46 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', Items.SUGAR)
         .unlockedBy("has_sugar", has(Items.SUGAR))
         .save(output, "two_sugar_pastes_recipe");
+      //honeycomb_powder
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.HONEYCOMB_POWDER.get(), 1)
+        .pattern("ABB")
+        .pattern("BB ")
+        .pattern("   ")
+        .define('A', mushregistry.mushhammer.get())
+        .define('B', Items.HONEYCOMB)
+        .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
+        .unlockedBy("has_honeycomb", has(Items.HONEYCOMB))
+        .save(output);
+      //honeycomb_powder_advanced
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.HONEYCOMB_POWDER.get(), 2)
+        .pattern("ABB")
+        .pattern("BB ")
+        .pattern("   ")
+        .define('A', mushregistry.advanced_mushhammer.get())
+        .define('B', Items.HONEYCOMB)
+        .unlockedBy("has_mush_hammer", has(mushregistry.advanced_mushhammer.get()))
+        .unlockedBy("has_honeycomb", has(Items.HONEYCOMB))
+        .save(output, "honeycomb_powder_advanced");
+      //honeycomb_powder_more_advanced
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.HONEYCOMB_POWDER.get(), 4)
+        .pattern("ABB")
+        .pattern("BB ")
+        .pattern("   ")
+        .define('A', mushregistry.more_advanced_mushhammer.get())
+        .define('B', Items.HONEYCOMB)
+        .unlockedBy("has_mush_hammer", has(mushregistry.more_advanced_mushhammer.get()))
+        .unlockedBy("has_honeycomb", has(Items.HONEYCOMB))
+        .save(output, "honeycomb_powder_more_advanced");
+      //honeycomb_powder_most_advanced
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.HONEYCOMB_POWDER.get(), 8)
+        .pattern("ABB")
+        .pattern("BB ")
+        .pattern("   ")
+        .define('A', mushregistry.most_advanced_mushhammer.get())
+        .define('B', Items.HONEYCOMB)
+        .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
+        .unlockedBy("has_honeycomb", has(Items.HONEYCOMB))
+        .save(output, "honeycomb_powder_most_advanced");
       };
      protected void buildIngotRecipes(RecipeOutput output) {
       //apple
@@ -7393,8 +7438,35 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          )
          .unlockedBy("has_sugar_paste", has(mushregistry.SUGAR_PASTE.get()))
          .save(output, "sugar_ingot_from_blasting");
+      //honeycomb
+       //packing
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotregistry.HONEYCOMB_INGOT.get())
+         .pattern("AAA")
+         .pattern("AAA")
+         .pattern("AAA")
+         .define('A', nuggetregistry.HONEYCOMB_NUGGET.get())
+         .unlockedBy("has_honeycomb_nugget", has(nuggetregistry.HONEYCOMB_NUGGET.get()))
+         .save(output, "honeycomb_ingot_from_crafting");
+       //smelting
+         SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushregistry.HONEYCOMB_POWDER.get()),
+         RecipeCategory.MISC,
+         ingotregistry.HONEYCOMB_INGOT.get(),
+         1.0f,
+         200
+         )
+         .unlockedBy("has_honeycomb_powder", has(mushregistry.HONEYCOMB_POWDER.get()))
+         .save(output, "honeycomb_ingot_from_smelting");
+       //blasting
+         SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushregistry.HONEYCOMB_POWDER.get()),
+         RecipeCategory.MISC, 
+         ingotregistry.HONEYCOMB_INGOT.get(), 
+         1.0f, 
+         100
+         )
+         .unlockedBy("has_honeycomb_powder", has(mushregistry.HONEYCOMB_POWDER.get()))
+         .save(output, "honeycomb_ingot_from_blasting");
       };
-    protected void buildCabinetRecipes(RecipeOutput output) {
+     protected void buildCabinetRecipes(RecipeOutput output) {
       //apple
        //small
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SMALL_APPLE_CABINET_ITEM.get())
