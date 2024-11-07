@@ -2489,6 +2489,12 @@ public class foodblockregistry {
      .explosionResistance(9.5f)
      .sound(SoundType.BASALT)
      ));
+   //.........honeycomb
+     public static final DeferredHolder<Block, SlabBlock> HONEYCOMB_BRICKS_SLAB = FOODBLOCK.register("honeycomb_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.HONEY_BLOCK)
+     ));
      
      
 //==============================================================================================================================================================================================

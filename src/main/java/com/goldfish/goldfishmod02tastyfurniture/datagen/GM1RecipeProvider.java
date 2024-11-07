@@ -1919,6 +1919,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             foodblockitemregistry.SUGAR_BRICKS_SLAB_ITEM.get(), 2)
             .unlockedBy("has_sugar_bricks_block", has(foodblockitemregistry.SUGAR_BRICKS_BLOCK_ITEM.get()))
             .save(output, "sugar_bricks_slab_from_sugar_bricks_block_stonecutting");
+          //honeycomb
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.HONEYCOMB_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+            foodblockitemregistry.HONEYCOMB_BRICKS_SLAB_ITEM.get(), 2)
+            .unlockedBy("has_honeycomb_bricks_block", has(foodblockitemregistry.HONEYCOMB_BRICKS_BLOCK_ITEM.get()))
+            .save(output, "honeycomb_bricks_slab_from_honeycomb_bricks_block_stonecutting");
 
         //------------------------------------------------------------stairs----------------------------------------------------
          //________________________________________________________Regular Stairs__________________________________________________________________
