@@ -149,6 +149,9 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........sugar
           net.minecraft.world.level.block.Block sugar_bricks_block = foodblockregistry.SUGAR_BRICKS_BLOCK.get();
           simpleBlock(sugar_bricks_block);
+      //.........honeycomb
+          net.minecraft.world.level.block.Block honeycomb_bricks_block = foodblockregistry.HONEYCOMB_BRICKS_BLOCK.get();
+          simpleBlock(honeycomb_bricks_block);
      //___________________________________________________________chiseled____________________________________________________________________
       //.........apple
           net.minecraft.world.level.block.Block apple_chiseled_block = foodblockregistry.APPLE_CHISELED_BLOCK.get();
