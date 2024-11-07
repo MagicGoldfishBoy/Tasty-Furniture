@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "goldfishmod02tastyfurniture:processed_honeycomb_block_item"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "goldfishmod02tastyfurniture:honeycomb_ingot"
+  }
+}

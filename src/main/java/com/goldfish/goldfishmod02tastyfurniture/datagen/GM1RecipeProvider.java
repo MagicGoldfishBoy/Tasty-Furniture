@@ -100,6 +100,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('A', ingotregistry.SUGAR_INGOT.get())
             .unlockedBy("has_sugar_ingot", has(ingotregistry.SUGAR_INGOT.get()))
             .save(output);
+          //processed_honeycomb block
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.PROCESSED_HONEYCOMB_BLOCK_ITEM.get(), 1)
+            .pattern("AAA")
+            .pattern("AAA")
+            .pattern("AAA")
+            .define('A', ingotregistry.HONEYCOMB_INGOT.get())
+            .unlockedBy("has_honeycomb_ingot", has(ingotregistry.HONEYCOMB_INGOT.get()))
+            .save(output);
          //____________________________________________________________bricks_____________________________________________________________________
           //.........apple
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_BRICKS_BLOCK_ITEM.get(), 4)
@@ -7447,6 +7455,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', nuggetregistry.HONEYCOMB_NUGGET.get())
          .unlockedBy("has_honeycomb_nugget", has(nuggetregistry.HONEYCOMB_NUGGET.get()))
          .save(output, "honeycomb_ingot_from_crafting");
+       //unpacking
+         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.HONEYCOMB_INGOT.get(), 9)
+         .requires(foodblockitemregistry.PROCESSED_HONEYCOMB_BLOCK_ITEM.get())
+         .unlockedBy("has_processed_honeycomb_block", has(foodblockitemregistry.PROCESSED_HONEYCOMB_BLOCK_ITEM.get()))
+         .save(output);
        //smelting
          SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushregistry.HONEYCOMB_POWDER.get()),
          RecipeCategory.MISC,

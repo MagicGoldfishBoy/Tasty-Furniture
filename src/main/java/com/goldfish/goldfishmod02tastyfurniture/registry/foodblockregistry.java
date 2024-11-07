@@ -299,6 +299,13 @@ public class foodblockregistry {
          .sound(SoundType.BASALT)
          .lightLevel(state -> 0)
          ));
+  //.........honeycomb
+    public static final DeferredHolder<Block, Block> PROCESSED_HONEYCOMB_BLOCK = FOODBLOCK.register("processed_honeycomb_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.25f)
+         .explosionResistance(9.5f)
+         .sound(SoundType.HONEY_BLOCK)
+         .lightLevel(state -> 0)
+         ));
 
  //-------------------------------------------------------------------------------------Brick Blocks--------------------------------------------------------------------------------------------
   //.........apple
