@@ -217,6 +217,9 @@ public class foodblockitemregistry {
   //.........sugar
      public static final DeferredHolder<Item, BlockItem> SUGAR_CHISELED_BLOCK_ITEM = FOODBLOCKITEM.register("sugar_chiseled_block_item",
      () -> new BlockItem(foodblockregistry.SUGAR_CHISELED_BLOCK.get(), new BlockItem.Properties()));
+  //.........honeycomb
+     public static final DeferredHolder<Item, BlockItem> HONEYCOMB_CHISELED_BLOCK_ITEM = FOODBLOCKITEM.register("honeycomb_chiseled_block_item",
+     () -> new BlockItem(foodblockregistry.HONEYCOMB_CHISELED_BLOCK.get(), new BlockItem.Properties()));
 
  //------------------------------------------------------------------------------------Tile Blocks-------------------------------------------------------------------------------------------
   //.........apple
