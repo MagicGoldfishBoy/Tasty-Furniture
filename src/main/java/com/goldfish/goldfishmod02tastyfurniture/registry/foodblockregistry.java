@@ -3041,6 +3041,12 @@ public class foodblockregistry {
      .explosionResistance(9.5f)
      .sound(SoundType.BASALT)
      ));
+   //.........honeycomb
+     public static final DeferredHolder<Block, TrapDoorBlock> HONEYCOMB_TRAPDOOR = FOODBLOCK.register("honeycomb_trapdoor", () -> new TrapDoorBlock(foodmaterialtyperegistry.CRYSTAL, BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.HONEY_BLOCK)
+     ));
 //==============================================================================================================================================================================================
 //                                                                                         Sugar Glass
 //==============================================================================================================================================================================================

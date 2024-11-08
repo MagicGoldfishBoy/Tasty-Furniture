@@ -2412,6 +2412,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotregistry.SUGAR_INGOT.get())
          .unlockedBy("has_sugar_ingot", has(ingotregistry.SUGAR_INGOT.get()))
          .save(output);
+         //honeycomb
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.HONEYCOMB_TRAPDOOR_ITEM.get())
+         .pattern("   ")
+         .pattern("AAA")
+         .pattern("AAA")
+         .define('A', ingotregistry.HONEYCOMB_INGOT.get())
+         .unlockedBy("has_honeycomb_ingot", has(ingotregistry.HONEYCOMB_INGOT.get()))
+         .save(output);
         //-------------------------------------------------------------sugar glass-----------------------------------------------------
          //plain
           //block

@@ -654,6 +654,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("rabbit_trapdoor_item", modLoc("block/rabbit_trapdoor_trapdoor_bottom"));
       //..............sugar
        withExistingParent("sugar_trapdoor_item", modLoc("block/sugar_trapdoor_trapdoor_bottom"));
+      //..............honeycomb
+       withExistingParent("honeycomb_trapdoor_item", modLoc("block/honeycomb_trapdoor_trapdoor_bottom"));
 
     //-----------------------------------------------------------sugar glass-----------------------------------------------------------------
       //..............plain

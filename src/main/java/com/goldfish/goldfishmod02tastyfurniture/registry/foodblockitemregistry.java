@@ -1020,6 +1020,9 @@ public class foodblockitemregistry {
    //.........sugar
      public static final DeferredHolder<Item, BlockItem> SUGAR_TRAPDOOR_ITEM = FOODBLOCKITEM.register("sugar_trapdoor_item",
      () -> new BlockItem(foodblockregistry.SUGAR_TRAPDOOR.get(), new BlockItem.Properties()));
+   //.........honeycomb
+     public static final DeferredHolder<Item, BlockItem> HONEYCOMB_TRAPDOOR_ITEM = FOODBLOCKITEM.register("honeycomb_trapdoor_item",
+     () -> new BlockItem(foodblockregistry.HONEYCOMB_TRAPDOOR.get(), new BlockItem.Properties()));
 
 //==============================================================================================================================================================================================
 //                                                                                         Sugar Glass
