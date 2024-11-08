@@ -2735,6 +2735,45 @@ public class GM1BlockStateProvider extends BlockStateProvider
               .modelForState().modelFile(hanging_sugar_soul_lantern_model).addModel()
               .partialState().with(LanternBlock.HANGING, false)
               .modelForState().modelFile(sugar_soul_lantern_model).addModel();
+        //.............honeycomb
+         //regular
+          LanternBlock honeycomb_lantern = foodblockregistry.HONEYCOMB_LANTERN.get();
+          ResourceLocation honeycomb_lantern_texture = modLoc("block/honeycomb_lantern");
+  
+          BlockModelBuilder honeycomb_lantern_model = models()
+              .withExistingParent("honeycomb_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", honeycomb_lantern_texture);
+  
+          BlockModelBuilder hanging_honeycomb_lantern_model = models()
+              .withExistingParent("honeycomb_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", honeycomb_lantern_texture);
+  
+          getVariantBuilder(honeycomb_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_honeycomb_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(honeycomb_lantern_model).addModel();
+         //soul
+          LanternBlock honeycomb_soul_lantern = foodblockregistry.HONEYCOMB_SOUL_LANTERN.get();
+          ResourceLocation honeycomb_soul_lantern_texture = modLoc("block/honeycomb_soul_lantern");
+  
+          BlockModelBuilder honeycomb_soul_lantern_model = models()
+              .withExistingParent("honeycomb_soul_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", honeycomb_soul_lantern_texture);
+  
+          BlockModelBuilder hanging_honeycomb_soul_lantern_model = models()
+              .withExistingParent("honeycomb_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", honeycomb_soul_lantern_texture);
+  
+          getVariantBuilder(honeycomb_soul_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_honeycomb_soul_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(honeycomb_soul_lantern_model).addModel();
 
     //---------------------------------------------------------------chains-------------------------------------------------------------------------------
       //.............apple

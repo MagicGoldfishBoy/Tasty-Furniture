@@ -3994,6 +3994,23 @@ public class foodblockregistry {
       .lightLevel(state  -> 10)
       .noOcclusion()
       ));
+   //.........honeycomb
+    //regular
+      public static final DeferredHolder<Block, LanternBlock> HONEYCOMB_LANTERN = FOODBLOCK.register("honeycomb_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.HONEY_BLOCK)
+      .lightLevel(state  -> 15)
+      .noOcclusion()
+      ));
+    //soul
+      public static final DeferredHolder<Block, LanternBlock> HONEYCOMB_SOUL_LANTERN = FOODBLOCK.register("honeycomb_soul_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.HONEY_BLOCK)
+      .lightLevel(state  -> 10)
+      .noOcclusion()
+      ));
 //==============================================================================================================================================================================================
 //                                                                                         Chains
 //==============================================================================================================================================================================================
