@@ -302,6 +302,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        fenceInventory("rabbit_fence_item", modLoc("block/rabbit_block"));
       //..............sugar
        fenceInventory("sugar_fence_item", modLoc("block/sugar_block"));
+      //..............honeycomb
+       fenceInventory("honeycomb_fence_item", modLoc("block/processed_honeycomb_block"));
     //------------------------------------------------------------gates---------------------------------------------------------------------
       //..............apple
        withExistingParent("apple_gate_item", modLoc("block/apple_fence_gate"));

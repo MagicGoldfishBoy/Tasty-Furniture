@@ -998,6 +998,11 @@ public class foodblockregistry {
     .destroyTime(1.25f)
     .explosionResistance(8.0f)
     ));
+    public static final DeferredHolder<Block, FenceBlock> HONEYCOMB_FENCE = FOODBLOCK.register("honeycomb_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+    .sound(SoundType.HONEY_BLOCK)
+    .destroyTime(1.25f)
+    .explosionResistance(8.0f)
+    ));
 
 //==============================================================================================================================================================================================
 //                                                                                         Gates
