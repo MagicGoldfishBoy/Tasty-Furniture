@@ -4328,6 +4328,13 @@ public class foodblockregistry {
     .sound(SoundType.BASALT)
     .noOcclusion()
     ));
+   //.........honeycomb
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> HONEYCOMB_TABLE = FOODBLOCK.register("honeycomb_table", () -> new foodtable(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.BASALT)
+    .noOcclusion()
+    ));
 
 //==============================================================================================================================================================================================
 //                                                                                         Ladders

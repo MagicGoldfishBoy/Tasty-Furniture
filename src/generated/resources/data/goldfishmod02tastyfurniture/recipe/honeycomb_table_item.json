@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod02tastyfurniture:processed_honeycomb_slab_item"
+    },
+    "B": {
+      "item": "goldfishmod02tastyfurniture:honeycomb_ingot"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "B B",
+    "B B"
+  ],
+  "result": {
+    "count": 1,
+    "id": "goldfishmod02tastyfurniture:honeycomb_table_item"
+  }
+}

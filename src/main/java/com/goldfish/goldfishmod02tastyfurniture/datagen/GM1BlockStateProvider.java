@@ -3154,6 +3154,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+      //.............honeycomb
+          HorizontalDirectionalBlock honeycombtable = foodblockregistry.HONEYCOMB_TABLE.get();
+
+          getVariantBuilder(honeycombtable)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/honeycomb_table");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
     //---------------------------------------------------------------ladders-------------------------------------------------------------------------------
       //.............sugar
           LadderBlock sugarladder = foodblockregistry.SUGAR_LADDER.get();
