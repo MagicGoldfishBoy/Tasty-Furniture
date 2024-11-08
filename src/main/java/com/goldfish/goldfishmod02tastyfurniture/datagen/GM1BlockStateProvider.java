@@ -1802,6 +1802,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation sugar_lamp_texture = modLoc("block/sugar_lamp");
           ResourceLocation sugar_lamp_top_texture = modLoc("block/sugar_lamp_top");
           horizontalBlock(sugar_lamp, sugar_lamp_texture, sugar_lamp_texture, sugar_lamp_top_texture);
+        //............honeycomb
+          net.minecraft.world.level.block.Block honeycomb_lamp = foodblockregistry.HONEYCOMB_LAMP.get();
+          ResourceLocation honeycomb_lamp_texture = modLoc("block/honeycomb_lamp");
+          ResourceLocation honeycomb_lamp_top_texture = modLoc("block/honeycomb_lamp_top");
+          horizontalBlock(honeycomb_lamp, honeycomb_lamp_texture, honeycomb_lamp_texture, honeycomb_lamp_top_texture);
 
     //--------------------------------------------------------------carpets-------------------------------------------------------------------------------
         //.............apple

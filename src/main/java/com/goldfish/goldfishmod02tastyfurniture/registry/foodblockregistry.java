@@ -3469,6 +3469,13 @@ public class foodblockregistry {
      .sound(SoundType.FROGLIGHT)
      .lightLevel(state -> 15)
      ));
+   //.........honeycomb
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> HONEYCOMB_LAMP = FOODBLOCK.register("honeycomb_lamp", () -> new foodlamp(BlockBehaviour.Properties.of()
+     .destroyTime(1.5f)
+     .explosionResistance(10.0f)
+     .sound(SoundType.FROGLIGHT)
+     .lightLevel(state -> 15)
+     ));
 
 //==============================================================================================================================================================================================
 //                                                                                         Carpets
