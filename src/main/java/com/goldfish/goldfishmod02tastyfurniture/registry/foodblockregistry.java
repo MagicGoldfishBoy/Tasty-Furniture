@@ -37,6 +37,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.glowberryWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.glowberryfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.honeycombSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.honeycombWallSign;
+import com.goldfish.goldfishmod02tastyfurniture.block.honeycombfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.horizontal_food_block;
 import com.goldfish.goldfishmod02tastyfurniture.block.mediumFoodCabinet;
 import com.goldfish.goldfishmod02tastyfurniture.block.melonSign;
@@ -95,6 +96,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.appleSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.glowberryfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.honeycombSignEntity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.honeycombfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.mediumFoodContainerEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.melonSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.melonfurnaceentity;
@@ -5080,6 +5082,11 @@ public class foodblockregistry {
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<sugarfurnaceentity>> SUGAR_FURNACE_ENTITY = FOODBLOCKENTITY.register("sugar_furnace", 
     () -> BlockEntityType.Builder.of(sugarfurnaceentity::new, SUGAR_FURNACE.get()).build(null));
+   //.........honeycomb
+    public static final DeferredHolder<Block, honeycombfurnace> HONEYCOMB_FURNACE = FOODBLOCK.register("honeycomb_furnace", () -> new honeycombfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<honeycombfurnaceentity>> HONEYCOMB_FURNACE_ENTITY = FOODBLOCKENTITY.register("honeycomb_furnace", 
+    () -> BlockEntityType.Builder.of(honeycombfurnaceentity::new, HONEYCOMB_FURNACE.get()).build(null));
 
 //==============================================================================================================================================================================================
 //                                                                                          Paths

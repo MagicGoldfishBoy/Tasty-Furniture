@@ -5493,6 +5493,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', Items.COBBLESTONE)
             .unlockedBy("has_sugar_ingot", has(ingotregistry.SUGAR_INGOT.get()))
             .save(output);
+         //.....honeycomb
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.HONEYCOMB_FURNACE_ITEM.get())
+            .pattern("ABA")
+            .pattern("B B")
+            .pattern("ABA")
+            .define('A', ingotregistry.HONEYCOMB_INGOT.get())
+            .define('B', Items.COBBLESTONE)
+            .unlockedBy("has_honeycomb_ingot", has(ingotregistry.HONEYCOMB_INGOT.get()))
+            .save(output);
   
         //------------------------------------------------------------paths----------------------------------------------------
          //.....apple
