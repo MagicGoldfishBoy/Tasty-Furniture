@@ -3115,6 +3115,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(sugar_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(sugar_chain_model).rotationX(90).addModel();     
+      //.............honeycomb
+         ChainBlock honeycomb_chain = foodblockregistry.HONEYCOMB_CHAIN.get();
+         ResourceLocation honeycomb_chain_texture = modLoc("block/honeycomb_chain");
+         BlockModelBuilder honeycomb_chain_model = models()
+          .withExistingParent("honeycomb_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", honeycomb_chain_texture)
+          .texture("particle", honeycomb_chain_texture);
+
+          getVariantBuilder(honeycomb_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(honeycomb_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(honeycomb_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(honeycomb_chain_model).rotationX(90).addModel();     
 
     //---------------------------------------------------------------tables-------------------------------------------------------------------------------
       //.............sugar

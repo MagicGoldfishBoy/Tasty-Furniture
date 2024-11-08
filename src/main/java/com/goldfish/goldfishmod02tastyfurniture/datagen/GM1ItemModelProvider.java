@@ -1102,6 +1102,10 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       //..............sugar
        withExistingParent("sugar_chain_item", modLoc("block/sugar_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
        .end();
+
+      //..............honeycomb
+       withExistingParent("honeycomb_chain_item", modLoc("block/honeycomb_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
     //-----------------------------------------------------------ladders---------------------------------------------------------------------
       //..............apple
        withExistingParent("apple_ladder_item", modLoc("block/apple_ladder"));

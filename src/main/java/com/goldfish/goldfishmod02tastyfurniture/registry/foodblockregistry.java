@@ -4174,6 +4174,13 @@ public class foodblockregistry {
     .sound(SoundType.CHAIN)
     .noOcclusion()
     ));
+   //.........honeycomb
+    public static final DeferredHolder<Block, ChainBlock> HONEYCOMB_CHAIN = FOODBLOCK.register("honeycomb_chain", () -> new ChainBlock(BlockBehaviour.Properties.of()
+    .destroyTime(0.5f)
+    .explosionResistance(0.5f)
+    .sound(SoundType.CHAIN)
+    .noOcclusion()
+    ));
 //==============================================================================================================================================================================================
 //                                                                                         Tables
 //==============================================================================================================================================================================================

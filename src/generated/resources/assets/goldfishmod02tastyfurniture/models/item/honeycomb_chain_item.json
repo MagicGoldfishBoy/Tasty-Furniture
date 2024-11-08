@@ -1,0 +1,15 @@
+{
+  "parent": "goldfishmod02tastyfurniture:block/honeycomb_chain",
+  "transform": {
+    "scale": [
+      1.5,
+      1.5,
+      1.5
+    ],
+    "translation": [
+      0.25,
+      0.25,
+      0.25
+    ]
+  }
+}
