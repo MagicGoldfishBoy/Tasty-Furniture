@@ -35,6 +35,8 @@ import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
 import com.goldfish.goldfishmod02tastyfurniture.block.glowberrySign;
 import com.goldfish.goldfishmod02tastyfurniture.block.glowberryWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.glowberryfurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.honeycombSign;
+import com.goldfish.goldfishmod02tastyfurniture.block.honeycombWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.horizontal_food_block;
 import com.goldfish.goldfishmod02tastyfurniture.block.mediumFoodCabinet;
 import com.goldfish.goldfishmod02tastyfurniture.block.melonSign;
@@ -92,6 +94,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.glowberrySignEntity
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.appleSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.glowberryfurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.honeycombSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.mediumFoodContainerEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.melonSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.melonfurnaceentity;
@@ -2217,7 +2220,6 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, sugarSign> SUGAR_SIGN = FOODBLOCK.register("sugar_sign",
     () -> new sugarSign(
       BlockBehaviour.Properties.of()
-          .lightLevel(state -> 10)
           .mapColor(MapColor.WOOD)
           .forceSolidOn()
           .instrument(NoteBlockInstrument.BASS)
@@ -2229,7 +2231,6 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, sugarWallSign> SUGAR_WALL_SIGN = FOODBLOCK.register("sugar_wall_sign",
     () -> new sugarWallSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -2242,7 +2243,6 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, sugarSign> SUGAR_STANDING_SIGN = FOODBLOCK.register("sugar_standing_sign",
     () -> new sugarSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -2259,6 +2259,51 @@ public class foodblockregistry {
           foodblockregistry.SUGAR_SIGN.get(),
           foodblockregistry.SUGAR_WALL_SIGN.get(),
           foodblockregistry.SUGAR_STANDING_SIGN.get()
+      ).build(null
+    ));
+  //.........honeycomb
+    public static final DeferredHolder<Block, honeycombSign> HONEYCOMB_SIGN = FOODBLOCK.register("honeycomb_sign",
+    () -> new honeycombSign(
+      BlockBehaviour.Properties.of()
+          .mapColor(MapColor.WOOD)
+          .forceSolidOn()
+          .instrument(NoteBlockInstrument.BASS)
+          .noCollission()
+          .strength(1.0F)
+          .ignitedByLava(),
+          foodmaterialtyperegistry.HONEYCOMBWOODMAT
+    ));
+    public static final DeferredHolder<Block, honeycombWallSign> HONEYCOMB_WALL_SIGN = FOODBLOCK.register("honeycomb_wall_sign",
+    () -> new honeycombWallSign(
+        BlockBehaviour.Properties.of()
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.HONEYCOMBWOODMAT
+    ));
+    public static final DeferredHolder<Block, honeycombSign> HONEYCOMB_STANDING_SIGN = FOODBLOCK.register("honeycomb_standing_sign",
+    () -> new honeycombSign(
+        BlockBehaviour.Properties.of()
+        .mapColor(MapColor.WOOD)
+        .forceSolidOn()
+        .instrument(NoteBlockInstrument.BASS)
+        .noCollission()
+        .strength(1.0F)
+        .ignitedByLava()
+        .randomTicks(),
+        foodmaterialtyperegistry.HONEYCOMBWOODMAT
+    ));
+      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<honeycombSignEntity>> HONEYCOMB_SIGN_ENTITY = FOODBLOCKENTITY.register(
+      "honeycomb_sign_entity",
+      () -> BlockEntityType.Builder.of(
+          honeycombSignEntity::new,
+          foodblockregistry.HONEYCOMB_SIGN.get(),
+          foodblockregistry.HONEYCOMB_WALL_SIGN.get(),
+          foodblockregistry.HONEYCOMB_STANDING_SIGN.get()
       ).build(null
     ));
 

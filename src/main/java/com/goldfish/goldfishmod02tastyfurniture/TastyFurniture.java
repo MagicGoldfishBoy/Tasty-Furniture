@@ -199,6 +199,7 @@ public class TastyFurniture
         event.registerBlockEntityRenderer(foodblockregistry.PORK_SIGN_ENTITY.get(), SignRenderer::new);
         event.registerBlockEntityRenderer(foodblockregistry.RABBIT_SIGN_ENTITY.get(), SignRenderer::new);
         event.registerBlockEntityRenderer(foodblockregistry.SUGAR_SIGN_ENTITY.get(), SignRenderer::new);
+        event.registerBlockEntityRenderer(foodblockregistry.HONEYCOMB_SIGN_ENTITY.get(), SignRenderer::new);
 
         event.registerBlockEntityRenderer(foodblockregistry.APPLE_CHEST_ENTITY.get(), ChestRenderer::new);
 

@@ -867,6 +867,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock sugar_wall_sign = foodblockregistry.SUGAR_WALL_SIGN.get();
            ResourceLocation sugar_sign_texture = modLoc("block/sugar_block");
            signBlock(sugar_sign, sugar_wall_sign, sugar_sign_texture);
+        //.........honeycomb
+           StandingSignBlock honeycomb_sign = foodblockregistry.HONEYCOMB_STANDING_SIGN.get();
+           WallSignBlock honeycomb_wall_sign = foodblockregistry.HONEYCOMB_WALL_SIGN.get();
+           ResourceLocation honeycomb_sign_texture = modLoc("block/processed_honeycomb_block");
+           signBlock(honeycomb_sign, honeycomb_wall_sign, honeycomb_sign_texture);
 
     //----------------------------------------------------------------slabs-------------------------------------------------------------------------------
       //_______________________________________________________Regular Slabs_________________________________________________________________
