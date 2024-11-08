@@ -2736,9 +2736,17 @@ public class foodblockregistry {
           .explosionResistance(9.5f)
           .sound(SoundType.BASALT)
       ));
+   //.........honeycomb
+     public static final DeferredHolder<Block, StairBlock> HONEYCOMB_STAIRS = FOODBLOCK.register("honeycomb_stairs", () -> new StairBlock(
+          PROCESSED_HONEYCOMB_BLOCK.get().defaultBlockState(),
+          BlockBehaviour.Properties.of()
+          .destroyTime(1.75f)
+          .explosionResistance(9.5f)
+          .sound(SoundType.HONEY_BLOCK)
+      ));
 
  //-------------------------------------------------------------------------------------Bricks Stairs------------------------------------------------------------------------------------------
-   //.........apple
+  //.........apple
    public static final DeferredHolder<Block, StairBlock> APPLE_BRICKS_STAIRS = FOODBLOCK.register("apple_bricks_stairs", () -> new StairBlock(
     APPLE_BLOCK.get().defaultBlockState(),
     BlockBehaviour.Properties.of()
@@ -2898,6 +2906,14 @@ public class foodblockregistry {
       .destroyTime(1.75f)
       .explosionResistance(9.5f)
       .sound(SoundType.MUD_BRICKS)
+   ));
+  //.........honeycomb
+   public static final DeferredHolder<Block, StairBlock> HONEYCOMB_BRICKS_STAIRS = FOODBLOCK.register("honeycomb_bricks_stairs", () -> new StairBlock(
+      PROCESSED_HONEYCOMB_BLOCK.get().defaultBlockState(),
+      BlockBehaviour.Properties.of()
+      .destroyTime(1.75f)
+      .explosionResistance(9.5f)
+      .sound(SoundType.HONEY_BLOCK)
    ));
   
 //==============================================================================================================================================================================================

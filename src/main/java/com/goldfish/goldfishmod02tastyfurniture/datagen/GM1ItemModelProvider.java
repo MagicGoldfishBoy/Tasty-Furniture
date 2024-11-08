@@ -566,6 +566,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("rabbit_stairs_item", modLoc("block/rabbit_stairs"));
       //..............sugar
        withExistingParent("sugar_stairs_item", modLoc("block/sugar_stairs"));
+      //..............honeycomb
+       withExistingParent("honeycomb_stairs_item", modLoc("block/honeycomb_stairs"));
 
      //________________________________________________________Bricks Stairs_________________________________________________________________
       //..............apple
@@ -608,6 +610,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("rabbit_bricks_stairs_item", modLoc("block/rabbit_bricks_stairs"));
       //..............sugar
        withExistingParent("sugar_bricks_stairs_item", modLoc("block/sugar_bricks_stairs"));
+      //..............honeycomb
+       withExistingParent("honeycomb_bricks_stairs_item", modLoc("block/honeycomb_bricks_stairs"));
 
     //-----------------------------------------------------------trapdoors-------------------------------------------------------------------
       //..............apple

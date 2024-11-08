@@ -2135,6 +2135,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('A', ingotregistry.SUGAR_INGOT.get())
             .unlockedBy("has_sugar_ingot", has(ingotregistry.SUGAR_INGOT.get()))
             .save(output);
+          //honeycomb
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.HONEYCOMB_STAIRS_ITEM.get())
+            .pattern("A  ")
+            .pattern("AA ")
+            .pattern("AAA")
+            .define('A', ingotregistry.HONEYCOMB_INGOT.get())
+            .unlockedBy("has_honeycomb_ingot", has(ingotregistry.HONEYCOMB_INGOT.get()))
+            .save(output);
          //________________________________________________________Bricks Stairs__________________________________________________________________
 
           //apple
@@ -2237,6 +2245,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             foodblockitemregistry.SUGAR_BRICKS_STAIRS_ITEM.get())
             .unlockedBy("has_sugar_bricks_block", has(foodblockitemregistry.SUGAR_BRICKS_BLOCK_ITEM.get()))
             .save(output, "sugar_bricks_stairs_from_sugar_bricks_block_stonecutting");
+          //honeycomb
+            SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.HONEYCOMB_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+            foodblockitemregistry.HONEYCOMB_BRICKS_STAIRS_ITEM.get())
+            .unlockedBy("has_honeycomb_bricks_block", has(foodblockitemregistry.HONEYCOMB_BRICKS_BLOCK_ITEM.get()))
+            .save(output, "honeycomb_bricks_stairs_from_honeycomb_bricks_block_stonecutting");
 
         //----------------------------------------------------------trap doors--------------------------------------------------
          //apple

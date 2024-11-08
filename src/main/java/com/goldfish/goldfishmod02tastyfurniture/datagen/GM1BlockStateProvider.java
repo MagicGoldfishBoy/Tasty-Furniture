@@ -1128,6 +1128,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           StairBlock sugar_stairs = foodblockregistry.SUGAR_STAIRS.get();
           ResourceLocation sugar_stair_texture = modLoc("block/sugar_block");
           stairsBlock(sugar_stairs, sugar_stair_texture);
+        //............honeycomb
+          StairBlock honeycomb_stairs = foodblockregistry.HONEYCOMB_STAIRS.get();
+          ResourceLocation honeycomb_stair_texture = modLoc("block/processed_honeycomb_block");
+          stairsBlock(honeycomb_stairs, honeycomb_stair_texture);
 
       //___________________________________________________________Bricks Stairs__________________________________________________________________________
         //............apple
@@ -1210,6 +1214,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           StairBlock sugar_bricks_stairs = foodblockregistry.SUGAR_BRICKS_STAIRS.get();
           ResourceLocation sugar_bricks_stair_texture = modLoc("block/sugar_bricks_block");
           stairsBlock(sugar_bricks_stairs, sugar_bricks_stair_texture);
+        //............honeycomb
+          StairBlock honeycomb_bricks_stairs = foodblockregistry.HONEYCOMB_BRICKS_STAIRS.get();
+          ResourceLocation honeycomb_bricks_stair_texture = modLoc("block/honeycomb_bricks_block");
+          stairsBlock(honeycomb_bricks_stairs, honeycomb_bricks_stair_texture);
 
     //--------------------------------------------------------------trapdoors-----------------------------------------------------------------------------
         //............apple
