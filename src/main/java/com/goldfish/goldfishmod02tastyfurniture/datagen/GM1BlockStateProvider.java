@@ -5557,6 +5557,122 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .rotationY(rotation)
                 .build();
             });
+      //.............honeycomb
+       //regular
+        TorchBlock honeycomb_torch = foodblockregistry.HONEYCOMB_TORCH.get();
+        ResourceLocation honeycomb_torch_texture = modLoc("block/honeycomb_torch");
+        BlockModelBuilder honeycomb_torch_model = models()
+        .withExistingParent("honeycomb_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", honeycomb_torch_texture)
+        .texture("particle", honeycomb_torch_texture);
+
+        simpleBlock(honeycomb_torch, honeycomb_torch_model);
+
+        TorchBlock honeycomb_wall_torch = foodblockregistry.HONEYCOMB_WALL_TORCH.get();
+        BlockModelBuilder honeycomb_wall_torch_model = models()
+        .withExistingParent("honeycomb_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", honeycomb_torch_texture)
+        .texture("particle", honeycomb_torch_texture);
+        getVariantBuilder(honeycomb_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("honeycomb_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", honeycomb_torch_texture)
+                    .texture("particle", honeycomb_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock honeycomb_redstone_torch = foodblockregistry.HONEYCOMB_REDSTONE_TORCH.get();
+        ResourceLocation honeycomb_redstone_torch_texture = modLoc("block/honeycomb_redstone_torch");
+        BlockModelBuilder honeycomb_redstone_torch_model = models()
+        .withExistingParent("honeycomb_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", honeycomb_redstone_torch_texture)
+        .texture("particle", honeycomb_redstone_torch_texture);
+        
+
+        simpleBlock(honeycomb_redstone_torch, honeycomb_redstone_torch_model);
+
+        ResourceLocation honeycomb_redstone_wall_torch_texture = modLoc("block/honeycomb_redstone_torch");
+
+        RedstoneTorchBlock honeycomb_redstone_wall_torch = foodblockregistry.HONEYCOMB_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder honeycomb_redstone_wall_torch_model = models()
+        .withExistingParent("honeycomb_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", honeycomb_redstone_wall_torch_texture)
+        .texture("particle", honeycomb_redstone_wall_torch_texture);
+        getVariantBuilder(honeycomb_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("honeycomb_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", honeycomb_redstone_wall_torch_texture)
+                    .texture("particle", honeycomb_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock honeycomb_soul_torch = foodblockregistry.HONEYCOMB_SOUL_TORCH.get();
+        ResourceLocation honeycomb_soul_torch_texture = modLoc("block/honeycomb_soul_torch");
+        BlockModelBuilder honeycomb_soul_torch_model = models()
+        .withExistingParent("honeycomb_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", honeycomb_soul_torch_texture)
+        .texture("particle", honeycomb_soul_torch_texture);
+        
+
+        simpleBlock(honeycomb_soul_torch, honeycomb_soul_torch_model);
+
+        ResourceLocation honeycomb_soul_wall_torch_texture = modLoc("block/honeycomb_soul_torch");
+        TorchBlock honeycomb_soul_wall_torch = foodblockregistry.HONEYCOMB_SOUL_WALL_TORCH.get();
+        BlockModelBuilder honeycomb_soul_wall_torch_model = models()
+        .withExistingParent("honeycomb_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", honeycomb_soul_wall_torch_texture)
+        .texture("particle", honeycomb_soul_wall_torch_texture);
+        getVariantBuilder(honeycomb_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("honeycomb_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", honeycomb_soul_wall_torch_texture)
+                    .texture("particle", honeycomb_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
     //--------------------------------------------------------------furnaces------------------------------------------------------------------------------
         //.............apple
           FurnaceBlock apple_furnace = foodblockregistry.APPLE_FURNACE.get();

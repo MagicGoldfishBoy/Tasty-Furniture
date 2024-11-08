@@ -1375,6 +1375,13 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("sugar_redstone_torch_item", modLoc("block/sugar_redstone_torch"));
        //soul
         withExistingParent("sugar_soul_torch_item", modLoc("block/sugar_soul_torch"));
+      //..............honeycomb
+       //regular
+        withExistingParent("honeycomb_torch_item", modLoc("block/honeycomb_torch"));
+       //redstone
+        withExistingParent("honeycomb_redstone_torch_item", modLoc("block/honeycomb_redstone_torch"));
+       //soul
+        withExistingParent("honeycomb_soul_torch_item", modLoc("block/honeycomb_soul_torch"));
 
     //-----------------------------------------------------------furnaces--------------------------------------------------------------------
       //..............apple

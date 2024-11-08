@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:stick"
+    },
+    "B": {
+      "item": "goldfishmod02tastyfurniture:honeycomb_nugget"
+    },
+    "C": {
+      "tag": "minecraft:coals"
+    }
+  },
+  "pattern": [
+    " C ",
+    " B ",
+    " A "
+  ],
+  "result": {
+    "count": 4,
+    "id": "goldfishmod02tastyfurniture:honeycomb_torch_item"
+  }
+}

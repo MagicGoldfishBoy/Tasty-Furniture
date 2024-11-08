@@ -1980,6 +1980,16 @@ public class foodblockitemregistry {
     //soul
       public static final DeferredHolder<Item, StandingAndWallBlockItem> SUGAR_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("sugar_soul_torch_item",
       () -> new StandingAndWallBlockItem(foodblockregistry.SUGAR_SOUL_TORCH.get(), foodblockregistry.SUGAR_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+   //.........honeycomb
+    //regular
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> HONEYCOMB_TORCH_ITEM = FOODBLOCKITEM.register("honeycomb_torch_item", 
+      () -> new StandingAndWallBlockItem(foodblockregistry.HONEYCOMB_TORCH.get(), foodblockregistry.HONEYCOMB_WALL_TORCH.get(), new Item.Properties(), Direction.NORTH));
+    //redstone
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> HONEYCOMB_REDSTONE_TORCH_ITEM =  FOODBLOCKITEM.register("honeycomb_redstone_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockregistry.HONEYCOMB_REDSTONE_TORCH.get(), foodblockregistry.HONEYCOMB_REDSTONE_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+    //soul
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> HONEYCOMB_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("honeycomb_soul_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockregistry.HONEYCOMB_SOUL_TORCH.get(), foodblockregistry.HONEYCOMB_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
 
 //==============================================================================================================================================================================================
 //                                                                                         Furnaces
