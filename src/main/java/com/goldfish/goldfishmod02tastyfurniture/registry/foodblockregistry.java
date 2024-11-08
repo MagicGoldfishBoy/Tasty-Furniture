@@ -3321,6 +3321,10 @@ public class foodblockregistry {
      public static final DeferredHolder<Block, IronBarsBlock> SUGAR_BARS = FOODBLOCK.register("sugar_bars", () -> new IronBarsBlock(BlockBehaviour.Properties.of()
      .strength(2.0F, 3.0F)
      .sound(SoundType.BASALT).noOcclusion()));
+   //.........honeycomb
+     public static final DeferredHolder<Block, IronBarsBlock> HONEYCOMB_BARS = FOODBLOCK.register("honeycomb_bars", () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+     .strength(2.0F, 3.0F)
+     .sound(SoundType.HONEY_BLOCK).noOcclusion()));
 //==============================================================================================================================================================================================
 //                                                                                          Lamps
 //==============================================================================================================================================================================================

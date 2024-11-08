@@ -3048,6 +3048,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', nuggetregistry.SUGAR_NUGGET.get())
          .unlockedBy("has_sugar_nugget", has(nuggetregistry.SUGAR_NUGGET.get()))
          .save(output);
+         //honeycomb
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.HONEYCOMB_BARS_ITEM.get(), 8)
+         .pattern("   ")
+         .pattern("AAA")
+         .pattern("AAA")
+         .define('A', nuggetregistry.HONEYCOMB_NUGGET.get())
+         .unlockedBy("has_honeycomb_nugget", has(nuggetregistry.HONEYCOMB_NUGGET.get()))
+         .save(output);
 
         //------------------------------------------------------------lamps-----------------------------------------------------
          //apple
