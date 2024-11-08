@@ -889,6 +889,9 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, ButtonBlock> SUGAR_BUTTON = FOODBLOCK.register("sugar_button", () -> new ButtonBlock(foodmaterialtyperegistry.CRYSTAL, 20, BlockBehaviour.Properties.of()
     .sound(SoundType.BASALT)
     ));
+    public static final DeferredHolder<Block, ButtonBlock> HONEYCOMB_BUTTON = FOODBLOCK.register("honeycomb_button", () -> new ButtonBlock(foodmaterialtyperegistry.CRYSTAL, 20, BlockBehaviour.Properties.of()
+    .sound(SoundType.HONEY_BLOCK)
+    ));
 
 //==============================================================================================================================================================================================
 //                                                                                         Fences

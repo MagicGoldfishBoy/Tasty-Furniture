@@ -1097,6 +1097,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
               .requires(nuggetregistry.SUGAR_NUGGET.get())
               .unlockedBy("has_sugar_nugget", has(nuggetregistry.SUGAR_NUGGET.get()))
               .save(output);
+            //honeycomb
+              ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockitemregistry.HONEYCOMB_BUTTON_ITEM.get(), 1)
+              .requires(nuggetregistry.HONEYCOMB_NUGGET.get())
+              .unlockedBy("has_honeycomb_nugget", has(nuggetregistry.HONEYCOMB_NUGGET.get()))
+              .save(output);
           
         //-------------------------------------------------------------fences----------------------------------------------------------------------
          //apple_fence

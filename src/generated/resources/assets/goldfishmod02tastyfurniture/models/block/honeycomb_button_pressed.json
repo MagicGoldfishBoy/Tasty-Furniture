@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_pressed",
+  "textures": {
+    "texture": "goldfishmod02tastyfurniture:block/processed_honeycomb_block"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "goldfishmod02tastyfurniture:honeycomb_nugget"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "goldfishmod02tastyfurniture:honeycomb_button_item"
+  }
+}

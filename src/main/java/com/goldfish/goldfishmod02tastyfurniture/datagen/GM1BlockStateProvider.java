@@ -485,6 +485,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ButtonBlock sugar_button = foodblockregistry.SUGAR_BUTTON.get();
           ResourceLocation sugar_button_texture = modLoc("block/sugar_block");
           buttonBlock(sugar_button, sugar_button_texture);
+        //..................honeycomb
+          ButtonBlock honeycomb_button = foodblockregistry.HONEYCOMB_BUTTON.get();
+          ResourceLocation honeycomb_button_texture = modLoc("block/processed_honeycomb_block");
+          buttonBlock(honeycomb_button, honeycomb_button_texture);
     //----------------------------------------------------------------fences------------------------------------------------------------------------------
         //.............apple
           FenceBlock apple_fence = foodblockregistry.APPLE_FENCE.get();
