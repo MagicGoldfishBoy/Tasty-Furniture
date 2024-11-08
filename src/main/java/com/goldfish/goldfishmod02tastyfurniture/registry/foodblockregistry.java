@@ -1302,6 +1302,11 @@ public class foodblockregistry {
     .destroyTime(0.5f)
     .explosionResistance(4.0f)
     ));
+    public static final DeferredHolder<Block, PressurePlateBlock> HONEYCOMB_PRESSURE_PLATE = FOODBLOCK.register("honeycomb_pressure_plate", () -> new PressurePlateBlock(foodmaterialtyperegistry.CRYSTAL, BlockBehaviour.Properties.of()
+    .sound(SoundType.HONEY_BLOCK)
+    .destroyTime(0.5f)
+    .explosionResistance(4.0f)
+    ));
 
 //==============================================================================================================================================================================================
 //                                                                                          Signs

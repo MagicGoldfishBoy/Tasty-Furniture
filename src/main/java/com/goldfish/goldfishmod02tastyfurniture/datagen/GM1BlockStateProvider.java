@@ -761,6 +761,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock sugar_pressure_plate = foodblockregistry.SUGAR_PRESSURE_PLATE.get();
           ResourceLocation sugar_pressure_plate_texture = modLoc("block/sugar_block");
           pressurePlateBlock(sugar_pressure_plate, sugar_pressure_plate_texture);
+        //.............honeycomb
+          PressurePlateBlock honeycomb_pressure_plate = foodblockregistry.HONEYCOMB_PRESSURE_PLATE.get();
+          ResourceLocation honeycomb_pressure_plate_texture = modLoc("block/processed_honeycomb_block");
+          pressurePlateBlock(honeycomb_pressure_plate, honeycomb_pressure_plate_texture);
 
     //----------------------------------------------------------------signs-------------------------------------------------------------------------------
         //.............apple
