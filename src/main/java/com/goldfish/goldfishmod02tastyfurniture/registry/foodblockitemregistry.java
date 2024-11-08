@@ -2082,6 +2082,8 @@ public class foodblockitemregistry {
     public static final DeferredHolder<Item, BlockItem> RABBIT_STONE_PATH_ITEM = FOODBLOCKITEM.register("rabbit_stone_path_item", () -> new BlockItem(foodblockregistry.RABBIT_STONE_PATH.get(), new BlockItem.Properties()));
    //.........sugar
     public static final DeferredHolder<Item, BlockItem> SUGAR_STONE_PATH_ITEM = FOODBLOCKITEM.register("sugar_stone_path_item", () -> new BlockItem(foodblockregistry.SUGAR_STONE_PATH.get(), new BlockItem.Properties()));
+   //.........honeycomb
+    public static final DeferredHolder<Item, BlockItem> HONEYCOMB_STONE_PATH_ITEM = FOODBLOCKITEM.register("honeycomb_stone_path_item", () -> new BlockItem(foodblockregistry.HONEYCOMB_STONE_PATH.get(), new BlockItem.Properties()));
 
 //==============================================================================================================================================================================================
 //                                                                                         Chests

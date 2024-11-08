@@ -5233,6 +5233,13 @@ public class foodblockregistry {
     .sound(SoundType.BASALT)
     .noOcclusion()
     ));
+   //.........honeycomb
+    public static final DeferredHolder<Block, foodpathtypeminislab> HONEYCOMB_STONE_PATH = FOODBLOCK.register("honeycomb_stone_path", () -> new foodpathtypeminislab(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.HONEY_BLOCK)
+    .noOcclusion()
+    ));
 
 
 //==============================================================================================================================================================================================

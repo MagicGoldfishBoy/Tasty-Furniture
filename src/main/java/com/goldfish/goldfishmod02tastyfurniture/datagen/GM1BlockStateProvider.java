@@ -6630,6 +6630,19 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .modelFile(models().getExistingFile(modelLocation))
                   .build();
           });
+      //.........honeycomb
+          foodpathtypeminislab honeycomb_stone_path = foodblockregistry.HONEYCOMB_STONE_PATH.get();
+
+          getVariantBuilder(honeycomb_stone_path)
+          .forAllStates(state -> {
+
+
+              ResourceLocation modelLocation = modLoc("block/honeycomb_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
     //---------------------------------------------------------------chests-------------------------------------------------------------------------------
         //.............apple
           ChestBlock apple_chest = foodblockregistry.APPLE_CHEST.get();
