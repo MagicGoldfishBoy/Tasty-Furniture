@@ -3409,6 +3409,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', nuggetregistry.SUGAR_NUGGET.get())
          .unlockedBy("has_sugar_nugget", has(nuggetregistry.SUGAR_NUGGET.get()))
          .save(output);
+         //honeycomb
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.HONEYCOMB_CARPET_ITEM.get(), 3)
+         .pattern("   ")
+         .pattern("AA ")
+         .pattern("AA ")
+         .define('A', nuggetregistry.HONEYCOMB_NUGGET.get())
+         .unlockedBy("has_honeycomb_nugget", has(nuggetregistry.HONEYCOMB_NUGGET.get()))
+         .save(output);
         //------------------------------------------------------------sword-----------------------------------------------------
          //apple_sword
          ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, food_weapon_registry.APPLE_SWORD.get())

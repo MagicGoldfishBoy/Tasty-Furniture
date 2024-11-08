@@ -892,6 +892,9 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       //..............sugar
         ResourceLocation sugar_carpet_texture = modLoc("block/sugar_carpet");
         carpet("sugar_carpet_item", sugar_carpet_texture);
+      //..............honeycomb
+        ResourceLocation honeycomb_carpet_texture = modLoc("block/honeycomb_carpet");
+        carpet("honeycomb_carpet_item", honeycomb_carpet_texture);
 
     //-----------------------------------------------------------lanterns--------------------------------------------------------------------
       //..............apple

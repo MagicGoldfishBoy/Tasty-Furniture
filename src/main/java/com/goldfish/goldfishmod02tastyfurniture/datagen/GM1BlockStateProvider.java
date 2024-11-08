@@ -1929,6 +1929,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder sugar_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(sugar_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", sugar_carpet_texture);
           simpleBlock(sugar_carpet, new ModelFile.UncheckedModelFile(sugar_carpet_model.getLocation()));
+        //.............honeycomb
+          CarpetBlock honeycomb_carpet = foodblockregistry.HONEYCOMB_CARPET.get();
+          ResourceLocation honeycomb_carpet_texture = modLoc("block/honeycomb_carpet");
+          BlockModelBuilder honeycomb_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(honeycomb_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", honeycomb_carpet_texture);
+          simpleBlock(honeycomb_carpet, new ModelFile.UncheckedModelFile(honeycomb_carpet_model.getLocation()));
 
     //--------------------------------------------------------------lanterns------------------------------------------------------------------------------
         //.............apple

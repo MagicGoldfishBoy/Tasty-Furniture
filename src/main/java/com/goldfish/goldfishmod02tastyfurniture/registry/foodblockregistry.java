@@ -3642,6 +3642,14 @@ public class foodblockregistry {
       .friction(0.3f)
       .ignitedByLava()
       ));
+   //.........honeycomb
+    public static final DeferredHolder<Block, CarpetBlock> HONEYCOMB_CARPET = FOODBLOCK.register("honeycomb_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MOSS_CARPET)
+      .friction(0.3f)
+      .ignitedByLava()
+      ));
 //==============================================================================================================================================================================================
 //                                                                                         Lanterns
 //==============================================================================================================================================================================================

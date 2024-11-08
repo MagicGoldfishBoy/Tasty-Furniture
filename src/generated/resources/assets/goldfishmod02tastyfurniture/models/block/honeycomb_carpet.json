@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/carpet",
+  "textures": {
+    "wool": "goldfishmod02tastyfurniture:block/honeycomb_carpet"
+  }
+}
