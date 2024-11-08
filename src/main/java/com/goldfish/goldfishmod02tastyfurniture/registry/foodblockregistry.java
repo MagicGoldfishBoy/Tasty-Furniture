@@ -4487,6 +4487,13 @@ public class foodblockregistry {
     .sound(crystal_ladder_sound)
     .noOcclusion()
     )); 
+   //.........honeycomb
+    public static final DeferredHolder<Block, LadderBlock> HONEYCOMB_LADDER = FOODBLOCK.register("honeycomb_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
+    .destroyTime(ladder_destroy_time)
+    .explosionResistance(ladder_explosion_resistance)
+    .sound(SoundType.HONEY_BLOCK)
+    .noOcclusion()
+    )); 
 //==============================================================================================================================================================================================
 //                                                                                         Torches
 //==============================================================================================================================================================================================

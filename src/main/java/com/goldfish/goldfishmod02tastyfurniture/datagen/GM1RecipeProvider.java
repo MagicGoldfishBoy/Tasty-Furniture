@@ -4633,6 +4633,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .define('B', ingotregistry.SUGAR_INGOT.get())
           .unlockedBy("has_sugar_ingot", has(ingotregistry.SUGAR_INGOT.get()))
           .save(output);
+         //honeycomb
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.HONEYCOMB_LADDER_ITEM.get(), 3)
+          .pattern("A A")
+          .pattern("ABA")
+          .pattern("A A")
+          .define('A', Items.STICK)
+          .define('B', ingotregistry.HONEYCOMB_INGOT.get())
+          .unlockedBy("has_honeycomb_ingot", has(ingotregistry.HONEYCOMB_INGOT.get()))
+          .save(output);
 
         //------------------------------------------------------------torches----------------------------------------------------
          //.....apple
