@@ -176,6 +176,11 @@ public class foodmaterialtyperegistry {
         "sugar_wood_mat", 
         CRYSTAL) 
     );
+    public static final WoodType HONEYCOMBWOODMAT = WoodType.register(
+     new WoodType(
+        "honeycomb_wood_mat", 
+        MEAT) 
+    );
 
         public static final Tier APPLE_TIER = new SimpleTier(
             BlockTags.INCORRECT_FOR_STONE_TOOL,

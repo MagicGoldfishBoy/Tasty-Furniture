@@ -1189,6 +1189,15 @@ public class foodblockregistry {
             .explosionResistance(8.0f)
     ));
 
+    public static final DeferredHolder<Block, FenceGateBlock>  HONEYCOMB_GATE = FOODBLOCK.register("honeycomb_fence_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtyperegistry.HONEYCOMBWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.HONEY_BLOCK)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+    ));
+
 //==============================================================================================================================================================================================
 //                                                                                      Pressure Plates
 //==============================================================================================================================================================================================

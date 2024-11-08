@@ -675,6 +675,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceGateBlock sugar_gate = foodblockregistry.SUGAR_GATE.get();
           ResourceLocation sugar_gate_texture = modLoc("block/sugar_block");
           fenceGateBlock(sugar_gate, sugar_gate_texture);
+        //.............honeycomb
+          FenceGateBlock honeycomb_gate = foodblockregistry.HONEYCOMB_GATE.get();
+          ResourceLocation honeycomb_gate_texture = modLoc("block/processed_honeycomb_block");
+          fenceGateBlock(honeycomb_gate, honeycomb_gate_texture);
 
     //------------------------------------------------------------pressure plates-------------------------------------------------------------------------
         //.............apple
