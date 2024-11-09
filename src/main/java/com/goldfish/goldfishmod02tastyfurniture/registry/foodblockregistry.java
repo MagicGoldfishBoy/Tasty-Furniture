@@ -5419,6 +5419,12 @@ public class foodblockregistry {
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
+   //.........honeycomb
+     public static final DeferredHolder<Block, foodBarrel> HONEYCOMB_BARREL = FOODBLOCK.register("honeycomb_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     .sound(crystal_barrel_sound)
+     .destroyTime(barrel_destroy_time)
+     .explosionResistance(barrel_explosion_resistance)
+     ));
 
    //------entity
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodBarrelEntity>> FOOD_BARREL_ENTITY = FOODBLOCKENTITY.register("food_barrel_entity", 
@@ -5427,7 +5433,7 @@ public class foodblockregistry {
      foodblockregistry.SWEETBERRY_BARREL.get(), foodblockregistry.PUMPKIN_BARREL.get(), foodblockregistry.BROWNMUSHROOM_BARREL.get(), foodblockregistry.REDMUSHROOM_BARREL.get(), 
      foodblockregistry.CHICKEN_BARREL.get(), foodblockregistry.COD_BARREL.get(), foodblockregistry.SALMON_BARREL.get(), foodblockregistry.TROPICALFISH_BARREL.get(), 
      foodblockregistry.MUTTON_BARREL.get(), foodblockregistry.BEEF_BARREL.get(), foodblockregistry.PORK_BARREL.get(), foodblockregistry.RABBIT_BARREL.get(),
-     foodblockregistry.SUGAR_BARREL.get()).build(null));
+     foodblockregistry.SUGAR_BARREL.get(), foodblockregistry.HONEYCOMB_BARREL.get()).build(null));
 
 //==============================================================================================================================================================================================
 //                                                                                          Chairs

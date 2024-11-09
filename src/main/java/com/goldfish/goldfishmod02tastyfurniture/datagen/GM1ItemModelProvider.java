@@ -1514,6 +1514,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       withExistingParent("rabbit_barrel_item", modLoc("block/rabbit_barrel_model_closed"));
       //..............sugar
       withExistingParent("sugar_barrel_item", modLoc("block/sugar_barrel_model_closed"));
+      //..............honeycomb
+      withExistingParent("honeycomb_barrel_item", modLoc("block/honeycomb_barrel_model_closed"));
 
     //---------------------------------------------------------------chairs-------------------------------------------------------------------------------
         //.............apple

@@ -5811,6 +5811,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('B', foodblockitemregistry.SUGAR_SLAB_ITEM.get())
            .unlockedBy("has_sugar_block", has(foodblockitemregistry.SUGAR_BLOCK_ITEM.get()))
            .save(output);
+         //honeycomb
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.HONEYCOMB_BARREL_ITEM.get())
+           .pattern("ABA")
+           .pattern("A A")
+           .pattern("ABA")
+           .define('A', foodblockitemregistry.PROCESSED_HONEYCOMB_BLOCK_ITEM.get())
+           .define('B', foodblockitemregistry.PROCESSED_HONEYCOMB_SLAB_ITEM.get())
+           .unlockedBy("has_honeycomb_block", has(foodblockitemregistry.PROCESSED_HONEYCOMB_BLOCK_ITEM.get()))
+           .unlockedBy("has_honeycomb_block", has(foodblockitemregistry.PROCESSED_HONEYCOMB_SLAB_ITEM.get()))
+           .save(output);
         //-----------------------------------------------------------chairs----------------------------------------------------------------------
          //apple
            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_CHAIR_ITEM.get())
