@@ -2330,6 +2330,9 @@ public class foodblockitemregistry {
    //.........sugar
     public static final DeferredHolder<Item, BlockItem> SUGAR_BED_ITEM = FOODBLOCKITEM.register("sugar_bed_item", () -> new BlockItem(foodblockregistry.SUGAR_BED.get(),
     new BlockItem.Properties()));
+   //.........honeycomb
+    public static final DeferredHolder<Item, BlockItem> HONEYCOMB_BED_ITEM = FOODBLOCKITEM.register("honeycomb_bed_item", () -> new BlockItem(foodblockregistry.HONEYCOMB_BED.get(),
+    new BlockItem.Properties()));
 
 
 //==============================================================================================================================================================================================

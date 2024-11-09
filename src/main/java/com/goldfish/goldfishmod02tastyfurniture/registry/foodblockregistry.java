@@ -5781,13 +5781,20 @@ public class foodblockregistry {
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
+   //.........honeycomb
+     public static final DeferredHolder<Block, foodBed> HONEYCOMB_BED = FOODBLOCK.register("honeycomb_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     .sound(SoundType.HONEY_BLOCK)
+     .destroyTime(bed_destroy_time)
+     .explosionResistance(bed_explosion_resistance)
+     .noOcclusion()
+     ));
 
    //.........entity
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<bedEntity>> FOOD_BED_ENTITY = FOODBLOCKENTITY.register("food_bed_entity",
      () -> BlockEntityType.Builder.of(bedEntity::new, APPLE_BED.get(), POTATO_BED.get(), BEETROOT_BED.get(), CARROT_BED.get(), 
      CHORUS_BED.get(), GLOW_BERRY_BED.get(), MELON_BED.get(), SWEET_BERRY_BED.get(), PUMPKIN_BED.get(), BROWN_MUSHROOM_BED.get(), 
      RED_MUSHROOM_BED.get(), CHICKEN_BED.get(), COD_BED.get(), SALMON_BED.get(), TROPICAL_FISH_BED.get(), 
-     MUTTON_BED.get(), BEEF_BED.get(), PORK_BED.get(), RABBIT_BED.get(), SUGAR_BED.get()).build(null));
+     MUTTON_BED.get(), BEEF_BED.get(), PORK_BED.get(), RABBIT_BED.get(), SUGAR_BED.get(), HONEYCOMB_BED.get()).build(null));
   
 
 //==============================================================================================================================================================================================
