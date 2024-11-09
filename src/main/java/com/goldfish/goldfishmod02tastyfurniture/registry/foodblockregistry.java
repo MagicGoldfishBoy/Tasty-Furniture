@@ -5421,7 +5421,7 @@ public class foodblockregistry {
      ));
    //.........honeycomb
      public static final DeferredHolder<Block, foodBarrel> HONEYCOMB_BARREL = FOODBLOCK.register("honeycomb_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
-     .sound(crystal_barrel_sound)
+     .sound(SoundType.HONEY_BLOCK)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
@@ -5599,6 +5599,13 @@ public class foodblockregistry {
      ));
    //.........sugar
      public static final DeferredHolder<Block, foodChairBlock> SUGAR_CHAIR = FOODBLOCK.register("sugar_chair", () -> new foodChairBlock(BlockBehaviour.Properties.of()
+     .sound(crystal_chair_sound)
+     .destroyTime(chair_destroy_time)
+     .explosionResistance(chair_explosion_resistance)
+     .noOcclusion()
+     ));
+   //.........honeycomb
+     public static final DeferredHolder<Block, foodChairBlock> HONEYCOMB_CHAIR = FOODBLOCK.register("honeycomb_chair", () -> new foodChairBlock(BlockBehaviour.Properties.of()
      .sound(crystal_chair_sound)
      .destroyTime(chair_destroy_time)
      .explosionResistance(chair_explosion_resistance)
