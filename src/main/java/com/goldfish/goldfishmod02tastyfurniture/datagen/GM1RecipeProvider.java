@@ -8149,6 +8149,26 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .define('C', foodblockitemregistry.SMALL_SUGAR_CABINET_ITEM.get())
           .unlockedBy("has_sugar_slab", has(foodblockitemregistry.SUGAR_SLAB_ITEM.get()))
           .save(output);
+      //honeycomb
+        //small
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.SMALL_HONEYCOMB_CABINET_ITEM.get())
+          .pattern("AAA")
+          .pattern("B B")
+          .pattern("AAA")
+          .define('A', foodblockitemregistry.PROCESSED_HONEYCOMB_SLAB_ITEM.get())
+          .define('B', Items.IRON_INGOT)
+          .unlockedBy("has_honeycomb_slab", has(foodblockitemregistry.PROCESSED_HONEYCOMB_SLAB_ITEM.get()))
+          .save(output);
+        //medium
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MEDIUM_HONEYCOMB_CABINET_ITEM.get())
+          .pattern("AAA")
+          .pattern("BCB")
+          .pattern("AAA")
+          .define('A', foodblockitemregistry.PROCESSED_HONEYCOMB_SLAB_ITEM.get())
+          .define('B', Items.IRON_INGOT)
+          .define('C', foodblockitemregistry.SMALL_HONEYCOMB_CABINET_ITEM.get())
+          .unlockedBy("has_honeycomb_slab", has(foodblockitemregistry.PROCESSED_HONEYCOMB_SLAB_ITEM.get()))
+          .save(output);
       };
     }
 }

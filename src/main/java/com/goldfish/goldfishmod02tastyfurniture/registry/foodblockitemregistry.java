@@ -2479,4 +2479,11 @@ public class foodblockitemregistry {
     //medium
       public static final DeferredHolder<Item, BlockItem> MEDIUM_SUGAR_CABINET_ITEM = FOODBLOCKITEM.register("medium_sugar_cabinet_item", () -> new BlockItem(foodblockregistry.MEDIUM_SUGAR_CABINET.get(),
       new BlockItem.Properties()));
+   //.........honeycomb
+    //small
+      public static final DeferredHolder<Item, BlockItem> SMALL_HONEYCOMB_CABINET_ITEM = FOODBLOCKITEM.register("small_honeycomb_cabinet_item", () -> new BlockItem(foodblockregistry.SMALL_HONEYCOMB_CABINET.get(),
+      new BlockItem.Properties()));
+    //medium
+      public static final DeferredHolder<Item, BlockItem> MEDIUM_HONEYCOMB_CABINET_ITEM = FOODBLOCKITEM.register("medium_honeycomb_cabinet_item", () -> new BlockItem(foodblockregistry.MEDIUM_HONEYCOMB_CABINET.get(),
+      new BlockItem.Properties()));
 }
