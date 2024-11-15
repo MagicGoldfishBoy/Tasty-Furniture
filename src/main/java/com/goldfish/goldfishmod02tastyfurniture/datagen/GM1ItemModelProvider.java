@@ -14,87 +14,16 @@ public class GM1ItemModelProvider extends ItemModelProvider {
 
         @Override
         protected void registerModels() {
-          //withExistingParent("apple_button_item", modLoc("block/apple_button"));
-          //withExistingParent("apple_button_item", mcLoc("item/generated")).texture("layer0", "item/example_item");
-    //-------------------------------------------------------------tools--------------------------------------------------------------------
-      withExistingParent("advanced_mush_hammer", mcLoc("item/generated")).texture("layer0", "item/advanced_mush_hammer");
-
-      withExistingParent("advanced_meatgrinder", mcLoc("item/generated")).texture("layer0", "item/advanced_meatgrinder");
-
-      withExistingParent("more_advanced_mush_hammer", mcLoc("item/generated")).texture("layer0", "item/more_advanced_mush_hammer");
-
-      withExistingParent("more_advanced_meatgrinder", mcLoc("item/generated")).texture("layer0", "item/more_advanced_meatgrinder");
-
-      withExistingParent("most_advanced_mush_hammer", mcLoc("item/generated")).texture("layer0", "item/most_advanced_mush_hammer");
-
-      withExistingParent("most_advanced_meatgrinder", mcLoc("item/generated")).texture("layer0", "item/most_advanced_meatgrinder");
-
-    //-------------------------------------------------------------pastes--------------------------------------------------------------------
-
-      withExistingParent("sugar_paste", mcLoc("item/generated")).texture("layer0", "item/sugar_paste");
-
-    //-------------------------------------------------------------powders--------------------------------------------------------------------
-
-      withExistingParent("honeycomb_powder", mcLoc("item/generated")).texture("layer0", "item/honeycomb_powder");
-    //-------------------------------------------------------------ingots--------------------------------------------------------------------
-     //sugar
-      withExistingParent("sugar_ingot", mcLoc("item/generated")).texture("layer0", "item/sugar_ingot");
-     //honeycomb
-      withExistingParent("honeycomb_ingot", mcLoc("item/generated")).texture("layer0", "item/honeycomb_ingot");
-    //-------------------------------------------------------------nuggets--------------------------------------------------------------------
-     //sugar
-      withExistingParent("sugar_nugget", mcLoc("item/generated")).texture("layer0", "item/sugar_nugget");
-     //honeycomb
-      withExistingParent("honeycomb_nugget", mcLoc("item/generated")).texture("layer0", "item/honeycomb_nugget");
+          buildToolModels();
+          buildPasteModels();
+          buildPowderModels();
+          buildIngotModels();
+          buildNuggetModels();
+          buildRegularBlockModels();
+          buildBricksBlockModels();
     //-------------------------------------------------------------blocks--------------------------------------------------------------------
-     //___________________________________________________________regular_____________________________________________________________________
-      //.........sugar
-        withExistingParent("sugar_block_item", modLoc("block/sugar_block"));
-      //.........processed_honeycomb
-        withExistingParent("processed_honeycomb_block_item", modLoc("block/processed_honeycomb_block"));
      //____________________________________________________________bricks_____________________________________________________________________
-      //.........apple
-        withExistingParent("apple_bricks_block_item", modLoc("block/apple_bricks_block"));
-      //.........potato
-        withExistingParent("potato_bricks_block_item", modLoc("block/potato_bricks_block"));
-      //.........beetroot
-        withExistingParent("beetroot_bricks_block_item", modLoc("block/beetroot_bricks_block"));
-      //.........carrot
-        withExistingParent("carrot_bricks_block_item", modLoc("block/carrot_bricks_block"));
-      //.........chorus
-        withExistingParent("chorus_bricks_block_item", modLoc("block/chorus_bricks_block"));
-      //.........glow_berry
-        withExistingParent("glow_berry_bricks_block_item", modLoc("block/glow_berry_bricks_block"));
-      //.........melon
-        withExistingParent("melon_bricks_block_item", modLoc("block/melon_bricks_block"));
-      //.........sweet_berry
-        withExistingParent("sweet_berry_bricks_block_item", modLoc("block/sweet_berry_bricks_block"));
-      //.........brown_mushroom
-        withExistingParent("brown_mushroom_bricks_block_item", modLoc("block/brown_mushroom_bricks_block"));
-      //.........red_mushroom
-        withExistingParent("red_mushroom_bricks_block_item", modLoc("block/red_mushroom_bricks_block"));
-      //.........pumpkin
-        withExistingParent("pumpkin_bricks_block_item", modLoc("block/pumpkin_bricks_block"));
-      //.........chicken
-        withExistingParent("chicken_bricks_block_item", modLoc("block/chicken_bricks_block"));
-      //.........cod
-        withExistingParent("cod_bricks_block_item", modLoc("block/cod_bricks_block"));
-      //.........salmon
-        withExistingParent("salmon_bricks_block_item", modLoc("block/salmon_bricks_block"));
-      //.........tropical_fish
-        withExistingParent("tropical_fish_bricks_block_item", modLoc("block/tropical_fish_bricks_block"));
-      //.........mutton
-        withExistingParent("mutton_bricks_block_item", modLoc("block/mutton_bricks_block"));
-      //.........beef
-        withExistingParent("beef_bricks_block_item", modLoc("block/beef_bricks_block"));
-      //.........pork
-        withExistingParent("pork_bricks_block_item", modLoc("block/pork_bricks_block"));
-      //.........rabbit
-        withExistingParent("rabbit_bricks_block_item", modLoc("block/rabbit_bricks_block"));
-      //.........sugar
-        withExistingParent("sugar_bricks_block_item", modLoc("block/sugar_bricks_block"));
-      //.........honeycomb
-        withExistingParent("honeycomb_bricks_block_item", modLoc("block/honeycomb_bricks_block"));
+
      //___________________________________________________________chiseled____________________________________________________________________
       //.........apple
         withExistingParent("apple_chiseled_block_item", modLoc("block/apple_chiseled_block"));
@@ -1517,7 +1446,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       //..............honeycomb
       withExistingParent("honeycomb_barrel_item", modLoc("block/honeycomb_barrel_model_closed"));
 
-    //---------------------------------------------------------------chairs-------------------------------------------------------------------------------
+    //-----------------------------------------------------------chairs-----------------------------------------------------------------------
         //.............apple
          withExistingParent("apple_chair_item", modLoc("block/apple_chair"));
         //.............potato
@@ -1560,7 +1489,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
          withExistingParent("sugar_chair_item", modLoc("block/sugar_chair"));
         //.............honeycomb
          withExistingParent("honeycomb_chair_item", modLoc("block/honeycomb_chair"));
-    //---------------------------------------------------------------beds-------------------------------------------------------------------------------
+    //------------------------------------------------------------beds------------------------------------------------------------------------
         //.............apple
          withExistingParent("apple_bed_item", modLoc("block/apple_bed"));
         //.............potato
@@ -1667,7 +1596,83 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       //..............honeycomb
         withExistingParent("small_honeycomb_cabinet_item", modLoc("block/honeycomb_cabinet"));
         withExistingParent("medium_honeycomb_cabinet_item", modLoc("block/medium_honeycomb_cabinet"));
-  }   
+  } 
+ protected void buildToolModels() {
+      withExistingParent("advanced_mush_hammer", mcLoc("item/generated")).texture("layer0", "item/advanced_mush_hammer");
+      withExistingParent("advanced_meatgrinder", mcLoc("item/generated")).texture("layer0", "item/advanced_meatgrinder");
+      withExistingParent("more_advanced_mush_hammer", mcLoc("item/generated")).texture("layer0", "item/more_advanced_mush_hammer");
+      withExistingParent("more_advanced_meatgrinder", mcLoc("item/generated")).texture("layer0", "item/more_advanced_meatgrinder");
+      withExistingParent("most_advanced_mush_hammer", mcLoc("item/generated")).texture("layer0", "item/most_advanced_mush_hammer");
+      withExistingParent("most_advanced_meatgrinder", mcLoc("item/generated")).texture("layer0", "item/most_advanced_meatgrinder");
+  }  
+ protected void buildPasteModels() {
+      withExistingParent("sugar_paste", mcLoc("item/generated")).texture("layer0", "item/sugar_paste");
+  }
+ protected void buildPowderModels() {
+      withExistingParent("honeycomb_powder", mcLoc("item/generated")).texture("layer0", "item/honeycomb_powder");
+  }
+ protected void buildIngotModels() {
+      //sugar
+       withExistingParent("sugar_ingot", mcLoc("item/generated")).texture("layer0", "item/sugar_ingot");
+      //honeycomb
+       withExistingParent("honeycomb_ingot", mcLoc("item/generated")).texture("layer0", "item/honeycomb_ingot");
+  }
+ protected void buildNuggetModels() {
+      //sugar
+       withExistingParent("sugar_nugget", mcLoc("item/generated")).texture("layer0", "item/sugar_nugget");
+      //honeycomb
+       withExistingParent("honeycomb_nugget", mcLoc("item/generated")).texture("layer0", "item/honeycomb_nugget");
+  }
+ protected void buildRegularBlockModels() {
+      //sugar
+       withExistingParent("sugar_block_item", modLoc("block/sugar_block"));
+      //honeycomb
+       withExistingParent("processed_honeycomb_block_item", modLoc("block/processed_honeycomb_block"));
+  }
+ protected void buildBricksBlockModels() {
+      //apple
+       withExistingParent("apple_bricks_block_item", modLoc("block/apple_bricks_block"));
+      //potato
+       withExistingParent("potato_bricks_block_item", modLoc("block/potato_bricks_block"));
+      //beetroot
+       withExistingParent("beetroot_bricks_block_item", modLoc("block/beetroot_bricks_block"));
+      //carrot
+       withExistingParent("carrot_bricks_block_item", modLoc("block/carrot_bricks_block"));
+      //chorus
+       withExistingParent("chorus_bricks_block_item", modLoc("block/chorus_bricks_block"));
+      //glow_berry
+       withExistingParent("glow_berry_bricks_block_item", modLoc("block/glow_berry_bricks_block"));
+      //melon
+       withExistingParent("melon_bricks_block_item", modLoc("block/melon_bricks_block"));
+      //sweet_berry
+       withExistingParent("sweet_berry_bricks_block_item", modLoc("block/sweet_berry_bricks_block"));
+      //brown_mushroom
+       withExistingParent("brown_mushroom_bricks_block_item", modLoc("block/brown_mushroom_bricks_block"));
+      //red_mushroom
+       withExistingParent("red_mushroom_bricks_block_item", modLoc("block/red_mushroom_bricks_block"));
+      //.........pumpkin
+        withExistingParent("pumpkin_bricks_block_item", modLoc("block/pumpkin_bricks_block"));
+      //.........chicken
+        withExistingParent("chicken_bricks_block_item", modLoc("block/chicken_bricks_block"));
+      //.........cod
+        withExistingParent("cod_bricks_block_item", modLoc("block/cod_bricks_block"));
+      //.........salmon
+        withExistingParent("salmon_bricks_block_item", modLoc("block/salmon_bricks_block"));
+      //.........tropical_fish
+        withExistingParent("tropical_fish_bricks_block_item", modLoc("block/tropical_fish_bricks_block"));
+      //.........mutton
+        withExistingParent("mutton_bricks_block_item", modLoc("block/mutton_bricks_block"));
+      //.........beef
+        withExistingParent("beef_bricks_block_item", modLoc("block/beef_bricks_block"));
+      //.........pork
+        withExistingParent("pork_bricks_block_item", modLoc("block/pork_bricks_block"));
+      //.........rabbit
+        withExistingParent("rabbit_bricks_block_item", modLoc("block/rabbit_bricks_block"));
+      //.........sugar
+        withExistingParent("sugar_bricks_block_item", modLoc("block/sugar_bricks_block"));
+      //.........honeycomb
+        withExistingParent("honeycomb_bricks_block_item", modLoc("block/honeycomb_bricks_block"));
+  }
 }
 
 // .rootTransforms().scale(0.5f).translation(-0.25f, -0.25f, -0.25f)
