@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 
 public class foodlamp extends HorizontalDirectionalBlock {
     public foodlamp(BlockBehaviour.Properties properties) {
@@ -22,7 +22,7 @@ public class foodlamp extends HorizontalDirectionalBlock {
         throw new UnsupportedOperationException("Unimplemented method 'codec'");
     }
 
-        public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
+        public static final EnumProperty<Direction> FACING = HorizontalDirectionalBlock.FACING;
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {

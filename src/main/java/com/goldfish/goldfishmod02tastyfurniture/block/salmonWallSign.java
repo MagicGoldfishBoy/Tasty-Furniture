@@ -35,10 +35,10 @@ public class salmonWallSign extends WallSignBlock {
    return pLevel.getBlockState(pPos.relative(pState.getValue(FACING).getOpposite())) != null;
    }
 
-   @Override
-   public String getDescriptionId() {
-   return "salmon_wall_sign";
-   }
+//    @Override
+//    public String getDescriptionId() {
+//    return "salmon_wall_sign";
+//    }
    
 }
 

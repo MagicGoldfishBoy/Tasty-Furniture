@@ -41,7 +41,6 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.AABB;
@@ -54,7 +53,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 public class foodBed extends HorizontalDirectionalBlock implements EntityBlock {
     public static final MapCodec<foodBed> CODEC = simpleCodec(foodBed::new);
     public static final BooleanProperty OCCUPIED = BlockStateProperties.OCCUPIED;
-    public static final DirectionProperty HORIZONTALFACING = BlockStateProperties.HORIZONTAL_FACING;
+    public static final EnumProperty<Direction> HORIZONTALFACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final EnumProperty<BedPart> PART = BlockStateProperties.BED_PART;
 
     public foodBed(Properties properties) {
@@ -159,14 +158,14 @@ public class foodBed extends HorizontalDirectionalBlock implements EntityBlock {
         super.fallOn(pLevel, pState, pPos, pEntity, pFallDistance * 0.5F);
     }
 
-    @Override
-    public void updateEntityAfterFallOn(BlockGetter pLevel, Entity pEntity) {
-        if (pEntity.isSuppressingBounce()) {
-            super.updateEntityAfterFallOn(pLevel, pEntity);
-        } else {
-            this.bounceUp(pEntity);
-        }
-    }
+    // @Override
+    // public void updateEntityAfterFallOn(BlockGetter pLevel, Entity pEntity) {
+    //     if (pEntity.isSuppressingBounce()) {
+    //         super.updateEntityAfterFallOn(pLevel, pEntity);
+    //     } else {
+    //         this.bounceUp(pEntity);
+    //     }
+    // }
 
     private void bounceUp(Entity pEntity) {
         Vec3 vec3 = pEntity.getDeltaMovement();

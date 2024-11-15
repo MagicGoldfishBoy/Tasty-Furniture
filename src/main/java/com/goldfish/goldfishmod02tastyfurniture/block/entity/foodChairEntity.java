@@ -5,6 +5,8 @@ import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.SynchedEntityData.Builder;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.Level;
@@ -33,6 +35,11 @@ public class foodChairEntity extends Entity {
 
     @Override
     protected void addAdditionalSaveData(CompoundTag pCompound) {
+    }
+
+    @Override
+    public boolean hurtServer(ServerLevel arg0, DamageSource arg1, float arg2) {
+        throw new UnsupportedOperationException("Unimplemented method 'hurtServer'");
     }
     
 }

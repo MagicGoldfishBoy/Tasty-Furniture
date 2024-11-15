@@ -25,7 +25,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -33,7 +33,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 public class mediumFoodCabinet extends HorizontalDirectionalBlock implements EntityBlock {
 
     public static final MapCodec<mediumFoodCabinet> CODEC = simpleCodec(mediumFoodCabinet::new);
-    public static final DirectionProperty HORIZONTALFACING = BlockStateProperties.HORIZONTAL_FACING;
+    public static final EnumProperty<Direction> HORIZONTALFACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
 
     public mediumFoodCabinet(Properties pProperties) {
@@ -73,7 +73,7 @@ public class mediumFoodCabinet extends HorizontalDirectionalBlock implements Ent
             BlockEntity blockentity = pLevel.getBlockEntity(pPos);
             if (blockentity instanceof mediumFoodContainerEntity) {
                 pPlayer.openMenu((mediumFoodContainerEntity)blockentity);
-                PiglinAi.angerNearbyPiglins(pPlayer, true);
+                PiglinAi.angerNearbyPiglins(null, pPlayer, true);
             }
 
             return InteractionResult.CONSUME;

@@ -1963,13 +1963,13 @@ public class foodblockitemregistry {
    //.........rabbit
     //regular
       public static final DeferredHolder<Item, StandingAndWallBlockItem> RABBIT_TORCH_ITEM = FOODBLOCKITEM.register("rabbit_torch_item", 
-      () -> new StandingAndWallBlockItem(foodblockregistry.RABBIT_TORCH.get(), foodblockregistry.RABBIT_WALL_TORCH.get(), new Item.Properties(), Direction.NORTH));
+      () -> new StandingAndWallBlockItem(foodblockregistry.RABBIT_TORCH.get(), foodblockregistry.RABBIT_WALL_TORCH.get(), Direction.NORTH, new Item.Properties()));
     //redstone
       public static final DeferredHolder<Item, StandingAndWallBlockItem> RABBIT_REDSTONE_TORCH_ITEM =  FOODBLOCKITEM.register("rabbit_redstone_torch_item",
-      () -> new StandingAndWallBlockItem(foodblockregistry.RABBIT_REDSTONE_TORCH.get(), foodblockregistry.RABBIT_REDSTONE_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+      () -> new StandingAndWallBlockItem(foodblockregistry.RABBIT_REDSTONE_TORCH.get(), foodblockregistry.RABBIT_REDSTONE_WALL_TORCH.get(), Direction.NORTH, new BlockItem.Properties()));
     //soul
       public static final DeferredHolder<Item, StandingAndWallBlockItem> RABBIT_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("rabbit_soul_torch_item",
-      () -> new StandingAndWallBlockItem(foodblockregistry.RABBIT_SOUL_TORCH.get(), foodblockregistry.RABBIT_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+      () -> new StandingAndWallBlockItem(foodblockregistry.RABBIT_SOUL_TORCH.get(), foodblockregistry.RABBIT_SOUL_WALL_TORCH.get(), Direction.NORTH, new BlockItem.Properties()));
    //.........sugar
     //regular
       public static final DeferredHolder<Item, StandingAndWallBlockItem> SUGAR_TORCH_ITEM = FOODBLOCKITEM.register("sugar_torch_item", 

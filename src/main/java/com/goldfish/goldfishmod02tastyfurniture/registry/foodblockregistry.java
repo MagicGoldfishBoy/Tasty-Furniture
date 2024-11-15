@@ -1,5 +1,8 @@
 package com.goldfish.goldfishmod02tastyfurniture.registry;
 
+import java.util.Set;
+import java.util.function.ToIntFunction;
+
 import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodBed;
@@ -28,7 +31,6 @@ import com.goldfish.goldfishmod02tastyfurniture.block.chorusfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.codSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.codWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.codfurnace;
-import com.goldfish.goldfishmod02tastyfurniture.block.foodChest;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodlamp;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodpathtypeminislab;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
@@ -90,7 +92,6 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.chorusSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.chorusfurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.codSignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.codfurnaceentity;
-import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodChestEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.glowberrySignEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.appleSignEntity;
@@ -124,6 +125,8 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.tropicalfishSignEnt
 
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ButtonBlock;
@@ -169,147 +172,127 @@ public class foodblockregistry {
          .destroyTime(2.0f)
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
-         .lightLevel(state -> 0)
-         ));
+    ));
   //.........potato
     public static final DeferredHolder<Block, Block> POTATO_BLOCK = FOODBLOCK.register("potato_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(2.5f)
          .explosionResistance(10.5f)
          .sound(SoundType.MUD_BRICKS)
-         .lightLevel(state -> 0)
          ));
   //.........beetroot
     public static final DeferredHolder<Block, Block> BEETROOT_BLOCK = FOODBLOCK.register("beetroot_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(2.5f)
          .explosionResistance(10.5f)
          .sound(SoundType.MUD_BRICKS)
-         .lightLevel(state -> 0)
          ));
   //.........carrot
     public static final DeferredHolder<Block, Block> CARROT_BLOCK = FOODBLOCK.register("carrot_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(2.5f)
          .explosionResistance(10.5f)
          .sound(SoundType.MUD_BRICKS)
-         .lightLevel(state -> 0)
          ));
   //.........chorus
     public static final DeferredHolder<Block, Block> CHORUS_BLOCK = FOODBLOCK.register("chorus_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(2.5f)
          .explosionResistance(10.5f)
          .sound(SoundType.MUD_BRICKS)
-         .lightLevel(state -> 0)
          ));
   //.........glow_berry
     public static final DeferredHolder<Block, Block> GLOW_BERRY_BLOCK = FOODBLOCK.register("glow_berry_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(2.5f)
          .explosionResistance(10.5f)
          .sound(SoundType.MUD_BRICKS)
-         .lightLevel(state -> 15)
+         .lightLevel((state) -> { return 15; }) //not sure if this is how this is supposed to be done
          ));
   //.........melon
     public static final DeferredHolder<Block, Block> MELON_BLOCK = FOODBLOCK.register("melon_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(1.5f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD_BRICKS)
-         .lightLevel(state -> 0)
          ));
   //.........sweet_berry
     public static final DeferredHolder<Block, Block> SWEET_BERRY_BLOCK = FOODBLOCK.register("sweet_berry_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(1.5f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD_BRICKS)
-         .lightLevel(state -> 0)
          ));
   //.........brown_mushroom
     public static final DeferredHolder<Block, Block> BROWN_MUSHROOM_BLOCK = FOODBLOCK.register("brown_mushroom_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(1.75f)
          .explosionResistance(9.75f)
          .sound(SoundType.MUD_BRICKS)
-         .lightLevel(state -> 0)
          ));
   //.........red_mushroom
     public static final DeferredHolder<Block, Block> RED_MUSHROOM_BLOCK = FOODBLOCK.register("red_mushroom_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(1.75f)
          .explosionResistance(9.75f)
          .sound(SoundType.MUD_BRICKS)
-         .lightLevel(state -> 0)
          ));
   //.........pumpkin
     public static final DeferredHolder<Block, Block> PUMPKIN_BLOCK = FOODBLOCK.register("pumpkin_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(3.25f)
          .explosionResistance(11.5f)
          .sound(SoundType.MUD_BRICKS)
-         .lightLevel(state -> 0)
          ));
   //.........chicken
     public static final DeferredHolder<Block, Block> CHICKEN_BLOCK = FOODBLOCK.register("chicken_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD)
-         .lightLevel(state -> 0)
          ));
   //.........cod
     public static final DeferredHolder<Block, Block> COD_BLOCK = FOODBLOCK.register("cod_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD)
-         .lightLevel(state -> 0)
          ));
   //.........salmon
     public static final DeferredHolder<Block, Block> SALMON_BLOCK = FOODBLOCK.register("salmon_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD)
-         .lightLevel(state -> 0)
          ));
   //.........tropical_fish
     public static final DeferredHolder<Block, Block> TROPICAL_FISH_BLOCK = FOODBLOCK.register("tropical_fish_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD)
-         .lightLevel(state -> 0)
          ));
   //.........mutton
     public static final DeferredHolder<Block, Block> MUTTON_BLOCK = FOODBLOCK.register("mutton_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD)
-         .lightLevel(state -> 0)
          ));
   //.........beef
     public static final DeferredHolder<Block, Block> BEEF_BLOCK = FOODBLOCK.register("beef_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD)
-         .lightLevel(state -> 0)
          ));
   //.........pork
     public static final DeferredHolder<Block, Block> PORK_BLOCK = FOODBLOCK.register("pork_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD)
-         .lightLevel(state -> 0)
          ));
   //.........rabbit
     public static final DeferredHolder<Block, Block> RABBIT_BLOCK = FOODBLOCK.register("rabbit_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.MUD)
-         .lightLevel(state -> 0)
          ));
   //.........sugar
     public static final DeferredHolder<Block, Block> SUGAR_BLOCK = FOODBLOCK.register("sugar_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.BASALT)
-         .lightLevel(state -> 0)
          ));
   //.........honeycomb
     public static final DeferredHolder<Block, Block> PROCESSED_HONEYCOMB_BLOCK = FOODBLOCK.register("processed_honeycomb_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
          .explosionResistance(9.5f)
          .sound(SoundType.HONEY_BLOCK)
-         .lightLevel(state -> 0)
          ));
 
  //-------------------------------------------------------------------------------------Brick Blocks--------------------------------------------------------------------------------------------
@@ -348,8 +331,8 @@ public class foodblockregistry {
          .destroyTime(2.0f)
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
-         .lightLevel(state -> 15)
-         ));
+         .lightLevel((state) -> { return 15; }) 
+    ));
   //.........melon
     public static final DeferredHolder<Block, Block> MELON_BRICKS_BLOCK = FOODBLOCK.register("melon_bricks_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(2.0f)
@@ -477,7 +460,7 @@ public class foodblockregistry {
          .destroyTime(2.0f)
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
-         .lightLevel(state -> 15)
+         .lightLevel((state) -> { return 15; }) 
          ));
   //.........melon
     public static final DeferredHolder<Block, Block> MELON_CHISELED_BLOCK = FOODBLOCK.register("melon_chiseled_block", () -> new Block(BlockBehaviour.Properties.of()
@@ -605,7 +588,7 @@ public class foodblockregistry {
          .destroyTime(2.0f)
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
-         .lightLevel(state -> 10)
+         .lightLevel((state) -> { return 15; }) 
          ));
   //.........melon
     public static final DeferredHolder<Block, HorizontalDirectionalBlock> MELON_TILE_BLOCK = FOODBLOCK.register("melon_tile_block", () -> new horizontal_food_block(BlockBehaviour.Properties.of()
@@ -736,7 +719,7 @@ public class foodblockregistry {
          .explosionResistance(9.5f)
          .sound(SoundType.MUD_BRICKS)
          .noOcclusion()
-         .lightLevel(state -> 10)
+         .lightLevel((state) -> { return 15; }) 
          ));
     public static final DeferredHolder<Block, DoorBlock> MELON_DOOR_BLOCK = FOODBLOCK.register("melon_door", () -> new DoorBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
          .destroyTime(2.25f)
@@ -850,7 +833,7 @@ public class foodblockregistry {
     ));
     public static final DeferredHolder<Block, ButtonBlock> GLOW_BERRY_BUTTON = FOODBLOCK.register("glow_berry_button", () -> new ButtonBlock(foodmaterialtyperegistry.PLANT, 20, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
-    .lightLevel(state -> 5)
+    .lightLevel((state) -> { return 5; }) 
     ));
     public static final DeferredHolder<Block, ButtonBlock> MELON_BUTTON = FOODBLOCK.register("melon_button", () -> new ButtonBlock(foodmaterialtyperegistry.PLANT, 20, BlockBehaviour.Properties.of()
     .sound(SoundType.MUD_BRICKS)
@@ -931,7 +914,7 @@ public class foodblockregistry {
     .sound(SoundType.ROOTED_DIRT)
     .destroyTime(1.5f)
     .explosionResistance(8.0f)
-    .lightLevel(state -> 5)
+    .lightLevel((state) -> { return 5; }) 
     ));
     public static final DeferredHolder<Block, FenceBlock> MELON_FENCE = FOODBLOCK.register("melon_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
     .sound(SoundType.ROOTED_DIRT)
@@ -1065,7 +1048,7 @@ public class foodblockregistry {
             .sound(SoundType.ROOTED_DIRT)
             .destroyTime(1.5f)
             .explosionResistance(8.0f)
-            .lightLevel(state -> 15)
+            .lightLevel((state) -> { return 15; }) 
     ));
 
     public static final DeferredHolder<Block, FenceGateBlock>  MELON_GATE = FOODBLOCK.register("melon_fence_gate", 
@@ -1355,15 +1338,13 @@ public class foodblockregistry {
    ));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<appleSignEntity>> APPLE_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "apple_sign_entity",
-     () -> BlockEntityType.Builder.of(
+     () -> new BlockEntityType<appleSignEntity>(
          appleSignEntity::new,
+         Set.of(   
          foodblockregistry.APPLE_SIGN.get(),
          foodblockregistry.APPLE_WALL_SIGN.get(),
-         foodblockregistry.APPLE_STANDING_SIGN.get()
-     ).build(null)
-   );
- 
-
+         foodblockregistry.APPLE_STANDING_SIGN.get())
+    ));
   //.........potato
     public static final DeferredHolder<Block, potatoSign> POTATO_SIGN = FOODBLOCK.register("potato_sign",
     () -> new potatoSign(
@@ -1402,13 +1383,12 @@ public class foodblockregistry {
     ));
       public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<potatoSignEntity>> POTATO_SIGN_ENTITY = FOODBLOCKENTITY.register(
       "potato_sign_entity",
-      () -> BlockEntityType.Builder.of(
+      () -> new BlockEntityType<potatoSignEntity>(
           potatoSignEntity::new,
           foodblockregistry.POTATO_SIGN.get(),
           foodblockregistry.POTATO_WALL_SIGN.get(),
           foodblockregistry.POTATO_STANDING_SIGN.get()
-      ).build(null
-    ));
+      ));
 
 
   //.........beetroot
@@ -1449,12 +1429,11 @@ public class foodblockregistry {
     ));
       public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<beetrootSignEntity>> BEETROOT_SIGN_ENTITY = FOODBLOCKENTITY.register(
       "beetroot_sign_entity",
-      () -> BlockEntityType.Builder.of(
+      () -> new BlockEntityType<beetrootSignEntity>(
           beetrootSignEntity::new,
           foodblockregistry.BEETROOT_SIGN.get(),
           foodblockregistry.BEETROOT_WALL_SIGN.get(),
           foodblockregistry.BEETROOT_STANDING_SIGN.get()
-      ).build(null
     ));
   //.........carrot
     public static final DeferredHolder<Block, carrotSign> CARROT_SIGN = FOODBLOCK.register("carrot_sign",
@@ -1494,13 +1473,13 @@ public class foodblockregistry {
     ));
       public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<carrotSignEntity>> CARROT_SIGN_ENTITY = FOODBLOCKENTITY.register(
       "carrot_sign_entity",
-      () -> BlockEntityType.Builder.of(
+      () -> new BlockEntityType<carrotSignEntity>(
           carrotSignEntity::new,
           foodblockregistry.CARROT_SIGN.get(),
           foodblockregistry.CARROT_WALL_SIGN.get(),
           foodblockregistry.CARROT_STANDING_SIGN.get()
-      ).build(null
-    ));
+      )
+    );
   //.........chorus
     public static final DeferredHolder<Block, chorusSign> CHORUS_SIGN = FOODBLOCK.register("chorus_sign",
     () -> new chorusSign(
@@ -1539,18 +1518,18 @@ public class foodblockregistry {
     ));
       public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<chorusSignEntity>> CHORUS_SIGN_ENTITY = FOODBLOCKENTITY.register(
       "chorus_sign_entity",
-      () -> BlockEntityType.Builder.of(
+      () -> new BlockEntityType<chorusSignEntity>(
           chorusSignEntity::new,
           foodblockregistry.CHORUS_SIGN.get(),
           foodblockregistry.CHORUS_WALL_SIGN.get(),
           foodblockregistry.CHORUS_STANDING_SIGN.get()
-      ).build(null
-    ));
+      )
+    );
   //.........glowberry
     public static final DeferredHolder<Block, glowberrySign> GLOWBERRY_SIGN = FOODBLOCK.register("glowberry_sign",
     () -> new glowberrySign(
       BlockBehaviour.Properties.of()
-          .lightLevel(state -> 10)
+          .lightLevel((state) -> { return 10; }) 
           .mapColor(MapColor.WOOD)
           .forceSolidOn()
           .instrument(NoteBlockInstrument.BASS)
@@ -1562,7 +1541,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, glowberryWallSign> GLOWBERRY_WALL_SIGN = FOODBLOCK.register("glowberry_wall_sign",
     () -> new glowberryWallSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -1575,7 +1554,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, glowberrySign> GLOWBERRY_STANDING_SIGN = FOODBLOCK.register("glowberry_standing_sign",
     () -> new glowberrySign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -1587,18 +1566,18 @@ public class foodblockregistry {
     ));
       public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<glowberrySignEntity>> GLOWBERRY_SIGN_ENTITY = FOODBLOCKENTITY.register(
       "glowberry_sign_entity",
-      () -> BlockEntityType.Builder.of(
+      () -> new BlockEntityType<glowberrySignEntity>(
           glowberrySignEntity::new,
           foodblockregistry.GLOWBERRY_SIGN.get(),
           foodblockregistry.GLOWBERRY_WALL_SIGN.get(),
           foodblockregistry.GLOWBERRY_STANDING_SIGN.get()
-      ).build(null
-    ));
+      )
+    );
   //.........melon
     public static final DeferredHolder<Block, melonSign> MELON_SIGN = FOODBLOCK.register("melon_sign",
     () -> new melonSign(
       BlockBehaviour.Properties.of()
-          .lightLevel(state -> 10)
+          .lightLevel((state) -> { return 10; }) 
           .mapColor(MapColor.WOOD)
           .forceSolidOn()
           .instrument(NoteBlockInstrument.BASS)
@@ -1610,7 +1589,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, melonWallSign> MELON_WALL_SIGN = FOODBLOCK.register("melon_wall_sign",
     () -> new melonWallSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -1623,7 +1602,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, melonSign> MELON_STANDING_SIGN = FOODBLOCK.register("melon_standing_sign",
     () -> new melonSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -1635,18 +1614,18 @@ public class foodblockregistry {
     ));
       public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<melonSignEntity>> MELON_SIGN_ENTITY = FOODBLOCKENTITY.register(
       "melon_sign_entity",
-      () -> BlockEntityType.Builder.of(
+      () -> new BlockEntityType<melonSignEntity>(
           melonSignEntity::new,
           foodblockregistry.MELON_SIGN.get(),
           foodblockregistry.MELON_WALL_SIGN.get(),
           foodblockregistry.MELON_STANDING_SIGN.get()
-      ).build(null
-    ));
+      )
+    );
   //.........sweetberry
     public static final DeferredHolder<Block, sweetberrySign> SWEETBERRY_SIGN = FOODBLOCK.register("sweetberry_sign",
     () -> new sweetberrySign(
       BlockBehaviour.Properties.of()
-          .lightLevel(state -> 10)
+          .lightLevel((state) -> { return 10; }) 
           .mapColor(MapColor.WOOD)
           .forceSolidOn()
           .instrument(NoteBlockInstrument.BASS)
@@ -1658,7 +1637,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, sweetberryWallSign> SWEETBERRY_WALL_SIGN = FOODBLOCK.register("sweetberry_wall_sign",
     () -> new sweetberryWallSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -1671,7 +1650,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, sweetberrySign> SWEETBERRY_STANDING_SIGN = FOODBLOCK.register("sweetberry_standing_sign",
     () -> new sweetberrySign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -1683,18 +1662,18 @@ public class foodblockregistry {
     ));
       public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<sweetberrySignEntity>> SWEETBERRY_SIGN_ENTITY = FOODBLOCKENTITY.register(
       "sweetberry_sign_entity",
-      () -> BlockEntityType.Builder.of(
+      () -> new BlockEntityType<>(
           sweetberrySignEntity::new,
           foodblockregistry.SWEETBERRY_SIGN.get(),
           foodblockregistry.SWEETBERRY_WALL_SIGN.get(),
           foodblockregistry.SWEETBERRY_STANDING_SIGN.get()
-      ).build(null
-    ));
+      )
+    );
   //.........brownmushroom
     public static final DeferredHolder<Block, brownmushroomSign> BROWNMUSHROOM_SIGN = FOODBLOCK.register("brownmushroom_sign",
     () -> new brownmushroomSign(
       BlockBehaviour.Properties.of()
-          .lightLevel(state -> 10)
+          .lightLevel((state) -> { return 10; }) 
           .mapColor(MapColor.WOOD)
           .forceSolidOn()
           .instrument(NoteBlockInstrument.BASS)
@@ -1706,7 +1685,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, brownmushroomWallSign> BROWNMUSHROOM_WALL_SIGN = FOODBLOCK.register("brownmushroom_wall_sign",
     () -> new brownmushroomWallSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -1719,7 +1698,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, brownmushroomSign> BROWNMUSHROOM_STANDING_SIGN = FOODBLOCK.register("brownmushroom_standing_sign",
     () -> new brownmushroomSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -1731,18 +1710,18 @@ public class foodblockregistry {
     ));
       public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<brownmushroomSignEntity>> BROWNMUSHROOM_SIGN_ENTITY = FOODBLOCKENTITY.register(
       "brownmushroom_sign_entity",
-      () -> BlockEntityType.Builder.of(
+      () -> new BlockEntityType<brownmushroomSignEntity>(
           brownmushroomSignEntity::new,
           foodblockregistry.BROWNMUSHROOM_SIGN.get(),
           foodblockregistry.BROWNMUSHROOM_WALL_SIGN.get(),
           foodblockregistry.BROWNMUSHROOM_STANDING_SIGN.get()
-      ).build(null
-    ));
+      )
+    );
   //.........redmushroom
     public static final DeferredHolder<Block, redmushroomSign> REDMUSHROOM_SIGN = FOODBLOCK.register("redmushroom_sign",
     () -> new redmushroomSign(
       BlockBehaviour.Properties.of()
-          .lightLevel(state -> 10)
+          .lightLevel((state) -> { return 10; }) 
           .mapColor(MapColor.WOOD)
           .forceSolidOn()
           .instrument(NoteBlockInstrument.BASS)
@@ -1754,7 +1733,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, redmushroomWallSign> REDMUSHROOM_WALL_SIGN = FOODBLOCK.register("redmushroom_wall_sign",
     () -> new redmushroomWallSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -1767,7 +1746,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, redmushroomSign> REDMUSHROOM_STANDING_SIGN = FOODBLOCK.register("redmushroom_standing_sign",
     () -> new redmushroomSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -1779,18 +1758,18 @@ public class foodblockregistry {
     ));
       public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<redmushroomSignEntity>> REDMUSHROOM_SIGN_ENTITY = FOODBLOCKENTITY.register(
       "redmushroom_sign_entity",
-      () -> BlockEntityType.Builder.of(
+      () -> new BlockEntityType<>(
           redmushroomSignEntity::new,
           foodblockregistry.REDMUSHROOM_SIGN.get(),
           foodblockregistry.REDMUSHROOM_WALL_SIGN.get(),
           foodblockregistry.REDMUSHROOM_STANDING_SIGN.get()
-      ).build(null
-    ));
+      )
+    );
   //.........pumpkin
     public static final DeferredHolder<Block, pumpkinSign> PUMPKIN_SIGN = FOODBLOCK.register("pumpkin_sign",
     () -> new pumpkinSign(
       BlockBehaviour.Properties.of()
-          .lightLevel(state -> 10)
+          .lightLevel((state) -> { return 10; }) 
           .mapColor(MapColor.WOOD)
           .forceSolidOn()
           .instrument(NoteBlockInstrument.BASS)
@@ -1802,7 +1781,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, pumpkinWallSign> PUMPKIN_WALL_SIGN = FOODBLOCK.register("pumpkin_wall_sign",
     () -> new pumpkinWallSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -1815,7 +1794,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, pumpkinSign> PUMPKIN_STANDING_SIGN = FOODBLOCK.register("pumpkin_standing_sign",
     () -> new pumpkinSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -1827,18 +1806,18 @@ public class foodblockregistry {
     ));
       public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<pumpkinSignEntity>> PUMPKIN_SIGN_ENTITY = FOODBLOCKENTITY.register(
       "pumpkin_sign_entity",
-      () -> BlockEntityType.Builder.of(
+      () -> new BlockEntityType<>(
           pumpkinSignEntity::new,
           foodblockregistry.PUMPKIN_SIGN.get(),
           foodblockregistry.PUMPKIN_WALL_SIGN.get(),
           foodblockregistry.PUMPKIN_STANDING_SIGN.get()
-      ).build(null
-    ));
+      )
+    );
   //.........chicken
     public static final DeferredHolder<Block, chickenSign> CHICKEN_SIGN = FOODBLOCK.register("chicken_sign",
     () -> new chickenSign(
       BlockBehaviour.Properties.of()
-          .lightLevel(state -> 10)
+          .lightLevel((state) -> { return 10; }) 
           .mapColor(MapColor.WOOD)
           .forceSolidOn()
           .instrument(NoteBlockInstrument.BASS)
@@ -1850,7 +1829,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, chickenWallSign> CHICKEN_WALL_SIGN = FOODBLOCK.register("chicken_wall_sign",
     () -> new chickenWallSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -1863,7 +1842,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, chickenSign> CHICKEN_STANDING_SIGN = FOODBLOCK.register("chicken_standing_sign",
     () -> new chickenSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -1875,18 +1854,18 @@ public class foodblockregistry {
     ));
       public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<chickenSignEntity>> CHICKEN_SIGN_ENTITY = FOODBLOCKENTITY.register(
       "chicken_sign_entity",
-      () -> BlockEntityType.Builder.of(
+      () -> new BlockEntityType<>(
           chickenSignEntity::new,
           foodblockregistry.CHICKEN_SIGN.get(),
           foodblockregistry.CHICKEN_WALL_SIGN.get(),
           foodblockregistry.CHICKEN_STANDING_SIGN.get()
-      ).build(null
-    ));
+      )
+    );
   //.........cod
     public static final DeferredHolder<Block, codSign> COD_SIGN = FOODBLOCK.register("cod_sign",
     () -> new codSign(
       BlockBehaviour.Properties.of()
-          .lightLevel(state -> 10)
+          .lightLevel((state) -> { return 10; }) 
           .mapColor(MapColor.WOOD)
           .forceSolidOn()
           .instrument(NoteBlockInstrument.BASS)
@@ -1898,7 +1877,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, codWallSign> COD_WALL_SIGN = FOODBLOCK.register("cod_wall_sign",
     () -> new codWallSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -1911,7 +1890,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, codSign> COD_STANDING_SIGN = FOODBLOCK.register("cod_standing_sign",
     () -> new codSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -1923,18 +1902,18 @@ public class foodblockregistry {
     ));
       public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<codSignEntity>> COD_SIGN_ENTITY = FOODBLOCKENTITY.register(
       "cod_sign_entity",
-      () -> BlockEntityType.Builder.of(
+      () -> new BlockEntityType<>(
           codSignEntity::new,
           foodblockregistry.COD_SIGN.get(),
           foodblockregistry.COD_WALL_SIGN.get(),
           foodblockregistry.COD_STANDING_SIGN.get()
-      ).build(null
-    ));
+      )
+    );
   //.........salmon
     public static final DeferredHolder<Block, salmonSign> SALMON_SIGN = FOODBLOCK.register("salmon_sign",
     () -> new salmonSign(
       BlockBehaviour.Properties.of()
-          .lightLevel(state -> 10)
+          .lightLevel((state) -> { return 10; }) 
           .mapColor(MapColor.WOOD)
           .forceSolidOn()
           .instrument(NoteBlockInstrument.BASS)
@@ -1946,7 +1925,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, salmonWallSign> SALMON_WALL_SIGN = FOODBLOCK.register("salmon_wall_sign",
     () -> new salmonWallSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -1959,7 +1938,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, salmonSign> SALMON_STANDING_SIGN = FOODBLOCK.register("salmon_standing_sign",
     () -> new salmonSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -1971,18 +1950,18 @@ public class foodblockregistry {
     ));
       public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<salmonSignEntity>> SALMON_SIGN_ENTITY = FOODBLOCKENTITY.register(
       "salmon_sign_entity",
-      () -> BlockEntityType.Builder.of(
+      () -> new BlockEntityType<>(
           salmonSignEntity::new,
           foodblockregistry.SALMON_SIGN.get(),
           foodblockregistry.SALMON_WALL_SIGN.get(),
           foodblockregistry.SALMON_STANDING_SIGN.get()
-      ).build(null
-    ));
+      )
+    );
   //.........tropicalfish
     public static final DeferredHolder<Block, tropicalfishSign> TROPICALFISH_SIGN = FOODBLOCK.register("tropicalfish_sign",
     () -> new tropicalfishSign(
       BlockBehaviour.Properties.of()
-          .lightLevel(state -> 10)
+          .lightLevel((state) -> { return 10; }) 
           .mapColor(MapColor.WOOD)
           .forceSolidOn()
           .instrument(NoteBlockInstrument.BASS)
@@ -1994,7 +1973,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, tropicalfishWallSign> TROPICALFISH_WALL_SIGN = FOODBLOCK.register("tropicalfish_wall_sign",
     () -> new tropicalfishWallSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -2007,7 +1986,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, tropicalfishSign> TROPICALFISH_STANDING_SIGN = FOODBLOCK.register("tropicalfish_standing_sign",
     () -> new tropicalfishSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -2019,18 +1998,18 @@ public class foodblockregistry {
     ));
       public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<tropicalfishSignEntity>> TROPICALFISH_SIGN_ENTITY = FOODBLOCKENTITY.register(
       "tropicalfish_sign_entity",
-      () -> BlockEntityType.Builder.of(
+      () -> new BlockEntityType<>(
           tropicalfishSignEntity::new,
           foodblockregistry.TROPICALFISH_SIGN.get(),
           foodblockregistry.TROPICALFISH_WALL_SIGN.get(),
           foodblockregistry.TROPICALFISH_STANDING_SIGN.get()
-      ).build(null
-    ));
+      )
+    );
   //.........mutton
     public static final DeferredHolder<Block, muttonSign> MUTTON_SIGN = FOODBLOCK.register("mutton_sign",
     () -> new muttonSign(
       BlockBehaviour.Properties.of()
-          .lightLevel(state -> 10)
+          .lightLevel((state) -> { return 10; }) 
           .mapColor(MapColor.WOOD)
           .forceSolidOn()
           .instrument(NoteBlockInstrument.BASS)
@@ -2042,7 +2021,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, muttonWallSign> MUTTON_WALL_SIGN = FOODBLOCK.register("mutton_wall_sign",
     () -> new muttonWallSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -2055,7 +2034,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, muttonSign> MUTTON_STANDING_SIGN = FOODBLOCK.register("mutton_standing_sign",
     () -> new muttonSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -2067,18 +2046,18 @@ public class foodblockregistry {
     ));
       public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<muttonSignEntity>> MUTTON_SIGN_ENTITY = FOODBLOCKENTITY.register(
       "mutton_sign_entity",
-      () -> BlockEntityType.Builder.of(
+      () -> new BlockEntityType<>(
           muttonSignEntity::new,
           foodblockregistry.MUTTON_SIGN.get(),
           foodblockregistry.MUTTON_WALL_SIGN.get(),
           foodblockregistry.MUTTON_STANDING_SIGN.get()
-      ).build(null
-    ));
+      )
+    );
   //.........beef
     public static final DeferredHolder<Block, beefSign> BEEF_SIGN = FOODBLOCK.register("beef_sign",
     () -> new beefSign(
       BlockBehaviour.Properties.of()
-          .lightLevel(state -> 10)
+          .lightLevel((state) -> { return 10; }) 
           .mapColor(MapColor.WOOD)
           .forceSolidOn()
           .instrument(NoteBlockInstrument.BASS)
@@ -2090,7 +2069,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, beefWallSign> BEEF_WALL_SIGN = FOODBLOCK.register("beef_wall_sign",
     () -> new beefWallSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -2103,7 +2082,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, beefSign> BEEF_STANDING_SIGN = FOODBLOCK.register("beef_standing_sign",
     () -> new beefSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -2115,18 +2094,18 @@ public class foodblockregistry {
     ));
       public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<beefSignEntity>> BEEF_SIGN_ENTITY = FOODBLOCKENTITY.register(
       "beef_sign_entity",
-      () -> BlockEntityType.Builder.of(
+      () -> new BlockEntityType<>(
           beefSignEntity::new,
           foodblockregistry.BEEF_SIGN.get(),
           foodblockregistry.BEEF_WALL_SIGN.get(),
           foodblockregistry.BEEF_STANDING_SIGN.get()
-      ).build(null
-    ));
+      )
+    );
   //.........pork
     public static final DeferredHolder<Block, porkSign> PORK_SIGN = FOODBLOCK.register("pork_sign",
     () -> new porkSign(
       BlockBehaviour.Properties.of()
-          .lightLevel(state -> 10)
+          .lightLevel((state) -> { return 10; }) 
           .mapColor(MapColor.WOOD)
           .forceSolidOn()
           .instrument(NoteBlockInstrument.BASS)
@@ -2138,7 +2117,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, porkWallSign> PORK_WALL_SIGN = FOODBLOCK.register("pork_wall_sign",
     () -> new porkWallSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -2151,7 +2130,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, porkSign> PORK_STANDING_SIGN = FOODBLOCK.register("pork_standing_sign",
     () -> new porkSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -2163,18 +2142,18 @@ public class foodblockregistry {
     ));
       public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<porkSignEntity>> PORK_SIGN_ENTITY = FOODBLOCKENTITY.register(
       "pork_sign_entity",
-      () -> BlockEntityType.Builder.of(
+      () -> new BlockEntityType<>(
           porkSignEntity::new,
           foodblockregistry.PORK_SIGN.get(),
           foodblockregistry.PORK_WALL_SIGN.get(),
           foodblockregistry.PORK_STANDING_SIGN.get()
-      ).build(null
-    ));
+      )
+    );
   //.........rabbit
     public static final DeferredHolder<Block, rabbitSign> RABBIT_SIGN = FOODBLOCK.register("rabbit_sign",
     () -> new rabbitSign(
       BlockBehaviour.Properties.of()
-          .lightLevel(state -> 10)
+          .lightLevel((state) -> { return 10; }) 
           .mapColor(MapColor.WOOD)
           .forceSolidOn()
           .instrument(NoteBlockInstrument.BASS)
@@ -2186,7 +2165,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, rabbitWallSign> RABBIT_WALL_SIGN = FOODBLOCK.register("rabbit_wall_sign",
     () -> new rabbitWallSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -2199,7 +2178,7 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, rabbitSign> RABBIT_STANDING_SIGN = FOODBLOCK.register("rabbit_standing_sign",
     () -> new rabbitSign(
         BlockBehaviour.Properties.of()
-        .lightLevel(state -> 10)
+        .lightLevel((state) -> { return 10; }) 
         .mapColor(MapColor.WOOD)
         .forceSolidOn()
         .instrument(NoteBlockInstrument.BASS)
@@ -2211,13 +2190,13 @@ public class foodblockregistry {
     ));
       public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<rabbitSignEntity>> RABBIT_SIGN_ENTITY = FOODBLOCKENTITY.register(
       "rabbit_sign_entity",
-      () -> BlockEntityType.Builder.of(
+      () -> new BlockEntityType<>(
           rabbitSignEntity::new,
           foodblockregistry.RABBIT_SIGN.get(),
           foodblockregistry.RABBIT_WALL_SIGN.get(),
           foodblockregistry.RABBIT_STANDING_SIGN.get()
-      ).build(null
-    ));
+      )
+    );
   //.........sugar
     public static final DeferredHolder<Block, sugarSign> SUGAR_SIGN = FOODBLOCK.register("sugar_sign",
     () -> new sugarSign(
@@ -2256,13 +2235,13 @@ public class foodblockregistry {
     ));
       public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<sugarSignEntity>> SUGAR_SIGN_ENTITY = FOODBLOCKENTITY.register(
       "sugar_sign_entity",
-      () -> BlockEntityType.Builder.of(
+      () -> new BlockEntityType<>(
           sugarSignEntity::new,
           foodblockregistry.SUGAR_SIGN.get(),
           foodblockregistry.SUGAR_WALL_SIGN.get(),
           foodblockregistry.SUGAR_STANDING_SIGN.get()
-      ).build(null
-    ));
+      )
+    );
   //.........honeycomb
     public static final DeferredHolder<Block, honeycombSign> HONEYCOMB_SIGN = FOODBLOCK.register("honeycomb_sign",
     () -> new honeycombSign(
@@ -2301,13 +2280,12 @@ public class foodblockregistry {
     ));
       public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<honeycombSignEntity>> HONEYCOMB_SIGN_ENTITY = FOODBLOCKENTITY.register(
       "honeycomb_sign_entity",
-      () -> BlockEntityType.Builder.of(
+      () -> new BlockEntityType<>(
           honeycombSignEntity::new,
           foodblockregistry.HONEYCOMB_SIGN.get(),
           foodblockregistry.HONEYCOMB_WALL_SIGN.get(),
           foodblockregistry.HONEYCOMB_STANDING_SIGN.get()
-      ).build(null
-    ));
+      ));
 
 //==============================================================================================================================================================================================
 //                                                                                          Slabs
@@ -2348,7 +2326,7 @@ public class foodblockregistry {
      .destroyTime(1.75f)
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)
-     .lightLevel(state -> 15)
+     .lightLevel((state) -> { return 15; }) 
      ));
    //.........melon
      public static final DeferredHolder<Block, SlabBlock> MELON_SLAB = FOODBLOCK.register("melon_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
@@ -2477,7 +2455,7 @@ public class foodblockregistry {
      .destroyTime(1.75f)
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)
-     .lightLevel(state -> 15)
+     .lightLevel((state) -> { return 15; }) 
      ));
    //.........melon
      public static final DeferredHolder<Block, SlabBlock> MELON_BRICKS_SLAB = FOODBLOCK.register("melon_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
@@ -2623,7 +2601,7 @@ public class foodblockregistry {
           .destroyTime(1.75f)
           .explosionResistance(9.5f)
           .sound(SoundType.MUD_BRICKS)
-          .lightLevel(state -> 15)
+          .lightLevel((state) -> { return 15; }) 
       ));
    //.........melon
      public static final DeferredHolder<Block, StairBlock> MELON_STAIRS = FOODBLOCK.register("melon_stairs", () -> new StairBlock(
@@ -2794,7 +2772,7 @@ public class foodblockregistry {
       .destroyTime(1.75f)
       .explosionResistance(9.5f)
       .sound(SoundType.MUD_BRICKS)
-      .lightLevel(state -> 15)
+      .lightLevel((state) -> { return 15; }) 
    ));
   //.........melon
    public static final DeferredHolder<Block, StairBlock> MELON_BRICKS_STAIRS = FOODBLOCK.register("melon_bricks_stairs", () -> new StairBlock(
@@ -2956,7 +2934,7 @@ public class foodblockregistry {
      .destroyTime(1.75f)
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)
-     .lightLevel(state -> 15)
+     .lightLevel((state) -> { return 15; }) 
      ));
    //.........melon
      public static final DeferredHolder<Block, TrapDoorBlock> MELON_TRAPDOOR = FOODBLOCK.register("melon_trapdoor", () -> new TrapDoorBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
@@ -3334,147 +3312,147 @@ public class foodblockregistry {
      .destroyTime(1.5f)
      .explosionResistance(10.0f)
      .sound(SoundType.FROGLIGHT)
-     .lightLevel(state -> 15)
+     .lightLevel((state) -> { return 15; }) 
      ));
    //.........potato
      public static final DeferredHolder<Block, Block> POTATO_LAMP = FOODBLOCK.register("potato_lamp", () -> new Block(BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(10.0f)
      .sound(SoundType.FROGLIGHT)
-     .lightLevel(state -> 15)
+     .lightLevel((state) -> { return 15; }) 
      ));
    //.........beetroot
      public static final DeferredHolder<Block, Block> BEETROOT_LAMP = FOODBLOCK.register("beetroot_lamp", () -> new Block(BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(10.0f)
      .sound(SoundType.FROGLIGHT)
-     .lightLevel(state -> 15)
+     .lightLevel((state) -> { return 15; }) 
      ));
    //.........carrot
      public static final DeferredHolder<Block, Block> CARROT_LAMP = FOODBLOCK.register("carrot_lamp", () -> new Block(BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(10.0f)
      .sound(SoundType.FROGLIGHT)
-     .lightLevel(state -> 15)
+     .lightLevel((state) -> { return 15; }) 
      ));
    //.........chorus
      public static final DeferredHolder<Block, HorizontalDirectionalBlock> CHORUS_LAMP = FOODBLOCK.register("chorus_lamp", () -> new foodlamp(BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(10.0f)
      .sound(SoundType.FROGLIGHT)
-     .lightLevel(state -> 15)
+     .lightLevel((state) -> { return 15; }) 
      ));
    //.........glow_berry
      public static final DeferredHolder<Block, Block> GLOW_BERRY_LAMP = FOODBLOCK.register("glow_berry_lamp", () -> new Block(BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(10.0f)
      .sound(SoundType.FROGLIGHT)
-     .lightLevel(state -> 15)
+     .lightLevel((state) -> { return 15; }) 
      ));
    //.........melon
      public static final DeferredHolder<Block, Block> MELON_LAMP = FOODBLOCK.register("melon_lamp", () -> new Block(BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(10.0f)
      .sound(SoundType.FROGLIGHT)
-     .lightLevel(state -> 15)
+     .lightLevel((state) -> { return 15; }) 
      ));
    //.........sweet_berry
      public static final DeferredHolder<Block, Block> SWEET_BERRY_LAMP = FOODBLOCK.register("sweet_berry_lamp", () -> new Block(BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(10.0f)
      .sound(SoundType.FROGLIGHT)
-     .lightLevel(state -> 15)
+     .lightLevel((state) -> { return 15; }) 
      ));
    //.........brown_mushroom
      public static final DeferredHolder<Block, Block> BROWN_MUSHROOM_LAMP = FOODBLOCK.register("brown_mushroom_lamp", () -> new Block(BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(10.0f)
      .sound(SoundType.FROGLIGHT)
-     .lightLevel(state -> 15)
+     .lightLevel((state) -> { return 15; }) 
      ));
    //.........red_mushroom
      public static final DeferredHolder<Block, Block> RED_MUSHROOM_LAMP = FOODBLOCK.register("red_mushroom_lamp", () -> new Block(BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(10.0f)
      .sound(SoundType.FROGLIGHT)
-     .lightLevel(state -> 15)
+     .lightLevel((state) -> { return 15; }) 
      ));
    //.........pumpkin
      public static final DeferredHolder<Block, HorizontalDirectionalBlock> PUMPKIN_LAMP = FOODBLOCK.register("pumpkin_lamp", () -> new foodlamp(BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(10.0f)
      .sound(SoundType.FROGLIGHT)
-     .lightLevel(state -> 15)
+     .lightLevel((state) -> { return 15; }) 
      ));
    //.........chicken
      public static final DeferredHolder<Block, Block> CHICKEN_LAMP = FOODBLOCK.register("chicken_lamp", () -> new Block(BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(10.0f)
      .sound(SoundType.FROGLIGHT)
-     .lightLevel(state -> 15)
+     .lightLevel((state) -> { return 15; }) 
      ));
    //.........cod
      public static final DeferredHolder<Block, HorizontalDirectionalBlock> COD_LAMP = FOODBLOCK.register("cod_lamp", () -> new foodlamp(BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(10.0f)
      .sound(SoundType.FROGLIGHT)
-     .lightLevel(state -> 15)
+     .lightLevel((state) -> { return 15; }) 
      ));
    //.........salmon
      public static final DeferredHolder<Block, Block> SALMON_LAMP = FOODBLOCK.register("salmon_lamp", () -> new foodlamp(BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(10.0f)
      .sound(SoundType.FROGLIGHT)
-     .lightLevel(state -> 15)
+     .lightLevel((state) -> { return 15; }) 
      ));
    //.........tropical_fish
      public static final DeferredHolder<Block, HorizontalDirectionalBlock> TROPICAL_FISH_LAMP = FOODBLOCK.register("tropical_fish_lamp", () -> new foodlamp(BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(10.0f)
      .sound(SoundType.FROGLIGHT)
-     .lightLevel(state -> 15)
+     .lightLevel((state) -> { return 15; }) 
      ));
    //.........mutton
     public static final DeferredHolder<Block, HorizontalDirectionalBlock> MUTTON_LAMP = FOODBLOCK.register("mutton_lamp", () -> new foodlamp(BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(10.0f)
      .sound(SoundType.FROGLIGHT)
-     .lightLevel(state -> 15)
+     .lightLevel((state) -> { return 15; }) 
      ));
    //.........beef
     public static final DeferredHolder<Block, HorizontalDirectionalBlock> BEEF_LAMP = FOODBLOCK.register("beef_lamp", () -> new foodlamp(BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(10.0f)
      .sound(SoundType.FROGLIGHT)
-     .lightLevel(state -> 15)
+     .lightLevel((state) -> { return 15; }) 
      ));
    //.........pork
     public static final DeferredHolder<Block, HorizontalDirectionalBlock> PORK_LAMP = FOODBLOCK.register("pork_lamp", () -> new foodlamp(BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(10.0f)
      .sound(SoundType.FROGLIGHT)
-     .lightLevel(state -> 15)
+     .lightLevel((state) -> { return 15; }) 
      ));
    //.........rabbit
     public static final DeferredHolder<Block, HorizontalDirectionalBlock> RABBIT_LAMP = FOODBLOCK.register("rabbit_lamp", () -> new foodlamp(BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(10.0f)
      .sound(SoundType.FROGLIGHT)
-     .lightLevel(state -> 15)
+     .lightLevel((state) -> { return 15; }) 
      ));
    //.........sugar
     public static final DeferredHolder<Block, HorizontalDirectionalBlock> SUGAR_LAMP = FOODBLOCK.register("sugar_lamp", () -> new foodlamp(BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(10.0f)
      .sound(SoundType.FROGLIGHT)
-     .lightLevel(state -> 15)
+     .lightLevel((state) -> { return 15; }) 
      ));
    //.........honeycomb
     public static final DeferredHolder<Block, HorizontalDirectionalBlock> HONEYCOMB_LAMP = FOODBLOCK.register("honeycomb_lamp", () -> new foodlamp(BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(10.0f)
      .sound(SoundType.FROGLIGHT)
-     .lightLevel(state -> 15)
+     .lightLevel((state) -> { return 15; }) 
      ));
 
 //==============================================================================================================================================================================================
@@ -3528,7 +3506,7 @@ public class foodblockregistry {
       .sound(SoundType.MOSS_CARPET)
       .friction(0.3f)
       .ignitedByLava()
-      .lightLevel(state -> 10)
+      .lightLevel((state) -> { return 10; }) 
       ));
    //.........melon
     public static final DeferredHolder<Block, CarpetBlock> MELON_CARPET = FOODBLOCK.register("melon_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.of()
@@ -4966,125 +4944,125 @@ public class foodblockregistry {
     public static final DeferredHolder<Block, applefurnace> APPLE_FURNACE = FOODBLOCK.register("apple_furnace", () -> new applefurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<applefurnaceentity>> APPLE_FURNACE_ENTITY = FOODBLOCKENTITY.register("apple_furnace", 
-    () -> BlockEntityType.Builder.of(applefurnaceentity::new, APPLE_FURNACE.get()).build(null));
+    () -> new BlockEntityType<>(applefurnaceentity::new, APPLE_FURNACE.get()));
 
    //.........potato
     public static final DeferredHolder<Block, potatofurnace> POTATO_FURNACE = FOODBLOCK.register("potato_furnace", () -> new potatofurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<potatofurnaceentity>> POTATO_FURNACE_ENTITY = FOODBLOCKENTITY.register("potato_furnace", 
-    () -> BlockEntityType.Builder.of(potatofurnaceentity::new, POTATO_FURNACE.get()).build(null));
+    () -> new BlockEntityType<>(potatofurnaceentity::new, POTATO_FURNACE.get()));
 
    //.........beetroot
     public static final DeferredHolder<Block, beetrootfurnace> BEETROOT_FURNACE = FOODBLOCK.register("beetroot_furnace", () -> new beetrootfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<beetrootfurnaceentity>> BEETROOT_FURNACE_ENTITY = FOODBLOCKENTITY.register("beetroot_furnace", 
-    () -> BlockEntityType.Builder.of(beetrootfurnaceentity::new, BEETROOT_FURNACE.get()).build(null));
+    () -> new BlockEntityType<>(beetrootfurnaceentity::new, BEETROOT_FURNACE.get()));
 
    //.........carrot
     public static final DeferredHolder<Block, carrotfurnace> CARROT_FURNACE = FOODBLOCK.register("carrot_furnace", () -> new carrotfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<carrotfurnaceentity>> CARROT_FURNACE_ENTITY = FOODBLOCKENTITY.register("carrot_furnace", 
-    () -> BlockEntityType.Builder.of(carrotfurnaceentity::new, CARROT_FURNACE.get()).build(null));
+    () -> new BlockEntityType<>(carrotfurnaceentity::new, CARROT_FURNACE.get()));
 
    //.........chorus
     public static final DeferredHolder<Block, chorusfurnace> CHORUS_FURNACE = FOODBLOCK.register("chorus_furnace", () -> new chorusfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<chorusfurnaceentity>> CHORUS_FURNACE_ENTITY = FOODBLOCKENTITY.register("chorus_furnace", 
-    () -> BlockEntityType.Builder.of(chorusfurnaceentity::new, CHORUS_FURNACE.get()).build(null));
+    () -> new BlockEntityType<>(chorusfurnaceentity::new, CHORUS_FURNACE.get()));
 
    //.........glow_berry
     public static final DeferredHolder<Block, glowberryfurnace> GLOWBERRY_FURNACE = FOODBLOCK.register("glowberry_furnace", () -> new glowberryfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<glowberryfurnaceentity>> GLOWBERRY_FURNACE_ENTITY = FOODBLOCKENTITY.register("glowberry_furnace", 
-    () -> BlockEntityType.Builder.of(glowberryfurnaceentity::new, GLOWBERRY_FURNACE.get()).build(null));
+    () -> new BlockEntityType<>(glowberryfurnaceentity::new, GLOWBERRY_FURNACE.get()));
 
    //.........melon
     public static final DeferredHolder<Block, melonfurnace> MELON_FURNACE = FOODBLOCK.register("melon_furnace", () -> new melonfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<melonfurnaceentity>> MELON_FURNACE_ENTITY = FOODBLOCKENTITY.register("melon_furnace", 
-    () -> BlockEntityType.Builder.of(melonfurnaceentity::new, MELON_FURNACE.get()).build(null));
+    () -> new BlockEntityType<>(melonfurnaceentity::new, MELON_FURNACE.get()));
 
    //.........sweet_berry
     public static final DeferredHolder<Block, sweet_berryfurnace> SWEET_BERRY_FURNACE = FOODBLOCK.register("sweet_berry_furnace", () -> new sweet_berryfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<sweet_berryfurnaceentity>> SWEET_BERRY_FURNACE_ENTITY = FOODBLOCKENTITY.register("sweet_berry_furnace", 
-    () -> BlockEntityType.Builder.of(sweet_berryfurnaceentity::new, SWEET_BERRY_FURNACE.get()).build(null));
+    () -> new BlockEntityType<>(sweet_berryfurnaceentity::new, SWEET_BERRY_FURNACE.get()));
 
    //.........brown_mushroom
     public static final DeferredHolder<Block, brown_mushroomfurnace> BROWN_MUSHROOM_FURNACE = FOODBLOCK.register("brown_mushroom_furnace", () -> new brown_mushroomfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<brown_mushroomfurnaceentity>> BROWN_MUSHROOM_FURNACE_ENTITY = FOODBLOCKENTITY.register("brown_mushroom_furnace", 
-    () -> BlockEntityType.Builder.of(brown_mushroomfurnaceentity::new, BROWN_MUSHROOM_FURNACE.get()).build(null));
+    () -> new BlockEntityType<>(brown_mushroomfurnaceentity::new, BROWN_MUSHROOM_FURNACE.get()));
 
    //.........red_mushroom
     public static final DeferredHolder<Block, red_mushroomfurnace> RED_MUSHROOM_FURNACE = FOODBLOCK.register("red_mushroom_furnace", () -> new red_mushroomfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<red_mushroomfurnaceentity>> RED_MUSHROOM_FURNACE_ENTITY = FOODBLOCKENTITY.register("red_mushroom_furnace", 
-    () -> BlockEntityType.Builder.of(red_mushroomfurnaceentity::new, RED_MUSHROOM_FURNACE.get()).build(null));
+    () -> new BlockEntityType<>(red_mushroomfurnaceentity::new, RED_MUSHROOM_FURNACE.get()));
 
    //.........pumpkin
     public static final DeferredHolder<Block, pumpkinfurnace> PUMPKIN_FURNACE = FOODBLOCK.register("pumpkin_furnace", () -> new pumpkinfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<pumpkinfurnaceentity>> PUMPKIN_FURNACE_ENTITY = FOODBLOCKENTITY.register("pumpkin_furnace", 
-    () -> BlockEntityType.Builder.of(pumpkinfurnaceentity::new, PUMPKIN_FURNACE.get()).build(null));
+    () -> new BlockEntityType<>(pumpkinfurnaceentity::new, PUMPKIN_FURNACE.get()));
 
    //.........chicken
     public static final DeferredHolder<Block, chickenfurnace> CHICKEN_FURNACE = FOODBLOCK.register("chicken_furnace", () -> new chickenfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<chickenfurnaceentity>> CHICKEN_FURNACE_ENTITY = FOODBLOCKENTITY.register("chicken_furnace", 
-    () -> BlockEntityType.Builder.of(chickenfurnaceentity::new, CHICKEN_FURNACE.get()).build(null));
+    () -> new BlockEntityType<>(chickenfurnaceentity::new, CHICKEN_FURNACE.get()));
 
    //.........cod
     public static final DeferredHolder<Block, codfurnace> COD_FURNACE = FOODBLOCK.register("cod_furnace", () -> new codfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<codfurnaceentity>> COD_FURNACE_ENTITY = FOODBLOCKENTITY.register("cod_furnace", 
-    () -> BlockEntityType.Builder.of(codfurnaceentity::new, COD_FURNACE.get()).build(null));
+    () -> new BlockEntityType<>(codfurnaceentity::new, COD_FURNACE.get()));
 
    //.........salmon
     public static final DeferredHolder<Block, salmonfurnace> SALMON_FURNACE = FOODBLOCK.register("salmon_furnace", () -> new salmonfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<salmonfurnaceentity>> SALMON_FURNACE_ENTITY = FOODBLOCKENTITY.register("salmon_furnace", 
-    () -> BlockEntityType.Builder.of(salmonfurnaceentity::new, SALMON_FURNACE.get()).build(null));
+    () -> new BlockEntityType<>(salmonfurnaceentity::new, SALMON_FURNACE.get()));
 
    //.........tropical_fish
     public static final DeferredHolder<Block, tropical_fishfurnace> TROPICAL_FISH_FURNACE = FOODBLOCK.register("tropical_fish_furnace", () -> new tropical_fishfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<tropical_fishfurnaceentity>> TROPICAL_FISH_FURNACE_ENTITY = FOODBLOCKENTITY.register("tropical_fish_furnace", 
-    () -> BlockEntityType.Builder.of(tropical_fishfurnaceentity::new, TROPICAL_FISH_FURNACE.get()).build(null));
+    () -> new BlockEntityType<>(tropical_fishfurnaceentity::new, TROPICAL_FISH_FURNACE.get()));
 
    //.........mutton
     public static final DeferredHolder<Block, muttonfurnace> MUTTON_FURNACE = FOODBLOCK.register("mutton_furnace", () -> new muttonfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<muttonfurnaceentity>> MUTTON_FURNACE_ENTITY = FOODBLOCKENTITY.register("mutton_furnace", 
-    () -> BlockEntityType.Builder.of(muttonfurnaceentity::new, MUTTON_FURNACE.get()).build(null));
+    () -> new BlockEntityType<>(muttonfurnaceentity::new, MUTTON_FURNACE.get()));
 
    //.........beef
     public static final DeferredHolder<Block, beeffurnace> BEEF_FURNACE = FOODBLOCK.register("beef_furnace", () -> new beeffurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<beeffurnaceentity>> BEEF_FURNACE_ENTITY = FOODBLOCKENTITY.register("beef_furnace", 
-    () -> BlockEntityType.Builder.of(beeffurnaceentity::new, BEEF_FURNACE.get()).build(null));
+    () -> new BlockEntityType<>(beeffurnaceentity::new, BEEF_FURNACE.get()));
 
    //.........pork
     public static final DeferredHolder<Block, porkfurnace> PORK_FURNACE = FOODBLOCK.register("pork_furnace", () -> new porkfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<porkfurnaceentity>> PORK_FURNACE_ENTITY = FOODBLOCKENTITY.register("pork_furnace", 
-    () -> BlockEntityType.Builder.of(porkfurnaceentity::new, PORK_FURNACE.get()).build(null));
+    () -> new BlockEntityType<>(porkfurnaceentity::new, PORK_FURNACE.get()));
 
    //.........rabbit
     public static final DeferredHolder<Block, rabbitfurnace> RABBIT_FURNACE = FOODBLOCK.register("rabbit_furnace", () -> new rabbitfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<rabbitfurnaceentity>> RABBIT_FURNACE_ENTITY = FOODBLOCKENTITY.register("rabbit_furnace", 
-    () -> BlockEntityType.Builder.of(rabbitfurnaceentity::new, RABBIT_FURNACE.get()).build(null));
+    () -> new BlockEntityType<>(rabbitfurnaceentity::new, RABBIT_FURNACE.get()));
    //.........sugar
     public static final DeferredHolder<Block, sugarfurnace> SUGAR_FURNACE = FOODBLOCK.register("sugar_furnace", () -> new sugarfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<sugarfurnaceentity>> SUGAR_FURNACE_ENTITY = FOODBLOCKENTITY.register("sugar_furnace", 
-    () -> BlockEntityType.Builder.of(sugarfurnaceentity::new, SUGAR_FURNACE.get()).build(null));
+    () -> new BlockEntityType<>(sugarfurnaceentity::new, SUGAR_FURNACE.get()));
    //.........honeycomb
     public static final DeferredHolder<Block, honeycombfurnace> HONEYCOMB_FURNACE = FOODBLOCK.register("honeycomb_furnace", () -> new honeycombfurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<honeycombfurnaceentity>> HONEYCOMB_FURNACE_ENTITY = FOODBLOCKENTITY.register("honeycomb_furnace", 
-    () -> BlockEntityType.Builder.of(honeycombfurnaceentity::new, HONEYCOMB_FURNACE.get()).build(null));
+    () -> new BlockEntityType<>(honeycombfurnaceentity::new, HONEYCOMB_FURNACE.get()));
 
 //==============================================================================================================================================================================================
 //                                                                                          Paths
@@ -5245,10 +5223,6 @@ public class foodblockregistry {
 //==============================================================================================================================================================================================
 
    //.........apple
-    public static final DeferredHolder<Block, foodChest> APPLE_CHEST = FOODBLOCK.register("apple_chest", () -> new foodChest(MapColor.COLOR_YELLOW, "apple"));
-
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodChestEntity>> APPLE_CHEST_ENTITY = FOODBLOCKENTITY.register("apple_chest_entity",
-    () -> BlockEntityType.Builder.of(foodChestEntity::new, APPLE_CHEST.get()).build(null));;
    //.........potato
    //.........beetroot
    //.........carrot
@@ -5426,12 +5400,12 @@ public class foodblockregistry {
 
    //------entity
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodBarrelEntity>> FOOD_BARREL_ENTITY = FOODBLOCKENTITY.register("food_barrel_entity", 
-     () -> BlockEntityType.Builder.of(foodBarrelEntity::new, foodblockregistry.APPLE_BARREL.get(), foodblockregistry.POTATO_BARREL.get(), foodblockregistry.BEETROOT_BARREL.get(), 
+     () -> new BlockEntityType<>(foodBarrelEntity::new, foodblockregistry.APPLE_BARREL.get(), foodblockregistry.POTATO_BARREL.get(), foodblockregistry.BEETROOT_BARREL.get(), 
      foodblockregistry.CARROT_BARREL.get(), foodblockregistry.CHORUS_BARREL.get(), foodblockregistry.GLOWBERRY_BARREL.get(), foodblockregistry.MELON_BARREL.get(), 
      foodblockregistry.SWEETBERRY_BARREL.get(), foodblockregistry.PUMPKIN_BARREL.get(), foodblockregistry.BROWNMUSHROOM_BARREL.get(), foodblockregistry.REDMUSHROOM_BARREL.get(), 
      foodblockregistry.CHICKEN_BARREL.get(), foodblockregistry.COD_BARREL.get(), foodblockregistry.SALMON_BARREL.get(), foodblockregistry.TROPICALFISH_BARREL.get(), 
      foodblockregistry.MUTTON_BARREL.get(), foodblockregistry.BEEF_BARREL.get(), foodblockregistry.PORK_BARREL.get(), foodblockregistry.RABBIT_BARREL.get(),
-     foodblockregistry.SUGAR_BARREL.get(), foodblockregistry.HONEYCOMB_BARREL.get()).build(null));
+     foodblockregistry.SUGAR_BARREL.get(), foodblockregistry.HONEYCOMB_BARREL.get()));
 
 //==============================================================================================================================================================================================
 //                                                                                          Chairs
@@ -5789,10 +5763,10 @@ public class foodblockregistry {
 
    //.........entity
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<bedEntity>> FOOD_BED_ENTITY = FOODBLOCKENTITY.register("food_bed_entity",
-     () -> BlockEntityType.Builder.of(bedEntity::new, APPLE_BED.get(), POTATO_BED.get(), BEETROOT_BED.get(), CARROT_BED.get(), 
+     () -> new BlockEntityType<>(bedEntity::new, APPLE_BED.get(), POTATO_BED.get(), BEETROOT_BED.get(), CARROT_BED.get(), 
      CHORUS_BED.get(), GLOW_BERRY_BED.get(), MELON_BED.get(), SWEET_BERRY_BED.get(), PUMPKIN_BED.get(), BROWN_MUSHROOM_BED.get(), 
      RED_MUSHROOM_BED.get(), CHICKEN_BED.get(), COD_BED.get(), SALMON_BED.get(), TROPICAL_FISH_BED.get(), 
-     MUTTON_BED.get(), BEEF_BED.get(), PORK_BED.get(), RABBIT_BED.get(), SUGAR_BED.get(), HONEYCOMB_BED.get()).build(null));
+     MUTTON_BED.get(), BEEF_BED.get(), PORK_BED.get(), RABBIT_BED.get(), SUGAR_BED.get(), HONEYCOMB_BED.get()));
   
 
 //==============================================================================================================================================================================================
@@ -6191,15 +6165,15 @@ public class foodblockregistry {
    //.........entities
     //small
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<smallFoodContainerEntity>> SMALL_CABINET_ENTITY = FOODBLOCKENTITY.register("small_cabinet_entity",
-     () -> BlockEntityType.Builder.of(smallFoodContainerEntity::new, SMALL_APPLE_CABINET.get(), SMALL_POTATO_CABINET.get(), SMALL_BEETROOT_CABINET.get(), SMALL_CARROT_CABINET.get(), 
+     () -> new BlockEntityType<>(smallFoodContainerEntity::new, SMALL_APPLE_CABINET.get(), SMALL_POTATO_CABINET.get(), SMALL_BEETROOT_CABINET.get(), SMALL_CARROT_CABINET.get(), 
      SMALL_CHORUS_CABINET.get(), SMALL_GLOW_BERRY_CABINET.get(), SMALL_MELON_CABINET.get(), SMALL_SWEET_BERRY_CABINET.get(), SMALL_PUMPKIN_CABINET.get(), SMALL_BROWN_MUSHROOM_CABINET.get(), 
      SMALL_RED_MUSHROOM_CABINET.get(), SMALL_CHICKEN_CABINET.get(), SMALL_COD_CABINET.get(), SMALL_SALMON_CABINET.get(), SMALL_TROPICAL_FISH_CABINET.get(), 
-     SMALL_MUTTON_CABINET.get(), SMALL_BEEF_CABINET.get(), SMALL_PORK_CABINET.get(), SMALL_RABBIT_CABINET.get(), SMALL_SUGAR_CABINET.get(), SMALL_HONEYCOMB_CABINET.get()).build(null));
+     SMALL_MUTTON_CABINET.get(), SMALL_BEEF_CABINET.get(), SMALL_PORK_CABINET.get(), SMALL_RABBIT_CABINET.get(), SMALL_SUGAR_CABINET.get(), SMALL_HONEYCOMB_CABINET.get()));
     //medium
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<mediumFoodContainerEntity>> MEDIUM_CABINET_ENTITY = FOODBLOCKENTITY.register("medium_cabinet_entity",
-     () -> BlockEntityType.Builder.of(mediumFoodContainerEntity::new, MEDIUM_APPLE_CABINET.get(), MEDIUM_POTATO_CABINET.get(), MEDIUM_BEETROOT_CABINET.get(), MEDIUM_CARROT_CABINET.get(), 
+     () -> new BlockEntityType<>(mediumFoodContainerEntity::new, MEDIUM_APPLE_CABINET.get(), MEDIUM_POTATO_CABINET.get(), MEDIUM_BEETROOT_CABINET.get(), MEDIUM_CARROT_CABINET.get(), 
      MEDIUM_CHORUS_CABINET.get(), MEDIUM_GLOW_BERRY_CABINET.get(), MEDIUM_MELON_CABINET.get(), MEDIUM_SWEET_BERRY_CABINET.get(), MEDIUM_BROWN_MUSHROOM_CABINET.get(), 
      MEDIUM_RED_MUSHROOM_CABINET.get(), MEDIUM_PUMPKIN_CABINET.get(), MEDIUM_CHICKEN_CABINET.get(), MEDIUM_COD_CABINET.get(), MEDIUM_SALMON_CABINET.get(), MEDIUM_TROPICAL_FISH_CABINET.get(), 
-     MEDIUM_MUTTON_CABINET.get(), MEDIUM_BEEF_CABINET.get(), MEDIUM_PORK_CABINET.get(), MEDIUM_RABBIT_CABINET.get(), MEDIUM_SUGAR_CABINET.get(), MEDIUM_HONEYCOMB_CABINET.get()).build(null));
+     MEDIUM_MUTTON_CABINET.get(), MEDIUM_BEEF_CABINET.get(), MEDIUM_PORK_CABINET.get(), MEDIUM_RABBIT_CABINET.get(), MEDIUM_SUGAR_CABINET.get(), MEDIUM_HONEYCOMB_CABINET.get()));
 
 }

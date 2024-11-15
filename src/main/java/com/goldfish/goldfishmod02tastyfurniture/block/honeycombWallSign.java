@@ -35,10 +35,10 @@ public class honeycombWallSign extends WallSignBlock {
    return pLevel.getBlockState(pPos.relative(pState.getValue(FACING).getOpposite())) != null;
    }
 
-   @Override
-   public String getDescriptionId() {
-   return "honeycomb_wall_sign";
-   }
+//    @Override
+//    public String getDescriptionId() {
+//    return "honeycomb_wall_sign";
+//    }
    
 }
 
