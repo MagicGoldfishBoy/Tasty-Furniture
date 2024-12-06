@@ -12,6 +12,7 @@ import com.mojang.serialization.MapDecoder;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -103,14 +104,14 @@ public class foodBed extends HorizontalDirectionalBlock implements EntityBlock {
         if (sleepResult.left().isPresent()) {
             ServerPlayer serverPlayer = (ServerPlayer) pPlayer;
             BlockPos spawnPos = pPos.above();
-            
-            serverPlayer.setRespawnPosition(pLevel.dimension(), spawnPos, 0.0F, true, true);
+            if (pLevel.dimension().equals(Level.OVERWORLD)  || pLevel.dimension().equals(Level.NETHER)) {
+            serverPlayer.setRespawnPosition(pLevel.dimension(), spawnPos, 0.0F, true, true); }
             Player.BedSleepingProblem problem = sleepResult.left().get();
-            pPlayer.displayClientMessage(problem.getMessage(), true);
+            //pPlayer.displayClientMessage(problem.getMessage(), true);
             return InteractionResult.FAIL;
         }
 
-        if (sleepResult.right().isPresent()) {
+        if (sleepResult.right().isPresent() && pLevel.dimension().equals(Level.OVERWORLD)) {
             if (!pLevel.isClientSide) {
                 ServerPlayer serverPlayer = (ServerPlayer) pPlayer;
                 BlockPos spawnPos = pPos.above();
