@@ -34,5 +34,21 @@ public class foodChairEntity extends Entity {
     @Override
     protected void addAdditionalSaveData(CompoundTag pCompound) {
     }
+
+    @Override
+    public void tick()
+    {
+        super.tick();
+        Level level = this.level();
+        if(!level.isClientSide())
+        {
+            BlockPos pos = this.blockPosition();
+            if(this.getPassengers().isEmpty() || level.isEmptyBlock(pos))
+            {
+                this.discard();
+                level.updateNeighbourForOutputSignal(pos, level.getBlockState(pos).getBlock());
+            }
+        }
+    }
     
 }
