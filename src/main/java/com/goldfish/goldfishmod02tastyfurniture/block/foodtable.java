@@ -25,6 +25,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import java.util.List;
 
 public class foodtable extends HorizontalDirectionalBlock {
+    public static final MapCodec<foodtable> CODEC = simpleCodec(foodtable::new);
     public foodtable(BlockBehaviour.Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
@@ -32,7 +33,7 @@ public class foodtable extends HorizontalDirectionalBlock {
 
     @Override
     protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
-        throw new UnsupportedOperationException("Unimplemented method 'codec'");
+        return CODEC;
     }
 
         public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
@@ -51,7 +52,7 @@ public class foodtable extends HorizontalDirectionalBlock {
 
     Direction blockDirection = state.getValue(FACING);
 
-    if (!level.isClientSide()) {
+    if (!level.isClientSide() && player.isCrouching()) {
         Direction newDirection = blockDirection.getClockWise();
         BlockState newState = state.setValue(FACING, newDirection);
 
