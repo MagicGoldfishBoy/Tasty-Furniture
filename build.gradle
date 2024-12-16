@@ -101,7 +101,7 @@ dependencies {
     // For all intends and purposes: You can treat this dependency as if it is a normal library you would use.
     implementation "net.neoforged:neoforge:${neo_version}"
     //api "curse.maven:domum-ornamentum-527361:5281660"
-    implementation "curse.maven:domum-ornamentum-527361:5764083"
+   // implementation "curse.maven:domum-ornamentum-527361:5764083"
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
