@@ -3,6 +3,7 @@ package com.goldfish.goldfishmod02tastyfurniture.datagen;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodChairBlock;
+import com.goldfish.goldfishmod02tastyfurniture.block.foodDesk;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodpathtypeminislab;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
 import com.goldfish.goldfishmod02tastyfurniture.block.mediumFoodCabinet;
@@ -9512,6 +9513,43 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+    //---------------------------------------------------------------desks-------------------------------------------------------------------------------
+        //.............apple
+         foodDesk appleDesk = foodblockregistry.APPLE_DESK.get();
+         
+         getVariantBuilder(appleDesk)
+         .forAllStates(state -> {
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             Boolean isleft = state.getValue(foodDesk.EAST_CONNECTED);
+             Boolean isright = state.getValue(foodDesk.WEST_CONNECTED);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
+
+            //  ResourceLocation modelLocation = if (isleft == false && isright == false) {
+            //     modloc("block/apple_desk_single");
+            //  };
+
+             ResourceLocation modelLocation;
+             if (!isleft && !isright) {
+                 modelLocation = modLoc("block/apple_desk_single");
+             } else if (isleft && isright) {
+                 modelLocation = modLoc("block/apple_desk_triple_center");
+             } else if (isleft && !isright) {
+                 modelLocation = modLoc("block/apple_desk_double_left");
+             } else {
+                modelLocation = modLoc("block/apple_desk_double_right");
+             }
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
    };
 
 }

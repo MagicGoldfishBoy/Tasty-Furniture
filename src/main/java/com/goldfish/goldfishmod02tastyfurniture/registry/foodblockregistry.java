@@ -29,6 +29,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.codSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.codWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.codfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodChest;
+import com.goldfish.goldfishmod02tastyfurniture.block.foodDesk;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodlamp;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodpathtypeminislab;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
@@ -6201,5 +6202,21 @@ public class foodblockregistry {
      MEDIUM_CHORUS_CABINET.get(), MEDIUM_GLOW_BERRY_CABINET.get(), MEDIUM_MELON_CABINET.get(), MEDIUM_SWEET_BERRY_CABINET.get(), MEDIUM_BROWN_MUSHROOM_CABINET.get(), 
      MEDIUM_RED_MUSHROOM_CABINET.get(), MEDIUM_PUMPKIN_CABINET.get(), MEDIUM_CHICKEN_CABINET.get(), MEDIUM_COD_CABINET.get(), MEDIUM_SALMON_CABINET.get(), MEDIUM_TROPICAL_FISH_CABINET.get(), 
      MEDIUM_MUTTON_CABINET.get(), MEDIUM_BEEF_CABINET.get(), MEDIUM_PORK_CABINET.get(), MEDIUM_RABBIT_CABINET.get(), MEDIUM_SUGAR_CABINET.get(), MEDIUM_HONEYCOMB_CABINET.get()).build(null));
+//==============================================================================================================================================================================================
+//                                                                                          Desks
+//==============================================================================================================================================================================================
 
+   static float desk_destroy_time = 1.25f;
+   static float desk_explosion_resistance = 0.75f;
+   static SoundType plant_desk_sound = SoundType.MUD_BRICKS;
+   static SoundType meat_desk_sound = SoundType.MUD;
+   static SoundType crystal_desk_sound = SoundType.BASALT;
+
+   //.........apple
+    public static final DeferredHolder<Block, foodDesk> APPLE_DESK = FOODBLOCK.register("apple_desk", () -> new foodDesk(BlockBehaviour.Properties.of()
+    .sound(plant_desk_sound)
+    .destroyTime(desk_destroy_time)
+    .explosionResistance(desk_explosion_resistance)
+    .noOcclusion()
+    ));
 }

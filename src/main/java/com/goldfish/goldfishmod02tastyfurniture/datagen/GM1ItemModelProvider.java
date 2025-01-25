@@ -21,6 +21,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
           buildNuggetModels();
           buildRegularBlockModels();
           buildBricksBlockModels();
+          buildDeskModels();
     //-------------------------------------------------------------blocks--------------------------------------------------------------------
      //____________________________________________________________bricks_____________________________________________________________________
 
@@ -1672,6 +1673,10 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("sugar_bricks_block_item", modLoc("block/sugar_bricks_block"));
       //.........honeycomb
         withExistingParent("honeycomb_bricks_block_item", modLoc("block/honeycomb_bricks_block"));
+  }
+  protected void buildDeskModels() {
+      //.............apple
+        withExistingParent("apple_desk_item", modLoc("block/apple_desk_single"));
   }
 }
 

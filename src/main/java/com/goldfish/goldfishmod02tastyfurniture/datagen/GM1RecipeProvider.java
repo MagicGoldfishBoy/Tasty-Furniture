@@ -81,6 +81,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           buildNuggetRecipes(output);
           buildBlockRecipes(output);
           buildCabinetRecipes(output);
+          buildDeskRecipes(output); 
         //-------------------------------------------------------------doors-----------------------------------------------------------------------
             //apple
               ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_DOOR_ITEM.get(), 3)
@@ -8171,5 +8172,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .unlockedBy("has_honeycomb_slab", has(foodblockitemregistry.PROCESSED_HONEYCOMB_SLAB_ITEM.get()))
           .save(output);
       };
+   protected void buildDeskRecipes(RecipeOutput output) {
+    //apple
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.APPLE_DESK_ITEM.get())
+         .pattern("AAA")
+         .pattern("B B")
+         .pattern("B B")
+         .define('A', foodblockitemregistry.APPLE_SLAB_ITEM.get())
+         .define('B', nuggetregistry.APPLE_NUGGET.get())
+         .unlockedBy("has_apple_slab", has(foodblockitemregistry.APPLE_SLAB_ITEM.get()))
+         .save(output);
+   }
     }
 }
