@@ -6255,4 +6255,12 @@ public class foodblockregistry {
     .noOcclusion()
     .lightLevel(state  -> 5)
     ));
+   //.........melon
+    public static final DeferredHolder<Block, foodDesk> MELON_DESK = FOODBLOCK.register("melon_desk", () -> new foodDesk(BlockBehaviour.Properties.of()
+    .sound(plant_desk_sound)
+    .destroyTime(desk_destroy_time)
+    .explosionResistance(desk_explosion_resistance)
+    .noOcclusion()
+    .lightLevel(state  -> 5)
+    ));
 }

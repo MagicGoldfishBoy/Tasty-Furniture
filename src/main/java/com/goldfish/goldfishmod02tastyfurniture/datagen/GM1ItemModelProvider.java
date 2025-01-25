@@ -1687,6 +1687,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("chorus_desk_item", modLoc("block/chorus_desk_single"));
       //.............glowberry
         withExistingParent("glowberry_desk_item", modLoc("block/glowberry_desk_single"));
+      //.............melon
+        withExistingParent("melon_desk_item", modLoc("block/melon_desk_single"));
   }
 }
 
