@@ -9546,7 +9546,6 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .rotationY(rotationY)
                  .build();
          });
-    //---------------------------------------------------------------desks-------------------------------------------------------------------------------
         //.............potato
          foodDesk potatoDesk = foodblockregistry.POTATO_DESK.get();
          
@@ -9572,6 +9571,38 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  modelLocation = modLoc("block/potato_desk_double_left");
              } else {
                 modelLocation = modLoc("block/potato_desk_double_right");
+             }
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //.............carrot
+         foodDesk carrotDesk = foodblockregistry.CARROT_DESK.get();
+         
+         getVariantBuilder(carrotDesk)
+         .forAllStates(state -> {
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             Boolean isleft = state.getValue(foodDesk.EAST_CONNECTED);
+             Boolean isright = state.getValue(foodDesk.WEST_CONNECTED);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
+
+             ResourceLocation modelLocation;
+             if (!isleft && !isright) {
+                 modelLocation = modLoc("block/carrot_desk_single");
+             } else if (isleft && isright) {
+                 modelLocation = modLoc("block/carrot_desk_triple_center");
+             } else if (isleft && !isright) {
+                 modelLocation = modLoc("block/carrot_desk_double_left");
+             } else {
+                modelLocation = modLoc("block/carrot_desk_double_right");
              }
          
              return ConfiguredModel.builder()
