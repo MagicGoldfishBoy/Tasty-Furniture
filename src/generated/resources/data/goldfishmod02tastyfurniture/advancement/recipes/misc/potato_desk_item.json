@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_apple_slab": {
+    "has_potato_slab": {
       "conditions": {
         "items": [
           {
-            "items": "goldfishmod02tastyfurniture:apple_slab_item"
+            "items": "goldfishmod02tastyfurniture:potato_slab_item"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "goldfishmod02tastyfurniture:apple_cabinet_item"
+        "recipe": "goldfishmod02tastyfurniture:potato_desk_item"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_apple_slab"
+      "has_potato_slab"
     ]
   ],
   "rewards": {
     "recipes": [
-      "goldfishmod02tastyfurniture:apple_cabinet_item"
+      "goldfishmod02tastyfurniture:potato_desk_item"
     ]
   }
 }

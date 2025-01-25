@@ -1677,6 +1677,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
   protected void buildDeskModels() {
       //.............apple
         withExistingParent("apple_desk_item", modLoc("block/apple_desk_single"));
+      //.............potato
+        withExistingParent("potato_desk_item", modLoc("block/potato_desk_single"));
   }
 }
 

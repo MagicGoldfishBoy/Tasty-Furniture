@@ -1,0 +1,244 @@
+{
+  "variants": {
+    "east_connected=false,facing=east,north_connected=false,south_connected=false,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_single",
+      "y": 270
+    },
+    "east_connected=false,facing=east,north_connected=false,south_connected=false,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_right",
+      "y": 270
+    },
+    "east_connected=false,facing=east,north_connected=false,south_connected=true,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_single",
+      "y": 270
+    },
+    "east_connected=false,facing=east,north_connected=false,south_connected=true,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_right",
+      "y": 270
+    },
+    "east_connected=false,facing=east,north_connected=true,south_connected=false,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_single",
+      "y": 270
+    },
+    "east_connected=false,facing=east,north_connected=true,south_connected=false,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_right",
+      "y": 270
+    },
+    "east_connected=false,facing=east,north_connected=true,south_connected=true,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_single",
+      "y": 270
+    },
+    "east_connected=false,facing=east,north_connected=true,south_connected=true,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_right",
+      "y": 270
+    },
+    "east_connected=false,facing=north,north_connected=false,south_connected=false,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_single",
+      "y": 180
+    },
+    "east_connected=false,facing=north,north_connected=false,south_connected=false,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_right",
+      "y": 180
+    },
+    "east_connected=false,facing=north,north_connected=false,south_connected=true,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_single",
+      "y": 180
+    },
+    "east_connected=false,facing=north,north_connected=false,south_connected=true,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_right",
+      "y": 180
+    },
+    "east_connected=false,facing=north,north_connected=true,south_connected=false,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_single",
+      "y": 180
+    },
+    "east_connected=false,facing=north,north_connected=true,south_connected=false,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_right",
+      "y": 180
+    },
+    "east_connected=false,facing=north,north_connected=true,south_connected=true,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_single",
+      "y": 180
+    },
+    "east_connected=false,facing=north,north_connected=true,south_connected=true,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_right",
+      "y": 180
+    },
+    "east_connected=false,facing=south,north_connected=false,south_connected=false,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_single"
+    },
+    "east_connected=false,facing=south,north_connected=false,south_connected=false,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_right"
+    },
+    "east_connected=false,facing=south,north_connected=false,south_connected=true,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_single"
+    },
+    "east_connected=false,facing=south,north_connected=false,south_connected=true,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_right"
+    },
+    "east_connected=false,facing=south,north_connected=true,south_connected=false,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_single"
+    },
+    "east_connected=false,facing=south,north_connected=true,south_connected=false,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_right"
+    },
+    "east_connected=false,facing=south,north_connected=true,south_connected=true,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_single"
+    },
+    "east_connected=false,facing=south,north_connected=true,south_connected=true,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_right"
+    },
+    "east_connected=false,facing=west,north_connected=false,south_connected=false,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_single",
+      "y": 90
+    },
+    "east_connected=false,facing=west,north_connected=false,south_connected=false,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_right",
+      "y": 90
+    },
+    "east_connected=false,facing=west,north_connected=false,south_connected=true,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_single",
+      "y": 90
+    },
+    "east_connected=false,facing=west,north_connected=false,south_connected=true,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_right",
+      "y": 90
+    },
+    "east_connected=false,facing=west,north_connected=true,south_connected=false,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_single",
+      "y": 90
+    },
+    "east_connected=false,facing=west,north_connected=true,south_connected=false,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_right",
+      "y": 90
+    },
+    "east_connected=false,facing=west,north_connected=true,south_connected=true,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_single",
+      "y": 90
+    },
+    "east_connected=false,facing=west,north_connected=true,south_connected=true,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_right",
+      "y": 90
+    },
+    "east_connected=true,facing=east,north_connected=false,south_connected=false,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_left",
+      "y": 270
+    },
+    "east_connected=true,facing=east,north_connected=false,south_connected=false,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_triple_center",
+      "y": 270
+    },
+    "east_connected=true,facing=east,north_connected=false,south_connected=true,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_left",
+      "y": 270
+    },
+    "east_connected=true,facing=east,north_connected=false,south_connected=true,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_triple_center",
+      "y": 270
+    },
+    "east_connected=true,facing=east,north_connected=true,south_connected=false,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_left",
+      "y": 270
+    },
+    "east_connected=true,facing=east,north_connected=true,south_connected=false,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_triple_center",
+      "y": 270
+    },
+    "east_connected=true,facing=east,north_connected=true,south_connected=true,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_left",
+      "y": 270
+    },
+    "east_connected=true,facing=east,north_connected=true,south_connected=true,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_triple_center",
+      "y": 270
+    },
+    "east_connected=true,facing=north,north_connected=false,south_connected=false,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_left",
+      "y": 180
+    },
+    "east_connected=true,facing=north,north_connected=false,south_connected=false,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_triple_center",
+      "y": 180
+    },
+    "east_connected=true,facing=north,north_connected=false,south_connected=true,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_left",
+      "y": 180
+    },
+    "east_connected=true,facing=north,north_connected=false,south_connected=true,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_triple_center",
+      "y": 180
+    },
+    "east_connected=true,facing=north,north_connected=true,south_connected=false,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_left",
+      "y": 180
+    },
+    "east_connected=true,facing=north,north_connected=true,south_connected=false,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_triple_center",
+      "y": 180
+    },
+    "east_connected=true,facing=north,north_connected=true,south_connected=true,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_left",
+      "y": 180
+    },
+    "east_connected=true,facing=north,north_connected=true,south_connected=true,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_triple_center",
+      "y": 180
+    },
+    "east_connected=true,facing=south,north_connected=false,south_connected=false,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_left"
+    },
+    "east_connected=true,facing=south,north_connected=false,south_connected=false,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_triple_center"
+    },
+    "east_connected=true,facing=south,north_connected=false,south_connected=true,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_left"
+    },
+    "east_connected=true,facing=south,north_connected=false,south_connected=true,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_triple_center"
+    },
+    "east_connected=true,facing=south,north_connected=true,south_connected=false,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_left"
+    },
+    "east_connected=true,facing=south,north_connected=true,south_connected=false,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_triple_center"
+    },
+    "east_connected=true,facing=south,north_connected=true,south_connected=true,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_left"
+    },
+    "east_connected=true,facing=south,north_connected=true,south_connected=true,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_triple_center"
+    },
+    "east_connected=true,facing=west,north_connected=false,south_connected=false,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_left",
+      "y": 90
+    },
+    "east_connected=true,facing=west,north_connected=false,south_connected=false,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_triple_center",
+      "y": 90
+    },
+    "east_connected=true,facing=west,north_connected=false,south_connected=true,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_left",
+      "y": 90
+    },
+    "east_connected=true,facing=west,north_connected=false,south_connected=true,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_triple_center",
+      "y": 90
+    },
+    "east_connected=true,facing=west,north_connected=true,south_connected=false,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_left",
+      "y": 90
+    },
+    "east_connected=true,facing=west,north_connected=true,south_connected=false,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_triple_center",
+      "y": 90
+    },
+    "east_connected=true,facing=west,north_connected=true,south_connected=true,west_connected=false": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_double_left",
+      "y": 90
+    },
+    "east_connected=true,facing=west,north_connected=true,south_connected=true,west_connected=true": {
+      "model": "goldfishmod02tastyfurniture:block/potato_desk_triple_center",
+      "y": 90
+    }
+  }
+}

@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "goldfishmod02tastyfurniture:apple_desk_item"
+          "name": "goldfishmod02tastyfurniture:potato_desk_item"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "goldfishmod02tastyfurniture:blocks/apple_desk"
+  "random_sequence": "goldfishmod02tastyfurniture:blocks/potato_desk"
 }
