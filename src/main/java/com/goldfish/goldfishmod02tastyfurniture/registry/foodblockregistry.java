@@ -6261,6 +6261,12 @@ public class foodblockregistry {
     .destroyTime(desk_destroy_time)
     .explosionResistance(desk_explosion_resistance)
     .noOcclusion()
-    .lightLevel(state  -> 5)
+    ));
+   //.........sweetberry
+    public static final DeferredHolder<Block, foodDesk> SWEETBERRY_DESK = FOODBLOCK.register("sweetberry_desk", () -> new foodDesk(BlockBehaviour.Properties.of()
+    .sound(plant_desk_sound)
+    .destroyTime(desk_destroy_time)
+    .explosionResistance(desk_explosion_resistance)
+    .noOcclusion()
     ));
 }
