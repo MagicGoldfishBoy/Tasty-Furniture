@@ -8209,6 +8209,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('B', nuggetregistry.CARROT_NUGGET.get())
          .unlockedBy("has_carrot_slab", has(foodblockitemregistry.CARROT_SLAB_ITEM.get()))
          .save(output);
+    //chorus
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHORUS_DESK_ITEM.get())
+         .pattern("AAA")
+         .pattern("B B")
+         .pattern("B B")
+         .define('A', foodblockitemregistry.CHORUS_SLAB_ITEM.get())
+         .define('B', nuggetregistry.CHORUS_NUGGET.get())
+         .unlockedBy("has_chorus_slab", has(foodblockitemregistry.CHORUS_SLAB_ITEM.get()))
+         .save(output);
    }
     }
 }
