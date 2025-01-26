@@ -6339,4 +6339,11 @@ public class foodblockregistry {
     .explosionResistance(desk_explosion_resistance)
     .noOcclusion()
     ));
+   //.........rabbit
+    public static final DeferredHolder<Block, foodDesk> RABBIT_DESK = FOODBLOCK.register("rabbit_desk", () -> new foodDesk(BlockBehaviour.Properties.of()
+    .sound(plant_desk_sound)
+    .destroyTime(desk_destroy_time)
+    .explosionResistance(desk_explosion_resistance)
+    .noOcclusion()
+    ));
 }
