@@ -1,4 +1,4 @@
-// 1.21	2025-01-25T22:18:34.502115273	Loot Tables
+// 1.21	2025-01-25T22:40:23.461821045	Loot Tables
 56ddb3b4406d93958c51301ca7c44f265c39bbc2 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_barrel.json
 f506816aefac13fd3bcb8b3075eefc63b1b6be41 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bars.json
 7922a4aff64facc1d1fca57e74153e1ad6451e89 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bed.json
@@ -49,6 +49,7 @@ b763b2fb3ec462a770b6e68c8f3c4220069a14f8 data/goldfishmod02tastyfurniture/loot_t
 88a3ab91a2efc3b933a47bd56920791e7bc19614 data/goldfishmod02tastyfurniture/loot_table/blocks/beef_chain.json
 4e18401b3d3d7b76b1534dcae4aa3ce5140baa4e data/goldfishmod02tastyfurniture/loot_table/blocks/beef_chair.json
 2cd208002fddcdfb7579d285fb3360076ca0da7d data/goldfishmod02tastyfurniture/loot_table/blocks/beef_chiseled_block.json
+9e0eacfcbf0d26b4ce67301b813492a6a118260e data/goldfishmod02tastyfurniture/loot_table/blocks/beef_desk.json
 9a762b76b322fb1212fc1114eb54901bb0f9876e data/goldfishmod02tastyfurniture/loot_table/blocks/beef_door.json
 ca216f999a127591437fd87a23b115019e2921a7 data/goldfishmod02tastyfurniture/loot_table/blocks/beef_fence.json
 ef793e17b57891ba89c43908f937f0f6578c0615 data/goldfishmod02tastyfurniture/loot_table/blocks/beef_fence_gate.json

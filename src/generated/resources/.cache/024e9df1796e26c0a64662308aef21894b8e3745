@@ -1,4 +1,4 @@
-// 1.21	2025-01-25T22:18:34.498041224	Item Models: goldfishmod02tastyfurniture
+// 1.21	2025-01-25T22:40:23.456682766	Item Models: goldfishmod02tastyfurniture
 6d26f39e8fa80c848d17c920d93ef2dce5c3e0cc assets/goldfishmod02tastyfurniture/models/item/advanced_meatgrinder.json
 f95d52586977a1c0b9aa316d8f8cd37d78596930 assets/goldfishmod02tastyfurniture/models/item/advanced_mush_hammer.json
 a579f875ecc0b10b53317a1629bcbc385110157f assets/goldfishmod02tastyfurniture/models/item/apple_barrel_item.json
@@ -44,6 +44,7 @@ de7ee0a77f2542f32d89abc5cfc47573dbd1bdfa assets/goldfishmod02tastyfurniture/mode
 9dd54362c84764287a4067747a887c8f2151d461 assets/goldfishmod02tastyfurniture/models/item/beef_chain_item.json
 3abd6515aa0b25ac3ed7f1e4551f6d3c416fd127 assets/goldfishmod02tastyfurniture/models/item/beef_chair_item.json
 a40b04dbc92d970348915330fbd7bd70d2681716 assets/goldfishmod02tastyfurniture/models/item/beef_chiseled_block_item.json
+d4ebd87e50f048aba8f649abc916ff12b8876201 assets/goldfishmod02tastyfurniture/models/item/beef_desk_item.json
 a3fa248195438ecf91ee6b4075e9f6b4a996d8be assets/goldfishmod02tastyfurniture/models/item/beef_door_item.json
 e54eb76ea23f54c614ed43bf68f2e6a0338c0b40 assets/goldfishmod02tastyfurniture/models/item/beef_fence_item.json
 1139e6f5e99223c4028a2d8ccdd64618b435ee65 assets/goldfishmod02tastyfurniture/models/item/beef_furnace_item.json
