@@ -2523,4 +2523,7 @@ public class foodblockitemregistry {
    //.........pumpkin
     public static final DeferredHolder<Item, BlockItem> PUMPKIN_DESK_ITEM = FOODBLOCKITEM.register("pumpkin_desk_item", () -> new BlockItem(foodblockregistry.PUMPKIN_DESK.get(),
     new BlockItem.Properties()));
+   //.........chicken
+    public static final DeferredHolder<Item, BlockItem> CHICKEN_DESK_ITEM = FOODBLOCKITEM.register("chicken_desk_item", () -> new BlockItem(foodblockregistry.CHICKEN_DESK.get(),
+    new BlockItem.Properties()));
 }
