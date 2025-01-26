@@ -1,4 +1,4 @@
-// 1.21	2025-01-25T23:21:24.226620064	Loot Tables
+// 1.21	2025-01-25T23:38:21.596383945	Loot Tables
 56ddb3b4406d93958c51301ca7c44f265c39bbc2 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_barrel.json
 f506816aefac13fd3bcb8b3075eefc63b1b6be41 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bars.json
 7922a4aff64facc1d1fca57e74153e1ad6451e89 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bed.json
@@ -356,6 +356,7 @@ caa47def638469c2024404738eccf4efb344b8a4 data/goldfishmod02tastyfurniture/loot_t
 9ac9ab7371e6ff833006572e3abb923584e3261f data/goldfishmod02tastyfurniture/loot_table/blocks/honeycomb_chain.json
 7dbe740e0a271aba8dadd6b4bb3507c6c5c4ae8a data/goldfishmod02tastyfurniture/loot_table/blocks/honeycomb_chair.json
 324548738255cce31ef1af7cd089e8a004757997 data/goldfishmod02tastyfurniture/loot_table/blocks/honeycomb_chiseled_block.json
+cc48d1077b5a1148defd7510c32f1d031223ef5f data/goldfishmod02tastyfurniture/loot_table/blocks/honeycomb_desk.json
 2b38af91a1d129d2fec90b1b288be91e3a75507d data/goldfishmod02tastyfurniture/loot_table/blocks/honeycomb_door.json
 8c644be685ec5469d93335cb51498e4bab5ed339 data/goldfishmod02tastyfurniture/loot_table/blocks/honeycomb_fence.json
 2127fa52a26323a5c39abdc422a28d8689cac43d data/goldfishmod02tastyfurniture/loot_table/blocks/honeycomb_fence_gate.json
