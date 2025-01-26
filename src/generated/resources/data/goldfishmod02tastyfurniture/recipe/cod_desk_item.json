@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod02tastyfurniture:cod_slab_item"
+    },
+    "B": {
+      "item": "goldfishmod02tastyfurniture:cod_nugget"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "B B",
+    "B B"
+  ],
+  "result": {
+    "count": 1,
+    "id": "goldfishmod02tastyfurniture:cod_desk_item"
+  }
+}
