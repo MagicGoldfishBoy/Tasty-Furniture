@@ -8308,6 +8308,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('B', nuggetregistry.TROPICAL_FISH_NUGGET.get())
          .unlockedBy("has_tropicalfish_slab", has(foodblockitemregistry.TROPICAL_FISH_SLAB_ITEM.get()))
          .save(output);
+    //mutton
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.MUTTON_DESK_ITEM.get())
+         .pattern("AAA")
+         .pattern("B B")
+         .pattern("B B")
+         .define('A', foodblockitemregistry.MUTTON_SLAB_ITEM.get())
+         .define('B', nuggetregistry.MUTTON_NUGGET.get())
+         .unlockedBy("has_mutton_slab", has(foodblockitemregistry.MUTTON_SLAB_ITEM.get()))
+         .save(output);
    }
     }
 }
