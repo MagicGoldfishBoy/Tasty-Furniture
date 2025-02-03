@@ -886,6 +886,7 @@
  "block.goldfishmod02tastyfurniture.honeycomb_desk": "Honeycomb Desk",
  "tooltip.goldfishmod02tastyfurniture.foodDeskLamp.tooltip": "Right-Click to turn on or off, crouch and right-click to rotate",
  "block.goldfishmod02tastyfurniture.apple_desklamp": "Apple Desklamp",
- "block.goldfishmod02tastyfurniture.potato_desklamp": "Potato Desklamp"
+ "block.goldfishmod02tastyfurniture.potato_desklamp": "Potato Desklamp",
+ "block.goldfishmod02tastyfurniture.beetroot_desklamp": "Beetroot Desklamp"
   
 }
