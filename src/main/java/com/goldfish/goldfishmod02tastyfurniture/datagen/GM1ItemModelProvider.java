@@ -22,6 +22,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
           buildRegularBlockModels();
           buildBricksBlockModels();
           buildDeskModels();
+          buildDeskLampModels();
     //-------------------------------------------------------------blocks--------------------------------------------------------------------
      //____________________________________________________________bricks_____________________________________________________________________
 
@@ -1717,6 +1718,10 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("sugar_desk_item", modLoc("block/sugar_desk_single"));
       //.............honeycomb
         withExistingParent("honeycomb_desk_item", modLoc("block/honeycomb_desk_single"));
+  }
+  protected void buildDeskLampModels() {
+      //.............apple
+        withExistingParent("apple_desklamp_item", modLoc("block/apple_lamp_unlit"));
   }
 }
 

@@ -30,6 +30,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.codWallSign;
 import com.goldfish.goldfishmod02tastyfurniture.block.codfurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodChest;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodDesk;
+import com.goldfish.goldfishmod02tastyfurniture.block.foodDeskLamp;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodlamp;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodpathtypeminislab;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
@@ -6358,6 +6359,23 @@ public class foodblockregistry {
     .sound(plant_desk_sound)
     .destroyTime(desk_destroy_time)
     .explosionResistance(desk_explosion_resistance)
+    .noOcclusion()
+    ));
+//==============================================================================================================================================================================================
+//                                                                                          Desk Lamps
+//==============================================================================================================================================================================================
+
+   static float desklamp_destroy_time = 1.25f;
+   static float desklamp_explosion_resistance = 0.75f;
+   static SoundType plant_desklamp_sound = SoundType.MUD_BRICKS;
+   static SoundType meat_desklamp_sound = SoundType.MUD;
+   static SoundType crystal_desklamp_sound = SoundType.BASALT;
+
+   //.........apple
+    public static final DeferredHolder<Block, foodDeskLamp> APPLE_DESKLAMP = FOODBLOCK.register("apple_desklamp", () -> new foodDeskLamp(BlockBehaviour.Properties.of()
+    .sound(plant_desklamp_sound)
+    .destroyTime(desklamp_destroy_time)
+    .explosionResistance(desklamp_explosion_resistance)
     .noOcclusion()
     ));
 }

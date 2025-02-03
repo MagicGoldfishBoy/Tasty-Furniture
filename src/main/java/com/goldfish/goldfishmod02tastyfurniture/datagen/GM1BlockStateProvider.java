@@ -4,6 +4,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodChairBlock;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodDesk;
+import com.goldfish.goldfishmod02tastyfurniture.block.foodDeskLamp;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodpathtypeminislab;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
 import com.goldfish.goldfishmod02tastyfurniture.block.mediumFoodCabinet;
@@ -10186,6 +10187,29 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .rotationY(rotationY)
                  .build();
          });
+    //--------------------------------------------------------------desk lamps------------------------------------------------------------------------------
+        //.............apple
+        foodDeskLamp apple_desk_lamp = foodblockregistry.APPLE_DESKLAMP.get();
+
+        getVariantBuilder(apple_desk_lamp)
+            .forAllStates(state -> {
+                Boolean lit = state.getValue(BlockStateProperties.LIT);
+                Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                int rotation = switch (facing) {
+                    case NORTH -> 0;
+                    case EAST -> 90;
+                    case SOUTH -> 180;
+                    case WEST -> 270;
+                    default -> 0;
+                };
+
+                ResourceLocation modelLocation = lit ? modLoc("block/apple_lamp_lit") : modLoc("block/apple_lamp_unlit");
+
+                return ConfiguredModel.builder()
+                    .modelFile(models().getExistingFile(modelLocation))
+                    .rotationY(rotation)               
+                    .build();
+            });
 
    };
 

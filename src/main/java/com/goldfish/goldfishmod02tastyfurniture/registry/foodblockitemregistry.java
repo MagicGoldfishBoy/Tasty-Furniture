@@ -2553,4 +2553,11 @@ public class foodblockitemregistry {
    //.........honeycomb
     public static final DeferredHolder<Item, BlockItem> HONEYCOMB_DESK_ITEM = FOODBLOCKITEM.register("honeycomb_desk_item", () -> new BlockItem(foodblockregistry.HONEYCOMB_DESK.get(),
     new BlockItem.Properties()));
+//==============================================================================================================================================================================================
+//                                                                                         Desklamps
+//==============================================================================================================================================================================================
+
+   //.........apple
+    public static final DeferredHolder<Item, BlockItem> APPLE_DESKLAMP_ITEM = FOODBLOCKITEM.register("apple_desklamp_item", () -> new BlockItem(foodblockregistry.APPLE_DESKLAMP.get(),
+    new BlockItem.Properties()));
 }
