@@ -1722,6 +1722,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
   protected void buildDeskLampModels() {
       //.............apple
         withExistingParent("apple_desklamp_item", modLoc("block/apple_lamp_unlit"));
+      //.............potato
+        withExistingParent("potato_desklamp_item", modLoc("block/potato_lamp_unlit"));
   }
 }
 

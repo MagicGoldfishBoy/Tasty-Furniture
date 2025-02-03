@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod02tastyfurniture:potato_block_item"
+    },
+    "B": {
+      "item": "goldfishmod02tastyfurniture:potato_nugget"
+    },
+    "C": {
+      "item": "goldfishmod02tastyfurniture:potato_lantern_item"
+    }
+  },
+  "pattern": [
+    " B ",
+    " C ",
+    " A "
+  ],
+  "result": {
+    "count": 1,
+    "id": "goldfishmod02tastyfurniture:potato_desklamp_item"
+  }
+}
