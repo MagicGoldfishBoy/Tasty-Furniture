@@ -8395,6 +8395,26 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('C', foodblockitemregistry.BEETROOT_LANTERN_ITEM.get())
          .unlockedBy("has_beetroot_lantern", has(foodblockitemregistry.BEETROOT_LANTERN_ITEM.get()))
          .save(output);
+    //carrot
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CARROT_DESKLAMP_ITEM.get())
+         .pattern(" B ")
+         .pattern(" C ")
+         .pattern(" A ")
+         .define('A', foodblockitemregistry.CARROT_BLOCK_ITEM.get())
+         .define('B', nuggetregistry.CARROT_NUGGET.get())
+         .define('C', foodblockitemregistry.CARROT_LANTERN_ITEM.get())
+         .unlockedBy("has_carrot_lantern", has(foodblockitemregistry.CARROT_LANTERN_ITEM.get()))
+         .save(output);
+    //chorus
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.CHORUS_DESKLAMP_ITEM.get())
+         .pattern(" B ")
+         .pattern(" C ")
+         .pattern(" A ")
+         .define('A', foodblockitemregistry.CHORUS_BLOCK_ITEM.get())
+         .define('B', nuggetregistry.CHORUS_NUGGET.get())
+         .define('C', foodblockitemregistry.CHORUS_LANTERN_ITEM.get())
+         .unlockedBy("has_chorus_lantern", has(foodblockitemregistry.CHORUS_LANTERN_ITEM.get()))
+         .save(output);
    }
   }
 }

@@ -6392,4 +6392,18 @@ public class foodblockregistry {
     .explosionResistance(desklamp_explosion_resistance)
     .noOcclusion()
     ));
+   //.........carrot
+    public static final DeferredHolder<Block, foodDeskLamp> CARROT_DESKLAMP = FOODBLOCK.register("carrot_desklamp", () -> new foodDeskLamp(BlockBehaviour.Properties.of()
+    .sound(plant_desklamp_sound)
+    .destroyTime(desklamp_destroy_time)
+    .explosionResistance(desklamp_explosion_resistance)
+    .noOcclusion()
+    ));
+   //.........chorus
+    public static final DeferredHolder<Block, foodDeskLamp> CHORUS_DESKLAMP = FOODBLOCK.register("chorus_desklamp", () -> new foodDeskLamp(BlockBehaviour.Properties.of()
+    .sound(plant_desklamp_sound)
+    .destroyTime(desklamp_destroy_time)
+    .explosionResistance(desklamp_explosion_resistance)
+    .noOcclusion()
+    ));
 }
