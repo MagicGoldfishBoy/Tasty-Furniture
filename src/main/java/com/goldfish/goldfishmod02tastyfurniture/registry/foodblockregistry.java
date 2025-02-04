@@ -6406,4 +6406,11 @@ public class foodblockregistry {
     .explosionResistance(desklamp_explosion_resistance)
     .noOcclusion()
     ));
+   //.........glowberry
+    public static final DeferredHolder<Block, foodDeskLamp> GLOWBERRY_DESKLAMP = FOODBLOCK.register("glowberry_desklamp", () -> new foodDeskLamp(BlockBehaviour.Properties.of()
+    .sound(plant_desklamp_sound)
+    .destroyTime(desklamp_destroy_time)
+    .explosionResistance(desklamp_explosion_resistance)
+    .noOcclusion()
+    ));
 }
