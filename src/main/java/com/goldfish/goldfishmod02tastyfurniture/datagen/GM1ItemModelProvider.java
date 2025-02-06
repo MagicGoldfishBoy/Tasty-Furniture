@@ -1675,7 +1675,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       //.........honeycomb
         withExistingParent("honeycomb_bricks_block_item", modLoc("block/honeycomb_bricks_block"));
   }
-  protected void buildDeskModels() {
+ protected void buildDeskModels() {
       //.............apple
         withExistingParent("apple_desk_item", modLoc("block/apple_desk_single"));
       //.............potato
@@ -1719,7 +1719,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
       //.............honeycomb
         withExistingParent("honeycomb_desk_item", modLoc("block/honeycomb_desk_single"));
   }
-  protected void buildDeskLampModels() {
+ protected void buildDeskLampModels() {
       //.............apple
         withExistingParent("apple_desklamp_item", modLoc("block/apple_lamp_unlit"));
       //.............potato
@@ -1736,6 +1736,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("melon_desklamp_item", modLoc("block/melon_lamp_unlit"));
       //.............sweetberry
         withExistingParent("sweetberry_desklamp_item", modLoc("block/sweetberry_lamp_unlit"));
+      //.............brownmushroom
+        withExistingParent("brownmushroom_desklamp_item", modLoc("block/brownmushroom_lamp_unlit"));
   }
 }
 
