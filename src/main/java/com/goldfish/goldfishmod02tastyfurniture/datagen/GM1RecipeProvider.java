@@ -8505,6 +8505,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('C', foodblockitemregistry.SALMON_LANTERN_ITEM.get())
          .unlockedBy("has_salmon_lantern", has(foodblockitemregistry.SALMON_LANTERN_ITEM.get()))
          .save(output);
+    //tropicalfish
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.TROPICALFISH_DESKLAMP_ITEM.get())
+         .pattern(" B ")
+         .pattern(" C ")
+         .pattern(" A ")
+         .define('A', foodblockitemregistry.TROPICAL_FISH_BLOCK_ITEM.get())
+         .define('B', nuggetregistry.TROPICAL_FISH_NUGGET.get())
+         .define('C', foodblockitemregistry.TROPICAL_FISH_LANTERN_ITEM.get())
+         .unlockedBy("has_tropicalfish_lantern", has(foodblockitemregistry.TROPICAL_FISH_LANTERN_ITEM.get()))
+         .save(output);
    }
   }
 }
