@@ -1,0 +1,154 @@
+{
+  "variants": {
+    "facing=east,lit=false,position=0": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_unlit",
+      "y": 90
+    },
+    "facing=east,lit=false,position=1": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_unlit",
+      "y": 90
+    },
+    "facing=east,lit=false,position=2": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_unlit",
+      "y": 90
+    },
+    "facing=east,lit=false,position=3": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_unlit",
+      "y": 90
+    },
+    "facing=east,lit=false,position=4": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_unlit",
+      "y": 90
+    },
+    "facing=east,lit=true,position=0": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_lit",
+      "y": 90
+    },
+    "facing=east,lit=true,position=1": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_lit",
+      "y": 90
+    },
+    "facing=east,lit=true,position=2": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_lit",
+      "y": 90
+    },
+    "facing=east,lit=true,position=3": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_lit",
+      "y": 90
+    },
+    "facing=east,lit=true,position=4": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_lit",
+      "y": 90
+    },
+    "facing=north,lit=false,position=0": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_unlit"
+    },
+    "facing=north,lit=false,position=1": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_unlit"
+    },
+    "facing=north,lit=false,position=2": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_unlit"
+    },
+    "facing=north,lit=false,position=3": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_unlit"
+    },
+    "facing=north,lit=false,position=4": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_unlit"
+    },
+    "facing=north,lit=true,position=0": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_lit"
+    },
+    "facing=north,lit=true,position=1": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_lit"
+    },
+    "facing=north,lit=true,position=2": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_lit"
+    },
+    "facing=north,lit=true,position=3": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_lit"
+    },
+    "facing=north,lit=true,position=4": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_lit"
+    },
+    "facing=south,lit=false,position=0": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_unlit",
+      "y": 180
+    },
+    "facing=south,lit=false,position=1": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_unlit",
+      "y": 180
+    },
+    "facing=south,lit=false,position=2": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_unlit",
+      "y": 180
+    },
+    "facing=south,lit=false,position=3": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_unlit",
+      "y": 180
+    },
+    "facing=south,lit=false,position=4": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_unlit",
+      "y": 180
+    },
+    "facing=south,lit=true,position=0": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_lit",
+      "y": 180
+    },
+    "facing=south,lit=true,position=1": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_lit",
+      "y": 180
+    },
+    "facing=south,lit=true,position=2": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_lit",
+      "y": 180
+    },
+    "facing=south,lit=true,position=3": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_lit",
+      "y": 180
+    },
+    "facing=south,lit=true,position=4": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_lit",
+      "y": 180
+    },
+    "facing=west,lit=false,position=0": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_unlit",
+      "y": 270
+    },
+    "facing=west,lit=false,position=1": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_unlit",
+      "y": 270
+    },
+    "facing=west,lit=false,position=2": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_unlit",
+      "y": 270
+    },
+    "facing=west,lit=false,position=3": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_unlit",
+      "y": 270
+    },
+    "facing=west,lit=false,position=4": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_unlit",
+      "y": 270
+    },
+    "facing=west,lit=true,position=0": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_lit",
+      "y": 270
+    },
+    "facing=west,lit=true,position=1": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_lit",
+      "y": 270
+    },
+    "facing=west,lit=true,position=2": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_lit",
+      "y": 270
+    },
+    "facing=west,lit=true,position=3": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_lit",
+      "y": 270
+    },
+    "facing=west,lit=true,position=4": {
+      "model": "goldfishmod02tastyfurniture:block/pumpkin_lamp_lit",
+      "y": 270
+    }
+  }
+}
