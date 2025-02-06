@@ -1738,6 +1738,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("sweetberry_desklamp_item", modLoc("block/sweetberry_lamp_unlit"));
       //.............brownmushroom
         withExistingParent("brownmushroom_desklamp_item", modLoc("block/brownmushroom_lamp_unlit"));
+      //.............redmushroom
+        withExistingParent("redmushroom_desklamp_item", modLoc("block/redmushroom_lamp_unlit"));
   }
 }
 
