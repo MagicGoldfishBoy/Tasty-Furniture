@@ -8525,6 +8525,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('C', foodblockitemregistry.MUTTON_LANTERN_ITEM.get())
          .unlockedBy("has_mutton_lantern", has(foodblockitemregistry.MUTTON_LANTERN_ITEM.get()))
          .save(output);
+    //beef
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.BEEF_DESKLAMP_ITEM.get())
+         .pattern(" B ")
+         .pattern(" C ")
+         .pattern(" A ")
+         .define('A', foodblockitemregistry.BEEF_BLOCK_ITEM.get())
+         .define('B', nuggetregistry.BEEF_NUGGET.get())
+         .define('C', foodblockitemregistry.BEEF_LANTERN_ITEM.get())
+         .unlockedBy("has_beef_lantern", has(foodblockitemregistry.BEEF_LANTERN_ITEM.get()))
+         .save(output);
    }
   }
 }
