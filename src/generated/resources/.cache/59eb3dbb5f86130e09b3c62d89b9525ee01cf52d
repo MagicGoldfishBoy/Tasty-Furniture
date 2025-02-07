@@ -1,4 +1,4 @@
-// 1.21	2025-02-07T12:43:52.272423575	Loot Tables
+// 1.21	2025-02-07T13:18:15.139452979	Loot Tables
 56ddb3b4406d93958c51301ca7c44f265c39bbc2 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_barrel.json
 f506816aefac13fd3bcb8b3075eefc63b1b6be41 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bars.json
 7922a4aff64facc1d1fca57e74153e1ad6451e89 data/goldfishmod02tastyfurniture/loot_table/blocks/apple_bed.json
@@ -768,6 +768,7 @@ a56d057717efa46f77a18b60285f41fb40a00107 data/goldfishmod02tastyfurniture/loot_t
 139b9f52c766fc37b1f46319beb962b59074b1d8 data/goldfishmod02tastyfurniture/loot_table/blocks/sugar_chair.json
 1a9b01ede86971eb0cb4a8917204099967fac971 data/goldfishmod02tastyfurniture/loot_table/blocks/sugar_chiseled_block.json
 66cd7d68aca591ceae7fd67b7fe4b275ff6350ec data/goldfishmod02tastyfurniture/loot_table/blocks/sugar_desk.json
+7c14174aa219bb4c6f7a9dbeb408d9f18e9b3f45 data/goldfishmod02tastyfurniture/loot_table/blocks/sugar_desklamp.json
 7e2018ead508c36497e8ca7ae9a4dd659f82d638 data/goldfishmod02tastyfurniture/loot_table/blocks/sugar_door.json
 1c762312609056c70b8f5c267d465593845b2223 data/goldfishmod02tastyfurniture/loot_table/blocks/sugar_fence.json
 0def4baaf0bae5eff62379ed28d971195de1605f data/goldfishmod02tastyfurniture/loot_table/blocks/sugar_fence_gate.json

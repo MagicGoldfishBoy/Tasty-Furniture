@@ -3,6 +3,7 @@
 	"ambientocclusion": false,
 	"textures": {
 		"4": "goldfishmod02tastyfurniture:block/sugar_bars",
+		"16": "goldfishmod02tastyfurniture:block/sugar_lantern",
 		"17": "goldfishmod02tastyfurniture:block/sugar_quilt_01",
 		"21": "goldfishmod02tastyfurniture:block/sugar_tile_block",
 		"23": "goldfishmod02tastyfurniture:block/sugar_lantern_unlit",
@@ -132,12 +133,12 @@
 			"to": [12, 13, 8],
 			"rotation": {"angle": 0, "axis": "y", "origin": [7, 9, 7]},
 			"faces": {
-				"north": {"uv": [0, 2, 6, 8], "texture": "#23"},
-				"east": {"uv": [0, 2, 6, 8], "texture": "#23"},
-				"south": {"uv": [0, 2, 6, 8], "texture": "#23"},
-				"west": {"uv": [0, 2, 6, 8], "texture": "#23"},
-				"up": {"uv": [1, 9, 5, 15], "texture": "#23"},
-				"down": {"uv": [1, 2, 5, 8], "texture": "#23"}
+				"north": {"uv": [0, 2, 6, 8], "texture": "#16"},
+				"east": {"uv": [0, 2, 6, 8], "texture": "#16"},
+				"south": {"uv": [0, 2, 6, 8], "texture": "#16"},
+				"west": {"uv": [0, 2, 6, 8], "texture": "#16"},
+				"up": {"uv": [1, 9, 5, 15], "texture": "#16"},
+				"down": {"uv": [1, 2, 5, 8], "texture": "#16"}
 			}
 		},
 		{
