@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod02tastyfurniture:processed_honeycomb_block_item"
+    },
+    "B": {
+      "item": "goldfishmod02tastyfurniture:honeycomb_nugget"
+    },
+    "C": {
+      "item": "goldfishmod02tastyfurniture:honeycomb_lantern_item"
+    }
+  },
+  "pattern": [
+    " B ",
+    " C ",
+    " A "
+  ],
+  "result": {
+    "count": 1,
+    "id": "goldfishmod02tastyfurniture:honey_desklamp_item"
+  }
+}

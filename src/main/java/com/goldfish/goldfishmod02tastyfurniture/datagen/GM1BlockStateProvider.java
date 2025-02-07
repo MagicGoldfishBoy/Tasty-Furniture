@@ -10628,6 +10628,28 @@ public class GM1BlockStateProvider extends BlockStateProvider
                     .rotationY(rotation)               
                     .build();
             });
+     //.............honey
+        foodDeskLamp honey_desk_lamp = foodblockregistry.HONEY_DESKLAMP.get();
+
+        getVariantBuilder(honey_desk_lamp)
+            .forAllStates(state -> {
+                Boolean lit = state.getValue(BlockStateProperties.LIT);
+                Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                int rotation = switch (facing) {
+                    case NORTH -> 0;
+                    case EAST -> 90;
+                    case SOUTH -> 180;
+                    case WEST -> 270;
+                    default -> 0;
+                };
+
+                ResourceLocation modelLocation = lit ? modLoc("block/honeycomb_lamp_lit") : modLoc("block/honeycomb_lamp_unlit");
+
+                return ConfiguredModel.builder()
+                    .modelFile(models().getExistingFile(modelLocation))
+                    .rotationY(rotation)               
+                    .build();
+            });
 
    };
 
